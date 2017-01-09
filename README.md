@@ -1,5 +1,5 @@
 # SpecIF
-Specification Integration Facility - schema, constraint checker and examples
+Specification Integration Facility - schema, constraints, checker and examples
 
 ## Purpose
 
