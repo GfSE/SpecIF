@@ -7,4 +7,6 @@ Specification Integration Facility - schema, constraint checker and examples
 
 ## Constraints
 
+## Checker
+
 ## Examples
