@@ -24,8 +24,8 @@
           "minItems": 1,
 	  "uniqueItems": true,
           "items": {
-             "type": "string",
-	     "enum": [ "auto", "manual" ]
+            "type": "string",
+	    "enum": [ "auto", "manual" ]
           }
 	},
 	"revision": {
@@ -39,32 +39,32 @@
         "type": "object",
         "properties": {
           "id": {
-		    "$ref": "#/definitions/id"
+            "$ref": "#/definitions/id"
           },
           "object": {
-		    "$ref": "#/definitions/id"
+            "$ref": "#/definitions/id"
           },
-		  "revision": {
-		    "$ref": "#/definitions/revision"
-		  },
+          "revision": {
+	    "$ref": "#/definitions/revision"
+          },
           "nodes": {
             "$ref": "#/definitions/nodes"
           },
           "changedAt": {
-			"$ref": "#/definitions/dateTime"
+            "$ref": "#/definitions/dateTime"
           }
         },
         "required": [ "id", "object", "changedAt" ]
       }
     },
-	"attributeTypes": {
-	  "description": "Type definition of an attribute for objects, relations or hierarchies. Is a sub-element of the respective objectType, relationType or hierarchyType.",
+    "attributeTypes": {
+      "description": "Type definition of an attribute for objects, relations or hierarchies. Is a sub-element of the respective objectType, relationType or hierarchyType.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "id": {
-		    "$ref": "#/definitions/id"
+            "$ref": "#/definitions/id"
           },
           "title": {
             "type": "string"
@@ -95,7 +95,7 @@
         "type": "object",
         "properties": {
           "id": {
-		    "$ref": "#/definitions/id"
+            "$ref": "#/definitions/id"
           },
           "title": {
             "type": "string"
@@ -106,7 +106,7 @@
           "attributeType": {
             "$ref": "#/definitions/id"
           },
-		  "value": {
+          "value": {
             "type": "string"
           }
         },
@@ -127,7 +127,7 @@
     },
     "specifVersion": {
       "type": "string",
-	  "pattern": "^\\d+(\\.\\d+){1,2}$"
+	"pattern": "^\\d+(\\.\\d+){1,2}$"
     },
     "tool": {
       "type": "string"
@@ -179,7 +179,7 @@
             },
             "value": {
               "type": "string",
-			  "format": "email"
+	      "format": "email"
             }
           },
           "required": [ "type", "value" ]
@@ -205,41 +205,41 @@
           },
           "type": {
             "type": "string",
-			"title": "Data Type",
-			"description": "The corresponding definitions in https://www.w3.org/TR/xmlschema-2/ and https://www.w3.org/TR/xhtml1/ apply.",
-			"enum": [ "xs:boolean", "xs:integer", "xs:double", "xs:dateTime", "xs:string", "xhtml", "xs:enumeration" ]
+            "title": "Data Type",
+            "description": "The corresponding definitions in https://www.w3.org/TR/xmlschema-2/ and https://www.w3.org/TR/xhtml1/ apply.",
+            "enum": [ "xs:boolean", "xs:integer", "xs:double", "xs:dateTime", "xs:string", "xhtml", "xs:enumeration" ]
           },
-		  "maxLength":  {
-			"type": "integer",
-			"title": "Maximum String Length",
-			"description": "Optional use by dataTypes 'xs:string' and 'XHTML'.",
-			"minimum": 0
-		  },
-		  "accuracy": {
-			"type": "integer",
-			"title": "Accuracy of a Decimal Number",
-			"description": "Optional use by dataType 'xs:double', indicates the number of decimals.",
-			"minimum": 1
-		  },
-		  "min":  {
-			"type": "number",
-			"title": "Minimum Value of a Number",
-			"description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
-		  },
-		  "max":  {
-			"type": "number",
-			"title": "Maximum Value of a Number",
-			"description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
-		  },
+          "maxLength":  {
+            "type": "integer",
+            "title": "Maximum String Length",
+            "description": "Optional use by dataTypes 'xs:string' and 'XHTML'.",
+            "minimum": 0
+          },
+          "accuracy": {
+	    "type": "integer",
+            "title": "Accuracy of a Decimal Number",
+            "description": "Optional use by dataType 'xs:double', indicates the number of decimals.",
+            "minimum": 1
+	  },
+          "min":  {
+            "type": "number",
+            "title": "Minimum Value of a Number",
+            "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
+          },
+          "max":  {
+            "type": "number",
+            "title": "Maximum Value of a Number",
+             "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
+          },
           "values": {
             "type": "array",
-			"title": "Enumerated Values",
-			"description": "Mandatory use by dataType 'xs:enumeration'. If 'multiple' is true 0..n options may be selected, otherwise exactly one must be selected.",
+            "title": "Enumerated Values",
+            "description": "Mandatory use by dataType 'xs:enumeration'. If 'multiple' is true 0..n options may be selected, otherwise exactly one must be selected.",
             "items": {
               "type": "object",
               "properties": {
                 "id": {
-					"$ref": "#/definitions/id"
+                  "$ref": "#/definitions/id"
                 },
                 "title": {
                   "type": "string"
@@ -249,16 +249,16 @@
             }
           },
           "revision": {
-		    "$ref": "#/definitions/revision"
+            "$ref": "#/definitions/revision"
           },
           "changedAt": {
-			"$ref": "#/definitions/dateTime"
+            "$ref": "#/definitions/dateTime"
           },
           "changedBy": {
-			"type": "string"
+            "type": "string"
           }
-		},
-	    "additionalProperties": false,
+	},
+        "additionalProperties": false,
         "required": [ "id", "title", "type", "changedAt" ]
       }
     },
@@ -467,10 +467,10 @@
             "$ref": "#/definitions/attributes"
           },
           "revision": {
-		    "$ref": "#/definitions/revision"
+            "$ref": "#/definitions/revision"
           },
           "changedAt": {
-			"$ref": "#/definitions/dateTime"
+            "$ref": "#/definitions/dateTime"
           },
           "changedBy": {
             "type": "string"
@@ -480,7 +480,7 @@
       }
     },
     "hierarchies": {
-	  "description": "The hierarchy trees with pointers to objects constituting outlines, bill-of-materials or similar.",
+      "description": "The hierarchy trees with pointers to objects constituting outlines, bill-of-materials or similar.",
       "type": "array",
       "items": {
         "type": "object",
