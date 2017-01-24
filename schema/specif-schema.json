@@ -183,7 +183,7 @@
 	      "format": "email"
             }
           },
-          "required": [ "type", "value" ]
+          "required": [ "value" ]
         }
       },
       "required": [ "email" ]
