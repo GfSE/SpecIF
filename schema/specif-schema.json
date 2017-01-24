@@ -154,6 +154,7 @@
 	  "$ref": "#/definitions/dateTime"
     },
     "createdBy": {
+      "description": "The creator of the SpecIF structure (file). If specified, at least an e-mail address must be given.",
       "type": "object",
       "properties": {
         "familyName": {
