@@ -88,8 +88,8 @@
         "required": [ "id", "dataType", "changedAt" ]
       }
     },
-	"attributes": {
-	  "description": "An attribute value foran object, relation or hierarchy.",
+    "attributes": {
+      "description": "An attribute value foran object, relation or hierarchy.",
       "type": "array",
       "items": {
         "type": "object",
