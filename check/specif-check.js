@@ -23,7 +23,7 @@
 					dO.resolve({ status: 0, statusText: 'SpecIF schema has been checked successfully!' })
 				} else {
 					var rt = ajv.errorsText(validate.errors);
-					stdLog( rt );
+//					console.log( rt );
 					dO.reject({ status: 901, statusText: 'SpecIF schema is violated', responseText: rt })
 				}
 			})
@@ -64,7 +64,7 @@
 		rc = checkTypes( data.hierarchyTypes, data.hierarchies, 'hierarchyType' );
 		if( rc.status>0 ) errL.push(rc);
 
-/*	// An attributeType's "dataType" must be the id of a member of "dataTypes":
+/*	        // An attributeType's "dataType" must be the id of a member of "dataTypes":
 		// .. these are now checked in checkAttrValues.
 		rc = checkAttrTypes( data.dataTypes, data.objectTypes );
 		if( rc.status>0 ) errL.push(rc);
@@ -137,7 +137,7 @@
 						// ToDo: check value identifiers of enumerated attribute types
 					}; 
 					allIds.push(L[i].id)
-				}
+				};
 				return null
 			}
 		}
@@ -158,7 +158,7 @@
 			for( var i in els ){
 				sTi = indexById(L, els[i][type]);
 				if(sTi<0) return {status:903, statusText: "instance with identifier '"+els[i].id+"' must reference a valid type"}
-//					if( !checkAttrTypeIds(L[sTi].attributeTypes,els[i].attributes) ) return {status:920, statusText: "attributes of instance with identifier '"+els[i].id+"' must reference valid attributeTypes"}
+//				if( !checkAttrTypeIds(L[sTi].attributeTypes,els[i].attributes) ) return {status:920, statusText: "attributes of instance with identifier '"+els[i].id+"' must reference valid attributeTypes"}
 			};
 			return {status:0, statusText: "instance's "+type+" and attributeTypes reference valid types"}	
 				
