@@ -514,7 +514,7 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "hierarchyType", "revision", "nodes", "changedAt" ]
+        "required": [ "id", "title", "hierarchyType", "nodes", "changedAt" ]
       }
     },
     "files": {
