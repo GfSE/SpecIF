@@ -358,7 +358,7 @@
       }
     },
     "hierarchyTypes": {
-      "description": "The type definitions for hierarchies.",
+      "description": "The type definitions for hierarchy roots.",
       "type": "array",
       "items": {
         "type": "object",
@@ -481,7 +481,7 @@
       }
     },
     "hierarchies": {
-      "description": "The hierarchy trees with pointers to objects constituting outlines, bill-of-materials or similar.",
+      "description": "Hierarchy trees, each referencing objects to constitute an outline, bill-of-material or similar.",
       "type": "array",
       "items": {
         "type": "object",
@@ -501,11 +501,11 @@
           "attributes": {
             "$ref": "#/definitions/attributes"
           },
-          "revision": {
-	    "$ref": "#/definitions/revision"
-          },
           "nodes": {
 	    "$ref": "#/definitions/nodes"
+          },
+          "revision": {
+	    "$ref": "#/definitions/revision"
           },
           "changedAt": {
 	    "$ref": "#/definitions/dateTime"
