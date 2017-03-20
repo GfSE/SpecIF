@@ -127,18 +127,25 @@ function checkConstraints(data) {
 		function duplicateId(L) {
 			// add every checked Id to allIds,
 			// return 'null', only if all elements of L are not contained in allIds,
-			// return the first id, which is contained in allIds:
+			// return the first id, which is contained in allIds (hence a duplicate):
 			if(!L || !L.length) return null;
+			var rc=null;
 			for( var i in L ) {
 				// check the element's id:
 				if( allIds.indexOf(L[i].id)>-1 ) return L[i].id;
 				// check the attributeType's identifiers, as well:
 				// (the instance's attributes do not have an id ...)
 				if( L[i].attributeTypes ) {
-					var rc = duplicateId(L[i].attributeTypes);
+					rc = duplicateId(L[i].attributeTypes);
 					if( rc ) return rc
 					// ToDo: check value identifiers of enumerated attribute types
+				};
+				// check the hierarchy's nodes recursively:
+				if( L[i].nodes ) {
+					rc = duplicateId(L[i].nodes);
+					if( rc ) return rc
 				}; 
+				// all is fine, but add the latest id to the list for the next checking loops:
 				allIds.push(L[i].id)
 			};
 			return null
