@@ -89,7 +89,7 @@
       }
     },
     "attributes": {
-      "description": "An attribute value foran object, relation or hierarchy.",
+      "description": "An attribute value for an object, relation or hierarchy.",
       "type": "array",
       "items": {
         "type": "object",
