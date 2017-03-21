@@ -526,7 +526,6 @@
     "id",
     "title",
     "specifVersion",
-    "createdAt",
     "dataTypes",
     "objectTypes",
     "relationTypes",
