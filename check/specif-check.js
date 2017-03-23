@@ -60,10 +60,10 @@ function checkConstraints(data) {
 	// in case of objects, the value of "objectType" must be the id of a member of "objectTypes":
 	rc = checkTypes( data.objectTypes, data.objects, 'objectType' );
 	if( rc.status>0 ) errL.push(rc);
-	// in case of relations, the value of "relationType" must be the id of a member of "objectTypes":
+	// in case of relations, the value of "relationType" must be the id of a member of "relationTypes":
 	rc = checkTypes( data.relationTypes, data.relations, 'relationType' );
 	if( rc.status>0 ) errL.push(rc);
-	// in case of hierarchies, the value of "hierarchyType" must be the id of a member of "objectTypes":
+	// in case of hierarchies, the value of "hierarchyType" must be the id of a member of "hierarchyTypes":
 	rc = checkTypes( data.hierarchyTypes, data.hierarchies, 'hierarchyType' );
 	if( rc.status>0 ) errL.push(rc);
 
