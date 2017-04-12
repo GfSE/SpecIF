@@ -206,8 +206,7 @@ function checkConstraints(data) {
 				// An attributeType's "dataType" must be the id of a member of "dataTypes".
 				// .. this is also checked in checkAttrValues:
 				if( !dT ) return {status:904, statusText: "attributeType with identifier '"+aT.id+"' must reference a valid dataType"};
-				// attributeTypes of base type "xs:enumeration" must have a property 'multiple':
-				if(dT.type=='xs:enumeration' && aT.multiple==undefined) return {status:905, statusText: "attributeType with identifier '"+aT.id+"' must have a property 'multiple'"}
+				// If an attributeType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
 			}
 		};
 		return {status:0, statusText: "attributeTypes reference valid dataTypes"}
