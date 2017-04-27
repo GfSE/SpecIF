@@ -10,8 +10,8 @@ function checkSchema(data) {
 	// Requires: https://github.com/epoberezkin/ajv/releases/tag/4.8.0 or later 
 	// ToDo: localize, see https://github.com/epoberezkin/ajv-i18n 
 	var ajv = Ajv({allErrors: true}),
-		validate = null,
-		dO = $.Deferred();
+	    validate = null,
+	    dO = $.Deferred();
 
 	// Get the specified schema file from the server:
 	GET( "./schema/specif-schema-"+data.specifVersion+".json" )
