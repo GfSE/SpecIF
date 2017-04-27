@@ -5,6 +5,8 @@
 	We appreciate any correction, comment or contribution here on GitHub or via e-mail to support@reqif.de            
 */
 function checkSchema(data) {
+	"use strict";
+	
 	// Check data using the specified revision of the SpecIF schema.
 	// The return code uses properties similar to xhr, namely {status:900,statusText:"abc",responseText:"xyz"}
 	// Requires: https://github.com/epoberezkin/ajv/releases/tag/4.8.0 or later 
@@ -44,6 +46,8 @@ function checkSchema(data) {
 	}
 }
 function checkConstraints(data) {
+	"use strict";
+
 	// Check the constraints of the concrete values in 'data'.
 	// The return code uses properties similar to xhr, namely {status:900,statusText:"abc",responseText:"xyz"}
 	// ToDo: localize text and take it from language files.
@@ -200,13 +204,15 @@ function checkConstraints(data) {
 	function checkAttrTypes(L,sTs) {
 		var aT=null, dT=null;
 		for( var i=sTs.length-1;i>-1;i-- ){
-			for( var j=sTs[i].attributeTypes.length-1;j>-1;j-- ) {
-				aT = sTs[i].attributeTypes[j];
-				dT = itemById(L,aT.dataType);
-				// An attributeType's "dataType" must be the id of a member of "dataTypes".
-				// .. this is also checked in checkAttrValues:
-				if( !dT ) return {status:904, statusText: "attributeType with identifier '"+aT.id+"' must reference a valid dataType"};
-				// If an attributeType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
+			if( sTs[i].attributeTypes ) {
+				for( var j=sTs[i].attributeTypes.length-1;j>-1;j-- ) {
+					aT = sTs[i].attributeTypes[j];
+					dT = itemById(L,aT.dataType);
+					// An attributeType's "dataType" must be the id of a member of "dataTypes".
+					// .. this is also checked in checkAttrValues:
+					if( !dT ) return {status:904, statusText: "attributeType with identifier '"+aT.id+"' must reference a valid dataType"};
+					// If an attributeType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
+				}
 			}
 		};
 		return {status:0, statusText: "attributeTypes reference valid dataTypes"}
@@ -242,32 +248,33 @@ function checkConstraints(data) {
 	}
 	function checkAttrValues(tL,iL) {   // type list, instance list (objects, relations or hierarchies)
 		// Attribute values ("content") must fit to the respective type's range
-		var aT=null, dT=null;
+		var aT=null, dT=null, aV=null;
 		for( var i=iL.length-1;i>-1;i-- ){
 			if( iL[i].attributes )
 				for( var a=iL[i].attributes.length-1;a>-1;a-- ){
-					if( iL[i].attributes[a].value ) {
+					aV = iL[i].attributes[a].value;
+					if( aV ) {
 						aT = attrTypeById(tL,iL[i].attributes[a].attributeType);
 						if( !aT ) return {status:920, statusText: "attributes of instance with identifier '"+iL[i].id+"' must reference valid attributeTypes"}; 
 						dT = itemById(data.dataTypes,aT.dataType);
 						if( !dT ) return {status:904, statusText: "attributeType with identifier '"+aT.id+"' must reference a valid dataType"}; 
 						switch(dT.type) {
 							case 'xs:string': 
-								if( iL[i].attributes[a].value.length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
+								if( aV.length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
 								break;
 							case 'xs:double':
-//								if( (iL[i].attributes[a].value*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922;
+//								if( (aV*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922;
 								// no break;
 							case 'xs:integer':
-								if( iL[i].attributes[a].value<dT.min ) return {status:923, statusText: "numbers must be larger than min"};
-								if( iL[i].attributes[a].value>dT.max ) return {status:924, statusText: "numbers must be smaller than max"}; 
+								if( aV<dT.min ) return {status:923, statusText: "numbers must be larger than min"};
+								if( aV>dT.max ) return {status:924, statusText: "numbers must be smaller than max"}; 
 								break;
 /*							case 'xs:boolean':
-								if( iL[i].attributes[a].value!=true && iL[i].attributes[a].value!=false ) return {status:925,statusText:""}; 
+								if( aV!=true && aV!=false ) return {status:925,statusText:""}; 
 								break;
 */							case 'xs:enumeration':
 								// enumerated values in attributes must be defined in the dataType of the corresponding attributeType  (ToDo)
-								var vL=iL[i].attributes[a].value.split(',');
+								var aV.split(',');
 								if( vL.length>1 && !aT.multiple ) return {status:926, statusText: "attribute may not have more than one value"};
 								for( var v=vL.length-1;v>-1;v-- ) {
 									vL[v] = vL[v].trim();
@@ -284,8 +291,10 @@ function checkConstraints(data) {
 		// given an attributeType's Id, return the attributeType:
 //		id = id.trim();
 		for( var t=sT.length-1; t>-1; t-- ) { // fastest loop with single variable
-			for( var a=sT[t].attributeTypes.length-1; a>-1; a-- ) {
-				if( sT[t].attributeTypes[a].id==id ) return sT[t].attributeTypes[a]
+			if( sT[t].attributeTypes ) {
+				for( var a=sT[t].attributeTypes.length-1; a>-1; a-- ) {
+					if( sT[t].attributeTypes[a].id==id ) return sT[t].attributeTypes[a]
+				}
 			}
 		};
 		return null  // should never arrive here ...
