@@ -93,7 +93,7 @@ function checkConstraints(data) {
 	if( rc.status>0 ) errL.push(rc);
 
 	// A hierarchy node's "object" must be the id of a member of "objects":
-	for( var h=0, H=data.hierarchies.length; h<H; h++) {
+	for( var h=data.hierarchies.length-1; h>-1; h--) {
 		rc = checkNodes( data.objects, data.hierarchies[h].nodes );
 		if( rc.status>0 ) { errL.push(rc); break }
 	};
@@ -130,7 +130,7 @@ function checkConstraints(data) {
 			// return the first id, which is contained in allIds (hence a duplicate):
 			if(!L || !L.length) return null;
 			var rc=null;
-			for( var i in L ) {
+			for( var i=L.length-1;i>-1;i-- ) {
 				// check the element's id:
 				if( allIds.indexOf(L[i].id)>-1 ) return L[i].id;
 				// check the attributeType's identifiers, as well:
@@ -154,7 +154,7 @@ function checkConstraints(data) {
 	function checkNodes(L,nds) {
 		// Any node's "object" must be the id of a member of "objects". 
 		var rc = null;
-		for( var i in nds ){
+		for( var i=nds.length-1;i>-1;i-- ){
 			if(indexById(L,nds[i].object)<0) return {status:909, statusText: "hierarchy node with identifier '"+nds[i].id+"' must reference a valid object"};	// check the node itself
 			rc = checkNodes(L,nds[i].nodes);	// check references of next hierarchy levels recursively
 			if(rc.status!=0) return rc	
@@ -162,7 +162,7 @@ function checkConstraints(data) {
 		return {status:0, statusText: "hierarchy nodes reference valid objects"}		// all's fine!
 	}
 	function checkDataTypes(L) {
-		for( var i=0,I=L.length;i<I;i++ ){
+		for( var i=L.length-1;i>-1;i-- ){
 			switch(L[i].type) {
 				case 'xs:string': 
 					if( !L[i].maxLength ) return {status:928, statusText: "string types must have maxLength>0"};
@@ -181,7 +181,7 @@ function checkConstraints(data) {
 		// In case of objects, the value of "objectType" must be the id of a member of "objectTypes". 
 		// Similarly for relations and hierarchies.
 		var sTi=null;
-		for( var i in els ){
+		for( var i=els.length-1;i>-1;i-- ){
 			sTi = indexById(L, els[i][type]);
 			if(sTi<0) return {status:903, statusText: "instance with identifier '"+els[i].id+"' must reference a valid type"}
 //			if( !checkAttrTypeIds(L[sTi].attributeTypes,els[i].attributes) ) return {status:920, statusText: "attributes of instance with identifier '"+els[i].id+"' must reference valid attributeTypes"}
@@ -191,7 +191,7 @@ function checkConstraints(data) {
 /*	  		function checkAttrTypeIds(L,atts) {
 				// all attribute's "attributeType" must be the id of a member of "attributeTypes":
 				// .. these are now checked in checkAttrValues.
-				for( var j in atts ) {
+				for( var i=atts.length-1;i>-1;i-- ) {
 					if(indexById(L, atts[j].attributeType)<0) return false
 				};
 				return true
@@ -199,8 +199,8 @@ function checkConstraints(data) {
 */	}
 	function checkAttrTypes(L,sTs) {
 		var aT=null, dT=null;
-		for( var i in sTs ){
-			for( var j in sTs[i].attributeTypes ) {
+		for( var i=sTs.length-1;i>-1;i-- ){
+			for( var j=sTs[i].attributeTypes.length-1;j>-1;j-- ) {
 				aT = sTs[i].attributeTypes[j];
 				dT = itemById(L,aT.dataType);
 				// An attributeType's "dataType" must be the id of a member of "dataTypes".
@@ -215,7 +215,7 @@ function checkConstraints(data) {
 	function checkRelationTypeIds(oTL,rTL) {	// objectTypes, relationTypes
 		// All relationType's "sourceTypes" must be the id of a member of "objectTypes". 
 		// Similarly for "targetTypes".
-		for( var i in rTL ){
+		for( var i=rTL.length-1;i>-1;i-- ){
 			if( !checkEls(oTL, rTL[i].sourceTypes) ) return {status:906, statusText: "sourceTypes of relationType with identifier '"+rTL[i].id+"' must reference valid objectTypes"};
 			if( !checkEls(oTL, rTL[i].targetTypes) ) return {status:907, statusText: "targetTypes of relationType with identifier '"+rTL[i].id+"' must reference valid objectTypes"}
 		};
@@ -223,8 +223,8 @@ function checkConstraints(data) {
 
 		function checkEls(L,els) {
 			// each value in els must be the id of a member of L:
-			for( var j in els ) {
-				if(indexById(L, els[j])<0) return false
+			for( var i=els.length-1;i>-1;i-- ) {
+				if(indexById(L, els[i])<0) return false
 			};
 			return true
 		}
@@ -233,7 +233,7 @@ function checkConstraints(data) {
 		// A relation's "source" must be the id of a member of "objects". 
 		// Similarly for "target".
 		// (It has been checked before that any "object" is indeed of type "objectType").
-		for( var i in rL ){
+		for( var i=rL.length-1;i>-1;i-- ){
 			if(indexById(oL, rL[i].source.id)<0) return {status:908, statusText: "source of relation with identifier '"+rL[i].id+"' must reference a valid object"};
 			if(indexById(oL, rL[i].target.id)<0) return {status:909, statusText: "target of relation with identifier '"+rL[i].id+"' must reference a valid object"};
 //			if( rL[i].source == rL[i].target ) return {status:90X, statusText: ""}
@@ -243,9 +243,9 @@ function checkConstraints(data) {
 	function checkAttrValues(tL,iL) {   // type list, instance list (objects, relations or hierarchies)
 		// Attribute values ("content") must fit to the respective type's range
 		var aT=null, dT=null;
-		for( var i=0,I=iL.length;i<I;i++ ){
+		for( var i=iL.length-1;i>-1;i-- ){
 			if( iL[i].attributes )
-				for( var a=0,A=iL[i].attributes.length;a<A;a++ ){
+				for( var a=iL[i].attributes.length-1;a>-1;a-- ){
 					if( iL[i].attributes[a].value ) {
 						aT = attrTypeById(tL,iL[i].attributes[a].attributeType);
 						if( !aT ) return {status:920, statusText: "attributes of instance with identifier '"+iL[i].id+"' must reference valid attributeTypes"}; 
@@ -269,7 +269,7 @@ function checkConstraints(data) {
 								// enumerated values in attributes must be defined in the dataType of the corresponding attributeType  (ToDo)
 								var vL=iL[i].attributes[a].value.split(',');
 								if( vL.length>1 && !aT.multiple ) return {status:926, statusText: "attribute may not have more than one value"};
-								for( var v=0,V=vL.length;v<V;v++ ) {
+								for( var v=vL.length-1;v>-1;v-- ) {
 									vL[v] = vL[v].trim();
 									if( vL[v] && indexById( dT.values, vL[v] )<0 ) return {status:927, statusText: "enumerated valus must be defined by the respective attribute type"}
 								}
