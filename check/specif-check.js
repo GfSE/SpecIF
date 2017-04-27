@@ -295,4 +295,20 @@ function checkConstraints(data) {
 		eL.forEach( function(e) { eT += (eT.length?',\n':'')+e.statusText+' ('+status+')'} );
 		return eT
 	}
+	function indexById(L,id) {
+		if(!L||!id) return -1;
+		// given an ID of an element in a list, return it's index:
+		id = id.trim();
+		for( var i=L.length-1;i>-1;i-- )
+			if( L[i].id === id ) return i;   // return list index 
+		return -1
+	}
+	function itemById(L,id) {
+		if(!L||!id) return null;
+		// given the ID of an element in a list, return the element itself:
+		id = id.trim();
+		for( var i=L.length-1;i>-1;i-- )
+			if( L[i].id === id ) return L[i];   // return list item
+		return null
+	}
 }
