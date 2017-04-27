@@ -4,6 +4,7 @@ Specification Integration Facility - schema, constraints, checker and examples
 
 ## Purpose
 SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.
+
 For details see http://specif.de (in german only at this point in time).
 
 ## Schema
