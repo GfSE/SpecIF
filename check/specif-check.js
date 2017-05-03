@@ -227,10 +227,12 @@ function checkConstraints(data) {
 		};
 		return {status:0, statusText: "relationType's sourceTypes and targetTypes reference valid objectTypes"};
 
-		function checkEls(L,els) {
-			// each value in els must be the id of a member of L:
-			for( var i=els.length-1;i>-1;i-- ) {
-				if(indexById(L, els[i])<0) return false
+		function checkEls(oTL,oTs) {
+			// no sourceTypes resp. targetTypes means all defined objectTypes are eligible:
+			if( !oTs ) { return true };
+			// each value in oTs must be the id of a member of oTL:
+			for( var i=oTs.length-1;i>-1;i-- ) {
+				if(indexById(oTL, oTs[i])<0) return false
 			};
 			return true
 		}
