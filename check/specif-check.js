@@ -157,11 +157,13 @@ function checkConstraints(data) {
 	}
 	function checkNodes(L,nds) {
 		// Any node's "object" must be the id of a member of "objects". 
-		var rc = null;
-		for( var i=nds.length-1;i>-1;i-- ){
-			if(indexById(L,nds[i].object)<0) return {status:909, statusText: "hierarchy node with identifier '"+nds[i].id+"' must reference a valid object"};	// check the node itself
-			rc = checkNodes(L,nds[i].nodes);	// check references of next hierarchy levels recursively
-			if(rc.status!=0) return rc	
+		if( nds ) {
+			var rc = null;
+			for( var i=nds.length-1;i>-1;i-- ){
+				if(indexById(L,nds[i].object)<0) return {status:909, statusText: "hierarchy node with identifier '"+nds[i].id+"' must reference a valid object"};	// check the node itself
+				rc = checkNodes(L,nds[i].nodes);	// check references of next hierarchy levels recursively
+				if(rc.status!=0) return rc	
+			}
 		};
 		return {status:0, statusText: "hierarchy nodes reference valid objects"}		// all's fine!
 	}
@@ -292,12 +294,10 @@ function checkConstraints(data) {
 	function attrTypeById(sT,id) {
 		// given an attributeType's Id, return the attributeType:
 //		id = id.trim();
+		var a=null;
 		for( var t=sT.length-1; t>-1; t-- ) { // fastest loop with single variable
-			if( sT[t].attributeTypes ) {
-				for( var a=sT[t].attributeTypes.length-1; a>-1; a-- ) {
-					if( sT[t].attributeTypes[a].id==id ) return sT[t].attributeTypes[a]
-				}
-			}
+			a = itemById( sT[t].attributeTypes, id );
+			if( a ) return a
 		};
 		return null  // should never arrive here ...
 	}
