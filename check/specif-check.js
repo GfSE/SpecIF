@@ -254,41 +254,43 @@ function checkConstraints(data) {
 	function checkAttrValues(tL,iL) {   // type list, instance list (objects, relations or hierarchies)
 		// Attribute values ("content") must fit to the respective type's range
 		var aT=null, dT=null, aV=null;
-		for( var i=iL.length-1;i>-1;i-- ){
-			if( iL[i].attributes )
-				for( var a=iL[i].attributes.length-1;a>-1;a-- ){
-					aV = iL[i].attributes[a].value;
-					if( aV ) {
-						aT = attrTypeById(tL,iL[i].attributes[a].attributeType);
-						if( !aT ) return {status:920, statusText: "attributes of instance with identifier '"+iL[i].id+"' must reference valid attributeTypes"}; 
-						dT = itemById(data.dataTypes,aT.dataType);
-						if( !dT ) return {status:904, statusText: "attributeType with identifier '"+aT.id+"' must reference a valid dataType"}; 
-						switch(dT.type) {
-							case 'xs:string': 
-								if( aV.length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
-								break;
-							case 'xs:double':
-//								if( (aV*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922;
-								// no break;
-							case 'xs:integer':
-								if( aV<dT.min ) return {status:923, statusText: "numbers must be larger than min"};
-								if( aV>dT.max ) return {status:924, statusText: "numbers must be smaller than max"}; 
-								break;
-/*							case 'xs:boolean':
-								if( aV!=true && aV!=false ) return {status:925,statusText:""}; 
-								break;
-*/							case 'xs:enumeration':
-								// enumerated values in attributes must be defined in the dataType of the corresponding attributeType  (ToDo)
-								var aV.split(',');
-								if( vL.length>1 && !aT.multiple ) return {status:926, statusText: "attribute may not have more than one value"};
-								for( var v=vL.length-1;v>-1;v-- ) {
-									vL[v] = vL[v].trim();
-									if( vL[v] && indexById( dT.values, vL[v] )<0 ) return {status:927, statusText: "enumerated valus must be defined by the respective attribute type"}
-								}
-						}						
+		if( iL ) {
+			for( var i=iL.length-1;i>-1;i-- ){
+				if( iL[i].attributes )
+					for( var a=iL[i].attributes.length-1;a>-1;a-- ){
+						aV = iL[i].attributes[a].value;
+						if( aV ) {
+							aT = attrTypeById(tL,iL[i].attributes[a].attributeType);
+							if( !aT ) return {status:920, statusText: "attributes of instance with identifier '"+iL[i].id+"' must reference valid attributeTypes"}; 
+							dT = itemById(data.dataTypes,aT.dataType);
+							if( !dT ) return {status:904, statusText: "attributeType with identifier '"+aT.id+"' must reference a valid dataType"}; 
+							switch(dT.type) {
+								case 'xs:string': 
+									if( aV.length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
+									break;
+								case 'xs:double':
+	//								if( (aV*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922;
+									// no break;
+								case 'xs:integer':
+									if( aV<dT.min ) return {status:923, statusText: "numbers must be larger than min"};
+									if( aV>dT.max ) return {status:924, statusText: "numbers must be smaller than max"}; 
+									break;
+	/*							case 'xs:boolean':
+									if( aV!=true && aV!=false ) return {status:925,statusText:""}; 
+									break;
+	*/							case 'xs:enumeration':
+									// enumerated values in attributes must be defined in the dataType of the corresponding attributeType  (ToDo)
+									var aV.split(',');
+									if( vL.length>1 && !aT.multiple ) return {status:926, statusText: "attribute may not have more than one value"};
+									for( var v=vL.length-1;v>-1;v-- ) {
+										vL[v] = vL[v].trim();
+										if( vL[v] && indexById( dT.values, vL[v] )<0 ) return {status:927, statusText: "enumerated valus must be defined by the respective attribute type"}
+									}
+							}						
+						}
+						// else: empty values are allowed, so no return with error code
 					}
-					// else: empty values are allowed, so no return with error code
-				}
+			}
 		};
 		return {status:0, statusText: "attributeValues lie within their type's value ranges"}
 	}
