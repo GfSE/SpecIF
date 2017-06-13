@@ -14,3 +14,6 @@ For details see http://specif.de (in German only at this point in time).
 ## Checker
 
 ## Examples
+
+## Acknowledgements
+This work has been sponsored by [enso-managers gmbh](http://enso-managers.de), Berlin
