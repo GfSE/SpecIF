@@ -1,7 +1,7 @@
 {
   "id": "http://specif.de/v0.9.2/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "JSON-Schema for SpecIF v0.9.2",
+  "title": "JSON-Schema for SpecIF v0.9.3",
   "description": "SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.",
   "definitions": {
 	"id": {
@@ -19,13 +19,13 @@
           "type": "string"
 	},
 	"creation": {
-	  "description": "Indicates whether an instance of the type is created automatically, manually or both. All is allowed, if omitted.",
+	  "description": "Indicates whether an instance of the type is created automatically, manually or both. The values 'user' and 'manual' are equivalent; the latter is DEPRECATED. All is allowed, if the property omitted.",
           "type": "array",
           "minItems": 1,
 	  "uniqueItems": true,
           "items": {
             "type": "string",
-	    "enum": [ "auto", "manual" ]
+	    "enum": [ "auto", "user", "manual" ]
           }
 	},
 	"revision": {
@@ -76,7 +76,8 @@
             "$ref": "#/definitions/id"
           },
           "multiple": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Optional use by an attributeType with dataType 'xs:enumeration'. Indicates whether multiple values can be chosen. If omitted, the 'multiple' property of the dataType applies; by default the value is 'false'."
           },
           "revision": {
             "$ref": "#/definitions/revision"
@@ -248,6 +249,10 @@
               },
               "required": [ "id", "title" ]
             }
+          },
+          "multiple": {
+            "type": "boolean",
+            "description": "Optional use by dataType 'xs:enumeration'. Indicates whether multiple values can be chosen; by default the value is 'false'."
           },
           "revision": {
             "$ref": "#/definitions/revision"
