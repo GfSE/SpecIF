@@ -309,7 +309,7 @@
       }
     },
     "relationTypes": {
-      "description": "The type definitions for relations.",
+      "description": "The type definitions for relations between objects.",
       "type": "array",
       "items": {
         "type": "object",
