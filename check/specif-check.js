@@ -281,10 +281,13 @@ function checkConstraints(data) {
 	*/							case 'xs:enumeration':
 									// enumerated values in attributes must be defined in the dataType of the corresponding attributeType  (ToDo)
 									var aV.split(',');
-									if( vL.length>1 && !aT.multiple ) return {status:926, statusText: "attribute may not have more than one value"};
+									// 'multiple' property at attributeType supersedes 'multiple' at the dataType:
+									if( vL.length>1 && !(aT.multiple || (aT.multiple==undefined && dT.multiple)) ) 
+											return {status:926, statusText: "attribute may not have more than one value"};
 									for( var v=vL.length-1;v>-1;v-- ) {
 										vL[v] = vL[v].trim();
-										if( vL[v] && indexById( dT.values, vL[v] )<0 ) return {status:927, statusText: "enumerated valus must be defined by the respective attribute type"}
+										if( vL[v] && indexById( dT.values, vL[v] )<0 ) 
+											return {status:927, statusText: "enumerated valus must be defined by the respective attribute type"}
 									}
 							}						
 						}
