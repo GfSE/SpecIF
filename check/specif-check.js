@@ -269,7 +269,7 @@ function checkConstraints(data) {
 									if( aV.length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
 									break;
 								case 'xs:double':
-	//								if( (aV*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922;
+	//								if( (aV*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922,statusText:""};
 									// no break;
 								case 'xs:integer':
 									if( aV<dT.min ) return {status:923, statusText: "numbers must be larger than min"};
