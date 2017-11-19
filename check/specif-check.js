@@ -280,9 +280,9 @@ function checkConstraints(data) {
 									break;
 	*/							case 'xs:enumeration':
 									// enumerated values in attributes must be defined in the dataType of the corresponding attributeType  (ToDo)
-									var aV.split(',');
+									var vL=aV.split(',');
 									// 'multiple' property at attributeType supersedes 'multiple' at the dataType:
-									if( vL.length>1 && !(aT.multiple || (aT.multiple==undefined && dT.multiple)) ) 
+									if( vL.length>1 && !(aT.multiple || (aT.multiple==undefined && dT.multiple)) ) // logic expression is equivalent to 'multipleChoice(attrType)' ... the function is not used to avoid a dependency.
 											return {status:926, statusText: "attribute may not have more than one value"};
 									for( var v=vL.length-1;v>-1;v-- ) {
 										vL[v] = vL[v].trim();
@@ -307,11 +307,6 @@ function checkConstraints(data) {
 		};
 		return null  // should never arrive here ...
 	}
-	function errorsText(eL) {
-		var eT = '';
-		eL.forEach( function(e) { eT += (eT.length?',\n':'')+e.statusText+' ('+status+')'} );
-		return eT
-	}
 	function indexById(L,id) {
 		if(!L||!id) return -1;
 		// given an ID of an element in a list, return it's index:
@@ -327,5 +322,10 @@ function checkConstraints(data) {
 		for( var i=L.length-1;i>-1;i-- )
 			if( L[i].id === id ) return L[i];   // return list item
 		return null
+	}
+	function errorsText(eL) {
+		var eT = '';
+		eL.forEach( function(e) { eT += (eT.length?',\n':'')+e.statusText+' ('+status+')'} );
+		return eT
 	}
 }
