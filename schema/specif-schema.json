@@ -16,17 +16,17 @@
 	},
 	"icon": {
 	  "description": "A symbol for display as a prefix to titles; applicable to the instances of the type where it is defined. Can be any HTML-encoded character or a string with length 1..6 containing all except alphanumeric characters and quotes.",
-          "type": "string"
+      "type": "string"
 	},
 	"creation": {
 	  "description": "Indicates whether an instance of the type is created automatically, manually or both. The values 'user' and 'manual' are equivalent; the latter is DEPRECATED. All is allowed, if the property omitted.",
-          "type": "array",
-          "minItems": 1,
+      "type": "array",
+      "minItems": 1,
 	  "uniqueItems": true,
-          "items": {
-            "type": "string",
+      "items": {
+        "type": "string",
 	    "enum": [ "auto", "user", "manual" ]
-          }
+      }
 	},
 	"revision": {
 	  "type": "integer",
@@ -181,7 +181,7 @@
             },
             "value": {
               "type": "string",
-	      "format": "email"
+	          "format": "email"
             }
           },
           "required": [ "value" ]
@@ -353,10 +353,10 @@
             "$ref": "#/definitions/attributeTypes"
           },
           "revision": {
-	    "$ref": "#/definitions/revision"
+	        "$ref": "#/definitions/revision"
           },
           "changedAt": {
-	    "$ref": "#/definitions/dateTime"
+	        "$ref": "#/definitions/dateTime"
           },
           "changedBy": {
             "type": "string"
