@@ -1,7 +1,7 @@
 {
-  "id": "http://specif.de/v0.9.4/schema#",
+  "id": "http://specif.de/v0.9.5/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "JSON-Schema for SpecIF v0.9.4",
+  "title": "JSON-Schema for SpecIF v0.9.5",
   "description": "SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.",
   "definitions": {
 	"id": {
@@ -18,14 +18,14 @@
 	  "description": "A symbol for display as a prefix to titles; applicable to the instances of the type where it is defined. Can be any HTML-encoded character or a string with length 1..6 containing all except alphanumeric characters and quotes.",
       "type": "string"
 	},
-	"creation": {
-	  "description": "Indicates whether an instance of the type is created automatically, manually or both. The values 'user' and 'manual' are equivalent; the latter is DEPRECATED. All is allowed, if the property omitted.",
+	"instantiation": {
+	  "description": "Indicates whether an instance of the type is created automatically, manually or both. All is allowed, if the property is omitted. The type is abstract and cannot be instantiated, if the property list is empty.",
       "type": "array",
       "minItems": 1,
 	  "uniqueItems": true,
       "items": {
         "type": "string",
-	    "enum": [ "auto", "user", "manual" ]
+	    "enum": [ "auto", "user" ]
       }
 	},
 	"revision": {
@@ -289,8 +289,8 @@
           "isHeading": {
             "type": "boolean"
           },
-          "creation": {
-            "$ref": "#/definitions/creation"
+          "instantiation": {
+            "$ref": "#/definitions/instantiation"
           },
           "attributeTypes": {
             "$ref": "#/definitions/attributeTypes"
@@ -326,8 +326,8 @@
           "icon": {
             "$ref": "#/definitions/icon"
           },
-          "creation": {
-            "$ref": "#/definitions/creation"
+          "instantiation": {
+            "$ref": "#/definitions/instantiation"
           },
           "sourceTypes": {
             "type": "array",
@@ -383,8 +383,8 @@
           "icon": {
             "$ref": "#/definitions/icon"
           },
-          "creation": {
-            "$ref": "#/definitions/creation"
+          "instantiation": {
+            "$ref": "#/definitions/instantiation"
           },
           "attributeTypes": {
             "$ref": "#/definitions/attributeTypes"
