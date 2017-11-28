@@ -21,7 +21,6 @@
 	"instantiation": {
 	  "description": "Indicates whether an instance of the type is created automatically, manually or both. All is allowed, if the property is omitted. The type is abstract and cannot be instantiated, if the property list is empty.",
       "type": "array",
-      "minItems": 1,
 	  "uniqueItems": true,
       "items": {
         "type": "string",
