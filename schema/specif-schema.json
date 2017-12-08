@@ -295,10 +295,10 @@
             "$ref": "#/definitions/attributeTypes"
           },
           "revision": {
-	    "$ref": "#/definitions/revision"
+	        "$ref": "#/definitions/revision"
           },
           "changedAt": {
-	    "$ref": "#/definitions/dateTime"
+	        "$ref": "#/definitions/dateTime"
           },
           "changedBy": {
             "type": "string"
@@ -330,20 +330,20 @@
           },
           "sourceTypes": {
             "type": "array",
-	    "title": "Source Types",
-	    "description": "A collection of type id's of eligible source objects; if missing, all object types are eligible",
-	    "minItems": 1,
-	    "uniqueItems": true,
+			"title": "Source Types",
+			"description": "A collection of type id's of eligible source objects; if missing, all object types are eligible",
+			"minItems": 1,
+			"uniqueItems": true,
             "items": {
               "$ref": "#/definitions/id"
             }
           },
           "targetTypes": {
             "type": "array",
-	    "title": "Target Types",
-	    "description": "A collection of type id's of eligible target objects; if missing, all object types are eligible",
-	    "minItems": 1,
-	    "uniqueItems": true,
+			"title": "Target Types",
+			"description": "A collection of type id's of eligible target objects; if missing, all object types are eligible",
+			"minItems": 1,
+			"uniqueItems": true,
             "items": {
               "$ref": "#/definitions/id"
             }
@@ -389,10 +389,10 @@
             "$ref": "#/definitions/attributeTypes"
           },
           "revision": {
-	    "$ref": "#/definitions/revision"
+			"$ref": "#/definitions/revision"
           },
           "changedAt": {
-	    "$ref": "#/definitions/dateTime"
+			"$ref": "#/definitions/dateTime"
           },
           "changedBy": {
             "type": "string"
@@ -420,10 +420,10 @@
             "$ref": "#/definitions/attributes"
           },
           "revision": {
-	    "$ref": "#/definitions/revision"
+			"$ref": "#/definitions/revision"
           },
           "changedAt": {
-	    "$ref": "#/definitions/dateTime"
+			"$ref": "#/definitions/dateTime"
           },
           "changedBy": {
             "type": "string"
@@ -451,10 +451,10 @@
             "type": "object",
             "properties": {
               "id": {
-		"$ref": "#/definitions/id"
+				"$ref": "#/definitions/id"
               },
               "revision": {
-		"$ref": "#/definitions/revision"
+				"$ref": "#/definitions/revision"
               }
             },
             "required": [ "id" ]
@@ -463,10 +463,10 @@
             "type": "object",
             "properties": {
               "id": {
-		"$ref": "#/definitions/id"
+				"$ref": "#/definitions/id"
               },
               "revision": {
-		"$ref": "#/definitions/revision"
+				"$ref": "#/definitions/revision"
               }
             },
             "required": [ "id" ]
@@ -509,13 +509,13 @@
             "$ref": "#/definitions/attributes"
           },
           "nodes": {
-	    "$ref": "#/definitions/nodes"
+			"$ref": "#/definitions/nodes"
           },
           "revision": {
-	    "$ref": "#/definitions/revision"
+			"$ref": "#/definitions/revision"
           },
           "changedAt": {
-	    "$ref": "#/definitions/dateTime"
+			"$ref": "#/definitions/dateTime"
           },
           "changedBy": {
             "type": "string"
