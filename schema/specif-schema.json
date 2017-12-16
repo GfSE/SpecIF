@@ -1,7 +1,7 @@
 {
-  "id": "http://specif.de/v0.9.5/schema#",
+  "id": "http://specif.de/v0.9.6/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "JSON-Schema for SpecIF v0.9.5",
+  "title": "JSON-Schema for SpecIF v0.9.6",
   "description": "SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.",
   "definitions": {
 	"id": {
@@ -19,7 +19,7 @@
       "type": "string"
 	},
 	"instantiation": {
-	  "description": "Indicates whether an instance of the type is created automatically, manually or both. All is allowed, if the property is omitted. The type is abstract and cannot be instantiated, if the property list is empty.",
+	  "description": "Indicates whether an instance of the type is created automatically, manually or both. All is allowed, if the property is omitted. The type is abstract and cannot be instantiated, if the property list is present, but empty.",
       "type": "array",
 	  "uniqueItems": true,
       "items": {
@@ -129,10 +129,10 @@
       "type": "string",
 	"pattern": "^\\d+(\\.\\d+){1,2}$"
     },
-    "tool": {
+    "generator": {
       "type": "string"
     },
-    "toolVersion": {
+    "generatorVersion": {
       "type": "string"
     },
     "rights": {
