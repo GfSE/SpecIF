@@ -1,58 +1,32 @@
 /*	Schema and constraint checking for native SpecIF data in JSON format. 
-	Requires: jQuery 2.2 or higher, ajv 4.8 or higher.
+	Requires: ajv 4.8 or higher.
 	License: Apache 2.0 (http://www.apache.org/licenses/)
 	Author: se@enso-managers.com, enso managers gmbh, Berlin (http://www.enso-managers.com)
 	We appreciate any correction, comment or contribution here on GitHub or via e-mail to support@reqif.de            
 */
-function checkSchema(data) {
+function checkSchema( schema, data ) {
 	"use strict";
-	
-	// Check data using the specified revision of the SpecIF schema.
+	// Check data using the supplied schema.
 	// The return code uses properties similar to xhr, namely {status:900,statusText:"abc",responseText:"xyz"}
 	// Requires: https://github.com/epoberezkin/ajv/releases/tag/4.8.0 or later 
 	// ToDo: localize, see https://github.com/epoberezkin/ajv-i18n 
-	var ajv = Ajv({allErrors: true}),
-	    validate = null,
-	    dO = $.Deferred();
 
-	// Get the specified schema file from the server:
-	GET( "./schema/specif-schema-"+data.specifVersion+".json" )
-		.done( function(schema) {
-			validate = ajv.compile(schema);
-			// check data against schema using the compiled validation routine:
-			var valid = validate(data);
-			if( valid ) {
-				dO.resolve({ status: 0, statusText: 'SpecIF schema has been checked successfully!' })
-			} else {
-				var rt = ajv.errorsText(validate.errors);
-//				console.log( rt );
-				dO.reject({ status: 901, statusText: 'SpecIF schema is violated', responseText: rt })
-			}
-		})
-		.fail( function(xhr) { 
-			xhr.statusText = 'File "specif-schema-'+data.specifVersion+'.json" not found';
-			dO.reject(xhr)
-		});
-	return dO;
-
-	function GET(reqURL) {
-		return $.ajax({
-			url: reqURL,
-			type: 'GET',
-			accept: "application/json",
-			headers: {"Ajax-Request": "true"},    // get rid of the login dialog
-			cache: false
-		})
-	}
+	let ajv = Ajv({allErrors: true});
+	let validate = ajv.compile(schema);
+		
+	// check data against schema using the compiled validation routine:
+	let valid = validate(data);
+	
+	return valid?{ status: 0, statusText: 'SpecIF schema has been checked successfully!' }
+			:{ status: 901, statusText: 'SpecIF schema is violated', responseText: ajv.errorsText(validate.errors) }
 }
 function checkConstraints(data) {
 	"use strict";
-
 	// Check the constraints of the concrete values in 'data'.
 	// The return code uses properties similar to xhr, namely {status:900,statusText:"abc",responseText:"xyz"}
 	// ToDo: localize text and take it from language files.
-	var rc={},errL=[],
-		dO = $.Deferred();
+
+	var rc={},errL=[];
 
 	// ids must be unique unless when used as a reference:
 	rc = checkUniqueIds( data );
@@ -102,17 +76,14 @@ function checkConstraints(data) {
 		if( rc.status>0 ) { errL.push(rc); break }
 	};
 
-	if( errL.length<1 )
-		dO.resolve({ status: 0, statusText: 'SpecIF constraints have been checked successfully!' })
-	else
-		dO.reject({ status: 902, statusText: 'SpecIF constraints are violated', responseText: errorsText(errL) });
-	return dO;
+	return errL.length<1?{ status: 0, statusText: 'SpecIF constraints have been checked successfully!' }
+			:{ status: 902, statusText: 'SpecIF constraints are violated', responseText: errorsText(errL) };
 
 	// The checking routines:
 	function checkUniqueIds(iE) {
 		// All identifiers 'id' must be unique (unless when used as a reference).
-		var allIds=[];
-		var dId = duplicateId(iE.dataTypes);
+		let allIds=[],
+			dId = duplicateId(iE.dataTypes);
 		if( dId ) return {status:911, statusText: "dataType identifier '"+dId+"' is not unique"};
 		dId = duplicateId(iE.objectTypes);
 		if( dId ) return {status:912, statusText: "objectType or attributeType identifier '"+dId+"' is not unique"};
@@ -126,7 +97,7 @@ function checkConstraints(data) {
 		if( dId ) return {status:916, statusText: "relation identifier '"+dId+"' is not unique"};
 		dId = duplicateId(iE.hierarchies);
 		if( dId ) return {status:917, statusText: "hierarchy identifier '"+dId+"' is not unique"};
-		return {status:0, statusText: 'identifiers are unique'}
+		return {status:0, statusText: 'identifiers are unique'};
 
 		function duplicateId(L) {
 			// add every checked Id to allIds,
@@ -186,7 +157,7 @@ function checkConstraints(data) {
 	function checkTypes(L,els,type) {
 		// In case of objects, the value of "objectType" must be the id of a member of "objectTypes". 
 		// Similarly for relations and hierarchies.
-		var sTi=null;
+		let sTi=null;
 		for( var i=els.length-1;i>-1;i-- ){
 			sTi = indexById(L, els[i][type]);
 			if(sTi<0) return {status:903, statusText: "instance with identifier '"+els[i].id+"' must reference a valid type"}
@@ -204,7 +175,7 @@ function checkConstraints(data) {
 			}
 */	}
 	function checkAttrTypes(L,sTs) {
-		var aT=null, dT=null;
+		let aT=null, dT=null;
 		for( var i=sTs.length-1;i>-1;i-- ){
 			if( sTs[i].attributeTypes ) {
 				for( var j=sTs[i].attributeTypes.length-1;j>-1;j-- ) {
@@ -253,10 +224,10 @@ function checkConstraints(data) {
 	}
 	function checkAttrValues(tL,iL) {   // type list, instance list (objects, relations or hierarchies)
 		// Attribute values ("content") must fit to the respective type's range
-		var aT=null, dT=null, aV=null;
+		let aT=null, dT=null, aV=null;
 		if( iL ) {
 			for( var i=iL.length-1;i>-1;i-- ){
-				if( iL[i].attributes )
+				if( iL[i].attributes ) {
 					for( var a=iL[i].attributes.length-1;a>-1;a-- ){
 						aV = iL[i].attributes[a].value;
 						if( aV ) {
@@ -293,6 +264,7 @@ function checkConstraints(data) {
 						}
 						// else: empty values are allowed, so no return with error code
 					}
+				}
 			}
 		};
 		return {status:0, statusText: "attributeValues lie within their type's value ranges"}
@@ -300,7 +272,7 @@ function checkConstraints(data) {
 	function attrTypeById(sT,id) {
 		// given an attributeType's Id, return the attributeType:
 //		id = id.trim();
-		var a=null;
+		let a=null;
 		for( var t=sT.length-1; t>-1; t-- ) { // fastest loop with single variable
 			a = itemById( sT[t].attributeTypes, id );
 			if( a ) return a
