@@ -1,7 +1,7 @@
 {
-  "id": "http://specif.de/v0.9.6/schema#",
+  "id": "http://specif.de/v0.10.0/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "JSON-Schema for SpecIF v0.9.6",
+  "title": "JSON-Schema for SpecIF v0.10.0",
   "description": "SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.",
   "definitions": {
 	"id": {
@@ -15,8 +15,9 @@
 	  "pattern": "^(\\d{4}(?!\\d{2}\\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
 	},
 	"icon": {
-	  "description": "A symbol for display as a prefix to titles; applicable to the instances of the type where it is defined. Can be any HTML-encoded character or a string with length 1..6 containing all except alphanumeric characters and quotes.",
-      "type": "string"
+	  "description": "A symbol for display as a prefix to titles; applicable to the instances of the type where it is defined. Can be any HTML-encoded character or a string with length 1..7 beginning with a certain special character.",
+      "type": "string",
+	  "pattern": "^(&#[0-9]{1,5};|&#x[0-9]{1,4};|&[a-zA-Z]{1,6};|[@$%#*_\u007B\u20AC\u00A3\u00A5\u00A7]{1,1}[0-9a-zA-Z@$%#*_\u007D\u20AC\u00A3\u00A5\u00A7]{0,6})$"
 	},
 	"instantiation": {
 	  "description": "Indicates whether an instance of the type is created automatically, manually or both. All is allowed, if the property is omitted. The type is abstract and cannot be instantiated, if the property list is present, but empty.",
@@ -32,7 +33,7 @@
 	  "minimum": 0
 	},
     "nodes": {
-      "description": "A list of pointers to objects; may be nested to build a tree, i.e. a hierarchy of pointers.",
+      "description": "A list of pointers to resources; may be nested to build a tree, i.e. a hierarchy of pointers.",
       "type": "array",
       "items": {
         "type": "object",
@@ -40,7 +41,7 @@
           "id": {
             "$ref": "#/definitions/id"
           },
-          "object": {
+          "resource": {
             "$ref": "#/definitions/id"
           },
           "revision": {
@@ -53,11 +54,11 @@
             "$ref": "#/definitions/dateTime"
           }
         },
-        "required": [ "id", "object", "changedAt" ]
+        "required": [ "id", "resource", "changedAt" ]
       }
     },
-    "attributeTypes": {
-      "description": "Type definition of an attribute for objects, relations or hierarchies. Is a sub-element of the respective objectType, relationType or hierarchyType.",
+    "propertyTypes": {
+      "description": "Type definition of a property for resources, statements or hierarchies. Is a sub-element of the respective resourceType, statementType or hierarchyType.",
       "type": "array",
       "items": {
         "type": "object",
@@ -76,11 +77,11 @@
           },
           "multiple": {
             "type": "boolean",
-            "description": "Optional use by an attributeType with dataType 'xs:enumeration'. Indicates whether multiple values can be chosen. If omitted, the 'multiple' property of the dataType applies; by default the value is 'false'."
+            "description": "Optional use by a propertyType with dataType 'xs:enumeration'. Indicates whether multiple values can be chosen. If omitted, the 'multiple' property of the dataType applies; by default the value is 'false'."
           },
           "revision": {
             "$ref": "#/definitions/revision"
-	  },
+          },
           "changedAt": {
 	    "$ref": "#/definitions/dateTime"
           }
@@ -88,8 +89,8 @@
         "required": [ "id", "dataType", "changedAt" ]
       }
     },
-    "attributes": {
-      "description": "An attribute value for an object, relation or hierarchy.",
+    "properties": {
+      "description": "A property value for a resource, statement or hierarchy.",
       "type": "array",
       "items": {
         "type": "object",
@@ -103,14 +104,14 @@
           "description": {
             "type": "string"
           },
-          "attributeType": {
+          "propertyType": {
             "$ref": "#/definitions/id"
           },
           "value": {
             "type": "string"
           }
         },
-        "required": [ "attributeType", "value" ]
+        "required": [ "propertyType", "value" ]
       }
     }
   },
@@ -189,7 +190,7 @@
       "required": [ "email" ]
     },
     "dataTypes": {
-      "description": "The base data types for use by attribute type definitions.",
+      "description": "The base data types for use by property type definitions.",
       "type": "array",
       "minItems": 1,
       "items": {
@@ -267,8 +268,8 @@
         "required": [ "id", "title", "type", "changedAt" ]
       }
     },
-    "objectTypes": {
-      "description": "The type definitions for objects.",
+    "resourceTypes": {
+      "description": "The type definitions for resources.",
       "type": "array",
       "items": {
         "type": "object",
@@ -291,8 +292,8 @@
           "instantiation": {
             "$ref": "#/definitions/instantiation"
           },
-          "attributeTypes": {
-            "$ref": "#/definitions/attributeTypes"
+          "propertyTypes": {
+            "$ref": "#/definitions/propertyTypes"
           },
           "revision": {
 	        "$ref": "#/definitions/revision"
@@ -304,11 +305,11 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "attributeTypes", "changedAt" ]
+        "required": [ "id", "title", "propertyTypes", "changedAt" ]
       }
     },
-    "relationTypes": {
-      "description": "The type definitions for relations between objects.",
+    "statementTypes": {
+      "description": "The type definitions for statements in subject-predicate-object statements, where subject and object are resources.",
       "type": "array",
       "items": {
         "type": "object",
@@ -328,28 +329,28 @@
           "instantiation": {
             "$ref": "#/definitions/instantiation"
           },
-          "sourceTypes": {
+          "subjectTypes": {
             "type": "array",
-			"title": "Source Types",
-			"description": "A collection of type id's of eligible source objects; if missing, all object types are eligible",
+			"title": "Eligible Subject Types",
+			"description": "A collection of type id's of eligible resource types; if missing, all resource types are eligible",
 			"minItems": 1,
 			"uniqueItems": true,
             "items": {
               "$ref": "#/definitions/id"
             }
           },
-          "targetTypes": {
+          "objectTypes": {
             "type": "array",
-			"title": "Target Types",
-			"description": "A collection of type id's of eligible target objects; if missing, all object types are eligible",
+			"title": "Eligible Object Types",
+			"description": "A collection of type id's of eligible resource types; if missing, all resource types are eligible",
 			"minItems": 1,
 			"uniqueItems": true,
             "items": {
               "$ref": "#/definitions/id"
             }
           },
-          "attributeTypes": {
-            "$ref": "#/definitions/attributeTypes"
+          "propertyTypes": {
+            "$ref": "#/definitions/propertyTypes"
           },
           "revision": {
 	        "$ref": "#/definitions/revision"
@@ -385,8 +386,8 @@
           "instantiation": {
             "$ref": "#/definitions/instantiation"
           },
-          "attributeTypes": {
-            "$ref": "#/definitions/attributeTypes"
+          "propertyTypes": {
+            "$ref": "#/definitions/propertyTypes"
           },
           "revision": {
 			"$ref": "#/definitions/revision"
@@ -401,8 +402,8 @@
         "required": [ "id", "title", "changedAt" ]
       }
     },
-    "objects": {
-      "description": "The objects such as diagrams, model elements or requirements.",
+    "resources": {
+      "description": "The resources such as diagrams, model elements or requirements.",
       "type": "array",
       "items": {
         "type": "object",
@@ -413,11 +414,11 @@
           "title": {
             "type": "string"
           },
-          "objectType": {
+          "resourceType": {
             "$ref": "#/definitions/id"
           },
-          "attributes": {
-            "$ref": "#/definitions/attributes"
+          "properties": {
+            "$ref": "#/definitions/properties"
           },
           "revision": {
 			"$ref": "#/definitions/revision"
@@ -429,11 +430,11 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "objectType", "attributes", "changedAt" ]
+        "required": [ "id", "title", "resourceType", "properties", "changedAt" ]
       }
     },
-    "relations": {
-      "description": "Directed relations between two objects building a semantic net.",
+    "statements": {
+      "description": "Subject-predicate-Object statements, where subject and object are resources. In other terms, statements are relations between two resources building a semantic net.",
       "type": "array",
       "items": {
         "type": "object",
@@ -444,10 +445,10 @@
           "title": {
             "type": "string"
           },
-          "relationType": {
+          "statementType": {
             "$ref": "#/definitions/id"
           },
-          "source": {
+          "subject": {
             "type": "object",
             "properties": {
               "id": {
@@ -459,7 +460,7 @@
             },
             "required": [ "id" ]
           },
-          "target": {
+          "object": {
             "type": "object",
             "properties": {
               "id": {
@@ -471,8 +472,8 @@
             },
             "required": [ "id" ]
           },
-          "attributes": {
-            "$ref": "#/definitions/attributes"
+          "properties": {
+            "$ref": "#/definitions/properties"
           },
           "revision": {
             "$ref": "#/definitions/revision"
@@ -484,11 +485,11 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "relationType", "source", "target", "changedAt" ]
+        "required": [ "id", "title", "statementType", "subject", "object", "changedAt" ]
       }
     },
     "hierarchies": {
-      "description": "Hierarchy trees, each referencing objects to constitute an outline, bill-of-material or similar.",
+      "description": "Hierarchy trees, each referencing resources to constitute an outline, bill-of-material or similar.",
       "type": "array",
       "items": {
         "type": "object",
@@ -505,8 +506,8 @@
           "hierarchyType": {
             "$ref": "#/definitions/id"
           },
-          "attributes": {
-            "$ref": "#/definitions/attributes"
+          "properties": {
+            "$ref": "#/definitions/properties"
           },
           "nodes": {
 			"$ref": "#/definitions/nodes"
@@ -534,11 +535,11 @@
     "title",
     "specifVersion",
     "dataTypes",
-    "objectTypes",
-    "relationTypes",
+    "resourceTypes",
+    "statementTypes",
     "hierarchyTypes",
-    "objects",
-    "relations",
+    "resources",
+    "statements",
     "hierarchies"
   ]
 }

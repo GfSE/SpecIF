@@ -35,44 +35,44 @@ function checkConstraints(data) {
 	// dataTypes must respect certain constraints depending on their base type:
 	rc = checkDataTypes( data.dataTypes );
 	if( rc.status>0 ) errL.push(rc);
-	// in case of objects, the value of "objectType" must be the id of a member of "objectTypes":
-	rc = checkTypes( data.objectTypes, data.objects, 'objectType' );
+	// in case of resources, the value of "resourceType" must be the id of a member of "resourceTypes":
+	rc = checkTypes( data.resourceTypes, data.resources, 'resourceType' );
 	if( rc.status>0 ) errL.push(rc);
-	// in case of relations, the value of "relationType" must be the id of a member of "relationTypes":
-	rc = checkTypes( data.relationTypes, data.relations, 'relationType' );
+	// in case of statements, the value of "statementType" must be the id of a member of "statementTypes":
+	rc = checkTypes( data.statementTypes, data.statements, 'statementType' );
 	if( rc.status>0 ) errL.push(rc);
 	// in case of hierarchies, the value of "hierarchyType" must be the id of a member of "hierarchyTypes":
 	rc = checkTypes( data.hierarchyTypes, data.hierarchies, 'hierarchyType' );
 	if( rc.status>0 ) errL.push(rc);
 
-	// An attributeType's "dataType" must be the id of a member of "dataTypes":
-	// .. these are now checked in checkAttrValues.
-	rc = checkAttrTypes( data.dataTypes, data.objectTypes );
+	// A propertyType's "dataType" must be the id of a member of "dataTypes":
+	// .. these are now checked in checkPropValues.
+	rc = checkPropTypes( data.dataTypes, data.resourceTypes );
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkAttrTypes( data.dataTypes, data.relationTypes );
+	rc = checkPropTypes( data.dataTypes, data.statementTypes );
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkAttrTypes( data.dataTypes, data.hierarchyTypes );
-	if( rc.status>0 ) errL.push(rc);
-
-	// sourceTypes and targetTypes must be objectType ids:
-	rc = checkRelationTypeIds( data.objectTypes, data.relationTypes );
+	rc = checkPropTypes( data.dataTypes, data.hierarchyTypes );
 	if( rc.status>0 ) errL.push(rc);
 
-	// attribute values ("content") must fit to the respective type's range
-	rc = checkAttrValues( data.objectTypes, data.objects );
-	if( rc.status>0 ) errL.push(rc);
-	rc = checkAttrValues( data.relationTypes, data.relations );
-	if( rc.status>0 ) errL.push(rc);
-	rc = checkAttrValues( data.hierarchyTypes, data.hierarchies );
+	// subjectTypes and objectTypes must be resourceType ids:
+	rc = checkStatementTypeIds( data.resourceTypes, data.statementTypes );
 	if( rc.status>0 ) errL.push(rc);
 
-	// source and target must be object ids:
-	rc = checkRelationIds( data.objects, data.relations );
+	// property values ("content") must fit to the respective type's range
+	rc = checkPropValues( data.resourceTypes, data.resources );
+	if( rc.status>0 ) errL.push(rc);
+	rc = checkPropValues( data.statementTypes, data.statements );
+	if( rc.status>0 ) errL.push(rc);
+	rc = checkPropValues( data.hierarchyTypes, data.hierarchies );
 	if( rc.status>0 ) errL.push(rc);
 
-	// A hierarchy node's "object" must be the id of a member of "objects":
+	// subject and object must be resource ids:
+	rc = checkStatementIds( data.resources, data.statements );
+	if( rc.status>0 ) errL.push(rc);
+
+	// A hierarchy node's "resource" must be the id of a member of "resources":
 	for( var h=data.hierarchies.length-1; h>-1; h--) {
-		rc = checkNodes( data.objects, data.hierarchies[h].nodes );
+		rc = checkNodes( data.resources, data.hierarchies[h].nodes );
 		if( rc.status>0 ) { errL.push(rc); break }
 	};
 
@@ -85,16 +85,16 @@ function checkConstraints(data) {
 		let allIds=[],
 			dId = duplicateId(iE.dataTypes);
 		if( dId ) return {status:911, statusText: "dataType identifier '"+dId+"' is not unique"};
-		dId = duplicateId(iE.objectTypes);
-		if( dId ) return {status:912, statusText: "objectType or attributeType identifier '"+dId+"' is not unique"};
-		dId = duplicateId(iE.relationTypes);
-		if( dId ) return {status:913, statusText: "relationType or attributeType identifier '"+dId+"' is not unique"};
+		dId = duplicateId(iE.resourceTypes);
+		if( dId ) return {status:912, statusText: "resourceType or propertyType identifier '"+dId+"' is not unique"};
+		dId = duplicateId(iE.statementTypes);
+		if( dId ) return {status:913, statusText: "statementType or propertyType identifier '"+dId+"' is not unique"};
 		dId = duplicateId(iE.hierarchyTypes);
-		if( dId ) return {status:914, statusText: "hierarchyType or attributeType identifier '"+dId+"' is not unique"};
-		dId = duplicateId(iE.objects);
-		if( dId ) return {status:915, statusText: "object identifier '"+dId+"' is not unique"};
-		dId = duplicateId(iE.relations);
-		if( dId ) return {status:916, statusText: "relation identifier '"+dId+"' is not unique"};
+		if( dId ) return {status:914, statusText: "hierarchyType or propertyType identifier '"+dId+"' is not unique"};
+		dId = duplicateId(iE.resources);
+		if( dId ) return {status:915, statusText: "resource identifier '"+dId+"' is not unique"};
+		dId = duplicateId(iE.statements);
+		if( dId ) return {status:916, statusText: "statement identifier '"+dId+"' is not unique"};
 		dId = duplicateId(iE.hierarchies);
 		if( dId ) return {status:917, statusText: "hierarchy identifier '"+dId+"' is not unique"};
 		return {status:0, statusText: 'identifiers are unique'};
@@ -108,12 +108,12 @@ function checkConstraints(data) {
 			for( var i=L.length-1;i>-1;i-- ) {
 				// check the element's id:
 				if( allIds.indexOf(L[i].id)>-1 ) return L[i].id;
-				// check the attributeType's identifiers, as well:
-				// (the instance's attributes do not have an id ...)
-				if( L[i].attributeTypes ) {
-					rc = duplicateId(L[i].attributeTypes);
+				// check the propertyType's identifiers, as well:
+				// (the instance's properties do not have an id ...)
+				if( L[i].propertyTypes ) {
+					rc = duplicateId(L[i].propertyTypes);
 					if( rc ) return rc
-					// ToDo: check value identifiers of enumerated attribute types
+					// ToDo: check value identifiers of enumerated property types
 				};
 				// check the hierarchy's nodes recursively:
 				if( L[i].nodes ) {
@@ -127,16 +127,16 @@ function checkConstraints(data) {
 		}
 	}
 	function checkNodes(L,nds) {
-		// Any node's "object" must be the id of a member of "objects". 
+		// Any node's "resource" must be the id of a member of "resources". 
 		if( nds ) {
 			var rc = null;
 			for( var i=nds.length-1;i>-1;i-- ){
-				if(indexById(L,nds[i].object)<0) return {status:909, statusText: "hierarchy node with identifier '"+nds[i].id+"' must reference a valid object"};	// check the node itself
+				if(indexById(L,nds[i].resource)<0) return {status:909, statusText: "hierarchy node with identifier '"+nds[i].id+"' must reference a valid resource"};	// check the node itself
 				rc = checkNodes(L,nds[i].nodes);	// check references of next hierarchy levels recursively
 				if(rc.status!=0) return rc	
 			}
 		};
-		return {status:0, statusText: "hierarchy nodes reference valid objects"}		// all's fine!
+		return {status:0, statusText: "hierarchy nodes reference valid resources"}		// all's fine!
 	}
 	function checkDataTypes(L) {
 		for( var i=L.length-1;i>-1;i-- ){
@@ -155,53 +155,53 @@ function checkConstraints(data) {
 		return {status:0, statusText: "dataTypes are correct"}		// all's fine!
 	}
 	function checkTypes(L,els,type) {
-		// In case of objects, the value of "objectType" must be the id of a member of "objectTypes". 
-		// Similarly for relations and hierarchies.
+		// In case of resources, the value of "resourceType" must be the id of a member of "resourceTypes". 
+		// Similarly for statements and hierarchies.
 		let sTi=null;
 		for( var i=els.length-1;i>-1;i-- ){
 			sTi = indexById(L, els[i][type]);
 			if(sTi<0) return {status:903, statusText: "instance with identifier '"+els[i].id+"' must reference a valid type"}
-//			if( !checkAttrTypeIds(L[sTi].attributeTypes,els[i].attributes) ) return {status:920, statusText: "attributes of instance with identifier '"+els[i].id+"' must reference valid attributeTypes"}
+//			if( !checkPropTypeIds(L[sTi].propertyTypes,els[i].properties) ) return {status:920, statusText: "properties of instance with identifier '"+els[i].id+"' must reference valid propertyTypes"}
 		};
-		return {status:0, statusText: "instance's "+type+" and attributeTypes reference valid types"}	
+		return {status:0, statusText: "instance's "+type+" and propertyTypes reference valid types"}	
 				
-/*	  		function checkAttrTypeIds(L,atts) {
-				// all attribute's "attributeType" must be the id of a member of "attributeTypes":
-				// .. these are now checked in checkAttrValues.
+/*	  		function checkPropTypeIds(L,atts) {
+				// all property's "propertyType" must be the id of a member of "propertyTypes":
+				// .. these are now checked in checkPropValues.
 				for( var i=atts.length-1;i>-1;i-- ) {
-					if(indexById(L, atts[j].attributeType)<0) return false
+					if(indexById(L, atts[j].propertyType)<0) return false
 				};
 				return true
 			}
 */	}
-	function checkAttrTypes(L,sTs) {
+	function checkPropTypes(L,sTs) {
 		let aT=null, dT=null;
 		for( var i=sTs.length-1;i>-1;i-- ){
-			if( sTs[i].attributeTypes ) {
-				for( var j=sTs[i].attributeTypes.length-1;j>-1;j-- ) {
-					aT = sTs[i].attributeTypes[j];
+			if( sTs[i].propertyTypes ) {
+				for( var j=sTs[i].propertyTypes.length-1;j>-1;j-- ) {
+					aT = sTs[i].propertyTypes[j];
 					dT = itemById(L,aT.dataType);
-					// An attributeType's "dataType" must be the id of a member of "dataTypes".
-					// .. this is also checked in checkAttrValues:
-					if( !dT ) return {status:904, statusText: "attributeType with identifier '"+aT.id+"' must reference a valid dataType"};
-					// If an attributeType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
+					// An propertyType's "dataType" must be the id of a member of "dataTypes".
+					// .. this is also checked in checkPropValues:
+					if( !dT ) return {status:904, statusText: "propertyType with identifier '"+aT.id+"' must reference a valid dataType"};
+					// If an propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
 				}
 			}
 		};
-		return {status:0, statusText: "attributeTypes reference valid dataTypes"}
+		return {status:0, statusText: "propertyTypes reference valid dataTypes"}
 	}
 
-	function checkRelationTypeIds(oTL,rTL) {	// objectTypes, relationTypes
-		// All relationType's "sourceTypes" must be the id of a member of "objectTypes". 
-		// Similarly for "targetTypes".
+	function checkStatementTypeIds(oTL,rTL) {	// resourceTypes, statementTypes
+		// All statementType's "subjectTypes" must be the id of a member of "resourceTypes". 
+		// Similarly for "objectTypes".
 		for( var i=rTL.length-1;i>-1;i-- ){
-			if( !checkEls(oTL, rTL[i].sourceTypes) ) return {status:906, statusText: "sourceTypes of relationType with identifier '"+rTL[i].id+"' must reference valid objectTypes"};
-			if( !checkEls(oTL, rTL[i].targetTypes) ) return {status:907, statusText: "targetTypes of relationType with identifier '"+rTL[i].id+"' must reference valid objectTypes"}
+			if( !checkEls(oTL, rTL[i].subjectTypes) ) return {status:906, statusText: "subjectTypes of statementType with identifier '"+rTL[i].id+"' must reference valid resourceTypes"};
+			if( !checkEls(oTL, rTL[i].objectTypes) ) return {status:907, statusText: "objectTypes of statementType with identifier '"+rTL[i].id+"' must reference valid resourceTypes"}
 		};
-		return {status:0, statusText: "relationType's sourceTypes and targetTypes reference valid objectTypes"};
+		return {status:0, statusText: "statementType's subjectTypes and objectTypes reference valid resourceTypes"};
 
 		function checkEls(oTL,oTs) {
-			// no sourceTypes resp. targetTypes means all defined objectTypes are eligible:
+			// no subjectTypes resp. objectTypes means all defined resourceTypes are eligible:
 			if( oTs ) { 
 				// each value in oTs must be the id of a member of oTL:
 				for( var i=oTs.length-1;i>-1;i-- ) {
@@ -211,30 +211,30 @@ function checkConstraints(data) {
 			return true
 		}
 	}
-	function checkRelationIds(oL,rL) {	// objects, relations
-		// A relation's "source" must be the id of a member of "objects". 
-		// Similarly for "target".
-		// (It has been checked before that any "object" is indeed of type "objectType").
+	function checkStatementIds(oL,rL) {	// resources, statements
+		// A statement's "subject" must be the id of a member of "resources". 
+		// Similarly for "object".
+		// (It has been checked before that any "resource" is indeed of type "resourceType").
 		for( var i=rL.length-1;i>-1;i-- ){
-			if(indexById(oL, rL[i].source.id)<0) return {status:908, statusText: "source of relation with identifier '"+rL[i].id+"' must reference a valid object"};
-			if(indexById(oL, rL[i].target.id)<0) return {status:909, statusText: "target of relation with identifier '"+rL[i].id+"' must reference a valid object"};
-//			if( rL[i].source == rL[i].target ) return {status:90X, statusText: ""}
+			if(indexById(oL, rL[i].subject.id)<0) return {status:908, statusText: "subject of statement with identifier '"+rL[i].id+"' must reference a valid resource"};
+			if(indexById(oL, rL[i].object.id)<0) return {status:909, statusText: "object of statement with identifier '"+rL[i].id+"' must reference a valid resource"};
+//			if( rL[i].subject == rL[i].object ) return {status:90X, statusText: ""}
 		};
-		return {status:0, statusText: "relation's sources and targets reference valid objects"}
+		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
 	}
-	function checkAttrValues(tL,iL) {   // type list, instance list (objects, relations or hierarchies)
-		// Attribute values ("content") must fit to the respective type's range
+	function checkPropValues(tL,iL) {   // type list, instance list (resources, statements or hierarchies)
+		// Property values ("content") must fit to the respective type's range
 		let aT=null, dT=null, aV=null;
 		if( iL ) {
 			for( var i=iL.length-1;i>-1;i-- ){
-				if( iL[i].attributes ) {
-					for( var a=iL[i].attributes.length-1;a>-1;a-- ){
-						aV = iL[i].attributes[a].value;
+				if( iL[i].properties ) {
+					for( var a=iL[i].properties.length-1;a>-1;a-- ){
+						aV = iL[i].properties[a].value;
 						if( aV ) {
-							aT = attrTypeById(tL,iL[i].attributes[a].attributeType);
-							if( !aT ) return {status:920, statusText: "attributes of instance with identifier '"+iL[i].id+"' must reference valid attributeTypes"}; 
+							aT = propTypeById(tL,iL[i].properties[a].propertyType);
+							if( !aT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference valid propertyTypes"}; 
 							dT = itemById(data.dataTypes,aT.dataType);
-							if( !dT ) return {status:904, statusText: "attributeType with identifier '"+aT.id+"' must reference a valid dataType"}; 
+							if( !dT ) return {status:904, statusText: "propertyType with identifier '"+aT.id+"' must reference a valid dataType"}; 
 							switch(dT.type) {
 								case 'xs:string': 
 									if( aV.length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
@@ -250,15 +250,15 @@ function checkConstraints(data) {
 									if( aV!=true && aV!=false ) return {status:925,statusText:""}; 
 									break;
 	*/							case 'xs:enumeration':
-									// enumerated values in attributes must be defined in the dataType of the corresponding attributeType  (ToDo)
+									// enumerated values in properties must be defined in the dataType of the corresponding propertyType  (ToDo)
 									var vL=aV.split(',');
-									// 'multiple' property at attributeType supersedes 'multiple' at the dataType:
+									// 'multiple' property at propertyType supersedes 'multiple' at the dataType:
 									if( vL.length>1 && !(aT.multiple || (aT.multiple==undefined && dT.multiple)) ) // logic expression is equivalent to 'multipleChoice(attrType)' ... the function is not used to avoid a dependency.
-											return {status:926, statusText: "attribute may not have more than one value"};
+											return {status:926, statusText: "property may not have more than one value"};
 									for( var v=vL.length-1;v>-1;v-- ) {
 										vL[v] = vL[v].trim();
 										if( vL[v] && indexById( dT.values, vL[v] )<0 ) 
-											return {status:927, statusText: "enumerated valus must be defined by the respective attribute type"}
+											return {status:927, statusText: "enumerated valus must be defined by the respective property type"}
 									}
 							}						
 						}
@@ -267,21 +267,21 @@ function checkConstraints(data) {
 				}
 			}
 		};
-		return {status:0, statusText: "attributeValues lie within their type's value ranges"}
+		return {status:0, statusText: "propertyValues lie within their type's value ranges"}
 	}
-	function attrTypeById(sT,id) {
-		// given an attributeType's Id, return the attributeType:
+	function propTypeById(sT,id) {
+		// given a propertyType's id, return the propertyType:
 //		id = id.trim();
 		let a=null;
 		for( var t=sT.length-1; t>-1; t-- ) { // fastest loop with single variable
-			a = itemById( sT[t].attributeTypes, id );
+			a = itemById( sT[t].propertyTypes, id );
 			if( a ) return a
 		};
 		return null  // should never arrive here ...
 	}
 	function indexById(L,id) {
 		if(!L||!id) return -1;
-		// given an ID of an element in a list, return it's index:
+		// given the id of an element in a list, return it's index:
 		id = id.trim();
 		for( var i=L.length-1;i>-1;i-- )
 			if( L[i].id === id ) return i;   // return list index 
