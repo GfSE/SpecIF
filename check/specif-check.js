@@ -149,7 +149,7 @@ function checkConstraints(data) {
 					// no break;
 				case 'xs:integer':
 					if( L[i].min==undefined || L[i].max==undefined || L[i].min+1>L[i].max ) return {status:929, statusText: "number types must have min and max"};
-					break;
+					break
 			}						
 		};
 		return {status:0, statusText: "dataTypes are correct"}		// all's fine!
@@ -181,10 +181,10 @@ function checkConstraints(data) {
 				for( var j=sTs[i].propertyTypes.length-1;j>-1;j-- ) {
 					aT = sTs[i].propertyTypes[j];
 					dT = itemById(L,aT.dataType);
-					// An propertyType's "dataType" must be the id of a member of "dataTypes".
+					// A propertyType's "dataType" must be the id of a member of "dataTypes".
 					// .. this is also checked in checkPropValues:
 					if( !dT ) return {status:904, statusText: "propertyType with identifier '"+aT.id+"' must reference a valid dataType"};
-					// If an propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
+					// If a propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
 				}
 			}
 		};

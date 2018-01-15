@@ -1,7 +1,7 @@
 {
-  "id": "http://specif.de/v0.10.0/schema#",
+  "id": "http://specif.de/v0.11.1/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "JSON-Schema for SpecIF v0.10.0",
+  "title": "JSON-Schema for SpecIF v0.11.1",
   "description": "SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.",
   "definitions": {
 	"id": {
@@ -9,15 +9,39 @@
 	  "type": "string",
 	  "pattern": "^[_a-zA-Z]{1}[_a-zA-Z0-9.-]*$"
 	},
+	"revision": {
+	  "description": "Every update gets an incremented revision number; if items have the same revision number, they have been changed in a common transaction.",
+	  "type": "integer",
+	  "minimum": 0
+	},
+	"key": {
+	  "description": "A unique key for a particular revision of an identifiable item, e.g. of a resource.",
+	  "oneOf": [{
+		"description": "A string with a valid identifier; where the last revision (i.e. revision=0) is implied.",
+        "$ref": "#/definitions/id"
+	  }, {
+		"description": "A key consisting of a valid identifier and a revision. Revision=0 means the latest revision of the identified item. If the revision does not exist, the next lower existing revision applies.",
+		"type": "object",
+		"properties": {
+		  "id": {
+			"$ref": "#/definitions/id"
+		  },
+		  "revision": {
+			"$ref": "#/definitions/revision"
+		  }
+		},
+		"required": [ "id" ]
+	  }]
+	},
 	"dateTime": {
 	  "description": "An ISO-8601 dateTime string. For reduced accuracy, any number of values may be dropped, but only from right to left.",
 	  "type": "string",
 	  "pattern": "^(\\d{4}(?!\\d{2}\\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
 	},
 	"icon": {
-	  "description": "A symbol for display as a prefix to titles; applicable to the instances of the type where it is defined. Can be any HTML-encoded character or a string with length 1..7 beginning with a certain special character.",
+	  "description": "A symbol for display as a prefix to titles; applicable to the instances of the type where it is defined. Can be any HTML-encoded character or a string with length 1..7 beginning with a certain special character or an empty string.",
       "type": "string",
-	  "pattern": "^(&#[0-9]{1,5};|&#x[0-9]{1,4};|&[a-zA-Z]{1,6};|[@$%#*_\u007B\u20AC\u00A3\u00A5\u00A7]{1,1}[0-9a-zA-Z@$%#*_\u007D\u20AC\u00A3\u00A5\u00A7]{0,6})$"
+	  "pattern": "^(|&#[0-9]{1,5};|&#x[0-9]{1,4};|&[a-zA-Z]{1,6};|[@$%#*_\u007B\u20AC\u00A3\u00A5\u00A7]{1,1}[0-9a-zA-Z@$%#*_\u007D\u20AC\u00A3\u00A5\u00A7]{0,6})$"
 	},
 	"instantiation": {
 	  "description": "Indicates whether an instance of the type is created automatically, manually or both. All is allowed, if the property is omitted. The type is abstract and cannot be instantiated, if the property list is present, but empty.",
@@ -27,10 +51,30 @@
         "type": "string",
 	    "enum": [ "auto", "user" ]
       }
-	},
-	"revision": {
-	  "type": "integer",
-	  "minimum": 0
+    },
+	"value": {
+      "description": "A text fragment in one or more languages.",
+	  "oneOf": [{
+		"description": "A string containing a text fragment or a special value.",
+        "type": "string"
+	  }, {
+		"description": "A list of items with text and language properties.",
+		"type": "array",
+		"items": {
+			"type": "object",
+			"properties": {
+			  "text": {
+				"description": "A string containing the text fragment.",
+				"type": "string"
+			  },
+			  "language": {
+				"description": "The IETF language tag, e.g. 'en', 'en-US, 'fr' or 'de'.",
+				"type": "string"
+			  }
+			},
+			"required": [ "text", "language" ]
+		}		
+	  }]
 	},
     "nodes": {
       "description": "A list of pointers to resources; may be nested to build a tree, i.e. a hierarchy of pointers.",
@@ -42,7 +86,7 @@
             "$ref": "#/definitions/id"
           },
           "resource": {
-            "$ref": "#/definitions/id"
+            "$ref": "#/definitions/key"
           },
           "revision": {
 	    "$ref": "#/definitions/revision"
@@ -108,12 +152,12 @@
             "$ref": "#/definitions/id"
           },
           "value": {
-            "type": "string"
+            "$ref": "#/definitions/value"
           }
         },
         "required": [ "propertyType", "value" ]
       }
-    }
+	}
   },
   "type": "object",
   "properties": {
@@ -449,28 +493,10 @@
             "$ref": "#/definitions/id"
           },
           "subject": {
-            "type": "object",
-            "properties": {
-              "id": {
-				"$ref": "#/definitions/id"
-              },
-              "revision": {
-				"$ref": "#/definitions/revision"
-              }
-            },
-            "required": [ "id" ]
+            "$ref": "#/definitions/key"
           },
           "object": {
-            "type": "object",
-            "properties": {
-              "id": {
-				"$ref": "#/definitions/id"
-              },
-              "revision": {
-				"$ref": "#/definitions/revision"
-              }
-            },
-            "required": [ "id" ]
+            "$ref": "#/definitions/key"
           },
           "properties": {
             "$ref": "#/definitions/properties"
