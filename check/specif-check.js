@@ -20,28 +20,30 @@ function checkSchema( schema, data ) {
 	return valid?{ status: 0, statusText: 'SpecIF schema has been checked successfully!' }
 			:{ status: 901, statusText: 'SpecIF schema is violated', responseText: ajv.errorsText(validate.errors) }
 }
-function checkConstraints(data) {
+function checkConstraints( data ) {
 	"use strict";
 	// Check the constraints of the concrete values in 'data'.
+	// Applies to SpecIF schema 0.11.1 and later, where a key consisting of id plus revision is used to reference an item.
+	// Data according SpecIF schema 0.10.0 passes, as well.
 	// The return code uses properties similar to xhr, namely {status:900,statusText:"abc",responseText:"xyz"}
 	// ToDo: localize text and take it from language files.
 
 	var rc={},errL=[];
 
 	// ids must be unique unless when used as a reference:
-	rc = checkUniqueIds( data );
+	rc = checkKeys( data );
 	if( rc.status>0 ) errL.push(rc);
 
 	// dataTypes must respect certain constraints depending on their base type:
 	rc = checkDataTypes( data.dataTypes );
 	if( rc.status>0 ) errL.push(rc);
-	// in case of resources, the value of "resourceType" must be the id of a member of "resourceTypes":
+	// in case of resources, the key of "resourceType" must be the key of a member of "resourceTypes":
 	rc = checkTypes( data.resourceTypes, data.resources, 'resourceType' );
 	if( rc.status>0 ) errL.push(rc);
-	// in case of statements, the value of "statementType" must be the id of a member of "statementTypes":
+	// in case of statements, the key of "statementType" must be the key of a member of "statementTypes":
 	rc = checkTypes( data.statementTypes, data.statements, 'statementType' );
 	if( rc.status>0 ) errL.push(rc);
-	// in case of hierarchies, the value of "hierarchyType" must be the id of a member of "hierarchyTypes":
+	// in case of hierarchies, the key of "hierarchyType" must be the key of a member of "hierarchyTypes":
 	rc = checkTypes( data.hierarchyTypes, data.hierarchies, 'hierarchyType' );
 	if( rc.status>0 ) errL.push(rc);
 
@@ -54,8 +56,8 @@ function checkConstraints(data) {
 	rc = checkPropTypes( data.dataTypes, data.hierarchyTypes );
 	if( rc.status>0 ) errL.push(rc);
 
-	// subjectTypes and objectTypes must be resourceType ids:
-	rc = checkStatementTypeIds( data.resourceTypes, data.statementTypes );
+	// statementType's subjectTypes and objectTypes must be resourceType keys:
+	rc = checkStatementTypeRefs( data.resourceTypes, data.statementTypes );
 	if( rc.status>0 ) errL.push(rc);
 
 	// property values ("content") must fit to the respective type's range
@@ -66,11 +68,11 @@ function checkConstraints(data) {
 	rc = checkPropValues( data.hierarchyTypes, data.hierarchies );
 	if( rc.status>0 ) errL.push(rc);
 
-	// subject and object must be resource ids:
-	rc = checkStatementIds( data.resources, data.statements );
+	// statement's subject and object must be resource keys:
+	rc = checkStatementRefs( data.resources, data.statements );
 	if( rc.status>0 ) errL.push(rc);
 
-	// A hierarchy node's "resource" must be the id of a member of "resources":
+	// A hierarchy node's "resource" must be the key of a member of "resources":
 	for( var h=data.hierarchies.length-1; h>-1; h--) {
 		rc = checkNodes( data.resources, data.hierarchies[h].nodes );
 		if( rc.status>0 ) { errL.push(rc); break }
@@ -80,58 +82,88 @@ function checkConstraints(data) {
 			:{ status: 902, statusText: 'SpecIF constraints are violated', responseText: errorsText(errL) };
 
 	// The checking routines:
-	function checkUniqueIds(iE) {
-		// All identifiers 'id' must be unique (unless when used as a reference).
-		let allIds=[],
-			dId = duplicateId(iE.dataTypes);
-		if( dId ) return {status:911, statusText: "dataType identifier '"+dId+"' is not unique"};
-		dId = duplicateId(iE.resourceTypes);
-		if( dId ) return {status:912, statusText: "resourceType or propertyType identifier '"+dId+"' is not unique"};
-		dId = duplicateId(iE.statementTypes);
-		if( dId ) return {status:913, statusText: "statementType or propertyType identifier '"+dId+"' is not unique"};
-		dId = duplicateId(iE.hierarchyTypes);
-		if( dId ) return {status:914, statusText: "hierarchyType or propertyType identifier '"+dId+"' is not unique"};
-		dId = duplicateId(iE.resources);
-		if( dId ) return {status:915, statusText: "resource identifier '"+dId+"' is not unique"};
-		dId = duplicateId(iE.statements);
-		if( dId ) return {status:916, statusText: "statement identifier '"+dId+"' is not unique"};
-		dId = duplicateId(iE.hierarchies);
-		if( dId ) return {status:917, statusText: "hierarchy identifier '"+dId+"' is not unique"};
-		return {status:0, statusText: 'identifiers are unique'};
+	function checkKeys(iE) {
+		// All keys consisting of 'id' and 'revision' must be unique (unless when used as a reference).
+		// Further conditions: 
+		//  - all occurrences of an id have a specified revision>0.
+		//  - or there is just one occurrence of an id without revision
+		let allKeys=[],
+			dK = duplicateKey(iE.dataTypes);
+		if( dK ) return {status:911, statusText: "dataType "+dK.id+" (revision "+dK.revision+") is not unique"};
+		dK = duplicateKey(iE.resourceTypes);
+		if( dK ) return {status:912, statusText: "resourceType or propertyType "+dK.id+" (revision "+dK.revision+") is not unique"};
+		dK = duplicateKey(iE.statementTypes);
+		if( dK ) return {status:913, statusText: "statementType or propertyType "+dK.id+" (revision "+dK.revision+")is not unique"};
+		dK = duplicateKey(iE.hierarchyTypes);
+		if( dK ) return {status:914, statusText: "hierarchyType or propertyType "+dK.id+" (revision "+dK.revision+") is not unique"};
+		dK = duplicateKey(iE.resources);
+		if( dK ) return {status:915, statusText: "resource "+dK.id+" (revision "+dK.revision+") is not unique"};
+		dK = duplicateKey(iE.statements);
+		if( dK ) return {status:916, statusText: "statement "+dK.id+" (revision "+dK.revision+") is not unique"};
+		dK = duplicateKey(iE.hierarchies);
+		if( dK ) return {status:917, statusText: "hierarchy "+dK.id+" (revision "+dK.revision+") is not unique"};
+		return {status:0, statusText: 'all keys are unique'};
 
-		function duplicateId(L) {
-			// add every checked Id to allIds,
-			// return 'null', only if all elements of L are not contained in allIds,
-			// return the first id, which is contained in allIds (hence a duplicate):
-			if(!L || !L.length) return null;
-			var rc=null;
+		function duplicateKey(L) {
+			// A key consists of id and revision; the combination must be unique.
+			// Add every checked key to allKeys,
+			// return null, only if all elements of L are not contained in allKeys,
+			// return the first element, which has a duplicate key.
+			// Data arriving here has passed the schema checking, so there is a valid id where it is expected.
+
+				function containsByKey( L, el ) {
+					// L[i] and el must be an item/key consisting of id and revision
+					// return true, if el is contained in L;
+					let lR=null, eR=el.revision;
+					for( var i=L.length-1;i>-1;i-- ) {
+						lR = L[i].revision || 0;
+						if ( L[i].id==el.id && ( lR==eR || lR==0 || eR==0 ) ) return true
+					};
+					return false
+				}
+			var e1=null, e2=null;
 			for( var i=L.length-1;i>-1;i-- ) {
+				// it has been checked by schema that valid identifiers are present where mandatory;
+				// so we can skip the checking for duplicates, if there is no id, e.g. in case of properties:
+				if( L[i].id==undefined ) continue;
+				// But if it is defined, it must meet the constraints:
+				e1 = L[i]; 
+				e1.revision = L[i].revision || 0;
 				// check the element's id:
-				if( allIds.indexOf(L[i].id)>-1 ) return L[i].id;
-				// check the propertyType's identifiers, as well:
-				// (the instance's properties do not have an id ...)
-				if( L[i].propertyTypes ) {
-					rc = duplicateId(L[i].propertyTypes);
-					if( rc ) return rc
-					// ToDo: check value identifiers of enumerated property types
+				if( containsByKey(allKeys,e1) ) return e1;
+				// check the identifiers of enumerated values in dataTypes:
+				if( e1.values ) {
+					e2 = duplicateKey(e1.values);
+					if( e2 ) return e2
+				};
+				// check the propertyType's identifiers:
+				if( e1.propertyTypes ) {
+					e2 = duplicateKey(e1.propertyTypes);
+					if( e2 ) return e2
+				};
+				// the instance's properties may not have an id ...
+				if( e1.properties ) {
+					e2 = duplicateKey(e1.properties);
+					if( e2 ) return e2
 				};
 				// check the hierarchy's nodes recursively:
-				if( L[i].nodes ) {
-					rc = duplicateId(L[i].nodes);
-					if( rc ) return rc
+				if( e1.nodes ) {
+					e2 = duplicateKey(e1.nodes);
+					if( e2 ) return e2
 				}; 
-				// all is fine, but add the latest id to the list for the next checking loops:
-				allIds.push(L[i].id)
+				// all is fine, but add the latest key to the list:
+				allKeys.push(e1)
 			};
 			return null
 		}
 	}
 	function checkNodes(L,nds) {
-		// Any node's "resource" must be the id of a member of "resources". 
+		// Any node's "resource" must be a member of "resources". 
+		// A resource can just be an id string, where the revision=0 is assumed or a key consisting of id and revision.
 		if( nds ) {
 			var rc = null;
 			for( var i=nds.length-1;i>-1;i-- ){
-				if(indexById(L,nds[i].resource)<0) return {status:909, statusText: "hierarchy node with identifier '"+nds[i].id+"' must reference a valid resource"};	// check the node itself
+				if( !existsByKey(L,nds[i].resource) ) return {status:909, statusText: "hierarchy node with identifier '"+nds[i].id+"' must reference a valid resource"};	// check the node itself
 				rc = checkNodes(L,nds[i].nodes);	// check references of next hierarchy levels recursively
 				if(rc.status!=0) return rc	
 			}
@@ -152,38 +184,27 @@ function checkConstraints(data) {
 					break
 			}						
 		};
-		return {status:0, statusText: "dataTypes are correct"}		// all's fine!
+		return {status:0, statusText: "dataTypes are correct"}
 	}
 	function checkTypes(L,els,type) {
-		// In case of resources, the value of "resourceType" must be the id of a member of "resourceTypes". 
+		// In case of resources, the value of "resourceType" must be the key of a member of "resourceTypes". 
 		// Similarly for statements and hierarchies.
-		let sTi=null;
 		for( var i=els.length-1;i>-1;i-- ){
-			sTi = indexById(L, els[i][type]);
-			if(sTi<0) return {status:903, statusText: "instance with identifier '"+els[i].id+"' must reference a valid type"}
-//			if( !checkPropTypeIds(L[sTi].propertyTypes,els[i].properties) ) return {status:920, statusText: "properties of instance with identifier '"+els[i].id+"' must reference valid propertyTypes"}
+			if( !existsByKey(L, els[i][type]) ) 
+				return {status:903, statusText: "instance with identifier '"+els[i].id+"' must reference a valid type"}
 		};
 		return {status:0, statusText: "instance's "+type+" and propertyTypes reference valid types"}	
-				
-/*	  		function checkPropTypeIds(L,atts) {
-				// all property's "propertyType" must be the id of a member of "propertyTypes":
-				// .. these are now checked in checkPropValues.
-				for( var i=atts.length-1;i>-1;i-- ) {
-					if(indexById(L, atts[j].propertyType)<0) return false
-				};
-				return true
-			}
-*/	}
+	}
 	function checkPropTypes(L,sTs) {
-		let aT=null, dT=null;
+		let aT=null;
 		for( var i=sTs.length-1;i>-1;i-- ){
 			if( sTs[i].propertyTypes ) {
 				for( var j=sTs[i].propertyTypes.length-1;j>-1;j-- ) {
 					aT = sTs[i].propertyTypes[j];
-					dT = itemById(L,aT.dataType);
-					// A propertyType's "dataType" must be the id of a member of "dataTypes".
+					// A propertyType's "dataType" must be the key of a member of "dataTypes".
 					// .. this is also checked in checkPropValues:
-					if( !dT ) return {status:904, statusText: "propertyType with identifier '"+aT.id+"' must reference a valid dataType"};
+					if( !existsByKey(L,aT.dataType) ) 
+						return {status:904, statusText: "propertyType with identifier '"+aT.id+"' must reference a valid dataType"};
 					// If a propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
 				}
 			}
@@ -191,9 +212,8 @@ function checkConstraints(data) {
 		return {status:0, statusText: "propertyTypes reference valid dataTypes"}
 	}
 
-	function checkStatementTypeIds(oTL,rTL) {	// resourceTypes, statementTypes
-		// All statementType's "subjectTypes" must be the id of a member of "resourceTypes". 
-		// Similarly for "objectTypes".
+	function checkStatementTypeRefs(oTL,rTL) {	// resourceTypes, statementTypes
+		// All statementType's "subjectTypes" and "objectTypes" must be the id of a member of "resourceTypes". 
 		for( var i=rTL.length-1;i>-1;i-- ){
 			if( !checkEls(oTL, rTL[i].subjectTypes) ) return {status:906, statusText: "subjectTypes of statementType with identifier '"+rTL[i].id+"' must reference valid resourceTypes"};
 			if( !checkEls(oTL, rTL[i].objectTypes) ) return {status:907, statusText: "objectTypes of statementType with identifier '"+rTL[i].id+"' must reference valid resourceTypes"}
@@ -205,19 +225,20 @@ function checkConstraints(data) {
 			if( oTs ) { 
 				// each value in oTs must be the id of a member of oTL:
 				for( var i=oTs.length-1;i>-1;i-- ) {
-					if(indexById(oTL, oTs[i])<0) return false
+					if( !existsByKey(oTL, oTs[i]) ) return false
 				}
 			};
 			return true
 		}
 	}
-	function checkStatementIds(oL,rL) {	// resources, statements
-		// A statement's "subject" must be the id of a member of "resources". 
-		// Similarly for "object".
+	function checkStatementRefs(oL,rL) {	// resources, statements
+		// A statement's "subject" and "object" must both be the id of a member of "resources". 
 		// (It has been checked before that any "resource" is indeed of type "resourceType").
 		for( var i=rL.length-1;i>-1;i-- ){
-			if(indexById(oL, rL[i].subject.id)<0) return {status:908, statusText: "subject of statement with identifier '"+rL[i].id+"' must reference a valid resource"};
-			if(indexById(oL, rL[i].object.id)<0) return {status:909, statusText: "object of statement with identifier '"+rL[i].id+"' must reference a valid resource"};
+			if(!existsByKey(oL, rL[i].subject)) 
+				return {status:908, statusText: "subject of statement with identifier '"+rL[i].id+"' must reference a valid resource"};
+			if(!existsByKey(oL, rL[i].object)) 
+				return {status:909, statusText: "object of statement with identifier '"+rL[i].id+"' must reference a valid resource"};
 //			if( rL[i].subject == rL[i].object ) return {status:90X, statusText: ""}
 		};
 		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
@@ -236,8 +257,15 @@ function checkConstraints(data) {
 							dT = itemById(data.dataTypes,aT.dataType);
 							if( !dT ) return {status:904, statusText: "propertyType with identifier '"+aT.id+"' must reference a valid dataType"}; 
 							switch(dT.type) {
+								case 'xhtml':
 								case 'xs:string': 
-									if( aV.length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
+									if( dT.maxLength==undefined ) break;
+									switch( typeof aV ) {
+										case 'object':
+											if( aV['text'].length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
+										case 'string':
+											if( aV.length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
+									};
 									break;
 								case 'xs:double':
 	//								if( (aV*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922,statusText:""};
@@ -257,8 +285,8 @@ function checkConstraints(data) {
 											return {status:926, statusText: "property may not have more than one value"};
 									for( var v=vL.length-1;v>-1;v-- ) {
 										vL[v] = vL[v].trim();
-										if( vL[v] && indexById( dT.values, vL[v] )<0 ) 
-											return {status:927, statusText: "enumerated valus must be defined by the respective property type"}
+										if( vL[v] && !itemById( dT.values, vL[v] ) ) 
+											return {status:927, statusText: "enumerated values must be defined by the respective property type"}
 									}
 							}						
 						}
@@ -268,6 +296,14 @@ function checkConstraints(data) {
 			}
 		};
 		return {status:0, statusText: "propertyValues lie within their type's value ranges"}
+	}
+	function itemById(L,id) {
+		if(!L||!id) return null;
+		// given the ID of an element in a list, return the element itself:
+		id = id.trim();
+		for( var i=L.length-1;i>-1;i-- )
+			if( L[i].id === id ) return L[i];   // return list item
+		return null
 	}
 	function propTypeById(sT,id) {
 		// given a propertyType's id, return the propertyType:
@@ -279,21 +315,26 @@ function checkConstraints(data) {
 		};
 		return null  // should never arrive here ...
 	}
-	function indexById(L,id) {
-		if(!L||!id) return -1;
-		// given the id of an element in a list, return it's index:
-		id = id.trim();
-		for( var i=L.length-1;i>-1;i-- )
-			if( L[i].id === id ) return i;   // return list index 
-		return -1
-	}
-	function itemById(L,id) {
-		if(!L||!id) return null;
-		// given the ID of an element in a list, return the element itself:
-		id = id.trim();
-		for( var i=L.length-1;i>-1;i-- )
-			if( L[i].id === id ) return L[i];   // return list item
-		return null
+	function existsByKey( L, el ) {
+		// Return true, if an item with the key el does exist in L
+		//  - If the item in item list (L) has no specified revision, the reference may not specify a revision>0.
+		//  - If el has no revision or revision==0, any item in L having the same id is acceptable
+		//  - If el has a revision, there must be an item in L with the same key consisting of id and revision.
+		//  - The uniqueness of keys has been checked, before.
+
+		// normalize el:
+		switch( typeof el ) {
+			case 'object': break;
+			case 'string': el = {id: el, revision: 0}; break;
+			default: return null
+		};
+		let lR=null, eR = el.revision || 0;
+		for( var i=L.length-1;i>-1;i-- ) {
+			lR = L[i].revision || 0;
+			// check existence of el:
+			if ( L[i].id==el.id && ( lR==eR || eR==0 ) ) return true
+		};
+		return false
 	}
 	function errorsText(eL) {
 		var eT = '';

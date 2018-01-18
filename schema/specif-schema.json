@@ -51,24 +51,24 @@
         "type": "string",
 	    "enum": [ "auto", "user" ]
       }
-    },
+	},
 	"value": {
       "description": "A text fragment in one or more languages.",
 	  "oneOf": [{
-		"description": "A string containing a text fragment or a special value.",
+		"description": "A string containing some text or a special value.",
         "type": "string"
 	  }, {
-		"description": "A list of items with text and language properties.",
+		"description": "A list of items with some text and language properties.",
 		"type": "array",
 		"items": {
 			"type": "object",
 			"properties": {
 			  "text": {
-				"description": "A string containing the text fragment.",
+				"description": "A string containing some text.",
 				"type": "string"
 			  },
 			  "language": {
-				"description": "The IETF language tag, e.g. 'en', 'en-US, 'fr' or 'de'.",
+				"description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de'.",
 				"type": "string"
 			  }
 			},
@@ -76,7 +76,7 @@
 		}		
 	  }]
 	},
-    "nodes": {
+	"nodes": {
       "description": "A list of pointers to resources; may be nested to build a tree, i.e. a hierarchy of pointers.",
       "type": "array",
       "items": {
@@ -89,7 +89,7 @@
             "$ref": "#/definitions/key"
           },
           "revision": {
-	    "$ref": "#/definitions/revision"
+            "$ref": "#/definitions/revision"
           },
           "nodes": {
             "$ref": "#/definitions/nodes"
@@ -100,8 +100,8 @@
         },
         "required": [ "id", "resource", "changedAt" ]
       }
-    },
-    "propertyTypes": {
+	},
+	"propertyTypes": {
       "description": "Type definition of a property for resources, statements or hierarchies. Is a sub-element of the respective resourceType, statementType or hierarchyType.",
       "type": "array",
       "items": {
@@ -117,7 +117,7 @@
             "type": "string"
           },
           "dataType": {
-            "$ref": "#/definitions/id"
+            "$ref": "#/definitions/key"
           },
           "multiple": {
             "type": "boolean",
@@ -127,13 +127,13 @@
             "$ref": "#/definitions/revision"
           },
           "changedAt": {
-	    "$ref": "#/definitions/dateTime"
+            "$ref": "#/definitions/dateTime"
           }
         },
         "required": [ "id", "dataType", "changedAt" ]
       }
-    },
-    "properties": {
+	},
+	"properties": {
       "description": "A property value for a resource, statement or hierarchy.",
       "type": "array",
       "items": {
@@ -149,10 +149,16 @@
             "type": "string"
           },
           "propertyType": {
-            "$ref": "#/definitions/id"
+            "$ref": "#/definitions/key"
           },
           "value": {
             "$ref": "#/definitions/value"
+          },
+          "revision": {
+            "$ref": "#/definitions/revision"
+          },
+          "changedAt": {
+            "$ref": "#/definitions/dateTime"
           }
         },
         "required": [ "propertyType", "value" ]
@@ -172,7 +178,7 @@
     },
     "specifVersion": {
       "type": "string",
-	"pattern": "^\\d+(\\.\\d+){1,2}$"
+      "pattern": "^\\d+(\\.\\d+){1,2}$"
     },
     "generator": {
       "type": "string"
@@ -196,7 +202,7 @@
       "required": [ "title", "type", "url" ]
     },
     "createdAt": {
-	  "$ref": "#/definitions/dateTime"
+      "$ref": "#/definitions/dateTime"
     },
     "createdBy": {
       "description": "The creator of the SpecIF structure (file). If specified, at least an e-mail address must be given.",
@@ -225,7 +231,7 @@
             },
             "value": {
               "type": "string",
-	          "format": "email"
+              "format": "email"
             }
           },
           "required": [ "value" ]
@@ -262,11 +268,11 @@
             "minimum": 0
           },
           "accuracy": {
-	    "type": "integer",
+            "type": "integer",
             "title": "Accuracy of a Decimal Number",
             "description": "Optional use by dataType 'xs:double', indicates the number of decimals.",
             "minimum": 1
-	  },
+          },
           "min":  {
             "type": "number",
             "title": "Minimum Value of a Number",
@@ -307,7 +313,7 @@
           "changedBy": {
             "type": "string"
           }
-	},
+        },
         "additionalProperties": false,
         "required": [ "id", "title", "type", "changedAt" ]
       }
@@ -340,7 +346,7 @@
             "$ref": "#/definitions/propertyTypes"
           },
           "revision": {
-	        "$ref": "#/definitions/revision"
+            "$ref": "#/definitions/revision"
           },
           "changedAt": {
 	        "$ref": "#/definitions/dateTime"
@@ -375,32 +381,32 @@
           },
           "subjectTypes": {
             "type": "array",
-			"title": "Eligible Subject Types",
-			"description": "A collection of type id's of eligible resource types; if missing, all resource types are eligible",
-			"minItems": 1,
-			"uniqueItems": true,
+            "title": "Eligible Subject Types",
+            "description": "A collection of type id's of eligible resource types; if missing, all resource types are eligible",
+            "minItems": 1,
+            "uniqueItems": true,
             "items": {
-              "$ref": "#/definitions/id"
+              "$ref": "#/definitions/key"
             }
           },
           "objectTypes": {
             "type": "array",
-			"title": "Eligible Object Types",
-			"description": "A collection of type id's of eligible resource types; if missing, all resource types are eligible",
-			"minItems": 1,
-			"uniqueItems": true,
+            "title": "Eligible Object Types",
+            "description": "A collection of type id's of eligible resource types; if missing, all resource types are eligible",
+            "minItems": 1,
+            "uniqueItems": true,
             "items": {
-              "$ref": "#/definitions/id"
+              "$ref": "#/definitions/key"
             }
           },
           "propertyTypes": {
             "$ref": "#/definitions/propertyTypes"
           },
           "revision": {
-	        "$ref": "#/definitions/revision"
+            "$ref": "#/definitions/revision"
           },
           "changedAt": {
-	        "$ref": "#/definitions/dateTime"
+            "$ref": "#/definitions/dateTime"
           },
           "changedBy": {
             "type": "string"
@@ -437,7 +443,7 @@
 			"$ref": "#/definitions/revision"
           },
           "changedAt": {
-			"$ref": "#/definitions/dateTime"
+            "$ref": "#/definitions/dateTime"
           },
           "changedBy": {
             "type": "string"
@@ -459,16 +465,16 @@
             "type": "string"
           },
           "resourceType": {
-            "$ref": "#/definitions/id"
+            "$ref": "#/definitions/key"
           },
           "properties": {
             "$ref": "#/definitions/properties"
           },
           "revision": {
-			"$ref": "#/definitions/revision"
+            "$ref": "#/definitions/revision"
           },
           "changedAt": {
-			"$ref": "#/definitions/dateTime"
+            "$ref": "#/definitions/dateTime"
           },
           "changedBy": {
             "type": "string"
@@ -490,7 +496,7 @@
             "type": "string"
           },
           "statementType": {
-            "$ref": "#/definitions/id"
+            "$ref": "#/definitions/key"
           },
           "subject": {
             "$ref": "#/definitions/key"
@@ -530,19 +536,19 @@
             "type": "string"
           },
           "hierarchyType": {
-            "$ref": "#/definitions/id"
+            "$ref": "#/definitions/key"
           },
           "properties": {
             "$ref": "#/definitions/properties"
           },
           "nodes": {
-			"$ref": "#/definitions/nodes"
+            "$ref": "#/definitions/nodes"
           },
           "revision": {
-			"$ref": "#/definitions/revision"
+            "$ref": "#/definitions/revision"
           },
           "changedAt": {
-			"$ref": "#/definitions/dateTime"
+            "$ref": "#/definitions/dateTime"
           },
           "changedBy": {
             "type": "string"
