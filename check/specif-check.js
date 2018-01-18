@@ -57,7 +57,7 @@ function checkConstraints( data ) {
 	if( rc.status>0 ) errL.push(rc);
 
 	// statementType's subjectTypes and objectTypes must be resourceType keys:
-	rc = checkStatementTypeRefs( data.resourceTypes, data.statementTypes );
+	rc = checkStatementTypes( data.resourceTypes, data.statementTypes );
 	if( rc.status>0 ) errL.push(rc);
 
 	// property values ("content") must fit to the respective type's range
@@ -69,7 +69,7 @@ function checkConstraints( data ) {
 	if( rc.status>0 ) errL.push(rc);
 
 	// statement's subject and object must be resource keys:
-	rc = checkStatementRefs( data.resources, data.statements );
+	rc = checkStatements( data.resources, data.statements );
 	if( rc.status>0 ) errL.push(rc);
 
 	// A hierarchy node's "resource" must be the key of a member of "resources":
@@ -85,7 +85,7 @@ function checkConstraints( data ) {
 	function checkKeys(iE) {
 		// All keys consisting of 'id' and 'revision' must be unique (unless when used as a reference).
 		// Further conditions: 
-		//  - all occurrences of an id have a specified revision>0.
+		//  - all occurrences of items with the same id have a specified revision>0.
 		//  - or there is just one occurrence of an id without revision
 		let allKeys=[],
 			dK = duplicateKey(iE.dataTypes);
@@ -157,19 +157,6 @@ function checkConstraints( data ) {
 			return null
 		}
 	}
-	function checkNodes(L,nds) {
-		// Any node's "resource" must be a member of "resources". 
-		// A resource can just be an id string, where the revision=0 is assumed or a key consisting of id and revision.
-		if( nds ) {
-			var rc = null;
-			for( var i=nds.length-1;i>-1;i-- ){
-				if( !existsByKey(L,nds[i].resource) ) return {status:909, statusText: "hierarchy node with identifier '"+nds[i].id+"' must reference a valid resource"};	// check the node itself
-				rc = checkNodes(L,nds[i].nodes);	// check references of next hierarchy levels recursively
-				if(rc.status!=0) return rc	
-			}
-		};
-		return {status:0, statusText: "hierarchy nodes reference valid resources"}		// all's fine!
-	}
 	function checkDataTypes(L) {
 		for( var i=L.length-1;i>-1;i-- ){
 			switch(L[i].type) {
@@ -212,7 +199,7 @@ function checkConstraints( data ) {
 		return {status:0, statusText: "propertyTypes reference valid dataTypes"}
 	}
 
-	function checkStatementTypeRefs(oTL,rTL) {	// resourceTypes, statementTypes
+	function checkStatementTypes(oTL,rTL) {	// resourceTypes, statementTypes
 		// All statementType's "subjectTypes" and "objectTypes" must be the id of a member of "resourceTypes". 
 		for( var i=rTL.length-1;i>-1;i-- ){
 			if( !checkEls(oTL, rTL[i].subjectTypes) ) return {status:906, statusText: "subjectTypes of statementType with identifier '"+rTL[i].id+"' must reference valid resourceTypes"};
@@ -231,7 +218,7 @@ function checkConstraints( data ) {
 			return true
 		}
 	}
-	function checkStatementRefs(oL,rL) {	// resources, statements
+	function checkStatements(oL,rL) {	// resources, statements
 		// A statement's "subject" and "object" must both be the id of a member of "resources". 
 		// (It has been checked before that any "resource" is indeed of type "resourceType").
 		for( var i=rL.length-1;i>-1;i-- ){
@@ -300,6 +287,19 @@ function checkConstraints( data ) {
 			}
 		};
 		return {status:0, statusText: "propertyValues lie within their type's value ranges"}
+	}
+	function checkNodes(L,nds) {
+		// Any node's "resource" must be a member of "resources". 
+		// A resource can just be an id string, where the revision=0 is assumed or a key consisting of id and revision.
+		if( nds ) {
+			var rc = null;
+			for( var i=nds.length-1;i>-1;i-- ){
+				if( !existsByKey(L,nds[i].resource) ) return {status:909, statusText: "hierarchy node with identifier '"+nds[i].id+"' must reference a valid resource"};	// check the node itself
+				rc = checkNodes(L,nds[i].nodes);	// check references of next hierarchy levels recursively
+				if(rc.status!=0) return rc	
+			}
+		};
+		return {status:0, statusText: "hierarchy nodes reference valid resources"}		// all's fine!
 	}
 	function itemById(L,id) {
 		if(!L||!id) return null;
