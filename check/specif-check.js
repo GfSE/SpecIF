@@ -262,7 +262,10 @@ function checkConstraints( data ) {
 									if( dT.maxLength==undefined ) break;
 									switch( typeof aV ) {
 										case 'object':
-											if( aV['text'].length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
+											// the value is a list with some text in different languages, so check every one of them:
+											for( var p=aV.length-1;p>-1;p-- ) {
+												if( aV[p]['text'].length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
+											}
 										case 'string':
 											if( aV.length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
 									};

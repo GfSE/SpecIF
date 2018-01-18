@@ -33,17 +33,17 @@
 		"required": [ "id" ]
 	  }]
 	},
-	"dateTime": {
-	  "description": "An ISO-8601 dateTime string. For reduced accuracy, any number of values may be dropped, but only from right to left.",
-	  "type": "string",
-	  "pattern": "^(\\d{4}(?!\\d{2}\\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
-	},
-	"icon": {
-	  "description": "A symbol for display as a prefix to titles; applicable to the instances of the type where it is defined. Can be any HTML-encoded character or a string with length 1..7 beginning with a certain special character or an empty string.",
+    "dateTime": {
+      "description": "An ISO-8601 dateTime string. For reduced accuracy, any number of values may be dropped, but only from right to left.",
       "type": "string",
-	  "pattern": "^(|&#[0-9]{1,5};|&#x[0-9]{1,4};|&[a-zA-Z]{1,6};|[@$%#*_\u007B\u20AC\u00A3\u00A5\u00A7]{1,1}[0-9a-zA-Z@$%#*_\u007D\u20AC\u00A3\u00A5\u00A7]{0,6})$"
-	},
-	"instantiation": {
+      "pattern": "^(\\d{4}(?!\\d{2}\\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
+    },
+    "icon": {
+      "description": "A symbol for display as a prefix to titles; applicable to the instances of the type where it is defined. Can be any HTML-encoded character or a string with length 1..7 beginning with a certain special character or an empty string.",
+      "type": "string",
+      "pattern": "^(|&#[0-9]{1,5};|&#x[0-9]{1,4};|&[a-zA-Z]{1,6};|[@$%#*_\u007B\u20AC\u00A3\u00A5\u00A7]{1,1}[0-9a-zA-Z@$%#*_\u007D\u20AC\u00A3\u00A5\u00A7]{0,6})$"
+    },
+    "instantiation": {
 	  "description": "Indicates whether an instance of the type is created automatically, manually or both. All is allowed, if the property is omitted. The type is abstract and cannot be instantiated, if the property list is present, but empty.",
       "type": "array",
 	  "uniqueItems": true,
@@ -51,31 +51,31 @@
         "type": "string",
 	    "enum": [ "auto", "user" ]
       }
-	},
-	"value": {
+    },
+    "value": {
       "description": "A text fragment in one or more languages.",
-	  "oneOf": [{
-		"description": "A string containing some text or a special value.",
+      "oneOf": [{
+        "description": "A string containing some text or a special value.",
         "type": "string"
-	  }, {
-		"description": "A list of items with some text and language properties.",
-		"type": "array",
-		"items": {
-			"type": "object",
-			"properties": {
-			  "text": {
-				"description": "A string containing some text.",
-				"type": "string"
-			  },
-			  "language": {
-				"description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de'.",
-				"type": "string"
-			  }
-			},
-			"required": [ "text", "language" ]
-		}		
-	  }]
-	},
+      }, {
+        "description": "A list of items with some text and language properties.",
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "description": "A string containing some text.",
+                "type": "string"
+              },
+              "language": {
+                "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de'.",
+                "type": "string"
+              }
+            },
+            "required": [ "text", "language" ]
+        }		
+      }]
+    },
 	"nodes": {
       "description": "A list of pointers to resources; may be nested to build a tree, i.e. a hierarchy of pointers.",
       "type": "array",
