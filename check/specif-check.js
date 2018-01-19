@@ -247,15 +247,16 @@ function checkConstraints( data ) {
 								case 'xhtml':
 								case 'xs:string': 
 									if( dT.maxLength==undefined ) break;
+									let txt = "string value of property of instance with identifier '"+iL[i].id+"' must not exceed maxLength";
 									switch( typeof aV ) {
 										case 'object':
-											// the value is a list with some text in different languages, so check every one of them:
+											// aV is a list with some text in different languages, so check every one of them:
 											for( var p=aV.length-1;p>-1;p-- ) {
-												if( aV[p]['text'].length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
+												if( aV[p]['text'].length>dT.maxLength ) return {status:921, statusText: txt}; 
 											};
 											break;
 										case 'string':
-											if( aV.length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
+											if( aV.length>dT.maxLength ) return {status:921, statusText: txt}; 
 									};
 									break;
 								case 'xs:double':
