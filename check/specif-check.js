@@ -216,8 +216,8 @@ function checkConstraints(data) {
 		// Similarly for "object".
 		// (It has been checked before that any "resource" is indeed of type "resourceType").
 		for( var i=rL.length-1;i>-1;i-- ){
-			if(indexById(oL, rL[i].subject.id)<0) return {status:908, statusText: "subject of statement with identifier '"+rL[i].id+"' must reference a valid resource"};
-			if(indexById(oL, rL[i].object.id)<0) return {status:909, statusText: "object of statement with identifier '"+rL[i].id+"' must reference a valid resource"};
+			if(indexById(oL, rL[i].subject)<0) return {status:908, statusText: "subject of statement with identifier '"+rL[i].id+"' must reference a valid resource"};
+			if(indexById(oL, rL[i].object)<0) return {status:909, statusText: "object of statement with identifier '"+rL[i].id+"' must reference a valid resource"};
 //			if( rL[i].subject == rL[i].object ) return {status:90X, statusText: ""}
 		};
 		return {status:0, statusText: "statement's subjects and objects reference valid resources"}

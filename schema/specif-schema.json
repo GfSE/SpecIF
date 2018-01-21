@@ -1,7 +1,7 @@
 {
-  "id": "http://specif.de/v0.10.0/schema#",
+  "id": "http://specif.de/v0.10.1/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "JSON-Schema for SpecIF v0.10.0",
+  "title": "JSON-Schema for SpecIF v0.10.1",
   "description": "SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.",
   "definitions": {
 	"id": {
@@ -449,28 +449,10 @@
             "$ref": "#/definitions/id"
           },
           "subject": {
-            "type": "object",
-            "properties": {
-              "id": {
-				"$ref": "#/definitions/id"
-              },
-              "revision": {
-				"$ref": "#/definitions/revision"
-              }
-            },
-            "required": [ "id" ]
+            "$ref": "#/definitions/id"
           },
           "object": {
-            "type": "object",
-            "properties": {
-              "id": {
-				"$ref": "#/definitions/id"
-              },
-              "revision": {
-				"$ref": "#/definitions/revision"
-              }
-            },
-            "required": [ "id" ]
+            "$ref": "#/definitions/id"
           },
           "properties": {
             "$ref": "#/definitions/properties"
