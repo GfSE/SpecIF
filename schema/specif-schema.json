@@ -86,7 +86,7 @@
 	    "$ref": "#/definitions/dateTime"
           }
         },
-        "required": [ "id", "dataType", "changedAt" ]
+        "required": [ "id", "dataType" ]
       }
     },
     "properties": {
