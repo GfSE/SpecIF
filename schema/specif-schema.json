@@ -76,7 +76,7 @@
         }		
       }]
     },
-	"nodes": {
+    "nodes": {
       "description": "A list of pointers to resources; may be nested to build a tree, i.e. a hierarchy of pointers.",
       "type": "array",
       "items": {
@@ -88,20 +88,20 @@
           "resource": {
             "$ref": "#/definitions/key"
           },
-          "revision": {
-            "$ref": "#/definitions/revision"
-          },
           "nodes": {
             "$ref": "#/definitions/nodes"
+          },
+          "revision": {
+            "$ref": "#/definitions/revision"
           },
           "changedAt": {
             "$ref": "#/definitions/dateTime"
           }
         },
-        "required": [ "id", "resource", "changedAt" ]
+        "required": [ "id", "resource" ]
       }
-	},
-	"propertyTypes": {
+    },
+    "propertyTypes": {
       "description": "Type definition of a property for resources, statements or hierarchies. Is a sub-element of the respective resourceType, statementType or hierarchyType. If no revision or change information is specified, the respective values of the parent element apply.",
       "type": "array",
       "items": {
@@ -132,8 +132,8 @@
         },
         "required": [ "id", "dataType" ]
       }
-	},
-	"properties": {
+    },
+    "properties": {
       "description": "A property value for a resource, statement or hierarchy.",
       "type": "array",
       "items": {
@@ -163,7 +163,7 @@
         },
         "required": [ "propertyType", "value" ]
       }
-	}
+    }
   },
   "type": "object",
   "properties": {
