@@ -102,7 +102,7 @@
       }
 	},
 	"propertyTypes": {
-      "description": "Type definition of a property for resources, statements or hierarchies. Is a sub-element of the respective resourceType, statementType or hierarchyType.",
+      "description": "Type definition of a property for resources, statements or hierarchies. Is a sub-element of the respective resourceType, statementType or hierarchyType. If no revision or change information is specified, the respective values of the parent element apply.",
       "type": "array",
       "items": {
         "type": "object",
@@ -130,7 +130,7 @@
             "$ref": "#/definitions/dateTime"
           }
         },
-        "required": [ "id", "dataType", "changedAt" ]
+        "required": [ "id", "dataType" ]
       }
 	},
 	"properties": {
