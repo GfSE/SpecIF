@@ -45,7 +45,7 @@
             "$ref": "#/definitions/id"
           },
           "revision": {
-	    "$ref": "#/definitions/revision"
+            "$ref": "#/definitions/revision"
           },
           "nodes": {
             "$ref": "#/definitions/nodes"
@@ -54,7 +54,7 @@
             "$ref": "#/definitions/dateTime"
           }
         },
-        "required": [ "id", "resource", "changedAt" ]
+        "required": [ "id", "resource" ]
       }
     },
     "propertyTypes": {
@@ -83,7 +83,7 @@
             "$ref": "#/definitions/revision"
           },
           "changedAt": {
-	    "$ref": "#/definitions/dateTime"
+            "$ref": "#/definitions/dateTime"
           }
         },
         "required": [ "id", "dataType" ]
@@ -218,11 +218,11 @@
             "minimum": 0
           },
           "accuracy": {
-	    "type": "integer",
+            "type": "integer",
             "title": "Accuracy of a Decimal Number",
             "description": "Optional use by dataType 'xs:double', indicates the number of decimals.",
             "minimum": 1
-	  },
+          },
           "min":  {
             "type": "number",
             "title": "Minimum Value of a Number",
