@@ -44,12 +44,12 @@
       "pattern": "^(|&#[0-9]{1,5};|&#x[0-9]{1,4};|&[a-zA-Z]{1,6};|[@$%#*_\u007B\u20AC\u00A3\u00A5\u00A7]{1,1}[0-9a-zA-Z@$%#*_\u007D\u20AC\u00A3\u00A5\u00A7]{0,6})$"
     },
     "instantiation": {
-	  "description": "Indicates whether an instance of the type is created automatically, manually or both. All is allowed, if the property is omitted. The type is abstract and cannot be instantiated, if the property list is present, but empty.",
+      "description": "Indicates whether an instance of the type is created automatically, manually or both. All is allowed, if the property is omitted. The type is abstract and cannot be instantiated, if the property list is present, but empty.",
       "type": "array",
-	  "uniqueItems": true,
+      "uniqueItems": true,
       "items": {
         "type": "string",
-	    "enum": [ "auto", "user" ]
+        "enum": [ "auto", "user" ]
       }
     },
     "value": {
