@@ -44,11 +44,11 @@
           "resource": {
             "$ref": "#/definitions/id"
           },
-          "revision": {
-            "$ref": "#/definitions/revision"
-          },
           "nodes": {
             "$ref": "#/definitions/nodes"
+          },
+          "revision": {
+            "$ref": "#/definitions/revision"
           },
           "changedAt": {
             "$ref": "#/definitions/dateTime"
