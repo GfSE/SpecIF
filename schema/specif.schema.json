@@ -224,7 +224,7 @@
           },
           "additionalProperties": false,
           "required": [ "id", "title", "type", "changedAt" ]
-	    }, {
+        }, {
           "type": "object",
           "properties": {
             "type": {
@@ -264,7 +264,7 @@
           },
           "additionalProperties": false,
           "required": [ "id", "title", "type", "changedAt" ]
-	    }, {
+        }, {
           "type": "object",
           "properties": {
             "type": {
@@ -310,7 +310,7 @@
           },
           "additionalProperties": false,
           "required": [ "id", "title", "type", "changedAt" ]
-	    }, {
+        }, {
           "type": "object",
           "properties": {
             "type": {
@@ -346,7 +346,7 @@
           },
           "additionalProperties": false,
           "required": [ "id", "title", "type", "changedAt" ]
-	    }, {
+        }, {
           "type": "object",
           "properties": {
             "type": {
