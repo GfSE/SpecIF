@@ -53,12 +53,12 @@
       }
     },
     "value": {
-      "description": "A text fragment in one or more languages.",
+      "description": "A property value according to the property type.",
       "oneOf": [{
         "description": "A string containing some text or a special value.",
         "type": "string"
       }, {
-        "description": "A list of items with some text and language properties.",
+        "description": "A list of items with text and language properties. Thus, the information can be given in multiple languages.",
         "type": "array",
         "items": {
             "type": "object",
@@ -72,6 +72,7 @@
                 "type": "string"
               }
             },
+            "additionalProperties": false,
             "required": [ "text", "language" ]
         }		
       }]
@@ -244,78 +245,210 @@
       "type": "array",
       "minItems": 1,
       "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "$ref": "#/definitions/id"
-          },
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "title": "Data Type",
-            "description": "The corresponding definitions in https://www.w3.org/TR/xmlschema-2/ and https://www.w3.org/TR/xhtml1/ apply.",
-            "enum": [ "xs:boolean", "xs:integer", "xs:double", "xs:dateTime", "xs:string", "xhtml", "xs:enumeration" ]
-          },
-          "maxLength":  {
-            "type": "integer",
-            "title": "Maximum String Length",
-            "description": "Optional use by dataTypes 'xs:string' and 'XHTML'.",
-            "minimum": 0
-          },
-          "accuracy": {
-            "type": "integer",
-            "title": "Accuracy of a Decimal Number",
-            "description": "Optional use by dataType 'xs:double', indicates the number of decimals.",
-            "minimum": 1
-          },
-          "min":  {
-            "type": "number",
-            "title": "Minimum Value of a Number",
-            "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
-          },
-          "max":  {
-            "type": "number",
-            "title": "Maximum Value of a Number",
-             "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
-          },
-          "values": {
-            "type": "array",
-            "title": "Enumerated Values",
-            "description": "Mandatory use by dataType 'xs:enumeration'. If 'multiple' is true 0..n options may be selected, otherwise exactly one must be selected.",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "$ref": "#/definitions/id"
-                },
-                "title": {
-                  "type": "string"
-                }
-              },
-              "required": [ "id", "title" ]
+        "oneOf": [{
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "title": "Data-type 'Boolean'",
+              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
+              "enum": [ "xs:boolean", "xs:dateTime" ]
+            },
+            "id": {
+              "$ref": "#/definitions/id"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "revision": {
+              "$ref": "#/definitions/revision"
+            },
+            "changedAt": {
+              "$ref": "#/definitions/dateTime"
+            },
+            "changedBy": {
+              "type": "string"
             }
           },
-          "multiple": {
-            "type": "boolean",
-            "description": "Optional use by dataType 'xs:enumeration'. Indicates whether multiple values can be chosen; by default the value is 'false'."
+          "additionalProperties": false,
+          "required": [ "id", "title", "type", "changedAt" ]
+	    }, {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "title": "Data-type 'Integer'",
+              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
+              "enum": [ "xs:integer" ]
+            },
+            "id": {
+              "$ref": "#/definitions/id"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "min":  {
+              "type": "number",
+              "title": "Minimum Value of a Number",
+              "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
+            },
+            "max":  {
+              "type": "number",
+              "title": "Maximum Value of a Number",
+              "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
+            },
+            "revision": {
+              "$ref": "#/definitions/revision"
+            },
+            "changedAt": {
+              "$ref": "#/definitions/dateTime"
+            },
+            "changedBy": {
+              "type": "string"
+            }
           },
-          "revision": {
-            "$ref": "#/definitions/revision"
+          "additionalProperties": false,
+          "required": [ "id", "title", "type", "changedAt" ]
+	    }, {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "title": "Data-type 'Double'",
+              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
+              "enum": [ "xs:double" ]
+            },
+            "id": {
+              "$ref": "#/definitions/id"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "accuracy": {
+              "type": "integer",
+              "title": "Accuracy of a Decimal Number",
+              "description": "Optional use by dataType 'xs:double', indicates the number of decimals.",
+              "minimum": 1
+            },
+            "min":  {
+              "type": "number",
+              "title": "Minimum Value of a Number",
+              "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
+            },
+            "max":  {
+              "type": "number",
+              "title": "Maximum Value of a Number",
+              "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
+            },
+            "revision": {
+              "$ref": "#/definitions/revision"
+            },
+            "changedAt": {
+              "$ref": "#/definitions/dateTime"
+            },
+            "changedBy": {
+              "type": "string"
+            }
           },
-          "changedAt": {
-            "$ref": "#/definitions/dateTime"
+          "additionalProperties": false,
+          "required": [ "id", "title", "type", "changedAt" ]
+	    }, {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "title": "Data-type",
+              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ resp. https://www.w3.org/TR/xhtml1/ applies.",
+              "enum": [ "xs:string", "xhtml" ]
+            },
+            "id": {
+              "$ref": "#/definitions/id"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "maxLength":  {
+              "type": "integer",
+              "title": "Maximum String Length",
+              "description": "Optional use by dataTypes 'xs:string' and 'XHTML'.",
+              "minimum": 0
+            },
+            "revision": {
+              "$ref": "#/definitions/revision"
+            },
+            "changedAt": {
+              "$ref": "#/definitions/dateTime"
+            },
+            "changedBy": {
+              "type": "string"
+            }
           },
-          "changedBy": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": false,
-        "required": [ "id", "title", "type", "changedAt" ]
+          "additionalProperties": false,
+          "required": [ "id", "title", "type", "changedAt" ]
+	    }, {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "title": "Data-type",
+              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
+              "enum": [ "xs:enumeration" ]
+            },
+            "id": {
+              "$ref": "#/definitions/id"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "values": {
+              "type": "array",
+              "title": "Enumerated Values",
+              "description": "Mandatory use by dataType 'xs:enumeration'. If 'multiple' is true 0..n options may be selected, otherwise exactly one must be selected.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "$ref": "#/definitions/id"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                },
+                "required": [ "id", "title" ]
+              }
+            },
+            "multiple": {
+              "type": "boolean",
+              "description": "Optional use by dataType 'xs:enumeration'. Indicates whether multiple values can be chosen; by default the value is 'false'."
+            },
+            "revision": {
+              "$ref": "#/definitions/revision"
+            },
+            "changedAt": {
+              "$ref": "#/definitions/dateTime"
+            },
+            "changedBy": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false,
+          "required": [ "id", "title", "type", "changedAt" ]
+        }]	
       }
     },
     "resourceTypes": {
