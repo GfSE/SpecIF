@@ -447,7 +447,7 @@
             }
           },
           "additionalProperties": false,
-          "required": [ "id", "title", "type", "changedAt" ]
+          "required": [ "id", "title", "type", "values", "changedAt" ]
         }]	
       }
     },
