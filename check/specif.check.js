@@ -23,6 +23,7 @@ function checkSchema( schema, data ) {
 function checkConstraints(data) {
 	"use strict";
 	// Check the constraints of the concrete values in 'data'.
+	// SpecIF-Schema v0.10.x applies, so there are no items with multiple revisions.
 	// The return code uses properties similar to xhr, namely {status:900,statusText:"abc",responseText:"xyz"}
 	// ToDo: localize text and take it from language files.
 
