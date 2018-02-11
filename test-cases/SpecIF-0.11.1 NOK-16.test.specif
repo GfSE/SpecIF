@@ -1,6 +1,6 @@
 {
     "id": "ACP-59c8a7730000bca80137509a49b1218b-test-0-11-1",
-    "title": "Dimmer - Semantically Integrated Specification (2017-06-12)",
+    "title": "SpecIF-0.11.1 NOK-16",
     "description": "Constraint-defect:\n- hierarchies[0] uses non-existent key for reference.",
     "specifVersion": "0.11.1",
     "generator": "Interactive-Spec",
