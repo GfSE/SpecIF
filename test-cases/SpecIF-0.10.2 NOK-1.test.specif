@@ -1,6 +1,6 @@
 {
     "id": "ACP-59c8a7730000bca80137509a49b1218b-test-0-10-2",
-    "title": "Test (schema 0-10-2) OK",
+    "title": "SpecIF-0.10.2 NOK-1",
     "description": "Schema-defects:\n- dataType[0] 'type' missing\n- dataType[2] 'min' missing - permissible, because it is optional.",
     "specifVersion": "0.10.2",
     "generator": "Interactive-Spec",
