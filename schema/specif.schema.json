@@ -91,7 +91,7 @@
             "$ref": "#/definitions/key"
           },
           "nodes": {
-            "description": "The next level of the hierarchy.",
+            "description": "The next hierarchy level.",
             "$ref": "#/definitions/nodes"
           },
           "revision": {
