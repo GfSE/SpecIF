@@ -49,8 +49,8 @@
         "title": "Real",
         "type": "xs:double",
         "accuracy": 5,
-        "min": -10000,
-        "max": 10000,
+        "min": -10000000.0,
+        "max": 10000000.0,
         "revision": 1,
         "changedAt": "2016-05-26T08:59:00+02:00"
     }, {
@@ -484,8 +484,8 @@
     }],
     "hierarchies": [{
         "id": "SP-59c8a7730000bca80137509a49b1218b",
-        "title": "Dimmer - Semantically Integrated Specification (2016-05-12)",
-        "description": "This is the root node of a project hierarchy (tree)",
+		"title": "Test (schema 0-10-2) OK-1",
+		"description": "all is fine.",
         "revision": 231,
         "changedAt": "2017-06-19T20:14:20+02:00",
         "hierarchyType": "ST-ACProject",

@@ -1,7 +1,7 @@
 {
     "id": "ACP-59c8a7730000bca80137509a49b1218b-test-0-10-2",
-    "title": "SpecIF-0.10.2 update-1 OK",
-    "description": "all is fine; resource 'bulb' has a new value.",
+    "title": "SpecIF-0.10.2 update-2 OK",
+    "description": "all is fine; resource 'cable' has been added.",
     "specifVersion": "0.10.2",
     "generator": "Interactive-Spec",
     "generatorVersion": "0.92.43",
@@ -427,7 +427,23 @@
             "value": "<div><p>Dimmable candescent light-bulb 230V. (Rev.241)</p></div>"
         }],
         "revision": 241,
-        "changedAt": "2018-02-17T00:12:13+01:00",
+        "changedAt": "2018-02-09T22:00:13+01:00",
+        "changedBy": "od",
+        "resourceType": "OT-Act"
+    }, {
+        "id": "MEl-5bd6bd890000bca8013739588a3f44e7",
+        "title": "Cable",
+        "properties": [{
+            "title": "dcterms:title",
+            "propertyType": "AT-Act-Name",
+            "value": "Cable"
+        }, {
+            "title": "dcterms:description",
+            "propertyType": "AT-Act-Text",
+            "value": "<div><p>A cable with 3-wires.</p></div>"
+        }],
+        "revision": 241,
+        "changedAt": "2018-02-09T22:00:13+01:00",
         "changedBy": "od",
         "resourceType": "OT-Act"
     }, {
@@ -484,8 +500,8 @@
     }],
     "hierarchies": [{
         "id": "SP-59c8a7730000bca80137509a49b1218b",
-		"title": "SpecIF-0.10.2 update-1 OK",
-		"description": "all is fine; resource 'bulb' has a new value.",
+		"title": "SpecIF-0.10.2 update-2 OK",
+		"description": "all is fine; resource 'cable' has been added.",
         "revision": 231,
         "changedAt": "2017-06-19T20:14:20+02:00",
         "hierarchyType": "ST-ACProject",
@@ -523,6 +539,11 @@
             "nodes": [{
                 "id": "SH-MEl-5bd6bd890000bca8013739588a3f43d6-1",
                 "resource": "MEl-5bd6bd890000bca8013739588a3f43d6",
+                "revision": 231,
+                "changedAt": "2017-06-19T20:14:20+02:00"
+            }, {
+                "id": "SH-MEl-5bd6bd890000bca8013739588a3f44e7-32",
+                "resource": "MEl-5bd6bd890000bca8013739588a3f44e7",
                 "revision": 231,
                 "changedAt": "2017-06-19T20:14:20+02:00"
             }, {
