@@ -159,8 +159,9 @@ function checkConstraints( data ) {
 	function checkDataTypes(L) {
 		for( var i=L.length-1;i>-1;i-- ){
 			switch(L[i].type) {
+				case 'xhtml':
 				case 'xs:string': 
-					if( !L[i].maxLength ) return {status:928, statusText: "string types must have maxLength>0"};
+					if( !L[i].maxLength ) return {status:928, statusText: "string and xhtml types must have maxLength>0"};
 					break;
 				case 'xs:double':
 					if( !L[i].accuracy ) return {status:929, statusText: "double types must have accuracy>0"};
