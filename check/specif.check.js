@@ -145,6 +145,7 @@ function checkConstraints(data) {
 	function checkDataTypes(L) {
 		for( var i=L.length-1;i>-1;i-- ){
 			switch(L[i].type) {
+				case 'xhtml': 
 				case 'xs:string': 
 					if( !L[i].maxLength ) return {status:928, statusText: "string types must have maxLength>0"};
 					break;
@@ -226,14 +227,14 @@ function checkConstraints(data) {
 		};
 		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
 	}
-	function checkPropValues(tL,iL,ty) {   // type list, instance list (resources, statements or hierarchies)
+	function checkPropValues(tL,iL,typ) {   // type list, instance list (resources, statements or hierarchies)
 		let aT=null, dT=null, aV=null, pL=null;
 		if( iL ) {
 			for( var i=iL.length-1;i>-1;i-- ){
 				if( iL[i].properties ) {
 					for( var a=iL[i].properties.length-1;a>-1;a-- ){
 						// Property's propertyType must point to a propertyType of the respective type 
-						pL = itemById(tL,iL[i][ty]);
+						pL = itemById(tL,iL[i][typ]); // the list of propertyTypes of the instance's type.
 						aT = itemById(pL.propertyTypes,iL[i].properties[a].propertyType);
 						if( !aT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference valid propertyTypes"}; 
 						
