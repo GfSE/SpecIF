@@ -47,7 +47,6 @@ function checkConstraints(data) {
 	if( rc.status>0 ) errL.push(rc);
 
 	// A propertyType's "dataType" must be the id of a member of "dataTypes":
-	// .. these are now checked in checkPropValues.
 	rc = checkPropTypes( data.dataTypes, data.resourceTypes );
 	if( rc.status>0 ) errL.push(rc);
 	rc = checkPropTypes( data.dataTypes, data.statementTypes );
@@ -60,11 +59,11 @@ function checkConstraints(data) {
 	if( rc.status>0 ) errL.push(rc);
 
 	// property values ("content") must fit to the respective type's range
-	rc = checkPropValues( data.resourceTypes, data.resources );
+	rc = checkPropValues( data.resourceTypes, data.resources, 'resourceType' );
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkPropValues( data.statementTypes, data.statements );
+	rc = checkPropValues( data.statementTypes, data.statements, 'statementType' );
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkPropValues( data.hierarchyTypes, data.hierarchies );
+	rc = checkPropValues( data.hierarchyTypes, data.hierarchies, 'hierarchyType' );
 	if( rc.status>0 ) errL.push(rc);
 
 	// subject and object must be resource ids:
@@ -109,12 +108,16 @@ function checkConstraints(data) {
 			for( var i=L.length-1;i>-1;i-- ) {
 				// check the element's id:
 				if( allIds.indexOf(L[i].id)>-1 ) return L[i].id;
+				// in case of an enumerated dataType, check the values' identifiers, as well:
+				if( L[i].values ) {
+					rc = duplicateId(L[i].values);
+					if( rc ) return rc
+				};
 				// check the propertyType's identifiers, as well:
 				// (the instance's properties do not have an id ...)
 				if( L[i].propertyTypes ) {
 					rc = duplicateId(L[i].propertyTypes);
 					if( rc ) return rc
-					// ToDo: check value identifiers of enumerated property types
 				};
 				// check the hierarchy's nodes recursively:
 				if( L[i].nodes ) {
@@ -182,58 +185,61 @@ function checkConstraints(data) {
 				for( var j=sTs[i].propertyTypes.length-1;j>-1;j-- ) {
 					aT = sTs[i].propertyTypes[j];
 					dT = itemById(L,aT.dataType);
-					// An propertyType's "dataType" must be the id of a member of "dataTypes".
+					// A propertyType's "dataType" must be the id of a member of "dataTypes".
 					// .. this is also checked in checkPropValues:
 					if( !dT ) return {status:904, statusText: "propertyType with identifier '"+aT.id+"' must reference a valid dataType"};
-					// If an propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
+					// If a propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
 				}
 			}
 		};
 		return {status:0, statusText: "propertyTypes reference valid dataTypes"}
 	}
 
-	function checkStatementTypeIds(oTL,rTL) {	// resourceTypes, statementTypes
+	function checkStatementTypeIds(rTL,sTL) {	// resourceTypes, statementTypes
 		// All statementType's "subjectTypes" must be the id of a member of "resourceTypes". 
 		// Similarly for "objectTypes".
-		for( var i=rTL.length-1;i>-1;i-- ){
-			if( !checkEls(oTL, rTL[i].subjectTypes) ) return {status:906, statusText: "subjectTypes of statementType with identifier '"+rTL[i].id+"' must reference valid resourceTypes"};
-			if( !checkEls(oTL, rTL[i].objectTypes) ) return {status:907, statusText: "objectTypes of statementType with identifier '"+rTL[i].id+"' must reference valid resourceTypes"}
+		for( var i=sTL.length-1;i>-1;i-- ){
+			if( !checkEls(rTL, sTL[i].subjectTypes) ) return {status:906, statusText: "subjectTypes of statementType with identifier '"+sTL[i].id+"' must reference valid resourceTypes"};
+			if( !checkEls(rTL, sTL[i].objectTypes) ) return {status:907, statusText: "objectTypes of statementType with identifier '"+sTL[i].id+"' must reference valid resourceTypes"}
 		};
 		return {status:0, statusText: "statementType's subjectTypes and objectTypes reference valid resourceTypes"};
 
-		function checkEls(oTL,oTs) {
+		function checkEls(rTL,rTs) {
 			// no subjectTypes resp. objectTypes means all defined resourceTypes are eligible:
-			if( oTs ) { 
-				// each value in oTs must be the id of a member of oTL:
-				for( var i=oTs.length-1;i>-1;i-- ) {
-					if(indexById(oTL, oTs[i])<0) return false
+			if( rTs ) { 
+				// each value in rTs must be the id of a member of rTL:
+				for( var i=rTs.length-1;i>-1;i-- ) {
+					if(indexById(rTL, rTs[i])<0) return false
 				}
 			};
 			return true
 		}
 	}
-	function checkStatementIds(oL,rL) {	// resources, statements
+	function checkStatementIds(rL,sL) {	// resources, statements
 		// A statement's "subject" must be the id of a member of "resources". 
 		// Similarly for "object".
 		// (It has been checked before that any "resource" is indeed of type "resourceType").
-		for( var i=rL.length-1;i>-1;i-- ){
-			if(indexById(oL, rL[i].subject)<0) return {status:908, statusText: "subject of statement with identifier '"+rL[i].id+"' must reference a valid resource"};
-			if(indexById(oL, rL[i].object)<0) return {status:909, statusText: "object of statement with identifier '"+rL[i].id+"' must reference a valid resource"};
-//			if( rL[i].subject == rL[i].object ) return {status:90X, statusText: ""}
+		for( var i=sL.length-1;i>-1;i-- ){
+			if(indexById(rL, sL[i].subject)<0) return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
+			if(indexById(rL, sL[i].object)<0) return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
+//			if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
 		};
 		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
 	}
-	function checkPropValues(tL,iL) {   // type list, instance list (resources, statements or hierarchies)
-		// Property values ("content") must fit to the respective type's range
-		let aT=null, dT=null, aV=null;
+	function checkPropValues(tL,iL,ty) {   // type list, instance list (resources, statements or hierarchies)
+		let aT=null, dT=null, aV=null, pL=null;
 		if( iL ) {
 			for( var i=iL.length-1;i>-1;i-- ){
 				if( iL[i].properties ) {
 					for( var a=iL[i].properties.length-1;a>-1;a-- ){
+						// Property's propertyType must point to a propertyType of the respective type 
+						pL = itemById(tL,iL[i][ty]);
+						aT = itemById(pL.propertyTypes,iL[i].properties[a].propertyType);
+						if( !aT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference valid propertyTypes"}; 
+						
+						// Property's value ("content") must fit to the respective type's range
 						aV = iL[i].properties[a].value;
 						if( aV ) {
-							aT = propTypeById(tL,iL[i].properties[a].propertyType);
-							if( !aT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference valid propertyTypes"}; 
 							dT = itemById(data.dataTypes,aT.dataType);
 							if( !dT ) return {status:904, statusText: "propertyType with identifier '"+aT.id+"' must reference a valid dataType"}; 
 							switch(dT.type) {
@@ -269,16 +275,6 @@ function checkConstraints(data) {
 			}
 		};
 		return {status:0, statusText: "propertyValues lie within their type's value ranges"}
-	}
-	function propTypeById(sT,id) {
-		// given a propertyType's id, return the propertyType:
-//		id = id.trim();
-		let a=null;
-		for( var t=sT.length-1; t>-1; t-- ) { // fastest loop with single variable
-			a = itemById( sT[t].propertyTypes, id );
-			if( a ) return a
-		};
-		return null  // should never arrive here ...
 	}
 	function indexById(L,id) {
 		if(!L||!id) return -1;
