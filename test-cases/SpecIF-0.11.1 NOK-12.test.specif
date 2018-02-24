@@ -3,8 +3,8 @@
     "title": "SpecIF-0.11.1 NOK-12",
     "description": "Constraint-defect:\n- resource[9]: key of an identifiable item may not be 0.",
     "specifVersion": "0.11.1",
-    "generator": "Interactive-Spec",
-    "generatorVersion": "0.92.42",
+    "generator": "manual",
+    "generatorVersion": "",
     "rights": {
         "title": "Creative Commons 4.0 CC BY-SA",
         "type": "dcterms:rights",

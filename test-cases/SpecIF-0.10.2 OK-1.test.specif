@@ -3,8 +3,8 @@
     "title": "Test (schema 0-10-2) OK-1",
     "description": "all is fine.",
     "specifVersion": "0.10.2",
-    "generator": "Interactive-Spec",
-    "generatorVersion": "0.92.43",
+    "generator": "manual",
+    "generatorVersion": "",
     "rights": {
         "title": "Creative Commons 4.0 CC BY-SA",
         "type": "dcterms:rights",

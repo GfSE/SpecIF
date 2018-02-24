@@ -273,11 +273,11 @@ function checkConstraints( data ) {
 									if( pV!=true && pV!=false ) return {status:925,statusText:""}; 
 									break;
 	*/							case 'xs:enumeration':
-									// enumerated values in properties must be defined in the dataType of the corresponding propertyType  (ToDo)
 									var vL=pV.split(',');
 									// 'multiple' property at propertyType supersedes 'multiple' at the dataType:
 									if( vL.length>1 && !(pT.multiple || (pT.multiple==undefined && dT.multiple)) ) // logic expression is equivalent to 'multipleChoice(attrType)' ... the function is not used to avoid a dependency.
 											return {status:926, statusText: "property may not have more than one value"};
+									// enumerated values in properties must be defined in the dataType of the corresponding propertyType
 									for( var v=vL.length-1;v>-1;v-- ) {
 										vL[v] = vL[v].trim();
 										if( vL[v] && !itemById( dT.values, vL[v] ) ) 

@@ -3,8 +3,8 @@
     "title": "SpecIF-0.11.1 NOK-14",
     "description": "Constraint-defect:\n- statement[1].subject uses non-existent key for reference.",
     "specifVersion": "0.11.1",
-    "generator": "Interactive-Spec",
-    "generatorVersion": "0.92.42",
+    "generator": "manual",
+    "generatorVersion": "",
     "rights": {
         "title": "Creative Commons 4.0 CC BY-SA",
         "type": "dcterms:rights",

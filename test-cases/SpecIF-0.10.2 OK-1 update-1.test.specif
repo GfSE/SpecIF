@@ -3,8 +3,8 @@
     "title": "SpecIF-0.10.2 update-1 OK",
     "description": "all is fine; resource 'bulb' has a new value.",
     "specifVersion": "0.10.2",
-    "generator": "Interactive-Spec",
-    "generatorVersion": "0.92.43",
+    "generator": "manual",
+    "generatorVersion": "",
     "rights": {
         "title": "Creative Commons 4.0 CC BY-SA",
         "type": "dcterms:rights",

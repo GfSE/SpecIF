@@ -3,8 +3,8 @@
     "title": "SpecIF-0.10.2 NOK-2.",
     "description": "Schema-defects:\n- dataType[2] 'min' missing - permissible, because it is optional\n- dataType[11] 'values' missing.",
     "specifVersion": "0.10.2",
-    "generator": "Interactive-Spec",
-    "generatorVersion": "0.92.43",
+    "generator": "manual",
+    "generatorVersion": "",
     "rights": {
         "title": "Creative Commons 4.0 CC BY-SA",
         "type": "dcterms:rights",

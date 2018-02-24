@@ -3,8 +3,8 @@
     "title": "Test (schema 0-10-3) NOK-4",
     "description": "double id in enumerated values of dataType[3].",
     "specifVersion": "0.10.3",
-    "generator": "Interactive-Spec",
-    "generatorVersion": "0.92.43",
+    "generator": "manual",
+    "generatorVersion": "",
     "rights": {
         "title": "Creative Commons 4.0 CC BY-SA",
         "type": "dcterms:rights",
