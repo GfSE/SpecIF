@@ -180,15 +180,15 @@ function checkConstraints(data) {
 			}
 */	}
 	function checkPropTypes(L,sTs) {
-		let aT=null, dT=null;
+		let pT=null, dT=null;
 		for( var i=sTs.length-1;i>-1;i-- ){
 			if( sTs[i].propertyTypes ) {
 				for( var j=sTs[i].propertyTypes.length-1;j>-1;j-- ) {
-					aT = sTs[i].propertyTypes[j];
-					dT = itemById(L,aT.dataType);
+					pT = sTs[i].propertyTypes[j];
+					dT = itemById(L,pT.dataType);
 					// A propertyType's "dataType" must be the id of a member of "dataTypes".
 					// .. this is also checked in checkPropValues:
-					if( !dT ) return {status:904, statusText: "propertyType with identifier '"+aT.id+"' must reference a valid dataType"};
+					if( !dT ) return {status:904, statusText: "propertyType with identifier '"+pT.id+"' must reference a valid dataType"};
 					// If a propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
 				}
 			}
@@ -228,40 +228,40 @@ function checkConstraints(data) {
 		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
 	}
 	function checkPropValues(tL,iL,typ) {   // type list, instance list (resources, statements or hierarchies)
-		let aT=null, dT=null, aV=null, pL=null;
+		let pT=null, dT=null, pV=null, iT=null;
 		if( iL ) {
 			for( var i=iL.length-1;i>-1;i-- ){
 				if( iL[i].properties ) {
 					for( var a=iL[i].properties.length-1;a>-1;a-- ){
 						// Property's propertyType must point to a propertyType of the respective type 
-						pL = itemById(tL,iL[i][typ]); // the list of propertyTypes of the instance's type.
-						aT = itemById(pL.propertyTypes,iL[i].properties[a].propertyType);
-						if( !aT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference valid propertyTypes"}; 
+						iT = itemById(tL,iL[i][typ]); // the list of propertyTypes of the instance's type.
+						pT = itemById(iT.propertyTypes,iL[i].properties[a].propertyType);
+						if( !pT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference valid propertyTypes"}; 
 						
 						// Property's value ("content") must fit to the respective type's range
-						aV = iL[i].properties[a].value;
-						if( aV ) {
-							dT = itemById(data.dataTypes,aT.dataType);
-							if( !dT ) return {status:904, statusText: "propertyType with identifier '"+aT.id+"' must reference a valid dataType"}; 
+						pV = iL[i].properties[a].value;
+						if( pV ) {
+							dT = itemById(data.dataTypes,pT.dataType);
+							if( !dT ) return {status:904, statusText: "propertyType with identifier '"+pT.id+"' must reference a valid dataType"}; 
 							switch(dT.type) {
 								case 'xs:string': 
-									if( aV.length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
+									if( pV.length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
 									break;
 								case 'xs:double':
-	//								if( (aV*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922,statusText:""};
+	//								if( (pV*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922,statusText:""};
 									// no break;
 								case 'xs:integer':
-									if( aV<dT.min ) return {status:923, statusText: "numbers must be larger than min"};
-									if( aV>dT.max ) return {status:924, statusText: "numbers must be smaller than max"}; 
+									if( pV<dT.min ) return {status:923, statusText: "numbers must be larger than min"};
+									if( pV>dT.max ) return {status:924, statusText: "numbers must be smaller than max"}; 
 									break;
 	/*							case 'xs:boolean':
-									if( aV!=true && aV!=false ) return {status:925,statusText:""}; 
+									if( pV!=true && pV!=false ) return {status:925,statusText:""}; 
 									break;
 	*/							case 'xs:enumeration':
 									// enumerated values in properties must be defined in the dataType of the corresponding propertyType  (ToDo)
-									var vL=aV.split(',');
+									var vL=pV.split(',');
 									// 'multiple' property at propertyType supersedes 'multiple' at the dataType:
-									if( vL.length>1 && !(aT.multiple || (aT.multiple==undefined && dT.multiple)) ) // logic expression is equivalent to 'multipleChoice(attrType)' ... the function is not used to avoid a dependency.
+									if( vL.length>1 && !(pT.multiple || (pT.multiple==undefined && dT.multiple)) ) // logic expression is equivalent to 'multipleChoice(attrType)' ... the function is not used to avoid a dependency.
 											return {status:926, statusText: "property may not have more than one value"};
 									for( var v=vL.length-1;v>-1;v-- ) {
 										vL[v] = vL[v].trim();
