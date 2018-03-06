@@ -8,7 +8,7 @@ SpecIF represents the visible, i.e. the diagrams and the text, as well as the se
 For details see http://specif.de.
 
 This branch details schema and constraints for the 'fully-flegded' SpecIF. It is characterized by
-- A SpecIF data set (container) may have information elements of multiple revisions. The identifiers are identical, but the revisions must be different, of course. The combination of identifier and revision, called 'key', must be unique, however. 
+- A SpecIF data set (container) may have information elements of multiple revisions. The identifiers are identical and there may be multiple revisions. The combination of identifier and revision, called 'key', must be unique, however. 
 - Information content may be provided for more than one language.
 - A transformation to ReqIF is possible, if a certain revision level and a certain language is chosen.
 - A lossless transformation from ReqIF is always possible.
