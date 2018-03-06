@@ -7,7 +7,7 @@ SpecIF represents the visible, i.e. the diagrams and the text, as well as the se
 
 For details see http://specif.de.
 
-This branch details 
+This branch details schema and constraints at SpecIF level-1.
 
 ## Schema
 
