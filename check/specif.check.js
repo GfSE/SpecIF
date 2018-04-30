@@ -200,8 +200,8 @@ function checkConstraints(data) {
 		// All statementType's "subjectTypes" must be the id of a member of "resourceTypes". 
 		// Similarly for "objectTypes".
 		for( var i=sTL.length-1;i>-1;i-- ){
-			if( !checkEls(rTL, sTL[i].subjectTypes) ) return {status:906, statusText: "subjectTypes of statementType with identifier '"+sTL[i].id+"' must reference valid resourceTypes"};
-			if( !checkEls(rTL, sTL[i].objectTypes) ) return {status:907, statusText: "objectTypes of statementType with identifier '"+sTL[i].id+"' must reference valid resourceTypes"}
+			if( !checkEls(rTL, sTL[i].subjectTypes) ) return {status:906, statusText: "subjectTypes of statementType with identifier '"+sTL[i].id+"' must reference a valid resourceType"};
+			if( !checkEls(rTL, sTL[i].objectTypes) ) return {status:907, statusText: "objectTypes of statementType with identifier '"+sTL[i].id+"' must reference a valid resourceType"}
 		};
 		return {status:0, statusText: "statementType's subjectTypes and objectTypes reference valid resourceTypes"};
 
