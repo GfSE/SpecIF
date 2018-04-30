@@ -178,7 +178,7 @@ function checkConstraints( data ) {
 		// Similarly for statements and hierarchies.
 		for( var i=els.length-1;i>-1;i-- ){
 			if( !existsByKey(L, els[i][type]) ) 
-				return {status:903, statusText: "instance with identifier '"+els[i].id+"' must reference a valid type"}
+				return {status:903, statusText: "instance with identifier '"+els[i].id+"' must reference a valid "+type }
 		};
 		return {status:0, statusText: "instance's "+type+" and propertyTypes reference valid types"}	
 	}
@@ -202,8 +202,8 @@ function checkConstraints( data ) {
 	function checkStatementTypes(rTL,sTL) {	// resourceTypes, statementTypes
 		// All statementType's "subjectTypes" and "objectTypes" must be the id of a member of "resourceTypes". 
 		for( var i=sTL.length-1;i>-1;i-- ){
-			if( !checkEls(rTL, sTL[i].subjectTypes) ) return {status:906, statusText: "subjectTypes of statementType with identifier '"+sTL[i].id+"' must reference valid resourceTypes"};
-			if( !checkEls(rTL, sTL[i].objectTypes) ) return {status:907, statusText: "objectTypes of statementType with identifier '"+sTL[i].id+"' must reference valid resourceTypes"}
+			if( !checkEls(rTL, sTL[i].subjectTypes) ) return {status:906, statusText: "subjectTypes of statementType with identifier '"+sTL[i].id+"' must reference a valid resourceType"};
+			if( !checkEls(rTL, sTL[i].objectTypes) ) return {status:907, statusText: "objectTypes of statementType with identifier '"+sTL[i].id+"' must reference a valid resourceType"}
 		};
 		return {status:0, statusText: "statementType's subjectTypes and objectTypes reference valid resourceTypes"};
 
@@ -238,8 +238,9 @@ function checkConstraints( data ) {
 					for( var a=iL[i].properties.length-1;a>-1;a-- ){
 						// Property's propertyType must point to a propertyType of the respective type 
 						iT = itemById(tL,iL[i][typ]); // the instance's type.
+						if( !iT ) return {status:919, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
 						pT = itemById(iT.propertyTypes,iL[i].properties[a].propertyType);
-						if( !pT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference valid propertyTypes"}; 
+						if( !pT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference a valid propertyType"}; 
 						
 						// Property's value ("content") must fit to the respective type's range
 						pV = iL[i].properties[a].value;
