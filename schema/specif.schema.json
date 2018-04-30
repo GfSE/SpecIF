@@ -1,7 +1,7 @@
 {
-  "id": "http://specif.de/v0.10.3/schema#",
+  "id": "http://specif.de/v0.10.4/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "JSON-Schema for SpecIF v0.10.3",
+  "title": "JSON-Schema for SpecIF v0.10.4",
   "description": "SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.",
   "definitions": {
 	"id": {
@@ -15,11 +15,11 @@
 	  "pattern": "^(\\d{4}(?!\\d{2}\\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
 	},
 	"icon": {
-	  "description": "A symbol for display as a prefix to titles; applicable to the instances of the type where it is defined. Can be any HTML-encoded character or a string with length 1..7 beginning with a certain special character.",
+	  "description": "A symbol for display as a prefix to titles; applicable to the instances of the class where it is defined. Can be any HTML-encoded character or a string with length 1..7 beginning with a certain special character.",
       "type": "string"
 	},
 	"instantiation": {
-	  "description": "Indicates whether an instance of the type is created automatically, manually or both. All is allowed, if the property is omitted. The type is abstract and cannot be instantiated, if the property list is present, but empty.",
+	  "description": "Indicates whether an instance of the class is created automatically, manually or both. All is allowed, if the property is omitted. The class is abstract and cannot be instantiated, if the property list is present, but empty.",
       "type": "array",
 	  "uniqueItems": true,
       "items": {
@@ -58,8 +58,8 @@
         "required": [ "id", "resource" ]
       }
     },
-    "propertyTypes": {
-      "description": "Type definition of a property for resources, statements or hierarchies. Is a sub-element of the respective resourceType, statementType or hierarchyType.",
+    "propertyClasses": {
+      "description": "Class definition of a property for resources, statements or hierarchies. Is a sub-element of the respective resourceClass, statementClass or hierarchyClass.",
       "type": "array",
       "items": {
         "type": "object",
@@ -105,14 +105,14 @@
           "description": {
             "type": "string"
           },
-          "propertyType": {
+          "class": {
             "$ref": "#/definitions/id"
           },
           "value": {
             "type": "string"
           }
         },
-        "required": [ "propertyType", "value" ]
+        "required": [ "class", "value" ]
       }
     }
   },
@@ -191,7 +191,7 @@
       "required": [ "email" ]
     },
     "dataTypes": {
-      "description": "The base data types for use by property type definitions.",
+      "description": "The base data types for use by property class definitions.",
       "type": "array",
       "minItems": 1,
       "items": {
@@ -401,8 +401,8 @@
         }]	
       }
     },
-    "resourceTypes": {
-      "description": "The type definitions for resources.",
+    "resourceClasses": {
+      "description": "The class definitions for resources.",
       "type": "array",
       "items": {
         "type": "object",
@@ -425,8 +425,8 @@
           "instantiation": {
             "$ref": "#/definitions/instantiation"
           },
-          "propertyTypes": {
-            "$ref": "#/definitions/propertyTypes"
+          "propertyClasses": {
+            "$ref": "#/definitions/propertyClasses"
           },
           "revision": {
 	        "$ref": "#/definitions/revision"
@@ -438,11 +438,11 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "propertyTypes", "changedAt" ]
+        "required": [ "id", "title", "propertyClasses", "changedAt" ]
       }
     },
-    "statementTypes": {
-      "description": "The type definitions for statements in subject-predicate-object statements, where subject and object are resources.",
+    "statementClasses": {
+      "description": "The class definitions for statements in subject-predicate-object statements, where subject and object are resources.",
       "type": "array",
       "items": {
         "type": "object",
@@ -462,28 +462,28 @@
           "instantiation": {
             "$ref": "#/definitions/instantiation"
           },
-          "subjectTypes": {
+          "subjectClasses": {
             "type": "array",
-			"title": "Eligible Subject Types",
-			"description": "A collection of type id's of eligible resource types; if missing, all resource types are eligible",
+			"title": "Eligible Resource Classes as Subject",
+			"description": "A collection of id's of eligible resource classes; if missing, all resource classes are eligible",
 			"minItems": 1,
 			"uniqueItems": true,
             "items": {
               "$ref": "#/definitions/id"
             }
           },
-          "objectTypes": {
+          "objectClasses": {
             "type": "array",
-			"title": "Eligible Object Types",
-			"description": "A collection of type id's of eligible resource types; if missing, all resource types are eligible",
+			"title": "Eligible Resource Classes as Object",
+			"description": "A collection of id's of eligible resource classes; if missing, all resource classes are eligible",
 			"minItems": 1,
 			"uniqueItems": true,
             "items": {
               "$ref": "#/definitions/id"
             }
           },
-          "propertyTypes": {
-            "$ref": "#/definitions/propertyTypes"
+          "propertyClasses": {
+            "$ref": "#/definitions/propertyClasses"
           },
           "revision": {
 	        "$ref": "#/definitions/revision"
@@ -498,8 +498,8 @@
         "required": [ "id", "title", "changedAt" ]
       }
     },
-    "hierarchyTypes": {
-      "description": "The type definitions for hierarchy roots.",
+    "hierarchyClasses": {
+      "description": "The class definitions for hierarchy roots.",
       "type": "array",
       "items": {
         "type": "object",
@@ -519,8 +519,8 @@
           "instantiation": {
             "$ref": "#/definitions/instantiation"
           },
-          "propertyTypes": {
-            "$ref": "#/definitions/propertyTypes"
+          "propertyClasses": {
+            "$ref": "#/definitions/propertyClasses"
           },
           "revision": {
 			"$ref": "#/definitions/revision"
@@ -547,7 +547,7 @@
           "title": {
             "type": "string"
           },
-          "resourceType": {
+          "class": {
             "$ref": "#/definitions/id"
           },
           "properties": {
@@ -563,7 +563,7 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "resourceType", "properties", "changedAt" ]
+        "required": [ "id", "title", "class", "properties", "changedAt" ]
       }
     },
     "statements": {
@@ -578,7 +578,7 @@
           "title": {
             "type": "string"
           },
-          "statementType": {
+          "class": {
             "$ref": "#/definitions/id"
           },
           "subject": {
@@ -600,7 +600,7 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "statementType", "subject", "object", "changedAt" ]
+        "required": [ "id", "title", "class", "subject", "object", "changedAt" ]
       }
     },
     "hierarchies": {
@@ -618,7 +618,7 @@
           "description": {
             "type": "string"
           },
-          "hierarchyType": {
+          "class": {
             "$ref": "#/definitions/id"
           },
           "properties": {
@@ -637,7 +637,7 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "hierarchyType", "nodes", "changedAt" ]
+        "required": [ "id", "title", "class", "nodes", "changedAt" ]
       }
     },
     "files": {
@@ -650,9 +650,9 @@
     "title",
     "specifVersion",
     "dataTypes",
-    "resourceTypes",
-    "statementTypes",
-    "hierarchyTypes",
+    "resourceClasses",
+    "statementClasses",
+    "hierarchyClasses",
     "resources",
     "statements",
     "hierarchies"

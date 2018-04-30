@@ -165,7 +165,7 @@ function checkConstraints(data) {
 		let sTi=null;
 		for( var i=els.length-1;i>-1;i-- ){
 			sTi = indexById(L, els[i][type]);
-			if(sTi<0) return {status:903, statusText: "instance with identifier '"+els[i].id+"' must reference a valid type"}
+			if(sTi<0) return {status:903, statusText: "instance with identifier '"+els[i].id+"' must reference a valid "+type }
 //			if( !checkPropTypeIds(L[sTi].propertyTypes,els[i].properties) ) return {status:920, statusText: "properties of instance with identifier '"+els[i].id+"' must reference valid propertyTypes"}
 		};
 		return {status:0, statusText: "instance's "+type+" and propertyTypes reference valid types"}	
@@ -235,8 +235,9 @@ function checkConstraints(data) {
 					for( var a=iL[i].properties.length-1;a>-1;a-- ){
 						// Property's propertyType must point to a propertyType of the respective type 
 						iT = itemById(tL,iL[i][typ]); // the list of propertyTypes of the instance's type.
+						if( !iT ) return {status:919, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
 						pT = itemById(iT.propertyTypes,iL[i].properties[a].propertyType);
-						if( !pT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference valid propertyTypes"}; 
+						if( !pT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference a valid propertyType"}; 
 						
 						// Property's value ("content") must fit to the respective type's range
 						pV = iL[i].properties[a].value;
