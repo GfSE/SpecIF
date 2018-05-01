@@ -254,7 +254,7 @@ function checkConstraints( data ) {
 								case 'xhtml':
 								case 'xs:string': 
 									if( dT.maxLength==undefined ) break;
-									let txt = "string value of property of instance with identifier '"+iL[i].id+"' must not exceed maxLength";
+									let txt = "property of instance with identifier '"+iL[i].id+"': string must not exceed maxLength";
 									switch( typeof pV ) {
 										case 'object':
 											// pV is a list with some text in different languages, so check every one of them:
@@ -268,26 +268,32 @@ function checkConstraints( data ) {
 									break;
 								case 'xs:double':
 	//								if( (pV*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922,statusText:""};
-									// no break;
+									pV = parseFloat( pV );
+									if( pV=='NaN' ) return {status:925, statusText:"property of instance with identifier '"+iL[i].id+"': invalid number"}; 
+									if( pV<dT.min ) return {status:923, statusText:"property of instance with identifier '"+iL[i].id+"': number must be larger than min"};
+									if( pV>dT.max ) return {status:924, statusText:"property of instance with identifier '"+iL[i].id+"': number must be smaller than max"}; 
+									break;
 								case 'xs:integer':
 									// according to the schema, all property values are of type 'string', including the numbers:
-									if( pV<dT.min ) return {status:923, statusText: "numbers must be larger than min"};
-									if( pV>dT.max ) return {status:924, statusText: "numbers must be smaller than max"}; 
+									pV = parseInt( pV );
+									if( pV=='NaN' ) return {status:925, statusText:"property of instance with identifier '"+iL[i].id+"': invalid number"}; 
+									if( pV<dT.min ) return {status:923, statusText:"property of instance with identifier '"+iL[i].id+"': number must be larger than min"};
+									if( pV>dT.max ) return {status:924, statusText:"property of instance with identifier '"+iL[i].id+"': number must be smaller than max"}; 
 									break;
 								case 'xs:boolean':
 									// according to the schema, all property values are of type 'string', including boolean:
-									if( pV!='true' && pV!='false' ) return {status:925,statusText:"invalid boolean value"}; 
+									if( pV!='true' && pV!='false' ) return {status:925, statusText:"property of instance with identifier '"+iL[i].id+"': invalid boolean value"}; 
 									break;
 								case 'xs:enumeration':
 									var vL=pV.split(',');
 									// 'multiple' property at propertyType supersedes 'multiple' at the dataType:
 									if( vL.length>1 && !(pT.multiple || (pT.multiple==undefined && dT.multiple)) ) // logic expression is equivalent to 'multipleChoice(attrType)' ... the function is not used to avoid a dependency.
-											return {status:926, statusText: "property may not have more than one value"};
+											return {status:926, statusText: "property of instance with identifier '"+iL[i].id+"': may not have more than one value"};
 									// enumerated values in properties must be defined in the dataType of the corresponding propertyType
 									for( var v=vL.length-1;v>-1;v-- ) {
 										vL[v] = vL[v].trim();
 										if( vL[v] && !itemById( dT.values, vL[v] ) ) 
-											return {status:927, statusText: "enumerated values must be defined by the respective property type"}
+											return {status:927, statusText: "property of instance with identifier '"+iL[i].id+"': enumerated values must be defined by the respective property type"}
 									}
 							}						
 						}
