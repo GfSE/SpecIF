@@ -161,36 +161,38 @@ function checkConstraints( data ) {
 			switch(L[i].type) {
 				case 'xhtml':
 				case 'xs:string': 
+					// more restrictive than the schema, where maxLength is optional:
 					if( !L[i].maxLength ) return {status:928, statusText: "string and xhtml types must have maxLength>0"};
 					break;
 				case 'xs:double':
+					// more restrictive than the schema, where accuracy is optional:
 					if( !L[i].accuracy ) return {status:929, statusText: "double types must have accuracy>0"};
 					// no break;
 				case 'xs:integer':
-					if( L[i].min==undefined || L[i].max==undefined || L[i].min+1>L[i].max ) return {status:929, statusText: "number types must have min and max"};
-					break
+					// more restrictive than the schema, where min and may are optional:
+					if( L[i].min==undefined || L[i].max==undefined || L[i].min+1>L[i].max ) return {status:929, statusText: "number types must have min and max"}
 			}						
 		};
 		return {status:0, statusText: "dataTypes are correct"}
 	}
-	function checkTypes(L,els,type) {
+	function checkTypes(tL,iL,type) {  // type list, instance list
 		// In case of resources, the value of "resourceType" must be the key of a member of "resourceTypes". 
 		// Similarly for statements and hierarchies.
-		for( var i=els.length-1;i>-1;i-- ){
-			if( !existsByKey(L, els[i][type]) ) 
-				return {status:903, statusText: "instance with identifier '"+els[i].id+"' must reference a valid "+type }
+		for( var i=iL.length-1;i>-1;i-- ){
+			if( !existsByKey(tL, iL[i][type]) ) 
+				return {status:903, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+type }
 		};
-		return {status:0, statusText: "instance's "+type+" and propertyTypes reference valid types"}	
+		return {status:0, statusText: "instance's "+type+"s reference valid types"}	
 	}
-	function checkPropTypes(L,sTs) {
+	function checkPropTypes(dL,tL) {  // dataType list, type list
 		let pT=null;
-		for( var i=sTs.length-1;i>-1;i-- ){
-			if( sTs[i].propertyTypes ) {
-				for( var j=sTs[i].propertyTypes.length-1;j>-1;j-- ) {
-					pT = sTs[i].propertyTypes[j];
+		for( var i=tL.length-1;i>-1;i-- ){
+			if( tL[i].propertyTypes ) {
+				for( var j=tL[i].propertyTypes.length-1;j>-1;j-- ) {
+					pT = tL[i].propertyTypes[j];
 					// A propertyType's "dataType" must be the key of a member of "dataTypes".
 					// .. this is also checked in checkPropValues:
-					if( !existsByKey(L,pT.dataType) ) 
+					if( !existsByKey(dL,pT.dataType) ) 
 						return {status:904, statusText: "propertyType with identifier '"+pT.id+"' must reference a valid dataType"};
 					// If a propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
 				}
@@ -218,15 +220,15 @@ function checkConstraints( data ) {
 			return true
 		}
 	}
-	function checkStatements(oL,rL) {	// resources, statements
+	function checkStatements(rL,sL) {	// resources, statements
 		// A statement's "subject" and "object" must both be the id of a member of "resources". 
 		// (It has been checked before that any "resource" is indeed of type "resourceType").
-		for( var i=rL.length-1;i>-1;i-- ){
-			if(!existsByKey(oL, rL[i].subject)) 
-				return {status:908, statusText: "subject of statement with identifier '"+rL[i].id+"' must reference a valid resource"};
-			if(!existsByKey(oL, rL[i].object)) 
-				return {status:909, statusText: "object of statement with identifier '"+rL[i].id+"' must reference a valid resource"};
-//			if( rL[i].subject == rL[i].object ) return {status:90X, statusText: ""}
+		for( var i=sL.length-1;i>-1;i-- ){
+			if(!existsByKey(rL, sL[i].subject)) 
+				return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
+			if(!existsByKey(rL, sL[i].object)) 
+				return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
+//			if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
 		};
 		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
 	}
@@ -235,10 +237,11 @@ function checkConstraints( data ) {
 		if( iL ) {
 			for( var i=iL.length-1;i>-1;i-- ){
 				if( iL[i].properties ) {
+					iT = itemById(tL,iL[i][typ]); // the instance's type.
+					// error 919 is equal to 903, but there has been a case in which 919 has been raised.
+					if( !iT ) return {status:919, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
 					for( var a=iL[i].properties.length-1;a>-1;a-- ){
 						// Property's propertyType must point to a propertyType of the respective type 
-						iT = itemById(tL,iL[i][typ]); // the instance's type.
-						if( !iT ) return {status:919, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
 						pT = itemById(iT.propertyTypes,iL[i].properties[a].propertyType);
 						if( !pT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference a valid propertyType"}; 
 						
@@ -267,13 +270,15 @@ function checkConstraints( data ) {
 	//								if( (pV*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922,statusText:""};
 									// no break;
 								case 'xs:integer':
+									// according to the schema, all property values are of type 'string', including the numbers:
 									if( pV<dT.min ) return {status:923, statusText: "numbers must be larger than min"};
 									if( pV>dT.max ) return {status:924, statusText: "numbers must be smaller than max"}; 
 									break;
-	/*							case 'xs:boolean':
-									if( pV!=true && pV!=false ) return {status:925,statusText:""}; 
+								case 'xs:boolean':
+									// according to the schema, all property values are of type 'string', including boolean:
+									if( pV!='true' && pV!='false' ) return {status:925,statusText:"invalid boolean value"}; 
 									break;
-	*/							case 'xs:enumeration':
+								case 'xs:enumeration':
 									var vL=pV.split(',');
 									// 'multiple' property at propertyType supersedes 'multiple' at the dataType:
 									if( vL.length>1 && !(pT.multiple || (pT.multiple==undefined && dT.multiple)) ) // logic expression is equivalent to 'multipleChoice(attrType)' ... the function is not used to avoid a dependency.
