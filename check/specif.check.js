@@ -54,8 +54,8 @@ function checkConstraints(data) {
 	rc = checkPropTypes( data.dataTypes, data.hierarchyTypes );
 	if( rc.status>0 ) errL.push(rc);
 
-	// subjectTypes and objectTypes must be resourceType ids:
-	rc = checkStatementTypeIds( data.resourceTypes, data.statementTypes );
+	// statementType's subjectTypes and objectTypes must be resourceType ids:
+	rc = checkStatementTypes( data.resourceTypes, data.statementTypes );
 	if( rc.status>0 ) errL.push(rc);
 
 	// property values ("content") must fit to the respective type's range
@@ -66,8 +66,8 @@ function checkConstraints(data) {
 	rc = checkPropValues( data.hierarchyTypes, data.hierarchies, 'hierarchyType' );
 	if( rc.status>0 ) errL.push(rc);
 
-	// subject and object must be resource ids:
-	rc = checkStatementIds( data.resources, data.statements );
+	// statementType's subject and object must be resource ids:
+	rc = checkStatements( data.resources, data.statements );
 	if( rc.status>0 ) errL.push(rc);
 
 	// A hierarchy node's "resource" must be the id of a member of "resources":
@@ -130,22 +130,10 @@ function checkConstraints(data) {
 			return null
 		}
 	}
-	function checkNodes(L,nds) {
-		// Any node's "resource" must be the id of a member of "resources". 
-		if( nds ) {
-			var rc = null;
-			for( var i=nds.length-1;i>-1;i-- ){
-				if(indexById(L,nds[i].resource)<0) return {status:909, statusText: "hierarchy node with identifier '"+nds[i].id+"' must reference a valid resource"};	// check the node itself
-				rc = checkNodes(L,nds[i].nodes);	// check references of next hierarchy levels recursively
-				if(rc.status!=0) return rc	
-			}
-		};
-		return {status:0, statusText: "hierarchy nodes reference valid resources"}		// all's fine!
-	}
 	function checkDataTypes(L) {
 		for( var i=L.length-1;i>-1;i-- ){
 			switch(L[i].type) {
-				case 'xhtml': 
+				case 'xhtml':
 				case 'xs:string': 
 					// more restrictive than the schema, where maxLength is optional:
 					if( !L[i].maxLength ) return {status:928, statusText: "string types must have maxLength>0"};
@@ -159,7 +147,7 @@ function checkConstraints(data) {
 					if( L[i].min==undefined || L[i].max==undefined || L[i].min+1>L[i].max ) return {status:929, statusText: "number types must have min and max"}
 			}						
 		};
-		return {status:0, statusText: "dataTypes are correct"}		// all's fine!
+		return {status:0, statusText: "dataTypes are correct"}
 	}
 	function checkTypes(tL,iL,type) {  // type list, instance list
 		// In case of resources, the value of "resourceType" must be the id of a member of "resourceTypes". 
@@ -168,19 +156,9 @@ function checkConstraints(data) {
 		for( var i=iL.length-1;i>-1;i-- ){
 			tI = indexById(tL, iL[i][type]);
 			if(tI<0) return {status:903, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+type }
-//			if( !checkPropTypeIds(tL[tI].propertyTypes,iL[i].properties) ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference a valid propertyType"}
 		};
 		return {status:0, statusText: "instance's "+type+"s reference valid types"}	
-				
-/*	  		function checkPropTypeIds(L,atts) {
-				// all property's "propertyType" must be the id of a member of "propertyTypes":
-				// .. these are now checked in checkPropValues.
-				for( var i=atts.length-1;i>-1;i-- ) {
-					if(indexById(L, atts[j].propertyType)<0) return false
-				};
-				return true
-			}
-*/	}
+	}
 	function checkPropTypes(dL,tL) {  // dataType list, type list
 		let pT=null, dT=null;
 		for( var i=tL.length-1;i>-1;i-- ){
@@ -198,7 +176,7 @@ function checkConstraints(data) {
 		return {status:0, statusText: "propertyTypes reference valid dataTypes"}
 	}
 
-	function checkStatementTypeIds(rTL,sTL) {	// resourceTypes, statementTypes
+	function checkStatementTypes(rTL,sTL) {	// resourceTypes, statementTypes
 		// All statementType's "subjectTypes" must be the id of a member of "resourceTypes". 
 		// Similarly for "objectTypes".
 		for( var i=sTL.length-1;i>-1;i-- ){
@@ -218,13 +196,15 @@ function checkConstraints(data) {
 			return true
 		}
 	}
-	function checkStatementIds(rL,sL) {	// resources, statements
+	function checkStatements(rL,sL) {	// resources, statements
 		// A statement's "subject" must be the id of a member of "resources". 
 		// Similarly for "object".
 		// (It has been checked before that any "resource" is indeed of type "resourceType").
 		for( var i=sL.length-1;i>-1;i-- ){
-			if(indexById(rL, sL[i].subject)<0) return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
-			if(indexById(rL, sL[i].object)<0) return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
+			if(indexById(rL, sL[i].subject)<0) 
+				return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
+			if(indexById(rL, sL[i].object)<0) 
+				return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
 //			if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
 		};
 		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
@@ -248,6 +228,7 @@ function checkConstraints(data) {
 							dT = itemById(data.dataTypes,pT.dataType);
 							if( !dT ) return {status:904, statusText: "propertyType with identifier '"+pT.id+"' must reference a valid dataType"}; 
 							switch(dT.type) {
+								case 'xhtml':
 								case 'xs:string': 
 									if( pV.length>dT.maxLength ) return {status:921, statusText: "strings must not exceed maxLength"}; 
 									break;
@@ -255,11 +236,13 @@ function checkConstraints(data) {
 	//								if( (pV*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922,statusText:""};
 									// no break;
 								case 'xs:integer':
+									// according to the schema, all property values are of type 'string', including the numbers:
 									if( pV<dT.min ) return {status:923, statusText: "numbers must be larger than min"};
 									if( pV>dT.max ) return {status:924, statusText: "numbers must be smaller than max"}; 
 									break;
 								case 'xs:boolean':
-									if( typeof pV != 'boolean' ) return {status:925,statusText:"invalid boolean value"}; 
+									// according to the schema, all property values are of type 'string', including boolean:
+									if( pV!='true' && pV!='false' ) return {status:925,statusText:"invalid boolean value"}; 
 									break;
 								case 'xs:enumeration':
 									var vL=pV.split(',');
@@ -288,6 +271,18 @@ function checkConstraints(data) {
 		for( var i=L.length-1;i>-1;i-- )
 			if( L[i].id === id ) return i;   // return list index 
 		return -1
+	}
+	function checkNodes(L,nds) {
+		// Any node's "resource" must be the id of a member of "resources". 
+		if( nds ) {
+			var rc = null;
+			for( var i=nds.length-1;i>-1;i-- ){
+				if(indexById(L,nds[i].resource)<0) return {status:909, statusText: "hierarchy node with identifier '"+nds[i].id+"' must reference a valid resource"};	// check the node itself
+				rc = checkNodes(L,nds[i].nodes);	// check references of next hierarchy levels recursively
+				if(rc.status!=0) return rc	
+			}
+		};
+		return {status:0, statusText: "hierarchy nodes reference valid resources"}		// all's fine!
 	}
 	function itemById(L,id) {
 		if(!L||!id) return null;
