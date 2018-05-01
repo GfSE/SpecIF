@@ -147,28 +147,30 @@ function checkConstraints(data) {
 			switch(L[i].type) {
 				case 'xhtml': 
 				case 'xs:string': 
+					// more restrictive than the schema, where maxLength is optional:
 					if( !L[i].maxLength ) return {status:928, statusText: "string types must have maxLength>0"};
 					break;
 				case 'xs:double':
+					// more restrictive than the schema, where accuracy is optional:
 					if( !L[i].accuracy ) return {status:929, statusText: "double types must have accuracy>0"};
 					// no break;
 				case 'xs:integer':
-					if( L[i].min==undefined || L[i].max==undefined || L[i].min+1>L[i].max ) return {status:929, statusText: "number types must have min and max"};
-					break;
+					// more restrictive than the schema, where min and may are optional:
+					if( L[i].min==undefined || L[i].max==undefined || L[i].min+1>L[i].max ) return {status:929, statusText: "number types must have min and max"}
 			}						
 		};
 		return {status:0, statusText: "dataTypes are correct"}		// all's fine!
 	}
-	function checkTypes(L,els,type) {
+	function checkTypes(tL,iL,type) {  // type list, instance list
 		// In case of resources, the value of "resourceType" must be the id of a member of "resourceTypes". 
 		// Similarly for statements and hierarchies.
-		let sTi=null;
-		for( var i=els.length-1;i>-1;i-- ){
-			sTi = indexById(L, els[i][type]);
-			if(sTi<0) return {status:903, statusText: "instance with identifier '"+els[i].id+"' must reference a valid "+type }
-//			if( !checkPropTypeIds(L[sTi].propertyTypes,els[i].properties) ) return {status:920, statusText: "properties of instance with identifier '"+els[i].id+"' must reference valid propertyTypes"}
+		let tI=null;
+		for( var i=iL.length-1;i>-1;i-- ){
+			tI = indexById(tL, iL[i][type]);
+			if(tI<0) return {status:903, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+type }
+//			if( !checkPropTypeIds(tL[tI].propertyTypes,iL[i].properties) ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference a valid propertyType"}
 		};
-		return {status:0, statusText: "instance's "+type+" and propertyTypes reference valid types"}	
+		return {status:0, statusText: "instance's "+type+"s reference valid types"}	
 				
 /*	  		function checkPropTypeIds(L,atts) {
 				// all property's "propertyType" must be the id of a member of "propertyTypes":
@@ -179,13 +181,13 @@ function checkConstraints(data) {
 				return true
 			}
 */	}
-	function checkPropTypes(L,sTs) {
+	function checkPropTypes(dL,tL) {  // dataType list, type list
 		let pT=null, dT=null;
-		for( var i=sTs.length-1;i>-1;i-- ){
-			if( sTs[i].propertyTypes ) {
-				for( var j=sTs[i].propertyTypes.length-1;j>-1;j-- ) {
-					pT = sTs[i].propertyTypes[j];
-					dT = itemById(L,pT.dataType);
+		for( var i=tL.length-1;i>-1;i-- ){
+			if( tL[i].propertyTypes ) {
+				for( var j=tL[i].propertyTypes.length-1;j>-1;j-- ) {
+					pT = tL[i].propertyTypes[j];
+					dT = itemById(dL,pT.dataType);
 					// A propertyType's "dataType" must be the id of a member of "dataTypes".
 					// .. this is also checked in checkPropValues:
 					if( !dT ) return {status:904, statusText: "propertyType with identifier '"+pT.id+"' must reference a valid dataType"};
@@ -232,10 +234,11 @@ function checkConstraints(data) {
 		if( iL ) {
 			for( var i=iL.length-1;i>-1;i-- ){
 				if( iL[i].properties ) {
+					iT = itemById(tL,iL[i][typ]); // the instance's type.
+					// error 919 is equal to 903, but there has been a case in which 919 has been raised.
+					if( !iT ) return {status:919, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
 					for( var a=iL[i].properties.length-1;a>-1;a-- ){
 						// Property's propertyType must point to a propertyType of the respective type 
-						iT = itemById(tL,iL[i][typ]); // the list of propertyTypes of the instance's type.
-						if( !iT ) return {status:919, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
 						pT = itemById(iT.propertyTypes,iL[i].properties[a].propertyType);
 						if( !pT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference a valid propertyType"}; 
 						
@@ -255,10 +258,10 @@ function checkConstraints(data) {
 									if( pV<dT.min ) return {status:923, statusText: "numbers must be larger than min"};
 									if( pV>dT.max ) return {status:924, statusText: "numbers must be smaller than max"}; 
 									break;
-	/*							case 'xs:boolean':
-									if( pV!=true && pV!=false ) return {status:925,statusText:""}; 
+								case 'xs:boolean':
+									if( typeof pV != 'boolean' ) return {status:925,statusText:"invalid boolean value"}; 
 									break;
-	*/							case 'xs:enumeration':
+								case 'xs:enumeration':
 									var vL=pV.split(',');
 									// 'multiple' property at propertyType supersedes 'multiple' at the dataType:
 									if( vL.length>1 && !(pT.multiple || (pT.multiple==undefined && dT.multiple)) ) // logic expression is equivalent to 'multipleChoice(attrType)' ... the function is not used to avoid a dependency.
