@@ -70,13 +70,13 @@ function checkConstraints(data) {
 	// dataTypes must respect certain constraints depending on their base type:
 	rc = checkDataTypes( data.dataTypes );
 	if( rc.status>0 ) errL.push(rc);
-	// in case of resources, the value of "resourceType" must be the id of a member of "resourceTypes":
+	// in case of resources, the value of "class" must be the id of a member of "resourceClasses":
 	rc = checkTypes( data[rClasses], data.resources, rClass );
 	if( rc.status>0 ) errL.push(rc);
-	// in case of statements, the value of "statementType" must be the id of a member of "statementTypes":
+	// in case of statements, the value of "class" must be the id of a member of "statementClasses":
 	rc = checkTypes( data[sClasses], data.statements, sClass );
 	if( rc.status>0 ) errL.push(rc);
-	// in case of hierarchies, the value of "hierarchyType" must be the id of a member of "hierarchyTypes":
+	// in case of hierarchies, the value of "class" must be the id of a member of "hierarchyClasses":
 	rc = checkTypes( data[hClasses], data.hierarchies, hClass );
 	if( rc.status>0 ) errL.push(rc);
 
@@ -88,11 +88,11 @@ function checkConstraints(data) {
 	rc = checkPropTypes( data.dataTypes, data[hClasses] );
 	if( rc.status>0 ) errL.push(rc);
 
-	// statementType's subjectTypes and objectTypes must be resourceType ids:
+	// statementClass' subjectClasses and objectClasses must be resourceClass ids:
 	rc = checkStatementTypes( data[rClasses], data[sClasses] );
 	if( rc.status>0 ) errL.push(rc);
 
-	// property values ("content") must fit to the respective type's range
+	// property values ("content") must fit the respective class' range
 	rc = checkPropValues( data[rClasses], data.resources, rClass );
 	if( rc.status>0 ) errL.push(rc);
 	rc = checkPropValues( data[sClasses], data.statements, sClass );
@@ -100,11 +100,11 @@ function checkConstraints(data) {
 	rc = checkPropValues( data[hClasses], data.hierarchies, hClass );
 	if( rc.status>0 ) errL.push(rc);
 
-	// statementType's subject and object must be resource ids:
+	// statementClass' subject and object must be resource ids:
 	rc = checkStatements( data.resources, data.statements );
 	if( rc.status>0 ) errL.push(rc);
 
-	// A hierarchy node's "resource" must be the id of a member of "resources":
+	// A hierarchy node's "resource" must be a resource id:
 	for( var h=data.hierarchies.length-1; h>-1; h--) {
 		rc = checkNodes( data.resources, data.hierarchies[h].nodes );
 		if( rc.status>0 ) { errL.push(rc); break }
@@ -147,7 +147,7 @@ function checkConstraints(data) {
 					rc = duplicateId(L[i].values);
 					if( rc ) return rc
 				};
-				// check the propertyType's identifiers, as well:
+				// check the identifiers of propertyClasses, as well:
 				// (the instance's properties do not have an id ...)
 				if( L[i][pClasses] ) {
 					rc = duplicateId(L[i][pClasses]);
@@ -185,7 +185,7 @@ function checkConstraints(data) {
 		return {status:0, statusText: "dataTypes are correct"}
 	}
 	function checkTypes(tL,iL,type) {  // type list, instance list
-		// In case of resources, the value of "resourceType" must be the id of a member of "resourceTypes". 
+		// In case of resources, the value of "class" must be the id of a member of "resourceClasses". 
 		// Similarly for statements and hierarchies.
 		let tI=null;
 		for( var i=iL.length-1;i>-1;i-- ){
@@ -201,7 +201,7 @@ function checkConstraints(data) {
 				for( var j=tL[i][pClasses].length-1;j>-1;j-- ) {
 					pT = tL[i][pClasses][j];
 					dT = itemById(dL,pT.dataType);
-					// A propertyType's "dataType" must be the id of a member of "dataTypes".
+					// A propertyClass' "dataType" must be the id of a member of "dataTypes".
 					// .. this is also checked in checkPropValues:
 					if( !dT ) return {status:904, statusText: "property-class with identifier '"+pT.id+"' must reference a valid dataType"};
 					// If a propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
@@ -212,20 +212,20 @@ function checkConstraints(data) {
 	}
 
 	function checkStatementTypes(rTL,sTL) {	// resourceTypes, statementTypes
-		// All statementType's "subjectTypes" must be the id of a member of "resourceTypes". 
-		// Similarly for "objectTypes".
+		// All statementClass' "subjectClasses" must be the id of a member of "resourceClasses". 
+		// Similarly for "objectClasses".
 		for( var i=sTL.length-1;i>-1;i-- ){
 			if( !checkEls(rTL, sTL[i][subClasses]) ) return {status:906, statusText: subClasses+" of "+hClass+" with identifier '"+sTL[i].id+"' must reference a valid "+rClass };
 			if( !checkEls(rTL, sTL[i][objClasses]) ) return {status:907, statusText: objClasses+" of "+hClass+" with identifier '"+sTL[i].id+"' must reference a valid "+rClass }
 		};
 		return {status:0, statusText: "statement-class' "+subClasses+" and "+objClasses+" reference valid "+rClasses };
 
-		function checkEls(rTL,rTs) {
-			// no subjectTypes resp. objectTypes means all defined resourceTypes are eligible:
-			if( rTs ) { 
-				// each value in rTs must be the id of a member of rTL:
-				for( var i=rTs.length-1;i>-1;i-- ) {
-					if(indexById(rTL, rTs[i])<0) return false
+		function checkEls(rTL,tL) {
+			// no subjectClasses resp. objectClasses means all defined resourceClasses are eligible:
+			if( tL ) { 
+				// each value in tL must be the id of a member of rTL:
+				for( var i=tL.length-1;i>-1;i-- ) {
+					if(indexById(rTL, tL[i])<0) return false
 				}
 			};
 			return true
@@ -234,7 +234,7 @@ function checkConstraints(data) {
 	function checkStatements(rL,sL) {	// resources, statements
 		// A statement's "subject" must be the id of a member of "resources". 
 		// Similarly for "object".
-		// (It has been checked before that any "resource" is indeed of type "resourceType").
+		// (It has been checked before that any "resource" is indeed of type "resourceClass").
 		for( var i=sL.length-1;i>-1;i-- ){
 			if(indexById(rL, sL[i][sub])<0) 
 				return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
@@ -250,7 +250,7 @@ function checkConstraints(data) {
 			for( var i=iL.length-1;i>-1;i-- ){
 				if( iL[i].properties ) {
 					iT = itemById(tL,iL[i][typ]); // the instance's type.
-					// error 919 is equal to 903, but there has been a case in which 919 has been raised.
+					// ToDo: error 919 is equal to 903, but there has been a case in which 919 has been raised. 
 					if( !iT ) return {status:919, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
 					for( var a=iL[i].properties.length-1;a>-1;a-- ){
 						// Property's propertyType must point to a propertyType of the respective type 
@@ -260,6 +260,7 @@ function checkConstraints(data) {
 						// Property's value ("content") must fit to the respective type's range
 						pV = iL[i].properties[a].value;
 						if( pV ) {
+							// according to the schema, all property values are of type 'string', including boolean and numbers:
 							dT = itemById(data.dataTypes,pT.dataType);
 							if( !dT ) return {status:904, statusText: "property-class with identifier '"+pT.id+"' must reference a valid dataType"}; 
 							switch(dT.type) {
@@ -275,19 +276,17 @@ function checkConstraints(data) {
 									if( pV>dT.max ) return {status:924, statusText:"property of instance with identifier '"+iL[i].id+"': number must be smaller than max"}; 
 									break;
 								case 'xs:integer':
-									// according to the schema, all property values are of type 'string', including the numbers:
 									pV = parseInt( pV );
 									if( pV=='NaN' ) return {status:925, statusText:"property of instance with identifier '"+iL[i].id+"': invalid number"}; 
 									if( pV<dT.min ) return {status:923, statusText:"property of instance with identifier '"+iL[i].id+"': number must be larger than min"};
 									if( pV>dT.max ) return {status:924, statusText:"property of instance with identifier '"+iL[i].id+"': number must be smaller than max"}; 
 									break;
 								case 'xs:boolean':
-									// according to the schema, all property values are of type 'string', including boolean:
 									if( pV!='true' && pV!='false' ) return {status:925, statusText:"property of instance with identifier '"+iL[i].id+"': invalid boolean value"}; 
 									break;
 								case 'xs:enumeration':
 									var vL=pV.split(',');
-									// 'multiple' property at propertyType supersedes 'multiple' at the dataType:
+									// 'multiple' property at property-class supersedes 'multiple' at the dataType:
 									if( vL.length>1 && !(pT.multiple || (pT.multiple==undefined && dT.multiple)) ) // logic expression is equivalent to 'multipleChoice(attrType)' ... the function is not used to avoid a dependency.
 											return {status:926, statusText: "property of instance with identifier '"+iL[i].id+"': may not have more than one value"};
 									// enumerated values in properties must be defined in the dataType of the corresponding propertyType
@@ -305,14 +304,6 @@ function checkConstraints(data) {
 		};
 		return {status:0, statusText: "propertyValues lie within their type's value ranges"}
 	}
-	function indexById(L,id) {
-		if(!L||!id) return -1;
-		// given the id of an element in a list, return it's index:
-		id = id.trim();
-		for( var i=L.length-1;i>-1;i-- )
-			if( L[i].id === id ) return i;   // return list index 
-		return -1
-	}
 	function checkNodes(L,nds) {
 		// Any node's "resource" must be the id of a member of "resources". 
 		if( nds ) {
@@ -325,12 +316,20 @@ function checkConstraints(data) {
 		};
 		return {status:0, statusText: "hierarchy nodes reference valid resources"}		// all's fine!
 	}
-	function itemById(L,id) {
-		if(!L||!id) return null;
-		// given the ID of an element in a list, return the element itself:
+	function indexById(L,id) {
+		if(!L||!id) return -1;
+		// given the id of an element in a list, return it's index:
 		id = id.trim();
 		for( var i=L.length-1;i>-1;i-- )
-			if( L[i].id === id ) return L[i];   // return list item
+			if( L[i].id === id ) return i;   // return list index 
+		return -1
+	}
+	function itemById(L,id) {
+		if(!L||!id) return null;
+		// given the id of an element in a list, return the element itself:
+		id = id.trim();
+		for( var i=L.length-1;i>-1;i-- )
+			if( L[i].id === id ) return L[i];  // return list item
 		return null
 	}
 	function errorsText(eL) {
