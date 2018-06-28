@@ -27,10 +27,14 @@ function checkConstraints(data) {
 	// The return code uses properties similar to xhr, namely {status:900,statusText:"abc",responseText:"xyz"}
 	// ToDo: localize text and take it from language files.
 
+	if( data.specifVersion.indexOf( '0.9.' )>-1 ) 
+		return { status: 903, statusText: 'SpecIF version 0.9.x is not any more supported!' };
+	
+	// Set property names according to SpecIF version:
 	switch( data.specifVersion ) {
 		case '0.10.0':
 		case '0.10.1':
-			return { status: 903, statusText: 'SpecIF version '+data.specifVersion+' is not supported by the program!' }
+			return { status: 903, statusText: 'SpecIF version '+data.specifVersion+' is not any more supported!' }
 		case '0.10.2':
 		case '0.10.3':
 			var rClasses = 'resourceTypes',
