@@ -85,11 +85,11 @@ function checkConstraints(data) {
 	if( rc.status>0 ) errL.push(rc);
 
 	// A propertyType's "dataType" must be the id of a member of "dataTypes":
-	rc = checkPropTypes( data.dataTypes, data[rClasses] );
+	rc = checkPropertyTypes( data.dataTypes, data[rClasses] );
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkPropTypes( data.dataTypes, data[sClasses] );
+	rc = checkPropertyTypes( data.dataTypes, data[sClasses] );
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkPropTypes( data.dataTypes, data[hClasses] );
+	rc = checkPropertyTypes( data.dataTypes, data[hClasses] );
 	if( rc.status>0 ) errL.push(rc);
 
 	// statementClass' subjectClasses and objectClasses must be resourceClass ids:
@@ -97,11 +97,11 @@ function checkConstraints(data) {
 	if( rc.status>0 ) errL.push(rc);
 
 	// property values ("content") must fit the respective class' range
-	rc = checkPropValues( data[rClasses], data.resources, rClass );
+	rc = checkProperties( data[rClasses], data.resources, rClass );
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkPropValues( data[sClasses], data.statements, sClass );
+	rc = checkProperties( data[sClasses], data.statements, sClass );
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkPropValues( data[hClasses], data.hierarchies, hClass );
+	rc = checkProperties( data[hClasses], data.hierarchies, hClass );
 	if( rc.status>0 ) errL.push(rc);
 
 	// statementClass' subject and object must be resource ids:
@@ -198,7 +198,7 @@ function checkConstraints(data) {
 		};
 		return {status:0, statusText: "instance's "+type+"s reference valid types"}	
 	}
-	function checkPropTypes(dL,tL) {  // dataType list, type list
+	function checkPropertyTypes(dL,tL) {  // dataType list, type list
 		let pT=null, dT=null;
 		for( var i=tL.length-1;i>-1;i-- ){
 			if( tL[i][pClasses] ) {
@@ -206,7 +206,7 @@ function checkConstraints(data) {
 					pT = tL[i][pClasses][j];
 					dT = itemById(dL,pT.dataType);
 					// A propertyClass' "dataType" must be the id of a member of "dataTypes".
-					// .. this is also checked in checkPropValues:
+					// .. this is also checked in checkProperties:
 					if( !dT ) return {status:904, statusText: "property-class with identifier '"+pT.id+"' must reference a valid dataType"};
 					// If a propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
 				}
@@ -248,7 +248,7 @@ function checkConstraints(data) {
 		};
 		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
 	}
-	function checkPropValues(tL,iL,typ) {   // type list, instance list (resources, statements or hierarchies)
+	function checkProperties(tL,iL,typ) {   // type list, instance list (resources, statements or hierarchies)
 		let pT=null, dT=null, pV=null, iT=null;
 		if( iL ) {
 			for( var i=iL.length-1;i>-1;i-- ){
