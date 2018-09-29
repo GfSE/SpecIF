@@ -1,7 +1,7 @@
 /*	Schema and constraint checking for native SpecIF data in JSON format. 
 	Requires: ajv 4.8 or higher.
 	License: Apache 2.0 (http://www.apache.org/licenses/)
-	Author: se@enso-managers.com, enso managers gmbh, Berlin (http://www.enso-managers.com)
+	Author: se@enso-managers.com, enso managers gmbh, Berlin (http://enso-managers.de)
 	We appreciate any correction, comment or contribution here on GitHub or via e-mail to support@reqif.de            
 */
 function checkSchema( schema, data ) {
@@ -34,7 +34,7 @@ function checkConstraints(data) {
 	switch( data.specifVersion ) {
 		case '0.10.0':
 		case '0.10.1':
-			return { status: 903, statusText: 'SpecIF version '+data.specifVersion+' is not any more supported!' }
+			return { status: 903, statusText: 'SpecIF version '+data.specifVersion+' is not any more supported!' };
 		case '0.10.2':
 		case '0.10.3':
 			var rClasses = 'resourceTypes',
@@ -135,13 +135,15 @@ function checkConstraints(data) {
 		if( dId ) return {status:916, statusText: "statement identifier '"+dId+"' is not unique"};
 		dId = duplicateId(iE.hierarchies);
 		if( dId ) return {status:917, statusText: "hierarchy identifier '"+dId+"' is not unique"};
+		dId = duplicateId(iE.files);
+		if( dId ) return {status:918, statusText: "file identifier '"+dId+"' is not unique"};
 		return {status:0, statusText: 'identifiers are unique'};
 
 		function duplicateId(L) {
 			// add every checked Id to allIds,
 			// return 'null', only if all elements of L are not contained in allIds,
 			// return the first id, which is contained in allIds (hence a duplicate):
-			if(!L || !L.length) return null;
+			if( !L || !L.length ) return null;
 			var rc=null;
 			for( var i=L.length-1;i>-1;i-- ) {
 				// check the element's id:
