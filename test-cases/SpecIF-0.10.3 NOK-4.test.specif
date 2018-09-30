@@ -1,0 +1,481 @@
+{
+    "id": "ACP-59c8a7730000bca80137509a49b1218b-test-0-10-3-NOK-4",
+    "title": "Test (schema 0-10-3) NOK-4",
+    "description": "double id in enumerated values of dataType[3].",
+    "specifVersion": "0.10.3",
+    "generator": "manual",
+    "generatorVersion": "",
+    "rights": {
+        "title": "Creative Commons 4.0 CC BY-SA",
+        "type": "dcterms:rights",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "createdAt": "2018-01-05T14:42:23.307Z",
+    "createdBy": {
+        "familyName": "von Dungern",
+        "givenName": "Oskar",
+        "org": {
+            "organizationName": "adesso"
+        },
+        "email": {
+            "type": "text/html",
+            "value": "oskar.dungern@adesso.de"
+        }
+    },
+    "dataTypes": [{
+        "id": "DT-ShortString",
+        "title": "String[96]",
+        "description": "String with length 96",
+        "type": "xs:string",
+        "maxLength": 96,
+        "revision": 1,
+        "changedAt": "2016-05-26T08:59:00+02:00"
+    }, {
+        "id": "DT-String",
+        "title": "String[512]",
+        "description": "String with length 512",
+        "type": "xs:string",
+        "maxLength": 512,
+        "revision": 1,
+        "changedAt": "2016-05-26T08:59:00+02:00"
+    }, {
+        "id": "DT-FormattedText",
+        "title": "Formatted Text",
+        "type": "xhtml",
+        "maxLength": 4196,
+        "revision": 1,
+        "changedAt": "2016-05-26T08:59:00+02:00"
+    }, {
+        "id": "DT-Status",
+        "title": "SpecIF:Status",
+        "description": "Enumerated values for status",
+        "type": "xs:enumeration",
+        "values": [{
+            "id": "V-Status-0",
+            "title": "00_deprecated"
+        }, {
+            "id": "V-Status-1",
+            "title": "00_rejected"
+        }, {
+            "id": "V-Status-2",
+            "title": "10_initial"
+        }, {
+            "id": "V-Status-3",
+            "title": "20_drafted"
+        }, {
+            "id": "V-Status-4",
+            "title": "30_submitted"
+        }, {
+            "id": "V-Status-5",
+            "title": "40_approved"
+        }, {
+            "id": "V-Status-6",
+            "title": "60_completed"
+        }, {
+            "id": "V-Status-7",
+            "title": "80_released"
+        }],
+        "revision": 1,
+        "changedAt": "2016-05-26T08:59:00+02:00"
+    }, {
+        "id": "DT-Priority",
+        "title": "SpecIF:Priority",
+        "description": "Enumerated values for priority",
+        "type": "xs:enumeration",
+        "values": [{
+            "id": "V-Prio-0",
+            "title": "1_high"
+        }, {
+            "id": "V-Prio-0",
+            "title": "2_medium"
+        }, {
+            "id": "V-Prio-2",
+            "title": "3_low"
+        }],
+        "revision": 1,
+        "changedAt": "2016-05-26T08:59:00+02:00"
+    }],
+    "resourceTypes": [{
+        "id": "OT-Fld",
+        "title": "SpecIF:Heading",
+        "icon": "",
+        "description": "Folders with title and text for chapters or descriptive paragraphs.",
+        "instantiation": ["user"],
+        "propertyTypes": [{
+            "id": "AT-Fld-Name",
+            "title": "dcterms:title",
+            "dataType": "DT-ShortString",
+            "revision": 1,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }, {
+            "id": "AT-Fld-Text",
+            "title": "dcterms:description",
+            "dataType": "DT-FormattedText",
+            "revision": 1,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }],
+        "revision": 1,
+        "changedAt": "2016-05-26T08:59:00+02:00",
+        "isHeading": true
+    }, {
+        "id": "OT-Pln",
+        "title": "SpecIF:Diagram",
+        "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
+        "icon": "&#x21B7;",
+        "instantiation": ["auto"],
+        "propertyTypes": [{
+            "id": "AT-Pln-Name",
+            "title": "dcterms:title",
+            "dataType": "DT-ShortString",
+            "revision": 1,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }, {
+            "id": "AT-Pln-Text",
+            "title": "dcterms:description",
+            "dataType": "DT-FormattedText",
+            "revision": 1,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }, {
+            "id": "AT-Pln-Notation",
+            "title": "SpecIF:Notation",
+            "dataType": "DT-ShortString",
+            "revision": 1,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }, {
+            "id": "AT-Pln-status",
+            "title": "Status",
+            "dataType": "DT-Status",
+            "revision": 1,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }],
+        "revision": 1,
+        "changedAt": "2016-05-26T08:59:00+02:00"
+    }, {
+        "id": "OT-Act",
+        "title": "FMC:Actor",
+        "description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
+        "icon": "&#9632;",
+        "instantiation": ["auto"],
+        "propertyTypes": [{
+            "id": "AT-Act-Name",
+            "title": "dcterms:title",
+            "dataType": "DT-ShortString",
+            "revision": 1,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }, {
+            "id": "AT-Act-Text",
+            "title": "dcterms:description",
+            "dataType": "DT-FormattedText",
+            "revision": 1,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }],
+        "revision": 1,
+        "changedAt": "2016-05-26T08:59:00+02:00"
+    }, {
+        "id": "OT-Sta",
+        "title": "FMC:State",
+        "description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape.",
+        "icon": "&#9679;",
+        "instantiation": ["auto"],
+        "propertyTypes": [{
+            "id": "AT-Sta-Name",
+            "title": "dcterms:title",
+            "dataType": "DT-ShortString",
+            "revision": 1,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }, {
+            "id": "AT-Sta-Text",
+            "title": "dcterms:description",
+            "dataType": "DT-FormattedText",
+            "revision": 1,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }],
+        "revision": 1,
+        "changedAt": "2016-05-26T08:59:00+02:00"
+    }, {
+        "id": "OT-Evt",
+        "title": "FMC:Event",
+        "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
+        "icon": "&#9830;",
+        "instantiation": ["auto"],
+        "propertyTypes": [{
+            "id": "AT-Evt-Name",
+            "title": "dcterms:title",
+            "dataType": "DT-ShortString",
+            "revision": 1,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }, {
+            "id": "AT-Evt-Text",
+            "title": "dcterms:description",
+            "dataType": "DT-FormattedText",
+            "revision": 1,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }],
+        "revision": 1,
+        "changedAt": "2016-05-26T08:59:00+02:00"
+    }],
+    "statementTypes": [{
+        "id": "RT-Visibility",
+        "title": "SpecIF:shows",
+        "description": "Relation: Plan shows Model-Element",
+        "instantiation": ["auto"],
+        "revision": 1,
+        "changedAt": "2016-05-26T08:59:00+02:00",
+        "subjectTypes": ["OT-Pln"],
+        "objectTypes": ["OT-Act", "OT-Sta", "OT-Evt"]
+    }],
+    "hierarchyTypes": [{
+        "id": "ST-ACProject",
+        "title": "SpecIF:Hierarchy",
+        "description": "Root node of a specification (outline).",
+        "propertyTypes": [{
+            "id": "AT-ACProject-Name",
+            "title": "dcterms:title",
+            "dataType": "DT-ShortString",
+            "revision": 1,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }, {
+            "id": "AT-ACProject-Text",
+            "title": "dcterms:description",
+            "dataType": "DT-FormattedText",
+            "revision": 1,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }],
+        "revision": 1,
+        "changedAt": "2016-05-26T08:59:00+02:00"
+    }],
+    "resources": [{
+        "id": "Fld-59c8a7730000bca80137509a49b1218b-info",
+        "title": "Project Information",
+        "properties": [{
+            "title": "dcterms:title",
+            "propertyType": "AT-Fld-Name",
+            "value": "Project Information"
+        }, {
+            "title": "dcterms:description",
+            "propertyType": "AT-Fld-Text",
+            "value": "<div><p> <object data=\"http://adesso.de\" ><object data=\"Logo-adesso.png\" type=\"image/png\" />http://adesso.de</object></p><p> <br /><br /> <br /></p><p> This specification method integrates and represents:</p><ul> <li> processes, system composition and requirements (dynamic, static and detail views) </li> <li> mechanic, electric and software components with their interfaces. </li></ul><p> It is important to understand, that all plans (diagrams) are views of a common system engineering model, sometimes called 'system repository'. Thus, consistency is always maintained.</p><p> The model elements are connected with relations, most of which are defined by positioning graph elements. For example, if a system component is drawn within another, a relationship 'contains' is created in the logic representation of the engineering model. Other relations, such as a system component 'complies-with' a requirement are created manually.</p><p> Also, the documents are generated from the system engineering model. The ordering is in most projects (it can be rearranged, however, if appropriate):</p><ul> <li> All plans </li> <li> A glossary with descriptions of all model elements appearing on one or more plans </li> <li> A hierarchically ordered list of requirements </li> <li> A list of open issues. </li></ul><p> Please note that plans list related model elements and model elements list related requirements .. and vice versa. Active hyper-links are used, so that it is easy to jump between related model elements.</p><p> Stakeholders:</p><table class=\"stdInlineWithBorder\"> <tbody> <tr> <th> Name </th> <th> Organisation </th> <th> Telephone </th> <th> Email </th> </tr> <tr> <td> Vorname Nachname </td> <td> Hersteller AG </td> <td> </td> <td> </td> </tr> </tbody></table><p> <br /></p><p> Legend:</p><p> To distinguish their type, element names are preceded by one of the following symbols:</p><table class=\"stdInlineWithBorder\"> <tbody> <tr> <td> ▣ </td> <td> Plan </td> <td> A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition. </td> </tr> <tr> <td> ■ </td> <td> Actor (Role, Function) </td> <td> An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role. </td> </tr> <tr> <td> ● </td> <td> State (Information) </td> <td> A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape. </td> </tr> <tr> <td> ♦ </td> <td> Event </td> <td> An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive. </td> </tr> <tr> <td> ✶ </td> <td> Feature </td> <td> A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition. </td> </tr> <tr> <td> ↯ </td> <td> Requirement </td> <td> A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform. </td> </tr> </tbody></table><p class=\"sceditor-nlf\"> <br /></p></div>"
+        }],
+        "revision": 237,
+        "changedAt": "2017-10-30T09:56:24+01:00",
+        "changedBy": "od",
+        "resourceType": "OT-Fld"
+    }, {
+        "id": "Fld-5a5f54090000bca801375b04a668f1a7",
+        "title": "System Composition",
+        "properties": [{
+            "title": "dcterms:title",
+            "propertyType": "AT-Fld-Name",
+            "value": "System Composition"
+        }, {
+            "title": "dcterms:description",
+            "propertyType": "AT-Fld-Text",
+            "value": "<div><p>.. showing the system and its composition of modules (at a higher level) and components (at a lower level). The relevant interfaces between the disciplines mechanical, electrical and software engineering are shown.</p> </div>"
+        }],
+        "revision": 13,
+        "changedAt": "2017-06-19T20:13:02+02:00",
+        "changedBy": "od",
+        "resourceType": "OT-Fld"
+    }, {
+        "id": "Fld-5af3154d0000bca801379748537d7388",
+        "title": "Scenarios",
+        "properties": [{
+            "title": "dcterms:title",
+            "propertyType": "AT-Fld-Name",
+            "value": "Scenarios"
+        }, {
+            "title": "dcterms:description",
+            "propertyType": "AT-Fld-Text",
+            "value": "<div><p>.. showing the behavioral aspects of system design, both from external user perspective ('black box') and from internal perspective ('white box').</p> </div>"
+        }],
+        "revision": 13,
+        "changedAt": "2017-06-19T20:13:02+02:00",
+        "changedBy": "od",
+        "resourceType": "OT-Fld"
+    }, {
+        "id": "Fld-5b6a99f10000bca80137b78cda65fc07",
+        "title": "Dimming",
+        "properties": [{
+            "title": "dcterms:title",
+            "propertyType": "AT-Fld-Name",
+            "value": "Dimming"
+        }, {
+            "title": "dcterms:description",
+            "propertyType": "AT-Fld-Text",
+            "value": "<div> </div>"
+        }],
+        "revision": 20,
+        "changedAt": "2017-06-19T20:13:04+02:00",
+        "changedBy": "od",
+        "resourceType": "OT-Fld"
+    }, {
+        "id": "Pln-5a4755dd0000bca801375293a62c90a8",
+        "title": "SmartHome System",
+        "properties": [{
+            "title": "dcterms:title",
+            "propertyType": "AT-Pln-Name",
+            "value": "SmartHome System"
+        }, {
+            "title": "dcterms:description",
+            "propertyType": "AT-Pln-Text",
+            "value": "<div><p> The Smart-Home-System consists of sensors on the left side, the controller in the middle and the actuators on the right side. </p><p class=\"inline-label\"> Model View: </p><div class=\"forImage\" style=\"max-width: 600px;\"> <object data=\"files_and_images/5a4755dd0000bca801375293a62c90a8.svg\" type=\"image/svg+xml\" >files_and_images\\5a4755dd0000bca801375293a62c90a8.svg</object></div></div>"
+        }, {
+            "title": "SpecIF:Notation",
+            "propertyType": "AT-Pln-Notation",
+            "value": "FMC Block Diagram"
+        }, {
+            "title": "Status",
+            "propertyType": "AT-Pln-status",
+            "value": "V-Status-2"
+        }],
+        "revision": 19,
+        "changedAt": "2017-06-19T20:13:03+02:00",
+        "changedBy": "od",
+        "resourceType": "OT-Pln"
+    }, {
+        "id": "Pln-606e76c70000bca801376ec3133a1181",
+        "title": "User Activity",
+        "properties": [{
+            "title": "dcterms:title",
+            "propertyType": "AT-Pln-Name",
+            "value": "User Activity"
+        }, {
+            "title": "dcterms:description",
+            "propertyType": "AT-Pln-Text",
+            "value": "<div><p> This shows the defined sequences of manual operation to activate the device. </p><p class=\"inline-label\"> Model View: </p><div class=\"forImage\" style=\"max-width: 600px;\" > <object data=\"files_and_images/606e76c70000bca801376ec3133a1181.svg\" type=\"image/svg+xml\" >files_and_images\\606e76c70000bca801376ec3133a1181.svg</object></div></div>"
+        }, {
+            "title": "SpecIF:Notation",
+            "propertyType": "AT-Pln-Notation",
+            "value": "BPMN Process Model"
+        }, {
+            "title": "Status",
+            "propertyType": "AT-Pln-status",
+            "value": "V-Status-3"
+        }],
+        "revision": 20,
+        "changedAt": "2017-06-19T20:13:04+02:00",
+        "changedBy": "od",
+        "resourceType": "OT-Pln"
+    }, {
+        "id": "MEl-5bd6bd890000bca8013739588a3f43d6",
+        "title": "Bulb",
+        "properties": [{
+            "title": "dcterms:title",
+            "propertyType": "AT-Act-Name",
+            "value": "Bulb"
+        }, {
+            "title": "dcterms:description",
+            "propertyType": "AT-Act-Text",
+            "value": "<div><p>Dimmable candescent light-bulb 230V.</p></div>"
+        }],
+        "revision": 238,
+        "changedAt": "2017-11-11T16:16:13+01:00",
+        "changedBy": "od",
+        "resourceType": "OT-Act"
+    }, {
+        "id": "MEl-5a4dd77b0000bca8013736c6912ad291",
+        "title": "down",
+        "properties": [{
+            "title": "dcterms:title",
+            "propertyType": "AT-Sta-Name",
+            "value": "down"
+        }, {
+            "title": "dcterms:description",
+            "propertyType": "AT-Sta-Text",
+            "value": "<div><p>The button to drive down the dimmer, shading or similar devices.</p> </div>"
+        }],
+        "revision": 61,
+        "changedAt": "2017-06-19T20:13:22+02:00",
+        "changedBy": "od",
+        "resourceType": "OT-Sta"
+    }, {
+        "id": "Fld-59c8a7730000bca80137509a49b1218b",
+        "title": "Parts List",
+        "properties": [{
+            "title": "dcterms:title",
+            "propertyType": "AT-Fld-Name",
+            "value": "Parts List"
+        }, {
+            "title": "dcterms:description",
+            "propertyType": "AT-Fld-Text",
+            "value": "<div>This Parts List has been automatically generated from the model. </div>"
+        }],
+        "revision": 17,
+        "changedAt": "2017-06-19T20:13:02+02:00",
+        "changedBy": "od",
+        "resourceType": "OT-Fld"
+    }],
+    "statements": [{
+        "id": "RVis-Pln-5a4755dd0000bca801375293a62c90a8-MEl-5bd6bd890000bca8013739588a3f43d6",
+        "title": "SpecIF:shows",
+        "revision": 93,
+        "changedAt": "2017-06-19T20:13:33+02:00",
+        "changedBy": "od",
+        "statementType": "RT-Visibility",
+        "subject": "Pln-5a4755dd0000bca801375293a62c90a8",
+        "object": "MEl-5bd6bd890000bca8013739588a3f43d6"
+    }, {
+        "id": "RVis-Pln-5a4755dd0000bca801375293a62c90a8-MEl-5a4dd77b0000bca8013736c6912ad291",
+        "title": "SpecIF:shows",
+        "revision": 93,
+        "changedAt": "2017-06-19T20:13:33+02:00",
+        "changedBy": "od",
+        "statementType": "RT-Visibility",
+        "subject": "Pln-5a4755dd0000bca801375293a62c90a8",
+        "object": "MEl-5a4dd77b0000bca8013736c6912ad291"
+    }],
+    "hierarchies": [{
+        "id": "SP-59c8a7730000bca80137509a49b1218b",
+		"title": "Test (schema 0-10-3) NOK-4",
+		"description": "double id in enumerated values of dataType[3].",
+        "revision": 231,
+        "changedAt": "2017-06-19T20:14:20+02:00",
+        "hierarchyType": "ST-ACProject",
+        "nodes": [{
+            "id": "SH-Fld-5a5f54090000bca801375b04a668f1a7",
+            "resource": "Fld-5a5f54090000bca801375b04a668f1a7",
+            "nodes": [{
+                "id": "SH-Pln-5a4755dd0000bca801375293a62c90a8",
+                "resource": "Pln-5a4755dd0000bca801375293a62c90a8",
+                "revision": 231,
+                "changedAt": "2017-06-19T20:14:47+02:00"
+            }],
+            "revision": 231,
+            "changedAt": "2017-06-19T20:14:47+02:00"
+        }, {
+            "id": "SH-Fld-5af3154d0000bca801379748537d7388",
+            "resource": "Fld-5af3154d0000bca801379748537d7388",
+            "nodes": [{
+                "id": "SH-Fld-5b6a99f10000bca80137b78cda65fc07",
+                "resource": "Fld-5b6a99f10000bca80137b78cda65fc07",
+                "nodes": [{
+                    "id": "SH-Pln-606e76c70000bca801376ec3133a1181",
+                    "resource": "Pln-606e76c70000bca801376ec3133a1181",
+                    "revision": 231,
+                    "changedAt": "2017-06-19T20:14:46+02:00"
+                }],
+                "revision": 231,
+                "changedAt": "2017-06-19T20:14:46+02:00"
+            }],
+            "revision": 231,
+            "changedAt": "2017-06-19T20:14:46+02:00"
+        }, {
+            "id": "SH-Fld-59c8a7730000bca80137509a49b1218b",
+            "resource": "Fld-59c8a7730000bca80137509a49b1218b",
+            "nodes": [{
+                "id": "SH-MEl-5bd6bd890000bca8013739588a3f43d6-1",
+                "resource": "MEl-5bd6bd890000bca8013739588a3f43d6",
+                "revision": 231,
+                "changedAt": "2017-06-19T20:14:20+02:00"
+            }, {
+				"id": "SH-MEl-5a4dd77b0000bca8013736c6912ad291-44",
+				"resource": "MEl-5a4dd77b0000bca8013736c6912ad291",
+				"revision": 231,
+				"changedAt": "2017-06-19T20:14:21+02:00"
+			}],
+			"revision": 231,
+			"changedAt": "2017-06-19T20:14:20+02:00"
+        }]
+    }],
+    "files": []
+}
