@@ -78,7 +78,7 @@
           },
           "multiple": {
             "type": "boolean",
-            "description": "Optional use by a propertyType with dataType 'xs:enumeration'. Indicates whether multiple values can be chosen. If omitted, the 'multiple' property of the dataType applies; by default the value is 'false'."
+            "description": "Optional use by a propertyClass with dataType 'xs:enumeration'. Indicates whether multiple values can be chosen. If omitted, the 'multiple' property of the dataType applies; by default the value is 'false'."
           },
           "revision": {
             "$ref": "#/definitions/revision"
@@ -91,7 +91,7 @@
       }
     },
     "properties": {
-      "description": "A property value for a resource, statement or hierarchy.",
+      "description": "A property value of a resource, statement or hierarchy.",
       "type": "array",
       "items": {
         "type": "object",
@@ -100,7 +100,8 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "type": "string"
+            "type": "string",
+			"description": "The label; if missing, the title of the property's class is applied."
           },
           "description": {
             "type": "string"
