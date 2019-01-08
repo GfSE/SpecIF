@@ -18,13 +18,13 @@ function checkSchema( schema, data ) {
 	let valid = validate(data);
 	
 	return valid?{ status: 0, statusText: 'SpecIF schema has been checked successfully!' }
-			:{ status: 901, statusText: 'SpecIF schema is violated', responseText: ajv.errorsText(validate.errors) }
+			:{ status: 901, statusText: 'SpecIF schema is violated', responseType: 'text', responseText: ajv.errorsText(validate.errors) }
 }
 function checkConstraints(data) {
 	"use strict";
 	// Check the constraints of the concrete values in 'data'.
 	// SpecIF-Schema v0.10.x applies, so there are no items with multiple revisions.
-	// The return code uses properties similar to xhr, namely {status:900,statusText:"abc",responseText:"xyz"}
+	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseType: 'text', responseText:"xyz"}
 	// ToDo: localize text and take it from language files.
 
 	if( data.specifVersion.indexOf( '0.9.' )>-1 ) 
@@ -115,7 +115,7 @@ function checkConstraints(data) {
 	};
 
 	return errL.length<1?{ status: 0, statusText: 'SpecIF constraints have been checked successfully!' }
-			:{ status: 902, statusText: 'SpecIF constraints are violated', responseText: errorsText(errL) };
+			:{ status: 902, statusText: 'SpecIF constraints are violated', responseType: 'text', responseText: errorsText(errL) };
 
 	// The checking routines:
 	function checkUniqueIds(iE) {

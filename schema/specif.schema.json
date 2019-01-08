@@ -1,7 +1,7 @@
 {
-  "id": "http://specif.de/v0.10.4/schema#",
+  "id": "http://specif.de/v0.10.5/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "JSON-Schema for SpecIF v0.10.4",
+  "title": "JSON-Schema for SpecIF v0.10.5",
   "description": "SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.",
   "definitions": {
 	"id": {
@@ -15,7 +15,7 @@
 	  "pattern": "^(\\d{4}(?!\\d{2}\\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
 	},
 	"icon": {
-	  "description": "A symbol for display as a prefix to titles; applicable to the instances of the class where it is defined. Can be any HTML-encoded character or a string with length 1..7 beginning with a certain special character.",
+	  "description": "A symbol for display as a prefix to titles; applicable to all instances of the class where it is defined. Is usually a HTML-encoded UTF-8 symbol.",
       "type": "string"
 	},
 	"instantiation": {
@@ -398,7 +398,7 @@
             }
           },
           "additionalProperties": false,
-          "required": [ "id", "title", "type", "values", "changedAt" ]
+          "required": [ "id", "title", "type", "changedAt" ]
         }]	
       }
     },
@@ -568,7 +568,7 @@
       }
     },
     "statements": {
-      "description": "Subject-predicate-Object statements, where subject and object are resources. In other terms, statements are relations between two resources building a semantic net.",
+      "description": "Subject-predicate-Object statements, where subject and object are resources. In other terms, statements are directed relations between two resources building a semantic net.",
       "type": "array",
       "items": {
         "type": "object",
