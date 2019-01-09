@@ -145,7 +145,7 @@ function checkConstraints( data ) {
 			// return 'null', only if all elements of L are not contained in allIds,
 			// return the first id, which is contained in allIds (hence a duplicate):
 			// Data arriving here has passed the schema checking, so there is a valid id where it is expected.
-			var rc=null;
+			var rc=null, e1=null;
 			for( var i=L.length-1;i>-1;i-- ) {
 				// it has been checked by schema that valid identifiers are present where mandatory;
 				// so we can skip the checking for duplicates, if there is no id, e.g. in case of properties:
