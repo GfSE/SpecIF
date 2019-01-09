@@ -130,7 +130,7 @@ function checkConstraints( data ) {
 		if( dK ) return {status:911, statusText: "dataType "+dK.id+" with revision "+dK.revision+" is not unique"};
 		dK = duplicateKey(iE[rClasses]);
 		if( dK ) return {status:912, statusText: rClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
-		dK = duplicateKey(iE[sClasses);
+		dK = duplicateKey(iE[sClasses]);
 		if( dK ) return {status:913, statusText: sClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
 		dK = duplicateKey(iE[hClasses]);
 		if( dK ) return {status:914, statusText: hClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
@@ -270,10 +270,10 @@ function checkConstraints( data ) {
 		// Similarly for "object".
 		// (It has been checked before that any "resource" is indeed of type "resourceClass").
 		for( var i=sL.length-1;i>-1;i-- ) {
-			if(indexByKey(rL, sL[i][sub])<0) 
+			if( !existsByKey(rL, sL[i][sub]) ) 
 
 				return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
-			if(indexByKey(rL, sL[i][obj])<0) 
+			if( !existsByKey(rL, sL[i][obj]) ) 
 
 				return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
 //			if( sL[i][sub] == sL[i][obj] ) return {status:90X, statusText: ""}
