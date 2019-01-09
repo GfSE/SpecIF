@@ -1,7 +1,7 @@
 {
-  "id": "http://specif.de/v0.11.1/schema#",
+  "id": "http://specif.de/v0.11.2/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "JSON-Schema for SpecIF v0.11.1",
+  "title": "JSON-Schema for SpecIF v0.11.2",
   "description": "SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.",
   "definitions": {
 	"id": {
@@ -103,8 +103,8 @@
         "required": [ "id", "resource" ]
       }
     },
-    "propertyTypes": {
-      "description": "Type definition of a property for resources, statements or hierarchies. Is a sub-element of the respective resourceType, statementType or hierarchyType. If no revision or change information is specified, the respective values of the parent element apply.",
+    "propertyClasses": {
+      "description": "ClassType definition of a property for resources, statements or hierarchies. Is a sub-element of the respective resourceClass, statementClass or hierarchyClass. If no revision or change information is specified, the respective values of the parent element apply.",
       "type": "array",
       "items": {
         "type": "object",
@@ -123,7 +123,7 @@
           },
           "multiple": {
             "type": "boolean",
-            "description": "Optional use by a propertyType with dataType 'xs:enumeration'. Indicates whether multiple values can be chosen. If omitted, the 'multiple' property of the dataType applies; by default the value is 'false'."
+            "description": "Optional use by a propertyClass with dataType 'xs:enumeration'. Indicates whether multiple values can be chosen. If omitted, the 'multiple' property of the dataType applies; by default the value is 'false'."
           },
           "revision": {
             "$ref": "#/definitions/revision"
@@ -145,12 +145,13 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "type": "string"
+            "type": "string",
+			"description": "The label; if missing, the title of the property's class is applied."
           },
           "description": {
             "type": "string"
           },
-          "propertyType": {
+          "class": {
             "$ref": "#/definitions/key"
           },
           "value": {
@@ -163,7 +164,7 @@
             "$ref": "#/definitions/dateTime"
           }
         },
-        "required": [ "propertyType", "value" ]
+        "required": [ "class", "value" ]
       }
     }
   },
@@ -242,7 +243,7 @@
       "required": [ "email" ]
     },
     "dataTypes": {
-      "description": "The base data types for use by property type definitions.",
+      "description": "The base data types for use by property class definitions.",
       "type": "array",
       "minItems": 1,
       "items": {
@@ -367,7 +368,7 @@
           "properties": {
             "type": {
               "type": "string",
-              "title": "Data-type",
+              "title": "Data-type 'String' or 'Formatted Text'",
               "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ resp. https://www.w3.org/TR/xhtml1/ applies.",
               "enum": [ "xs:string", "xhtml" ]
             },
@@ -403,7 +404,7 @@
           "properties": {
             "type": {
               "type": "string",
-              "title": "Data-type",
+              "title": "Data-type 'Enumeration'",
               "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "enum": [ "xs:enumeration" ]
             },
@@ -448,12 +449,12 @@
             }
           },
           "additionalProperties": false,
-          "required": [ "id", "title", "type", "values", "changedAt" ]
+          "required": [ "id", "title", "type", "changedAt" ]
         }]	
       }
     },
-    "resourceTypes": {
-      "description": "The type definitions for resources.",
+    "resourceClasses": {
+      "description": "The class definitions for resources.",
       "type": "array",
       "items": {
         "type": "object",
@@ -476,8 +477,8 @@
           "instantiation": {
             "$ref": "#/definitions/instantiation"
           },
-          "propertyTypes": {
-            "$ref": "#/definitions/propertyTypes"
+          "propertyClasses": {
+            "$ref": "#/definitions/propertyClasses"
           },
           "revision": {
             "$ref": "#/definitions/revision"
@@ -489,11 +490,11 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "propertyTypes", "changedAt" ]
+        "required": [ "id", "title", "propertyClasses", "changedAt" ]
       }
     },
-    "statementTypes": {
-      "description": "The type definitions for statements in subject-predicate-object statements, where subject and object are resources.",
+    "statementClasses": {
+      "description": "The class definitions for statements in subject-predicate-object statements, where subject and object are resources.",
       "type": "array",
       "items": {
         "type": "object",
@@ -513,28 +514,28 @@
           "instantiation": {
             "$ref": "#/definitions/instantiation"
           },
-          "subjectTypes": {
+          "subjectClasses": {
             "type": "array",
-            "title": "Eligible Subject Types",
-            "description": "A collection of type id's of eligible resource types; if missing, all resource types are eligible",
+			"title": "Eligible Resource Classes as Subject",
+			"description": "A collection of id's of eligible resource classes; if missing, all resource classes are eligible",
             "minItems": 1,
             "uniqueItems": true,
             "items": {
               "$ref": "#/definitions/key"
             }
           },
-          "objectTypes": {
+          "objectClasses": {
             "type": "array",
-            "title": "Eligible Object Types",
-            "description": "A collection of type id's of eligible resource types; if missing, all resource types are eligible",
+			"title": "Eligible Resource Classes as Object",
+			"description": "A collection of id's of eligible resource classes; if missing, all resource classes are eligible",
             "minItems": 1,
             "uniqueItems": true,
             "items": {
               "$ref": "#/definitions/key"
             }
           },
-          "propertyTypes": {
-            "$ref": "#/definitions/propertyTypes"
+          "propertyClasses": {
+            "$ref": "#/definitions/propertyClasses"
           },
           "revision": {
             "$ref": "#/definitions/revision"
@@ -549,7 +550,7 @@
         "required": [ "id", "title", "changedAt" ]
       }
     },
-    "hierarchyTypes": {
+    "hierarchyClasses": {
       "description": "The type definitions for hierarchy roots.",
       "type": "array",
       "items": {
@@ -570,8 +571,8 @@
           "instantiation": {
             "$ref": "#/definitions/instantiation"
           },
-          "propertyTypes": {
-            "$ref": "#/definitions/propertyTypes"
+          "propertyClasses": {
+            "$ref": "#/definitions/propertyClasses"
           },
           "revision": {
 			"$ref": "#/definitions/revision"
@@ -598,7 +599,7 @@
           "title": {
             "type": "string"
           },
-          "resourceType": {
+          "class": {
             "$ref": "#/definitions/key"
           },
           "properties": {
@@ -614,11 +615,11 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "resourceType", "properties", "changedAt" ]
+        "required": [ "id", "title", "class", "properties", "changedAt" ]
       }
     },
     "statements": {
-      "description": "Subject-predicate-Object statements, where subject and object are resources. In other terms, statements are relations between two resources building a semantic net.",
+      "description": "Subject-predicate-Object statements, where subject and object are resources. In other terms, statements are directed relations between two resources building a semantic net.",
       "type": "array",
       "items": {
         "type": "object",
@@ -629,7 +630,7 @@
           "title": {
             "type": "string"
           },
-          "statementType": {
+          "class": {
             "$ref": "#/definitions/key"
           },
           "subject": {
@@ -651,7 +652,7 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "statementType", "subject", "object", "changedAt" ]
+        "required": [ "id", "title", "class", "subject", "object", "changedAt" ]
       }
     },
     "hierarchies": {
@@ -669,7 +670,7 @@
           "description": {
             "type": "string"
           },
-          "hierarchyType": {
+          "class": {
             "$ref": "#/definitions/key"
           },
           "properties": {
@@ -688,7 +689,7 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "hierarchyType", "nodes", "changedAt" ]
+        "required": [ "id", "title", "class", "nodes", "changedAt" ]
       }
     },
     "files": {
@@ -701,9 +702,9 @@
     "title",
     "specifVersion",
     "dataTypes",
-    "resourceTypes",
-    "statementTypes",
-    "hierarchyTypes",
+    "resourceClasses",
+    "statementClasses",
+    "hierarchyClasses",
     "resources",
     "statements",
     "hierarchies"
