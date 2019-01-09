@@ -1,15 +1,15 @@
 /*	Schema and constraint checking for native SpecIF data in JSON format. 
 	Requires: ajv 4.8 or higher.
 	License: Apache 2.0 (http://www.apache.org/licenses/)
-	Author: se@enso-managers.com, enso managers gmbh, Berlin (http://enso-managers.de)
+	Author: se@enso-managers.de, enso managers gmbh, Berlin (http://www.enso-managers.de)
 	We appreciate any correction, comment or contribution here on GitHub or via e-mail to support@reqif.de            
 */
 function checkSchema( schema, data ) {
 	"use strict";
 	// Check data using the supplied schema.
-	// The return code uses properties similar to xhr, namely {status:900,statusText:"abc",responseText:"xyz"}
+	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseText:"xyz"}
 	// Requires: https://github.com/epoberezkin/ajv/releases/tag/4.8.0 or later 
-	// ToDo: localize, see https://github.com/epoberezkin/ajv-i18n 
+	// ToDo: localize messages, see https://github.com/epoberezkin/ajv-i18n 
 
 	let ajv = Ajv({allErrors: true});
 	let validate = ajv.compile(schema);
@@ -20,12 +20,12 @@ function checkSchema( schema, data ) {
 	return valid?{ status: 0, statusText: 'SpecIF schema has been checked successfully!' }
 			:{ status: 901, statusText: 'SpecIF schema is violated', responseType: 'text', responseText: ajv.errorsText(validate.errors) }
 }
-function checkConstraints(data) {
+function checkConstraints( data ) {
 	"use strict";
 	// Check the constraints of the concrete values in 'data'.
 	// SpecIF-Schema v0.10.x applies, so there are no items with multiple revisions.
-	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseType: 'text', responseText:"xyz"}
-	// ToDo: localize text and take it from language files.
+	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseText:"xyz"}
+	// ToDo: localize messages and provide them by call parameter.
 
 	if( data.specifVersion.indexOf( '0.9.' )>-1 ) 
 		return { status: 903, statusText: 'SpecIF version 0.9.x is not any more supported!' };
@@ -75,28 +75,28 @@ function checkConstraints(data) {
 	rc = checkDataTypes( data.dataTypes );
 	if( rc.status>0 ) errL.push(rc);
 	// in case of resources, the value of "class" must be the id of a member of "resourceClasses":
-	rc = checkTypes( data[rClasses], data.resources, rClass );
+	rc = checkClasses( data[rClasses], data.resources, rClass );
 	if( rc.status>0 ) errL.push(rc);
 	// in case of statements, the value of "class" must be the id of a member of "statementClasses":
-	rc = checkTypes( data[sClasses], data.statements, sClass );
+	rc = checkClasses( data[sClasses], data.statements, sClass );
 	if( rc.status>0 ) errL.push(rc);
 	// in case of hierarchies, the value of "class" must be the id of a member of "hierarchyClasses":
-	rc = checkTypes( data[hClasses], data.hierarchies, hClass );
+	rc = checkClasses( data[hClasses], data.hierarchies, hClass );
 	if( rc.status>0 ) errL.push(rc);
 
 	// A propertyType's "dataType" must be the id of a member of "dataTypes":
-	rc = checkPropertyTypes( data.dataTypes, data[rClasses] );
+	rc = checkPropertyClasses( data.dataTypes, data[rClasses] );
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkPropertyTypes( data.dataTypes, data[sClasses] );
+	rc = checkPropertyClasses( data.dataTypes, data[sClasses] );
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkPropertyTypes( data.dataTypes, data[hClasses] );
+	rc = checkPropertyClasses( data.dataTypes, data[hClasses] );
 	if( rc.status>0 ) errL.push(rc);
 
 	// statementClass' subjectClasses and objectClasses must be resourceClass ids:
-	rc = checkStatementTypes( data[rClasses], data[sClasses] );
+	rc = checkStatementClasses( data[rClasses], data[sClasses] );
 	if( rc.status>0 ) errL.push(rc);
 
-	// property values ("content") must fit the respective class' range
+	// property values ("content") must fit the respective class' range:
 	rc = checkProperties( data[rClasses], data.resources, rClass );
 	if( rc.status>0 ) errL.push(rc);
 	rc = checkProperties( data[sClasses], data.statements, sClass );
@@ -104,11 +104,11 @@ function checkConstraints(data) {
 	rc = checkProperties( data[hClasses], data.hierarchies, hClass );
 	if( rc.status>0 ) errL.push(rc);
 
-	// statementClass' subject and object must be resource ids:
+	// statement's subject and object must be resource ids:
 	rc = checkStatements( data.resources, data.statements );
 	if( rc.status>0 ) errL.push(rc);
 
-	// A hierarchy node's "resource" must be a resource id:
+	// A hierarchy node's "resource" must be the id of a member of "resources":
 	for( var h=data.hierarchies.length-1; h>-1; h--) {
 		rc = checkNodes( data.resources, data.hierarchies[h].nodes );
 		if( rc.status>0 ) { errL.push(rc); break }
@@ -124,11 +124,11 @@ function checkConstraints(data) {
 			dId = duplicateId(iE.dataTypes);
 		if( dId ) return {status:911, statusText: "dataType identifier '"+dId+"' is not unique"};
 		dId = duplicateId(iE[rClasses]);
-		if( dId ) return {status:912, statusText: rClass+" or property-class identifier '"+dId+"' is not unique"};
+		if( dId ) return {status:912, statusText: rClass+" or propertyClass identifier '"+dId+"' is not unique"};
 		dId = duplicateId(iE[sClasses]);
-		if( dId ) return {status:913, statusText: sClass+" or property-class identifier '"+dId+"' is not unique"};
+		if( dId ) return {status:913, statusText: sClass+" or propertyClass identifier '"+dId+"' is not unique"};
 		dId = duplicateId(iE[hClasses]);
-		if( dId ) return {status:914, statusText: hClass+" or property-class identifier '"+dId+"' is not unique"};
+		if( dId ) return {status:914, statusText: hClass+" or propertyClass identifier '"+dId+"' is not unique"};
 		dId = duplicateId(iE.resources);
 		if( dId ) return {status:915, statusText: "resource identifier '"+dId+"' is not unique"};
 		dId = duplicateId(iE.statements);
@@ -137,35 +137,45 @@ function checkConstraints(data) {
 		if( dId ) return {status:917, statusText: "hierarchy identifier '"+dId+"' is not unique"};
 		dId = duplicateId(iE.files);
 		if( dId ) return {status:918, statusText: "file identifier '"+dId+"' is not unique"};
-		return {status:0, statusText: 'identifiers are unique'};
+		return {status:0, statusText: 'all identifiers are unique'};
 
 		function duplicateId(L) {
-			// add every checked Id to allIds,
+			if( !L || L.length<1 ) return null;
+			// Add every checked Id to allIds,
 			// return 'null', only if all elements of L are not contained in allIds,
 			// return the first id, which is contained in allIds (hence a duplicate):
-			if( !L || !L.length ) return null;
+			// Data arriving here has passed the schema checking, so there is a valid id where it is expected.
 			var rc=null;
 			for( var i=L.length-1;i>-1;i-- ) {
+				// it has been checked by schema that valid identifiers are present where mandatory;
+				// so we can skip the checking for duplicates, if there is no id, e.g. in case of properties:
+				if( L[i].id==undefined ) continue;
+				// But if it is defined, it must be unique:
+				e1 = L[i]; 
 				// check the element's id:
-				if( allIds.indexOf(L[i].id)>-1 ) return L[i].id;
+				if( allIds.indexOf(e1.id)>-1 ) return e1.id;
 				// in case of an enumerated dataType, check the values' identifiers, as well:
-				if( L[i].values ) {
-					rc = duplicateId(L[i].values);
+				if( e1.values ) {
+					rc = duplicateId(e1.values);
 					if( rc ) return rc
 				};
 				// check the identifiers of propertyClasses, as well:
-				// (the instance's properties do not have an id ...)
-				if( L[i][pClasses] ) {
-					rc = duplicateId(L[i][pClasses]);
+				if( e1[pClasses] ) {
+					rc = duplicateId(e1[pClasses]);
+					if( rc ) return rc
+				};
+				// the instance's properties may not have an id ...
+				if( e1.properties ) {
+					rc = duplicateId(e1.properties);
 					if( rc ) return rc
 				};
 				// check the hierarchy's nodes recursively:
-				if( L[i].nodes ) {
+				if( e1.nodes ) {
 					rc = duplicateId(L[i].nodes);
 					if( rc ) return rc
 				}; 
 				// all is fine, but add the latest id to the list for the next checking loops:
-				allIds.push(L[i].id)
+				allIds.push(e1.id)
 			};
 			return null
 		}
@@ -190,48 +200,47 @@ function checkConstraints(data) {
 		};
 		return {status:0, statusText: "dataTypes are correct"}
 	}
-	function checkTypes(tL,iL,type) {  // type list, instance list
+	function checkClasses(cL,iL,type) {  // class list, instance list
 		// In case of resources, the value of "class" must be the id of a member of "resourceClasses". 
 		// Similarly for statements and hierarchies.
-		let tI=null;
 		for( var i=iL.length-1;i>-1;i-- ){
-			tI = indexById(tL, iL[i][type]);
-			if(tI<0) return {status:903, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+type }
+			if( indexById(cL, iL[i][type])<0 ) 
+				return {status:903, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+type }
 		};
 		return {status:0, statusText: "instance's "+type+"s reference valid types"}	
 	}
-	function checkPropertyTypes(dL,tL) {  // dataType list, type list
-		let pT=null, dT=null;
-		for( var i=tL.length-1;i>-1;i-- ){
-			if( tL[i][pClasses] ) {
-				for( var j=tL[i][pClasses].length-1;j>-1;j-- ) {
-					pT = tL[i][pClasses][j];
-					dT = itemById(dL,pT.dataType);
+	function checkPropertyClasses(dL,cL) {  // dataType list, class list
+		let pT=null;
+		for( var i=cL.length-1;i>-1;i-- ){
+			if( cL[i][pClasses] ) {
+				for( var j=cL[i][pClasses].length-1;j>-1;j-- ) {
+					pT = cL[i][pClasses][j];
 					// A propertyClass' "dataType" must be the id of a member of "dataTypes".
 					// .. this is also checked in checkProperties:
-					if( !dT ) return {status:904, statusText: "property-class with identifier '"+pT.id+"' must reference a valid dataType"};
+					if( indexById(dL,pT.dataType)<0 ) 
+						return {status:904, statusText: "propertyClass with identifier '"+pT.id+"' must reference a valid dataType"};
 					// If a propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
 				}
 			}
 		};
-		return {status:0, statusText: "property-classes reference valid dataTypes"}
+		return {status:0, statusText: "propertyClasses reference valid dataTypes"}
 	}
 
-	function checkStatementTypes(rTL,sTL) {	// resourceTypes, statementTypes
+	function checkStatementClasses(rCL,sCL) {	// resourceClasses, statementClasses
 		// All statementClass' "subjectClasses" must be the id of a member of "resourceClasses". 
 		// Similarly for "objectClasses".
-		for( var i=sTL.length-1;i>-1;i-- ){
-			if( !checkEls(rTL, sTL[i][subClasses]) ) return {status:906, statusText: subClasses+" of "+hClass+" with identifier '"+sTL[i].id+"' must reference a valid "+rClass };
-			if( !checkEls(rTL, sTL[i][objClasses]) ) return {status:907, statusText: objClasses+" of "+hClass+" with identifier '"+sTL[i].id+"' must reference a valid "+rClass }
+		for( var i=sCL.length-1;i>-1;i-- ){
+			if( !checkEls(rCL, sCL[i][subClasses]) ) return {status:906, statusText: subClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass };
+			if( !checkEls(rCL, sCL[i][objClasses]) ) return {status:907, statusText: objClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass }
 		};
-		return {status:0, statusText: "statement-class' "+subClasses+" and "+objClasses+" reference valid "+rClasses };
+		return {status:0, statusText: "statementClass' "+subClasses+" and "+objClasses+" reference valid "+rClasses };
 
-		function checkEls(rTL,tL) {
+		function checkEls(rCL,cL) {
 			// no subjectClasses resp. objectClasses means all defined resourceClasses are eligible:
-			if( tL ) { 
-				// each value in tL must be the id of a member of rTL:
-				for( var i=tL.length-1;i>-1;i-- ) {
-					if(indexById(rTL, tL[i])<0) return false
+			if( cL ) { 
+				// each value in cL must be the id of a member of rCL:
+				for( var i=cL.length-1;i>-1;i-- ) {
+					if(indexById(rCL, cL[i])<0) return false
 				}
 			};
 			return true
@@ -241,7 +250,7 @@ function checkConstraints(data) {
 		// A statement's "subject" must be the id of a member of "resources". 
 		// Similarly for "object".
 		// (It has been checked before that any "resource" is indeed of type "resourceClass").
-		for( var i=sL.length-1;i>-1;i-- ){
+		for( var i=sL.length-1;i>-1;i-- ) {
 			if(indexById(rL, sL[i][sub])<0) 
 				return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
 			if(indexById(rL, sL[i][obj])<0) 
@@ -250,12 +259,12 @@ function checkConstraints(data) {
 		};
 		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
 	}
-	function checkProperties(tL,iL,typ) {   // type list, instance list (resources, statements or hierarchies)
+	function checkProperties(cL,iL,typ) {   // class list, instance list (resources, statements or hierarchies)
 		let pT=null, dT=null, pV=null, iT=null;
 		if( iL ) {
 			for( var i=iL.length-1;i>-1;i-- ){
 				if( iL[i].properties ) {
-					iT = itemById(tL,iL[i][typ]); // the instance's type.
+					iT = itemById(cL,iL[i][typ]); // the instance's type.
 					// ToDo: error 919 is equal to 903, but there has been a case in which 919 has been raised. 
 					if( !iT ) return {status:919, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
 					for( var a=iL[i].properties.length-1;a>-1;a-- ){
@@ -268,7 +277,7 @@ function checkConstraints(data) {
 						if( pV ) {
 							// according to the schema, all property values are of type 'string', including boolean and numbers:
 							dT = itemById(data.dataTypes,pT.dataType);
-							if( !dT ) return {status:904, statusText: "property-class with identifier '"+pT.id+"' must reference a valid dataType"}; 
+							if( !dT ) return {status:904, statusText: "propertyClass with identifier '"+pT.id+"' must reference a valid dataType"}; 
 							switch(dT.type) {
 								case 'xhtml':
 								case 'xs:string': 
@@ -282,18 +291,20 @@ function checkConstraints(data) {
 									if( pV>dT.max ) return {status:924, statusText:"property of instance with identifier '"+iL[i].id+"': number must be smaller than max"}; 
 									break;
 								case 'xs:integer':
+									// according to the schema, all property values are of type 'string', including the numbers:
 									pV = parseInt( pV );
 									if( pV=='NaN' ) return {status:925, statusText:"property of instance with identifier '"+iL[i].id+"': invalid number"}; 
 									if( pV<dT.min ) return {status:923, statusText:"property of instance with identifier '"+iL[i].id+"': number must be larger than min"};
 									if( pV>dT.max ) return {status:924, statusText:"property of instance with identifier '"+iL[i].id+"': number must be smaller than max"}; 
 									break;
 								case 'xs:boolean':
+									// according to the schema, all property values are of type 'string', including boolean:
 									if( pV!='true' && pV!='false' ) return {status:925, statusText:"property of instance with identifier '"+iL[i].id+"': invalid boolean value"}; 
 									break;
 								case 'xs:enumeration':
 									var vL=pV.split(',');
-									// 'multiple' property at property-class supersedes 'multiple' at the dataType:
-									if( vL.length>1 && !(pT.multiple || (pT.multiple==undefined && dT.multiple)) ) // logic expression is equivalent to 'multipleChoice(attrType)' ... the function is not used to avoid a dependency.
+									// 'multiple' property at propertyClass supersedes 'multiple' at the dataType:
+									if( vL.length>1 && !(pT.multiple || (pT.multiple==undefined && dT.multiple)) ) // logic expression is equivalent to 'multipleChoice(propertyClass)' ... the function is not used to avoid a dependency.
 											return {status:926, statusText: "property of instance with identifier '"+iL[i].id+"': may not have more than one value"};
 									// enumerated values in properties must be defined in the dataType of the corresponding propertyType
 									for( var v=vL.length-1;v>-1;v-- ) {
@@ -310,13 +321,13 @@ function checkConstraints(data) {
 		};
 		return {status:0, statusText: "propertyValues lie within their type's value ranges"}
 	}
-	function checkNodes(L,nds) {
+	function checkNodes(rL,ndL) {	// resourceList, nodeList
 		// Any node's "resource" must be the id of a member of "resources". 
-		if( nds ) {
+		if( ndL ) {
 			var rc = null;
-			for( var i=nds.length-1;i>-1;i-- ){
-				if(indexById(L,nds[i].resource)<0) return {status:909, statusText: "hierarchy node with identifier '"+nds[i].id+"' must reference a valid resource"};	// check the node itself
-				rc = checkNodes(L,nds[i].nodes);	// check references of next hierarchy levels recursively
+			for( var i=ndL.length-1;i>-1;i-- ){
+				if(indexById(rL,ndL[i].resource)<0) return {status:909, statusText: "hierarchy node with identifier '"+ndL[i].id+"' must reference a valid resource"};	// check the node itself
+				rc = checkNodes(rL,ndL[i].nodes);	// check references of next hierarchy levels recursively
 				if(rc.status!=0) return rc	
 			}
 		};

@@ -201,7 +201,7 @@
           "properties": {
             "type": {
               "type": "string",
-              "title": "Data-type",
+              "title": "Data-type 'Boolean'",
               "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "enum": [ "xs:boolean", "xs:dateTime" ]
             },
@@ -231,7 +231,7 @@
           "properties": {
             "type": {
               "type": "string",
-              "title": "Data-type",
+              "title": "Data-type 'Integer'",
               "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "enum": [ "xs:integer" ]
             },
@@ -271,7 +271,7 @@
           "properties": {
             "type": {
               "type": "string",
-              "title": "Data-type",
+              "title": "Data-type 'Double'",
               "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "enum": [ "xs:double" ]
             },
@@ -317,7 +317,7 @@
           "properties": {
             "type": {
               "type": "string",
-              "title": "Data-type",
+              "title": "Data-type 'String' or 'Formatted Text'",
               "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ resp. https://www.w3.org/TR/xhtml1/ applies.",
               "enum": [ "xs:string", "xhtml" ]
             },
@@ -353,7 +353,7 @@
           "properties": {
             "type": {
               "type": "string",
-              "title": "Data-type",
+              "title": "Data-type 'Enumeration'",
               "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "enum": [ "xs:enumeration" ]
             },
