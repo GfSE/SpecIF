@@ -15,7 +15,7 @@ This branch details schema and constraints for 'fully-flegded' SpecIF. It is cha
 - For a simpler SpecIF schema without support for multiple revisions and without multi-language support, please consult the branch 'SpecIF Level-1' starting version 0.10.2.
 - All SpecIF data sets (containers) conforming with schema v0.10.2 and above also conform with SpecIF v0.11.1 and above.
 
-Thanks to Oliver Alt for the discussion about support for multiple revisions and multiple languages!
+Thanks to @oalt for the discussion about support for multiple revisions and multiple languages!
 
 ## Schema
 
