@@ -1,7 +1,7 @@
 {
-  "id": "http://specif.de/v0.10.5/schema#",
+  "id": "http://specif.de/v0.10.6/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "JSON-Schema for SpecIF v0.10.5",
+  "title": "JSON-Schema for SpecIF v0.10.6",
   "description": "SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.",
   "definitions": {
 	"id": {
@@ -56,38 +56,6 @@
           }
         },
         "required": [ "id", "resource" ]
-      }
-    },
-    "propertyClasses": {
-      "description": "Class definition of a property for resources, statements or hierarchies. Is a sub-element of the respective resourceClass, statementClass or hierarchyClass.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "$ref": "#/definitions/id"
-          },
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "dataType": {
-            "$ref": "#/definitions/id"
-          },
-          "multiple": {
-            "type": "boolean",
-            "description": "Optional use by a propertyClass with dataType 'xs:enumeration'. Indicates whether multiple values can be chosen. If omitted, the 'multiple' property of the dataType applies; by default the value is 'false'."
-          },
-          "revision": {
-            "$ref": "#/definitions/revision"
-          },
-          "changedAt": {
-            "$ref": "#/definitions/dateTime"
-          }
-        },
-        "required": [ "id", "dataType" ]
       }
     },
     "properties": {
@@ -402,6 +370,39 @@
         }]	
       }
     },
+    "propertyClasses": {
+      "description": "Class definition of a property for resources, statements or hierarchies. Is a sub-element of the respective resourceClass, statementClass or hierarchyClass.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/id"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "dataType": {
+            "$ref": "#/definitions/id"
+          },
+          "multiple": {
+            "type": "boolean",
+            "description": "Optional use by a propertyClass with dataType 'xs:enumeration'. Indicates whether multiple values can be chosen. If omitted, the 'multiple' property of the dataType applies; by default the value is 'false'."
+          },
+          "revision": {
+            "$ref": "#/definitions/revision"
+          },
+          "changedAt": {
+            "$ref": "#/definitions/dateTime"
+          }
+        },
+        "required": [ "id", "dataType" ]
+      }
+    },
     "resourceClasses": {
       "description": "The class definitions for resources.",
       "type": "array",
@@ -427,7 +428,13 @@
             "$ref": "#/definitions/instantiation"
           },
           "propertyClasses": {
-            "$ref": "#/definitions/propertyClasses"
+            "type": "array",
+			"description": "A collection of id's of eligible property classes",
+			"minItems": 1,
+			"uniqueItems": true,
+            "items": {
+              "$ref": "#/definitions/id"
+            }
           },
           "revision": {
 	        "$ref": "#/definitions/revision"
@@ -463,6 +470,15 @@
           "instantiation": {
             "$ref": "#/definitions/instantiation"
           },
+          "propertyClasses": {
+            "type": "array",
+			"description": "A collection of id's of eligible property classes",
+			"minItems": 0,
+			"uniqueItems": true,
+            "items": {
+              "$ref": "#/definitions/id"
+            }
+          },
           "subjectClasses": {
             "type": "array",
 			"title": "Eligible Resource Classes as Subject",
@@ -482,9 +498,6 @@
             "items": {
               "$ref": "#/definitions/id"
             }
-          },
-          "propertyClasses": {
-            "$ref": "#/definitions/propertyClasses"
           },
           "revision": {
 	        "$ref": "#/definitions/revision"
@@ -521,7 +534,13 @@
             "$ref": "#/definitions/instantiation"
           },
           "propertyClasses": {
-            "$ref": "#/definitions/propertyClasses"
+            "type": "array",
+			"description": "A collection of id's of eligible property classes",
+			"minItems": 0,
+			"uniqueItems": true,
+            "items": {
+              "$ref": "#/definitions/id"
+            }
           },
           "revision": {
 			"$ref": "#/definitions/revision"
@@ -651,6 +670,7 @@
     "title",
     "specifVersion",
     "dataTypes",
+    "propertyClasses",
     "resourceClasses",
     "statementClasses",
     "hierarchyClasses",
