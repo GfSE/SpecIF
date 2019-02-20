@@ -7,7 +7,7 @@
 function checkSchema( schema, data ) {
 	"use strict";
 	// Check data using the supplied schema.
-	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseText:"xyz"}
+	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseType:"text",responseText:"xyz"}
 	// Requires: https://github.com/epoberezkin/ajv/releases/tag/4.8.0 or later 
 	// ToDo: localize messages, see https://github.com/epoberezkin/ajv-i18n 
 
@@ -23,8 +23,9 @@ function checkSchema( schema, data ) {
 function checkConstraints( data ) {
 	"use strict";
 	// Check the constraints of the concrete values in 'data'.
-	// SpecIF-Schema v0.10.x applies, so there are no items with multiple revisions.
-	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseText:"xyz"}
+	// SpecIF-Schema v0.10.2 up until v0.10.6 is supported.
+	// With SpecIF-Schema v0.10.x there are no items with multiple revisions.
+	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseType:"text",responseText:"xyz"}
 	// ToDo: localize messages and provide them by call parameter.
 
 	if( data.specifVersion.indexOf( '0.9.' )>-1 ) 
@@ -84,7 +85,9 @@ function checkConstraints( data ) {
 	rc = checkClasses( data[hClasses], data.hierarchies, hClass );
 	if( rc.status>0 ) errL.push(rc);
 
-	// A propertyType's "dataType" must be the id of a member of "dataTypes":
+	// A propertyClass's "dataType" must be the id of a member of "dataTypes":
+	rc = checkPropertyClasses( data.dataTypes, [data] );			// propertyClasses at top level starting with v0.10.6
+	if( rc.status>0 ) errL.push(rc);
 	rc = checkPropertyClasses( data.dataTypes, data[rClasses] );
 	if( rc.status>0 ) errL.push(rc);
 	rc = checkPropertyClasses( data.dataTypes, data[sClasses] );
@@ -92,6 +95,9 @@ function checkConstraints( data ) {
 	rc = checkPropertyClasses( data.dataTypes, data[hClasses] );
 	if( rc.status>0 ) errL.push(rc);
 
+	// starting v0.10.6
+	// resourceClass', statementClass' and hierarchyClass' propertyClasses must must be propertyClass ids:
+	
 	// statementClass' subjectClasses and objectClasses must be resourceClass ids:
 	rc = checkStatementClasses( data[rClasses], data[sClasses] );
 	if( rc.status>0 ) errL.push(rc);
@@ -123,6 +129,8 @@ function checkConstraints( data ) {
 		let allIds=[],
 			dId = duplicateId(iE.dataTypes);
 		if( dId ) return {status:911, statusText: "dataType identifier '"+dId+"' is not unique"};
+		dId = duplicateId(iE.propertyClasses);		// starting with v0.10.6
+		if( dId ) return {status:910, statusText: pClass+" identifier '"+dId+"' is not unique"};
 		dId = duplicateId(iE[rClasses]);
 		if( dId ) return {status:912, statusText: rClass+" or propertyClass identifier '"+dId+"' is not unique"};
 		dId = duplicateId(iE[sClasses]);
@@ -210,33 +218,37 @@ function checkConstraints( data ) {
 		return {status:0, statusText: "instance's "+type+"s reference valid types"}	
 	}
 	function checkPropertyClasses(dL,cL) {  // dataType list, class list
-		let pT=null;
-		for( var i=cL.length-1;i>-1;i-- ){
+		let pT, i, j;
+		for( i=cL.length-1;i>-1;i-- ){
 			if( cL[i][pClasses] ) {
-				for( var j=cL[i][pClasses].length-1;j>-1;j-- ) {
+				for( j=cL[i][pClasses].length-1;j>-1;j-- ) {
 					pT = cL[i][pClasses][j];
-					// A propertyClass' "dataType" must be the id of a member of "dataTypes".
-					// .. this is also checked in checkProperties:
-					if( indexById(dL,pT.dataType)<0 ) 
-						return {status:904, statusText: "propertyClass with identifier '"+pT.id+"' must reference a valid dataType"};
-					// If a propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
+					// depending on the version and the context, pT is a string or an object:
+					switch( typeof(pT) ) {
+						case 'string':
+							// A string which must be the id of an element in data.propertyClasses:
+							if( indexById( data.propertyClasses, pT )<0 )
+								return {status:930, statusText: "property class '"+pT+"' of item with identifier '"+cL[i].id+"' must reference an item in 'propertyClasses'" }
+							break;
+						case 'object':
+							// An object defining a pClass itself:
+							// A propertyClass' "dataType" must be the id of a member of "dataTypes".
+							// .. this is also checked in checkProperties:
+							if( indexById(dL,pT.dataType)<0 ) 
+								return {status:904, statusText: "propertyClass with identifier '"+pT.id+"' must reference an item in 'dataTypes'"}
+							// If a propertyClass of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
+							break;
+						default:
+					}
 				}
 			}
 		};
 		return {status:0, statusText: "propertyClasses reference valid dataTypes"}
 	}
 
-	function checkStatementClasses(rCL,sCL) {	// resourceClasses, statementClasses
-		// All statementClass' "subjectClasses" must be the id of a member of "resourceClasses". 
-		// Similarly for "objectClasses".
-		for( var i=sCL.length-1;i>-1;i-- ){
-			if( !checkEls(rCL, sCL[i][subClasses]) ) return {status:906, statusText: subClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass };
-			if( !checkEls(rCL, sCL[i][objClasses]) ) return {status:907, statusText: objClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass }
-		};
-		return {status:0, statusText: "statementClass' "+subClasses+" and "+objClasses+" reference valid "+rClasses };
-
 		function checkEls(rCL,cL) {
-			// no subjectClasses resp. objectClasses means all defined resourceClasses are eligible:
+			// No subjectClasses resp. objectClasses means all defined resourceClasses are eligible.
+			// In case of propertyClasses the existence is being checked by the schema.
 			if( cL ) { 
 				// each value in cL must be the id of a member of rCL:
 				for( var i=cL.length-1;i>-1;i-- ) {
@@ -245,6 +257,16 @@ function checkConstraints( data ) {
 			};
 			return true
 		}
+	function checkStatementClasses(rCL,sCL) {	// resourceClasses, statementClasses
+		// All statementClass' "subjectClasses" must be the id of a member of "resourceClasses". 
+		// Similarly for "objectClasses".
+		for( var i=sCL.length-1;i>-1;i-- ){
+			if( !checkEls(rCL, sCL[i][subClasses]) ) 
+				return {status:906, statusText: subClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass };
+			if( !checkEls(rCL, sCL[i][objClasses]) ) 
+				return {status:907, statusText: objClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass }
+		};
+		return {status:0, statusText: "statementClass' "+subClasses+" and "+objClasses+" reference valid "+rClasses }
 	}
 	function checkStatements(rL,sL) {	// resources, statements
 		// A statement's "subject" must be the id of a member of "resources". 
@@ -260,17 +282,18 @@ function checkConstraints( data ) {
 		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
 	}
 	function checkProperties(cL,iL,typ) {   // class list, instance list (resources, statements or hierarchies)
-		let pT=null, dT=null, pV=null, iT=null;
+		let pT, dT, pV, iT, a;
 		if( iL ) {
 			for( var i=iL.length-1;i>-1;i-- ){
 				if( iL[i].properties ) {
-					iT = itemById(cL,iL[i][typ]); // the instance's type.
+					iT = itemById(cL,iL[i][typ]); // the instance's class.
 					// ToDo: error 919 is equal to 903, but there has been a case in which 919 has been raised. 
 					if( !iT ) return {status:919, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
-					for( var a=iL[i].properties.length-1;a>-1;a-- ){
-						// Property's propertyType must point to a propertyType of the respective type 
-						pT = itemById(iT[pClasses],iL[i].properties[a][pClass]);
-						if( !pT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference a valid propertyType"}; 
+					for( a=iL[i].properties.length-1;a>-1;a-- ){
+						// Property's propertyClass must point to a propertyClass of the respective type 
+						pT = itemById( data.propertyClasses, iL[i].properties[a].class ) 	// starting v0.10.6
+							|| itemById( iT[pClasses], iL[i].properties[a][pClass] );		// up until v0.10.5
+						if( !pT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference a valid propertyClass"}; 
 						
 						// Property's value ("content") must fit to the respective type's range
 						pV = iL[i].properties[a].value;
@@ -306,7 +329,7 @@ function checkConstraints( data ) {
 									// 'multiple' property at propertyClass supersedes 'multiple' at the dataType:
 									if( vL.length>1 && !(pT.multiple || (pT.multiple==undefined && dT.multiple)) ) // logic expression is equivalent to 'multipleChoice(propertyClass)' ... the function is not used to avoid a dependency.
 											return {status:926, statusText: "property of instance with identifier '"+iL[i].id+"': may not have more than one value"};
-									// enumerated values in properties must be defined in the dataType of the corresponding propertyType
+									// enumerated values in properties must be defined in the dataType of the corresponding propertyClass
 									for( var v=vL.length-1;v>-1;v-- ) {
 										vL[v] = vL[v].trim();
 										if( vL[v] && indexById( dT.values, vL[v] )<0 ) 
