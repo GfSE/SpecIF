@@ -85,8 +85,12 @@ function checkConstraints( data ) {
 	rc = checkClasses( data[hClasses], data.hierarchies, hClass );
 	if( rc.status>0 ) errL.push(rc);
 
+	// starting v0.10.6
+	// resourceClass', statementClass' and hierarchyClass' propertyClasses must must be ids of a member in 
+	// propertyClasses at the top level; this is checked as a case in 'checkPropertyClasses'.
+	
 	// A propertyClass's "dataType" must be the id of a member of "dataTypes":
-	rc = checkPropertyClasses( data.dataTypes, [data] );			// propertyClasses at top level starting with v0.10.6
+	rc = checkPropertyClasses( data.dataTypes, [data] );		// propertyClasses at top level starting with v0.10.6
 	if( rc.status>0 ) errL.push(rc);
 	rc = checkPropertyClasses( data.dataTypes, data[rClasses] );
 	if( rc.status>0 ) errL.push(rc);
@@ -95,9 +99,6 @@ function checkConstraints( data ) {
 	rc = checkPropertyClasses( data.dataTypes, data[hClasses] );
 	if( rc.status>0 ) errL.push(rc);
 
-	// starting v0.10.6
-	// resourceClass', statementClass' and hierarchyClass' propertyClasses must must be propertyClass ids:
-	
 	// statementClass' subjectClasses and objectClasses must be resourceClass ids:
 	rc = checkStatementClasses( data[rClasses], data[sClasses] );
 	if( rc.status>0 ) errL.push(rc);
@@ -226,14 +227,16 @@ function checkConstraints( data ) {
 					// depending on the version and the context, pT is a string or an object:
 					switch( typeof(pT) ) {
 						case 'string':
-							// A string which must be the id of an element in data.propertyClasses:
+							// A string which must be the id of an element in data.propertyClasses;
+							// this applies to the propertyClasses of resourceClasses, statementClasses and hierarchyClasses starting v0.10.6:
 							if( indexById( data.propertyClasses, pT )<0 )
 								return {status:930, statusText: "property class '"+pT+"' of item with identifier '"+cL[i].id+"' must reference an item in 'propertyClasses'" }
 							break;
 						case 'object':
-							// An object defining a pClass itself:
+							// An item in a list defining pClasses.
 							// A propertyClass' "dataType" must be the id of a member of "dataTypes".
-							// .. this is also checked in checkProperties:
+							// .. this is also checked in checkProperties;
+							// this applies to the propertyClasses of resourceClasses, statementClasses and hierarchyClasses up until v0.10.5 as well as the propertyClasses at the top level starting v0.10.6:
 							if( indexById(dL,pT.dataType)<0 ) 
 								return {status:904, statusText: "propertyClass with identifier '"+pT.id+"' must reference an item in 'dataTypes'"}
 							// If a propertyClass of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
