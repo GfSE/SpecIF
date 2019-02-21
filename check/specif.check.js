@@ -248,6 +248,16 @@ function checkConstraints( data ) {
 		};
 		return {status:0, statusText: "propertyClasses reference valid dataTypes"}
 	}
+	function checkStatementClasses(rCL,sCL) {	// resourceClasses, statementClasses
+		// All statementClass' "subjectClasses" must be the id of a member of "resourceClasses". 
+		// Similarly for "objectClasses".
+		for( var i=sCL.length-1;i>-1;i-- ){
+			if( !checkEls(rCL, sCL[i][subClasses]) ) 
+				return {status:906, statusText: subClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass };
+			if( !checkEls(rCL, sCL[i][objClasses]) ) 
+				return {status:907, statusText: objClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass }
+		};
+		return {status:0, statusText: "statementClass' "+subClasses+" and "+objClasses+" reference valid "+rClasses }
 
 		function checkEls(rCL,cL) {
 			// No subjectClasses resp. objectClasses means all defined resourceClasses are eligible.
@@ -260,16 +270,6 @@ function checkConstraints( data ) {
 			};
 			return true
 		}
-	function checkStatementClasses(rCL,sCL) {	// resourceClasses, statementClasses
-		// All statementClass' "subjectClasses" must be the id of a member of "resourceClasses". 
-		// Similarly for "objectClasses".
-		for( var i=sCL.length-1;i>-1;i-- ){
-			if( !checkEls(rCL, sCL[i][subClasses]) ) 
-				return {status:906, statusText: subClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass };
-			if( !checkEls(rCL, sCL[i][objClasses]) ) 
-				return {status:907, statusText: objClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass }
-		};
-		return {status:0, statusText: "statementClass' "+subClasses+" and "+objClasses+" reference valid "+rClasses }
 	}
 	function checkStatements(rL,sL) {	// resources, statements
 		// A statement's "subject" must be the id of a member of "resources". 
