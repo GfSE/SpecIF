@@ -1,0 +1,93 @@
+{
+  "id": "53658CB5-376D-4DC2-B8BD-02DA2C625B32",
+  "title": "SpecIF statement class definitions",
+  "specifVersion": "0.11.2",
+  "dataTypes": [],
+  "resourceClasses": [],
+  "statementClasses": [
+    {
+      "id": "RT-Visibility",
+      "title": "SpecIF:shows",
+      "description": "Relation: Plan shows Model-Element",
+      "instantiation": [ "auto" ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00",
+      "subjectClasses": [ "OT-Pln" ],
+      "objectClasses": [ "OT-Act", "OT-Sta", "OT-Evt" ]
+    },
+    {
+      "id": "RT-Containment",
+      "title": "SpecIF:contains",
+      "description": "Relation: Model-Element contains Model-Element",
+      "instantiation": [ "auto", "user" ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00",
+      "subjectClasses": [ "OT-Act", "OT-Sta", "OT-Evt" ],
+      "objectClasses": [ "OT-Act", "OT-Sta", "OT-Evt" ]
+    },
+    {
+      "id": "RT-Storage",
+      "title": "SpecIF:modifies",
+      "description": "Relation: Actor (Role, Function) writes and reads State (Information)",
+      "instantiation": [ "auto" ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00",
+      "subjectClasses": [ "OT-Act" ],
+      "objectClasses": [ "OT-Sta" ]
+    },
+    {
+      "id": "RT-Writing",
+      "title": "SpecIF:writes",
+      "description": "Relation: Actor (Role, Function) writes State (Information)",
+      "instantiation": [ "auto" ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00",
+      "subjectClasses": [ "OT-Act" ],
+      "objectClasses": [ "OT-Sta" ]
+    },
+    {
+      "id": "RT-Reading",
+      "title": "SpecIF:reads",
+      "description": "Relation: Actor (Role, Function) reads State (Information)",
+      "instantiation": [ "auto" ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00",
+      "subjectClasses": [ "OT-Act" ],
+      "objectClasses": [ "OT-Sta" ]
+    },
+    {
+      "id": "RT-Dependency",
+      "title": "SpecIF:dependsOn",
+      "description": "Relation: Requirement/Feature depends on Requirement/Feature",
+      "instantiation": [ "user" ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00",
+      "subjectClasses": [ "OT-Req" ],
+      "objectClasses": [ "OT-Req" ]
+    },
+    {
+      "id": "RT-Satisfaction",
+      "title": "oslc_rm:satisfies",
+      "description": "Relation: Model-Element satisfies Requirement",
+      "instantiation": [ "user" ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00",
+      "subjectClasses": [ "OT-Act", "OT-Sta", "OT-Evt" ],
+      "objectClasses": [ "OT-Req" ]
+    },
+    {
+      "id": "RT-Concern",
+      "title": "SpecIF:refersTo",
+      "description": "Relation: Open Issue concerns Plan/Model-Element/Requirement",
+      "instantiation": [ "user", "auto" ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00",
+      "subjectClasses": [ "OT-Iss" ],
+      "objectClasses": [ "OT-Pln", "OT-Act", "OT-Sta", "OT-Evt", "OT-Req" ]
+    }
+  ],
+  "hierarchyClasses": [],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
+}

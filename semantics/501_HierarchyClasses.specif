@@ -1,0 +1,36 @@
+{
+  "id": "731F4656-1F0E-4112-AFAD-7626AFE289B2",
+  "title": "SpecIF hierarchy class definitions",
+  "specifVersion": "0.11.2",
+  "dataTypes": [],
+  "resourceClasses": [],
+  "statementClasses": [],
+  "hierarchyClasses": [
+    {
+      "id": "ST-ACProject",
+      "title": "SpecIF:Hierarchy",
+      "description": "Root node of a specification (outline).",
+      "propertyClasses": [
+        {
+          "id": "AT-ACProject-Name",
+          "title": "dcterms:title",
+          "dataType": "DT-ShortString",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-ACProject-Text",
+          "title": "dcterms:description",
+          "dataType": "DT-FormattedText",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        }
+      ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    }
+  ],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
+}

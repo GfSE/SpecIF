@@ -1,0 +1,329 @@
+{
+  "id": "9A8A2E7E-39D9-4929-B602-33E9C42594EA",
+  "title": "SpecIF resource class definitions",
+  "specifVersion": "0.11.2",
+  "dataTypes": [],
+  "resourceClasses": [
+    {
+      "id": "OT-Fld",
+      "title": "SpecIF:Heading",
+      "description": "Folders with title and text for chapters or descriptive paragraphs.",
+      "instantiation": [ "user" ],
+      "propertyClasses": [
+        {
+          "id": "AT-Fld-Name",
+          "title": "dcterms:title",
+          "dataType": "DT-ShortString",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Fld-Text",
+          "title": "dcterms:description",
+          "dataType": "DT-FormattedText",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        }
+      ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00",
+      "isHeading": true
+    },
+    {
+      "id": "OT-Pln",
+      "title": "SpecIF:Diagram",
+      "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
+      "icon": "&#9635;",
+      "instantiation": [ "auto" ],
+      "propertyClasses": [
+        {
+          "id": "AT-Pln-Name",
+          "title": "dcterms:title",
+          "dataType": "DT-ShortString",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Pln-Text",
+          "title": "dcterms:description",
+          "dataType": "DT-FormattedText",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Pln-Notation",
+          "title": "SpecIF:Notation",
+          "dataType": "DT-ShortString",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Pln-status",
+          "title": "Status",
+          "dataType": "DT-Status",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Pln-supplier-status",
+          "title": "HIS:SupplierStatus",
+          "dataType": "DT-supplier-status",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Pln-supplier-comment",
+          "title": "HIS:SupplierComment",
+          "dataType": "DT-Text",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Pln-oem-status",
+          "title": "HIS:OemStatus",
+          "dataType": "DT-oem-status",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Pln-oem-comment",
+          "title": "HIS:OemComment",
+          "dataType": "DT-Text",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        }
+      ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "OT-Act",
+      "title": "FMC:Actor",
+      "description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
+      "icon": "&#9632;",
+      "instantiation": [ "auto" ],
+      "propertyClasses": [
+        {
+          "id": "AT-Act-Name",
+          "title": "dcterms:title",
+          "dataType": "DT-ShortString",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Act-Text",
+          "title": "dcterms:description",
+          "dataType": "DT-FormattedText",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        }
+      ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "OT-Sta",
+      "title": "FMC:State",
+      "description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape.",
+      "icon": "&#9679;",
+      "instantiation": [ "auto" ],
+      "propertyClasses": [
+        {
+          "id": "AT-Sta-Name",
+          "title": "dcterms:title",
+          "dataType": "DT-ShortString",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Sta-Text",
+          "title": "dcterms:description",
+          "dataType": "DT-FormattedText",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        }
+      ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "OT-Evt",
+      "title": "FMC:Event",
+      "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
+      "icon": "&#9830;",
+      "instantiation": [ "auto" ],
+      "propertyClasses": [
+        {
+          "id": "AT-Evt-Name",
+          "title": "dcterms:title",
+          "dataType": "DT-ShortString",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Evt-Text",
+          "title": "dcterms:description",
+          "dataType": "DT-FormattedText",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        }
+      ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "OT-Req",
+      "title": "IREB:Requirement",
+      "description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
+      "icon": "&#8623;",
+      "instantiation": [ "user" ],
+      "propertyClasses": [
+        {
+          "id": "AT-Req-ID",
+          "title": "dcterms:identifier",
+          "dataType": "DT-ShortString",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Req-Name",
+          "title": "dcterms:title",
+          "dataType": "DT-ShortString",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Req-Text",
+          "title": "dcterms:description",
+          "dataType": "DT-FormattedText",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Req-Status",
+          "title": "SpecIF:Status",
+          "dataType": "DT-Status",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Req-Priority",
+          "title": "SpecIF:Priority",
+          "dataType": "DT-Priority",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Req-perspective",
+          "title": "Perspective",
+          "dataType": "DT-Perspective",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Req-discipline",
+          "title": "Discipline",
+          "dataType": "DT-Discipline",
+          "multiple": true,
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Req-supplier-status",
+          "title": "HIS:SupplierStatus",
+          "dataType": "DT-supplier-status",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Req-supplier-comment",
+          "title": "HIS:SupplierComment",
+          "dataType": "DT-Text",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Req-oem-status",
+          "title": "HIS:OemStatus",
+          "dataType": "DT-oem-status",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Req-oem-comment",
+          "title": "HIS:OemComment",
+          "dataType": "DT-Text",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        }
+      ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "OT-Iss",
+      "title": "SpecIF:Issue",
+      "description": "An 'Issue' is a question to answer or decision to take which is worth tracking.",
+      "instantiation": [ "user", "auto" ],
+      "propertyClasses": [
+        {
+          "id": "AT-Iss-ObjectID",
+          "title": "dcterms:identifier",
+          "dataType": "DT-ShortString",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Iss-Name",
+          "title": "dcterms:title",
+          "dataType": "DT-ShortString",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Iss-Text",
+          "title": "dcterms:description",
+          "dataType": "DT-FormattedText",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Iss-Status",
+          "title": "SpecIF:Status",
+          "dataType": "DT-Iss-Status",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Iss-Priority",
+          "title": "SpecIF:Priority",
+          "dataType": "DT-Priority",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Iss-Responsible",
+          "title": "SpecIF:Responsible",
+          "dataType": "DT-ShortString",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "AT-Iss-DueDate",
+          "title": "SpecIF:DueDate",
+          "dataType": "DT-Date",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        }
+      ],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    }
+
+  ],
+  "statementClasses": [],
+  "hierarchyClasses": [],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
+}
