@@ -1,7 +1,7 @@
 {
   "id": "E6B10FA2-8741-4AF0-A068-DE306B62AA13",
   "title": "SpecIF enumeration datatype definitions",
-  "specifVersion": "0.11.2",
+  "specifVersion": "0.10.4",
   "dataTypes": [
     {
       "id": "DT-Status",
@@ -15,7 +15,7 @@
         },
         {
           "id": "V-Status-1",
-          "title": "00_rejected"
+          "title": "01_rejected"
         },
         {
           "id": "V-Status-2",
@@ -53,15 +53,23 @@
       "values": [
         {
           "id": "V-Prio-0",
-          "title": "1_high"
-        },
+          "title": "SpecIF:priorityHigh"
+		},
         {
           "id": "V-Prio-1",
-          "title": "2_medium"
+          "title": "SpecIF:priorityRatherHigh"
         },
         {
           "id": "V-Prio-2",
-          "title": "3_low"
+          "title": "SpecIF:priorityMedium"
+        },
+        {
+          "id": "V-Prio-3",
+          "title": "SpecIF:priorityRatherLow"
+		},
+        {
+          "id": "V-Prio-4",
+          "title": "SpecIF:priorityLow"
         }
       ],
       "revision": 1,
@@ -116,93 +124,89 @@
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
-      "id": "DT-supplier-status",
+      "id": "DT-SupplierStatus",
       "title": "HIS:SupplierStatus",
       "description": "Enumerated values for HIS supplier-status",
       "type": "xs:enumeration",
       "values": [
         {
-          "id": "V-supplier-status-0",
-          "title": "not-applicable"
+          "id": "V-SupplierStatus-0",
+          "title": "HIS:notApplicable"
         },
         {
-          "id": "V-supplier-status-1",
-          "title": "to-clarify"
+          "id": "V-SupplierStatus-1",
+          "title": "HIS:toClarify"
         },
         {
-          "id": "V-supplier-status-2",
-          "title": "agreed"
+          "id": "V-SupplierStatus-2",
+          "title": "HIS:agreed"
         },
         {
-          "id": "V-supplier-status-3",
-          "title": "partly-agreed"
+          "id": "V-SupplierStatus-3",
+          "title": "HIS:partlyAgreed"
         },
         {
-          "id": "V-supplier-status-4",
-          "title": "not-agreed"
+          "id": "V-SupplierStatus-4",
+          "title": "HIS:notAgreed"
         }
       ],
       "revision": 1,
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
-      "id": "DT-oem-status",
+      "id": "DT-OemStatus",
       "title": "HIS:OemStatus",
       "description": "Enumerated values for HIS oem-status",
       "type": "xs:enumeration",
       "values": [
         {
-          "id": "V-oem-status-0",
-          "title": "not-to-evaluate"
+          "id": "V-OemStatus-0",
+          "title": "HIS:notToEvaluate"
         },
         {
-          "id": "V-oem-status-1",
-          "title": "to-evaluate"
+          "id": "V-OemStatus-1",
+          "title": "HIS:toEvaluate"
         },
         {
-          "id": "V-oem-status-2",
-          "title": "accepted"
+          "id": "V-OemStatus-2",
+          "title": "HIS:accepted"
         },
         {
-          "id": "V-oem-status-3",
-          "title": "not-accepted"
+          "id": "V-OemStatus-3",
+          "title": "HIS:notAccepted"
         }
       ],
       "revision": 1,
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
-      "id": "DT-Iss-Status",
+      "id": "DT-IssStatus",
       "title": "SpecIF:Status",
       "description": "Enumerated values for issue status",
       "type": "xs:enumeration",
       "values": [
         {
-          "id": "V-Iss-Status-0",
-          "title": ""
-        },
-        {
-          "id": "V-Iss-Status-1",
+          "id": "V-IssStatus-0",
           "title": "open"
         },
         {
-          "id": "V-Iss-Status-2",
+          "id": "V-IssStatus-1",
           "title": "assigned"
         },
         {
-          "id": "V-Iss-Status-3",
+          "id": "V-IssStatus-2",
           "title": "in progress"
         },
         {
-          "id": "V-Iss-Status-4",
+          "id": "V-IssStatus-3",
           "title": "closed"
         },
         {
-          "id": "V-Iss-Status-5",
+          "id": "V-IssStatus-4",
           "title": "reopened"
         },
         {
-          "id": "V-Iss-Status-6",
+          "id": "V-IssStatus-5",
           "title": "rejected"
         }
       ],
@@ -210,6 +214,7 @@
       "changedAt": "2016-05-26T08:59:00+02:00"
     }
   ],
+  "propertyClasses": [],
   "resourceClasses": [],
   "statementClasses": [],
   "hierarchyClasses": [],

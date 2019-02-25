@@ -7,25 +7,18 @@
   "statementClasses": [],
   "hierarchyClasses": [
     {
-      "id": "ST-ACProject",
+      "id": "ST-Hierarchy",
       "title": "SpecIF:Hierarchy",
-      "description": "Root node of a specification (outline).",
-      "propertyClasses": [
-        {
-          "id": "AT-ACProject-Name",
-          "title": "dcterms:title",
-          "dataType": "DT-ShortString",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-ACProject-Text",
-          "title": "dcterms:description",
-          "dataType": "DT-FormattedText",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        }
-      ],
+      "description": "Root node of a hierarchically organized specification (outline).",
+      "propertyClasses": ["PC-Name", "PC-Text"],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "ST-BillOfMaterials",
+      "title": "SpecIF:BillOfMaterials",
+      "description": "A bill of materials or product structure (sometimes bill of material, BOM or associated list) is a list of the raw materials, sub-assemblies, intermediate assemblies, sub-components, parts and the quantities of each needed to manufacture an end product. A BOM may be used for communication between manufacturing partners, or confined to a single manufacturing plant.",
+      "propertyClasses": ["PC-Name", "PC-Text"],
       "revision": 1,
       "changedAt": "2016-05-26T08:59:00+02:00"
     }

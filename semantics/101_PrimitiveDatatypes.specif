@@ -1,7 +1,7 @@
 {
   "id": "20B10532-D3E3-47DF-A58D-EB22060878CC",
   "title": "SpecIF primitive datatype definitions",
-  "specifVersion": "0.11.2",
+  "specifVersion": "0.10.4",
   "dataTypes": [
     {
       "id": "DT-Boolean",
@@ -69,7 +69,7 @@
       "title": "String[512]",
       "description": "String with length 512",
       "type": "xs:string",
-      "maxLength": 512,
+      "maxLength": 1024,
       "revision": 1,
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
@@ -107,6 +107,7 @@
       "changedAt": "2016-05-26T08:59:00+02:00"
     }
   ],
+  "propertyClasses": [],
   "resourceClasses": [],
   "statementClasses": [],
   "hierarchyClasses": [],

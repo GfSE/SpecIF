@@ -1,325 +1,191 @@
 {
   "id": "9A8A2E7E-39D9-4929-B602-33E9C42594EA",
   "title": "SpecIF resource class definitions",
-  "specifVersion": "0.11.2",
+  "specifVersion": "0.10.6",
   "dataTypes": [],
-  "resourceClasses": [
-    {
-      "id": "OT-Fld",
-      "title": "SpecIF:Heading",
-      "description": "Folders with title and text for chapters or descriptive paragraphs.",
-      "instantiation": [ "user" ],
-      "propertyClasses": [
+  "propertyClasses": [
         {
-          "id": "AT-Fld-Name",
+          "id": "PC-VisibleId",
+          "title": "dcterms:identifier",
+          "dataType": "DT-ShortString",
+          "revision": 1,
+          "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+          "id": "PC-Name",
           "title": "dcterms:title",
           "dataType": "DT-ShortString",
           "revision": 1,
           "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "AT-Fld-Text",
-          "title": "dcterms:description",
-          "dataType": "DT-FormattedText",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        }
-      ],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00",
-      "isHeading": true
-    },
-    {
-      "id": "OT-Pln",
-      "title": "SpecIF:Diagram",
-      "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
-      "icon": "&#9635;",
-      "instantiation": [ "auto" ],
-      "propertyClasses": [
-        {
-          "id": "AT-Pln-Name",
-          "title": "dcterms:title",
-          "dataType": "DT-ShortString",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Pln-Text",
+          "id": "PC-Text",
           "title": "dcterms:description",
           "dataType": "DT-FormattedText",
           "revision": 1,
           "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "AT-Pln-Notation",
+          "id": "PC-PlnNotation",
           "title": "SpecIF:Notation",
           "dataType": "DT-ShortString",
           "revision": 1,
           "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "AT-Pln-status",
-          "title": "Status",
-          "dataType": "DT-Status",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Pln-supplier-status",
-          "title": "HIS:SupplierStatus",
-          "dataType": "DT-supplier-status",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Pln-supplier-comment",
-          "title": "HIS:SupplierComment",
-          "dataType": "DT-Text",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Pln-oem-status",
-          "title": "HIS:OemStatus",
-          "dataType": "DT-oem-status",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Pln-oem-comment",
-          "title": "HIS:OemComment",
-          "dataType": "DT-Text",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        }
-      ],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "OT-Act",
-      "title": "FMC:Actor",
-      "description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
-      "icon": "&#9632;",
-      "instantiation": [ "auto" ],
-      "propertyClasses": [
-        {
-          "id": "AT-Act-Name",
-          "title": "dcterms:title",
-          "dataType": "DT-ShortString",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Act-Text",
-          "title": "dcterms:description",
-          "dataType": "DT-FormattedText",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        }
-      ],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "OT-Sta",
-      "title": "FMC:State",
-      "description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape.",
-      "icon": "&#9679;",
-      "instantiation": [ "auto" ],
-      "propertyClasses": [
-        {
-          "id": "AT-Sta-Name",
-          "title": "dcterms:title",
-          "dataType": "DT-ShortString",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Sta-Text",
-          "title": "dcterms:description",
-          "dataType": "DT-FormattedText",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        }
-      ],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "OT-Evt",
-      "title": "FMC:Event",
-      "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
-      "icon": "&#9830;",
-      "instantiation": [ "auto" ],
-      "propertyClasses": [
-        {
-          "id": "AT-Evt-Name",
-          "title": "dcterms:title",
-          "dataType": "DT-ShortString",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Evt-Text",
-          "title": "dcterms:description",
-          "dataType": "DT-FormattedText",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        }
-      ],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "OT-Req",
-      "title": "IREB:Requirement",
-      "description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
-      "icon": "&#8623;",
-      "instantiation": [ "user" ],
-      "propertyClasses": [
-        {
-          "id": "AT-Req-ID",
-          "title": "dcterms:identifier",
-          "dataType": "DT-ShortString",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Req-Name",
-          "title": "dcterms:title",
-          "dataType": "DT-ShortString",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Req-Text",
-          "title": "dcterms:description",
-          "dataType": "DT-FormattedText",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Req-Status",
+          "id": "PC-Status",
           "title": "SpecIF:Status",
           "dataType": "DT-Status",
           "revision": 1,
           "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "AT-Req-Priority",
+          "id": "PC-Priority",
           "title": "SpecIF:Priority",
           "dataType": "DT-Priority",
           "revision": 1,
           "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "AT-Req-perspective",
-          "title": "Perspective",
+          "id": "PC-Perspective",
+          "title": "SpecIF:Perspective",
           "dataType": "DT-Perspective",
           "revision": 1,
           "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "AT-Req-discipline",
-          "title": "Discipline",
+          "id": "PC-Discipline",
+          "title": "SpecIF:Discipline",
           "dataType": "DT-Discipline",
           "multiple": true,
           "revision": 1,
           "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "AT-Req-supplier-status",
+          "id": "PC-SupplierStatus",
           "title": "HIS:SupplierStatus",
-          "dataType": "DT-supplier-status",
+          "dataType": "DT-SupplierStatus",
           "revision": 1,
           "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "AT-Req-supplier-comment",
+          "id": "PC-SupplierComment",
           "title": "HIS:SupplierComment",
           "dataType": "DT-Text",
           "revision": 1,
           "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "AT-Req-oem-status",
+          "id": "PC-OemStatus",
           "title": "HIS:OemStatus",
-          "dataType": "DT-oem-status",
+          "dataType": "DT-OemStatus",
           "revision": 1,
           "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "AT-Req-oem-comment",
+          "id": "PC-OemComment",
           "title": "HIS:OemComment",
           "dataType": "DT-Text",
           "revision": 1,
           "changedAt": "2016-05-26T08:59:00+02:00"
-        }
-      ],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "OT-Iss",
-      "title": "SpecIF:Issue",
-      "description": "An 'Issue' is a question to answer or decision to take which is worth tracking.",
-      "instantiation": [ "user", "auto" ],
-      "propertyClasses": [
-        {
-          "id": "AT-Iss-ObjectID",
-          "title": "dcterms:identifier",
-          "dataType": "DT-ShortString",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "AT-Iss-Name",
-          "title": "dcterms:title",
-          "dataType": "DT-ShortString",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Iss-Text",
-          "title": "dcterms:description",
-          "dataType": "DT-FormattedText",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Iss-Status",
-          "title": "SpecIF:Status",
-          "dataType": "DT-Iss-Status",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Iss-Priority",
-          "title": "SpecIF:Priority",
-          "dataType": "DT-Priority",
-          "revision": 1,
-          "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-          "id": "AT-Iss-Responsible",
+          "id": "PC-Responsible",
           "title": "SpecIF:Responsible",
           "dataType": "DT-ShortString",
           "revision": 1,
           "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "AT-Iss-DueDate",
+          "id": "PC-DueDate",
           "title": "SpecIF:DueDate",
           "dataType": "DT-Date",
           "revision": 1,
           "changedAt": "2016-05-26T08:59:00+02:00"
         }
+  ],
+  "resourceClasses": [
+    {
+      "id": "RC-Folder",
+      "title": "SpecIF:Heading",
+      "description": "Folders with title and text for chapters or descriptive paragraphs.",
+      "instantiation": [ "user" ],
+      "propertyClasses": ["PC-Name", "PC-Text"],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00",
+      "isHeading": true
+    },
+    {
+      "id": "RC-Diagram",
+      "title": "SpecIF:Diagram",
+      "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
+      "icon": "&#9635;",
+      "instantiation": [ "auto" ],
+      "propertyClasses": ["PC-Name", "PC-Text", "PC-Pln-Notation", "PC-Status", "PC-SupplierStatus", "PC-SupplierComment", "PC-OemStatus", "PC-OemComment"],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "RC-Actor",
+      "title": "FMC:Actor",
+      "description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
+      "icon": "&#9632;",
+      "instantiation": [ "auto" ],
+      "propertyClasses": ["PC-Name", "PC-Text", "PC-Status"],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "RC-State",
+      "title": "FMC:State",
+      "description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape.",
+      "icon": "&#9679;",
+      "instantiation": [ "auto" ],
+      "propertyClasses": ["PC-Name", "PC-Text", "PC-Status"],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "RC-Event",
+      "title": "FMC:Event",
+      "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
+      "icon": "&#9830;",
+      "instantiation": [ "auto" ],
+      "propertyClasses": ["PC-Name", "PC-Text", "PC-Status"],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "RC-Requirement",
+      "title": "IREB:Requirement",
+      "description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
+      "icon": "&#8623;",
+      "instantiation": [ "user" ],
+      "propertyClasses": ["PC-VisibleId", "PC-Name", "PC-Text", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline",  "PC-SupplierStatus", "PC-SupplierComment", "PC-OemStatus", "PC-OemComment"],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "RC-Feature",
+      "title": "SpecIF:Feature",
+      "description": "A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition.",
+      "icon": "&#10038;",
+      "instantiation": [ "user" ],
+      "propertyClasses": ["PC-VisibleId", "PC-Name", "PC-Text", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline",  "PC-SupplierStatus", "PC-SupplierComment", "PC-OemStatus", "PC-OemComment"],
+      "revision": 1,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "RC-Issue",
+      "title": "SpecIF:Issue",
+      "description": "An 'Issue' is a question to answer or decision to take which is worth tracking.",
+      "instantiation": [ "user", "auto" ],
+      "propertyClasses": ["PC-VisibleId", "PC-Name", "PC-Text", "PC-IssStatus", "PC-Priority", "PC-Responsible", "PC-DueDate"]     
+	  "propertyClasses": [
       ],
       "revision": 1,
       "changedAt": "2016-05-26T08:59:00+02:00"
     }
-
   ],
   "statementClasses": [],
   "hierarchyClasses": [],

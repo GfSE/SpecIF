@@ -1,89 +1,89 @@
 {
   "id": "53658CB5-376D-4DC2-B8BD-02DA2C625B32",
   "title": "SpecIF statement class definitions",
-  "specifVersion": "0.11.2",
+  "specifVersion": "0.10.4",
   "dataTypes": [],
   "resourceClasses": [],
   "statementClasses": [
     {
-      "id": "RT-Visibility",
+      "id": "SC-shows",
       "title": "SpecIF:shows",
-      "description": "Relation: Plan shows Model-Element",
+      "description": "Statement: Plan shows Model-Element",
       "instantiation": [ "auto" ],
       "revision": 1,
       "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "OT-Pln" ],
-      "objectClasses": [ "OT-Act", "OT-Sta", "OT-Evt" ]
+      "subjectClasses": [ "RC-Pln" ],
+      "objectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ]
     },
     {
-      "id": "RT-Containment",
+      "id": "SC-contains",
       "title": "SpecIF:contains",
-      "description": "Relation: Model-Element contains Model-Element",
+      "description": "Statement: Model-Element contains Model-Element",
       "instantiation": [ "auto", "user" ],
       "revision": 1,
       "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "OT-Act", "OT-Sta", "OT-Evt" ],
-      "objectClasses": [ "OT-Act", "OT-Sta", "OT-Evt" ]
+      "subjectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ],
+      "objectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ]
     },
     {
-      "id": "RT-Storage",
+      "id": "SC-modifies",
       "title": "SpecIF:modifies",
-      "description": "Relation: Actor (Role, Function) writes and reads State (Information)",
+      "description": "Statement: Actor (Role, Function) writes and reads State (Information)",
       "instantiation": [ "auto" ],
       "revision": 1,
       "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "OT-Act" ],
-      "objectClasses": [ "OT-Sta" ]
+      "subjectClasses": [ "RC-Act" ],
+      "objectClasses": [ "RC-Sta" ]
     },
     {
-      "id": "RT-Writing",
+      "id": "SC-writes",
       "title": "SpecIF:writes",
-      "description": "Relation: Actor (Role, Function) writes State (Information)",
+      "description": "Statement: Actor (Role, Function) writes State (Information)",
       "instantiation": [ "auto" ],
       "revision": 1,
       "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "OT-Act" ],
-      "objectClasses": [ "OT-Sta" ]
+      "subjectClasses": [ "RC-Act" ],
+      "objectClasses": [ "RC-Sta" ]
     },
     {
-      "id": "RT-Reading",
+      "id": "SC-reads",
       "title": "SpecIF:reads",
-      "description": "Relation: Actor (Role, Function) reads State (Information)",
+      "description": "Statement: Actor (Role, Function) reads State (Information)",
       "instantiation": [ "auto" ],
       "revision": 1,
       "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "OT-Act" ],
-      "objectClasses": [ "OT-Sta" ]
+      "subjectClasses": [ "RC-Act" ],
+      "objectClasses": [ "RC-Sta" ]
     },
     {
-      "id": "RT-Dependency",
+      "id": "SC-dependsOn",
       "title": "SpecIF:dependsOn",
-      "description": "Relation: Requirement/Feature depends on Requirement/Feature",
+      "description": "Statement: Requirement/Feature depends on Requirement/Feature",
       "instantiation": [ "user" ],
       "revision": 1,
       "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "OT-Req" ],
-      "objectClasses": [ "OT-Req" ]
+      "subjectClasses": [ "RC-Req" ],
+      "objectClasses": [ "RC-Req" ]
     },
     {
-      "id": "RT-Satisfaction",
+      "id": "SC-satisfies",
       "title": "oslc_rm:satisfies",
-      "description": "Relation: Model-Element satisfies Requirement",
+      "description": "Statement: Model-Element satisfies Requirement",
       "instantiation": [ "user" ],
       "revision": 1,
       "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "OT-Act", "OT-Sta", "OT-Evt" ],
-      "objectClasses": [ "OT-Req" ]
+      "subjectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ],
+      "objectClasses": [ "RC-Req" ]
     },
     {
-      "id": "RT-Concern",
+      "id": "SC-refersTo",
       "title": "SpecIF:refersTo",
-      "description": "Relation: Open Issue concerns Plan/Model-Element/Requirement",
+      "description": "Statement: Open Issue concerns Plan/Model-Element/Requirement",
       "instantiation": [ "user", "auto" ],
       "revision": 1,
       "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "OT-Iss" ],
-      "objectClasses": [ "OT-Pln", "OT-Act", "OT-Sta", "OT-Evt", "OT-Req" ]
+      "subjectClasses": [ "RC-Iss" ],
+      "objectClasses": [ "RC-Pln", "RC-Act", "RC-Sta", "RC-Evt", "RC-Req" ]
     }
   ],
   "hierarchyClasses": [],
