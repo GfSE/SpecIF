@@ -48,9 +48,7 @@ function checkConstraints( data ) {
 				hClass = 'hierarchyType',
 				pClass = 'propertyType',
 				subClasses = 'subjectTypes',
-				objClasses = 'objectTypes',
-				sub = 'subject',
-				obj = 'object';
+				objClasses = 'objectTypes';
 			break;
 		default:
 			var rClasses = 'resourceClasses',
@@ -62,9 +60,7 @@ function checkConstraints( data ) {
 				hClass = 'class',
 				pClass = 'class',
 				subClasses = 'subjectClasses',
-				objClasses = 'objectClasses',
-				sub = 'subject',
-				obj = 'object'
+				objClasses = 'objectClasses'
 	};
 
 	var rc={},errL=[];
@@ -270,13 +266,13 @@ function checkConstraints( data ) {
 		// Similarly for "object".
 		// (It has been checked before that any "resource" is indeed of type "resourceClass").
 		for( var i=sL.length-1;i>-1;i-- ) {
-			if( !existsByKey(rL, sL[i][sub]) ) 
+			if( !existsByKey(rL, sL[i].subject) ) 
 
 				return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
-			if( !existsByKey(rL, sL[i][obj]) ) 
+			if( !existsByKey(rL, sL[i].object) ) 
 
 				return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
-//			if( sL[i][sub] == sL[i][obj] ) return {status:90X, statusText: ""}
+//			if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
 		};
 		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
 	}
