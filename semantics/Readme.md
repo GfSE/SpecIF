@@ -2,6 +2,7 @@ SpecIF Semantics Definition
 ===========================
 This folder contains the semantic definition for the SpecIF metatypes:
 * Datatypes
+* Property Classes
 * Resource Classes
 * Hierarchy Classes
 * Statement Classes
@@ -29,7 +30,7 @@ Currently the following digits are assigned with the SpecIF metatypes. It is pos
 |1st Digit|SpecIF Metatype|
 | ----|---------------|
 |   1 | Datatypes     |
-|   2 | *Reserved for Property Classes* |
+|   2 | Property Classes |
 |   3 | Resource Classes |
 |   4 | Statement Classes |
 |   5 | Hierarchy Classes |
