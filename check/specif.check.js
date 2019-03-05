@@ -86,13 +86,13 @@ function checkConstraints( data ) {
 	// propertyClasses at the top level; this is checked as a case in 'checkPropertyClasses'.
 	
 	// A propertyClass's "dataType" must be the id of a member of "dataTypes":
-	rc = checkPropertyClasses( data.dataTypes, [data] );		// propertyClasses at top level starting with v0.10.6
+	rc = checkPropertyClasses( [data] );		// propertyClasses at top level starting with v0.10.6
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkPropertyClasses( data.dataTypes, data[rClasses] );
+	rc = checkPropertyClasses( data[rClasses] );
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkPropertyClasses( data.dataTypes, data[sClasses] );
+	rc = checkPropertyClasses( data[sClasses] );
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkPropertyClasses( data.dataTypes, data[hClasses] );
+	rc = checkPropertyClasses( data[hClasses] );
 	if( rc.status>0 ) errL.push(rc);
 
 	// statementClass' subjectClasses and objectClasses must be resourceClass ids:
@@ -214,7 +214,7 @@ function checkConstraints( data ) {
 		};
 		return {status:0, statusText: "instance's "+type+"s reference valid types"}	
 	}
-	function checkPropertyClasses(dL,cL) {  // dataType list, class list
+	function checkPropertyClasses(cL) {  // dataType list, class list
 		let pT, i, j;
 		for( i=cL.length-1;i>-1;i-- ){
 			if( cL[i][pClasses] ) {
@@ -233,8 +233,8 @@ function checkConstraints( data ) {
 							// A propertyClass' "dataType" must be the id of a member of "dataTypes".
 							// .. this is also checked in checkProperties;
 							// this applies to the propertyClasses of resourceClasses, statementClasses and hierarchyClasses up until v0.10.5 as well as the propertyClasses at the top level starting v0.10.6:
-							if( indexById(dL,pT.dataType)<0 ) 
-								return {status:904, statusText: "propertyClass with identifier '"+pT.id+"' must reference an item in 'dataTypes'"}
+							if( indexById(data.dataTypes,pT.dataType)<0 ) 
+								return {status:904, statusText: "property class with identifier '"+pT.id+"' must reference an item in 'dataTypes'"}
 							// If a propertyClass of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
 							break;
 						default:
