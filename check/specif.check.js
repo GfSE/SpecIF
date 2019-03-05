@@ -431,7 +431,6 @@ function checkConstraints( data ) {
 			case 'string': k = {id: k, revision: 0}; break;
 			default: return null
 		};
-		if(  )
 		// find all elements with the same id:
 		let sId = L.filter( function(el) { return el.id==k.id });
 		if( sId.length<1 ) return undefined;
