@@ -7,7 +7,7 @@
 function checkSchema( schema, data ) {
 	"use strict";
 	// Check data using the supplied schema.
-	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseText:"xyz"}
+	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseType:"text",responseText:"xyz"}
 	// Requires: https://github.com/epoberezkin/ajv/releases/tag/4.8.0 or later 
 	// ToDo: localize messages, see https://github.com/epoberezkin/ajv-i18n 
 
@@ -24,8 +24,8 @@ function checkConstraints( data ) {
 	"use strict";
 	// Check the constraints of the concrete values in 'data'.
 	// Applies to SpecIF schema 0.11.1 and later, where a key consisting of id plus revision is used to reference an item.
-	// Data according SpecIF schema 0.10.x passes, as well.
-	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseText:"xyz"}
+	// Data according SpecIF schema 0.10.2 and later passes, as well.
+	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseType:"text",responseText:"xyz"}
 	// ToDo: localize messages and provide them by call parameter.
 
 	if( data.specifVersion.indexOf( '0.9.' )>-1 ) 
@@ -82,12 +82,18 @@ function checkConstraints( data ) {
 	rc = checkClasses( data[hClasses], data.hierarchies, hClass );
 	if( rc.status>0 ) errL.push(rc);
 
-	// A propertyType's "dataType" must be the id of a member of "dataTypes":
-	rc = checkPropertyClasses( data.dataTypes, data[rClasses] );
+	// starting v0.11.6
+	// resourceClass', statementClass' and hierarchyClass' propertyClasses must must be keys of a member in 
+	// propertyClasses at the top level; this is checked as a case in 'checkPropertyClasses'.
+	
+	// A propertyClass's "dataType" must be the key of a member of "dataTypes":
+	rc = checkPropertyClasses( [data] );		// propertyClasses at top level starting with v0.10.6
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkPropertyClasses( data.dataTypes, data[sClasses] );
+	rc = checkPropertyClasses( data[rClasses] );
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkPropertyClasses( data.dataTypes, data[hClasses] );
+	rc = checkPropertyClasses( data[sClasses] );
+	if( rc.status>0 ) errL.push(rc);
+	rc = checkPropertyClasses( data[hClasses] );
 	if( rc.status>0 ) errL.push(rc);
 
 	// statementClass' subjectClasses and objectClasses must be resourceClass ids:
@@ -124,6 +130,8 @@ function checkConstraints( data ) {
 		let allKeys=[],
 			dK = duplicateKey(iE.dataTypes);
 		if( dK ) return {status:911, statusText: "dataType "+dK.id+" with revision "+dK.revision+" is not unique"};
+		dId = duplicateKey(iE.propertyClasses);		// starting with v0.10.6
+		if( dK ) return {status:910, statusText: "propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
 		dK = duplicateKey(iE[rClasses]);
 		if( dK ) return {status:912, statusText: rClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
 		dK = duplicateKey(iE[sClasses]);
@@ -219,22 +227,37 @@ function checkConstraints( data ) {
 		// In case of resources, the value of "class" must be the key of a member of "resourceClasses". 
 		// Similarly for statements and hierarchies.
 		for( var i=iL.length-1;i>-1;i-- ){
-			if( !existsByKey(cL, iL[i][type]) ) 
+			if( itemByKey(cL, iL[i][type])==undefined ) 
 				return {status:903, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+type }
 		};
 		return {status:0, statusText: "instance's "+type+"s reference valid types"}	
 	}
-	function checkPropertyClasses(dL,cL) {  // dataType list, class list
-		let pT=null;
-		for( var i=cL.length-1;i>-1;i-- ){
+	function checkPropertyClasses(cL) {  // class list
+		let pT, i, j;
+		for( i=cL.length-1;i>-1;i-- ){
 			if( cL[i][pClasses] ) {
-				for( var j=cL[i][pClasses].length-1;j>-1;j-- ) {
+				for( j=cL[i][pClasses].length-1;j>-1;j-- ) {
 					pT = cL[i][pClasses][j];
-					// A propertyClass's "dataType" must be the key of a member of "dataTypes".
-					// .. this is also checked in checkProperties:
-					if( !existsByKey(dL,pT.dataType) ) 
-						return {status:904, statusText: "propertyClass with identifier '"+pT.id+"' must reference a valid dataType"};
-					// If a propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
+					// depending on the version and the context, 
+					// - pT is a string: It is the identifier of an element of data.propertyClasses (starting v0.10.6 resp v0.11.6)
+					// - pT is an object: Then, it can be 
+					// -- either a key pointing to an element of data.propertyClasses (starting v0.10.6 resp v0.11.6)
+					// -- or a property class defined here (up until v0.10.5 resp v0.11.2)
+					// Note that itemByKey() handles keys in both forms 'identifier' or {id:'identifier',revision:n},
+					// so we have just to decide whether pT is a key or a propertyClass definition:
+					if( data.propertyClasses ) {
+						// starting v0.10.6 resp v0.11.6: 
+						// The propertyClass must be a valid key of an item in data.propertyClasses:
+						if( itemByKey( data.propertyClasses, pT )==undefined )
+							return {status:930, statusText: "property class of item with identifier '"+cL[i].id+"' must reference an item in 'propertyClasses'" }
+					} else {
+						// up until v0.10.5 resp v0.11.2:
+						// A propertyClass's "dataType" must be the key of a member of "dataTypes".
+						// .. this is also checked in checkProperties:
+						if( itemByKey(data.dataTypes,pT.dataType)==undefined ) 
+							return {status:904, statusText: "property class with identifier '"+pT.id+"' must reference a valid dataType"};
+						// If a propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
+					}
 				}
 			}
 		};
@@ -245,17 +268,20 @@ function checkConstraints( data ) {
 		// All statementClass' "subjectClasses" must have the key of a member of "resourceClasses". 
 		// Similarly for "objectClasses".
 		for( var i=sCL.length-1;i>-1;i-- ){
-			if( !checkEls(rCL, sCL[i][subClasses]) ) return {status:906, statusText: subClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass };
-			if( !checkEls(rCL, sCL[i][objClasses]) ) return {status:907, statusText: objClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass }
+			if( !checkEls(rCL, sCL[i][subClasses]) ) 
+				return {status:906, statusText: subClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass };
+			if( !checkEls(rCL, sCL[i][objClasses]) ) 
+				return {status:907, statusText: objClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass }
 		};
 		return {status:0, statusText: "statementClass' "+subClasses+" and "+objClasses+" reference valid "+rClasses };
 
 		function checkEls(rCL,cL) {
-			// no subjectClasses resp. objectClasses means all defined resourceClasses are eligible:
+			// No subjectClasses resp. objectClasses means all defined resourceClasses are eligible.
+			// In case of propertyClasses the existence is being checked by the schema.
 			if( cL ) { 
 				// each value in cL must be the key of a member of rCL:
 				for( var i=cL.length-1;i>-1;i-- ) {
-					if( !existsByKey(rCL, cL[i]) ) return false
+					if( itemByKey(rCL, cL[i])==undefined ) return false
 				}
 			};
 			return true
@@ -266,10 +292,10 @@ function checkConstraints( data ) {
 		// Similarly for "object".
 		// (It has been checked before that any "resource" is indeed of type "resourceClass").
 		for( var i=sL.length-1;i>-1;i-- ) {
-			if( !existsByKey(rL, sL[i].subject) ) 
+			if( itemByKey(rL, sL[i].subject)==undefined ) 
 
 				return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
-			if( !existsByKey(rL, sL[i].object) ) 
+			if( itemByKey(rL, sL[i].object)==undefined ) 
 
 				return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
 //			if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
@@ -277,30 +303,30 @@ function checkConstraints( data ) {
 		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
 	}
 	function checkProperties(cL,iL,typ) {   // class list, instance list (resources, statements or hierarchies)
-		let pT=null, dT=null, pV=null, iT=null;
+		let pT, dT, pV, iT, a;
 		if( iL ) {
 			for( var i=iL.length-1;i>-1;i-- ){
 				if( iL[i].properties ) {
-					iT = itemById(cL,iL[i][typ]); // the instance's type.
+					iT = itemByKey(cL,iL[i][typ]); // the instance's type.
 					// ToDo: error 919 is equal to 903, but there has been a case in which 919 has been raised. 
 					if( !iT ) return {status:919, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
-					for( var a=iL[i].properties.length-1;a>-1;a-- ){
+					for( a=iL[i].properties.length-1;a>-1;a-- ){
 						// Property's propertyType must point to a propertyType of the respective type 
-						pT = itemById(iT[pClasses],iL[i].properties[a][pClass]);
-						if( !pT ) return {status:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference a valid propertyType"}; 
+						pT = itemByKey( data.p						pT = itemByKey( data.propertyClasses, iL[i].properties[a].class ) 	// starting v0.10.6 resp v0.11.6
+							|| .properties[a][pClass]);			// up until v0.10.5 resp 			// up until v0.10.5 resp v0.11.2atus:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference a valid propertyType"}; 
 						
 						// Property's value ("content") must fit to the respective type's range
 						pV = iL[i].properties[a].value;
 						if( pV ) {
 							// according to the schema, all property values are of type 'string', including boolean and numbers:
-							dT = itemById(data.dataTypes,pT.dataType);
+							dT = itemByKey(data.dataTypes,pT.dataType);
 							if( !dT ) return {status:904, statusText: "propertyClass with identifier '"+pT.id+"' must reference a valid dataType"}; 
 							switch(dT.type) {
 								case 'xhtml':
 								case 'xs:string': 
 									if( dT.maxLength==undefined ) break;
 									let txt = "property of instance with identifier '"+iL[i].id+"': string must not exceed maxLength";
-									switch( typeof pV ) {
+									switch( typeof(pV) ) {
 										case 'object':
 											// pV is a list with some text in different languages, so check every one of them:
 											for( var p=pV.length-1;p>-1;p-- ) {
@@ -356,7 +382,7 @@ function checkConstraints( data ) {
 		if( ndL ) {
 			var rc = null;
 			for( var i=ndL.length-1;i>-1;i-- ){
-				if( !existsByKey(rL,ndL[i].resource) ) return {status:909, statusText: "hierarchy node with identifier '"+ndL[i].id+"' must reference a valid resource"};	// check the node itself
+				if( itemByKey(rL,ndL[i].resource)==undefined ) return {status:909, statusText: "hierarchy node with identifier '"+ndL[i].id+"' must reference a valid resource"};	// check the node itself
 				rc = checkNodes(rL,ndL[i].nodes);	// check references of next hierarchy levels recursively
 				if(rc.status!=0) return rc	
 			}
@@ -371,35 +397,60 @@ function checkConstraints( data ) {
 			if( L[i].id === id ) return i;   // return list index 
 		return -1
 	}
-	function itemById(L,id) {
-		if(!L||!id) return null;
-		// given the id of an element in a list, return the element itself:
-		id = id.trim();
-		for( var i=L.length-1;i>-1;i-- )
-			if( L[i].id === id ) return L[i];  // return list item
-		return null
-	}
-	function existsByKey( L, el ) {
-		// Return true, if an item with the key el does exist in L
+/*	function existsByKey( L, k ) {
+		// Return the item in L with key k 
 		//  - If the item in item list (L) has no specified revision, the reference may not specify a revision>0.
-		//  - If el has no revision or revision==0, any item in L having the same id is acceptable
-		//  - If el has a revision, there must be an item in L with the same key consisting of id and revision.
+		//  - If k has no revision or revision==0, any item in L having the same id is acceptable
+		//  - If k has a revision, there must be an item in L with the same key consisting of id and revision.
 		//  - The uniqueness of keys has been checked, before.
 
-		// normalize el:
-		switch( typeof el ) {
+		// normalize k:
+		switch( typeof(k) ) {
 			case 'object': break;
-			case 'string': el = {id: el, revision: 0}; break;
+			case 'string': k = {id: k, revision: 0}; break;
 			default: return null
 		};
-		let lR=null, eR = el.revision || 0;
+		let lR=null, eR = k.revision || 0;
 		for( var i=L.length-1;i>-1;i-- ) {
 			lR = L[i].revision || 0;
-			// check existence of el:
-			if ( L[i].id==el.id && ( lR==eR || eR==0 ) ) return true
+			// check existence of k:
+			if ( L[i].id==k.id && ( lR==eR || eR==0 ) ) return true
 		};
 		return false
-	}
+	}  */
+	function itemByKey( L, k ) {
+		// Return the item in L with key k 
+		//  - If the item in item list (L) has no specified revision, the reference may not specify a revision>0.
+		//  - If k has no revision or revision==0, the item in L having the latest revision applies.
+		//  - If k has a revision, the item in L having an an equal or the next lower revision applies.
+		//  - The uniqueness of keys has been checked, before.
+
+		// normalize the key k:
+		switch( typeof(k) ) {
+			case 'object': break;
+			case 'string': k = {id: k, revision: 0}; break;
+			default: return null
+		};
+		if(  )
+		// find all elements with the same id:
+		let sId = L.filter( function(el) { return el.id==k.id });
+		if( sId.length<1 ) return undefined;
+		// we assume that all found elements have a revision or there is a single item without:
+		if( typeof(sId[0].revision)==undefined ) {
+			// a single item without revision:
+			if( k.revision>0 ) return null
+			else return sId[0] // both the found element and the key have no revision
+		};
+		// The elements in L have a revision and there may be more than 1 of them:
+		// sort revisions with descending order:
+		sId.sort(function(laurel, hardy) { return hardy.revision - laurel.revision });
+		if( k.revision == 0 ) return sId[0]; // the latest revision
+		// find all elements with equal or smaller revision:
+		sId = sId.filter( function(el) { return el.revision<=k.revision });
+		if( sId.length>0 ) return sId[0];
+		// else, there is no element with the requested revision:
+		return undefined
+	}  
 	function errorsText(eL) {
 		var eT = '';
 		eL.forEach( function(e) { eT += (eT.length?',\n':'')+e.statusText+' ('+status+')'} );

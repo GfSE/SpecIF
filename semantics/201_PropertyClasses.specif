@@ -26,7 +26,7 @@
           "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "PC-PlnNotation",
+          "id": "PC-Notation",
           "title": "SpecIF:Notation",
           "dataType": "DT-ShortString",
           "revision": 1,
