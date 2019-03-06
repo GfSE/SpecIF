@@ -435,7 +435,7 @@ function checkConstraints( data ) {
 		let sId = L.filter( function(el) { return el.id==k.id });
 		if( sId.length<1 ) return undefined;
 		// we assume that all found elements have a revision or there is a single item without:
-		if( typeof(sId[0].revision)==undefined ) {
+		if( sId[0].revision==undefined ) {
 			// a single item without revision:
 			if( k.revision>0 ) return null
 			else return sId[0] // both the found element and the key have no revision
