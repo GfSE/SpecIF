@@ -148,9 +148,10 @@
       "type": "string"
     },
     "specifVersion": {
+	  "description": "The schema version to use.",
       "type": "string",
-      "pattern": "^\\d+(\\.\\d+){1,2}$"
-    },
+      "pattern": "^0.11.6$"
+	},
     "generator": {
       "type": "string"
     },
