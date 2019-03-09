@@ -97,7 +97,7 @@
       "type": "string"
     },
     "specifVersion": {
-	  "description": "The schema version to use.",
+      "description": "The schema version to use.",
       "type": "string",
       "pattern": "^0.10.6$"
 	},
