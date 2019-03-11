@@ -1,14 +1,12 @@
-SpecIF Semantics Definition
+SpecIF class and data type definitions
 ===========================
-This folder contains the semantic definition for the SpecIF metatypes:
+This folder contains the data type and class definitions for the SpecIF metatypes:
 * Datatypes
 * Property Classes
 * Resource Classes
 * Hierarchy Classes
 * Statement Classes
 * Hierarchy Classes
-
-The SpecIF-files included here define the datatypes and type classes for SpecIF. 
 
 <b>It is currently still under development and under discussion and can change fast and widely until the first release version of SpecIF!</b>
 
