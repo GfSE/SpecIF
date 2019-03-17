@@ -80,9 +80,7 @@
       "title": "SpecIF:Issue",
       "description": "An 'Issue' is a question to answer or decision to take which is worth tracking.",
       "instantiation": [ "user", "auto" ],
-      "propertyClasses": ["PC-VisibleId", "PC-Name", "PC-Text", "PC-IssStatus", "PC-Priority", "PC-Responsible", "PC-DueDate"]     
-	  "propertyClasses": [
-      ],
+      "propertyClasses": ["PC-VisibleId", "PC-Name", "PC-Text", "PC-IssStatus", "PC-Priority", "PC-Responsible", "PC-DueDate"],
       "revision": 1,
       "changedAt": "2016-05-26T08:59:00+02:00"
     }
