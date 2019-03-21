@@ -1,7 +1,7 @@
 {
-  "id": "http://specif.de/v0.11.6/schema#",
+  "id": "http://specif.de/v0.11.7/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "JSON-Schema for SpecIF v0.11.6",
+  "title": "JSON-Schema for SpecIF v0.11.7",
   "description": "SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.",
   "definitions": {
 	"id": {
@@ -150,7 +150,7 @@
     "specifVersion": {
       "description": "The schema version to use.",
       "type": "string",
-      "pattern": "^0.11.6$"
+      "pattern": "^0.11.7$"
 	},
     "generator": {
       "type": "string"
@@ -397,7 +397,7 @@
                     "$ref": "#/definitions/id"
                   },
                   "title": {
-                    "type": "string"
+                    "$ref": "#/definitions/value"
                   }
                 },
                 "required": [ "id", "title" ]
@@ -469,6 +469,9 @@
           "description": {
             "type": "string"
           },
+          "extends": {
+            "$ref": "#/definitions/key"
+          },
           "icon": {
             "$ref": "#/definitions/icon"
           },
@@ -515,6 +518,9 @@
           "description": {
             "type": "string"
           },
+          "extends": {
+            "$ref": "#/definitions/key"
+          },
           "icon": {
             "$ref": "#/definitions/icon"
           },
@@ -552,49 +558,6 @@
           },
           "revision": {
             "$ref": "#/definitions/revision"
-          },
-          "changedAt": {
-            "$ref": "#/definitions/dateTime"
-          },
-          "changedBy": {
-            "type": "string"
-          }
-        },
-        "required": [ "id", "title", "changedAt" ]
-      }
-    },
-    "hierarchyClasses": {
-      "description": "The type definitions for hierarchy roots.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "$ref": "#/definitions/id"
-          },
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "icon": {
-            "$ref": "#/definitions/icon"
-          },
-          "instantiation": {
-            "$ref": "#/definitions/instantiation"
-          },
-          "propertyClasses": {
-            "type": "array",
-			"description": "A collection of keys of eligible property classes",
-			"minItems": 1,
-			"uniqueItems": true,
-            "items": {
-              "$ref": "#/definitions/key"
-            }
-          },
-          "revision": {
-			"$ref": "#/definitions/revision"
           },
           "changedAt": {
             "$ref": "#/definitions/dateTime"
@@ -675,41 +638,7 @@
       }
     },
     "hierarchies": {
-      "description": "Hierarchy trees, each referencing resources to constitute an outline, bill-of-material or similar.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "$ref": "#/definitions/id"
-          },
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "class": {
-            "$ref": "#/definitions/key"
-          },
-          "properties": {
-            "$ref": "#/definitions/properties"
-          },
-          "nodes": {
-            "$ref": "#/definitions/nodes"
-          },
-          "revision": {
-            "$ref": "#/definitions/revision"
-          },
-          "changedAt": {
-            "$ref": "#/definitions/dateTime"
-          },
-          "changedBy": {
-            "type": "string"
-          }
-        },
-        "required": [ "id", "title", "class", "nodes", "changedAt" ]
-      }
+      "$ref": "#/definitions/nodes"
     },
     "files": {
       "type": "array",
@@ -723,7 +652,6 @@
     "dataTypes",
     "resourceClasses",
     "statementClasses",
-    "hierarchyClasses",
     "resources",
     "statements",
     "hierarchies"
