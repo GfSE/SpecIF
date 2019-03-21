@@ -419,6 +419,9 @@
           "description": {
             "type": "string"
           },
+          "extends": {
+            "$ref": "#/definitions/id"
+          },
           "icon": {
             "$ref": "#/definitions/icon"
           },
@@ -464,6 +467,9 @@
           },
           "description": {
             "type": "string"
+          },
+          "extends": {
+            "$ref": "#/definitions/id"
           },
           "icon": {
             "$ref": "#/definitions/icon"
