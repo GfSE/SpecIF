@@ -98,9 +98,12 @@
           },
           "changedAt": {
             "$ref": "#/definitions/dateTime"
+          },
+          "changedBy": {
+            "type": "string"
           }
         },
-        "required": [ "id", "resource" ]
+        "required": [ "id", "resource", "changedAt" ]
       }
     },
     "properties": {
