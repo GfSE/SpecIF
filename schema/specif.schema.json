@@ -39,7 +39,7 @@
       "pattern": "^(\\d{4}(?!\\d{2}\\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
     },
     "icon": {
-      "description": "A symbol for display as a prefix to titles; applicable to the instances of the class where it is defined. Can be any HTML-encoded character or a string with length 1..7 beginning with a certain special character or an empty string.",
+      "description": "A symbol for display as a prefix to titles; applicable to the instances of the class. Is usually a HTML-encoded UTF-8 symbol.",
       "type": "string"
     },
     "instantiation": {
@@ -645,7 +645,29 @@
     },
     "files": {
       "type": "array",
-      "items": {}
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "In case of a file, the id is ideally an absolute or relative URL.",
+            "$ref": "#/definitions/id"
+          },
+          "title": {
+            "type": "string"
+          },
+          "type": {
+            "description": "The media type of the file (formerly MIME-type) according to https://www.iana.org/assignments/media-types/media-types.xhtml.",
+            "type": "string"
+          },
+          "changedAt": {
+            "$ref": "#/definitions/dateTime"
+          },
+          "changedBy": {
+            "type": "string"
+          }
+        },
+        "required": [ "id", "title", "type", "changedAt" ]
+      }
     }
   },
   "required": [ 
