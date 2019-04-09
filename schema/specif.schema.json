@@ -94,11 +94,11 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "type": "string",
+            "$ref": "#/definitions/value",
             "description": "The node's label; if missing, the title of the referenced resource is applied."
           },
           "description": {
-            "type": "string"
+            "$ref": "#/definitions/value"
           },
           "resource": {
             "description": "The pointer to the resource to be displayed at this position.",
@@ -134,11 +134,11 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "type": "string",
+            "$ref": "#/definitions/value",
             "description": "The property's label; if missing, the title of the property's class is applied."
           },
           "description": {
-            "type": "string"
+            "$ref": "#/definitions/value"
           },
           "class": {
             "$ref": "#/definitions/key",
@@ -172,10 +172,10 @@
       "$ref": "#/definitions/id"
     },
     "title": {
-      "type": "string"
+      "$ref": "#/definitions/value"
     },
     "description": {
-      "type": "string"
+      "$ref": "#/definitions/value"
     },
     "specifVersion": {
       "description": "The schema version to use.",
@@ -259,10 +259,10 @@
               "$ref": "#/definitions/id"
             },
             "title": {
-              "type": "string"
+              "$ref": "#/definitions/value"
             },
             "description": {
-              "type": "string"
+              "$ref": "#/definitions/value"
             },
             "value": {
               "$ref": "#/definitions/value",
@@ -296,10 +296,10 @@
               "$ref": "#/definitions/id"
             },
             "title": {
-              "type": "string"
+              "$ref": "#/definitions/value"
             },
             "description": {
-              "type": "string"
+              "$ref": "#/definitions/value"
             },
             "min":  {
               "type": "number",
@@ -343,10 +343,10 @@
               "$ref": "#/definitions/id"
             },
             "title": {
-              "type": "string"
+              "$ref": "#/definitions/value"
             },
             "description": {
-              "type": "string"
+              "$ref": "#/definitions/value"
             },
             "accuracy": {
               "type": "integer",
@@ -396,10 +396,10 @@
               "$ref": "#/definitions/id"
             },
             "title": {
-              "type": "string"
+              "$ref": "#/definitions/value"
             },
             "description": {
-              "type": "string"
+              "$ref": "#/definitions/value"
             },
             "maxLength":  {
               "type": "integer",
@@ -439,10 +439,10 @@
               "$ref": "#/definitions/id"
             },
             "title": {
-              "type": "string"
+              "$ref": "#/definitions/value"
             },
             "description": {
-              "type": "string"
+              "$ref": "#/definitions/value"
             },
             "values": {
               "type": "array",
@@ -498,10 +498,10 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "type": "string"
+            "$ref": "#/definitions/value"
           },
           "description": {
-            "type": "string"
+            "$ref": "#/definitions/value"
           },
           "dataType": {
             "$ref": "#/definitions/key",
@@ -541,10 +541,10 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "type": "string"
+            "$ref": "#/definitions/value"
           },
           "description": {
-            "type": "string"
+            "$ref": "#/definitions/value"
           },
           "extends": {
             "$ref": "#/definitions/key"
@@ -594,10 +594,10 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "type": "string"
+            "$ref": "#/definitions/value"
           },
           "description": {
-            "type": "string"
+            "$ref": "#/definitions/value"
           },
           "extends": {
             "$ref": "#/definitions/key"
@@ -666,7 +666,10 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "type": "string"
+            "$ref": "#/definitions/value"
+          },
+          "description": {
+            "$ref": "#/definitions/value"
           },
           "class": {
             "$ref": "#/definitions/key",
@@ -701,7 +704,10 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "type": "string"
+            "$ref": "#/definitions/value"
+          },
+          "description": {
+            "$ref": "#/definitions/value"
           },
           "class": {
             "$ref": "#/definitions/key",
@@ -744,11 +750,11 @@
             "$ref": "#/definitions/key"
           },
           "title": {
-            "type": "string",
+            "$ref": "#/definitions/value",
             "description": "The node's label; if missing, the title of the referenced resource is applied."
           },
           "description": {
-            "type": "string"
+            "$ref": "#/definitions/value"
           },
           "resource": {
             "description": "The pointer to the resource to be displayed at this position.",
@@ -784,7 +790,10 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "type": "string"
+            "$ref": "#/definitions/value"
+          },
+          "description": {
+            "$ref": "#/definitions/value"
           },
           "type": {
             "description": "The file's media type (formerly MIME-type) according to https://www.iana.org/assignments/media-types/media-types.xhtml.",
