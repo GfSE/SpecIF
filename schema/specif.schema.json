@@ -9,6 +9,19 @@
       "type": "string",
       "pattern": "^[_a-zA-Z]{1}[_a-zA-Z0-9.-]*$"
     },
+    "revision": {
+      "description": "A revision tag with one or multiple blocks with alphanumeric characters separated by a special character [.:,;/-]. Sequential as well as branching/merging notations are possible.",
+      "type": "string",
+      "pattern": "^(?:[0-9a-zA-Z]+[.:,;\/-])*[0-9a-zA-Z]+$"
+    },
+    "replaces": {
+      "description": "For change and configuration management; the first revision has 0 entries, a simple modification has 1 entry and the result of a merge has 2 entries.",
+      "type": "array",
+      "maxItems": 2,
+      "items": {
+        "$ref": "#/definitions/revision"
+      }
+    },
     "dateTime": {
       "description": "An ISO-8601 dateTime string. For reduced accuracy, any number of values may be dropped, but only from right to left.",
       "type": "string",
@@ -25,19 +38,6 @@
       "items": {
         "type": "string",
         "enum": [ "auto", "user" ]
-      }
-    },
-    "revision": {
-      "description": "A revision tag with one or multiple blocks with alphanumeric characters separated by a special character [.:,;/-]. Sequential as well as branching/merging notations are possible.",
-      "type": "string",
-      "pattern": "^(?:[0-9a-zA-Z]+[.:,;\/-])*[0-9a-zA-Z]+$"
-    },
-    "replaces": {
-      "description": "For change and configuration management; the first revision has 0 entries, a simple modification has 1 entry and the result of a merge has 2 entries.",
-      "type": "array",
-      "maxItems": 2,
-      "items": {
-        "$ref": "#/definitions/revision"
       }
     },
     "nodes": {
@@ -440,11 +440,11 @@
           },
           "additionalProperties": false,
           "required": [ "id", "title", "type", "changedAt" ]
-        }]	
+        }]
       }
     },
     "propertyClasses": {
-      "description": "Class definition of a property for resources or statements. Is a sub-element of the respective resourceClass or statementClass.",
+      "description": "Class definition of a property for resources or statements. Is a sub-element of the respective resourceClass or statementClass. If no revision or change information is specified, the respective values of the parent element apply.",
       "type": "array",
       "uniqueItems": true,
       "items": {
@@ -469,7 +469,7 @@
           },
           "value": {
             "type": "string",
-            "description": "An optional default value in case a property does not define a value."
+            "description": "An optional default value in case neither a property nor it's propertyClass defines a value."
           },
           "revision": {
             "$ref": "#/definitions/revision"
@@ -525,7 +525,7 @@
             }
           },
           "revision": {
-	        "$ref": "#/definitions/revision"
+            "$ref": "#/definitions/revision"
           },
           "replaces": {
             "$ref": "#/definitions/replaces"
@@ -638,7 +638,7 @@
             "$ref": "#/definitions/replaces"
           },
           "changedAt": {
-			"$ref": "#/definitions/dateTime"
+            "$ref": "#/definitions/dateTime"
           },
           "changedBy": {
             "type": "string"
