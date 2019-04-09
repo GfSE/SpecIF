@@ -516,7 +516,7 @@
           },
           "propertyClasses": {
             "type": "array",
-            "description": "A collection of id's of eligible property classes",
+            "description": "A collection of ids of eligible property classes",
             "minItems": 0,
             "uniqueItems": true,
             "items": {
@@ -624,6 +624,9 @@
           "title": {
             "type": "string"
           },
+          "description": {
+            "type": "string"
+          },
           "class": {
             "$ref": "#/definitions/id",
             "description": "Must be a member of resourceClasses."
@@ -657,6 +660,9 @@
             "$ref": "#/definitions/id"
           },
           "title": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           },
           "class": {
@@ -740,6 +746,9 @@
             "$ref": "#/definitions/id"
           },
           "title": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           },
           "type": {
