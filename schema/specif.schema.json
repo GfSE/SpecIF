@@ -1,45 +1,53 @@
 {
-  "id": "http://specif.de/v0.11.7/schema#",
+  "id": "http://specif.de/v0.11.8/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "JSON-Schema for SpecIF v0.11.7",
+  "title": "JSON-Schema for SpecIF v0.11.8",
   "description": "SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.",
   "definitions": {
-	"id": {
-	  "description": "A unique identifier.",
-	  "type": "string",
-	  "pattern": "^[_a-zA-Z]{1}[_a-zA-Z0-9.-]*$"
-	},
-	"revision": {
-	  "description": "Every update gets an incremented revision number; if items have the same revision number, they have been changed in a common transaction.",
-	  "type": "integer",
-	  "minimum": 0
-	},
-	"key": {
-	  "description": "A unique key for a particular revision of an identifiable item, e.g. of a resource.",
-	  "oneOf": [{
-		"description": "A string with a valid identifier; where the last revision (i.e. revision=0) is implied.",
+    "id": {
+      "description": "A unique identifier.",
+      "type": "string",
+      "pattern": "^[_a-zA-Z]{1}[_a-zA-Z0-9.-]*$"
+    },
+    "revision": {
+      "description": "A revision tag with one or multiple blocks with alphanumeric characters separated by a special character [.:,;/-]. Sequential as well as branching/merging notations are possible.",
+      "type": "string",
+      "pattern": "^(?:[0-9a-zA-Z]+[.:,;\/-])*[0-9a-zA-Z]+$"
+    },
+    "replaces": {
+      "description": "For change and configuration management; the first revision has 0 entries, a simple modification has 1 entry and the result of a merge has 2 entries.",
+      "type": "array",
+      "maxItems": 2,
+      "items": {
+        "$ref": "#/definitions/revision"
+      }
+    },
+    "key": {
+      "description": "A unique key for a particular revision of an identifiable item, e.g. of a resource.",
+      "oneOf": [{
+        "description": "A string with a valid identifier; where the last revision (i.e. revision=0) is implied.",
         "$ref": "#/definitions/id"
-	  }, {
-		"description": "A key consisting of a valid identifier and a revision. Revision=0 means the latest revision of the identified item. If the revision does not exist, the next lower existing revision applies.",
-		"type": "object",
-		"properties": {
-		  "id": {
-			"$ref": "#/definitions/id"
-		  },
-		  "revision": {
-			"$ref": "#/definitions/revision"
-		  }
-		},
-		"required": [ "id" ]
-	  }]
-	},
+      }, {
+        "description": "A key consisting of a valid identifier and a revision. Revision=0 means the latest revision of the identified item. If the revision does not exist, the next lower existing revision applies.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/id"
+          },
+          "revision": {
+            "$ref": "#/definitions/revision"
+          }
+        },
+        "required": [ "id" ]
+      }]
+    },
     "dateTime": {
       "description": "An ISO-8601 dateTime string. For reduced accuracy, any number of values may be dropped, but only from right to left.",
       "type": "string",
       "pattern": "^(\\d{4}(?!\\d{2}\\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
     },
     "icon": {
-      "description": "A symbol for display as a prefix to titles; applicable to the instances of the class. Is usually a HTML-encoded UTF-8 symbol.",
+      "description": "A symbol for display as a prefix to titles; applicable to all instances of the class. Is usually a XML-encoded UTF-8 symbol.",
       "type": "string"
     },
     "instantiation": {
@@ -73,7 +81,7 @@
             },
             "additionalProperties": false,
             "required": [ "text", "language" ]
-        }		
+        }
       }]
     },
     "nodes": {
@@ -84,6 +92,13 @@
         "properties": {
           "id": {
             "$ref": "#/definitions/id"
+          },
+          "title": {
+            "type": "string",
+            "description": "The node's label; if missing, the title of the referenced resource is applied."
+          },
+          "description": {
+            "type": "string"
           },
           "resource": {
             "description": "The pointer to the resource to be displayed at this position.",
@@ -96,6 +111,9 @@
           "revision": {
             "$ref": "#/definitions/revision"
           },
+          "replaces": {
+            "$ref": "#/definitions/replaces"
+          },
           "changedAt": {
             "$ref": "#/definitions/dateTime"
           },
@@ -103,11 +121,11 @@
             "type": "string"
           }
         },
-        "required": [ "id", "resource", "changedAt" ]
+        "required": [ "resource" ]
       }
     },
     "properties": {
-      "description": "A property value for a resource, statement or hierarchy.",
+      "description": "A property of a resource or statement.",
       "type": "array",
       "items": {
         "type": "object",
@@ -117,22 +135,31 @@
           },
           "title": {
             "type": "string",
-			"description": "The label; if missing, the title of the property's class is applied."
+            "description": "The property's label; if missing, the title of the property's class is applied."
           },
           "description": {
             "type": "string"
           },
           "class": {
-            "$ref": "#/definitions/key"
+            "$ref": "#/definitions/key",
+            "description": "Must be a member of propertyClasses. In addition, it must be listed in the propertyClasses of the parent's class."
           },
           "value": {
-            "$ref": "#/definitions/value"
+            "$ref": "#/definitions/value",
+            "description": "If the value is unknown, omit the whole property. By default, the class' value applies."
           },
           "revision": {
             "$ref": "#/definitions/revision"
           },
+          "replaces": {
+            "$ref": "#/definitions/replaces"
+          },
           "changedAt": {
-            "$ref": "#/definitions/dateTime"
+            "$ref": "#/definitions/dateTime",
+            "description": "Without change information, the parent's change information applies."
+          },
+          "changedBy": {
+            "type": "string"
           }
         },
         "required": [ "class", "value" ]
@@ -153,8 +180,8 @@
     "specifVersion": {
       "description": "The schema version to use.",
       "type": "string",
-      "pattern": "^0.11.7$"
-	},
+      "pattern": "^0.11.8$"
+    },
     "generator": {
       "type": "string"
     },
@@ -180,7 +207,7 @@
       "$ref": "#/definitions/dateTime"
     },
     "createdBy": {
-      "description": "The creator of the SpecIF structure (file). If specified, at least an e-mail address must be given.",
+      "description": "The creator of the SpecIF data-set (file). If specified, at least an e-mail address must be given.",
       "type": "object",
       "properties": {
         "familyName": {
@@ -237,8 +264,15 @@
             "description": {
               "type": "string"
             },
+            "value": {
+              "$ref": "#/definitions/value",
+              "description": "An optional default value in case neither a property nor it's propertyClass defines a value."
+            },
             "revision": {
               "$ref": "#/definitions/revision"
+            },
+            "replaces": {
+              "$ref": "#/definitions/replaces"
             },
             "changedAt": {
               "$ref": "#/definitions/dateTime"
@@ -277,8 +311,15 @@
               "title": "Maximum Value of a Number",
               "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
             },
+            "value": {
+              "$ref": "#/definitions/value",
+              "description": "An optional default value in case neither a property nor it's propertyClass defines a value."
+            },
             "revision": {
               "$ref": "#/definitions/revision"
+            },
+            "replaces": {
+              "$ref": "#/definitions/replaces"
             },
             "changedAt": {
               "$ref": "#/definitions/dateTime"
@@ -323,8 +364,15 @@
               "title": "Maximum Value of a Number",
               "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
             },
+            "value": {
+              "$ref": "#/definitions/value",
+              "description": "An optional default value in case neither a property nor it's propertyClass defines a value."
+            },
             "revision": {
               "$ref": "#/definitions/revision"
+            },
+            "replaces": {
+              "$ref": "#/definitions/replaces"
             },
             "changedAt": {
               "$ref": "#/definitions/dateTime"
@@ -359,8 +407,15 @@
               "description": "Optional use by dataTypes 'xs:string' and 'XHTML'.",
               "minimum": 0
             },
+            "value": {
+              "$ref": "#/definitions/value",
+              "description": "An optional default value in case neither a property nor it's propertyClass defines a value."
+            },
             "revision": {
               "$ref": "#/definitions/revision"
+            },
+            "replaces": {
+              "$ref": "#/definitions/replaces"
             },
             "changedAt": {
               "$ref": "#/definitions/dateTime"
@@ -399,19 +454,26 @@
                   "id": {
                     "$ref": "#/definitions/id"
                   },
-                  "title": {
+                  "value": {
                     "$ref": "#/definitions/value"
                   }
                 },
-                "required": [ "id", "title" ]
+                "required": [ "id", "value" ]
               }
             },
             "multiple": {
               "type": "boolean",
               "description": "Optional use by dataType 'xs:enumeration'. Indicates whether multiple values can be chosen; by default the value is 'false'."
             },
+            "value": {
+              "$ref": "#/definitions/value",
+              "description": "An optional default value in case neither a property nor it's propertyClass defines a value."
+            },
             "revision": {
               "$ref": "#/definitions/revision"
+            },
+            "replaces": {
+              "$ref": "#/definitions/replaces"
             },
             "changedAt": {
               "$ref": "#/definitions/dateTime"
@@ -422,12 +484,13 @@
           },
           "additionalProperties": false,
           "required": [ "id", "title", "type", "changedAt" ]
-        }]	
+        }]
       }
     },
     "propertyClasses": {
-      "description": "Class definition of a property for resources, statements or hierarchies. Is a sub-element of the respective resourceClass, statementClass or hierarchyClass. If no revision or change information is specified, the respective values of the parent element apply.",
+      "description": "Class definition of a property for resources or statements. Is a sub-element of the respective resourceClass or statementClass. If no revision or change information is specified, the respective values of the parent element apply.",
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "properties": {
@@ -441,20 +504,31 @@
             "type": "string"
           },
           "dataType": {
-            "$ref": "#/definitions/key"
+            "$ref": "#/definitions/key",
+            "description": "Must be a member of dataTypes."
           },
           "multiple": {
             "type": "boolean",
             "description": "Optional use by a propertyClass with dataType 'xs:enumeration'. Indicates whether multiple values can be chosen. If omitted, the 'multiple' property of the dataType applies; by default the value is 'false'."
           },
+          "value": {
+            "$ref": "#/definitions/value",
+            "description": "An optional default value in case neither a property nor it's propertyClass defines a value."
+          },
           "revision": {
             "$ref": "#/definitions/revision"
           },
+          "replaces": {
+            "$ref": "#/definitions/replaces"
+          },
           "changedAt": {
             "$ref": "#/definitions/dateTime"
+          },
+          "changedBy": {
+            "type": "string"
           }
         },
-        "required": [ "id", "dataType" ]
+        "required": [ "id", "title", "dataType", "changedAt" ]
       }
     },
     "resourceClasses": {
@@ -486,24 +560,28 @@
           },
           "propertyClasses": {
             "type": "array",
-			"description": "A collection of keys of eligible property classes",
-			"minItems": 1,
-			"uniqueItems": true,
+            "description": "A collection of keys of eligible property classes",
+            "minItems": 0,
+            "uniqueItems": true,
             "items": {
-              "$ref": "#/definitions/key"
+              "$ref": "#/definitions/key",
+              "description": "Must be a member of propertyClasses."
             }
           },
           "revision": {
             "$ref": "#/definitions/revision"
           },
+          "replaces": {
+            "$ref": "#/definitions/replaces"
+          },
           "changedAt": {
-	        "$ref": "#/definitions/dateTime"
+            "$ref": "#/definitions/dateTime"
           },
           "changedBy": {
             "type": "string"
           }
         },
-        "required": [ "id", "title", "propertyClasses", "changedAt" ]
+        "required": [ "id", "title", "changedAt" ]
       }
     },
     "statementClasses": {
@@ -530,37 +608,43 @@
           "instantiation": {
             "$ref": "#/definitions/instantiation"
           },
+          "propertyClasses": {
+            "type": "array",
+            "description": "A collection of keys of eligible property classes",
+            "minItems": 0,
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/definitions/key",
+              "description": "Must be a member of propertyClasses."
+            }
+          },
           "subjectClasses": {
             "type": "array",
-			"title": "Eligible Resource Classes as Subject",
-			"description": "A collection of id's of eligible resource classes; if missing, all resource classes are eligible",
+            "title": "Eligible Resource Classes as Subject",
+            "description": "A collection of id's of eligible resource classes; if missing, all resource classes are eligible.",
             "minItems": 1,
             "uniqueItems": true,
             "items": {
-              "$ref": "#/definitions/key"
+              "$ref": "#/definitions/key",
+              "description": "Must be a member of resourceClasses."
             }
           },
           "objectClasses": {
             "type": "array",
-			"title": "Eligible Resource Classes as Object",
-			"description": "A collection of id's of eligible resource classes; if missing, all resource classes are eligible",
+            "title": "Eligible Resource Classes as Object",
+            "description": "A collection of id's of eligible resource classes; if missing, all resource classes are eligible.",
             "minItems": 1,
             "uniqueItems": true,
             "items": {
-              "$ref": "#/definitions/key"
-            }
-          },
-          "propertyClasses": {
-            "type": "array",
-			"description": "A collection of keys of eligible property classes",
-			"minItems": 1,
-			"uniqueItems": true,
-            "items": {
-              "$ref": "#/definitions/key"
+              "$ref": "#/definitions/key",
+              "description": "Must be a member of resourceClasses."
             }
           },
           "revision": {
             "$ref": "#/definitions/revision"
+          },
+          "replaces": {
+            "$ref": "#/definitions/replaces"
           },
           "changedAt": {
             "$ref": "#/definitions/dateTime"
@@ -585,13 +669,17 @@
             "type": "string"
           },
           "class": {
-            "$ref": "#/definitions/key"
+            "$ref": "#/definitions/key",
+            "description": "Must be a member of resourceClasses."
           },
           "properties": {
             "$ref": "#/definitions/properties"
           },
           "revision": {
             "$ref": "#/definitions/revision"
+          },
+          "replaces": {
+            "$ref": "#/definitions/replaces"
           },
           "changedAt": {
             "$ref": "#/definitions/dateTime"
@@ -600,7 +688,7 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "class", "properties", "changedAt" ]
+        "required": [ "id", "title", "class", "changedAt" ]
       }
     },
     "statements": {
@@ -616,19 +704,25 @@
             "type": "string"
           },
           "class": {
-            "$ref": "#/definitions/key"
+            "$ref": "#/definitions/key",
+            "description": "Must be a member of statementClasses."
           },
           "subject": {
-            "$ref": "#/definitions/key"
+            "$ref": "#/definitions/key",
+            "description": "Must be a member of resources."
           },
           "object": {
-            "$ref": "#/definitions/key"
+            "$ref": "#/definitions/key",
+            "description": "Must be a member of resources."
           },
           "properties": {
             "$ref": "#/definitions/properties"
           },
           "revision": {
             "$ref": "#/definitions/revision"
+          },
+          "replaces": {
+            "$ref": "#/definitions/replaces"
           },
           "changedAt": {
             "$ref": "#/definitions/dateTime"
@@ -641,7 +735,44 @@
       }
     },
     "hierarchies": {
-      "$ref": "#/definitions/nodes"
+      "description": "A list of hierarchies with pointers to resources; may be nested to build a tree, i.e. a hierarchy of pointers.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/key"
+          },
+          "title": {
+            "type": "string",
+            "description": "The node's label; if missing, the title of the referenced resource is applied."
+          },
+          "description": {
+            "type": "string"
+          },
+          "resource": {
+            "description": "The pointer to the resource to be displayed at this position.",
+            "$ref": "#/definitions/id"
+          },
+          "nodes": {
+            "description": "The next hierarchy level.",
+            "$ref": "#/definitions/nodes"
+          },
+          "revision": {
+            "$ref": "#/definitions/revision"
+          },
+          "replaces": {
+            "$ref": "#/definitions/replaces"
+          },
+          "changedAt": {
+            "$ref": "#/definitions/dateTime"
+          },
+          "changedBy": {
+            "type": "string"
+          }
+        },
+        "required": [ "id", "resource", "changedAt" ]
+      }
     },
     "files": {
       "type": "array",
@@ -656,8 +787,14 @@
             "type": "string"
           },
           "type": {
-            "description": "The media type of the file (formerly MIME-type) according to https://www.iana.org/assignments/media-types/media-types.xhtml.",
+            "description": "The file's media type (formerly MIME-type) according to https://www.iana.org/assignments/media-types/media-types.xhtml.",
             "type": "string"
+          },
+          "revision": {
+            "$ref": "#/definitions/revision"
+          },
+          "replaces": {
+            "$ref": "#/definitions/replaces"
           },
           "changedAt": {
             "$ref": "#/definitions/dateTime"
@@ -674,7 +811,6 @@
     "id",
     "title",
     "specifVersion",
-    "dataTypes",
     "resourceClasses",
     "statementClasses",
     "resources",
