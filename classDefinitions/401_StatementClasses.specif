@@ -1,92 +1,99 @@
 {
-  "id": "53658CB5-376D-4DC2-B8BD-02DA2C625B32",
+  "id": "_53658CB5_376D_4DC2_B8BD_02DA2C625B32",
   "title": "SpecIF statement class definitions",
-  "specifVersion": "0.10.4",
+  "specifVersion": "0.11.8",
   "dataTypes": [],
   "resourceClasses": [],
   "statementClasses": [
-    {
-      "id": "SC-shows",
-      "title": "SpecIF:shows",
-      "description": "Statement: Plan shows Model-Element",
-      "instantiation": [ "auto" ],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "RC-Pln" ],
-      "objectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ]
-    },
-    {
-      "id": "SC-contains",
-      "title": "SpecIF:contains",
-      "description": "Statement: Model-Element contains Model-Element",
-      "instantiation": [ "auto", "user" ],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ],
-      "objectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ]
-    },
-    {
-      "id": "SC-modifies",
-      "title": "SpecIF:modifies",
-      "description": "Statement: Actor (Role, Function) writes and reads State (Information)",
-      "instantiation": [ "auto" ],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "RC-Act" ],
-      "objectClasses": [ "RC-Sta" ]
-    },
-    {
-      "id": "SC-writes",
-      "title": "SpecIF:writes",
-      "description": "Statement: Actor (Role, Function) writes State (Information)",
-      "instantiation": [ "auto" ],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "RC-Act" ],
-      "objectClasses": [ "RC-Sta" ]
-    },
-    {
-      "id": "SC-reads",
-      "title": "SpecIF:reads",
-      "description": "Statement: Actor (Role, Function) reads State (Information)",
-      "instantiation": [ "auto" ],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "RC-Act" ],
-      "objectClasses": [ "RC-Sta" ]
-    },
-    {
-      "id": "SC-dependsOn",
-      "title": "SpecIF:dependsOn",
-      "description": "Statement: Requirement/Feature depends on Requirement/Feature",
-      "instantiation": [ "user" ],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "RC-Req" ],
-      "objectClasses": [ "RC-Req" ]
-    },
-    {
-      "id": "SC-satisfies",
-      "title": "oslc_rm:satisfies",
-      "description": "Statement: Model-Element satisfies Requirement",
-      "instantiation": [ "user" ],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ],
-      "objectClasses": [ "RC-Req" ]
-    },
-    {
-      "id": "SC-refersTo",
-      "title": "SpecIF:refersTo",
-      "description": "Statement: Open Issue concerns Plan/Model-Element/Requirement",
-      "instantiation": [ "user", "auto" ],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00",
-      "subjectClasses": [ "RC-Iss" ],
-      "objectClasses": [ "RC-Pln", "RC-Act", "RC-Sta", "RC-Evt", "RC-Req" ]
-    }
+	{
+		"id": "SC-shows",
+		"title": "SpecIF:shows",
+		"description": "Statement: Plan resp. diagram shows Model-Element",
+		"instantiation": [ "auto" ],
+		"revision": "main/1",
+		"replaces": [],
+		"changedAt": "2016-05-26T08:59:00+02:00",
+		"subjectClasses": [ "RC-Pln" ],
+		"objectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ]
+	},
+	{
+		"id": "SC-contains",
+		"title": "SpecIF:contains",
+		"description": "Statement: Model-Element contains Model-Element",
+		"instantiation": [ "auto", "user" ],
+		"revision": "main/1",
+		"replaces": [],
+		"changedAt": "2016-05-26T08:59:00+02:00",
+		"subjectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ],
+		"objectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ]
+	},
+	{
+		"id": "SC-modifies",
+		"title": "SpecIF:modifies",
+		"description": "Statement: Actor (Role, Function) writes and reads State (Information)",
+		"instantiation": [ "auto" ],
+		"revision": "main/1",
+		"replaces": [],
+		"changedAt": "2016-05-26T08:59:00+02:00",
+		"subjectClasses": [ "RC-Act" ],
+		"objectClasses": [ "RC-Sta" ]
+	},
+	{
+		"id": "SC-writes",
+		"title": "SpecIF:writes",
+		"description": "Statement: Actor (Role, Function) writes State (Information)",
+		"instantiation": [ "auto" ],
+		"revision": "main/1",
+		"replaces": [],
+		"changedAt": "2016-05-26T08:59:00+02:00",
+		"subjectClasses": [ "RC-Act" ],
+		"objectClasses": [ "RC-Sta" ]
+	},
+	{
+		"id": "SC-reads",
+		"title": "SpecIF:reads",
+		"description": "Statement: Actor (Role, Function) reads State (Information)",
+		"instantiation": [ "auto" ],
+		"revision": "main/1",
+		"replaces": [],
+		"changedAt": "2016-05-26T08:59:00+02:00",
+		"subjectClasses": [ "RC-Act" ],
+		"objectClasses": [ "RC-Sta" ]
+	},
+	{
+		"id": "SC-dependsOn",
+		"title": "SpecIF:dependsOn",
+		"description": "Statement: Requirement/Feature depends on Requirement/Feature",
+		"instantiation": [ "user" ],
+		"revision": "main/1",
+		"replaces": [],
+		"changedAt": "2016-05-26T08:59:00+02:00",
+		"subjectClasses": [ "RC-Req" ],
+		"objectClasses": [ "RC-Req" ]
+	},
+	{
+		"id": "SC-satisfies",
+		"title": "oslc_rm:satisfies",
+		"description": "Statement: Model-Element satisfies Requirement",
+		"instantiation": [ "user" ],
+		"revision": "main/1",
+		"replaces": [],
+		"changedAt": "2016-05-26T08:59:00+02:00",
+		"subjectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ],
+		"objectClasses": [ "RC-Req" ]
+	},
+	{
+		"id": "SC-refersTo",
+		"title": "SpecIF:refersTo",
+		"description": "Statement: Open Issue concerns Plan/Model-Element/Requirement",
+		"instantiation": [ "user", "auto" ],
+		"revision": "main/1",
+		"replaces": [],
+		"changedAt": "2016-05-26T08:59:00+02:00",
+		"subjectClasses": [ "RC-Iss" ],
+		"objectClasses": [ "RC-Pln", "RC-Act", "RC-Sta", "RC-Evt", "RC-Req" ]
+	}
   ],
-  "hierarchyClasses": [],
   "resources": [],
   "statements": [],
   "hierarchies": []

@@ -1,11 +1,10 @@
 {
-  "id": "3555D75E-0344-4BDF-B127-2340C7F2BF9A",
+  "id": "_3555D75E_0344_4BDF_B127_2340C7F2BF9A",
   "title": "Empty SpecIF file",
-  "specifVersion": "0.11.2",
+  "specifVersion": "0.11.8",
   "dataTypes": [],
   "resourceClasses": [],
   "statementClasses": [],
-  "hierarchyClasses": [],
   "resources": [],
   "statements": [],
   "hierarchies": []

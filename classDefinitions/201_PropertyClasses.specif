@@ -1,56 +1,71 @@
 {
-  "id": "C9426323-BA53-492D-96EC-77D42A2FBA2A",
-  "title": "SpecIF property class definitions",
-  "specifVersion": "0.10.6",
-  "dataTypes": [],
+	"id": "_C9426323_BA53_492D_96EC_77D42A2FBA2A",
+	"title": "SpecIF property class definitions",
+	"specifVersion": "0.11.8",
+	"dataTypes": [],
 	"propertyClasses": [
 		{
 			"id": "PC-VisibleId",
 			"title": "dcterms:identifier",
 			"dataType": "DT-ShortString",
-			"revision": 1,
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
 		},
 		{
 			"id": "PC-Name",
 			"title": "dcterms:title",
 			"dataType": "DT-ShortString",
-			"revision": 1,
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
 		},
 		{
 			"id": "PC-Text",
 			"title": "dcterms:description",
 			"dataType": "DT-FormattedText",
-			"revision": 1,
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
+		},
+		{
+			"id": "PC-Abstract",
+			"title": "dcterms:abstract",
+			"dataType": "DT-FormattedText",
+			"revision": "main/1",
+			"replaces": [],
+			"changedAt": "2019-04-14T08:59:00+02:00"
 		},
 		{
 			"id": "PC-Notation",
 			"title": "SpecIF:Notation",
 			"dataType": "DT-ShortString",
-			"revision": 1,
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
 		},
 		{
 			"id": "PC-Status",
 			"title": "SpecIF:Status",
 			"dataType": "DT-Status",
-			"revision": 1,
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
 		},
 		{
 			"id": "PC-Priority",
 			"title": "SpecIF:Priority",
 			"dataType": "DT-Priority",
-			"revision": 1,
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
 		},
 		{
 			"id": "PC-Perspective",
 			"title": "SpecIF:Perspective",
 			"dataType": "DT-Perspective",
-			"revision": 1,
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
 		},
 		{
@@ -58,62 +73,70 @@
 			"title": "SpecIF:Discipline",
 			"dataType": "DT-Discipline",
 			"multiple": true,
-			"revision": 1,
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
 		},
 		{
 			"id": "PC-SupplierStatus",
 			"title": "HIS:SupplierStatus",
 			"dataType": "DT-SupplierStatus",
-			"revision": 1,
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
 		},
 		{
 			"id": "PC-SupplierComment",
 			"title": "HIS:SupplierComment",
 			"dataType": "DT-Text",
-			"revision": 1,
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
 		},
 		{
 			"id": "PC-OemStatus",
 			"title": "HIS:OemStatus",
 			"dataType": "DT-OemStatus",
-			"revision": 1,
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
 		},
 		{
 			"id": "PC-OemComment",
 			"title": "HIS:OemComment",
 			"dataType": "DT-Text",
-			"revision": 1,
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
 		},
 		{
 			"id": "PC-Responsible",
 			"title": "SpecIF:Responsible",
 			"dataType": "DT-ShortString",
-			"revision": 1,
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
 		},
 		{
 			"id": "PC-DueDate",
 			"title": "SpecIF:DueDate",
 			"dataType": "DT-Date",
-			"revision": 1,
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
 		},
 		{
 			"id": "PC-Stereotype",
 			"title": "SpecIF:Stereotype",
 			"dataType": "DT-ShortString",
+			"revision": "main/1",
+			"replaces": [],
 			"changedAt": "2019-03-31T17:10:23.443Z"
 		}
 	],
-  "resourceClasses": [],
-  "statementClasses": [],
-  "hierarchyClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+	"resourceClasses": [],
+	"statementClasses": [],
+	"resources": [],
+	"statements": [],
+	"hierarchies": []
 }

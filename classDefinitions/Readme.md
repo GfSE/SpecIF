@@ -4,9 +4,7 @@ This folder contains the data type and class definitions for the SpecIF metatype
 * Datatypes
 * Property Classes
 * Resource Classes
-* Hierarchy Classes
 * Statement Classes
-* Hierarchy Classes
 
 <b>It is currently still under development and under discussion and can change fast and widely until the first release version of SpecIF!</b>
 
@@ -31,7 +29,7 @@ Currently the following digits are assigned with the SpecIF metatypes. It is pos
 |   2 | Property Classes |
 |   3 | Resource Classes |
 |   4 | Statement Classes |
-|   5 | Hierarchy Classes |
+
 
 ## What about the file `Empty.specif` ?
 

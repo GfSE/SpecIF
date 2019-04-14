@@ -1,93 +1,163 @@
 {
-  "id": "9A8A2E7E-39D9-4929-B602-33E9C42594EA",
-  "title": "SpecIF resource class definitions",
-  "specifVersion": "0.10.6",
-  "dataTypes": [],
-  "propertyClasses": [],
-  "resourceClasses": [
-    {
-      "id": "RC-Folder",
-      "title": "SpecIF:Heading",
-      "description": "Folders with title and text for chapters or descriptive paragraphs.",
-      "instantiation": [ "user" ],
-      "propertyClasses": ["PC-Name", "PC-Text"],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00",
-      "isHeading": true
-    },
-    {
-      "id": "RC-Diagram",
-      "title": "SpecIF:Diagram",
-      "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
-      "icon": "&#9635;",
-      "instantiation": [ "auto" ],
-      "propertyClasses": ["PC-Name", "PC-Text", "PC-Notation", "PC-Status", "PC-SupplierStatus", "PC-SupplierComment", "PC-OemStatus", "PC-OemComment"],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "RC-Actor",
-      "title": "FMC:Actor",
-      "description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
-      "icon": "&#9632;",
-      "instantiation": [ "auto" ],
-      "propertyClasses": ["PC-Name", "PC-Text", "PC-Status"],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "RC-State",
-      "title": "FMC:State",
-      "description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape.",
-      "icon": "&#9679;",
-      "instantiation": [ "auto" ],
-      "propertyClasses": ["PC-Name", "PC-Text", "PC-Status"],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "RC-Event",
-      "title": "FMC:Event",
-      "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
-      "icon": "&#9830;",
-      "instantiation": [ "auto" ],
-      "propertyClasses": ["PC-Name", "PC-Text", "PC-Status"],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "RC-Requirement",
-      "title": "IREB:Requirement",
-      "description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
-      "icon": "&#8623;",
-      "instantiation": [ "user" ],
-      "propertyClasses": ["PC-VisibleId", "PC-Name", "PC-Text", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline",  "PC-SupplierStatus", "PC-SupplierComment", "PC-OemStatus", "PC-OemComment"],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "RC-Feature",
-      "title": "SpecIF:Feature",
-      "description": "A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition.",
-      "icon": "&#10038;",
-      "instantiation": [ "user" ],
-      "propertyClasses": ["PC-VisibleId", "PC-Name", "PC-Text", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline",  "PC-SupplierStatus", "PC-SupplierComment", "PC-OemStatus", "PC-OemComment"],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "RC-Issue",
-      "title": "SpecIF:Issue",
-      "description": "An 'Issue' is a question to answer or decision to take which is worth tracking.",
-      "instantiation": [ "user", "auto" ],
-      "propertyClasses": ["PC-VisibleId", "PC-Name", "PC-Text", "PC-IssStatus", "PC-Priority", "PC-Responsible", "PC-DueDate"],
-      "revision": 1,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    }
-  ],
-  "statementClasses": [],
-  "hierarchyClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+	"id": "_9A8A2E7E_39D9_4929_B602_33E9C42594EA",
+	"title": "SpecIF resource class definitions",
+	"specifVersion": "0.11.8",
+	"dataTypes": [],
+	"propertyClasses": [],
+	"resourceClasses": [
+		{
+			"id": "RC-Folder",
+			"title": "SpecIF:Heading",
+			"description": "Folders with title and text for chapters or descriptive paragraphs.",
+			"instantiation": [ "user" ],
+			"propertyClasses": [ "PC-Name", "PC-Text" ],
+			"revision": "main/1",
+			"replaces": [],
+			"changedAt": "2016-05-26T08:59:00+02:00",
+			"isHeading": true
+		},
+		{
+			"id": "RC-Diagram",
+			"title": "SpecIF:Diagram",
+			"description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
+			"icon": "&#9635;",
+			"instantiation": [ "auto" ],
+			"propertyClasses": [ "PC-Name", "PC-Text", "PC-Notation", "PC-Abstract", "PC-Status" ],
+			"revision": "main/1",
+			"replaces": [],
+			"changedAt": "2016-05-26T08:59:00+02:00"
+		},
+		{
+			"id": "RC-VDA_Diagram",
+			"title": "VDA:Diagram",
+			"description": "A 'VDA:Diagram' is a Diagram with automotive-process-specific properties.",
+			"extends": {
+				"id": "RC-Diagram",
+				"revision": "main/1"
+			},
+			"icon": "&#9635;",
+			"instantiation": [ "auto" ],
+			"propertyClasses": [ "PC-SupplierStatus", "PC-SupplierComment", "PC-OemStatus", "PC-OemComment" ],
+			"revision": "main/1",
+			"replaces": [],
+			"changedAt": "2016-05-26T08:59:00+02:00"
+		},
+		{
+			"id": "RC-Actor",
+			"title": "FMC:Actor",
+			"description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
+			"icon": "&#9632;",
+			"instantiation": [ "auto" ],
+			"propertyClasses": [ "PC-Name", "PC-Text", "PC-Status" ],
+			"revision": "main/1",
+			"replaces": [],
+			"changedAt": "2016-05-26T08:59:00+02:00"
+		},
+		{
+			"id": "RC-State",
+			"title": "FMC:State",
+			"description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape.",
+			"icon": "&#9679;",
+			"instantiation": [ "auto" ],
+			"propertyClasses": [ "PC-Name", "PC-Text", "PC-Status" ],
+			"revision": "main/1",
+			"replaces": [],
+			"changedAt": "2016-05-26T08:59:00+02:00"
+		},
+		{
+			"id": "RC-Event",
+			"title": "FMC:Event",
+			"description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
+			"icon": "&#9830;",
+			"instantiation": [ "auto" ],
+			"propertyClasses": [ "PC-Name", "PC-Text", "PC-Status" ],
+			"revision": "main/1",
+			"replaces": [],
+			"changedAt": "2016-05-26T08:59:00+02:00"
+		},
+		{
+			"id": "RC-Requirement",
+			"title": "IREB:Requirement",
+			"description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
+			"icon": "&#8623;",
+			"instantiation": [ "user" ],
+			"propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Text", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline" ],
+			"revision": "main/1",
+			"replaces": [],
+			"changedAt": "2016-05-26T08:59:00+02:00"
+		},
+		{
+			"id": "RC-VDA_Requirement",
+			"title": "VDA:Requirement",
+			"description": "A VDA:Requirement is a Requirement with additional automotive-process-specific properties.",
+			"extends": {
+				"id": "RC-Requirement",
+				"revision": "main/1"
+			},
+			"icon": "&#8623;",
+			"instantiation": [ "user" ],
+			"propertyClasses": [ "PC-SupplierStatus", "PC-SupplierComment", "PC-OemStatus", "PC-OemComment" ],
+			"revision": "main/1",
+			"replaces": [],
+			"changedAt": "2019-04-14T08:59:00+02:00"
+		},
+		{
+			"id": "RC-Feature",
+			"title": "SpecIF:Feature",
+			"description": "A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition.",
+			"icon": "&#10038;",
+			"instantiation": [ "user" ],
+			"propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Text", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline", "PC-SupplierStatus", "PC-SupplierComment", "PC-OemStatus", "PC-OemComment" ],
+			"revision": "main/1",
+			"replaces": [],
+			"changedAt": "2016-05-26T08:59:00+02:00"
+		},
+		{
+			"id": "RC-VDA_Feature",
+			"title": "VDA:Feature",
+			"description": "A 'VDA:Feature' is a Feature with automotiev specific properties.",
+			"extends": {
+				"id": "RC-Feature",
+				"revision": "main/1"
+			},
+			"icon": "&#10038;",
+			"instantiation": [ "user" ],
+			"propertyClasses": [ "PC-SupplierStatus", "PC-SupplierComment", "PC-OemStatus", "PC-OemComment" ],
+			"revision": "main/1",
+			"replaces": [],
+			"changedAt": "2019-05-14T08:59:00+02:00"
+		},
+		{
+			"id": "RC-Issue",
+			"title": "SpecIF:Issue",
+			"description": "An 'Issue' is a question to answer or decision to take which is worth tracking.",
+			"instantiation": [ "user", "auto" ],
+			"propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Text", "PC-IssStatus", "PC-Priority", "PC-Responsible", "PC-DueDate" ],
+			"revision": "main/1",
+			"replaces": [],
+			"changedAt": "2016-05-26T08:59:00+02:00"
+		},
+		{
+			"id": "RC-Hierarchy",
+			"title": "SpecIF:Hierarchy",
+			"description": "Root node of a hierarchically organized specification (outline).",
+			"propertyClasses": [ "PC-Name", "PC-Text" ],
+			"revision": "main/1",
+			"replaces": [],
+			"changedAt": "2016-05-26T08:59:00+02:00"
+		},
+		{
+			"id": "RC-BillOfMaterials",
+			"title": "SpecIF:BillOfMaterials",
+			"description": "Root node of a bill of materials or product structure (sometimes bill of material, BOM or associated list) is a list of the raw materials, sub-assemblies, intermediate assemblies, sub-components, parts and the quantities of each needed to manufacture an end product. A BOM may be used for communication between manufacturing partners, or confined to a single manufacturing plant.",
+			"propertyClasses": [ "PC-Name", "PC-Text" ],
+			"revision": "main/1",
+			"replaces": [],
+			"changedAt": "2016-05-26T08:59:00+02:00"
+		}
+	],
+	"statementClasses": [],
+	"resources": [],
+	"statements": [],
+	"hierarchies": []
 }
