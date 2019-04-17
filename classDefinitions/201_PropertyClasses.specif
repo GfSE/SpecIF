@@ -29,8 +29,9 @@
 			"changedAt": "2016-05-26T08:59:00+02:00"
 		},
 		{
-			"id": "PC-Abstract",
-			"title": "dcterms:abstract",
+			"id": "PC-Diagram",
+			"title": "SpecIF:Diagram",
+			"description": "Contains the graphical representation of the diagram.", 
 			"dataType": "DT-FormattedText",
 			"revision": "main/1",
 			"replaces": [],

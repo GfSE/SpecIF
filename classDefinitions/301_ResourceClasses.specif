@@ -22,7 +22,7 @@
 			"description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
 			"icon": "&#9635;",
 			"instantiation": [ "auto" ],
-			"propertyClasses": [ "PC-Name", "PC-Text", "PC-Notation", "PC-Abstract", "PC-Status" ],
+			"propertyClasses": [ "PC-Name", "PC-Text", "PC-Diagram", "PC-Notation", "PC-Status" ],
 			"revision": "main/1",
 			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"
