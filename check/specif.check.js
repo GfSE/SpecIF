@@ -35,7 +35,8 @@ function checkConstraints( data ) {
 	switch( data.specifVersion ) {
 		case '0.10.0':
 		case '0.10.1':
-			return { status: 903, statusText: 'SpecIF version '+data.specifVersion+' is not any more supported!' };
+		case '0.10.7':
+			return { status: 903, statusText: 'SpecIF version '+data.specifVersion+' is not supported!' };
 		case '0.10.2':
 		case '0.10.3':
 			var rClasses = 'resourceTypes',
@@ -49,7 +50,9 @@ function checkConstraints( data ) {
 				subClasses = 'subjectTypes',
 				objClasses = 'objectTypes';
 			break;
-		default:
+		case '0.10.4':
+		case '0.10.5':
+		case '0.10.6':
 			var rClasses = 'resourceClasses',
 				sClasses = 'statementClasses',
 				hClasses = 'hierarchyClasses',
@@ -57,6 +60,16 @@ function checkConstraints( data ) {
 				rClass = 'class',
 				sClass = 'class',
 				hClass = 'class',
+				pClass = 'class',
+				subClasses = 'subjectClasses',
+				objClasses = 'objectClasses';
+			break;
+		default:
+			var rClasses = 'resourceClasses',
+				sClasses = 'statementClasses',
+				pClasses = 'propertyClasses',
+				rClass = 'class',
+				sClass = 'class',
 				pClass = 'class',
 				subClasses = 'subjectClasses',
 				objClasses = 'objectClasses'
@@ -71,18 +84,9 @@ function checkConstraints( data ) {
 	// dataTypes must respect certain constraints depending on their base type:
 	rc = checkDataTypes( data.dataTypes );
 	if( rc.status>0 ) errL.push(rc);
-	// in case of resources, the value of "class" must be the id of a member of "resourceClasses":
-	rc = checkClasses( data[rClasses], data.resources, rClass );
-	if( rc.status>0 ) errL.push(rc);
-	// in case of statements, the value of "class" must be the id of a member of "statementClasses":
-	rc = checkClasses( data[sClasses], data.statements, sClass );
-	if( rc.status>0 ) errL.push(rc);
-	// in case of hierarchies, the value of "class" must be the id of a member of "hierarchyClasses":
-	rc = checkClasses( data[hClasses], data.hierarchies, hClass );
-	if( rc.status>0 ) errL.push(rc);
 
 	// starting v0.10.6
-	// resourceClass', statementClass' and hierarchyClass' propertyClasses must must be ids of a member in 
+	// resourceClass', statementClass' and hierarchyClass' propertyClasses must be ids of a member in 
 	// propertyClasses at the top level; this is checked as a case in 'checkPropertyClasses'.
 	
 	// A propertyClass's "dataType" must be the id of a member of "dataTypes":
@@ -95,9 +99,22 @@ function checkConstraints( data ) {
 	rc = checkPropertyClasses( data[hClasses] );
 	if( rc.status>0 ) errL.push(rc);
 
-	// statementClass' subjectClasses and objectClasses must be resourceClass ids:
-	rc = checkStatementClasses( data[rClasses], data[sClasses] );
+	// statementClass' subjectClasses and objectClasses must be resourceClass or statementClass ids:
+	rc = checkStatementClasses();
 	if( rc.status>0 ) errL.push(rc);
+
+	// in case of resources, the value of "class" must be the id of a member of "resourceClasses":
+	rc = checkClasses( data[rClasses], data.resources, rClass );
+	if( rc.status>0 ) errL.push(rc);
+	// in case of statements, the value of "class" must be the id of a member of "statementClasses":
+	rc = checkClasses( data[sClasses], data.statements, sClass );
+	if( rc.status>0 ) errL.push(rc);
+	// in case of hierarchies, the value of "class" must be the id of a member of "hierarchyClasses",
+	// up until v0.10.7:
+	if( hClasses ) {
+		rc = checkClasses( data[hClasses], data.hierarchies, hClass );
+		if( rc.status>0 ) errL.push(rc);
+	};
 
 	// property values ("content") must fit the respective class' range:
 	rc = checkProperties( data[rClasses], data.resources, rClass );
@@ -186,23 +203,25 @@ function checkConstraints( data ) {
 		}
 	}
 	function checkDataTypes(L) {
-		for( var i=L.length-1;i>-1;i-- ){
-			switch(L[i].type) {
-				case 'xhtml':
-					if( data.specifVersion=='0.10.2' ) break;
-				case 'xs:string': 
-					// more restrictive than the schema, where maxLength is optional:
-					if( !L[i].maxLength ) return {status:928, statusText: "string types must have maxLength>0"};
-					break;
-				case 'xs:double':
-					// more restrictive than the schema, where accuracy is optional:
-					if( !L[i].accuracy ) return {status:929, statusText: "double types must have accuracy>0"};
-					// no break;
-				case 'xs:integer':
-					// more restrictive than the schema, where min and may are optional:
-					if( L[i].min==undefined || L[i].max==undefined || L[i].min+1>L[i].max ) return {status:929, statusText: "number types must have min and max"}
-			}						
-		};
+		// starting v0.10.8 the dataTypes are optional and thus may be omitted in simple cases:
+		if( L )
+			for( var i=L.length-1;i>-1;i-- ){
+				switch(L[i].type) {
+					case 'xhtml':
+						if( data.specifVersion=='0.10.2' ) break;
+					case 'xs:string': 
+						// more restrictive than the schema, where maxLength is optional:
+						if( !L[i].maxLength ) return {status:928, statusText: "string types must have maxLength>0"};
+						break;
+					case 'xs:double':
+						// more restrictive than the schema, where accuracy is optional:
+						if( !L[i].accuracy ) return {status:929, statusText: "double types must have accuracy>0"};
+						// no break;
+					case 'xs:integer':
+						// more restrictive than the schema, where min and may are optional:
+						if( L[i].min==undefined || L[i].max==undefined || L[i].min+1>L[i].max ) return {status:929, statusText: "number types must have min and max"}
+				}						
+			};
 		return {status:0, statusText: "dataTypes are correct"}
 	}
 	function checkClasses(cL,iL,type) {  // class list, instance list
@@ -215,38 +234,42 @@ function checkConstraints( data ) {
 		return {status:0, statusText: "instance's "+type+"s reference valid types"}	
 	}
 	function checkPropertyClasses(cL) {  // dataType list, class list
-		let pT, i, j;
-		for( i=cL.length-1;i>-1;i-- ){
-			if( cL[i][pClasses] ) {
-				for( j=cL[i][pClasses].length-1;j>-1;j-- ) {
-					pT = cL[i][pClasses][j];
-					// depending on the version and the context, pT is a string or an object:
-					switch( typeof(pT) ) {
-						case 'string':
-							// A string which must be the id of an element in data.propertyClasses;
-							// this applies to the propertyClasses of resourceClasses, statementClasses and hierarchyClasses starting v0.10.6:
-							if( indexById( data.propertyClasses, pT )<0 )
-								return {status:930, statusText: "property class '"+pT+"' of item with identifier '"+cL[i].id+"' must reference an item in 'propertyClasses'" }
-							break;
-						case 'object':
-							// An item in a list defining pClasses.
-							// A propertyClass' "dataType" must be the id of a member of "dataTypes".
-							// .. this is also checked in checkProperties;
-							// this applies to the propertyClasses of resourceClasses, statementClasses and hierarchyClasses up until v0.10.5 as well as the propertyClasses at the top level starting v0.10.6:
-							if( indexById(data.dataTypes,pT.dataType)<0 ) 
-								return {status:904, statusText: "property class with identifier '"+pT.id+"' must reference an item in 'dataTypes'"}
-							// If a propertyClass of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
-							break;
-						default:
+		if( cL ) {
+			let pT, i, j;
+			for( i=cL.length-1;i>-1;i-- ){
+				if( cL[i][pClasses] ) {
+					for( j=cL[i][pClasses].length-1;j>-1;j-- ) {
+						pT = cL[i][pClasses][j];
+						// depending on the version and the context, pT is a string or an object:
+						switch( typeof(pT) ) {
+							case 'string':
+								// A string which must be the id of an element in data.propertyClasses;
+								// this applies to the propertyClasses of resourceClasses, statementClasses and hierarchyClasses starting v0.10.6:
+								if( indexById( data.propertyClasses, pT )<0 )
+									return {status:930, statusText: "property class '"+pT+"' of item with identifier '"+cL[i].id+"' must reference an item in 'propertyClasses'" }
+								break;
+							case 'object':
+								// An item in a list defining pClasses.
+								// A propertyClass' "dataType" must be the id of a member of "dataTypes".
+								// .. this is also checked in checkProperties;
+								// this applies to the propertyClasses of resourceClasses, statementClasses and hierarchyClasses up until v0.10.5 as well as the propertyClasses at the top level starting v0.10.6:
+								if( indexById(data.dataTypes,pT.dataType)<0 ) 
+									return {status:904, statusText: "property class with identifier '"+pT.id+"' must reference an item in 'dataTypes'"}
+								// If a propertyClass of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
+								break;
+							default:
+						}
 					}
 				}
 			}
 		};
-		return {status:0, statusText: "propertyClasses reference valid dataTypes"}
+		return {status:0, statusText: "no property classes or propertyClasses reference valid dataTypes"}
 	}
-	function checkStatementClasses(rCL,sCL) {	// resourceClasses, statementClasses
-		// All statementClass' "subjectClasses" must be the id of a member of "resourceClasses". 
+	function checkStatementClasses() {	 
+		// All statementClass' "subjectClasses" must be the id of a member of "resourceClasses" or "statementClasses". 
 		// Similarly for "objectClasses".
+		let rCL = data[rClasses].concat(data[sClasses]), 
+			sCL = data[sClasses];	// statementClasses
 		for( var i=sCL.length-1;i>-1;i-- ){
 			if( !checkEls(rCL, sCL[i][subClasses]) ) 
 				return {status:906, statusText: subClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass };
