@@ -620,24 +620,24 @@
           },
           "subjectClasses": {
             "type": "array",
-            "title": "Eligible Resource Classes as Subject",
-            "description": "A collection of id's of eligible resource classes; if missing, all resource classes are eligible.",
+            "title": "Resource and statement classes eligible as subject",
+            "description": "A collection of id's of eligible resource and statement classes; if 'subjectClasses' is missing, all resource or statement classes are eligible.",
             "minItems": 1,
             "uniqueItems": true,
             "items": {
               "$ref": "#/definitions/key",
-              "description": "Must be a member of resourceClasses."
+              "description": "Must be a member of resourceClasses or statementClasses."
             }
           },
           "objectClasses": {
             "type": "array",
-            "title": "Eligible Resource Classes as Object",
-            "description": "A collection of id's of eligible resource classes; if missing, all resource classes are eligible.",
+            "title": "Resource and statement classes eligible as object",
+            "description": "A collection of id's of eligible resource and statement classes; if 'objectClasses' is missing, all resource or statement classes are eligible.",
             "minItems": 1,
             "uniqueItems": true,
             "items": {
               "$ref": "#/definitions/key",
-              "description": "Must be a member of resourceClasses."
+              "description": "Must be a member of resourceClasses or statementClasses."
             }
           },
           "revision": {
