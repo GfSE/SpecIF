@@ -513,7 +513,7 @@
           },
           "value": {
             "$ref": "#/definitions/value",
-            "description": "An optional default value in case neither a property nor it's propertyClass defines a value."
+            "description": "An optional default value in case the corresponding resource's or statement's property is missing."
           },
           "revision": {
             "$ref": "#/definitions/revision"
