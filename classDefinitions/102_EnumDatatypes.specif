@@ -107,6 +107,10 @@
 		"type": "xs:enumeration",
 		"values": [
 			{
+				"id": "V-discipline-4",
+				"title": "System"
+			},
+			{
 				"id": "V-discipline-0",
 				"title": "Mechanics"
 			},
