@@ -117,7 +117,7 @@
       "description": "A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition.",
       "icon": "&#10038;",
       "instantiation": [ "user" ],
-      "propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Text", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline", "PC-SupplierStatus", "PC-SupplierComment", "PC-OemStatus", "PC-OemComment" ],
+      "propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Text", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline" ],
       "revision": "main/1",
       "replaces": [],
       "changedAt": "2016-05-26T08:59:00+02:00"
