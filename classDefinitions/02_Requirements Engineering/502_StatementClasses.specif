@@ -1,0 +1,45 @@
+{
+    "id": "_6C2F780D-108C-4CFF-8AC6-E098CB4C8986",
+    "title": "SpecIF statement class definitions for domain 02-Requirements Engineering",
+    "specifVersion": "0.11.8",
+    "dataTypes": [],
+    "resourceClasses": [],
+    "statementClasses": [
+        {
+            "id": "SC-dependsOn",
+            "title": "SpecIF:dependsOn",
+            "description": "Statement: Requirement/Feature depends on Requirement/Feature",
+            "instantiation": [ "user" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00",
+            "subjectClasses": [ "RC-Req" ],
+            "objectClasses": [ "RC-Req" ]
+        },
+        {
+            "id": "SC-satisfies",
+            "title": "oslc_rm:satisfies",
+            "description": "Statement: Model-Element satisfies Requirement",
+            "instantiation": [ "user" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00",
+            "subjectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ],
+            "objectClasses": [ "RC-Req" ]
+        },
+        {
+            "id": "SC-refersTo",
+            "title": "SpecIF:refersTo",
+            "description": "Statement: Open Issue concerns Plan/Model-Element/Requirement",
+            "instantiation": [ "user", "auto" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00",
+            "subjectClasses": [ "RC-Iss" ],
+            "objectClasses": [ "RC-Pln", "RC-Act", "RC-Sta", "RC-Evt", "RC-Req" ]
+        }
+    ],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
+}

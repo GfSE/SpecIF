@@ -1,6 +1,6 @@
 {
 	"id": "_C9426323_BA53_492D_96EC_77D42A2FBA2A",
-	"title": "SpecIF property class definitions",
+	"title": "SpecIF property class definitions for domain 01-Base Definitions",
 	"specifVersion": "0.11.8",
 	"dataTypes": [],
 	"propertyClasses": [
@@ -74,38 +74,6 @@
 			"title": "SpecIF:Discipline",
 			"dataType": "DT-Discipline",
 			"multiple": true,
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2016-05-26T08:59:00+02:00"
-		},
-		{
-			"id": "PC-SupplierStatus",
-			"title": "HIS:SupplierStatus",
-			"dataType": "DT-SupplierStatus",
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2016-05-26T08:59:00+02:00"
-		},
-		{
-			"id": "PC-SupplierComment",
-			"title": "HIS:SupplierComment",
-			"dataType": "DT-Text",
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2016-05-26T08:59:00+02:00"
-		},
-		{
-			"id": "PC-OemStatus",
-			"title": "HIS:OemStatus",
-			"dataType": "DT-OemStatus",
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2016-05-26T08:59:00+02:00"
-		},
-		{
-			"id": "PC-OemComment",
-			"title": "HIS:OemComment",
-			"dataType": "DT-Text",
 			"revision": "main/1",
 			"replaces": [],
 			"changedAt": "2016-05-26T08:59:00+02:00"

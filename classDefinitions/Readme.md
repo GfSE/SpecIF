@@ -1,34 +1,57 @@
 SpecIF class and data type definitions
 ===========================
 This folder contains the data type and class definitions for the SpecIF metatypes:
-* Datatypes
-* Property Classes
-* Resource Classes
-* Statement Classes
+* Primitive data types
+* Enumeration data types
+* Property classes
+* Resource classes
+* Statement classes
 
 <b>It is currently still under development and under discussion and can change fast and widely until the first release version of SpecIF!</b>
 
 If you want to support the SpecIF standardization process, join us and take a look at https://specif.de.
 
+## Domains
+
+The definition of the SpecIF classes is organized in application domains. 
+This allows the definition of releases for some domains at the same time where 
+other domains are still under discussion and under development.
+
+### Domain types
+The following list shows the currently identified domains and their IDs:
+
+|Domain ID|Domain|Description|
+|---------|-|-|
+|01|Base definitions|Common definitions relevant for all domains (e.g. primitive data types)|
+|02|Requirements Engineering|Classical requirements engineering following the IREB definitions|
+|03|FMC modeling|SpecIF mapping for the Fundamental Modeling Concepts appoach|
+|04|Automotive Requirements Engineering|Automotive-specific requirements engineering extensions (VDA)|
+|05|Agile Requirements Engineering|Requirements engineering for agile development (e.g. epics and user stories)|
+|06|UML-SpecIF mapping|Extensions to map UML (Unified Modeling Lanaguage) models to SpecIF|
+|07|Issue Management|Issue and Task management|
+|08|BOM|Bill of materials|
+
 ## File naming schema
 For the discussion process the metadata files have a special naming schema with a 3 digit number as prefix in the filename:
 
 * The **first digit** stands for the meta type kind, that is defined by the file
-* The **next two digits** are counters, starting from 01 until 99
+* The **next two digits** are the domain IDs, listed above
 
-This makes it possible to define a metatype by a set of files with the same first digit and different counter numbers
+This makes it possible to define a metatype by a set of files with the same first digit describing the class definition kind and the next digits referencing the domain.
 
-<i>Example:</i> The files starting with `101_` and `102_` are both definitions of the same metatype (e.g. SpecIF-Datatypes) with the file counters `01` and `02`. The superset of all files starting with the same digit are building the complete specification for one metatype.
+<i>Example:</i> The files starting with `101_` is teh definition of primitive data types for the domain 01-Base definitions. 
+The superset of all files starting with the same digit are building the complete specification for one metatype.
 
 ## Current file naming schema
 Currently the following digits are assigned with the SpecIF metatypes. It is possible that this will change in the future, e.g when further metatypes are defined.
 
 |1st Digit|SpecIF Metatype|
 | ----|---------------|
-|   1 | Datatypes     |
-|   2 | Property Classes |
-|   3 | Resource Classes |
-|   4 | Statement Classes |
+|   1 | Primitive data types     |
+|   2 | Enumeration data types |
+|   3 | Property classes |
+|   4 | Resource classes |
+|   5 | Statement classes |
 
 
 ## What about the file `Empty.specif` ?

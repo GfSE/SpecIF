@@ -1,0 +1,45 @@
+{
+    "id": "_0791B811-0780-4392-84F2-A0032ED10B9F",
+    "title": "SpecIF property class definitions for doamin 04-Automotive Requirements Engineering",
+    "specifVersion": "0.11.8",
+    "dataTypes": [],
+    "propertyClasses": [
+        {
+            "id": "PC-SupplierStatus",
+            "title": "HIS:SupplierStatus",
+            "dataType": "DT-SupplierStatus",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-SupplierComment",
+            "title": "HIS:SupplierComment",
+            "dataType": "DT-Text",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-OemStatus",
+            "title": "HIS:OemStatus",
+            "dataType": "DT-OemStatus",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-OemComment",
+            "title": "HIS:OemComment",
+            "dataType": "DT-Text",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }
+    ],
+    "resourceClasses": [],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
+}

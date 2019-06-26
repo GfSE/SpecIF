@@ -1,0 +1,27 @@
+{
+    "id": "_7E4B253F-FB81-46FA-8BFA-BBE685F9F61E",
+    "title": "SpecIF resource class definitions for domain 05-Agile Requirements Engineering",
+    "specifVersion": "0.11.8",
+    "dataTypes": [],
+    "propertyClasses": [],
+    "resourceClasses": [
+        {
+            "id": "RC-Epic",
+            "title": "SCRUM:Epic",
+            "description": "An 'Epic' is a big user story and will be refined by user stories/requirements.",
+            "extends": {
+                "id": "RC-Requirement",
+                "revision": "main/1"
+            },
+            "instantiation": [ "user" ],
+            "propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Text", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-06-26T08:59:00+02:00"
+        }
+    ],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
+}

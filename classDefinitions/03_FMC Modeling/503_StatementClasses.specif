@@ -1,0 +1,67 @@
+{
+    "id": "_6C2F780D-108C-4CFF-8AC6-E098CB4C8986",
+    "title": "SpecIF statement class definitions for domain 03-FMC Modeling",
+    "specifVersion": "0.11.8",
+    "dataTypes": [],
+    "resourceClasses": [],
+    "statementClasses": [
+        {
+            "id": "SC-shows",
+            "title": "SpecIF:shows",
+            "description": "Statement: Plan resp. diagram shows Model-Element",
+            "instantiation": [ "auto" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00",
+            "subjectClasses": [ "RC-Pln" ],
+            "objectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ]
+        },
+        {
+            "id": "SC-contains",
+            "title": "SpecIF:contains",
+            "description": "Statement: Model-Element contains Model-Element",
+            "instantiation": [ "auto", "user" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00",
+            "subjectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ],
+            "objectClasses": [ "RC-Act", "RC-Sta", "RC-Evt" ]
+        },
+        {
+            "id": "SC-modifies",
+            "title": "SpecIF:modifies",
+            "description": "Statement: Actor (Role, Function) writes and reads State (Information)",
+            "instantiation": [ "auto" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00",
+            "subjectClasses": [ "RC-Act" ],
+            "objectClasses": [ "RC-Sta" ]
+        },
+        {
+            "id": "SC-writes",
+            "title": "SpecIF:writes",
+            "description": "Statement: Actor (Role, Function) writes State (Information)",
+            "instantiation": [ "auto" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00",
+            "subjectClasses": [ "RC-Act" ],
+            "objectClasses": [ "RC-Sta" ]
+        },
+        {
+            "id": "SC-reads",
+            "title": "SpecIF:reads",
+            "description": "Statement: Actor (Role, Function) reads State (Information)",
+            "instantiation": [ "auto" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00",
+            "subjectClasses": [ "RC-Act" ],
+            "objectClasses": [ "RC-Sta" ]
+        }
+    ],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
+}

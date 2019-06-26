@@ -1,0 +1,23 @@
+{
+    "id": "_373BFD06-84E9-4FF3-98EF-3DD047DD83F5",
+    "title": "SpecIF resource class definitions for domain 07-Issue Management",
+    "specifVersion": "0.11.8",
+    "dataTypes": [],
+    "propertyClasses": [],
+    "resourceClasses": [
+        {
+            "id": "RC-Issue",
+            "title": "SpecIF:Issue",
+            "description": "An 'Issue' is a question to answer or decision to take which is worth tracking.",
+            "instantiation": [ "user", "auto" ],
+            "propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Text", "PC-IssStatus", "PC-Priority", "PC-Responsible", "PC-DueDate" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }
+    ],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
+}
