@@ -23,7 +23,7 @@ function checkSchema( schema, data ) {
 function checkConstraints( data ) {
 	"use strict";
 	// Check the constraints of the concrete values in 'data'.
-	// SpecIF-Schema v0.10.2 up until v0.10.6 is supported.
+	// SpecIF-Schema v0.10.2 up until v0.10.8 is supported.
 	// With SpecIF-Schema v0.10.x there are no items with multiple revisions.
 	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseType:"text",responseText:"xyz"}
 	// ToDo: localize messages and provide them by call parameter.
@@ -101,6 +101,12 @@ function checkConstraints( data ) {
 
 	// statementClass' subjectClasses and objectClasses must be resourceClass or statementClass ids:
 	rc = checkStatementClasses();
+	if( rc.status>0 ) errL.push(rc);
+
+	// extends must specify a valid resource resp statement class: 
+	rc = checkClasses( data[rClasses], data[rClasses], 'extends' );
+	if( rc.status>0 ) errL.push(rc);
+	rc = checkClasses( data[sClasses], data[sClasses], 'extends' );
 	if( rc.status>0 ) errL.push(rc);
 
 	// in case of resources, the value of "class" must be the id of a member of "resourceClasses":
@@ -225,13 +231,16 @@ function checkConstraints( data ) {
 		return {status:0, statusText: "dataTypes are correct"}
 	}
 	function checkClasses(cL,iL,type) {  // class list, instance list
-		// In case of resources, the value of "class" must be the id of a member of "resourceClasses". 
-		// Similarly for statements and hierarchies.
+		// This routine is used in 2 situations:
+		// - In case of resourceClasses, the value of "extends" (if it exists) must be the id of a member of "resourceClasses". 
+		//   Similarly for statements.
+		// - In case of resources, the value of "class" must be the id of a member of "resourceClasses". 
+		//   Similarly for statements and hierarchies.
 		for( var i=iL.length-1;i>-1;i-- ){
-			if( indexById(cL, iL[i][type])<0 ) 
+			if( typeof(iL[i][type])=='string' && indexById(cL, iL[i][type])<0 ) 
 				return {status:903, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+type }
 		};
-		return {status:0, statusText: "instance's "+type+"s reference valid types"}	
+		return {status:0, statusText: "instance with identifier '"+iL[i].id+"' references valid classes"}	
 	}
 	function checkPropertyClasses(cL) {  // dataType list, class list
 		if( cL ) {
@@ -268,12 +277,12 @@ function checkConstraints( data ) {
 	function checkStatementClasses() {	 
 		// All statementClass' "subjectClasses" must be the id of a member of "resourceClasses" or "statementClasses". 
 		// Similarly for "objectClasses".
-		let rCL = data[rClasses].concat(data[sClasses]), 
+		let aCL = data[rClasses].concat(data[sClasses]), 
 			sCL = data[sClasses];	// statementClasses
 		for( var i=sCL.length-1;i>-1;i-- ){
-			if( !checkEls(rCL, sCL[i][subClasses]) ) 
+			if( !checkEls(aCL, sCL[i][subClasses]) ) 
 				return {status:906, statusText: subClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass };
-			if( !checkEls(rCL, sCL[i][objClasses]) ) 
+			if( !checkEls(aCL, sCL[i][objClasses]) ) 
 				return {status:907, statusText: objClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass }
 		};
 		return {status:0, statusText: "statementClass' "+subClasses+" and "+objClasses+" reference valid "+rClasses }
