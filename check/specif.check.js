@@ -35,6 +35,7 @@ function checkConstraints( data ) {
 	switch( data.specifVersion ) {
 		case '0.10.0':
 		case '0.10.1':
+		case '0.10.7':
 			return { status: 903, statusText: 'SpecIF version '+data.specifVersion+' is not any more supported!' };
 		case '0.10.2':
 		case '0.10.3':
@@ -50,7 +51,9 @@ function checkConstraints( data ) {
 				subClasses = 'subjectTypes',
 				objClasses = 'objectTypes';
 			break;
-		default:
+		case '0.10.4':
+		case '0.10.5':
+		case '0.10.6':
 			var rClasses = 'resourceClasses',
 				sClasses = 'statementClasses',
 				hClasses = 'hierarchyClasses',
@@ -58,6 +61,16 @@ function checkConstraints( data ) {
 				rClass = 'class',
 				sClass = 'class',
 				hClass = 'class',
+				pClass = 'class',
+				subClasses = 'subjectClasses',
+				objClasses = 'objectClasses';
+			break;
+		default:
+			var rClasses = 'resourceClasses',
+				sClasses = 'statementClasses',
+				pClasses = 'propertyClasses',
+				rClass = 'class',
+				sClass = 'class',
 				pClass = 'class',
 				subClasses = 'subjectClasses',
 				objClasses = 'objectClasses'
