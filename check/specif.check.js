@@ -320,7 +320,6 @@ function checkConstraints( data ) {
 				return {status:907, statusText: objClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass }
 		};
 		return {status:0, statusText: "statementClass' "+subClasses+" and "+objClasses+" reference valid "+rClasses };
-		return;
 
 		function checkEls(aCL,cL) {
 			// No subjectClasses resp. objectClasses means all defined resourceClasses are eligible.
