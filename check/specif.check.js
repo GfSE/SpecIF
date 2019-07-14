@@ -23,7 +23,8 @@ function checkSchema( schema, data ) {
 function checkConstraints( data ) {
 	"use strict";
 	// Check the constraints of the concrete values in 'data'.
-	// Applies to SpecIF schema 0.11.1 and later, where a key consisting of id plus revision is used to reference an item.
+	// SpecIF schema 0.11.1 up until 0.11.8 is supported.
+	// With SpecIF schema v0.11.x, a key consisting of id plus revision is used to reference an item.
 	// Data according SpecIF schema 0.10.2 and later passes, as well.
 	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseType:"text",responseText:"xyz"}
 	// ToDo: localize messages and provide them by call parameter.
@@ -36,6 +37,8 @@ function checkConstraints( data ) {
 		case '0.10.0':
 		case '0.10.1':
 		case '0.10.7':
+		case '0.11.0':
+		case '0.11.7':
 			return { status: 903, statusText: 'SpecIF version '+data.specifVersion+' is not any more supported!' };
 		case '0.10.2':
 		case '0.10.3':
@@ -54,6 +57,8 @@ function checkConstraints( data ) {
 		case '0.10.4':
 		case '0.10.5':
 		case '0.10.6':
+		case '0.11.2':
+		case '0.11.6':
 			var rClasses = 'resourceClasses',
 				sClasses = 'statementClasses',
 				hClasses = 'hierarchyClasses',
@@ -85,22 +90,13 @@ function checkConstraints( data ) {
 	// dataTypes must respect certain constraints depending on their base type:
 	rc = checkDataTypes( data.dataTypes );
 	if( rc.status>0 ) errL.push(rc);
-	// in case of resources, the value of "class" must be the id of a member of "resourceClasses":
-	rc = checkClasses( data[rClasses], data.resources, rClass );
-	if( rc.status>0 ) errL.push(rc);
-	// in case of statements, the value of "class" must be the id of a member of "statementClasses":
-	rc = checkClasses( data[sClasses], data.statements, sClass );
-	if( rc.status>0 ) errL.push(rc);
-	// in case of hierarchies, the value of "class" must be the id of a member of "hierarchyClasses":
-	rc = checkClasses( data[hClasses], data.hierarchies, hClass );
-	if( rc.status>0 ) errL.push(rc);
 
-	// starting v0.11.6
+	// starting  v0.10.6 resp. v0.11.6
 	// resourceClass', statementClass' and hierarchyClass' propertyClasses must must be keys of a member in 
 	// propertyClasses at the top level; this is checked as a case in 'checkPropertyClasses'.
 	
 	// A propertyClass's "dataType" must be the key of a member of "dataTypes":
-	rc = checkPropertyClasses( [data] );		// propertyClasses at top level starting with v0.10.6
+	rc = checkPropertyClasses( [data] );		// propertyClasses at top level starting with v0.10.6 and v0.11.6
 	if( rc.status>0 ) errL.push(rc);
 	rc = checkPropertyClasses( data[rClasses] );
 	if( rc.status>0 ) errL.push(rc);
@@ -109,17 +105,39 @@ function checkConstraints( data ) {
 	rc = checkPropertyClasses( data[hClasses] );
 	if( rc.status>0 ) errL.push(rc);
 
-	// statementClass' subjectClasses and objectClasses must be resourceClass ids:
-	rc = checkStatementClasses( data[rClasses], data[sClasses] );
+	// statementClass' subjectClasses and objectClasses must be resourceClass or statementClass ids:
+	rc = checkStatementClasses();
 	if( rc.status>0 ) errL.push(rc);
+
+	// extends must specify a valid resource resp statement class: 
+	rc = checkClasses( data[rClasses], data[rClasses], 'extends' );
+	if( rc.status>0 ) errL.push(rc);
+	rc = checkClasses( data[sClasses], data[sClasses], 'extends' );
+	if( rc.status>0 ) errL.push(rc);
+
+	// in case of resources, the value of "class" must be the id of a member of "resourceClasses":
+	rc = checkClasses( data[rClasses], data.resources, rClass );
+	if( rc.status>0 ) errL.push(rc);
+	// in case of statements, the value of "class" must be the id of a member of "statementClasses":
+	rc = checkClasses( data[sClasses], data.statements, sClass );
+	if( rc.status>0 ) errL.push(rc);
+	// in case of hierarchies, the value of "class" must be the id of a member of "hierarchyClasses",
+	// up until v0.10.6 resp. v0.11.6:
+	if( hClasses ) {
+		rc = checkClasses( data[hClasses], data.hierarchies, hClass );
+		if( rc.status>0 ) errL.push(rc)
+	};
 
 	// property values ("content") must fit the respective class' range:
 	rc = checkProperties( data[rClasses], data.resources, rClass );
 	if( rc.status>0 ) errL.push(rc);
 	rc = checkProperties( data[sClasses], data.statements, sClass );
 	if( rc.status>0 ) errL.push(rc);
-	rc = checkProperties( data[hClasses], data.hierarchies, hClass );
-	if( rc.status>0 ) errL.push(rc);
+	// up until v0.10.6:
+	if( hClasses ) {
+		rc = checkProperties( data[hClasses], data.hierarchies, hClass );
+		if( rc.status>0 ) errL.push(rc)
+	};
 
 	// statement's subject and object must be resource keys:
 	rc = checkStatements( data.resources, data.statements );
@@ -180,7 +198,7 @@ function checkConstraints( data ) {
 					};
 					return false
 				}
-			var e1=null, e2=null;
+			var rc=null, e1=null;
 			for( var i=L.length-1;i>-1;i-- ) {
 				// it has been checked by schema that valid identifiers are present where mandatory;
 				// so we can skip the checking for duplicates, if there is no id, e.g. in case of properties:
@@ -192,23 +210,23 @@ function checkConstraints( data ) {
 				if( containsByKey(allKeys,e1) ) return e1;
 				// check the identifiers of enumerated values in dataTypes:
 				if( e1.values ) {
-					e2 = duplicateKey(e1.values);
-					if( e2 ) return e2
+					rc = duplicateKey(e1.values);
+					if( rc ) return rc
 				};
 				// check the identifiers of propertyClasses, as well:
 				if( e1[pClasses] ) {
-					e2 = duplicateKey(e1[pClasses]);
-					if( e2 ) return e2
+					rc = duplicateKey(e1[pClasses]);
+					if( rc ) return rc
 				};
 				// the instance's properties may not have an id ...
 				if( e1.properties ) {
-					e2 = duplicateKey(e1.properties);
-					if( e2 ) return e2
+					rc = duplicateKey(e1.properties);
+					if( rc ) return rc
 				};
 				// check the hierarchy's nodes recursively:
 				if( e1.nodes ) {
-					e2 = duplicateKey(e1.nodes);
-					if( e2 ) return e2
+					rc = duplicateKey(e1.nodes);
+					if( rc ) return rc
 				}; 
 				// all is fine, but add the latest key to the list:
 				allKeys.push(e1)
@@ -217,84 +235,100 @@ function checkConstraints( data ) {
 		}
 	}
 	function checkDataTypes(L) {
-		for( var i=L.length-1;i>-1;i-- ){
-			switch(L[i].type) {
-				case 'xhtml':
-					if( data.specifVersion=='0.10.2' ) break;
-				case 'xs:string': 
-					// more restrictive than the schema, where maxLength is optional:
-					if( !L[i].maxLength ) return {status:928, statusText: "string and xhtml types must have maxLength>0"};
-					break;
-				case 'xs:double':
-					// more restrictive than the schema, where accuracy is optional:
-					if( !L[i].accuracy ) return {status:929, statusText: "double types must have accuracy>0"};
-					// no break;
-				case 'xs:integer':
-					// more restrictive than the schema, where min and may are optional:
-					if( L[i].min==undefined || L[i].max==undefined || L[i].min+1>L[i].max ) return {status:929, statusText: "number types must have min and max"}
-			}						
-		};
+		// starting v0.10.8 resp. v0.11.8 the dataTypes are optional and thus may be omitted in simple cases:
+		if( L )
+			for( var i=L.length-1;i>-1;i-- ){
+				switch(L[i].type) {
+					case 'xhtml':
+						if( data.specifVersion.indexOf('0.10.2')>-1
+							|| data.specifVersion.indexOf('0.11.1')>-1 ) break;
+					case 'xs:string': 
+						// more restrictive than the schema, where maxLength is optional:
+						if( !L[i].maxLength ) 
+							return {status:928, statusText: "string and xhtml types must have maxLength>0"};
+						break;
+					case 'xs:double':
+						// more restrictive than the schema, where accuracy is optional:
+						if( !L[i].accuracy ) 
+							return {status:929, statusText: "double types must have accuracy>0"};
+						// no break;
+					case 'xs:integer':
+						// more restrictive than the schema, where min and may are optional:
+						if( L[i].min==undefined || L[i].max==undefined || L[i].min+1>L[i].max ) 
+							return {status:929, statusText: "number types must have min and max"}
+				}						
+			};
 		return {status:0, statusText: "dataTypes are correct"}
 	}
 	function checkClasses(cL,iL,type) {  // class list, instance list
-		// In case of resources, the value of "class" must be the key of a member of "resourceClasses". 
-		// Similarly for statements and hierarchies.
+		// This routine is used in 2 situations:
+		// - In case of resourceClasses, the value of "extends" (if it exists) must be the key of a member of "resourceClasses". 
+		//   Similarly for statements.
+		// - In case of resources, the value of "class" must be the key of a member of "resourceClasses". 
+		//   Similarly for statements and hierarchies.
 		for( var i=iL.length-1;i>-1;i-- ){
-			if( itemByKey(cL, iL[i][type])==undefined ) 
+			if( typeof(iL[i][type])=='string' && itemByKey(cL, iL[i][type])==undefined ) 
 				return {status:903, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+type }
 		};
-		return {status:0, statusText: "instance's "+type+"s reference valid types"}	
+		return {status:0, statusText: "all instances' attribute named '"+type+"' references valid types"}	
 	}
 	function checkPropertyClasses(cL) {  // class list
-		let pT, i, j;
-		for( i=cL.length-1;i>-1;i-- ){
-			if( cL[i][pClasses] ) {
-				for( j=cL[i][pClasses].length-1;j>-1;j-- ) {
-					pT = cL[i][pClasses][j];
-					// depending on the version and the context, 
-					// - pT is a string: It is the identifier of an element of data.propertyClasses (starting v0.10.6 resp v0.11.6)
-					// - pT is an object: Then, it can be 
-					// -- either a key pointing to an element of data.propertyClasses (starting v0.10.6 resp v0.11.6)
-					// -- or a property class defined here (up until v0.10.5 resp v0.11.2)
-					// Note that itemByKey() handles keys in both forms 'identifier' or {id:'identifier',revision:n},
-					// so we have just to decide whether pT is a key or a propertyClass definition:
-					if( data.propertyClasses ) {
-						// starting v0.10.6 resp v0.11.6: 
-						// The propertyClass must be a valid key of an item in data.propertyClasses:
-						if( itemByKey( data.propertyClasses, pT )==undefined )
-							return {status:930, statusText: "property class of item with identifier '"+cL[i].id+"' must reference an item in 'propertyClasses'" }
-					} else {
-						// up until v0.10.5 resp v0.11.2:
-						// A propertyClass's "dataType" must be the key of a member of "dataTypes".
-						// .. this is also checked in checkProperties:
-						if( itemByKey(data.dataTypes,pT.dataType)==undefined ) 
-							return {status:904, statusText: "property class with identifier '"+pT.id+"' must reference a valid dataType"};
-						// If a propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
-					}
-				}
-			}
+		if( cL ) {
+			let pC, i, j;
+			for( i=cL.length-1;i>-1;i-- ){
+				if( cL[i][pClasses] ) {
+					for( j=cL[i][pClasses].length-1;j>-1;j-- ) {
+						pC = cL[i][pClasses][j];
+						// depending on the version, 
+						// - pC is a string: It is the identifier of an element of data.propertyClasses (starting v0.10.6 resp v0.11.6)
+						// - pC is an object: Then, it can be 
+						// -- either a key pointing to an element of data.propertyClasses (starting v0.10.6 resp v0.11.6)
+						// -- or a property class defined here (up until v0.10.5 resp v0.11.2)
+						// Note that itemByKey() handles keys in both forms 'identifier' or {id:'identifier',revision:n},
+						// so we have just to decide whether pC is a key or a propertyClass definition:
+						if( data.propertyClasses ) {
+							// starting v0.10.6 resp v0.11.6: 
+							// The propertyClass must be a valid key of an item in data.propertyClasses:
+							if( itemByKey( data.propertyClasses, pC )==undefined )
+								return {status:930, statusText: "property class of item with identifier '"+cL[i].id+"' must reference an item in 'propertyClasses'" }
+						} else {
+							// up until v0.10.5 resp v0.11.2:
+							// A propertyClass's "dataType" must be the key of a member of "dataTypes".
+							// .. this is also checked in checkProperties:
+							if( itemByKey(data.dataTypes,pC.dataType)==undefined ) 
+								return {status:904, statusText: "property class with identifier '"+pC.id+"' must reference a valid dataType"};
+							// If a propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
+						//		break;
+						//	default:
+								// invalid javascript type:
+				// check value (to be used by default of property values):
+				// ToDo
 		};
+		// all is fine: 
 		return {status:0, statusText: "propertyClasses reference valid dataTypes"}
 	}
 
-	function checkStatementClasses(rCL,sCL) {	// resourceClasses, statementClasses
-		// All statementClass' "subjectClasses" must have the key of a member of "resourceClasses". 
+	function checkStatementClasses() {	
+		// All statementClass' "subjectClasses" must be the key of a member of "resourceClasses" or "statementClasses". 
 		// Similarly for "objectClasses".
+		let aCL = data[rClasses].concat(data[sClasses]), 
+			sCL = data[sClasses];	// statementClasses
 		for( var i=sCL.length-1;i>-1;i-- ){
-			if( !checkEls(rCL, sCL[i][subClasses]) ) 
+			if( !checkEls(aCL, sCL[i][subClasses]) ) 
 				return {status:906, statusText: subClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass };
-			if( !checkEls(rCL, sCL[i][objClasses]) ) 
+			if( !checkEls(aCL, sCL[i][objClasses]) ) 
 				return {status:907, statusText: objClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass }
 		};
 		return {status:0, statusText: "statementClass' "+subClasses+" and "+objClasses+" reference valid "+rClasses };
+		return;
 
-		function checkEls(rCL,cL) {
+		function checkEls(aCL,cL) {
 			// No subjectClasses resp. objectClasses means all defined resourceClasses are eligible.
 			// In case of propertyClasses the existence is being checked by the schema.
 			if( cL ) { 
-				// each value in cL must be the key of a member of rCL:
+				// each value in cL must be the key of a member of aCL:
 				for( var i=cL.length-1;i>-1;i-- ) {
-					if( itemByKey(rCL, cL[i])==undefined ) return false
+					if( itemByKey(aCL, cL[i])==undefined ) return false
 				}
 			};
 			return true
@@ -315,70 +349,98 @@ function checkConstraints( data ) {
 		};
 		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
 	}
-	function checkProperties(cL,iL,typ) {   // class list, instance list (resources, statements or hierarchies)
-		let pT, dT, pV, iT, a;
+	function checkProperties(cL,iL,typ) { 
+		// cL: class list, 
+		// iL: instance list (resources, statements or hierarchies) to be checked:
 		if( iL ) {
+			let pr, pC, dT, pV, iC, eC, a;
 			for( var i=iL.length-1;i>-1;i-- ){
 				if( iL[i].properties ) {
-					iT = itemByKey(cL,iL[i][typ]); // the instance's type.
+					iC = itemByKey(cL,iL[i][typ]); // the instance's class.
 					// ToDo: error 919 is equal to 903, but there has been a case in which 919 has been raised. 
-					if( !iT ) return {status:919, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
+					if( !iC ) 
+						return {status:919, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
 					for( a=iL[i].properties.length-1;a>-1;a-- ){
-						// Property's propertyType must point to a propertyType of the respective type 
-						pT = itemByKey( data.p						pT = itemByKey( data.propertyClasses, iL[i].properties[a].class ) 	// starting v0.10.6 resp v0.11.6
-							|| .properties[a][pClass]);			// up until v0.10.5 resp 			// up until v0.10.5 resp v0.11.2atus:920, statusText: "properties of instance with identifier '"+iL[i].id+"' must reference a valid propertyType"}; 
+						pr = iL[i].properties[a];
+						// Property's propertyClass must point to a propertyClass of the respective resourceClass or statementClass:
+						if( data.propertyClasses ) {
+							// starting v0.10.6
+							// a) property class id must be listed by the instance class or the extended instance class:
+							eC = itemByKey( cL, iC['extends'] );
+							if( iC.propertyClasses.indexOf(pr['class'])<0
+								&& eC && eC.propertyClasses.indexOf(pr['class'])<0 )
+								return {status:920, statusText: "property class '"+pr.title+"' of instance with identifier '"+iL[i].id+"' must be listed with the instance class or the extended instance class"}
+							// b) the referenced property class must be defined:
+							pC = itemByKey( data.propertyClasses, pr['class'] )
+						} else {
+							// up until v0.10.5
+							// there is no class inheritance/extension, yet
+							pC = itemById( iC[pClasses], pr[pClass] )
+						};
+						if( !pC ) 
+							return {status:920, statusText: "property '"+pr.title+"' of instance with identifier '"+iL[i].id+"' must reference a valid propertyClass"}; 
 						
 						// Property's value ("content") must fit to the respective type's range
-						pV = iL[i].properties[a].value;
+						pV = pr.value;
 						if( pV ) {
 							// according to the schema, all property values are of type 'string', including boolean and numbers:
-							dT = itemByKey(data.dataTypes,pT.dataType);
-							if( !dT ) return {status:904, statusText: "propertyClass with identifier '"+pT.id+"' must reference a valid dataType"}; 
+							dT = itemByKey(data.dataTypes,pC.dataType);
+							if( !dT ) return {status:904, statusText: "propertyClass with identifier '"+pC.id+"' must reference a valid dataType"}; 
 							switch(dT.type) {
 								case 'xhtml':
-								case 'xs:string': 
+									// early SpecIF versions did not specify maxLength in case of xhtml:
 									if( dT.maxLength==undefined ) break;
+								case 'xs:string': 
 									let txt = "property of instance with identifier '"+iL[i].id+"': string must not exceed maxLength";
 									switch( typeof(pV) ) {
 										case 'object':
 											// pV is a list with some text in different languages, so check every one of them:
 											for( var p=pV.length-1;p>-1;p-- ) {
-												if( pV[p]['text'].length>dT.maxLength ) return {status:921, statusText: txt}; 
+												if( pV[p]['text'].length>dT.maxLength ) 
+													return {status:921, statusText: txt}; 
 											};
 											break;
 										case 'string':
 											// single language according to schema 0.10.x:
-											if( pV.length>dT.maxLength ) return {status:921, statusText: txt}; 
+											if( pV.length>dT.maxLength ) 
+												return {status:921, statusText: txt}; 
 									};
 									break;
 								case 'xs:double':
 	//								if( (pV*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922,statusText:""};
 									pV = parseFloat( pV );
-									if( pV=='NaN' ) return {status:925, statusText:"property of instance with identifier '"+iL[i].id+"': invalid number"}; 
-									if( pV<dT.min ) return {status:923, statusText:"property of instance with identifier '"+iL[i].id+"': number must be larger than min"};
-									if( pV>dT.max ) return {status:924, statusText:"property of instance with identifier '"+iL[i].id+"': number must be smaller than max"}; 
+									if( pV=='NaN' ) 
+										return {status:925, statusText:"property '"+(pr.title||pC.title)+"' of instance with identifier '"+iL[i].id+"': invalid number"}; 
+									if( pV<dT.min ) 
+										return {status:923, statusText:"property '"+(pr.title||pC.title)+"' of instance with identifier '"+iL[i].id+"': number must be larger than min"};
+									if( pV>dT.max ) 
+										return {status:924, statusText:"property '"+(pr.title||pC.title)+"' of instance with identifier '"+iL[i].id+"': number must be smaller than max"}; 
 									break;
 								case 'xs:integer':
 									// according to the schema, all property values are of type 'string', including the numbers:
 									pV = parseInt( pV );
-									if( pV=='NaN' ) return {status:925, statusText:"property of instance with identifier '"+iL[i].id+"': invalid number"}; 
-									if( pV<dT.min ) return {status:923, statusText:"property of instance with identifier '"+iL[i].id+"': number must be larger than min"};
-									if( pV>dT.max ) return {status:924, statusText:"property of instance with identifier '"+iL[i].id+"': number must be smaller than max"}; 
+									if( pV=='NaN' ) 
+										return {status:925, statusText:"property '"+(pr.title||pC.title)+"' of instance with identifier '"+iL[i].id+"': invalid number"}; 
+									if( pV<dT.min ) 
+										return {status:923, statusText:"property '"+(pr.title||pC.title)+"' of instance with identifier '"+iL[i].id+"': number must be larger than min"};
+									if( pV>dT.max ) 
+										return {status:924, statusText:"property '"+(pr.title||pC.title)+"' of instance with identifier '"+iL[i].id+"': number must be smaller than max"}; 
 									break;
 								case 'xs:boolean':
 									// according to the schema, all property values are of type 'string', including boolean:
-									if( pV!='true' && pV!='false' ) return {status:925, statusText:"property of instance with identifier '"+iL[i].id+"': invalid boolean value"}; 
+									if( pV!='true' && pV!='false' ) 
+										return {status:925, statusText:"property '"+(pr.title||pC.title)+"' of instance with identifier '"+iL[i].id+"': invalid boolean value"}; 
 									break;
 								case 'xs:enumeration':
 									var vL=pV.split(',');
 									// 'multiple' property at propertyClass supersedes 'multiple' at the dataType:
-									if( vL.length>1 && !(pT.multiple || (pT.multiple==undefined && dT.multiple)) ) // logic expression is equivalent to 'multipleChoice(propertyClass)' ... the function is not used to avoid a dependency.
+									if( vL.length>1 && !(pC.multiple || (pC.multiple==undefined && dT.multiple)) ) // logic expression is equivalent to 'multipleChoice(propertyClass)' ... the function is not used to avoid a dependency.
 											return {status:926, statusText: "property of instance with identifier '"+iL[i].id+"': may not have more than one value"};
-									// enumerated values in properties must be defined in the dataType of the corresponding propertyType
+									// enumerated values in properties must be defined in the dataType of the corresponding propertyClass
 									for( var v=vL.length-1;v>-1;v-- ) {
 										vL[v] = vL[v].trim();
 										if( vL[v] && indexById( dT.values, vL[v] )<0 ) 
-											return {status:927, statusText: "property of instance with identifier '"+iL[i].id+"': enumerated values must be defined by the respective property type"}
+											return {status:927, statusText: "property '"+(pr.title||pC.title)+"' of instance with identifier '"+iL[i].id+"': enumerated values must be defined by the respective property type"}
 									}
 							}						
 						}
@@ -387,7 +449,7 @@ function checkConstraints( data ) {
 				}
 			}
 		};
-		return {status:0, statusText: "propertyValues lie within their type's value ranges"}
+		return {status:0, statusText: "property values lie within their type's value ranges"}
 	}
 	function checkNodes(rL,ndL) {	// resourceList, nodeList
 		// Any node's "resource" must be the key of a member of "resources". 

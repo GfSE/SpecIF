@@ -264,10 +264,6 @@
             "description": {
               "$ref": "#/definitions/value"
             },
-            "value": {
-              "$ref": "#/definitions/value",
-              "description": "An optional default value in case neither a property nor it's propertyClass defines a value."
-            },
             "revision": {
               "$ref": "#/definitions/revision"
             },
@@ -310,10 +306,6 @@
               "type": "number",
               "title": "Maximum Value of a Number",
               "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
-            },
-            "value": {
-              "$ref": "#/definitions/value",
-              "description": "An optional default value in case neither a property nor it's propertyClass defines a value."
             },
             "revision": {
               "$ref": "#/definitions/revision"
@@ -364,10 +356,6 @@
               "title": "Maximum Value of a Number",
               "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
             },
-            "value": {
-              "$ref": "#/definitions/value",
-              "description": "An optional default value in case neither a property nor it's propertyClass defines a value."
-            },
             "revision": {
               "$ref": "#/definitions/revision"
             },
@@ -406,10 +394,6 @@
               "title": "Maximum String Length",
               "description": "Optional use by dataTypes 'xs:string' and 'XHTML'.",
               "minimum": 0
-            },
-            "value": {
-              "$ref": "#/definitions/value",
-              "description": "An optional default value in case neither a property nor it's propertyClass defines a value."
             },
             "revision": {
               "$ref": "#/definitions/revision"
@@ -464,10 +448,6 @@
             "multiple": {
               "type": "boolean",
               "description": "Optional use by dataType 'xs:enumeration'. Indicates whether multiple values can be chosen; by default the value is 'false'."
-            },
-            "value": {
-              "$ref": "#/definitions/value",
-              "description": "An optional default value in case neither a property nor it's propertyClass defines a value."
             },
             "revision": {
               "$ref": "#/definitions/revision"
