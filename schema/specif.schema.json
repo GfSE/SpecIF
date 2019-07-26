@@ -722,10 +722,10 @@
         "type": "object",
         "properties": {
           "id": {
-            "description": "In case of a file, the id is ideally an absolute or relative URL.",
             "$ref": "#/definitions/id"
           },
           "title": {
+            "description": "In case of a file, the title is the absolute or relative URL.",
             "type": "string"
           },
           "description": {
