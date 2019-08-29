@@ -3,106 +3,122 @@
 	"title": "SpecIF property class definitions for domain 01-Base Definitions",
 	"specifVersion": "0.11.8",
 	"dataTypes": [],
-	"propertyClasses": [
-		{
-			"id": "PC-VisibleId",
-			"title": "dcterms:identifier",
-			"dataType": "DT-ShortString",
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2016-05-26T08:59:00+02:00"
-		},
-		{
-			"id": "PC-Name",
-			"title": "dcterms:title",
-			"dataType": "DT-ShortString",
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2016-05-26T08:59:00+02:00"
-		},
-		{
-			"id": "PC-Text",
-			"title": "dcterms:description",
-			"dataType": "DT-FormattedText",
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2016-05-26T08:59:00+02:00"
-		},
-		{
-			"id": "PC-Diagram",
-			"title": "SpecIF:Diagram",
-			"description": "Contains the graphical representation of the diagram.", 
-			"dataType": "DT-FormattedText",
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2019-04-14T08:59:00+02:00"
-		},
-		{
-			"id": "PC-Notation",
-			"title": "SpecIF:Notation",
-			"dataType": "DT-ShortString",
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2016-05-26T08:59:00+02:00"
-		},
-		{
-			"id": "PC-Status",
-			"title": "SpecIF:Status",
-			"dataType": "DT-Status",
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2016-05-26T08:59:00+02:00"
-		},
-		{
-			"id": "PC-Priority",
-			"title": "SpecIF:Priority",
-			"dataType": "DT-Priority",
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2016-05-26T08:59:00+02:00"
-		},
-		{
-			"id": "PC-Perspective",
-			"title": "SpecIF:Perspective",
-			"dataType": "DT-Perspective",
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2016-05-26T08:59:00+02:00"
-		},
-		{
-			"id": "PC-Discipline",
-			"title": "SpecIF:Discipline",
-			"dataType": "DT-Discipline",
-			"multiple": true,
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2016-05-26T08:59:00+02:00"
-		},
-		{
-			"id": "PC-Responsible",
-			"title": "SpecIF:Responsible",
-			"dataType": "DT-ShortString",
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2016-05-26T08:59:00+02:00"
-		},
-		{
-			"id": "PC-DueDate",
-			"title": "SpecIF:DueDate",
-			"dataType": "DT-Date",
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2016-05-26T08:59:00+02:00"
-		},
-		{
-			"id": "PC-Stereotype",
-			"title": "SpecIF:Stereotype",
-			"dataType": "DT-ShortString",
-			"revision": "main/1",
-			"replaces": [],
-			"changedAt": "2019-03-31T17:10:23.443Z"
-		}
-	],
+    "propertyClasses": [
+        {
+            "id": "PC-VisibleId",
+            "title": "dcterms:identifier",
+            "dataType": "DT-ShortString",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Name",
+            "title": "dcterms:title",
+            "dataType": "DT-ShortString",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Text",
+            "title": "dcterms:description",
+            "dataType": "DT-FormattedText",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Origin",
+            "title": "SpecIF:Origin",
+            "dataType": "DT-ShortString",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2017-06-10T15:47:24+02:00"
+        },
+        {
+            "id": "PC-Diagram",
+            "title": "SpecIF:Diagram",
+            "description": "Contains the graphical representation of the diagram.",
+            "dataType": "DT-FormattedText",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-04-14T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Notation",
+            "title": "SpecIF:Notation",
+            "dataType": "DT-ShortString",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Status",
+            "title": "SpecIF:Status",
+            "dataType": "DT-Status",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Priority",
+            "title": "SpecIF:Priority",
+            "dataType": "DT-Priority",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Perspective",
+            "title": "SpecIF:Perspective",
+            "dataType": "DT-Perspective",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Discipline",
+            "title": "SpecIF:Discipline",
+            "dataType": "DT-Discipline",
+            "multiple": true,
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Responsible",
+            "title": "SpecIF:Responsible",
+            "dataType": "DT-ShortString",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-DueDate",
+            "title": "SpecIF:DueDate",
+            "dataType": "DT-Date",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Stereotype",
+            "title": "SpecIF:Stereotype",
+            "dataType": "DT-ShortString",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-03-31T17:10:23.443Z"
+        },
+        {
+            "id": "PC-Abbreviation",
+            "title": "SpecIF:Abbreviation",
+            "dataType": "DT-ShortString",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-04-26T12:00:00+02:00"
+        }
+    ],
 	"resourceClasses": [],
 	"statementClasses": [],
 	"resources": [],

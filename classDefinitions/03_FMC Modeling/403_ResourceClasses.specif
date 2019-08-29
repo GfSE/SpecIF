@@ -6,6 +6,17 @@
     "propertyClasses": [],
     "resourceClasses": [
         {
+            "id": "RC-Collection",
+            "title": "SpecIF:Collection",
+            "description": "<p>A 'Collection' is an arbitrary group of resources linked with a [[SpecIF:contains]] statement. It corresponds to a <a href=\"https://camunda.com/bpmn/reference/\">'Group'</a> in BPMN Diagrams.</p><p>BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. <small>(<i>source: <a href=\"http://www.bpmn-tool.com/en/tutorial/\">BPMN Tool</a></i>)</small></p>",
+            "instantiation": [ "auto" ],
+            "propertyClasses": [ "PC-Name", "PC-Text", "PC-Origin", "PC-Status", "PC-Stereotype" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-08-29T15:56:47+01:00",
+            "changedBy": "oalt"
+        },
+        {
             "id": "RC-Diagram",
             "title": "SpecIF:Diagram",
             "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
