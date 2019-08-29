@@ -117,6 +117,15 @@
             "revision": "main/1",
             "replaces": [],
             "changedAt": "2019-04-26T12:00:00+02:00"
+        },
+        {
+            "id": "PC-SubClass",
+            "title": "SpecIF:SubClass",
+            "description": "<p>Describes the role or sub-type of a model-element. For example, a [[FMC:Actor]] may represent a <i>System Function</i>, a <i>System Component</i> or a <i>User Role</i>. Similarly, in the context of process modelling, a FMC:Actor may represent a <i>Process Step</i> or again a <i>User Role</i>. So, all of these are meaningful values for a FMC:Actors property named SpecIF:SubClass.</p>",
+            "dataType": "DT-ShortString",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2018-03-03T23:28:44+01:00"
         }
     ],
 	"resourceClasses": [],
