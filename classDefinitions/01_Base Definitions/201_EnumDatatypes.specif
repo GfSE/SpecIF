@@ -1,0 +1,48 @@
+{
+    "id": "_D24239F3-DE44-4AB5-8765-5FE55158CEC9",
+    "title": "SpecIF enumeration datatype definitions for domain 01-Base Definitions",
+    "specifVersion": "0.11.8",
+    "dataTypes": [
+        {
+		"id": "DT-VisibilityKind",
+		"title": "SpecIF:VisibilityKind",
+		"description": "Enumerated values for visibility",
+		"type": "xs:enumeration",
+		"values": [
+			{
+				"id": "V-VisibilityKind-0",
+				"title": "Public"
+			},
+			{
+				"id": "V-VisibilityKind-1",
+				"title": "Private"
+			},
+			{
+				"id": "V-VisibilityKind-2",
+				"title": "Protected"
+			},
+			{
+				"id": "V-VisibilityKind-3",
+				"title": "Package"
+			},
+			{
+				"id": "V-VisibilityKind-4",
+				"title": "Internal"
+			},
+			{
+				"id": "V-VisibilityKind-5",
+				"title": "Protected Internal"
+			}
+		],
+		"revision": "main/1",
+		"replaces": [],
+		"changedAt": "2019-03-08T16:00:00+02:00"
+	}
+    ],
+    "propertyClasses": [],
+    "resourceClasses": [],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
+}

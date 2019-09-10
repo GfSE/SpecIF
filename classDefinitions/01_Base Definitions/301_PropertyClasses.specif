@@ -21,7 +21,7 @@
             "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-            "id": "PC-Text",
+            "id": "PC-Description",
             "title": "dcterms:description",
             "dataType": "DT-FormattedText",
             "revision": "main/1",
@@ -87,6 +87,15 @@
             "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
+            "id": "PC-Visibility",
+            "title": "SpecIF:Visibility",
+            "dataType": "DT-VisibilityKind",
+            "multiple": false,
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-09-10T08:59:00+02:00"
+        },
+        {
             "id": "PC-Responsible",
             "title": "SpecIF:Responsible",
             "dataType": "DT-ShortString",
@@ -119,13 +128,30 @@
             "changedAt": "2019-04-26T12:00:00+02:00"
         },
         {
-            "id": "PC-SubClass",
-            "title": "SpecIF:SubClass",
-            "description": "<p>Describes the role or sub-type of a model-element. For example, a [[FMC:Actor]] may represent a <i>System Function</i>, a <i>System Component</i> or a <i>User Role</i>. Similarly, in the context of process modelling, a FMC:Actor may represent a <i>Process Step</i> or again a <i>User Role</i>. So, all of these are meaningful values for a FMC:Actors property named SpecIF:SubClass.</p>",
+            "id": "PC-Type",
+            "title": "dcterms:type",
+            "description": "The element type resp. the metamodel element (e.g. OMG:UML:2.5.1:Class)",
             "dataType": "DT-ShortString",
             "revision": "main/1",
             "replaces": [],
-            "changedAt": "2018-03-03T23:28:44+01:00"
+            "changedAt": "2019-08-20T20:32:25.411Z"
+        },
+        {
+            "id": "PC-Alias",
+            "title": "SpecIF:Alias",
+            "dataType": "DT-ShortString",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-04-26T12:00:00+02:00"
+        },
+        {
+            "id": "PC-Value",
+            "title": "rdf:value",
+            "description": "A value of different meaning, depending on the element type (attribute default value, a taggedValue value etc.)",
+            "dataType": "DT-ShortString",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-09-10T20:32:25.411Z"
         }
     ],
 	"resourceClasses": [],

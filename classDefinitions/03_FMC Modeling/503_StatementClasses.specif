@@ -59,6 +59,24 @@
             "changedAt": "2016-05-26T08:59:00+02:00",
             "subjectClasses": [ "RC-Act" ],
             "objectClasses": [ "RC-Sta" ]
+        },
+        {
+            "id": "SC-signals",
+            "title": "SpecIF:signals",
+            "description": "A FMC:Actor 'signals' a FMC:Event.",
+            "instantiation": [ "auto" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-08-20T20:32:25+02:00"
+        },
+        {
+            "id": "SC-refersTo",
+            "title": "SpecIF:refersTo",
+            "description": "A SpecIF:Comment, SpecIF:Note or SpecIF:Issue 'refers to' any other resource.",
+            "instantiation": [ "auto" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-08-20T20:32:25+02:00"
         }
     ],
     "resources": [],

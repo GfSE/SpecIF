@@ -9,7 +9,7 @@
             "id": "RC-BillOfMaterials",
             "title": "SpecIF:BillOfMaterials",
             "description": "Root node of a bill of materials or product structure (sometimes bill of material, BOM or associated list) is a list of the raw materials, sub-assemblies, intermediate assemblies, sub-components, parts and the quantities of each needed to manufacture an end product. A BOM may be used for communication between manufacturing partners, or confined to a single manufacturing plant.",
-            "propertyClasses": [ "PC-Name", "PC-Text" ],
+            "propertyClasses": [ "PC-Name", "PC-Description" ],
             "revision": "main/1",
             "replaces": [],
             "changedAt": "2016-05-26T08:59:00+02:00"

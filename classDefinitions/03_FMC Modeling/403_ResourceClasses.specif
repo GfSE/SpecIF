@@ -10,7 +10,7 @@
             "title": "SpecIF:Collection",
             "description": "<p>A 'Collection' is an arbitrary group of resources linked with a [[SpecIF:contains]] statement. It corresponds to a <a href=\"https://camunda.com/bpmn/reference/\">'Group'</a> in BPMN Diagrams.</p><p>BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. <small>(<i>source: <a href=\"http://www.bpmn-tool.com/en/tutorial/\">BPMN Tool</a></i>)</small></p>",
             "instantiation": [ "auto" ],
-            "propertyClasses": [ "PC-Name", "PC-Text", "PC-Origin", "PC-Status", "PC-Stereotype" ],
+            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Status", "PC-Stereotype", "PC-Visibility", "PC-Type" ],
             "revision": "main/1",
             "replaces": [],
             "changedAt": "2019-08-29T15:56:47+01:00",
@@ -22,7 +22,7 @@
             "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
             "icon": "&#9635;",
             "instantiation": [ "auto" ],
-            "propertyClasses": [ "PC-Name", "PC-Text", "PC-Diagram", "PC-Notation", "PC-Status" ],
+            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Diagram", "PC-Notation", "PC-Status" ],
             "revision": "main/1",
             "replaces": [],
             "changedAt": "2016-05-26T08:59:00+02:00"
@@ -33,10 +33,10 @@
             "description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
             "icon": "&#9632;",
             "instantiation": [ "auto" ],
-            "propertyClasses": [ "PC-Name", "PC-Text", "PC-Status" ],
+            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Status", "PC-Visibility", "PC-Type", "PC-Value", "PC-Alias" ],
             "revision": "main/1",
             "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
+            "changedAt": "2019-09-10T08:59:00+02:00"
         },
         {
             "id": "RC-State",
@@ -44,10 +44,10 @@
             "description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape.",
             "icon": "&#9679;",
             "instantiation": [ "auto" ],
-            "propertyClasses": [ "PC-Name", "PC-Text", "PC-Status" ],
+            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Status", "PC-Visibility", "PC-Type", "PC-Value", "PC-Alias" ],
             "revision": "main/1",
             "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
+            "changedAt": "2019-09-10T08:59:00+02:00"
         },
         {
             "id": "RC-Event",
@@ -55,10 +55,10 @@
             "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
             "icon": "&#9830;",
             "instantiation": [ "auto" ],
-            "propertyClasses": [ "PC-Name", "PC-Text", "PC-Status" ],
+            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Status", "PC-Visibility", "PC-Type", "PC-Value", "PC-Alias" ],
             "revision": "main/1",
             "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
+            "changedAt": "2019-09-10T08:59:00+02:00"
         }
     ],
     "statementClasses": [],

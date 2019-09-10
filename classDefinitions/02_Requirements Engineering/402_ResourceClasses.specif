@@ -10,7 +10,7 @@
             "title": "SpecIF:Heading",
             "description": "Folders with title and text for chapters or descriptive paragraphs.",
             "instantiation": [ "user" ],
-            "propertyClasses": [ "PC-Name", "PC-Text" ],
+            "propertyClasses": [ "PC-Name", "PC-Description" ],
             "revision": "main/1",
             "replaces": [],
             "changedAt": "2016-05-26T08:59:00+02:00",
@@ -21,7 +21,7 @@
             "title": "SpecIF:Paragraph",
             "description": "Information with title and text for descriptive paragraphs.",
             "instantiation": [ "auto", "user" ],
-            "propertyClasses": [ "PC-Name", "PC-Text" ],
+            "propertyClasses": [ "PC-Name", "PC-Description" ],
             "revision": "main/1",
             "replaces": [],
             "changedAt": "2019-03-16T19:59:00+02:00"
@@ -32,7 +32,7 @@
             "description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
             "icon": "&#8623;",
             "instantiation": [ "user" ],
-            "propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Text", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline" ],
+            "propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Description", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline" ],
             "revision": "main/1",
             "replaces": [],
             "changedAt": "2016-05-26T08:59:00+02:00"
@@ -43,7 +43,7 @@
             "description": "A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition.",
             "icon": "&#10038;",
             "instantiation": [ "user" ],
-            "propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Text", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline" ],
+            "propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Description", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline" ],
             "revision": "main/1",
             "replaces": [],
             "changedAt": "2016-05-26T08:59:00+02:00"
@@ -52,7 +52,7 @@
             "id": "RC-Hierarchy",
             "title": "SpecIF:Hierarchy",
             "description": "Root node of a hierarchically organized specification (outline).",
-            "propertyClasses": [ "PC-Name", "PC-Text" ],
+            "propertyClasses": [ "PC-Name", "PC-Description" ],
             "revision": "main/1",
             "replaces": [],
             "changedAt": "2016-05-26T08:59:00+02:00"
@@ -62,7 +62,7 @@
             "title": "SpecIF:Comment",
             "description": "Comment referring to a model element ('resource' in general).",
             "instantiation": [ "auto" ],
-            "propertyClasses": [ "PC-Text" ],
+            "propertyClasses": [ "PC-Description" ],
             "revision": "main/1",
             "replaces": [],
             "changedAt": "2019-03-16T19:59:00+02:00"
