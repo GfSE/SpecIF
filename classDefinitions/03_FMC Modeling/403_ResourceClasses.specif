@@ -22,7 +22,7 @@
             "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
             "icon": "&#9635;",
             "instantiation": [ "auto" ],
-            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Diagram", "PC-Notation", "PC-Status" ],
+            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Diagram", "PC-Notation", "PC-Status", "PC-Stereotype" ],
             "revision": "main/1",
             "replaces": [],
             "changedAt": "2016-05-26T08:59:00+02:00"
@@ -33,7 +33,7 @@
             "description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
             "icon": "&#9632;",
             "instantiation": [ "auto" ],
-            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Status", "PC-Visibility", "PC-Type", "PC-Value", "PC-Alias" ],
+            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Status", "PC-Visibility", "PC-Type", "PC-Stereotype", "PC-Value", "PC-Alias" ],
             "revision": "main/1",
             "replaces": [],
             "changedAt": "2019-09-10T08:59:00+02:00"
@@ -44,7 +44,7 @@
             "description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape.",
             "icon": "&#9679;",
             "instantiation": [ "auto" ],
-            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Status", "PC-Visibility", "PC-Type", "PC-Value", "PC-Alias" ],
+            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Status", "PC-Visibility", "PC-Type", "PC-Stereotype", "PC-Value", "PC-Alias" ],
             "revision": "main/1",
             "replaces": [],
             "changedAt": "2019-09-10T08:59:00+02:00"
@@ -55,7 +55,7 @@
             "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
             "icon": "&#9830;",
             "instantiation": [ "auto" ],
-            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Status", "PC-Visibility", "PC-Type", "PC-Value", "PC-Alias" ],
+            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Status", "PC-Visibility", "PC-Type", "PC-Stereotype", "PC-Value", "PC-Alias" ],
             "revision": "main/1",
             "replaces": [],
             "changedAt": "2019-09-10T08:59:00+02:00"
