@@ -1,0 +1,52 @@
+{
+    "id": "_4ABD7538_8721_4FE3-AACA_968F5D625CCA",
+    "title": "Resource classes for domain 01_Base Definitions",
+    "specifVersion": "0.11.8",
+    "dataTypes": [],
+    "resourceClasses": [
+        {
+            "id": "RC-ResourceTerm",
+            "title": "SpecIF:Resource-Term",
+            "description": "A term for objects belonging to the SpecIF vocabulary",
+            "instantiation": [ "auto", "user" ],
+            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Origin", "PC-Status" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2017-06-10T15:47:24+02:00"
+        },
+        {
+            "id": "RC-PredicateTerm",
+            "title": "SpecIF:Predicate-Term",
+            "description": "A term for relations belonging to the SpecIF vocabulary",
+            "instantiation": [ "auto", "user" ],
+            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Origin", "PC-Status" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2017-06-10T15:47:24+02:00"
+        },
+        {
+            "id": "RC-PropertyTerm",
+            "title": "SpecIF:Property-Term",
+            "description": "A term for attributes belonging to the SpecIF vocabulary",
+            "instantiation": [ "auto", "user" ],
+            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Origin", "PC-Status" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2017-06-10T15:47:24+02:00"
+        },
+        {
+            "id": "RC-ValueTerm",
+            "title": "SpecIF:Value-Term",
+            "description": "A term for property values belonging to the SpecIF vocabulary",
+            "instantiation": [ "auto", "user" ],
+            "propertyClasses": [ "PC-Name", "PC-Description", "PC-Origin", "PC-Status" ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2018-02-05T00:29:45+01:00"
+        }
+    ],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
+}
