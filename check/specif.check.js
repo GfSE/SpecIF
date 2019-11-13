@@ -20,7 +20,7 @@ function checkSchema( schema, data ) {
 	return valid?{ status: 0, statusText: 'SpecIF schema has been checked successfully!' }
 			:{ status: 901, statusText: 'SpecIF schema is violated', responseType: 'text', responseText: ajv.errorsText(validate.errors) }
 }
-function checkConstraints( data ) {
+function checkConstraints( data, options ) {
 	"use strict";
 	// Check the constraints of the concrete values in 'data'.
 	// SpecIF-Schema v0.10.2 up until v0.10.8 is supported.
@@ -30,6 +30,10 @@ function checkConstraints( data ) {
 
 	if( data.specifVersion.indexOf( '0.9.' )>-1 ) 
 		return { status: 903, statusText: 'SpecIF version 0.9.x is not supported!' };
+
+	// set default:
+	if( typeof(options)!='object' ) options = {};
+	if( !Array.isArray(options.dontCheck) ) options.dontCheck = [];
 
 	// Set property names according to SpecIF version:
 	switch( data.specifVersion ) {
@@ -53,17 +57,9 @@ function checkConstraints( data ) {
 		case '0.10.4':
 		case '0.10.5':
 		case '0.10.6':
-			var rClasses = 'resourceClasses',
-				sClasses = 'statementClasses',
-				hClasses = 'hierarchyClasses',
-				pClasses = 'propertyClasses',
-				rClass = 'class',
-				sClass = 'class',
-				hClass = 'class',
-				pClass = 'class',
-				subClasses = 'subjectClasses',
-				objClasses = 'objectClasses';
-			break;
+			var hClasses = 'hierarchyClasses',
+				hClass = 'class';
+				// no break
 		default:
 			var rClasses = 'resourceClasses',
 				sClasses = 'statementClasses',
@@ -317,13 +313,13 @@ function checkConstraints( data ) {
 		// Similarly for "object".
 		// (It has been checked before that any "resource" is indeed of type "resourceClass").
 		for( var i=sL.length-1;i>-1;i-- ) {
-			if(indexById(rL, sL[i].subject)<0) 
+			if( indexById(rL, sL[i].subject)<0 && options.dontCheck.indexOf('statement.subject')<0 ) 
 				return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
-			if(indexById(rL, sL[i].object)<0) 
+			if( indexById(rL, sL[i].object)<0 && options.dontCheck.indexOf('statement.object')<0 ) 
 				return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
 //			if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
 		};
-		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
+		return {status:0, statusText: "no anomaly with statement's subjects and objects"}
 	}
 	function checkValue(pC,pr,etxt) { 
 		let val = pr.value;
