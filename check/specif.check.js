@@ -134,10 +134,8 @@ function checkConstraints( data, options ) {
 	if( rc.status>0 ) errL.push(rc);
 
 	// A hierarchy node's "resource" must be the id of a member of "resources":
-	for( var h=data.hierarchies.length-1; h>-1; h--) {
-		rc = checkNodes( data.resources, data.hierarchies[h].nodes );
-		if( rc.status>0 ) { errL.push(rc); break }
-	};
+	rc = checkNodes( data.resources, data.hierarchies, 0 );
+	if( rc.status>0 ) errL.push(rc);
 
 	return errL.length<1?{ status: 0, statusText: 'SpecIF constraints have been checked successfully!' }
 			:{ status: 902, statusText: 'SpecIF constraints are violated', responseType: 'text', responseText: errorsText(errL) };
@@ -167,12 +165,12 @@ function checkConstraints( data, options ) {
 		return {status:0, statusText: 'all identifiers are unique'};
 
 		function duplicateId(L) {
-			if( !L || L.length<1 ) return null;
+			if( !L || L.length<1 ) return;
 			// Add every checked Id to allIds,
-			// return 'null', only if all elements of L are not contained in allIds,
+			// return 'undefined', only if all elements of L are not contained in allIds,
 			// return the first id, which is contained in allIds (hence a duplicate):
 			// Data arriving here has passed the schema checking, so there is a valid id where it is expected.
-			var rc=null, e1=null;
+			var id=null, e1=null;
 			for( var i=L.length-1;i>-1;i-- ) {
 				// it has been checked by schema that valid identifiers are present where mandatory;
 				// so we can skip the checking for duplicates, if there is no id, e.g. in case of properties:
@@ -182,29 +180,21 @@ function checkConstraints( data, options ) {
 				// check the element's id:
 				if( allIds.indexOf(e1.id)>-1 ) return e1.id;
 				// in case of an enumerated dataType, check the values' identifiers, as well:
-				if( e1.values ) {
-					rc = duplicateId(e1.values);
-					if( rc ) return rc
-				};
+				id = duplicateId(e1.values);
+				if( id ) return id;
 				// check the identifiers of propertyClasses, as well:
-				if( e1[pClasses] ) {
-					rc = duplicateId(e1[pClasses]);
-					if( rc ) return rc
-				};
+				id = duplicateId(e1[pClasses]);
+				if( id ) return id;
 				// the instance's properties may not have an id ...
-				if( e1.properties ) {
-					rc = duplicateId(e1.properties);
-					if( rc ) return rc
-				};
+				id = duplicateId(e1.properties);
+				if( id ) return id;
 				// check the hierarchy's nodes recursively:
-				if( e1.nodes ) {
-					rc = duplicateId(L[i].nodes);
-					if( rc ) return rc
-				}; 
+				id = duplicateId(L[i].nodes);
+				if( id ) return id;
 				// all is fine, but add the latest id to the list for the next checking loops:
 				allIds.push(e1.id)
 			};
-			return null
+			return
 		}
 	}
 	function checkDataTypes(L) {
@@ -420,14 +410,18 @@ function checkConstraints( data, options ) {
 		};
 		return {status:0, statusText: "properties of all instances are well formed"}
 	}
-	function checkNodes(rL,ndL) {	// resourceList, nodeList
+	function checkNodes(rL,ndL,lvl) {	// resourceList, nodeList, hierarchy level
 		// Any node's "resource" must be the id of a member of "resources". 
 		if( ndL ) {
 			var rc = null;
 			for( var i=ndL.length-1;i>-1;i-- ){
-				if(indexById(rL,ndL[i].resource)<0) return {status:909, statusText: "hierarchy node with identifier '"+ndL[i].id+"' must reference a valid resource"};	// check the node itself
-				rc = checkNodes(rL,ndL[i].nodes);	// check references of next hierarchy levels recursively
-				if(rc.status!=0) return rc	
+				// Starting v0.10.8, hierarchy root nodes (lvl==0) reference a resource, but not before.
+				// To recognize <v0.10.8, check for hClasses.
+				if( (lvl>0 || !hClasses) && indexById(rL,ndL[i].resource)<0 ) 
+					return {status:909, statusText: "hierarchy node with identifier '"+ndL[i].id+"' must reference a valid resource"};	// check the node itself
+				rc = checkNodes(rL,ndL[i].nodes,lvl+1);	// check references of next hierarchy levels recursively
+				if(rc.status!=0) 
+					return rc	
 			}
 		};
 		return {status:0, statusText: "hierarchy nodes reference valid resources"}		// all's fine!
