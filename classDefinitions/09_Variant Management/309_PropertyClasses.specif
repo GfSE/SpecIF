@@ -1,0 +1,31 @@
+{
+    "id": "_BAE6706F_182A_48C0_A983_94B41BF080A8",
+    "title": "SpecIF property class definitions for domain 09-Variant Management",
+    "specifVersion": "0.11.8",
+    "dataTypes": [],
+    "propertyClasses": [
+        {
+            "id": "PC-FeatureKind",
+            "title": "SpecIF:FeatureKind",
+            "description": "<p>The kind of a feature used in a feature tree (mandatory, optional, alternative, or).</p>",
+            "dataType": "DT-FeatureKind",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-12-30T08:59:00+02:00"
+        },
+        {
+            "id": "PC-FeatureSelectionState",
+            "title": "SpecIF:FeatureSelectionState",
+            "description": "<p>The selection state for a feature used in a variant model.</p>",
+            "dataType": "DT-FeatureSelectionState",
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-12-30T08:59:00+02:00"
+        }
+    ],
+    "resourceClasses": [],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
+}

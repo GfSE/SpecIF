@@ -1,0 +1,64 @@
+{
+    "id": "_ABA0DF90_2E71_4D31_BD17_C324BA242C19",
+    "title": "Resource classes for domain 09_Variant Managament",
+    "specifVersion": "0.11.8",
+    "dataTypes": [],
+    "resourceClasses": [
+        {
+            "id": "RC-FeatureModel",
+            "title": "SpecIF:FeatureModel",
+            "description": "A 'Feature Model' is the root resource of a feature tree to structure the set of features for a system as a tree structure (hierarchy).",
+            "icon": "",
+            "instantiation": [ "user" ],
+            "propertyClasses": [
+                "PC-VisibleId",
+                "PC-Name",
+                "PC-Description",
+                "PC-Status"
+            ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-12-30T08:59:00+02:00"
+        },
+        {
+            "id": "RC-VariantModel",
+            "title": "SpecIF:VariantModel",
+            "description": "A 'Variant Model' is an instance of a feature model, where  a subset of features is selected to define a concrete system variant.",
+            "icon": "",
+            "instantiation": [ "user" ],
+            "propertyClasses": [
+                "PC-VisibleId",
+                "PC-Name",
+                "PC-Description",
+                "PC-Status"
+            ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-12-30T08:59:00+02:00"
+        },
+        {
+            "id": "RC-FeatureModelFeature",
+            "title": "SpecIF:FeatureModelFeature",
+            "description": "A 'Feture Model Feature' is a feature used in a feature tree resp. feature model structure.",
+            "icon": "",
+            "instantiation": [ "user" ],
+            "propertyClasses": [
+                "PC-VisibleId",
+                "PC-Name",
+                "PC-Abbreviation",
+                "PC-FeatureKind",
+                "PC-Description",
+                "PC-Status",
+                "PC-Discipline",
+                "PC-FeatureSelectionState"
+            ],
+            "revision": "main/1",
+            "replaces": [],
+            "changedAt": "2019-12-30T08:59:00+02:00"
+        }
+    ],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
+}
