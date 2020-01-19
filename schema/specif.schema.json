@@ -348,7 +348,7 @@
             "maxLength":  {
               "type": "integer",
               "title": "Maximum String Length",
-              "description": "Optional use by dataTypes 'xs:string' and 'XHTML'.",
+              "description": "Optional use by dataTypes 'xs:string' and 'xhtml'.",
               "minimum": 0
             },
             "revision": {
