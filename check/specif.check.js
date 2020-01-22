@@ -20,7 +20,7 @@ function checkSchema( schema, data ) {
 	return valid?{ status: 0, statusText: 'SpecIF schema has been checked successfully!' }
 			:{ status: 901, statusText: 'SpecIF schema is violated', responseType: 'text', responseText: ajv.errorsText(validate.errors) }
 }
-function checkConstraints( data ) {
+function checkConstraints( data, options ) {
 	"use strict";
 	// Check the constraints of the concrete values in 'data'.
 	// SpecIF schema 0.11.1 up until 0.11.8 is supported.
@@ -31,6 +31,10 @@ function checkConstraints( data ) {
 
 	if( data.specifVersion.indexOf( '0.9.' )>-1 ) 
 		return { status: 903, statusText: 'SpecIF version 0.9.x is not any more supported!' };
+
+	// set default:
+	if( typeof(options)!='object' ) options = {};
+	if( !Array.isArray(options.dontCheck) ) options.dontCheck = [];
 	
 	// Set property names according to SpecIF version:
 	switch( data.specifVersion ) {
@@ -59,17 +63,9 @@ function checkConstraints( data ) {
 		case '0.10.6':
 		case '0.11.2':
 		case '0.11.6':
-			var rClasses = 'resourceClasses',
-				sClasses = 'statementClasses',
-				hClasses = 'hierarchyClasses',
-				pClasses = 'propertyClasses',
-				rClass = 'class',
-				sClass = 'class',
-				hClass = 'class',
-				pClass = 'class',
-				subClasses = 'subjectClasses',
-				objClasses = 'objectClasses';
-			break;
+			var hClasses = 'hierarchyClasses',
+				hClass = 'class';
+				// no break
 		default:
 			var rClasses = 'resourceClasses',
 				sClasses = 'statementClasses',
@@ -92,7 +88,7 @@ function checkConstraints( data ) {
 	if( rc.status>0 ) errL.push(rc);
 
 	// starting  v0.10.6 resp. v0.11.6
-	// resourceClass', statementClass' and hierarchyClass' propertyClasses must must be keys of a member in 
+	// resourceClass', statementClass' and hierarchyClass' propertyClasses must be keys of a member in 
 	// propertyClasses at the top level; this is checked as a case in 'checkPropertyClasses'.
 	
 	// A propertyClass's "dataType" must be the key of a member of "dataTypes":
@@ -133,7 +129,7 @@ function checkConstraints( data ) {
 	if( rc.status>0 ) errL.push(rc);
 	rc = checkProperties( data[sClasses], data.statements, sClass );
 	if( rc.status>0 ) errL.push(rc);
-	// up until v0.10.6:
+	// up until v0.10.6 or v0.11.6:
 	if( hClasses ) {
 		rc = checkProperties( data[hClasses], data.hierarchies, hClass );
 		if( rc.status>0 ) errL.push(rc)
@@ -144,10 +140,8 @@ function checkConstraints( data ) {
 	if( rc.status>0 ) errL.push(rc);
 
 	// A hierarchy node's "resource" must be the key of a member of "resources":
-	for( var h=data.hierarchies.length-1; h>-1; h--) {
-		rc = checkNodes( data.resources, data.hierarchies[h].nodes );
-		if( rc.status>0 ) { errL.push(rc); break }
-	};
+	rc = checkNodes( data.resources, data.hierarchies, 0 );
+	if( rc.status>0 ) errL.push(rc);
 
 	return errL.length<1?{ status: 0, statusText: 'SpecIF constraints have been checked successfully!' }
 			:{ status: 902, statusText: 'SpecIF constraints are violated', responseType: 'text', responseText: errorsText(errL) };
@@ -231,7 +225,7 @@ function checkConstraints( data ) {
 				// all is fine, but add the latest key to the list:
 				allKeys.push(e1)
 			};
-			return null
+			return
 		}
 	}
 	function checkDataTypes(L) {
@@ -241,7 +235,8 @@ function checkConstraints( data ) {
 				switch(L[i].type) {
 					case 'xhtml':
 						if( data.specifVersion.indexOf('0.10.2')>-1
-							|| data.specifVersion.indexOf('0.11.1')>-1 ) break;
+							|| data.specifVersion.indexOf('0.11.1')>-1 ) 
+							break;
 					case 'xs:string': 
 						// more restrictive than the schema, where maxLength is optional:
 						if( !L[i].maxLength ) 
@@ -297,7 +292,7 @@ function checkConstraints( data ) {
 							// .. this is also checked in checkProperties:
 							if( itemByKey(data.dataTypes,pC.dataType)==undefined ) 
 								return {status:904, statusText: "property class with identifier '"+pC.id+"' must reference a valid dataType"};
-							// If a propertyType of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
+							// If a propertyClass of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
 						//		break;
 						//	default:
 								// invalid javascript type:
@@ -338,15 +333,15 @@ function checkConstraints( data ) {
 		// Similarly for "object".
 		// (It has been checked before that any "resource" is indeed of type "resourceClass").
 		for( var i=sL.length-1;i>-1;i-- ) {
-			if( itemByKey(rL, sL[i].subject)==undefined ) 
+			if( itemByKey(rL, sL[i].subject)==undefined && options.dontCheck.indexOf('statement.subject')<0 ) 
 
 				return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
-			if( itemByKey(rL, sL[i].object)==undefined ) 
+			if( itemByKey(rL, sL[i].object)==undefined && options.dontCheck.indexOf('statement.object')<0 ) 
 
 				return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
 //			if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
 		};
-		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
+		return {status:0, statusText: "no anomaly with statement's subjects and objects"}
 	}
 	function checkProperties(cL,iL,typ) { 
 		// cL: class list, 
@@ -450,15 +445,19 @@ function checkConstraints( data ) {
 		};
 		return {status:0, statusText: "property values lie within their type's value ranges"}
 	}
-	function checkNodes(rL,ndL) {	// resourceList, nodeList
+	function checkNodes(rL,ndL,lvl) {	// resourceList, nodeList, hierarchy level
 		// Any node's "resource" must be the key of a member of "resources". 
 		// A resource can just be an id string (where the revision=0 is assumed) or a key consisting of id and revision.
 		if( ndL ) {
 			var rc = null;
 			for( var i=ndL.length-1;i>-1;i-- ){
-				if( itemByKey(rL,ndL[i].resource)==undefined ) return {status:909, statusText: "hierarchy node with identifier '"+ndL[i].id+"' must reference a valid resource"};	// check the node itself
-				rc = checkNodes(rL,ndL[i].nodes);	// check references of next hierarchy levels recursively
-				if(rc.status!=0) return rc	
+				// Starting v0.10.8, hierarchy root nodes (lvl==0) reference a resource, but not before.
+				// To recognize <v0.10.8, check for hClasses.
+				if( (lvl>0 || !hClasses) && itemByKey(rL,ndL[i].resource)==undefined ) 
+					return {status:909, statusText: "hierarchy node with identifier '"+ndL[i].id+"' must reference a valid resource"};	// check the node itself
+				rc = checkNodes(rL,ndL[i].nodes,lvl+1);	// check references of next hierarchy levels recursively
+				if(rc.status!=0) 
+					return rc	
 			}
 		};
 		return {status:0, statusText: "hierarchy nodes reference valid resources"}		// all's fine!
