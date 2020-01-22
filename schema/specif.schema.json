@@ -251,7 +251,7 @@
           "properties": {
             "type": {
               "type": "string",
-              "title": "Data-type 'Boolean'",
+              "title": "Data-type 'Boolean' or 'dateTime'",
               "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "enum": [ "xs:boolean", "xs:dateTime" ]
             },
@@ -392,7 +392,7 @@
             "maxLength":  {
               "type": "integer",
               "title": "Maximum String Length",
-              "description": "Optional use by dataTypes 'xs:string' and 'XHTML'.",
+              "description": "Optional use by dataTypes 'xs:string' and 'xhtml'.",
               "minimum": 0
             },
             "revision": {
@@ -695,11 +695,11 @@
           },
           "subject": {
             "$ref": "#/definitions/key",
-            "description": "Must be a member of resources."
+            "description": "Must be a member of resources or statements."
           },
           "object": {
             "$ref": "#/definitions/key",
-            "description": "Must be a member of resources."
+            "description": "Must be a member of resources or statements."
           },
           "properties": {
             "$ref": "#/definitions/properties"
@@ -766,10 +766,10 @@
         "type": "object",
         "properties": {
           "id": {
-            "description": "In case of a file, the id is ideally an absolute or relative URL.",
             "$ref": "#/definitions/id"
           },
           "title": {
+            "description": "In case of a file, the title is the absolute or relative URL.",
             "$ref": "#/definitions/value"
           },
           "description": {
