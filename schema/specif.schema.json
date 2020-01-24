@@ -483,7 +483,8 @@
             "type": "string"
           },
           "extends": {
-            "$ref": "#/definitions/id"
+            "$ref": "#/definitions/id",
+            "description": "Must be a member of resourceClasses."
           },
           "icon": {
             "$ref": "#/definitions/icon"
@@ -536,7 +537,8 @@
             "type": "string"
           },
           "extends": {
-            "$ref": "#/definitions/id"
+            "$ref": "#/definitions/id",
+            "description": "Must be a member of statementClasses."
           },
           "icon": {
             "$ref": "#/definitions/icon"
