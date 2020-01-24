@@ -527,7 +527,8 @@
             "$ref": "#/definitions/value"
           },
           "extends": {
-            "$ref": "#/definitions/key"
+            "$ref": "#/definitions/key",
+            "description": "Must be a member of resourceClasses."
           },
           "icon": {
             "$ref": "#/definitions/icon"
@@ -580,7 +581,8 @@
             "$ref": "#/definitions/value"
           },
           "extends": {
-            "$ref": "#/definitions/key"
+            "$ref": "#/definitions/key",
+            "description": "Must be a member of statementClasses."
           },
           "icon": {
             "$ref": "#/definitions/icon"
