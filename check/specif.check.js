@@ -216,7 +216,7 @@ function checkConstraints( data, options ) {
 							return {status:929, statusText: "double types must have accuracy>0"};
 						// no break;
 					case 'xs:integer':
-						// more restrictive than the schema, where min and may are optional:
+						// more restrictive than the schema, where min and max are optional:
 						if( L[i].min==undefined || L[i].max==undefined || L[i].min+1>L[i].max ) 
 							return {status:929, statusText: "number types must have min and max"}
 				}						
@@ -326,7 +326,7 @@ function checkConstraints( data, options ) {
 						return {status:921, statusText:etxt+": string value must not exceed maxLength"}; 
 					break;
 				case 'xs:double':
-//								if( (val*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922,statusText:""};
+				//	if( (val*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922,statusText:""};
 					val = parseFloat( val );
 					if( val=='NaN' ) 
 						return {status:925, statusText:etxt+": value is an invalid number"}; 
