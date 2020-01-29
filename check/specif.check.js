@@ -76,6 +76,26 @@ function checkConstraints( data, options ) {
 				subClasses = 'subjectClasses',
 				objClasses = 'objectClasses'
 	};
+	switch( data.specifVersion ) {
+		case '0.10.2':
+		case '0.10.3':
+		case '0.11.1':
+		case '0.10.4':
+		case '0.10.5':
+		case '0.10.6':
+		case '0.10.8':
+		case '0.11.2':
+		case '0.11.6':
+		case '0.11.8':
+			var fractionDigits = 'accuracy',
+				minInclusive = 'min',
+				maxInclusive = 'max';
+			break;
+		default:
+			var fractionDigits = 'fractionDigits',
+				minInclusive = 'minInclusive',
+				maxInclusive = 'maxInclusive'
+	};
 
 	var rc={},errL=[];
 
@@ -156,21 +176,21 @@ function checkConstraints( data, options ) {
 			dK = duplicateKey(iE.dataTypes);
 		if( dK ) return {status:911, statusText: "dataType "+dK.id+" with revision "+dK.revision+" is not unique"};
 		dK = duplicateKey(iE.propertyClasses);		// starting with v0.10.6 resp v0.11.6
-		if( dK ) return {status:910, statusText: "propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
+		if( dK ) return {status:911, statusText: "propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
 		dK = duplicateKey(iE[rClasses]);
-		if( dK ) return {status:912, statusText: rClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
+		if( dK ) return {status:911, statusText: rClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
 		dK = duplicateKey(iE[sClasses]);
-		if( dK ) return {status:913, statusText: sClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
+		if( dK ) return {status:911, statusText: sClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
 		dK = duplicateKey(iE[hClasses]);
-		if( dK ) return {status:914, statusText: hClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
+		if( dK ) return {status:911, statusText: hClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
 		dK = duplicateKey(iE.resources);
-		if( dK ) return {status:915, statusText: "resource "+dK.id+" with revision "+dK.revision+" is not unique"};
+		if( dK ) return {status:911, statusText: "resource "+dK.id+" with revision "+dK.revision+" is not unique"};
 		dK = duplicateKey(iE.statements);
-		if( dK ) return {status:916, statusText: "statement "+dK.id+" with revision "+dK.revision+" is not unique"};
+		if( dK ) return {status:911, statusText: "statement "+dK.id+" with revision "+dK.revision+" is not unique"};
 		dK = duplicateKey(iE.hierarchies);
-		if( dK ) return {status:917, statusText: "hierarchy "+dK.id+" with revision "+dK.revision+" is not unique"};
+		if( dK ) return {status:911, statusText: "hierarchy "+dK.id+" with revision "+dK.revision+" is not unique"};
 		dK = duplicateKey(iE.files);
-		if( dK ) return {status:918, statusText: "file identifier '"+dK.id+"' with revision "+dK.revision+" is not unique"};
+		if( dK ) return {status:911, statusText: "file identifier '"+dK.id+"' with revision "+dK.revision+" is not unique"};
 		return {status:0, statusText: 'all keys are unique'};
 
 		function duplicateKey(L) {
@@ -236,13 +256,13 @@ function checkConstraints( data, options ) {
 						break;
 					case 'xs:double':
 						// more restrictive than the schema, where accuracy is optional:
-						if( !L[i].accuracy ) 
-							return {status:929, statusText: "double types must have accuracy>0"};
+						if( !L[i][fractionDigits] ) 
+							return {status:929, statusText: "double types must have fractionDigits>0"};
 						// no break;
 					case 'xs:integer':
 						// more restrictive than the schema, where min and may are optional:
-						if( L[i].min==undefined || L[i].max==undefined || L[i].min+1>L[i].max ) 
-							return {status:929, statusText: "number types must have min and max"}
+						if( L[i][minInclusive]==undefined || L[i][maxInclusive]==undefined || L[i][minInclusive]+1>L[i][maxInclusive] ) 
+							return {status:929, statusText: "number types must have min and max, while min must be smaller or equal than max"}
 				}						
 			};
 		return {status:0, statusText: "dataTypes are correct"}
@@ -367,13 +387,13 @@ function checkConstraints( data, options ) {
 					};
 					break;
 				case 'xs:double':
-			//		if( (val*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922,statusText:""};
+			//		if( (val*Math.pow(10,dT[fractionDigits])%1)==0 ) return {status:922,statusText:""};
 					val = parseFloat( val );
 					if( val=='NaN' ) 
 						return {status:925, statusText:etxt+": value is an invalid number"}; 
-					if( val<dT.min ) 
+					if( val<dT[minInclusive] ) 
 						return {status:923, statusText:etxt+": double value must be larger than min"};
-					if( val>dT.max ) 
+					if( val>dT[maxInclusive] ) 
 						return {status:924, statusText:etxt+": double value must be smaller than max"}; 
 					break;
 				case 'xs:integer':
@@ -381,9 +401,9 @@ function checkConstraints( data, options ) {
 					val = parseInt( val );
 					if( val=='NaN' ) 
 						return {status:925, statusText:etxt+": value is an invalid number"}; 
-					if( val<dT.min ) 
+					if( val<dT[minInclusive] ) 
 						return {status:923, statusText:etxt+": integer value must be larger than min"};
-					if( val>dT.max ) 
+					if( val>dT[maxInclusive] ) 
 						return {status:924, statusText:etxt+": integer value must be smaller than max"}; 
 					break;
 				case 'xs:boolean':
