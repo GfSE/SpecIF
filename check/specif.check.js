@@ -155,7 +155,7 @@ function checkConstraints( data, options ) {
 		let allKeys=[],
 			dK = duplicateKey(iE.dataTypes);
 		if( dK ) return {status:911, statusText: "dataType "+dK.id+" with revision "+dK.revision+" is not unique"};
-		dId = duplicateKey(iE.propertyClasses);		// starting with v0.10.6
+		dK = duplicateKey(iE.propertyClasses);		// starting with v0.10.6 resp v0.11.6
 		if( dK ) return {status:910, statusText: "propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
 		dK = duplicateKey(iE[rClasses]);
 		if( dK ) return {status:912, statusText: rClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
@@ -174,7 +174,7 @@ function checkConstraints( data, options ) {
 		return {status:0, statusText: 'all keys are unique'};
 
 		function duplicateKey(L) {
-			if( !L || L.length<1 ) return null;
+			if( !L || L.length<1 ) return;
 			
 			// A key consists of id and revision; the combination must be unique.
 			// Add every checked key to allKeys,
@@ -192,7 +192,7 @@ function checkConstraints( data, options ) {
 					};
 					return false
 				}
-			var rc=null, e1=null;
+			var dk, e1;
 			for( var i=L.length-1;i>-1;i-- ) {
 				// it has been checked by schema that valid identifiers are present where mandatory;
 				// so we can skip the checking for duplicates, if there is no id, e.g. in case of properties:
@@ -203,25 +203,17 @@ function checkConstraints( data, options ) {
 				// check the element's id:
 				if( containsByKey(allKeys,e1) ) return e1;
 				// check the identifiers of enumerated values in dataTypes:
-				if( e1.values ) {
-					rc = duplicateKey(e1.values);
-					if( rc ) return rc
-				};
-				// check the identifiers of propertyClasses, as well:
-				if( e1[pClasses] ) {
-					rc = duplicateKey(e1[pClasses]);
-					if( rc ) return rc
-				};
+				dk = duplicateKey(e1.values);
+				if( dk ) return dk;
+				// check the identifiers of propertyClasses (before v0.10.6 resp v0.11.6):
+				dk = duplicateKey(e1[pClasses]);
+				if( dk ) return dk;
 				// the instance's properties may not have an id ...
-				if( e1.properties ) {
-					rc = duplicateKey(e1.properties);
-					if( rc ) return rc
-				};
+				dk = duplicateKey(e1.properties);
+				if( dk ) return dk;
 				// check the hierarchy's nodes recursively:
-				if( e1.nodes ) {
-					rc = duplicateKey(e1.nodes);
-					if( rc ) return rc
-				}; 
+				dk = duplicateKey(e1.nodes);
+				if( dk ) return dk;
 				// all is fine, but add the latest key to the list:
 				allKeys.push(e1)
 			};
