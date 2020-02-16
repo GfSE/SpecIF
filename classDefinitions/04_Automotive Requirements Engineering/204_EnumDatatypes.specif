@@ -1,71 +1,75 @@
 {
-    "id": "_FFF7098C-3C99-4A4E-91C9-4E65AE5E3352",
-    "title": "SpecIF enumeration datatype definitions for doamin 04-Automotive Requirements Engineering",
-    "specifVersion": "0.11.8",
-    "dataTypes": [
+  "id": "_FFF7098C-3C99-4A4E-91C9-4E65AE5E3352",
+  "title": "SpecIF enumeration datatype definitions for doamin 04-Automotive Requirements Engineering",
+  "isExtension": true,
+  "specifVersion": "1.0",
+  "createdAt": "2020-02-16T19:54:35.2169651+01:00",
+  "dataTypes": [
+    {
+      "id": "DT-SupplierStatus",
+      "title": "VDA:SupplierStatus",
+      "description": "Enumerated values for VDA supplier-status",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:enumeration",
+      "values": [
         {
-            "id": "DT-SupplierStatus",
-            "title": "VDA:SupplierStatus",
-            "description": "Enumerated values for VDA supplier-status",
-            "type": "xs:enumeration",
-            "values": [
-                {
-                    "id": "V-SupplierStatus-0",
-                    "title": "VDA:notApplicable"
-                },
-                {
-                    "id": "V-SupplierStatus-1",
-                    "title": "VDA:toClarify"
-                },
-                {
-                    "id": "V-SupplierStatus-2",
-                    "title": "VDA:agreed"
-                },
-                {
-                    "id": "V-SupplierStatus-3",
-                    "title": "VDA:partlyAgreed"
-                },
-                {
-                    "id": "V-SupplierStatus-4",
-                    "title": "VDA:notAgreed"
-                }
-            ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
+          "id": "V-SupplierStatus-0",
+          "title": "VDA:notApplicable"
         },
         {
-            "id": "DT-OemStatus",
-            "title": "VDA:OemStatus",
-            "description": "Enumerated values for VDA oem-status",
-            "type": "xs:enumeration",
-            "values": [
-                {
-                    "id": "V-OemStatus-0",
-                    "title": "VDA:notToEvaluate"
-                },
-                {
-                    "id": "V-OemStatus-1",
-                    "title": "VDA:toEvaluate"
-                },
-                {
-                    "id": "V-OemStatus-2",
-                    "title": "VDA:accepted"
-                },
-                {
-                    "id": "V-OemStatus-3",
-                    "title": "VDA:notAccepted"
-                }
-            ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
+          "id": "V-SupplierStatus-1",
+          "title": "VDA:toClarify"
+        },
+        {
+          "id": "V-SupplierStatus-2",
+          "title": "VDA:agreed"
+        },
+        {
+          "id": "V-SupplierStatus-3",
+          "title": "VDA:partlyAgreed"
+        },
+        {
+          "id": "V-SupplierStatus-4",
+          "title": "VDA:notAgreed"
         }
-    ],
-    "propertyClasses": [],
-    "resourceClasses": [],
-    "statementClasses": [],
-    "resources": [],
-    "statements": [],
-    "hierarchies": []
+      ],
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-OemStatus",
+      "title": "VDA:OemStatus",
+      "description": "Enumerated values for VDA oem-status",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:enumeration",
+      "values": [
+        {
+          "id": "V-OemStatus-0",
+          "title": "VDA:notToEvaluate"
+        },
+        {
+          "id": "V-OemStatus-1",
+          "title": "VDA:toEvaluate"
+        },
+        {
+          "id": "V-OemStatus-2",
+          "title": "VDA:accepted"
+        },
+        {
+          "id": "V-OemStatus-3",
+          "title": "VDA:notAccepted"
+        }
+      ],
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    }
+  ],
+  "propertyClasses": [],
+  "resourceClasses": [],
+  "statementClasses": [],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
 }

@@ -1,75 +1,183 @@
 {
-    "id": "_6C2F780D-108C-4CFF-8AC6-E098CB4C8986",
-    "title": "SpecIF resource class definitions for domain 02-Requirements Engineering",
-    "specifVersion": "0.11.8",
-    "dataTypes": [],
-    "propertyClasses": [],
-    "resourceClasses": [
+  "id": "_6C2F780D-108C-4CFF-8AC6-E098CB4C8986",
+  "title": "SpecIF resource class definitions for domain 02-Requirements Engineering",
+  "isExtension": true,
+  "specifVersion": "1.0",
+  "createdAt": "2020-02-16T19:54:35.1941664+01:00",
+  "dataTypes": [],
+  "propertyClasses": [],
+  "resourceClasses": [
+    {
+      "id": "RC-Folder",
+      "title": "SpecIF:Heading",
+      "description": "Folders with title and text for chapters or descriptive paragraphs.",
+      "revision": "1",
+      "replaces": [],
+      "isHeading": true,
+      "instantiation": [
+        "user"
+      ],
+      "propertyClasses": [
         {
-            "id": "RC-Folder",
-            "title": "SpecIF:Heading",
-            "description": "Folders with title and text for chapters or descriptive paragraphs.",
-            "instantiation": [ "user" ],
-            "propertyClasses": [ "PC-Name", "PC-Description" ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00",
-            "isHeading": true
+          "id": "PC-Name",
+          "revision": "1"
         },
         {
-            "id": "RC-Paragraph",
-            "title": "SpecIF:Paragraph",
-            "description": "Information with title and text for descriptive paragraphs.",
-            "instantiation": [ "auto", "user" ],
-            "propertyClasses": [ "PC-Name", "PC-Description" ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-03-16T19:59:00+02:00"
-        },
-        {
-            "id": "RC-Requirement",
-            "title": "IREB:Requirement",
-            "description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
-            "icon": "&#8623;",
-            "instantiation": [ "user" ],
-            "propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Description", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline" ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-            "id": "RC-Feature",
-            "title": "SpecIF:Feature",
-            "description": "A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition.",
-            "icon": "&#10038;",
-            "instantiation": [ "user" ],
-            "propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Description", "PC-Status", "PC-Priority", "PC-Perspective", "PC-Discipline" ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-            "id": "RC-Hierarchy",
-            "title": "SpecIF:Hierarchy",
-            "description": "Root node of a hierarchically organized specification (outline).",
-            "propertyClasses": [ "PC-Name", "PC-Description" ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-            "id": "RC-Comment",
-            "title": "SpecIF:Comment",
-            "description": "Comment referring to a model element ('resource' in general).",
-            "instantiation": [ "auto" ],
-            "propertyClasses": [ "PC-Description" ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-03-16T19:59:00+02:00"
+          "id": "PC-Description",
+          "revision": "1"
         }
-    ],
-    "statementClasses": [],
-    "resources": [],
-    "statements": [],
-    "hierarchies": []
+      ],
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "RC-Paragraph",
+      "title": "SpecIF:Paragraph",
+      "description": "Information with title and text for descriptive paragraphs.",
+      "revision": "1",
+      "replaces": [],
+      "isHeading": false,
+      "instantiation": [
+        "auto",
+        "user"
+      ],
+      "propertyClasses": [
+        {
+          "id": "PC-Name",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Description",
+          "revision": "1"
+        }
+      ],
+      "changedAt": "2019-03-16T18:59:00+01:00"
+    },
+    {
+      "id": "RC-Requirement",
+      "title": "IREB:Requirement",
+      "description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
+      "revision": "1",
+      "replaces": [],
+      "icon": "&#8623;",
+      "isHeading": false,
+      "instantiation": [
+        "user"
+      ],
+      "propertyClasses": [
+        {
+          "id": "PC-VisibleId",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Name",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Description",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Status",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Priority",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Perspective",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Discipline",
+          "revision": "1"
+        }
+      ],
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "RC-Feature",
+      "title": "SpecIF:Feature",
+      "description": "A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition.",
+      "revision": "1",
+      "replaces": [],
+      "icon": "&#10038;",
+      "isHeading": false,
+      "instantiation": [
+        "user"
+      ],
+      "propertyClasses": [
+        {
+          "id": "PC-VisibleId",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Name",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Description",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Status",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Priority",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Perspective",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Discipline",
+          "revision": "1"
+        }
+      ],
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "RC-Hierarchy",
+      "title": "SpecIF:Hierarchy",
+      "description": "Root node of a hierarchically organized specification (outline).",
+      "revision": "1",
+      "replaces": [],
+      "isHeading": false,
+      "propertyClasses": [
+        {
+          "id": "PC-Name",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Description",
+          "revision": "1"
+        }
+      ],
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "RC-Comment",
+      "title": "SpecIF:Comment",
+      "description": "Comment referring to a model element ('resource' in general).",
+      "revision": "1",
+      "replaces": [],
+      "isHeading": false,
+      "instantiation": [
+        "auto"
+      ],
+      "propertyClasses": [
+        {
+          "id": "PC-Description",
+          "revision": "1"
+        }
+      ],
+      "changedAt": "2019-03-16T18:59:00+01:00"
+    }
+  ],
+  "statementClasses": [],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
 }

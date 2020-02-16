@@ -1,67 +1,71 @@
 {
-    "id": "_E7466A8F_546F_4DEB_95D0_776AAF5BC8EE",
-    "title": "SpecIF enumeration datatype definitions for domain 09-Variant Management",
-    "specifVersion": "0.11.8",
-    "dataTypes": [
+  "id": "_E7466A8F_546F_4DEB_95D0_776AAF5BC8EE",
+  "title": "SpecIF enumeration datatype definitions for domain 09-Variant Management",
+  "isExtension": true,
+  "specifVersion": "1.0",
+  "createdAt": "2020-02-16T19:54:35.2484817+01:00",
+  "dataTypes": [
+    {
+      "id": "DT-FeatureKind",
+      "title": "SpecIF:FeatureKind",
+      "description": "Enumerated values for feature kind",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:enumeration",
+      "values": [
         {
-            "id": "DT-FeatureKind",
-            "title": "SpecIF:FeatureKind",
-            "description": "Enumerated values for feature kind",
-            "type": "xs:enumeration",
-            "values": [
-                {
-                    "id": "V-FeatureKind-Mandatory",
-                    "title": "Mandatory"
-                },
-                {
-                    "id": "V-FeatureKind-Alternative",
-                    "title": "Alternative"
-                },
-                {
-                    "id": "V-FeatureKind-Optional",
-                    "title": "Optional"
-                },
-                {
-                    "id": "V-FeatureKind-Or",
-                    "title": "Or"
-                }
-            ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-12-30T08:59:00+02:00"
+          "id": "V-FeatureKind-Mandatory",
+          "title": "Mandatory"
         },
         {
-            "id": "DT-FeatureSelectionState",
-            "title": "SpecIF:FeatureSelectionState",
-            "description": "Enumerated values for feature selection state",
-            "type": "xs:enumeration",
-            "values": [
-                {
-                    "id": "V-FeatureSelectionState-Unchecked",
-                    "title": "Unchecked"
-                },
-                {
-                    "id": "V-FeatureSelectionState-Checked",
-                    "title": "Checked"
-                },
-                {
-                    "id": "V-FeatureSelectionState-Forbidden",
-                    "title": "Forbidden"
-                },
-                {
-                    "id": "V-FeatureSelectionState-Recommended",
-                    "title": "Recommended"
-                }
-            ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-12-30T08:59:00+02:00"
+          "id": "V-FeatureKind-Alternative",
+          "title": "Alternative"
+        },
+        {
+          "id": "V-FeatureKind-Optional",
+          "title": "Optional"
+        },
+        {
+          "id": "V-FeatureKind-Or",
+          "title": "Or"
         }
-    ],
-    "propertyClasses": [],
-    "resourceClasses": [],
-    "statementClasses": [],
-    "resources": [],
-    "statements": [],
-    "hierarchies": []
+      ],
+      "multiple": false,
+      "changedAt": "2019-12-30T07:59:00+01:00"
+    },
+    {
+      "id": "DT-FeatureSelectionState",
+      "title": "SpecIF:FeatureSelectionState",
+      "description": "Enumerated values for feature selection state",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:enumeration",
+      "values": [
+        {
+          "id": "V-FeatureSelectionState-Unchecked",
+          "title": "Unchecked"
+        },
+        {
+          "id": "V-FeatureSelectionState-Checked",
+          "title": "Checked"
+        },
+        {
+          "id": "V-FeatureSelectionState-Forbidden",
+          "title": "Forbidden"
+        },
+        {
+          "id": "V-FeatureSelectionState-Recommended",
+          "title": "Recommended"
+        }
+      ],
+      "multiple": false,
+      "changedAt": "2019-12-30T07:59:00+01:00"
+    }
+  ],
+  "propertyClasses": [],
+  "resourceClasses": [],
+  "statementClasses": [],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
 }

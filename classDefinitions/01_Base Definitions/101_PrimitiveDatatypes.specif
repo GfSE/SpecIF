@@ -1,122 +1,145 @@
 {
   "id": "_20B10532_D3E3_47DF_A58D_EB22060878CC",
   "title": "SpecIF primitive datatype definitions for domain 01-Base Definitions",
-  "specifVersion": "0.11.8",
+  "isExtension": false,
+  "specifVersion": "1.0",
+  "createdAt": "2020-02-16T19:54:34.4837474+01:00",
   "dataTypes": [
-	{
-		"id": "DT-Boolean",
-		"title": "Boolean",
-		"type": "xs:boolean",
-		"revision": "main/1",
-		"replaces": [],
-		"changedAt": "2016-05-26T08:59:00+02:00"
-	},
-	{
-		"id": "DT-Byte",
-		"title": "Byte",
-		"type": "xs:integer",
-		"min": 0,
-		"max": 255,
-		"revision": "main/1",
-		"replaces": [],
-		"changedAt": "2016-05-26T08:59:00+02:00"
-	},
-	{
-		"id": "DT-Integer",
-		"title": "Integer",
-		"type": "xs:integer",
-		"min": -32768,
-		"max": 32767,
-		"revision": "main/1",
-		"replaces": [],
-		"changedAt": "2016-05-26T08:59:00+02:00"
-	},
-	{
-		"id": "DT-Real",
-		"title": "Real",
-		"type": "xs:double",
-		"accuracy": 5,
-		"min": -10000,
-		"max": 10000,
-		"revision": "main/1",
-		"replaces": [],
-		"changedAt": "2016-05-26T08:59:00+02:00"
-	},
-	{
-		"id": "DT-Decimal2",
-		"title": "Real with 2 Decimals",
-		"type": "xs:double",
-		"accuracy": 2,
-		"min": -10000,
-		"max": 10000,
-		"revision": "main/1",
-		"replaces": [],
-		"changedAt": "2016-05-26T08:59:00+02:00"
-	},
-	{
-		"id": "DT-Date",
-		"title": "Date or Timestamp",
-		"type": "xs:dateTime",
-		"revision": "main/1",
-		"replaces": [],
-		"changedAt": "2016-05-26T08:59:00+02:00"
-	},
-	{
-		"id": "DT-ShortString",
-		"title": "String[96]",
-		"description": "String with length 96",
-		"type": "xs:string",
-		"maxLength": 96,
-		"revision": "main/1",
-		"replaces": [],
-		"changedAt": "2016-05-26T08:59:00+02:00"
-	},
-	{
-		"id": "DT-String",
-		"title": "String[1024]",
-		"description": "String with length 1024",
-		"type": "xs:string",
-		"maxLength": 1024,
-		"revision": "main/1",
-		"replaces": [],
-		"changedAt": "2016-05-26T08:59:00+02:00"
-	},
-	{
-		"id": "DT-Text",
-		"title": "dcterms:description",
-		"description": "A text string",
-		"type": "xs:string",
-		"revision": "main/1",
-		"replaces": [],
-		"changedAt": "2016-05-26T08:59:00+02:00"
-	},
-	{
-		"id": "DT-URL",
-		"title": "URL",
-		"type": "xs:string",
-		"maxLength": 1024,
-		"revision": "main/1",
-		"replaces": [],
-		"changedAt": "2016-05-26T08:59:00+02:00"
-	},
-	{
-		"id": "DT-EmailAddress",
-		"title": "E-mail",
-		"type": "xs:string",
-		"maxLength": 256,
-		"revision": "main/1",
-		"replaces": [],
-		"changedAt": "2016-05-26T08:59:00+02:00"
-	},
-	{
-		"id": "DT-FormattedText",
-		"title": "Formatted Text",
-		"type": "xhtml",
-		"maxLength": 8192,
-		"revision": "main/1",
-		"replaces": [],
-		"changedAt": "2016-05-26T08:59:00+02:00"
-	}
+    {
+      "id": "DT-Boolean",
+      "title": "Boolean",
+      "description": [],
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:boolean",
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-Byte",
+      "title": "Byte",
+      "description": [],
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:integer",
+      "minInclusive": 0,
+      "maxInclusive": 255,
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-Integer",
+      "title": "Integer",
+      "description": [],
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:integer",
+      "minInclusive": -32768,
+      "maxInclusive": 32767,
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-Real",
+      "title": "Real",
+      "description": [],
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:double",
+      "fractionDigits": 5,
+      "minInclusive": -10000,
+      "maxInclusive": 10000,
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-Decimal2",
+      "title": "Real with 2 Decimals",
+      "description": [],
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:double",
+      "fractionDigits": 2,
+      "minInclusive": -10000,
+      "maxInclusive": 10000,
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-Date",
+      "title": "Date or Timestamp",
+      "description": [],
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:dateTime",
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-ShortString",
+      "title": "String[96]",
+      "description": "String with length 96",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:string",
+      "maxLength": 96,
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-String",
+      "title": "String[1024]",
+      "description": "String with length 1024",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:string",
+      "maxLength": 1024,
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-Text",
+      "title": "dcterms:description",
+      "description": "A text string",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:string",
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-URL",
+      "title": "URL",
+      "description": [],
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:string",
+      "maxLength": 1024,
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-EmailAddress",
+      "title": "E-mail",
+      "description": [],
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:string",
+      "maxLength": 256,
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-FormattedText",
+      "title": "Formatted Text",
+      "description": [],
+      "revision": "1",
+      "replaces": [],
+      "type": "xhtml",
+      "maxLength": 8192,
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    }
   ],
   "propertyClasses": [],
   "resourceClasses": [],

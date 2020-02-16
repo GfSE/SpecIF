@@ -1,23 +1,58 @@
 {
-    "id": "_373BFD06-84E9-4FF3-98EF-3DD047DD83F5",
-    "title": "SpecIF resource class definitions for domain 07-Issue Management",
-    "specifVersion": "0.11.8",
-    "dataTypes": [],
-    "propertyClasses": [],
-    "resourceClasses": [
+  "id": "_373BFD06-84E9-4FF3-98EF-3DD047DD83F5",
+  "title": "SpecIF resource class definitions for domain 07-Issue Management",
+  "isExtension": true,
+  "specifVersion": "1.0",
+  "createdAt": "2020-02-16T19:54:35.2386874+01:00",
+  "dataTypes": [],
+  "propertyClasses": [],
+  "resourceClasses": [
+    {
+      "id": "RC-Issue",
+      "title": "SpecIF:Issue",
+      "description": "An 'Issue' is a question to answer or decision to take which is worth tracking.",
+      "revision": "1",
+      "replaces": [],
+      "isHeading": false,
+      "instantiation": [
+        "user",
+        "auto"
+      ],
+      "propertyClasses": [
         {
-            "id": "RC-Issue",
-            "title": "SpecIF:Issue",
-            "description": "An 'Issue' is a question to answer or decision to take which is worth tracking.",
-            "instantiation": [ "user", "auto" ],
-            "propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Description", "PC-IssStatus", "PC-Priority", "PC-Responsible", "PC-DueDate" ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
+          "id": "PC-VisibleId",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Name",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Description",
+          "revision": "1"
+        },
+        {
+          "id": "PC-IssStatus",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Priority",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Responsible",
+          "revision": "1"
+        },
+        {
+          "id": "PC-DueDate",
+          "revision": "1"
         }
-    ],
-    "statementClasses": [],
-    "resources": [],
-    "statements": [],
-    "hierarchies": []
+      ],
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    }
+  ],
+  "statementClasses": [],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
 }

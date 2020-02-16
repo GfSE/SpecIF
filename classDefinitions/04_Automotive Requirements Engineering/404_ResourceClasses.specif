@@ -1,58 +1,120 @@
 {
-    "id": "_DE4B4A88-5CF6-4982-A45F-423E7FB90607",
-    "title": "SpecIF resource class definitions for domain 04-Automotive Requirements Engineering",
-    "specifVersion": "0.11.8",
-    "dataTypes": [],
-    "propertyClasses": [],
-    "resourceClasses": [
+  "id": "_DE4B4A88-5CF6-4982-A45F-423E7FB90607",
+  "title": "SpecIF resource class definitions for domain 04-Automotive Requirements Engineering",
+  "isExtension": true,
+  "specifVersion": "1.0",
+  "createdAt": "2020-02-16T19:54:35.2263913+01:00",
+  "dataTypes": [],
+  "propertyClasses": [],
+  "resourceClasses": [
+    {
+      "id": "RC-VDA_Diagram",
+      "title": "VDA:Diagram",
+      "description": "A 'VDA:Diagram' is a Diagram with automotive-process-specific properties.",
+      "revision": "1",
+      "replaces": [],
+      "extends": {
+        "id": "RC-Diagram",
+        "revision": "1"
+      },
+      "icon": "&#9635;",
+      "isHeading": false,
+      "instantiation": [
+        "auto"
+      ],
+      "propertyClasses": [
         {
-            "id": "RC-VDA_Diagram",
-            "title": "VDA:Diagram",
-            "description": "A 'VDA:Diagram' is a Diagram with automotive-process-specific properties.",
-            "extends": {
-                "id": "RC-Diagram",
-                "revision": "main/1"
-            },
-            "icon": "&#9635;",
-            "instantiation": [ "auto" ],
-            "propertyClasses": [ "PC-SupplierStatus", "PC-SupplierComment", "PC-OemStatus", "PC-OemComment" ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
+          "id": "PC-SupplierStatus",
+          "revision": "1"
         },
         {
-            "id": "RC-VDA_Requirement",
-            "title": "VDA:Requirement",
-            "description": "A VDA:Requirement is a Requirement with additional automotive-process-specific properties.",
-            "extends": {
-                "id": "RC-Requirement",
-                "revision": "main/1"
-            },
-            "icon": "&#8623;",
-            "instantiation": [ "user" ],
-            "propertyClasses": [ "PC-SupplierStatus", "PC-SupplierComment", "PC-OemStatus", "PC-OemComment" ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-04-14T08:59:00+02:00"
+          "id": "PC-SupplierComment",
+          "revision": "1"
         },
         {
-            "id": "RC-VDA_Feature",
-            "title": "VDA:Feature",
-            "description": "A 'VDA:Feature' is a Feature with automotiev specific properties.",
-            "extends": {
-                "id": "RC-Feature",
-                "revision": "main/1"
-            },
-            "icon": "&#10038;",
-            "instantiation": [ "user" ],
-            "propertyClasses": [ "PC-SupplierStatus", "PC-SupplierComment", "PC-OemStatus", "PC-OemComment" ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-05-14T08:59:00+02:00"
+          "id": "PC-OemStatus",
+          "revision": "1"
+        },
+        {
+          "id": "PC-OemComment",
+          "revision": "1"
         }
-    ],
-    "statementClasses": [],
-    "resources": [],
-    "statements": [],
-    "hierarchies": []
+      ],
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "RC-VDA_Requirement",
+      "title": "VDA:Requirement",
+      "description": "A VDA:Requirement is a Requirement with additional automotive-process-specific properties.",
+      "revision": "1",
+      "replaces": [],
+      "extends": {
+        "id": "RC-Requirement",
+        "revision": "1"
+      },
+      "icon": "&#8623;",
+      "isHeading": false,
+      "instantiation": [
+        "user"
+      ],
+      "propertyClasses": [
+        {
+          "id": "PC-SupplierStatus",
+          "revision": "1"
+        },
+        {
+          "id": "PC-SupplierComment",
+          "revision": "1"
+        },
+        {
+          "id": "PC-OemStatus",
+          "revision": "1"
+        },
+        {
+          "id": "PC-OemComment",
+          "revision": "1"
+        }
+      ],
+      "changedAt": "2019-04-14T08:59:00+02:00"
+    },
+    {
+      "id": "RC-VDA_Feature",
+      "title": "VDA:Feature",
+      "description": "A 'VDA:Feature' is a Feature with automotiev specific properties.",
+      "revision": "1",
+      "replaces": [],
+      "extends": {
+        "id": "RC-Feature",
+        "revision": "1"
+      },
+      "icon": "&#10038;",
+      "isHeading": false,
+      "instantiation": [
+        "user"
+      ],
+      "propertyClasses": [
+        {
+          "id": "PC-SupplierStatus",
+          "revision": "1"
+        },
+        {
+          "id": "PC-SupplierComment",
+          "revision": "1"
+        },
+        {
+          "id": "PC-OemStatus",
+          "revision": "1"
+        },
+        {
+          "id": "PC-OemComment",
+          "revision": "1"
+        }
+      ],
+      "changedAt": "2019-05-14T08:59:00+02:00"
+    }
+  ],
+  "statementClasses": [],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
 }

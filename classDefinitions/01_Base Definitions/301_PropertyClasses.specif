@@ -1,177 +1,233 @@
 {
-	"id": "_C9426323_BA53_492D_96EC_77D42A2FBA2A",
-	"title": "SpecIF property class definitions for domain 01-Base Definitions",
-	"specifVersion": "0.11.8",
-	"dataTypes": [],
-    "propertyClasses": [
-        {
-            "id": "PC-VisibleId",
-            "title": "dcterms:identifier",
-            "description": "<p>A unique reference to the resource within a given context. <small>(<i>source: <a href=\"http://dublincore.org/documents/dcmi-terms/\">DCMI</a></i>)</small></p><p>An identifier for a resource. This identifier may be unique with a scope that is defined by the RM provider. Assigned by the service provider when a resource is created. Not intended for end-user display. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
-            "dataType": "DT-ShortString",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-            "id": "PC-Name",
-            "title": "dcterms:title",
-            "description": "<p>A name given to the resource. <small>(<i>source: <a href=\"http://dublincore.org/documents/dcmi-terms/\">DCMI</a></i>)</small></p><p>Title (reference: Dublin Core) of the resource represented as rich text in XHTML content. SHOULD include only content that is valid inside an XHTML &lt;span&gt; element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
-            "dataType": "DT-ShortString",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-            "id": "PC-Description",
-            "title": "dcterms:description",
-            "description": "<p>An account of the resource. <small>(<i>source: <a href=\"http://dublincore.org/documents/dcmi-terms/\">DCMI</a></i>)</small></p><p>Descriptive text (reference: Dublin Core) about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML &lt;div&gt; element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
-            "dataType": "DT-FormattedText",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-            "id": "PC-Origin",
-            "title": "SpecIF:Origin",
-            "description": "The origin (source, reference) of an information or requirement",
-            "dataType": "DT-ShortString",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2017-06-10T15:47:24+02:00"
-        },
-        {
-            "id": "PC-Diagram",
-            "title": "SpecIF:Diagram",
-            "description": "Contains the graphical representation of a diagram.",
-            "dataType": "DT-FormattedText",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-04-14T08:59:00+02:00"
-        },
-        {
-            "id": "PC-Notation",
-            "title": "SpecIF:Notation",
-            "description": "The notation used by a model diagram, e.g. 'BPMN:2.0', 'OMG:SysML:1.3:Activity Diagram' or 'FMC:Block Diagram'.",
-            "dataType": "DT-ShortString",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-            "id": "PC-Status",
-            "title": "SpecIF:Status",
-            "description": "The 'Status', e.g. lifecycle state, of the resource.",
-            "dataType": "DT-Status",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-            "id": "PC-Priority",
-            "title": "SpecIF:Priority",
-            "description": "The 'Priority' of the resource.",
-            "dataType": "DT-Priority",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-            "id": "PC-Perspective",
-            "title": "SpecIF:Perspective",
-            "description" :  "tbd.",
-            "dataType": "DT-Perspective",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-            "id": "PC-Discipline",
-            "title": "SpecIF:Discipline",
-            "description" :  "The engineering discipline (system, electronics, mechanics, software, safety).",
-            "dataType": "DT-Discipline",
-            "multiple": true,
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-            "id": "PC-Visibility",
-            "title": "SpecIF:Visibility",
-            "description" :  "The visibility of a resource (e.g. Public, Private, Protected,...) as known from object orientation.",
-            "dataType": "DT-VisibilityKind",
-            "multiple": false,
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-09-10T08:59:00+02:00"
-        },
-        {
-            "id": "PC-Responsible",
-            "title": "SpecIF:Responsible",
-            "description": "The 'Person' being responsible for the resource.",
-            "dataType": "DT-ShortString",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-            "id": "PC-DueDate",
-            "title": "SpecIF:DueDate",
-            "description": "A 'Due Date' for the resource.",
-            "dataType": "DT-Date",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
-        },
-        {
-            "id": "PC-Stereotype",
-            "title": "SpecIF:Stereotype",
-            "description" :  "A stereotype gives an element an additional/different meaning.",
-            "dataType": "DT-ShortString",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-03-31T17:10:23.443Z"
-        },
-        {
-            "id": "PC-Abbreviation",
-            "title": "SpecIF:Abbreviation",
-            "description" :  "An abbreviation for the resource.",
-            "dataType": "DT-ShortString",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-04-26T12:00:00+02:00"
-        },
-        {
-            "id": "PC-Type",
-            "title": "dcterms:type",
-            "description": "The element type resp. the metamodel element (e.g. OMG:UML:2.5.1:Class)",
-            "dataType": "DT-ShortString",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-08-20T20:32:25.411Z"
-        },
-        {
-            "id": "PC-Alias",
-            "title": "SpecIF:Alias",
-            "description" :  "An alias name for the resource.",
-            "dataType": "DT-ShortString",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-04-26T12:00:00+02:00"
-        },
-        {
-            "id": "PC-Value",
-            "title": "rdf:value",
-            "description": "A value of different meaning, depending on the element type (attribute default value, a taggedValue value etc.)",
-            "dataType": "DT-ShortString",
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-09-10T20:32:25.411Z"
-        }
-    ],
-	"resourceClasses": [],
-	"statementClasses": [],
-	"resources": [],
-	"statements": [],
-	"hierarchies": []
+  "id": "_C9426323_BA53_492D_96EC_77D42A2FBA2A",
+  "title": "SpecIF property class definitions for domain 01-Base Definitions",
+  "isExtension": true,
+  "specifVersion": "1.0",
+  "createdAt": "2020-02-16T19:54:35.0595654+01:00",
+  "dataTypes": [],
+  "propertyClasses": [
+    {
+      "id": "PC-VisibleId",
+      "title": "dcterms:identifier",
+      "description": "<p>A unique reference to the resource within a given context. <small>(<i>source: <a href=\"http://dublincore.org/documents/dcmi-terms/\">DCMI</a></i>)</small></p><p>An identifier for a resource. This identifier may be unique with a scope that is defined by the RM provider. Assigned by the service provider when a resource is created. Not intended for end-user display. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-ShortString",
+        "revision": "1"
+      },
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "PC-Name",
+      "title": "dcterms:title",
+      "description": "<p>A name given to the resource. <small>(<i>source: <a href=\"http://dublincore.org/documents/dcmi-terms/\">DCMI</a></i>)</small></p><p>Title (reference: Dublin Core) of the resource represented as rich text in XHTML content. SHOULD include only content that is valid inside an XHTML &lt;span&gt; element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-ShortString",
+        "revision": "1"
+      },
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "PC-Description",
+      "title": "dcterms:description",
+      "description": "<p>An account of the resource. <small>(<i>source: <a href=\"http://dublincore.org/documents/dcmi-terms/\">DCMI</a></i>)</small></p><p>Descriptive text (reference: Dublin Core) about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML &lt;div&gt; element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-FormattedText",
+        "revision": "1"
+      },
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "PC-Origin",
+      "title": "SpecIF:Origin",
+      "description": "The origin (source, reference) of an information or requirement",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-ShortString",
+        "revision": "1"
+      },
+      "changedAt": "2017-06-10T15:47:24+02:00"
+    },
+    {
+      "id": "PC-Diagram",
+      "title": "SpecIF:Diagram",
+      "description": "Contains the graphical representation of a diagram.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-FormattedText",
+        "revision": "1"
+      },
+      "changedAt": "2019-04-14T08:59:00+02:00"
+    },
+    {
+      "id": "PC-Notation",
+      "title": "SpecIF:Notation",
+      "description": "The notation used by a model diagram, e.g. 'BPMN:2.0', 'OMG:SysML:1.3:Activity Diagram' or 'FMC:Block Diagram'.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-ShortString",
+        "revision": "1"
+      },
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "PC-Status",
+      "title": "SpecIF:Status",
+      "description": "The 'Status', e.g. lifecycle state, of the resource.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-Status",
+        "revision": "1"
+      },
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "PC-Priority",
+      "title": "SpecIF:Priority",
+      "description": "The 'Priority' of the resource.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-Priority",
+        "revision": "1"
+      },
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "PC-Perspective",
+      "title": "SpecIF:Perspective",
+      "description": "tbd.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-Perspective",
+        "revision": "1"
+      },
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "PC-Discipline",
+      "title": "SpecIF:Discipline",
+      "description": "The engineering discipline (system, electronics, mechanics, software, safety).",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-Discipline",
+        "revision": "1"
+      },
+      "multiple": true,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "PC-Visibility",
+      "title": "SpecIF:Visibility",
+      "description": "The visibility of a resource (e.g. Public, Private, Protected,...) as known from object orientation.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-VisibilityKind",
+        "revision": "1"
+      },
+      "multiple": false,
+      "changedAt": "2019-09-10T08:59:00+02:00"
+    },
+    {
+      "id": "PC-Responsible",
+      "title": "SpecIF:Responsible",
+      "description": "The 'Person' being responsible for the resource.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-ShortString",
+        "revision": "1"
+      },
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "PC-DueDate",
+      "title": "SpecIF:DueDate",
+      "description": "A 'Due Date' for the resource.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-Date",
+        "revision": "1"
+      },
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "PC-Stereotype",
+      "title": "SpecIF:Stereotype",
+      "description": "A stereotype gives an element an additional/different meaning.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-ShortString",
+        "revision": "1"
+      },
+      "changedAt": "2019-03-31T17:10:23.443Z"
+    },
+    {
+      "id": "PC-Abbreviation",
+      "title": "SpecIF:Abbreviation",
+      "description": "An abbreviation for the resource.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-ShortString",
+        "revision": "1"
+      },
+      "changedAt": "2019-04-26T12:00:00+02:00"
+    },
+    {
+      "id": "PC-Type",
+      "title": "dcterms:type",
+      "description": "The element type resp. the metamodel element (e.g. OMG:UML:2.5.1:Class)",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-ShortString",
+        "revision": "1"
+      },
+      "changedAt": "2019-08-20T20:32:25.411Z"
+    },
+    {
+      "id": "PC-Alias",
+      "title": "SpecIF:Alias",
+      "description": "An alias name for the resource.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-ShortString",
+        "revision": "1"
+      },
+      "changedAt": "2019-04-26T12:00:00+02:00"
+    },
+    {
+      "id": "PC-Value",
+      "title": "rdf:value",
+      "description": "A value of different meaning, depending on the element type (attribute default value, a taggedValue value etc.)",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-ShortString",
+        "revision": "1"
+      },
+      "changedAt": "2019-09-10T20:32:25.411Z"
+    }
+  ],
+  "resourceClasses": [],
+  "statementClasses": [],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
 }
