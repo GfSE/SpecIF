@@ -1,21 +1,27 @@
 {
-    "id": "_4396F471_ECF8_4508_8F39_5CE2166ADD53",
-    "title": "SpecIF statement class definitions for doamin 01_Base Definitions",
-    "specifVersion": "0.11.8",
-    "dataTypes": [],
-    "resourceClasses": [],
-    "statementClasses": [
-        {
-            "id": "SC-Classifier",
-            "title": "rdf:type",
-            "description": "States that the relation subject is an instance of the relation object.",
-            "instantiation": [ "auto", "user" ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-03-24T12:00:00+02:00"
-        }
-    ],
-    "resources": [],
-    "statements": [],
-    "hierarchies": []
+  "id": "_4396F471_ECF8_4508_8F39_5CE2166ADD53",
+  "title": "SpecIF statement class definitions for doamin 01_Base Definitions",
+  "isExtension": true,
+  "specifVersion": "1.0",
+  "createdAt": "2020-02-16T19:54:35.1763337+01:00",
+  "dataTypes": [],
+  "propertyClasses": [],
+  "resourceClasses": [],
+  "statementClasses": [
+    {
+      "id": "SC-Classifier",
+      "title": "rdf:type",
+      "description": "States that the relation subject is an instance of the relation object.",
+      "revision": "1",
+      "replaces": [],
+      "instantiation": [
+        "auto",
+        "user"
+      ],
+      "changedAt": "2019-03-24T11:00:00+01:00"
+    }
+  ],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
 }

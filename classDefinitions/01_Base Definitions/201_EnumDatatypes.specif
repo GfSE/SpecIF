@@ -1,211 +1,219 @@
 {
-    "id": "_D24239F3-DE44-4AB5-8765-5FE55158CEC9",
-    "title": "SpecIF enumeration datatype definitions for domain 01-Base Definitions",
-    "specifVersion": "0.11.8",
-    "dataTypes": [
+  "id": "_D24239F3-DE44-4AB5-8765-5FE55158CEC9",
+  "title": "SpecIF enumeration datatype definitions for domain 01-Base Definitions",
+  "isExtension": false,
+  "specifVersion": "1.0",
+  "createdAt": "2020-02-16T19:54:35.0432812+01:00",
+  "dataTypes": [
+    {
+      "id": "DT-Status",
+      "title": "SpecIF:Status",
+      "description": "Enumerated values for status",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:enumeration",
+      "values": [
         {
-            "id": "DT-Status",
-            "title": "SpecIF:Status",
-            "description": "Enumerated values for status",
-            "type": "xs:enumeration",
-            "values": [
-                {
-                    "id": "V-Status-0",
-                    "title": "00_deprecated"
-                },
-                {
-                    "id": "V-Status-1",
-                    "title": "01_rejected"
-                },
-                {
-                    "id": "V-Status-2",
-                    "title": "10_initial"
-                },
-                {
-                    "id": "V-Status-3",
-                    "title": "20_drafted"
-                },
-                {
-                    "id": "V-Status-4",
-                    "title": "30_submitted"
-                },
-                {
-                    "id": "V-Status-5",
-                    "title": "40_approved"
-                },
-                {
-                    "id": "V-Status-6",
-                    "title": "60_completed"
-                },
-                {
-                    "id": "V-Status-7",
-                    "title": "80_released"
-                }
-            ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
+          "id": "V-Status-0",
+          "title": "00_deprecated"
         },
         {
-            "id": "DT-Priority",
-            "title": "SpecIF:Priority",
-            "description": "Enumerated values for priority",
-            "type": "xs:enumeration",
-            "values": [
-                {
-                    "id": "V-Prio-0",
-                    "title": "SpecIF:priorityHigh"
-                },
-                {
-                    "id": "V-Prio-1",
-                    "title": "SpecIF:priorityRatherHigh"
-                },
-                {
-                    "id": "V-Prio-2",
-                    "title": "SpecIF:priorityMedium"
-                },
-                {
-                    "id": "V-Prio-3",
-                    "title": "SpecIF:priorityRatherLow"
-                },
-                {
-                    "id": "V-Prio-4",
-                    "title": "SpecIF:priorityLow"
-                }
-            ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
+          "id": "V-Status-1",
+          "title": "01_rejected"
         },
         {
-            "id": "DT-Perspective",
-            "title": "Perspective",
-            "description": "Enumerated values for perspective",
-            "type": "xs:enumeration",
-            "values": [
-                {
-                    "id": "V-perspective-0",
-                    "title": "Business"
-                },
-                {
-                    "id": "V-perspective-1",
-                    "title": "User"
-                },
-                {
-                    "id": "V-perspective-2",
-                    "title": "System"
-                }
-            ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
+          "id": "V-Status-2",
+          "title": "10_initial"
         },
         {
-            "id": "DT-Discipline",
-            "title": "Discipline",
-            "description": "Enumerated values for engineering discipline",
-            "type": "xs:enumeration",
-            "values": [
-                {
-                    "id": "V-discipline-4",
-                    "title": "System"
-                },
-                {
-                    "id": "V-discipline-0",
-                    "title": "Mechanics"
-                },
-                {
-                    "id": "V-discipline-1",
-                    "title": "Electronics"
-                },
-                {
-                    "id": "V-discipline-2",
-                    "title": "Software"
-                },
-                {
-                    "id": "V-discipline-3",
-                    "title": "Safety"
-                }
-            ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
+          "id": "V-Status-3",
+          "title": "20_drafted"
         },
         {
-            "id": "DT-IssStatus",
-            "title": "SpecIF:IssueStatus",
-            "description": "Enumerated values for issue status",
-            "type": "xs:enumeration",
-            "values": [
-                {
-                    "id": "V-IssStatus-0",
-                    "title": "open"
-                },
-                {
-                    "id": "V-IssStatus-1",
-                    "title": "assigned"
-                },
-                {
-                    "id": "V-IssStatus-2",
-                    "title": "in progress"
-                },
-                {
-                    "id": "V-IssStatus-3",
-                    "title": "closed"
-                },
-                {
-                    "id": "V-IssStatus-4",
-                    "title": "reopened"
-                },
-                {
-                    "id": "V-IssStatus-5",
-                    "title": "rejected"
-                }
-            ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2016-05-26T08:59:00+02:00"
+          "id": "V-Status-4",
+          "title": "30_submitted"
         },
         {
-            "id": "DT-VisibilityKind",
-            "title": "SpecIF:VisibilityKind",
-            "description": "Enumerated values for visibility",
-            "type": "xs:enumeration",
-            "values": [
-                {
-                    "id": "V-VisibilityKind-0",
-                    "title": "Public"
-                },
-                {
-                    "id": "V-VisibilityKind-1",
-                    "title": "Private"
-                },
-                {
-                    "id": "V-VisibilityKind-2",
-                    "title": "Protected"
-                },
-                {
-                    "id": "V-VisibilityKind-3",
-                    "title": "Package"
-                },
-                {
-                    "id": "V-VisibilityKind-4",
-                    "title": "Internal"
-                },
-                {
-                    "id": "V-VisibilityKind-5",
-                    "title": "Protected Internal"
-                }
-            ],
-            "revision": "main/1",
-            "replaces": [],
-            "changedAt": "2019-03-08T16:00:00+02:00"
+          "id": "V-Status-5",
+          "title": "40_approved"
+        },
+        {
+          "id": "V-Status-6",
+          "title": "60_completed"
+        },
+        {
+          "id": "V-Status-7",
+          "title": "80_released"
         }
-    ],
-    "propertyClasses": [],
-    "resourceClasses": [],
-    "statementClasses": [],
-    "resources": [],
-    "statements": [],
-    "hierarchies": []
+      ],
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-Priority",
+      "title": "SpecIF:Priority",
+      "description": "Enumerated values for priority",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:enumeration",
+      "values": [
+        {
+          "id": "V-Prio-0",
+          "title": "SpecIF:priorityHigh"
+        },
+        {
+          "id": "V-Prio-1",
+          "title": "SpecIF:priorityRatherHigh"
+        },
+        {
+          "id": "V-Prio-2",
+          "title": "SpecIF:priorityMedium"
+        },
+        {
+          "id": "V-Prio-3",
+          "title": "SpecIF:priorityRatherLow"
+        },
+        {
+          "id": "V-Prio-4",
+          "title": "SpecIF:priorityLow"
+        }
+      ],
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-Perspective",
+      "title": "Perspective",
+      "description": "Enumerated values for perspective",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:enumeration",
+      "values": [
+        {
+          "id": "V-perspective-0",
+          "title": "Business"
+        },
+        {
+          "id": "V-perspective-1",
+          "title": "User"
+        },
+        {
+          "id": "V-perspective-2",
+          "title": "System"
+        }
+      ],
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-Discipline",
+      "title": "Discipline",
+      "description": "Enumerated values for engineering discipline",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:enumeration",
+      "values": [
+        {
+          "id": "V-discipline-4",
+          "title": "System"
+        },
+        {
+          "id": "V-discipline-0",
+          "title": "Mechanics"
+        },
+        {
+          "id": "V-discipline-1",
+          "title": "Electronics"
+        },
+        {
+          "id": "V-discipline-2",
+          "title": "Software"
+        },
+        {
+          "id": "V-discipline-3",
+          "title": "Safety"
+        }
+      ],
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-IssStatus",
+      "title": "SpecIF:IssueStatus",
+      "description": "Enumerated values for issue status",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:enumeration",
+      "values": [
+        {
+          "id": "V-IssStatus-0",
+          "title": "open"
+        },
+        {
+          "id": "V-IssStatus-1",
+          "title": "assigned"
+        },
+        {
+          "id": "V-IssStatus-2",
+          "title": "in progress"
+        },
+        {
+          "id": "V-IssStatus-3",
+          "title": "closed"
+        },
+        {
+          "id": "V-IssStatus-4",
+          "title": "reopened"
+        },
+        {
+          "id": "V-IssStatus-5",
+          "title": "rejected"
+        }
+      ],
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "DT-VisibilityKind",
+      "title": "SpecIF:VisibilityKind",
+      "description": "Enumerated values for visibility",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:enumeration",
+      "values": [
+        {
+          "id": "V-VisibilityKind-0",
+          "title": "Public"
+        },
+        {
+          "id": "V-VisibilityKind-1",
+          "title": "Private"
+        },
+        {
+          "id": "V-VisibilityKind-2",
+          "title": "Protected"
+        },
+        {
+          "id": "V-VisibilityKind-3",
+          "title": "Package"
+        },
+        {
+          "id": "V-VisibilityKind-4",
+          "title": "Internal"
+        },
+        {
+          "id": "V-VisibilityKind-5",
+          "title": "Protected Internal"
+        }
+      ],
+      "multiple": false,
+      "changedAt": "2019-03-08T15:00:00+01:00"
+    }
+  ],
+  "propertyClasses": [],
+  "resourceClasses": [],
+  "statementClasses": [],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
 }

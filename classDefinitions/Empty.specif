@@ -1,11 +1,12 @@
 {
-  "id": "_3555D75E_0344_4BDF_B127_2340C7F2BF9A",
-  "title": "Empty SpecIF file",
-  "specifVersion": "0.11.8",
-  "dataTypes": [],
-  "resourceClasses": [],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    "id": "_3555D75E_0344_4BDF_B127_2340C7F2BF9A",
+    "title": "Empty SpecIF file",
+    "isExtension": false,
+    "specifVersion": "1.0",
+    "dataTypes": [],
+    "resourceClasses": [],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }
