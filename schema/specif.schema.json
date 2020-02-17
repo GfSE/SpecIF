@@ -735,11 +735,11 @@
           },
           "subject": {
             "$ref": "#/definitions/key",
-            "description": "Must be a member of resources or statements."
+            "description": "Must be a member of resources."
           },
           "object": {
             "$ref": "#/definitions/key",
-            "description": "Must be a member of resources or statements."
+            "description": "Must be a member of resources, statements or files."
           },
           "language": {
             "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of simple property values.",

@@ -156,7 +156,7 @@ function checkConstraints( data, options ) {
 	};
 
 	// statement's subject and object must be resource keys:
-	rc = checkStatements( data.resources, data.statements );
+	rc = checkStatements( data, data.statements );
 	if( rc.status>0 ) errL.push(rc);
 
 	// A hierarchy node's "resource" must be the key of a member of "resources":
@@ -345,16 +345,14 @@ function checkConstraints( data, options ) {
 			return true
 		}
 	}
-	function checkStatements(rL,sL) {	// resources, statements
+	function checkStatements(dta,sL) {	// resources, statements
 		// A statement's "subject" must be the key of a member of "resources". 
-		// Similarly for "object".
+		// An "object" must be the key of a member of "resources", "statements" or "files".
 		// (It has been checked before that any "resource" is indeed of type "resourceClass").
 		for( var i=sL.length-1;i>-1;i-- ) {
-			if( itemByKey(rL, sL[i].subject)==undefined && options.dontCheck.indexOf('statement.subject')<0 ) 
-
+			if( itemByKey(dta.resources, sL[i].subject)==undefined && options.dontCheck.indexOf('statement.subject')<0 ) 
 				return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
-			if( itemByKey(rL, sL[i].object)==undefined && options.dontCheck.indexOf('statement.object')<0 ) 
-
+			if( itemByKey(dta.resources.concat(dta.statements).concat(dta.files), sL[i].object)==undefined && options.dontCheck.indexOf('statement.object')<0 ) 
 				return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
 //			if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
 		};
