@@ -216,29 +216,6 @@
         }
       ],
       "changedAt": "2020-02-17T20:32:25+02:00"
-    },
-    {
-      "id": "SC-signals",
-      "title": "SpecIF:signals",
-      "description": "An FMC:Actor 'signals' an FMC:Event.",
-      "revision": "1",
-      "replaces": [],
-      "instantiation": [
-        "auto"
-      ],
-      "subjectClasses": [
-        {
-          "id": "RC-Actor",
-          "revision": "1"
-        }
-      ],
-      "objectClasses": [
-        {
-          "id": "RC-Event",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2020-02-17T20:32:25+02:00"
     }
   ],
   "resources": [],
