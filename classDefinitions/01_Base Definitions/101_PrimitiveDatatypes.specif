@@ -12,7 +12,6 @@
       "revision": "1",
       "replaces": [],
       "type": "xs:boolean",
-      "multiple": false,
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
@@ -24,7 +23,6 @@
       "type": "xs:integer",
       "minInclusive": 0,
       "maxInclusive": 255,
-      "multiple": false,
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
@@ -36,7 +34,6 @@
       "type": "xs:integer",
       "minInclusive": -32768,
       "maxInclusive": 32767,
-      "multiple": false,
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
@@ -49,7 +46,6 @@
       "fractionDigits": 5,
       "minInclusive": -10000,
       "maxInclusive": 10000,
-      "multiple": false,
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
@@ -62,7 +58,6 @@
       "fractionDigits": 2,
       "minInclusive": -10000,
       "maxInclusive": 10000,
-      "multiple": false,
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
@@ -72,28 +67,16 @@
       "revision": "1",
       "replaces": [],
       "type": "xs:dateTime",
-      "multiple": false,
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
       "id": "DT-ShortString",
-      "title": "String[96]",
-      "description": "String with length 96",
+      "title": "String[256]",
+      "description": "String with max. length 256",
       "revision": "1",
       "replaces": [],
       "type": "xs:string",
-      "maxLength": 96,
-      "multiple": false,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "DT-String",
-      "title": "String[1024]",
-      "description": "String with length 1024",
-      "revision": "1",
-      "replaces": [],
-      "type": "xs:string",
-      "maxLength": 1024,
+      "maxLength": 256,
       "multiple": false,
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
@@ -104,7 +87,6 @@
       "revision": "1",
       "replaces": [],
       "type": "xs:string",
-      "multiple": false,
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
@@ -115,7 +97,6 @@
       "replaces": [],
       "type": "xs:string",
       "maxLength": 1024,
-      "multiple": false,
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
@@ -126,7 +107,6 @@
       "replaces": [],
       "type": "xs:string",
       "maxLength": 256,
-      "multiple": false,
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
@@ -136,8 +116,6 @@
       "revision": "1",
       "replaces": [],
       "type": "xhtml",
-      "maxLength": 8192,
-      "multiple": false,
       "changedAt": "2016-05-26T08:59:00+02:00"
     }
   ],

@@ -1,0 +1,137 @@
+{
+    "id": "_E6FC4B89-F483-48BF-971B-2E457F1EE783",
+    "title": "Resource classes for domain 10_Vocabulary Definition",
+    "isExtension": true,
+    "specifVersion": "1.0",
+    "dataTypes": [],
+    "resourceClasses": [
+        {
+            "id": "RC-ResourceTerm",
+            "title": "SpecIF:Resource-Term",
+            "description": "A term for objects belonging to the SpecIF vocabulary",
+            "revision": "1",
+            "replaces": [],
+            "isHeading": false,
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Name",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Origin",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Status",
+                    "revision": "1"
+                }
+            ],
+            "changedAt": "2017-06-10T15:47:24+02:00"
+        },
+        {
+            "id": "RC-PredicateTerm",
+            "title": "SpecIF:Predicate-Term",
+            "description": "A term for relations belonging to the SpecIF vocabulary",
+            "revision": "1",
+            "replaces": [],
+            "isHeading": false,
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Name",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Origin",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Status",
+                    "revision": "1"
+                }
+            ],
+            "changedAt": "2017-06-10T15:47:24+02:00"
+        },
+        {
+            "id": "RC-PropertyTerm",
+            "title": "SpecIF:Property-Term",
+            "description": "A term for attributes belonging to the SpecIF vocabulary",
+            "revision": "1",
+            "replaces": [],
+            "isHeading": false,
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Name",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Origin",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Status",
+                    "revision": "1"
+                }
+            ],
+            "changedAt": "2017-06-10T15:47:24+02:00"
+        },
+        {
+            "id": "RC-ValueTerm",
+            "title": "SpecIF:Value-Term",
+            "description": "A term for property values belonging to the SpecIF vocabulary",
+            "revision": "1",
+            "replaces": [],
+            "isHeading": false,
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Name",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Origin",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Status",
+                    "revision": "1"
+                }
+            ],
+            "changedAt": "2018-02-05T00:29:45+01:00"
+        }
+    ],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
+}

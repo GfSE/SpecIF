@@ -25,6 +25,10 @@
         {
           "id": "PC-Description",
           "revision": "1"
+        },
+        {
+          "id": "PC-Type",
+          "revision": "1"
         }
       ],
       "changedAt": "2016-05-26T08:59:00+02:00"
@@ -41,10 +45,6 @@
         "user"
       ],
       "propertyClasses": [
-        {
-          "id": "PC-Name",
-          "revision": "1"
-        },
         {
           "id": "PC-Description",
           "revision": "1"
@@ -91,6 +91,10 @@
         {
           "id": "PC-Discipline",
           "revision": "1"
+        },
+        {
+          "id": "PC-Type",
+          "revision": "1"
         }
       ],
       "changedAt": "2016-05-26T08:59:00+02:00"
@@ -134,46 +138,13 @@
         {
           "id": "PC-Discipline",
           "revision": "1"
-        }
-      ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "RC-Hierarchy",
-      "title": "SpecIF:Hierarchy",
-      "description": "Root node of a hierarchically organized specification (outline).",
-      "revision": "1",
-      "replaces": [],
-      "isHeading": false,
-      "propertyClasses": [
-        {
-          "id": "PC-Name",
-          "revision": "1"
         },
         {
-          "id": "PC-Description",
+          "id": "PC-Type",
           "revision": "1"
         }
       ],
       "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "RC-Comment",
-      "title": "SpecIF:Comment",
-      "description": "Comment referring to a model element ('resource' in general).",
-      "revision": "1",
-      "replaces": [],
-      "isHeading": false,
-      "instantiation": [
-        "auto"
-      ],
-      "propertyClasses": [
-        {
-          "id": "PC-Description",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2019-03-16T18:59:00+01:00"
     }
   ],
   "statementClasses": [],

@@ -20,16 +20,18 @@ other domains are still under discussion and under development.
 ### Domain types
 The following list shows the currently identified domains and their IDs:
 
-|Domain ID|Domain|Description|
-|---------|-|-|
-|01|Base definitions|Common definitions relevant for all domains (e.g. primitive data types)|
-|02|Requirements Engineering|Classical requirements engineering following the IREB definitions|
-|03|FMC modeling|SpecIF mapping for the Fundamental Modeling Concepts appoach|
-|04|Automotive Requirements Engineering|Automotive-specific requirements engineering extensions (VDA)|
-|05|Agile Requirements Engineering|Requirements engineering for agile development (e.g. epics and user stories)|
-|06|UML-SpecIF mapping|Extensions to map UML (Unified Modeling Lanaguage) models to SpecIF|
-|07|Issue Management|Issue and Task management|
-|08|BOM|Bill of materials|
+|Domain ID|Domain|Description|Release status|
+|---------|-|-|-|
+|01|Base definitions|Common definitions relevant for all domains (e.g. primitive data types)|Unreleased|
+|02|Requirements Engineering|Classical requirements engineering following the IREB definitions|Unreleased|
+|03|FMC modeling|SpecIF mapping for the Fundamental Modeling Concepts appoach|Unreleased|
+|04|Automotive Requirements Engineering|Automotive-specific requirements engineering extensions (VDA)|Unreleased|
+|05|Agile Requirements Engineering|Requirements engineering for agile development (e.g. epics and user stories)|Unreleased|
+|06|UML-SpecIF mapping|Extensions to map UML (Unified Modeling Lanaguage) models to SpecIF|Unreleased|
+|07|Issue Management|Issue and Task management|Unreleased|
+|08|BOM|Bill of materials|Unreleased|
+|09|Variant Management|Feature model-based variant management|Unreleased|
+|10|Vocabulary Definition|Resources to define Vocabularies (e.g. SpecIF Vocabulary)|Unreleased|
 
 ## File naming schema
 For the discussion process the metadata files have a special naming schema with a 3 digit number as prefix in the filename:

@@ -166,7 +166,7 @@
     },
     {
       "id": "PC-Stereotype",
-      "title": "SpecIF:Stereotype",
+      "title": "UML:Stereotype",
       "description": "A stereotype gives an element an additional/different meaning.",
       "revision": "1",
       "replaces": [],
