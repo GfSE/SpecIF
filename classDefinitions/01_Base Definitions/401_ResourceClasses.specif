@@ -8,16 +8,12 @@
   "propertyClasses": [],
   "resourceClasses": [
     {
-      "id": "RC-ResourceTerm",
-      "title": "SpecIF:Resource-Term",
-      "description": "A term for objects belonging to the SpecIF vocabulary",
+      "id": "RC-Hierarchy",
+      "title": "SpecIF:Hierarchy",
+      "description": "Root node of a hierarchically organized specification (outline).",
       "revision": "1",
       "replaces": [],
       "isHeading": false,
-      "instantiation": [
-        "auto",
-        "user"
-      ],
       "propertyClasses": [
         {
           "id": "PC-Name",
@@ -26,110 +22,27 @@
         {
           "id": "PC-Description",
           "revision": "1"
-        },
-        {
-          "id": "PC-Origin",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Status",
-          "revision": "1"
         }
       ],
-      "changedAt": "2017-06-10T15:47:24+02:00"
+      "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
-      "id": "RC-PredicateTerm",
-      "title": "SpecIF:Predicate-Term",
-      "description": "A term for relations belonging to the SpecIF vocabulary",
+      "id": "RC-Comment",
+      "title": "SpecIF:Comment",
+      "description": "Comment referring to a model element ('resource' in general).",
       "revision": "1",
       "replaces": [],
       "isHeading": false,
       "instantiation": [
-        "auto",
-        "user"
+        "auto"
       ],
       "propertyClasses": [
         {
-          "id": "PC-Name",
-          "revision": "1"
-        },
-        {
           "id": "PC-Description",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Origin",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Status",
           "revision": "1"
         }
       ],
-      "changedAt": "2017-06-10T15:47:24+02:00"
-    },
-    {
-      "id": "RC-PropertyTerm",
-      "title": "SpecIF:Property-Term",
-      "description": "A term for attributes belonging to the SpecIF vocabulary",
-      "revision": "1",
-      "replaces": [],
-      "isHeading": false,
-      "instantiation": [
-        "auto",
-        "user"
-      ],
-      "propertyClasses": [
-        {
-          "id": "PC-Name",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Description",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Origin",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Status",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2017-06-10T15:47:24+02:00"
-    },
-    {
-      "id": "RC-ValueTerm",
-      "title": "SpecIF:Value-Term",
-      "description": "A term for property values belonging to the SpecIF vocabulary",
-      "revision": "1",
-      "replaces": [],
-      "isHeading": false,
-      "instantiation": [
-        "auto",
-        "user"
-      ],
-      "propertyClasses": [
-        {
-          "id": "PC-Name",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Description",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Origin",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Status",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2018-02-05T00:29:45+01:00"
+      "changedAt": "2019-03-16T18:59:00+01:00"
     }
   ],
   "statementClasses": [],

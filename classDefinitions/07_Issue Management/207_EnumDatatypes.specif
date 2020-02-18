@@ -1,0 +1,49 @@
+{
+  "id": "_C64FD18A_A4C8_4960_9A6B_27BEF8DD24FD",
+  "title": "SpecIF enumeration datatype definitions for domain 07-Issue Management",
+  "isExtension": false,
+  "specifVersion": "1.0",
+  "dataTypes": [
+    {
+      "id": "DT-IssStatus",
+      "title": "SpecIF:IssueStatus",
+      "description": "Enumerated values for issue status",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:enumeration",
+      "values": [
+        {
+          "id": "V-IssStatus-0",
+          "title": "open"
+        },
+        {
+          "id": "V-IssStatus-1",
+          "title": "assigned"
+        },
+        {
+          "id": "V-IssStatus-2",
+          "title": "in progress"
+        },
+        {
+          "id": "V-IssStatus-3",
+          "title": "closed"
+        },
+        {
+          "id": "V-IssStatus-4",
+          "title": "reopened"
+        },
+        {
+          "id": "V-IssStatus-5",
+          "title": "rejected"
+        }
+      ],
+      "multiple": false,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    }
+  ],
+  "resourceClasses": [],
+  "statementClasses": [],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
+}

@@ -1,6 +1,6 @@
 {
   "id": "_18BB023F-157A-41C5-AF8A-7D6EB0FF7236",
-  "title": "SpecIF resource class definitions for domain 03-FMC Modeling",
+  "title": "SpecIF resource class definitions for domain 03-Model Integration",
   "isExtension": true,
   "specifVersion": "1.0",
   "createdAt": "2020-02-16T19:54:35.2070506+01:00",
@@ -71,7 +71,7 @@
           "revision": "1"
         },
         {
-          "id": "PC-Notation",
+          "id": "PC-Type",
           "revision": "1"
         },
         {
