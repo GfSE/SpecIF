@@ -148,7 +148,7 @@
             "type": "string"
           }
         },
-        "required": [ "id", "resource" ]
+        "required": [ "id", "resource", "changedAt" ]
       }
     },
     "properties": {
