@@ -124,7 +124,7 @@ JSON can represent any kind of object-oriented data object. To define the syntax
 When SpecIF data is persisted to a JSON file it can be done in two ways:
 
 * The SpecIF file gets the file extension *.specif* and contains the JSON serialization of the SpecIF data.
-* SpecIF supports also the inclusion of any other files e.g. images, PDF documents etc. referenced by a SpecIF-JSON-file. These attached files are then stored together with the .specif file inside a ZIP-archive with the file extension *.specifz*. One or more \*.specif file are contained at root level of the zipped archive and the referenceded files are often collected in a folder; sometimes named *files_and_images*.
+* SpecIF supports also the inclusion of any other files e.g. images, PDF documents etc. referenced by a SpecIF content. These attached files are stored together with the .specif file inside a ZIP-archive with the file extension *.specifz*. One or more \*.specif file are contained at root level of the zipped archive and the referenceded files are often collected in a folder; sometimes named *files_and_images*.
 
 The following table shows an overview about the SpecIF file extensions:
 
@@ -136,11 +136,11 @@ File extension | Meaning
 
 ### XML representation
 
-In release 1.0 of SpecIF no XML resp. RDF representation is defined. But it may be done in future releases.
+SpecIF v1.0 does not define a XML resp. RDF representation. But it may be provided in future releases.
 
 ## Web API
 
-Beside the possibility to store SpecIf data in files, it is possible to persist the data in other physical storage options like SQL- and NoSQL-data bases. To get a common access point for all SpecIF data a Web API definition is part of the SpecIF. The Web API definition uses the technologies of Swagger/OpenAPI to define endpoints and data models to create, read, update and delete (CRUD operations) SpecIF data.
+Besides the possibility to store SpecIf data in a file, the data may be persisted using other physical storage options like SQL- and NoSQL-data bases. To get a common access point for all SpecIF data a Web API definition is part of the SpecIF. The Web API definition uses the technologies of Swagger/OpenAPI to define endpoints and data models to create, read, update and delete (CRUD operations) SpecIF data.
 
 ## Multilingualism
 
