@@ -8,7 +8,7 @@ In practice, it is difficult or even impossible with acceptable effort to join t
 
 The Specification Integration Facility (SpecIF) shall support the change from document-centric to artefact-centric colla­boration, which is a generally accepted goal in the domains of systems engineering and product lifecycle management (PLM). SpecIF defines a language for describing system models with attention to both syntax and semantics. By creating a common context for graphical and textual content, an understanding (beyond mere communi­cation) is achieved on a logical level. Existing technical formats and protocols such as ReqIF or RDF are adopted to take advantage of existing IT infra­structure.
 
-![End-to-end product lifecycle management](./img/End-to-end-Product-Lifecycle-Management-en-960-2ba1f6c4.png)
+![End-to-end product lifecycle management](./images/End-to-end-Product-Lifecycle-Management-en-960-2ba1f6c4.png)
 
 ## Goals
 
@@ -30,7 +30,7 @@ SpecIF contributes to the following objectives:
 
 * Open and cooperative: All results are published with Creative Commons 4.0 CC BY-SA license; allowing commercial use. The results can be further developed, but the origin must be stated and they must be published under similar terms; please consult the referenced license text. We encou­rage everyone interested to join our GfSE working group and to directly contribute to the results.
 
-![End-to-end product lifecycle management](./img/Specif-Goals-en-960-b271de15.png)
+![End-to-end product lifecycle management](./images/Specif-Goals-en-960-b271de15.png)
 
 ## Use Cases
 
