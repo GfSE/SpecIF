@@ -124,16 +124,15 @@ JSON can represent any kind of object-oriented data object. To define the syntax
 When SpecIF data is persisted to a JSON file it can be done in two ways:
 
 * The SpecIF file gets the file extension *.specif* and contains the JSON serialization of the SpecIF data.
-* SpecIF supports also the inclusion of any other files e.g. images, PDF documents etc. referenced by a SpecIF-JOSN-file. These attached files are then stored together with the .specif file inside a ZIP-archive with the file extension *.specifz*. One or more \*.specif file are contained at root level of the zipped archive and the referenceded files are often collected in a folder; sometimes named *files_and_images*.
+* SpecIF supports also the inclusion of any other files e.g. images, PDF documents etc. referenced by a SpecIF-JSON-file. These attached files are then stored together with the .specif file inside a ZIP-archive with the file extension *.specifz*. One or more \*.specif file are contained at root level of the zipped archive and the referenceded files are often collected in a folder; sometimes named *files_and_images*.
 
 The following table shows an overview about the SpecIF file extensions:
 
 File extension | Meaning
 -|-
 .specif | SpecIF file with JSON content defined by the SpecIF-JSON-Schema.
-.specifz | SpecIF zipped archive with at least one .specif-file on the root level and an optional folder *files_and_images* containing external files.
 .specifx | Reserved for future use to store SpecIF data saved as XML.
--specifxz | Reserved for future use to store a SpecIF zipped archive with .specifx XML files. 
+.specifz | SpecIF zipped archive with at least one \*.specif (or \*.specifx) file at root level and the referenced files, often in a folder *files_and_images*.
 
 ### XML representation
 
