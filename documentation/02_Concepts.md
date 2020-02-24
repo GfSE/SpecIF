@@ -6,7 +6,7 @@ The Specification Integration Facility addresses the problem domain of product l
 
 There are four phases defined to structure the PLM [[WikipediaPLM](https://en.wikipedia.org/wiki/)]:
 
-1. Concept pahse (Conceive - Imagine, specify, plan, innovate)
+1. Concept phase (Conceive - Imagine, specify, plan, innovate)
 2. Design phase (Design - Describe, define, develop, test, analyze and validate)
 3. Realization phase (Realize - Manufacture, make, build, procure, produce, sell and deliver)
 4. Service phase (Service - Use, operate, maintain, support, sustain, phase-out, retire, recycle and disposal)
@@ -95,7 +95,7 @@ For each SpecIF data element must exist a class element defining this data eleme
 
 ## Inheritance
 
-SpecIF includes the concept of inheritance - well known from object-oriented software development. It is possible to define a new resource- or statement-class based on a still defined element. The new element (child element) inherits all properties from the element where it is derived from (parent element). It is just necessary to define additional properties on the child element. SpecIF uses the term *extends* to store a reference to the parent element from the child element.
+SpecIF includes the concept of inheritance - well known from object-oriented software development. It is possible to define a new resource- or statement-class based on an already defined element. The new element (child element) inherits all properties from the element where it is derived from (parent element). It is just necessary to define additional properties on the child element. SpecIF uses the term *extends* to store a reference to the parent element from the child element.
 
 The concept of inheritance in SpecIF is very helpful, when a specific application scenario requires special, additional domain-specific properties. The SpecIF user can define the new classes based on standardized types. A tool, that does not know the application-specific properties, but the standardizes base-types, can handle the data as any other standard data with extensions.  
 
@@ -112,11 +112,12 @@ JSON is selected as data format for SpecIF, because of
 * a very good tool support on all platforms
 * a high level of familiarity
 * a more compact data representation in comparison to XML
+* a superior and easy-to-use support for schema definition and schema validation
 * the possibility to use it as file-based or Web API based format in the same way
 
 ### JSON Schema
 
-JSON can represent any kind of object-oriented data object. To define the syntax of SpecIF, *JSON Schema* [[JSONSchema](https://json-schema.org/)] is used. JSON Schema was introduced to define data formats expressed with JSON.  JSON Schema itself uses a special kind of JSON format to define other JSON formats such as SpecIF.
+JSON can represent any kind of object-oriented data object. To define the syntax of SpecIF, *JSON Schema* [[JSONSchema](https://json-schema.org/)] is used. JSON Schema was introduced to define data formats expressed with JSON.  JSON Schema itself uses a special kind of JSON format to define any JSON format such as SpecIF.
 
 ### File extensions
 
@@ -136,11 +137,11 @@ File extension | Meaning
 
 ### XML representation
 
-In release 1.0 of SpecIF no XML representation is defined. But it may be done in future releases.
+In release 1.0 of SpecIF no XML resp. RDF representation is defined. But it may be done in future releases.
 
 ## Web API
 
-Beside the possibility to store SpecIf data in files, it is also possible to store the data in other physical storage options like SQL- and NoSQL-data bases. To get a common access point for all SpecIF data a Web API definition is part of the SpecIF. The Web API definition uses the technologies of Swagger/OpenAPI to define endpoints and data models to create, read, update and delete (CRUD operations) SpecIF data.
+Beside the possibility to store SpecIf data in files, it is possible to persist the data in other physical storage options like SQL- and NoSQL-data bases. To get a common access point for all SpecIF data a Web API definition is part of the SpecIF. The Web API definition uses the technologies of Swagger/OpenAPI to define endpoints and data models to create, read, update and delete (CRUD operations) SpecIF data.
 
 ## Multilingualism
 
