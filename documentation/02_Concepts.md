@@ -53,7 +53,7 @@ SpecIF uses selected concepts and terms defined by the following standards:
 * The [Requirements Interchange Format](https://www.omg.org/spec/ReqIF/1.2/PDF) (ReqIF)
 * The [International Requirements Engineering Board](https://www.ireb.org/en/) (IREB)
 * The [Fundamental Modeling Concepts](http://www.fmc-modeling.org/) (FMC)
-* The [Unified Modeling Language](https://www.uml.org/) (UML) and their dialects (e.g. SpecIF)
+* The [Unified Modeling Language](https://www.uml.org/) (UML) and their dialects (e.g. SysML)
 * The [Business Process Model and Notation](http://www.bpmn.org/) (BPMN)
 
 ## SpecIF data is graph data
