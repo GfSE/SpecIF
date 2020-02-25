@@ -21,6 +21,7 @@ SpecIF contributes to the following objectives:
 * Schema-compliant: SpecIF data can be checked formally using a JSON- or XML-schema; the former has been made available at SpecIF-Schema.
 * Standard-compliant: SpecIF draws on existing standards, most importantly from W3C, OMG and OASIS.
 * Open and cooperative: All results are published with Creative Commons 4.0 CC BY-SA license; allowing commercial use. The results can be further developed, but the origin must be stated and they must be published under similar terms; please consult the referenced license text. We encou­rage everyone interested to join our GfSE working group and to directly contribute to the results.
+
 ![End-to-end product lifecycle management](./images/Specif-Goals-en-960-b271de15.png)
 
 ## Use Cases
