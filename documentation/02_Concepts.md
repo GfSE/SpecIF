@@ -105,7 +105,7 @@ SpecIF data is represented in specific data formats following conventions define
 
 ### JSON
 
-SpecIF data uses the [*JavaScript Object Notation (JSON)*](https://www.json.org/json-en.html) to represent its data. JSON is a widely used format to represent object oriented data structures. It supports the data representation of data objects including arrays.
+SpecIF data uses the [JavaScript Object Notation (JSON)](https://www.json.org/json-en.html) to represent its data. JSON is a widely used format to represent object oriented data structures. It supports the data representation of data objects including arrays.
 
 JSON is selected as data format for SpecIF, because of
 
@@ -117,7 +117,7 @@ JSON is selected as data format for SpecIF, because of
 
 ### JSON Schema
 
-JSON can represent any kind of object-oriented data object. To define the syntax of SpecIF, [*JSONSchema*](https://json-schema.org/) is used. JSON Schema was introduced to define data formats expressed with JSON.  JSON Schema itself uses a special kind of JSON format to define any JSON format such as SpecIF.
+JSON can represent any kind of object-oriented data object. To define the syntax of SpecIF, [JSONSchema](https://json-schema.org/) is used. JSON Schema was introduced to define data formats expressed with JSON.  JSON Schema itself uses a special kind of JSON format to define any JSON format such as SpecIF.
 
 ### File extensions
 
