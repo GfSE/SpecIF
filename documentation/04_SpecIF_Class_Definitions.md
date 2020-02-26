@@ -48,17 +48,6 @@ The following list shows the currently defined domains and their IDs:
 |URL|DT-URL|1|xs:string|
 |E-mail|DT-EmailAddress|1|xs:string|
 |Formatted Text|DT-FormattedText|1|xhtml|
-|Boolean|DT-Boolean|1|xs:boolean|
-|Byte|DT-Byte|1|xs:integer|
-|Integer|DT-Integer|1|xs:integer|
-|Real|DT-Real|1|xs:double|
-|Real with 2 Decimals|DT-Decimal2|1|xs:double|
-|Date or Timestamp|DT-Date|1|xs:dateTime|
-|String[256]|DT-ShortString|1|xs:string|String with max. length 256
-|dcterms:description|DT-Text|1|xs:string|A text string
-|URL|DT-URL|1|xs:string|
-|E-mail|DT-EmailAddress|1|xs:string|
-|Formatted Text|DT-FormattedText|1|xhtml|
 |SpecIF:Status|DT-Status|1|xs:enumeration|<p>Enumerated values for status</p><ul><li>00_deprecated [V-Status-0]</li><li>01_rejected [V-Status-1]</li><li>10_initial [V-Status-2]</li><li>20_drafted [V-Status-3]</li><li>30_submitted [V-Status-4]</li><li>40_approved [V-Status-5]</li><li>60_completed [V-Status-6]</li><li>80_released [V-Status-7]</li></ul>
 |SpecIF:Priority|DT-Priority|1|xs:enumeration|<p>Enumerated values for priority</p><ul><li>SpecIF:priorityHigh [V-Prio-0]</li><li>SpecIF:priorityRatherHigh [V-Prio-1]</li><li>SpecIF:priorityMedium [V-Prio-2]</li><li>SpecIF:priorityRatherLow [V-Prio-3]</li><li>SpecIF:priorityLow [V-Prio-4]</li></ul>
 |Perspective|DT-Perspective|1|xs:enumeration|<p>Enumerated values for perspective</p><ul><li>Business [V-perspective-0]</li><li>User [V-perspective-1]</li><li>System [V-perspective-2]</li></ul>
