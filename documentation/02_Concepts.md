@@ -34,7 +34,7 @@ To solve these problems, SpecIF will define a standard for data exchange and int
 SpecIF can be used in at least two different application scenarios.
 
 ### Data exchange
-It can be used as data exchange format, to exchange PLM data between diffrent tools used in the product life cycle. 
+It can be used as data exchange format, to exchange PLM data between different tools used in the product life cycle. 
 
 A typical example is the discipline of requirements engineering: A requirements engineer wants to provide a specification to a supplier or a customer for review. With SpecIF the requirements engineer can export the specification contents to a SpecIF file and send it to the different stakeholder. The stakeholder can then open or import the SpecIF data with his own SpecIF-supporting tools, make some additions or comments and send the result back to the requirements engineer. Because of the clear defined syntax and semantics of SpecIF, no manual work for data mapping or data integration is necessary.
 
@@ -124,7 +124,7 @@ JSON can represent any kind of object-oriented data object. To define the syntax
 When SpecIF data is persisted to a JSON file it can be done in two ways:
 
 * The SpecIF file gets the file extension *.specif* and contains the JSON serialization of the SpecIF data.
-* SpecIF supports also the inclusion of any other files e.g. images, PDF documents etc. referenced by a SpecIF content. These attached files are stored together with the .specif file inside a ZIP-archive with the file extension *.specifz*. One or more \*.specif file are contained at root level of the zipped archive and the referenceded files are often collected in a folder; sometimes named *files_and_images*.
+* SpecIF supports also the inclusion of any other files e.g. images, PDF documents etc. referenced by a SpecIF content. These attached files are stored together with the .specif file inside a ZIP-archive with the file extension *.specifz*. One or more \*.specif file are contained at root level of the zipped archive and the referenced files are often collected in a folder; sometimes named *files_and_images*.
 
 The following table shows an overview about the SpecIF file extensions:
 
@@ -164,7 +164,7 @@ These leads to the following rules for SpecIF-versioning:
 
 ![Versioning in SpecIF](./images/SpecIfVersioning.png)
 
-The figure above shows an example of the different versioning and revision scenarios in SpecIF on an example of a resource element. The resource element has the id "ABC". Each revsion of thies resource has the same id but different revision IDs and replaces references. 
+The figure above shows an example of the different versioning and revision scenarios in SpecIF on an example of a resource element. The resource element has the id "ABC". Each revision of this resource has the same id but different revision IDs and replaces references. 
 
 With this concept is it is possible to support the concepts of linear revisioning, branching, and merging. 
 A typical application scenario is a data export of PLM data form a source data provider, parallel changes from multiple stakeholders and the reintegration of the data in the source data provider.
@@ -173,9 +173,9 @@ A typical application scenario is a data export of PLM data form a source data p
 
 To avoid manual work of mapping data when exporting and importing data in different tools, the SpecIF standard defines standardized naming's (*title*) for data representations and their meanings (semantics).  The most names hereby come from the Dublin Core Metadata Initiative.
 
-One example: The Dublin Core Metadata Initiaive has defined the term *dcterms:title* to represent any kind of a name. So in SpecIF a propertyClass for *dcterms:title* is defined. These property class is then used in the class definitions for resources and statements each time a tile resp. name is required for a special kind of data element.
+One example: The Dublin Core Metadata Initiaive has defined the term *dcterms:title* to represent any kind of a name. So in SpecIF a propertyClass for *dcterms:title* is defined. These property class is then used in the class definitions for resources and statements each time a title resp. name is required for a special kind of data element.
 
-In every application domains all properties containing a name using as key for this property the term *dcterms:tile*. It is used in a requirement to represent the requirement title just as in a SpecIF-UML- mapping to represent the name of a class or any other UML-model element and so on.
+In every application domains all properties containing a name using as key for this property the term *dcterms:title*. It is used in a requirement to represent the requirement title just as in a SpecIF-UML- mapping to represent the name of a class or any other UML-model element and so on.
 
 With a standardized definition of such terms for different application domains in PLM by SpecIF it is possible to exchange data between all tools supporting the SpecIF standard without the effort of manual mapping data types and property types when exporting or importing data to or from SpecIF. 
 
