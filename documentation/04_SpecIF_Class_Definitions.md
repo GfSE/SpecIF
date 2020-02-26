@@ -36,7 +36,7 @@ The following list shows the currently defined domains and their IDs:
 
 ### Data types of domain 01: Base Definitions
 |title|id|revision|type|description|
-|-|-|-|-|
+|-|-|-|-|-|
 |Boolean|DT-Boolean|1|xs:boolean|
 |Byte|DT-Byte|1|xs:integer|
 |Integer|DT-Integer|1|xs:integer|
