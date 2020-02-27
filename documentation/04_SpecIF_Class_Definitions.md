@@ -73,7 +73,7 @@ The following list shows the currently defined domains and their IDs:
 |SpecIF:Abbreviation|PC-Abbreviation|1|String[256]|An abbreviation for the resource.
 |dcterms:type|PC-Type|1|String[256]|The element type resp. the metamodel element (e.g. OMG:UML:2.5.1:Class)
 |SpecIF:Alias|PC-Alias|1|String[256]|An alias name for the resource.
-|rdf:value|PC-Value|1|String[256]|A value of different meaning, depending on the element type (attribute default value, a taggedValue value etc.)
+|rdf:value|PC-Value|1|dcterms:desciption|A value of different meaning, depending on the element type (attribute default value, a taggedValue value etc.)
 ### Resource classes of domain 01: Base Definitions
 |title|id|revision|description|
 |-|-|-|-|
