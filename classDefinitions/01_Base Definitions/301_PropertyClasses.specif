@@ -219,7 +219,7 @@
       "revision": "1",
       "replaces": [],
       "dataType": {
-        "id": "DT-ShortString",
+        "id": "DT-Text",
         "revision": "1"
       },
       "changedAt": "2019-09-10T20:32:25.411Z"
