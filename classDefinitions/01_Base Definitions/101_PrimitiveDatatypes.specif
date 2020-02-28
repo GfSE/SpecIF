@@ -8,7 +8,7 @@
     {
       "id": "DT-Boolean",
       "title": "Boolean",
-      "description": [],
+      "description": "The Boolean data type.",
       "revision": "1",
       "replaces": [],
       "type": "xs:boolean",
@@ -17,7 +17,7 @@
     {
       "id": "DT-Byte",
       "title": "Byte",
-      "description": [],
+      "description": "A byte is an integer value in range between 0 and 255.",
       "revision": "1",
       "replaces": [],
       "type": "xs:integer",
@@ -28,7 +28,7 @@
     {
       "id": "DT-Integer",
       "title": "Integer",
-      "description": [],
+      "description": "A numerical integer value from -32768 to 32768.",
       "revision": "1",
       "replaces": [],
       "type": "xs:integer",
@@ -39,7 +39,7 @@
     {
       "id": "DT-Real",
       "title": "Real",
-      "description": [],
+      "description": "A floating point number (double) with 5 fraction digits.",
       "revision": "1",
       "replaces": [],
       "type": "xs:double",
@@ -49,9 +49,18 @@
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
+      "id": "DT-Double",
+      "title": "Double",
+      "description": "The double floating point data type.",
+      "revision": "1",
+      "replaces": [],
+      "type": "xs:double",
+      "changedAt": "2020-02-28T08:59:00+02:00"
+    },
+    {
       "id": "DT-Decimal2",
       "title": "Real with 2 Decimals",
-      "description": [],
+      "description": "A floating point number (double) with two fraction digits.",
       "revision": "1",
       "replaces": [],
       "type": "xs:double",
@@ -92,7 +101,7 @@
     {
       "id": "DT-URL",
       "title": "URL",
-      "description": [],
+      "description": "A uniform resource locator.",
       "revision": "1",
       "replaces": [],
       "type": "xs:string",
@@ -102,7 +111,7 @@
     {
       "id": "DT-EmailAddress",
       "title": "E-mail",
-      "description": [],
+      "description": "Data type to represent an E-mail address.",
       "revision": "1",
       "replaces": [],
       "type": "xs:string",
@@ -112,7 +121,7 @@
     {
       "id": "DT-FormattedText",
       "title": "Formatted Text",
-      "description": [],
+      "description": "XHTML formatted text.",
       "revision": "1",
       "replaces": [],
       "type": "xhtml",
