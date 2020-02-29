@@ -355,7 +355,7 @@ function checkConstraints( data, options ) {
             if( itemByKey(dta.resources, sL[i].subject)==undefined && options.dontCheck.indexOf('statement.subject')<0 ) 
                 return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
             // according to the schema, dta.statements is required, but not dta.files:
-            if( itemByKey(dta.resources.concat(dta.statements).concat(dta.files), sL[i].object)==undefined && options.dontCheck.indexOf('statement.object')<0 ) 
+            if( itemByKey(dta.resources.concat(dta.statements).concat(dta.files||[]), sL[i].object)==undefined && options.dontCheck.indexOf('statement.object')<0 ) 
                 return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
 //            if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
         };
