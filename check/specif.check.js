@@ -4,15 +4,17 @@
 	Author: se@enso-managers.de, enso managers gmbh, Berlin (http://www.enso-managers.de)
 	We appreciate any correction, comment or contribution here on GitHub or via e-mail to support@reqif.de            
 */
-function checkSchema( schema, data ) {
+function checkSchema( data, options ) {
 	"use strict";
 	// Check data using the supplied schema.
 	// The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseType:"text",responseText:"xyz"}
 	// Requires: https://github.com/epoberezkin/ajv/releases/tag/4.8.0 or later 
 	// ToDo: localize messages, see https://github.com/epoberezkin/ajv-i18n 
+	if( !options || !options.schema ) return null;
+	if( typeof(options.allErrors)!='boolean' ) options.allErrors = true;
 
-	let ajv = Ajv({allErrors: true});
-	let validate = ajv.compile(schema);
+	let ajv = Ajv({allErrors: options.allErrors});
+	let validate = ajv.compile(options.schema);
 		
 	// check data against schema using the compiled validation routine:
 	let valid = validate(data);
