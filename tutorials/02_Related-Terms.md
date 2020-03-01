@@ -1,6 +1,6 @@
 # Tutorial 2: 'Related Terms'
 
-Next, we would like to present two resources and a statement using both. Statements express semantic relations between entities. In a real application, the SpecIF data-set represents a semantic net with resources as nodes and startements as arcs.
+Next, we would like to present two resources and a statement using both. Statements express semantic relations between entities. In a real application, a SpecIF data-set represents a semantic net with resources as nodes and startements as arcs.
 
 ```json
 {
@@ -53,9 +53,10 @@ Next, we would like to present two resources and a statement using both. Stateme
 ```
 
 Some explanations may help to understand the principles:
+- *resourceClasses*, *resources* and *hierarchies* have been covered, before.
 - Similarly to resources having *resourceClasses*, the statements have types, called *statementClasses*.
 - According to the SpecIF schema, a statementClass requires *id*, *title* and *changedAt*, all other attributes are optional.
-- A *statement* is an instance of a *statementClass*. It is a triple of *subject*, *predicate* and *object*, where the predicate is defined by the statement's title, or it's statementClass title by default. Thus, in the example the vocabulary term \'SpecIF:isSpecialisationOf\' is the predicate or verb of the statement.
+- A *statement* is an instance of a *statementClass*. It is a triple of *subject*, predicate and *object*, where the predicate is defined by the statement's *title*, or it's statementClass *title* by default. Thus, in the example the vocabulary term \'SpecIF:isSpecialisationOf\' is the predicate or verb of the statement.
 - The statement's *subject* may either be a resource *id* or statement *id*. The same applies to a statement's *object*, so that the example's statement expresses *Lorry is a specialisation of Vehicle*.
 - If specified, *subjectClasses* contains a list of *resourceClasses* or *statementClasses*, which are permissible for any instantiated statement's *subject*. If undefined, subjects of all *resourceClasses* or *statementClasses* are permissible.
 - The same applies to a statement's *object*: It must be an instance of any of the classes listed in the respective statementClass' *objectClasses* ... or may be an instance of any *resourceClass* or *statementClass*, if *objectClasses* is missing.
