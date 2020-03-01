@@ -724,7 +724,8 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "$ref": "#/definitions/value"
+            "$ref": "#/definitions/value",
+            "description": "The statement's appelation; if missing, the statementClass' title applies."
           },
           "description": {
             "$ref": "#/definitions/value"
@@ -764,7 +765,7 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "class", "subject", "object", "changedAt" ]
+        "required": [ "id", "class", "subject", "object", "changedAt" ]
       }
     },
     "hierarchies": {

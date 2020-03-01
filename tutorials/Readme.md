@@ -6,3 +6,4 @@ A series of tutorials for the *Specification Integration Facility* (SpecIF).
 
 ## Table of contents
 1. [Hello World](./01_Hello-World.md)
+1. [Related Terms](./02_Related-Terms.md)
