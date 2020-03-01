@@ -336,8 +336,8 @@ function checkConstraints( data, options ) {
         return {status:0, statusText: "statementClass' "+subClasses+" and "+objClasses+" reference valid "+rClasses };
 
         function checkEls(aCL,cL) {
-            // No subjectClasses resp. objectClasses means all defined resourceClasses are eligible.
-            // In case of propertyClasses the existence is being checked by the schema.
+            // No subjectClasses resp. objectClasses means all classes are eligible.
+            // The propertyClasses have already been checked by checkClsses().
             if( cL ) { 
                 // each value in cL must be the key of a member of aCL:
                 for( var i=cL.length-1;i>-1;i-- ) {
@@ -348,14 +348,15 @@ function checkConstraints( data, options ) {
         }
     }
     function checkStatements(dta,sL) {    // resources, statements
-        // A statement's "subject" must be the key of a member of "resources". 
-        // An "object" must be the key of a member of "resources", "statements" or "files".
+        // A statement's "subject" must be the key of a member of "resources" or "statements". 
+        // Equally, an "object" must be the key of a member of "resources" or "statements".
         // (It has been checked before that any "resource" is indeed of type "resourceClass").
+        let aL = dta.resources.concat(dta.statements);
         for( var i=sL.length-1;i>-1;i-- ) {
-            if( itemByKey(dta.resources, sL[i].subject)==undefined && options.dontCheck.indexOf('statement.subject')<0 ) 
+            if( itemByKey(aL, sL[i].subject)==undefined && options.dontCheck.indexOf('statement.subject')<0 ) 
                 return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
             // according to the schema, dta.statements is required, but not dta.files:
-            if( itemByKey(dta.resources.concat(dta.statements).concat(dta.files||[]), sL[i].object)==undefined && options.dontCheck.indexOf('statement.object')<0 ) 
+            if( itemByKey(aL, sL[i].object)==undefined && options.dontCheck.indexOf('statement.object')<0 ) 
                 return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
 //            if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
         };
@@ -520,8 +521,8 @@ function checkConstraints( data, options ) {
     }  */
     function itemByKey( L, k ) {
         // Return the item in L with key k 
-        //  - If the item in item list (L) has no specified revision, the reference may not specify a revision>0.
-        //  - If k has no revision or revision==0, the item in L having the latest revision applies.
+        //  - If the item in item list (L) has no specified revision, the reference may not specify a revision.
+        //  - If k has no revision, the item in L having the latest revision applies.
         //  - If k has a revision, the item in L having an an equal or the next lower revision applies.
         //  - The uniqueness of keys has been checked, before.
 
@@ -533,7 +534,7 @@ function checkConstraints( data, options ) {
         };
         // find all elements with the same id:
         let sId = L.filter( function(el) { return el.id==k.id });
-        if( sId.length<1 ) return undefined;
+        if( sId.length<1 ) return; // undefined
         // we assume that all found elements have a revision or there is a single item without:
         if( sId[0].revision==undefined ) {
             // a single item without revision:
@@ -548,7 +549,7 @@ function checkConstraints( data, options ) {
         sId = sId.filter( function(el) { return el.revision<=k.revision });
         if( sId.length>0 ) return sId[0];
         // else, there is no element with the requested revision:
-        return undefined
+        // return undefined
     }  
     function errorsText(eL) {
         var eT = '';
