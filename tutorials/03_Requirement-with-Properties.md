@@ -1,14 +1,67 @@
 # Tutorial 3: 'Requirement with Properties'
 
-Next, we would like to present ..
+Next, we would like to discuss how to add specific information to a resource or statement using properties. A requirement with name and description will serve as an example.
+
+Again, let's start with new elements of a SpecIF data-set.
 
 ```json
 {
+    "dataTypes": [{
+      "id": "DT-FormattedText",
+      "title": "Formatted Text",
+      "description": "XHTML formatted text with max. length 8156.",
+      "type": "xhtml",
+      "maxLength": 8156,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    }],
+    "propertyClasses": [{
+      "id": "PC-Description",
+      "title": "dcterms:description",
+      "description": "An account of the resource. Descriptive text about the resource represented as rich text in XHTML.",
+      "dataType": "DT-FormattedText",
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    }],
 }
 ```
 
 Some explanations may help to understand the principles:
-- lls
+- Properties have a base *dataType*. The SpecIF schema accepts a number of boolean, numeric, character string and enumerated data types.
+- Above, we see a dataType for formatted text of a certain maximum length. XHTML tags may be used to format the text content.
+- Next, a *propertyClass* is to be defined with it's dataType. 
+- The role of the properties instantiated from a propertyClass is assigned in it's *title*. In this case the properties shall be used for describing the parent resource or statement. Note that a vocabulary term introduced by the Dublin Core Metadata Initiative, namely \"dcterms:description\" is used.
+- A propertyClass can of course be used by several resourceClasses or statementClasses.
+
+```json
+{
+    "resourceClasses": [{
+      "id": "RC-Requirement",
+      "title": "IREB:Requirement",
+      "description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
+      "icon": "&#8623;",
+      "propertyClasses": [ "PC-Name", "PC-Description" ],
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    }],
+    "resources": [{
+        "id": "Req-5ba3512b0000bca",
+        "title": "Minimum button size",
+        "class": "RC-Requirement",
+        "properties": [{
+            "class": "PC-Description",
+            "value": "<p>The <i>button size</i> MUST not be less than 2 cm in diameter.</p>"
+        }],
+        "changedAt": "2017-06-19T20:13:08+02:00"
+    }],
+}
+```
+
+Some more explanations:
+- Now the type for a parent element, *resourceClass* in this case, is defined. 
+- The *title* denotes the role of the resource; here a requirement according to the IREB.
+- An *icon* may be specified that can be used with all instances of the resourceClass. A value can be for example one or more HTML-encoded UTF-8 characters as in the example, a data-URL with encoded image-data or even an URL for use in a XHTML img-tag.
+- The *propertyClasses* to be used are referenced by identifier.
+- Finally, a *resource* is again an instance of a *resourceClass*.
+- Next to the known attributes a property instance with *class* and *value* is specified.
+- The property value with a base dataType \"xhtml\" may contain any formatting including tables, images, web-links or other.
 
 Let us have a look at the full example, now:
 
@@ -70,14 +123,14 @@ Let us have a look at the full example, now:
     }],
     "statements": [],
     "hierarchies": [{
-        "id": "H-Requirements",
-		"resource": "Req-5ba3512b0000bca",
+        "id": "N-bca801377e3d1525",
+        "resource": "Req-5ba3512b0000bca",
         "changedAt": "2019-05-29T13:19:28.546Z"
     }]
 }
 ```
 
 Some more explanations:
-- usoe
+- ...
 
 You may also view/download the example [Requirement with Properties](http://specif.de/examples/03_Requirement-with-Properties.specif "SpecIF Example \'Requirement with Properties\'") or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/03_Requirement-with-Properties.specif).
