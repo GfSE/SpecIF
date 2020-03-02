@@ -30,12 +30,12 @@ At first, we would like to present the shortest SpecIF data-set ever. It contain
 
 Some explanations may help to understand the principles:
 - The first item indicates the SpecIF version used, so that the respective schema can be applied.
-- Of course, a data-set must have an identifier. ASCII alphanumeric characters a-z, A-Z and 0-9 can be used as well as \'\_\', \'-\' and \'.\'. An \'id\' must begin with a letter or underscore \'\_\', though.
-- The \'title\' applies to the whole data-set or project.
-- The actual content is provided in the list \'resources\'. Every resource has a unique identifier, a title and an indication, when it has been changed.
-- Every resource has a class to specify it's semantics and a definition of the applicable properties, which will be introduced in a subsequent tutorial. Here it is a mere paragraph, but a \'resourceClass\' could equally well define a requirement or model-element. Note the use of a vocabulary term \'SpecIF:Paragraph\'; any string value could be used, but a vocabulary term helps to convey an unambiguous meaning within and across national languages.
-- \'statementClasses\' and \'statements\' are used to specify semantic relationships between resources and will be introduced in a subsequent tutorial.
-- A hierarchy finally defines a view on the resources. For example, it can be a document outline giving a selection and ordering to resources for reading or it can be a \"Bill of Materials\". A SpecIF data-set can have multiple hierarchies for different audiences or purposes, where a given resource may be referenced once, multiple times or not at all.
+- Of course, a SpecIF data-set must have an identifier. ASCII alphanumeric characters a-z, A-Z and 0-9 can be used as well as \'\_\', \'-\' and \'.\'. An \'id\' must begin with a letter or underscore \'\_\', though.
+- The *title* applies to the whole data-set or project.
+- The actual content is provided in the list *resources*. Every resource has a unique identifier *id*, a *title* and an indication, when it has been changed.
+- Every resource has a class to specify it's semantics and a definition of the applicable properties, which will be introduced in a subsequent tutorial. Here it is a text paragraph, but a *resourceClass* could equally well define a requirement or model-element. Note the use of a vocabulary term \'SpecIF:Paragraph\': Any string value could be used, but a vocabulary term helps to convey an unambiguous meaning within and across national languages.
+- Optional list entries of *statementClasses* and *statements* are used to specify semantic relationships between resources and will be introduced in a subsequent tutorial.
+- A *hierarchy* finally defines a view on resources. For example, it can be a document outline giving a selection and ordering to resources for reading or it can be a \"Bill of Materials\". A SpecIF data-set can have multiple hierarchies for different audiences or purposes, where a given resource may be referenced once, multiple times or not at all.
 
 A SpecIF data-set in JSON format has a file extension \'.specif\'. It may be contained in a ZIP-file in which case it has a file extension \'.specifz\'.
 
