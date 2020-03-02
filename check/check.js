@@ -324,6 +324,7 @@ function checkConstraints( data, options ) {
 
     function checkStatementClasses() {    
         // All statementClass' "subjectClasses" must be the key of a member of "resourceClasses" or "statementClasses". 
+		// "subjectClasses" is optional, but if present, the list may not be empty (as enforced by the schema).
         // Similarly for "objectClasses".
         let aCL = data[rClasses].concat(data[sClasses]), 
             sCL = data[sClasses];    // statementClasses
