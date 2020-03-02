@@ -56,9 +56,10 @@ Some explanations may help to understand the principles:
 - *resourceClasses*, *resources* and *hierarchies* have been covered, before, see Tutorial 1.
 - Similarly to resources having *resourceClasses*, the statements have types, called *statementClasses*.
 - According to the SpecIF schema, a statementClass requires *id*, *title* and *changedAt*, all other attributes are optional.
-- A *statement* is an instance of a *statementClass*. It is a triple of *subject*, predicate and *object*, where the predicate is defined by the statement's *title*. By default it's statementClass *title* can be used. Thus, in the example the vocabulary term \'SpecIF:isSpecialisationOf\' is the predicate or verb of the statement.
+- A *statement* is an instance of a *statementClass*. It is a triple of *subject*, predicate and *object*, where the predicate is defined by the statement's *title*. By default, it's statementClass *title* can be used. Thus, in the example the vocabulary term \'SpecIF:isSpecialisationOf\' is the predicate or verb of the statement.
 - The statement's *subject* may either be a resource *id* or statement *id*. The same applies to a statement's *object*, so that the example's statement expresses *Lorry is a specialisation of Vehicle*.
 - A *statementClass* may have an attribute *subjectClasses*. If missing, all resources or statements are eligible as a statement's *subject*. If present, only resources or statements of the specified classes may be used. An empty list makes the statementClass useless und thus isn't allowed.
 - The same applies to a statement's *object*: It must be an instance of any of the classes listed in the respective statementClass' *objectClasses* ... or may be an instance of any *resourceClass* or *statementClass*, if *objectClasses* is missing.
+- In the example, the statementCLass with \"id\":\"SC-isSpecialisationOf\" determines that it's instance statement with \"id\":\"S-X0lXi7lJP9DQsg4Jj4qbLuQYaGz\" may only have resources with a resourceClass \"id\":\"RC-ResourceTerm\".
 
 You may view or download the example [Hello World](http://specif.de/examples/02_Related-Terms.specif "SpecIF Example \'Related Terms\'") or view it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/02_Related-Terms.specif).
