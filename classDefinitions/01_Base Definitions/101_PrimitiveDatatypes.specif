@@ -86,7 +86,6 @@
       "replaces": [],
       "type": "xs:string",
       "maxLength": 256,
-      "multiple": false,
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
