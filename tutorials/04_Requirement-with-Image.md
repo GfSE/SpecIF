@@ -27,12 +27,14 @@ Some comments:
 - There can or should be a directory or directory structure to hold the images. In this case a subdirectory \"images/\" is expected. 
 - Apart from images, the HTML &lt;object&gt; tag can link many other file types. The type attribute may specify any IANA MIME-type. It is now a feature of your web-browser which file types can be shown or otherwise presented. In case of the SpecIF viewer referenced below, also a genuine BPMN-XML file can be referenced. By means of the bpmn.io library the viewer transforms the BPMN to SVG, so that it can be shown by the browser.
 
+
 Thus the structure of the SpecIF container, which carries the extension *.specifz*, is as follows. By the way, this approach is similar to a ReqIF container with extension *.reqifz*.
+
 ```
 04_Requirement-with-Image.specifz
-    04_Requirement-with-Image.specif
-	images/
-	    button-diameter.png
+ ┣━ 04_Requirement-with-Image.specif
+ ┗━ images/
+     ┗━ button-diameter.png
 ```
 
 
