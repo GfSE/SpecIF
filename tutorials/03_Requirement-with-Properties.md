@@ -2,7 +2,7 @@
 
 Next, we would like to discuss how to add specific information to a resource or statement using properties. A requirement with name and description will serve as an example.
 
-Again, let's start with new elements of a SpecIF data-set.
+Again, let's start with the new elements of a SpecIF data-set.
 
 ```json
 {
@@ -26,10 +26,10 @@ Again, let's start with new elements of a SpecIF data-set.
 
 Some explanations may help to understand the principles:
 - Properties have a base *dataType*. The SpecIF schema accepts a number of boolean, numeric, character string and enumerated data types.
-- Above, we see a dataType for formatted text of a certain maximum length. Properties using this dataType may use XHTML tags to format the text content.
+- Above, we see a *dataType* for formatted text of a certain maximum length. Properties using this dataType may use XHTML tags to format the text content.
 - Next, a *propertyClass* is to be defined with it's dataType. 
 - The role of the properties instantiated from a propertyClass is assigned in it's *title*. In this case the properties shall be used for describing the parent resource or statement. Note that a vocabulary term introduced by the Dublin Core Metadata Initiative, namely \"dcterms:description\" is used.
-- A propertyClass can of course be used by several resourceClasses or statementClasses.
+- A given propertyClass can of course be used by several resourceClasses or statementClasses.
 
 
 ```json
@@ -60,7 +60,7 @@ Some more explanations:
 - The *title* denotes the role of the resource; here a requirement according to the IREB.
 - An *icon* may be specified that can be used with all instances of the resourceClass. A value can be for example one or more HTML-encoded UTF-8 characters as in the example, a data-URL with encoded image-data or even an URL for use in a XHTML img-tag.
 - The *propertyClasses* to be used are referenced by identifier.
-- Finally, a *resource* is again an instance of a *resourceClass*.
+- Finally, a *resource* is an instance of a *resourceClass*.
 - Next to the known attributes a property instance with *class* and *value* is specified.
 - The property value with a base dataType \"xhtml\" may contain any formatting including tables, images, web-links or other.
 
@@ -133,6 +133,9 @@ Let us have a look at the full example, now:
 ```
 
 Some more explanations:
-- ...
+- The resource with \"id\":\"Req-5ba3512b0000bca\" has another property for the title now. Even though redundant with the *title* of the resource itself, it has an explicit *propertyType* and thus *dataType*.
+- The role of the added property is indicated by \"title\":\"dcterms:title\", where a vocabulary term is used. It takes precedence over the title attribute of the resource itself.
+- Note that the added title property has a title, whereas the description property has not. This is just for demonstration purposes: If a properties' title is specified, it takes of course precedence. I it is not specified, the respective propertyClass' title applies.
+
 
 You may also view/download the example [Requirement with Properties](http://specif.de/examples/03_Requirement-with-Properties.specif "SpecIF Example \'Requirement with Properties\'") or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/03_Requirement-with-Properties.specif).

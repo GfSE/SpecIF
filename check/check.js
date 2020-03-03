@@ -45,7 +45,7 @@ function checkConstraints( data, options ) {
         case '0.10.7':
         case '0.11.0':
         case '0.11.7':
-            return { status: 903, statusText: 'SpecIF version '+data.specifVersion+' is not any more supported!' };
+            return { status: 903, statusText: 'SpecIF version '+data.specifVersion+' is not supported!' };
         case '0.10.2':
         case '0.10.3':
         case '0.11.1':
@@ -78,7 +78,17 @@ function checkConstraints( data, options ) {
                 subClasses = 'subjectClasses',
                 objClasses = 'objectClasses'
     };
-    switch( data.specifVersion ) {
+    if( data.specifVersion.indexOf('0.1')==0 ) 
+        // for all versions <1.0:
+		var fractionDigits = 'accuracy',
+			minInclusive = 'min',
+			maxInclusive = 'max'
+    else
+        // starting SpecIF v1.0:
+		var fractionDigits = 'fractionDigits',
+			minInclusive = 'minInclusive',
+			maxInclusive = 'maxInclusive';
+/*  switch( data.specifVersion ) {
         case '0.10.2':
         case '0.10.3':
         case '0.11.1':
@@ -97,7 +107,7 @@ function checkConstraints( data, options ) {
             var fractionDigits = 'fractionDigits',
                 minInclusive = 'minInclusive',
                 maxInclusive = 'maxInclusive'
-    };
+    };  */
 
     var rc={},errL=[];
 
@@ -371,26 +381,30 @@ function checkConstraints( data, options ) {
             if( !dT ) return {status:904, statusText: "propertyClass with identifier '"+pC.id+"' must reference a valid dataType"}; 
             switch(dT.type) {
                 case 'xhtml':
-                    // early SpecIF versions did not specify maxLength in case of xhtml:
-                    if( dT.maxLength==undefined ) break;
+            /*      // early SpecIF versions did not specify maxLength in case of xhtml:
+                    if( dT.maxLength==undefined ) break;  */
                 case 'xs:string': 
+					// A property value of this type may be either a string or a list of objects with 'text' and 'language' attributes.
+					// here, the checking is more restrictive than the schema which does not require a 'maxLength' attribute:
+                    if( dT.maxLength==undefined && options.dontCheck.indexOf('text.length')<0 ) 
+                        return {status:922, statusText: "A dataType 'string' or 'xhtml' must specify 'maxLength'."}; 
                     let txt = etxt+": string value must not exceed maxLength";
                     switch( typeof(val) ) {
                         case 'object':
                             // val is a list with some text in different languages, so check every one of them:
                             for( var p=val.length-1;p>-1;p-- ) {
-                                if( val[p]['text'].length>dT.maxLength ) 
-                                    return {status:921, statusText: txt}; 
+                                if( val[p]['text'].length>dT.maxLength && options.dontCheck.indexOf('text.length')<0 ) 
+                                    return {status:921, statusText:txt}
                             };
                             break;
                         case 'string':
                             // single language according to schema 0.10.x:
-                            if( val.length>dT.maxLength ) 
-                                return {status:921, statusText: txt}; 
+                            if( val.length>dT.maxLength && options.dontCheck.indexOf('text.length')<0 ) 
+                                return {status:921, statusText:txt}
                     };
                     break;
                 case 'xs:double':
-            //        if( (val*Math.pow(10,dT[fractionDigits])%1)==0 ) return {status:922,statusText:""};
+            //      if( (val*Math.pow(10,dT[fractionDigits])%1)==0 ) return {status:922,statusText:""};
                     val = parseFloat( val );
                     if( val=='NaN' ) 
                         return {status:925, statusText:etxt+": value is an invalid number"}; 
