@@ -1,4 +1,4 @@
-# Tutorial 3: 'Requirement with Image'
+# Tutorial 4: 'Requirement with Image'
 
 Next, we would like to present how to include an image in a resource description. The requirement known from the previous tutorial [Requirement with Properties](./03_Requirement-with-Properties.md) will serve as an example.
 
@@ -110,7 +110,5 @@ Let us have a look at the full example, now:
 }
 ```
 
-Some more explanations:
-- 
 
 You may also view/download the example [Requirement with Image](http://specif.de/examples/04_Requirement-with-Image.specifz) or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/04_Requirement-with-Image.specifz).
