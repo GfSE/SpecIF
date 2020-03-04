@@ -328,10 +328,6 @@
             "description": {
               "$ref": "#/definitions/value"
             },
-            "unit": {
-              "description": "A unit for the numeric value given.",
-              "$ref": "#/definitions/value"
-            },
             "minInclusive":  {
               "type": "number",
               "title": "Minimum Value of a Number",
@@ -373,10 +369,6 @@
               "$ref": "#/definitions/value"
             },
             "description": {
-              "$ref": "#/definitions/value"
-            },
-            "unit": {
-              "description": "A unit for the numeric value given; preferrably an SI unit symbol such as 'm^3/kg' (Système international (d'unités)).",
               "$ref": "#/definitions/value"
             },
             "fractionDigits": {
