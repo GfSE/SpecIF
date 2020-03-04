@@ -45,12 +45,6 @@ Let us have a look at the full example, now:
     "id": "P-Requirement-with-Image",
     "title": "Requirement with Image",
     "specifVersion": "1.0",
-    "rights": {
-        "title": "Creative Commons 4.0 CC BY-SA",
-        "type": "dcterms:rights",
-        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
-    },
-    "createdAt": "2019-05-29T14:12:59.960Z",
     "dataTypes": [{
       "id": "DT-ShortString",
       "title": "String[96]",
@@ -111,4 +105,4 @@ Let us have a look at the full example, now:
 ```
 
 
-You may also view/download the example [Requirement with Image](http://specif.de/examples/04_Requirement-with-Image.specifz) or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/04_Requirement-with-Image.specifz).
+You may also download the example [Requirement with Image](http://specif.de/examples/04_Requirement-with-Image.specifz) or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/04_Requirement-with-Image.specifz).
