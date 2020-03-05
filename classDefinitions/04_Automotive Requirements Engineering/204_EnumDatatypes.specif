@@ -15,23 +15,23 @@
       "values": [
         {
           "id": "V-SupplierStatus-0",
-          "title": "VDA:notApplicable"
+          "value": "VDA:notApplicable"
         },
         {
           "id": "V-SupplierStatus-1",
-          "title": "VDA:toClarify"
+          "value": "VDA:toClarify"
         },
         {
           "id": "V-SupplierStatus-2",
-          "title": "VDA:agreed"
+          "value": "VDA:agreed"
         },
         {
           "id": "V-SupplierStatus-3",
-          "title": "VDA:partlyAgreed"
+          "value": "VDA:partlyAgreed"
         },
         {
           "id": "V-SupplierStatus-4",
-          "title": "VDA:notAgreed"
+          "value": "VDA:notAgreed"
         }
       ],
       "multiple": false,
@@ -47,19 +47,19 @@
       "values": [
         {
           "id": "V-OemStatus-0",
-          "title": "VDA:notToEvaluate"
+          "value": "VDA:notToEvaluate"
         },
         {
           "id": "V-OemStatus-1",
-          "title": "VDA:toEvaluate"
+          "value": "VDA:toEvaluate"
         },
         {
           "id": "V-OemStatus-2",
-          "title": "VDA:accepted"
+          "value": "VDA:accepted"
         },
         {
           "id": "V-OemStatus-3",
-          "title": "VDA:notAccepted"
+          "value": "VDA:notAccepted"
         }
       ],
       "multiple": false,

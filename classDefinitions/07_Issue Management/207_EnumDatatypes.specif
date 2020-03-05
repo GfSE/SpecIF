@@ -14,27 +14,27 @@
       "values": [
         {
           "id": "V-IssStatus-0",
-          "title": "open"
+          "value": "open"
         },
         {
           "id": "V-IssStatus-1",
-          "title": "assigned"
+          "value": "assigned"
         },
         {
           "id": "V-IssStatus-2",
-          "title": "in progress"
+          "value": "in progress"
         },
         {
           "id": "V-IssStatus-3",
-          "title": "closed"
+          "value": "closed"
         },
         {
           "id": "V-IssStatus-4",
-          "title": "reopened"
+          "value": "reopened"
         },
         {
           "id": "V-IssStatus-5",
-          "title": "rejected"
+          "value": "rejected"
         }
       ],
       "multiple": false,

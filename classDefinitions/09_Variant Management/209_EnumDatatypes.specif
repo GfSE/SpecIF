@@ -15,19 +15,19 @@
       "values": [
         {
           "id": "V-FeatureKind-Mandatory",
-          "title": "Mandatory"
+          "value": "Mandatory"
         },
         {
           "id": "V-FeatureKind-Alternative",
-          "title": "Alternative"
+          "value": "Alternative"
         },
         {
           "id": "V-FeatureKind-Optional",
-          "title": "Optional"
+          "value": "Optional"
         },
         {
           "id": "V-FeatureKind-Or",
-          "title": "Or"
+          "value": "Or"
         }
       ],
       "multiple": false,
@@ -43,19 +43,19 @@
       "values": [
         {
           "id": "V-FeatureSelectionState-Unchecked",
-          "title": "Unchecked"
+          "value": "Unchecked"
         },
         {
           "id": "V-FeatureSelectionState-Checked",
-          "title": "Checked"
+          "value": "Checked"
         },
         {
           "id": "V-FeatureSelectionState-Forbidden",
-          "title": "Forbidden"
+          "value": "Forbidden"
         },
         {
           "id": "V-FeatureSelectionState-Recommended",
-          "title": "Recommended"
+          "value": "Recommended"
         }
       ],
       "multiple": false,
