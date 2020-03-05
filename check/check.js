@@ -88,26 +88,6 @@ function checkConstraints( data, options ) {
 		var fractionDigits = 'fractionDigits',
 			minInclusive = 'minInclusive',
 			maxInclusive = 'maxInclusive';
-/*  switch( data.specifVersion ) {
-        case '0.10.2':
-        case '0.10.3':
-        case '0.11.1':
-        case '0.10.4':
-        case '0.10.5':
-        case '0.10.6':
-        case '0.10.8':
-        case '0.11.2':
-        case '0.11.6':
-        case '0.11.8':
-            var fractionDigits = 'accuracy',
-                minInclusive = 'min',
-                maxInclusive = 'max';
-            break;
-        default:
-            var fractionDigits = 'fractionDigits',
-                minInclusive = 'minInclusive',
-                maxInclusive = 'maxInclusive'
-    };  */
 
     var rc={},errL=[];
 
@@ -119,12 +99,8 @@ function checkConstraints( data, options ) {
     rc = checkDataTypes( data.dataTypes );
     if( rc.status>0 ) errL.push(rc);
 
-    // starting  v0.10.6 resp. v0.11.6
-    // resourceClass', statementClass' and hierarchyClass' propertyClasses must be keys of a member in 
-    // propertyClasses at the top level; this is checked as a case in 'checkPropertyClasses'.
-    
     // A propertyClass's "dataType" must be the key of a member of "dataTypes":
-    rc = checkPropertyClasses( [data] );        // propertyClasses at top level starting with v0.10.6 and v0.11.6
+    rc = checkPropertyClasses( [data] );  // propertyClasses at top level starting with v0.10.6 and v0.11.6
     if( rc.status>0 ) errL.push(rc);
     rc = checkPropertyClasses( data[rClasses] );
     if( rc.status>0 ) errL.push(rc);
@@ -289,12 +265,13 @@ function checkConstraints( data, options ) {
             if( typeof(iL[i][type])=='string' && itemByKey(cL, iL[i][type])==undefined ) 
                 return {status:903, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+type }
         };
-        return {status:0, statusText: "all instances' attribute named '"+type+"' references valid types"}    
+        return {status:0, statusText: "all instances' attribute named '"+type+"' reference valid types"}    
     }
     function checkPropertyClasses(cL) {  // class list
         if( cL ) {
             let propertyC, i, j, rc;
             for( i=cL.length-1;i>-1;i-- ){
+				// for each class in cL:
                 if( cL[i][pClasses] ) {
                     for( j=cL[i][pClasses].length-1;j>-1;j-- ) {
                         propertyC = cL[i][pClasses][j];
@@ -312,16 +289,11 @@ function checkConstraints( data, options ) {
                                 return {status:930, statusText: "property class of item with identifier '"+cL[i].id+"' must reference an item in 'propertyClasses'" }
                         } else {
                             // up until v0.10.5 resp v0.11.2:
-                            // A propertyClass's "dataType" must be the key of a member of "dataTypes".
-                            // .. this is also checked in checkProperties:
+                            // A propertyClass's "dataType" must be the key of a member of "dataTypes":
                             if( itemByKey(data.dataTypes,propertyC.dataType)==undefined ) 
                                 return {status:904, statusText: "property class with identifier '"+propertyC.id+"' must reference a valid dataType"};
-                            // If a propertyClass of base type "xs:enumeration" doesn't have a property 'multiple', multiple=false is assumed
-                        //        break;
-                        //    default:
-                                // invalid javascript type:
                         };
-                        // check the value (to be used by default of property values):
+                        // check the value (to be used by default of an instance's - thus property's value):
                         rc = checkValue(propertyC,propertyC,"property class '"+propertyC.id+"'");
                         if( rc.status>0 ) return rc;
                     }
@@ -329,7 +301,7 @@ function checkConstraints( data, options ) {
             }
         };
         // all is fine: 
-        return {status:0, statusText: "propertyClasses reference valid dataTypes"}
+        return {status:0, statusText: "if present, propertyClasses reference valid dataTypes"}
     }
 
     function checkStatementClasses() {    
@@ -369,7 +341,7 @@ function checkConstraints( data, options ) {
             // according to the schema, dta.statements is required, but not dta.files:
             if( itemByKey(aL, sL[i].object)==undefined && options.dontCheck.indexOf('statement.object')<0 ) 
                 return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
-//            if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
+        //  if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
         };
         return {status:0, statusText: "no anomaly with statement's subjects and objects"}
     }
@@ -471,8 +443,7 @@ function checkConstraints( data, options ) {
                             // b) the referenced property class must be defined:
                             propertyC = itemByKey( data.propertyClasses, pr['class'] )
                         } else {
-                            // up until v0.10.5
-                            // there is no class inheritance/extension, yet
+                            // up until v0.10.5 there is no class inheritance/extension:
                             propertyC = itemById( instanceC[pClasses], pr[pClass] )
                         };
                         if( !propertyC ) 

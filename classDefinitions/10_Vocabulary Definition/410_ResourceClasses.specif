@@ -7,8 +7,8 @@
     "resourceClasses": [
         {
             "id": "RC-ResourceTerm",
-            "title": "SpecIF:Resource-Term",
-            "description": "A term for objects belonging to the SpecIF vocabulary",
+            "title": "SpecIF:ResourceTerm",
+            "description": "A term for resources (objects, entities) belonging to the SpecIF vocabulary",
             "revision": "1",
             "replaces": [],
             "isHeading": false,
@@ -38,8 +38,8 @@
         },
         {
             "id": "RC-PredicateTerm",
-            "title": "SpecIF:Predicate-Term",
-            "description": "A term for relations belonging to the SpecIF vocabulary",
+            "title": "SpecIF:PredicateTerm",
+            "description": "A term for statements (relations) belonging to the SpecIF vocabulary",
             "revision": "1",
             "replaces": [],
             "isHeading": false,
@@ -69,8 +69,8 @@
         },
         {
             "id": "RC-PropertyTerm",
-            "title": "SpecIF:Property-Term",
-            "description": "A term for attributes belonging to the SpecIF vocabulary",
+            "title": "SpecIF:PropertyTerm",
+            "description": "A term for user-defined properties (attributes) belonging to the SpecIF vocabulary",
             "revision": "1",
             "replaces": [],
             "isHeading": false,
@@ -100,7 +100,7 @@
         },
         {
             "id": "RC-ValueTerm",
-            "title": "SpecIF:Value-Term",
+            "title": "SpecIF:ValueTerm",
             "description": "A term for property values belonging to the SpecIF vocabulary",
             "revision": "1",
             "replaces": [],

@@ -9,4 +9,5 @@ A series of tutorials for the *Specification Integration Facility* (SpecIF).
 1. [Related Terms](./02_Related-Terms.md)
 1. [Requirement with Properties](./03_Requirement-with-Properties.md)
 1. [Requirement with Image](./04_Requirement-with-Image.md)
-1. [Requirement with Enumerated Property](./05_Requirement-with-Enumerated-Property.md) *(in preparation)*
+1. [Requirement with Enumerated Property](./05_Requirement-with-Enumerated-Property.md)
+1. [Very simple Model](./06_Very-simple-Model.md) *(in preparation)*
