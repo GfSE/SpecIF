@@ -14,8 +14,8 @@ In the previous tutorials we have introduced all concepts we need to represent a
 - Whereas the model-diagram shown first was created by an engineer to define an aspect of the model, this is a dynamically created view of all relations of a particular model-element, \'FiCo-Application\' in this case. 
 - An accumulation of *all* relations is shown, no matter how and where they have been defined; it is the semantic net around the selected element with a radius of one. 
 - We see that the selected model-element is shown on one diagram and that it writes and reads another model-element. 
-- The icon in front of a model-element name helps to distinguish the fundamental model-element types. The icon is consistently defined for all instances in the respective *resourceClass* below.
 - Each arrow is a statement, e.g. \'FiCo-Application reads FiCo-Data\'. 
+- The icon in front of a model-element name helps to distinguish the fundamental model-element types. The icon is consistently defined for all instances in the respective *resourceClass* below.
 - This relationship view lends itself particularly well to discover any inconsistendcy between model-views. Also it may help to discover model gaps, for example, if an information element is written, but never read.
 
 
@@ -76,54 +76,6 @@ Some explanations:
 - Apart from the *propertyClasses* discussed in earlier tutorials, we find two new ones: 
 The diagram shall be shown by a property \"id\":\"PC-Diagram\" of it's own to give it a distinguished role by means of it's \"title\":\"SpecIF:Diagram\". 
 The original type of each element, which can be seen as a subclass to the fundamental class, is specified in a property of class \"id\":\"PC-Type\".
-
-
-Now let's have a look at the instances of the classes, the actual model content:
-
-```json
-{
-    "resources": [{
-        "id": "Diagram-aec0df7900010000017001eaf53e8876",
-        "title": "IT-Integration: FiCo-Application and FiCo-Data",
-        "class": "RC-Diagram",
-        "properties": [{
-            "class": "PC-Name",
-            "value": "IT-Integration: FiCo-Application and FiCo-Data"
-        }, {
-            "class": "PC-Diagram",
-            "value": "<div><p class=\"inline-label\">Model Diagram:</p><p><object type=\"image/svg+xml\" data=\"files_and_images/Very-Simple-Model-FMC.svg\">Notation: FMC Block Diagram</object></p></div>"
-        }, {
-            "class": "PC-Type",
-            "value": "FMC Block Diagram"
-        }],
-        "changedAt": "2020-03-06T08:32:00+01:00"
-    }, {
-        "id": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
-        "title": "FiCo-Application",
-        "class": "RC-Actor",
-        "properties": [{
-            "class": "PC-Name",
-            "value": "FiCo-Application"
-        }, {
-            "class": "PC-Text",
-            "value": "<div><p>IT-Application for Finance and Controlling.</p></div>"
-        }],
-        "changedAt": "2020-03-06T09:04:00+01:00"
-    }, {
-        "id": "MEl-50feddc00029b1a8016e2872e78ecadc",
-        "title": "FiCo-Data",
-        "class": "RC-State",
-        "properties": [{
-            "class": "PC-Name",
-            "value": "FiCo-Data"
-        }, {
-            "class": "PC-Text",
-            "value": "<div><p>Finance and Controlling Data, such as cost-units per project with budget, accrued cost etc.</p></div>"
-        }],
-        "changedAt": "2020-03-06T09:03:00+01:00"
-    }],
-}
-```
 
 
 Next, we look at the *statementClasses*:
