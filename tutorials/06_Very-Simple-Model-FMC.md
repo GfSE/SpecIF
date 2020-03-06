@@ -56,18 +56,113 @@ Again, let's start with the new elements of a SpecIF data-set.
         "icon": "&#9679;",
         "propertyClasses": ["PC-Name","PC-Text","PC-Type"],
         "changedAt": "2018-05-10T11:54:00+01:00"
+    }, {
+        "id": "RC-Event",
+        "title": "FMC:Event",
+        "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
+        "instantiation": ["auto"],
+        "icon": "&#9830;",
+        "propertyClasses": ["PC-Name","PC-Text","PC-Type"],
+        "changedAt": "2018-05-10T11:54:00+01:00"
     }],
 }
 ```
 
 Some explanations:
-- In this example we need three *resourceClasses* for the diagram, model-elements of class *Actor* and *State*.
+- In this example we need three *resourceClasses* for the diagram as well as model-elements of class *Actor* and *State*.
+- The forth resourceClass given with \"id\":\"RC-Event\" is not used by FMC Block Diagrams, but it is the third fundamental model-element type. One of the interesting principles of FMC is that *any model notation* consists of only three fundamental model-element types, namely *Actor*, *State* and *Event*.
 - Apart from the *propertyClasses* discussed in earlier tutorials, we find two new ones: 
 The diagram shall be shown by a property \"id\":\"PC-Diagram\" of it's own to give it a distinguished role by means of it's \"title\":\"SpecIF:Diagram\". 
-The detailed type of each element, which can be seen as a subclass to the fundamental class, is specified in a property of class \"id\":\"PC-Type\".
+The original type of each element, which can be seen as a subclass to the fundamental class, is specified in a property of class \"id\":\"PC-Type\".
 
 
-Let us have a look at the full example, now:
+Now let's have a look at the instances of the classes, the actual model content:
+
+```json
+{
+    "resources": [{
+        "id": "Diagram-aec0df7900010000017001eaf53e8876",
+        "title": "IT-Integration: FiCo-Application and FiCo-Data",
+        "class": "RC-Diagram",
+        "properties": [{
+            "class": "PC-Name",
+            "value": "IT-Integration: FiCo-Application and FiCo-Data"
+        }, {
+            "class": "PC-Diagram",
+            "value": "<div><p class=\"inline-label\">Model Diagram:</p><p><object type=\"image/svg+xml\" data=\"files_and_images/Very-Simple-Model-FMC.svg\">Notation: FMC Block Diagram</object></p></div>"
+        }, {
+            "class": "PC-Type",
+            "value": "FMC Block Diagram"
+        }],
+        "changedAt": "2020-03-06T08:32:00+01:00"
+    }, {
+        "id": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
+        "title": "FiCo-Application",
+        "class": "RC-Actor",
+        "properties": [{
+            "class": "PC-Name",
+            "value": "FiCo-Application"
+        }, {
+            "class": "PC-Text",
+            "value": "<div><p>IT-Application for Finance and Controlling.</p></div>"
+        }],
+        "changedAt": "2020-03-06T09:04:00+01:00"
+    }, {
+        "id": "MEl-50feddc00029b1a8016e2872e78ecadc",
+        "title": "FiCo-Data",
+        "class": "RC-State",
+        "properties": [{
+            "class": "PC-Name",
+            "value": "FiCo-Data"
+        }, {
+            "class": "PC-Text",
+            "value": "<div><p>Finance and Controlling Data, such as cost-units per project with budget, accrued cost etc.</p></div>"
+        }],
+        "changedAt": "2020-03-06T09:03:00+01:00"
+    }],
+}
+```
+
+
+Next, we look at the *statementClasses*:
+
+```json
+{
+    "statementClasses": [{
+        "id": "SC-Visibility",
+        "title": "SpecIF:shows",
+        "description": "'Diagram' shows 'Model-Element'",
+        "instantiation": ["auto"],
+        "subjectClasses": ["RC-Diagram"],
+        "objectClasses": ["RC-Actor", "RC-State", "RC-Event"],
+        "changedAt": "2018-05-10T11:54:00+01:00"
+    }, {
+        "id": "SC-Writing",
+        "title": "SpecIF:writes",
+        "description": "'Actor' (Role, Function) writes 'State' (Information)",
+        "instantiation": ["auto"],
+        "subjectClasses": ["RC-Actor"],
+        "objectClasses": ["RC-State"],
+        "changedAt": "2018-05-10T11:54:00+01:00"
+    }, {
+        "id": "SC-Reading",
+        "title": "SpecIF:reads",
+        "description": "'Actor' (Role, Function) reads 'State' (Information)",
+        "instantiation": ["auto"],
+        "subjectClasses": ["RC-Actor"],
+        "objectClasses": ["RC-State"],
+        "changedAt": "2018-05-10T11:54:00+01:00"
+    }],
+}
+```
+
+- The first statementClass with \"id\":\"SC-Visibility\" will be used to relate the diagram to all depicted model-elements. In a more complex model it allows to easily find out on which diagrams a certain model-element appears. 
+- In such a statement, only an instance of the class with \"id\":\"RC-Diagram" can serve as a subject (source) and only an instance of any fundamental model-element type can serve as an object (target).
+- The last two statementClasses will be used for the 'writes' and 'reads' predicates (relationships) discussed in the beginning. We see that in both cases only an instance of the class with \"id\":\"RC-Actor" can serve as a subject and only an instance of the class with \"id\":\"RC-State" can serve as an object.
+- The attribute *subjectClasses* can be omitted as discussed in tutorial 02, then any resource can be used as a subject. Similarly for *objectClasses*.
+
+
+Let us at last have a look at the full example, now:
 
 ```json
 {
@@ -154,7 +249,7 @@ Let us have a look at the full example, now:
     }, {
         "id": "SC-Writing",
         "title": "SpecIF:writes",
-        "description": "'Actor' (Role, Function) writes 'State' (Information)",
+        "description": "'Actor' writes 'State'.",
         "instantiation": ["auto"],
         "subjectClasses": ["RC-Actor"],
         "objectClasses": ["RC-State"],
@@ -162,7 +257,7 @@ Let us have a look at the full example, now:
     }, {
         "id": "SC-Reading",
         "title": "SpecIF:reads",
-        "description": "'Actor' (Role, Function) reads 'State' (Information)",
+        "description": "'Actor' reads 'State'.",
         "instantiation": ["auto"],
         "subjectClasses": ["RC-Actor"],
         "objectClasses": ["RC-State"],
@@ -175,9 +270,6 @@ Let us have a look at the full example, now:
         "properties": [{
             "class": "PC-Name",
             "value": "IT-Integration: FiCo-Application and FiCo-Data"
-        }, {
-            "class": "PC-Text",
-            "value": "<div></div>"
         }, {
             "class": "PC-Diagram",
             "value": "<div><p class=\"inline-label\">Model Diagram:</p><p><object type=\"image/svg+xml\" data=\"files_and_images/Very-Simple-Model-FMC.svg\">Notation: FMC Block Diagram</object></p></div>"
@@ -262,8 +354,9 @@ Let us have a look at the full example, now:
 }
 ```
 
-Some more explanations:
-- 
+The instances, the actual model content, have not been discussed, yet:
+- You can easily see the diagram and the two model-elements in *resources*. The *properties* carry the information payload; those without a defined value can be omitted, e.g. the diagram has no property of type \"PC-Text\" and the model-elements have no property of type \"PC-Type\".
+- The for *statements* are equally easy to interpret: One *shows* relationship per model-element plus the *writes* and *reads* relationships between the model-elements.
 
 
 You may also view/download the example [Very Simple Model (FMC)](http://specif.de/examples/06_Very-Simple-Model-FMC.specifz "SpecIF Example \'Very Simple Model (FMC)\'") or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/06_Very-Simple-Model-FMC.specifz).
