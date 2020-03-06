@@ -13,7 +13,8 @@ In the previous tutorials we have introduced all concepts we need to represent a
 
 - Whereas the model-diagram shown first was created by an engineer to define an aspect of the model, this is a dynamically created view of all relations of a particular model-element, \'FiCo-Application\' in this case. 
 - An accumulation of *all* relations is shown, no matter how and where they have been defined; it is the semantic net around the selected element with a radius of one. 
-- We see that the selected model-element is shown on one diagram and that it writes and reads another model-element. The icon in front of the model-element names helps to distinguish the fundamental model-element types. The icon is defined in the *resourceClasses* below.
+- We see that the selected model-element is shown on one diagram and that it writes and reads another model-element. 
+- The icon in front of a model-element name helps to distinguish the fundamental model-element types. The icon is consistently defined for all instances in the respective *resourceClass* below.
 - Each arrow is a statement, e.g. \'FiCo-Application reads FiCo-Data\'. 
 - This relationship view lends itself particularly well to discover any inconsistendcy between model-views. Also it may help to discover model gaps, for example, if an information element is written, but never read.
 
