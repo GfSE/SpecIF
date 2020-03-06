@@ -4,7 +4,7 @@ In the previous tutorials we have introduced all concepts we need to represent a
 
 ![Very Simple Model (FMC)](./images/Very-Simple-Model-FMC.svg)
 
-- In fact, this is not a model, but a diagram representing a model. It is a view of the model for a specific communication purpose; it is meant to be interpreted by a human being. In this particularly simple case, the diagram shows the whole model, but usually a diagram depicts only a certain aspect of a model.
+- In fact, this is not a model, but a diagram representing a model. It is a view of the model for a specific communication purpose; it is meant to be interpreted by a human being. In this particularly simple case, the diagram shows the whole model, but usually there are more and each diagram depicts a certain aspect of a model.
 - We see two model elements with a relation. The upper box represents an IT-System with some business logic and the lower box represents the information that is being processed. The directed connections represent a writing and a reading relationship; thus this application can write and read the data.
 - The notation being used is known as a block-diagram of the *Fundamental Modelling Concepts (FMC)*. A box with sharp corners represents an active element called *Actor*, while a box with rounded corners represents a passive element called *State*. *Actor* is a concept used for a system, tool, human role or function, whereas *State* is a concept used for information in gerneral, a document, a database, form or color.
 
@@ -13,7 +13,8 @@ In the previous tutorials we have introduced all concepts we need to represent a
 
 - Whereas the model-diagram shown first was created by an engineer to define an aspect of the model, this is a dynamically created view of all relations of a particular model-element, \'FiCo-Application\' in this case. 
 - An accumulation of *all* relations is shown, no matter how and where they have been defined; it is the semantic net around the selected element with a radius of one. 
-- We see that the selected model-element is shown on one diagram and that it writes and reads another model-element. The leading icon helps to distinguish the fundamental types of model-elements. Each arrow is a statement, e.g. \'FiCo-Application reads FiCo-Data\'. 
+- We see that the selected model-element is shown on one diagram and that it writes and reads another model-element. The icon in front of the model-element names helps to distinguish the fundamental model-element types. The icon is defined in the *resourceClasses* below.
+- Each arrow is a statement, e.g. \'FiCo-Application reads FiCo-Data\'. 
 - This relationship view lends itself particularly well to discover any inconsistendcy between model-views. Also it may help to discover model gaps, for example, if an information element is written, but never read.
 
 
