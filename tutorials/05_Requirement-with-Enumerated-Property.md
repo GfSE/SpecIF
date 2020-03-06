@@ -140,7 +140,7 @@ Let us have a look at the full example, now:
 ```
 
 Some more explanations:
-- Here we see that the *resourceClass* has an additionally listed *propertyClass*.
+- Here we see that the *resourceClass* has an additionally listed *propertyClass* \"PC-Priority\".
 - Also the resource's list of *properties* has an additional element with a priority value. Note that the *id* of the *dataType* is being referenced.
 
 You may also view/download the example [Requirement with Enumerated Property](http://specif.de/examples/05_Requirement-with-Enumerated-Property.specif "SpecIF Example \'Requirement with Enumerated Property\'") or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/05_Requirement-with-Enumerated-Property.specif).
