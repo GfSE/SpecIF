@@ -45,7 +45,7 @@ function checkConstraints( data, options ) {
         case '0.10.7':
         case '0.11.0':
         case '0.11.7':
-            return { status: 903, statusText: 'SpecIF version '+data.specifVersion+' is not supported!' };
+            return { status: 903, statusText: 'SpecIF version '+data.specifVersion+' is not any more supported!' };
         case '0.10.2':
         case '0.10.3':
         case '0.11.1':
@@ -245,25 +245,25 @@ function checkConstraints( data, options ) {
                     case 'xs:double':
                         // more restrictive than the schema, where accuracy is optional:
                         if( !L[i][fractionDigits] ) 
-                            return {status:929, statusText: "double types must have fractionDigits>0"};
+                            return {status:929, statusText: "double types must have "+fractionDigits+">0"};
                         // no break;
                     case 'xs:integer':
                         // more restrictive than the schema, where min and may are optional:
                         if( L[i][minInclusive]==undefined || L[i][maxInclusive]==undefined || L[i][minInclusive]+1>L[i][maxInclusive] ) 
-                            return {status:929, statusText: "number types must have min and max, while min must be smaller or equal than max"}
+                            return {status:929, statusText: "number types must have "+minInclusive+" and "+maxInclusive+", while the former must be smaller or equal than the latter"}
                 }                        
             };
         return {status:0, statusText: "dataTypes are correct"}
     }
     function checkClasses(cL,iL,type) {  // class list, instance list
         // This routine is used in 2 situations:
-        // - In case of resourceClasses, the value of "extends" (if it exists) must be the key of a member of "resourceClasses". 
-        //   Similarly for statements.
         // - In case of resources, the value of "class" must be the key of a member of "resourceClasses". 
         //   Similarly for statements and hierarchies.
+        // - In case of resourceClasses, the value of "extends" (if it exists) must be the key of a member of "resourceClasses". 
+        //   Similarly for statements.
         for( var i=iL.length-1;i>-1;i-- ){
             if( typeof(iL[i][type])=='string' && itemByKey(cL, iL[i][type])==undefined ) 
-                return {status:903, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+type }
+                return {status:903, statusText: "item with identifier '"+iL[i].id+"' must reference a valid "+type }
         };
         return {status:0, statusText: "all instances' attribute named '"+type+"' reference valid types"}    
     }
@@ -345,8 +345,8 @@ function checkConstraints( data, options ) {
         };
         return {status:0, statusText: "no anomaly with statement's subjects and objects"}
     }
-    function checkValue(pC,pr,etxt) { 
-        let val = pr.value;
+    function checkValue(pC,prp,etxt) { 
+        let val = prp.value;
         if( val ) {
             // according to the schema, all property values are of type 'string', including boolean and numbers:
             let dT = itemByKey(data.dataTypes,pC.dataType);
@@ -419,38 +419,40 @@ function checkConstraints( data, options ) {
     }
     function checkProperties(cL,iL,typ) { 
         // check all properties of the instances listed in iL,
-        // cL: class list, 
+        // cL: instance class list, 
         // iL: instance list (resources, statements or up until v0.10.6 resp v0.11.6 hierarchies) to be checked:
         if( iL ) {
-            let pr, propertyC, instanceC, extendedC, a, rc, et;
+            let prp, propertyC, instanceC, extendedC, a, rc, et;
             for( var i=iL.length-1;i>-1;i-- ){
                 if( iL[i].properties ) {
                     instanceC = itemByKey(cL,iL[i][typ]); // the instance's class.
                     // ToDo: error 919 is equal to 903, but there has been a case in which 919 has been raised. 
+					// The instance's class must be members of cL (has already been checked with checkClasses()):
                     if( !instanceC ) 
-                        return {status:919, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
+                        return {status:903, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
+					
                     for( a=iL[i].properties.length-1;a>-1;a-- ){
-                        pr = iL[i].properties[a];
-                        et = "property with class '"+pr[pClass]+"' of instance with identifier '"+iL[i].id+"'";
+                        prp = iL[i].properties[a];
+                        et = "property with class '"+prp[pClass]+"' of instance with identifier '"+iL[i].id+"'";
                         // Property's propertyClass must point to a propertyClass of the respective resourceClass or statementClass:
                         if( data.propertyClasses ) {
                             // starting v0.10.6
                             // a) property class id must be listed by the instance class or the extended instance class:
                             extendedC = itemByKey( cL, instanceC['extends'] );
-                            if( instanceC.propertyClasses.indexOf(pr['class'])<0
-                                && extendedC && extendedC.propertyClasses.indexOf(pr['class'])<0 )
+                            if( instanceC.propertyClasses.indexOf(prp['class'])<0
+                                && (!extendedC || extendedC.propertyClasses.indexOf(prp['class'])<0 ) )
                                 return {status:920, statusText: et+": class must be listed with the instance class or the extended instance class"}
                             // b) the referenced property class must be defined:
-                            propertyC = itemByKey( data.propertyClasses, pr['class'] )
+                            propertyC = itemByKey( data.propertyClasses, prp['class'] )
                         } else {
                             // up until v0.10.5 there is no class inheritance/extension:
-                            propertyC = itemById( instanceC[pClasses], pr[pClass] )
+                            propertyC = itemById( instanceC[pClasses], prp[pClass] )
                         };
                         if( !propertyC ) 
                             return {status:920, statusText: et+" must reference a valid propertyClass"}; 
                         
                         // Property's value ("content") must fit to the respective type's range
-                        rc = checkValue(propertyC,pr,et);
+                        rc = checkValue(propertyC,prp,et);
                         if( rc.status>0 ) 
                             return rc;
                     }
