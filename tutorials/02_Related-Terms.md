@@ -1,6 +1,6 @@
 # Tutorial 2: 'Related Terms'
 
-Next, we would like to present two *resources* and a *statement* about both. Statements express semantic relations between resources. In a real application, a SpecIF data-set represents a semantic net with resources as nodes and startements as arcs. This example could well be the beginning of a vocabulary or ontology in the traffic domain.
+Next, we would like to present two *resources* and a *statement* about both. Statements express semantic relations between resources. In a real application, a SpecIF data-set represents a semantic net with resources as nodes and statements as arcs. This example could well be the beginning of a vocabulary or ontology in the traffic domain.
 
 Thus very fundamentally, SpecIF is to represent entities, objects or nodes (called *resources*) on one hand and relations or arcs (called *statements*) on the other.
 
