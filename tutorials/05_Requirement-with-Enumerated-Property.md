@@ -141,6 +141,14 @@ Let us have a look at the full example, now:
 
 Some more explanations:
 - Here we see that the *resourceClass* has an additionally listed *propertyClass* \"PC-Priority\".
-- Also the resource's list of *properties* has an additional element with a priority value. Note that the *id* of the *dataType* is being referenced.
+- Also the resource's list of *properties* has an additional element with a priority value. Note that the *id* of a *dataType.value* is being referenced.
+
+
+Finally let us have a look at the tab \"Reports\" of the SpecIF-Viewer. You may check yourself by clicking the link at the very lower right corner of this page. 
+![Requirement with Enumerated-Property Reports](./images/Requirement-with-Enumerated-Property-Reports.png)
+
+- The first report on the left shows how many *resourceClasses* are defined, one in this case, and how many resources of that class exist, also a single one in this case.
+- The second shows how how many instances of the given class (see the title of the report) have any of the defined value of a property with an enumerated dataType. Also trivial in this case: Resources of class \"IREB-Requirement\" have one property with enumerated values and the single instance has the value \"Rather High\".
+- But interesting to note is that none of the reports have been programmed explicitly. Just the classes of the current projects are used to construct the reports. Then, the respective instance counts are added. It is completely generic by virue of the SpecIF class definitions.
 
 You may also view/download the example [Requirement with Enumerated Property](http://specif.de/examples/05_Requirement-with-Enumerated-Property.specif "SpecIF Example \'Requirement with Enumerated Property\'") or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/05_Requirement-with-Enumerated-Property.specif).
