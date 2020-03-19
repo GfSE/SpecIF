@@ -91,7 +91,7 @@ When a mapping is developed, it is ne
 
 |BPMN-Element | SpecIF-Element | Remark|
 | ------------- |:-------------:| -----:|
-|Start-, interim-, end event | FMC:Event | Remark|
+|Start-, interim-, endevent | FMC:Event | Remark|
 |Time or message event| FMC:Event | Remark|
 |Activity | FMC:Actor | Remark|
 |Parallel Gateway (Seperation) | Statements | Remark|
