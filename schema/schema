@@ -195,6 +195,12 @@
   },
   "type": "object",
   "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://(specif.de/v1.0/schema|.+/specif).json$",
+      "description": "An absolute URL pointing to this SpecIF schema."
+    },
     "id": {
       "$ref": "#/definitions/id"
     },
@@ -207,11 +213,6 @@
     "isExtension": {
       "type": "boolean",
       "description": "Indicates that the project is not schema-compliant on its own; by default the value is 'false'. Of course, it is expected that once extended the project is schema-compliant."
-    },
-    "specifVersion": {
-      "description": "The schema version to use.",
-      "type": "string",
-      "pattern": "^1.0$"
     },
     "generator": {
       "type": "string"
@@ -229,7 +230,8 @@
           "type": "string"
         },
         "url": {
-          "type": "string"
+          "type": "string",
+          "format": "uri"
         }
       },
       "required": [ "title", "type", "url" ]
@@ -845,9 +847,9 @@
     }
   },
   "required": [ 
+    "$schema",
     "id",
     "title",
-    "specifVersion",
     "resourceClasses",
     "statementClasses",
     "resources",
