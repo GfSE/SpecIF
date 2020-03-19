@@ -31,15 +31,11 @@ function checkConstraints( data, options ) {
     // The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseType:"text",responseText:"xyz"}
     // ToDo: localize messages and provide them by call parameter.
 
-    if( data.specifVersion.indexOf( '0.9.' )>-1 ) 
+    if( data.specifVersion && data.specifVersion.indexOf( '0.9.' )>-1 ) 
         return { status: 903, statusText: 'SpecIF version 0.9.x is not any more supported!' };
 
-    // set default:
-    if( typeof(options)!='object' ) options = {};
-    if( !Array.isArray(options.dontCheck) ) options.dontCheck = [];
-    
     // Set property names according to SpecIF version:
-    switch( data.specifVersion ) {
+    switch( data['$schema'] || data.specifVersion ) {
         case '0.10.0':
         case '0.10.1':
         case '0.10.7':
@@ -78,17 +74,22 @@ function checkConstraints( data, options ) {
                 subClasses = 'subjectClasses',
                 objClasses = 'objectClasses'
     };
-    if( data.specifVersion.indexOf('0.1')==0 ) 
+    if( data.specifVersion ) 
         // for all versions <1.0:
-		var fractionDigits = 'accuracy',
-			minInclusive = 'min',
-			maxInclusive = 'max'
+        var fractionDigits = 'accuracy',
+            minInclusive = 'min',
+            maxInclusive = 'max'
     else
         // starting SpecIF v1.0:
-		var fractionDigits = 'fractionDigits',
-			minInclusive = 'minInclusive',
-			maxInclusive = 'maxInclusive';
+        var fractionDigits = 'fractionDigits',
+            minInclusive = 'minInclusive',
+            maxInclusive = 'maxInclusive';
 
+    // Set default:
+    if( typeof(options)!='object' ) options = {};
+    if( !Array.isArray(options.dontCheck) ) options.dontCheck = [];
+
+    // Handling return code and error list:
     var rc={},errL=[];
 
     // ids must be unique unless when used as a reference:
@@ -234,8 +235,10 @@ function checkConstraints( data, options ) {
             for( var i=L.length-1;i>-1;i-- ){
                 switch(L[i].type) {
                     case 'xhtml':
-                        if( data.specifVersion.indexOf('0.10.2')>-1
-                            || data.specifVersion.indexOf('0.11.1')>-1 ) 
+                        // break, if specifVersion is '0.10.2' or '0.11.1':
+                        if( data.specifVersion
+                            && (data.specifVersion.indexOf('0.10.2')>-1
+                               || data.specifVersion.indexOf('0.11.1')>-1 )) 
                             break;
                     case 'xs:string': 
                         // more restrictive than the schema, where maxLength is optional:
