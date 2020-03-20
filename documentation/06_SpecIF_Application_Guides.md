@@ -9,7 +9,7 @@ This Application Guide shows mappings and examples for different modeling langua
 The mapping from SysML to SpecIF was discussed in a working group. At the moment there is a sketch for a mapping of SysML- to SpecIF-Elements.
 This Mapping Table is not released and still in discussion. It consists of a resource, property and statement mapping and only contains elements that are used in activity and block definition diagrams
 
-###Resource Mapping
+###Resource mapping table
 |UML-Metaclass |EA-Element.Type |SpecIF Resource Class |dcterms:type|Remark|
 | ------------- |:-------------:| -----:|-----:|-----:|
 |Model|-|SpecIF:Collection|OMG:UML:2.5.1:Model|
@@ -50,7 +50,7 @@ This Mapping Table is not released and still in discussion. It consists of a res
 |-|-|-|-|-|
 |Requirement|Requirement|IREB:Requirement|-|OMG:UML:2.5.1:Requirement||
 
-### Property Mapping
+### Property mapping table
 
 |UML-Name|EA-Name|SpecIF-Property|Remark|
 | ------------- |:-------------:| -----:|-----:|
@@ -66,24 +66,24 @@ This Mapping Table is not released and still in discussion. It consists of a res
 |MultiplicityElement|Multiplicity|UML:Multiplicity?|e.g. a connector end multiplicity (*, 1..5 etc.)|
 
 
-### Statement Mapping
+### Statement mapping table
 
 |UML Metaclass|UML Stereotype|SpecIF Statement Class|Remark|
 | ------------- |:-------------:| -----:|-----:|
 |ObjectFlow|-|FMC:State + SpecIF:reads/writes + SpecIF:preceds|FMC:State + SpecIF:reads/writes to transfer the Object, additionally a control flow to trigger the reading actor|
-|ControlFlow|-|SpecIF:triggers/preceds/signals||
-|Transition|-||Used to interconnect states|
-|Connector (w/o direction)|FMC4SE:acces type||Used in FMC4SE compositional structure modeling (---)|
+|ControlFlow|-|SpecIF:triggers/preceds/signals|The connection type (precedes/triggers/signals) depends on the types of the connected elements|
+|Transition|-|-|Used to interconnect states|
+|Connector (w/o direction)|FMC4SE:acces type|-|Used in FMC4SE compositional structure modeling (---)|
 |Connector (Unidirectional)|FMC4SE:access type|SpecIF:writes|Used in FMC4SE compositional structure modeling (-->)|
-|Connector (Bi-Directional)|FMC4SE:access type||Used in FMC4SE compositional structure modeling (<->)|
-|Composition|-||UML/SysML composition (black diamond)|
-|Aggregation|-||UML/SysML aggregation (white diamond)|
-|Association|-||UML/SysML association|
-|Dependency|-||UML/SysML dependency|
-|Dependency|satisfy||SysML satisfy connection|
-|Dependency|verify||SysML verify connection|
-|Dependency|allocate||SysML allocation connection|
-|Dependency|deploy||UML deployment connection|
+|Connector (Bi-Directional)|FMC4SE:access type|-|Used in FMC4SE compositional structure modeling (<->)|
+|Composition|-|-|UML/SysML composition (black diamond)|
+|Aggregation|-|-|UML/SysML aggregation (white diamond)|
+|Association|-|-|UML/SysML association|
+|Dependency|-|-|UML/SysML dependency|
+|Dependency|satisfy|-|SysML satisfy connection|
+|Dependency|verify|-|SysML verify connection|
+|Dependency|allocate|-|SysML allocation connection|
+|Dependency|deploy|-|UML deployment connection|
 
 
 ### Examples for the mapping
@@ -92,7 +92,7 @@ This Mapping Table is not released and still in discussion. It consists of a res
 
 A Mapping for BPMN to SpecIF was developed in a Masterthesis from Robert Kanitz. The following Mapping Table shows the Mapping between BPMN- and SpecIF-Elements.
 The implementation of the Transformation is accessible in the GFSE-Github (https://github.com/GfSE/BPMN-SpecIF-Bridge). 
-
+###BPMN to SpecIF mapping table
 |BPMN-Element | SpecIF-Element | Remark|
 | ------------- |:-------------:| -----------:|
 |Process| SpecIF:Diagram | SpecIF:Diagram and SpecIF:shows Statements for Elements belonging to the diagram|
@@ -116,3 +116,4 @@ The implementation of the Transformation is accessible in the GFSE-Github (https
 |Sequetialflow | SpecIF:triggers/signals/precedes | - |
 |Messageflow | FMC:State + SpecIF:reads/writes | Messageflow Object is represented by FMC:State|
 
+###Examples
