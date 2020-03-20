@@ -86,7 +86,11 @@ This Mapping Table is not released and still in discussion. It consists of a res
 |Dependency|deploy|-|UML deployment connection|
 
 
-### Examples for the mapping
+### Examples for the SysML mapping
+
+![Versioning in SpecIF](./images/ElementsView.png)
+
+![Versioning in SpecIF](./images/ActivityPartition.png)
 
 ## BPMN to SpecIF Mapping
 
