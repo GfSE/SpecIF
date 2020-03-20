@@ -5,15 +5,16 @@ For example in for the SysML a mapping provides rules which SysML-Metaelement is
 With these mapping rules a Transformation from SysML to SpecIF can be implemented. This methodology can be used for various applications, e.g. BPMN and ReqIF.
 This Application Guide shows mappings and examples for different modeling languages.
 
-When a mapping is developed, it is ne
+## SysML to SpecIF Mapping
+The mapping from SysML to SpecIF was discussed in a working group. At the moment there is a sketch for a mapping of SysML- to SpecIF-Elements.
+This Mapping Table is not released and still in discussion. It consists of a resource, property and statement mapping and only contains elements that are used in activity and block definition diagrams
 
-## UML to SpecIF Mapping
-
+###Resource Mapping
 |UML-Metaclass |EA-Element.Type |SpecIF Resource Class |dcterms:type|Remark|
 | ------------- |:-------------:| -----:|-----:|-----:|
 |Model|-|SpecIF:Collection|OMG:UML:2.5.1:Model|
 |Package|Package|SpecIF:Collection|OMG:UML:2.5.1:Package|
-|Diagram|Diagram|SpecIF:Diagram|-|
+|Diagram|Diagram|SpecIF:Diagram|OMG:UML:2.5.1:Diagram|
 |-|-|-|-|-|
 |Class|Class|FMC:State|OMG:UML:2.5.1:Class|
 |State|State|FMC:State|OMG:UML:2.5.1:State|
@@ -49,8 +50,6 @@ When a mapping is developed, it is ne
 |-|-|-|-|-|
 |Requirement|Requirement|IREB:Requirement|-|OMG:UML:2.5.1:Requirement||
 
-
-
 ### Property Mapping
 
 |UML-Name|EA-Name|SpecIF-Property|Remark|
@@ -67,7 +66,7 @@ When a mapping is developed, it is ne
 |MultiplicityElement|Multiplicity|UML:Multiplicity?|e.g. a connector end multiplicity (*, 1..5 etc.)|
 
 
-### UML-Connector to Statement Mapping
+### Statement Mapping
 
 |UML Metaclass|UML Stereotype|SpecIF Statement Class|Remark|
 | ------------- |:-------------:| -----:|-----:|
@@ -86,29 +85,34 @@ When a mapping is developed, it is ne
 |Dependency|allocate||SysML allocation connection|
 |Dependency|deploy||UML deployment connection|
 
+
+### Examples for the mapping
+
 ## BPMN to SpecIF Mapping
 
+A Mapping for BPMN to SpecIF was developed in a Masterthesis from Robert Kanitz. The following Mapping Table shows the Mapping between BPMN- and SpecIF-Elements.
+The implementation of the Transformation is accessible in the GFSE-Github (https://github.com/GfSE/BPMN-SpecIF-Bridge). 
 
 |BPMN-Element | SpecIF-Element | Remark|
-| ------------- |:-------------:| -----:|
-|Start-, interim-, endevent | FMC:Event | Remark|
-|Time or message event| FMC:Event | Remark|
-|Activity | FMC:Actor | Remark|
-|Parallel Gateway (Seperation) | Statements | Remark|
+| ------------- |:-------------:| -----------:|
+|Process| SpecIF:Diagram | SpecIF:Diagram and SpecIF:shows Statements for Elements belonging to the diagram|
+|Start-, interim-, endevent | FMC:Event |-|
+|Time or message event| FMC:Event | -|
+|Activity | FMC:Actor |-|
+|Parallel Gateway (Seperation) | Statements | Statements between incoming and outgoing Elements|
 |Parallel Gateway (Merge) | FMC:Actor | Actor with waiting function|
-|Exclusive Gateway (Seperation)| FMC:Actor + FMC:Event | Remark|
-|Exclusive Gateway (Merge)| Statements | Remark|
-|Group| SpecIF:Collection | Remark|
-|Pool| FMC:Actor | Remark|
-|Lane| FMC:Actor | Remark|
-|Dataobject| FMC:State | Remark|
-|Datainput| FMC:State | Remark|
-|Dataoutput| FMC:State | Remark|
-|Datastorage| FMC:State | Remark|
-|Annotation| SpecIF:Note | Remark|
+|Exclusive Gateway (Seperation)| FMC:Actor + FMC:Event + SpecIF:signals| Events for different Activityflows|
+|Exclusive Gateway (Merge)| Statements | Statements between incoming and outgoing Elements|
+|Group| SpecIF:Collection | - |
+|Pool| FMC:Actor | Additional SpecIF:contains Statements for Elements that are contained by the Pool|
+|Lane| FMC:Actor | Additional SpecIF:contains Statements for Elements that are contained by the Lane|
+|Dataobject| FMC:State | - |
+|Datainput| FMC:State | - |
+|Dataoutput| FMC:State | - |
+|Datastorage| FMC:State | - |
+|Annotation| SpecIF:Note | - |
 |-|-|-|
-|Dataassociation| SpecIF-Element | Remark|
-|Sequetialflow | SpecIF:triggers/signals/precedes | Remark|
-|Messageflow | SpecIF-Element | Remark|
-|Association| SpecIF-Element | Remark|
+|Association| SpecIF:contains/refersTo | - |
+|Sequetialflow | SpecIF:triggers/signals/precedes | - |
+|Messageflow | FMC:State + SpecIF:reads/writes | Messageflow Object is represented by FMC:State|
 
