@@ -20,7 +20,7 @@ function checkSchema( schema, data ) {
 	return valid?{ status: 0, statusText: 'SpecIF schema has been checked successfully!' }
 			:{ status: 901, statusText: 'SpecIF schema is violated', responseType: 'text', responseText: ajv.errorsText(validate.errors) }
 }
-function checkConstraints( data ) {
+function checkConstraints( data, options ) {
 	"use strict";
 	// Check the constraints of the concrete values in 'data'.
 	// SpecIF-Schema v0.10.2 up until v0.10.8 is supported.
@@ -30,6 +30,10 @@ function checkConstraints( data ) {
 
 	if( data.specifVersion.indexOf( '0.9.' )>-1 ) 
 		return { status: 903, statusText: 'SpecIF version 0.9.x is not supported!' };
+
+	// set default:
+	if( typeof(options)!='object' ) options = {};
+	if( !Array.isArray(options.dontCheck) ) options.dontCheck = [];
 
 	// Set property names according to SpecIF version:
 	switch( data.specifVersion ) {
@@ -53,17 +57,9 @@ function checkConstraints( data ) {
 		case '0.10.4':
 		case '0.10.5':
 		case '0.10.6':
-			var rClasses = 'resourceClasses',
-				sClasses = 'statementClasses',
-				hClasses = 'hierarchyClasses',
-				pClasses = 'propertyClasses',
-				rClass = 'class',
-				sClass = 'class',
-				hClass = 'class',
-				pClass = 'class',
-				subClasses = 'subjectClasses',
-				objClasses = 'objectClasses';
-			break;
+			var hClasses = 'hierarchyClasses',
+				hClass = 'class';
+				// no break
 		default:
 			var rClasses = 'resourceClasses',
 				sClasses = 'statementClasses',
@@ -138,10 +134,8 @@ function checkConstraints( data ) {
 	if( rc.status>0 ) errL.push(rc);
 
 	// A hierarchy node's "resource" must be the id of a member of "resources":
-	for( var h=data.hierarchies.length-1; h>-1; h--) {
-		rc = checkNodes( data.resources, data.hierarchies[h].nodes );
-		if( rc.status>0 ) { errL.push(rc); break }
-	};
+	rc = checkNodes( data.resources, data.hierarchies, 0 );
+	if( rc.status>0 ) errL.push(rc);
 
 	return errL.length<1?{ status: 0, statusText: 'SpecIF constraints have been checked successfully!' }
 			:{ status: 902, statusText: 'SpecIF constraints are violated', responseType: 'text', responseText: errorsText(errL) };
@@ -171,12 +165,12 @@ function checkConstraints( data ) {
 		return {status:0, statusText: 'all identifiers are unique'};
 
 		function duplicateId(L) {
-			if( !L || L.length<1 ) return null;
+			if( !L || L.length<1 ) return;
 			// Add every checked Id to allIds,
-			// return 'null', only if all elements of L are not contained in allIds,
+			// return 'undefined', only if all elements of L are not contained in allIds,
 			// return the first id, which is contained in allIds (hence a duplicate):
 			// Data arriving here has passed the schema checking, so there is a valid id where it is expected.
-			var rc=null, e1=null;
+			var id=null, e1=null;
 			for( var i=L.length-1;i>-1;i-- ) {
 				// it has been checked by schema that valid identifiers are present where mandatory;
 				// so we can skip the checking for duplicates, if there is no id, e.g. in case of properties:
@@ -186,29 +180,21 @@ function checkConstraints( data ) {
 				// check the element's id:
 				if( allIds.indexOf(e1.id)>-1 ) return e1.id;
 				// in case of an enumerated dataType, check the values' identifiers, as well:
-				if( e1.values ) {
-					rc = duplicateId(e1.values);
-					if( rc ) return rc
-				};
+				id = duplicateId(e1.values);
+				if( id ) return id;
 				// check the identifiers of propertyClasses, as well:
-				if( e1[pClasses] ) {
-					rc = duplicateId(e1[pClasses]);
-					if( rc ) return rc
-				};
+				id = duplicateId(e1[pClasses]);
+				if( id ) return id;
 				// the instance's properties may not have an id ...
-				if( e1.properties ) {
-					rc = duplicateId(e1.properties);
-					if( rc ) return rc
-				};
+				id = duplicateId(e1.properties);
+				if( id ) return id;
 				// check the hierarchy's nodes recursively:
-				if( e1.nodes ) {
-					rc = duplicateId(L[i].nodes);
-					if( rc ) return rc
-				}; 
+				id = duplicateId(L[i].nodes);
+				if( id ) return id;
 				// all is fine, but add the latest id to the list for the next checking loops:
 				allIds.push(e1.id)
 			};
-			return null
+			return
 		}
 	}
 	function checkDataTypes(L) {
@@ -230,7 +216,7 @@ function checkConstraints( data ) {
 							return {status:929, statusText: "double types must have accuracy>0"};
 						// no break;
 					case 'xs:integer':
-						// more restrictive than the schema, where min and may are optional:
+						// more restrictive than the schema, where min and max are optional:
 						if( L[i].min==undefined || L[i].max==undefined || L[i].min+1>L[i].max ) 
 							return {status:929, statusText: "number types must have min and max"}
 				}						
@@ -317,13 +303,13 @@ function checkConstraints( data ) {
 		// Similarly for "object".
 		// (It has been checked before that any "resource" is indeed of type "resourceClass").
 		for( var i=sL.length-1;i>-1;i-- ) {
-			if(indexById(rL, sL[i].subject)<0) 
+			if( indexById(rL, sL[i].subject)<0 && options.dontCheck.indexOf('statement.subject')<0 ) 
 				return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
-			if(indexById(rL, sL[i].object)<0) 
+			if( indexById(rL, sL[i].object)<0 && options.dontCheck.indexOf('statement.object')<0 ) 
 				return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
 //			if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
 		};
-		return {status:0, statusText: "statement's subjects and objects reference valid resources"}
+		return {status:0, statusText: "no anomaly with statement's subjects and objects"}
 	}
 	function checkValue(pC,pr,etxt) { 
 		let val = pr.value;
@@ -340,7 +326,7 @@ function checkConstraints( data ) {
 						return {status:921, statusText:etxt+": string value must not exceed maxLength"}; 
 					break;
 				case 'xs:double':
-//								if( (val*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922,statusText:""};
+				//	if( (val*Math.pow(10,dT.accuracy)%1)==0 ) return {status:922,statusText:""};
 					val = parseFloat( val );
 					if( val=='NaN' ) 
 						return {status:925, statusText:etxt+": value is an invalid number"}; 
@@ -424,14 +410,18 @@ function checkConstraints( data ) {
 		};
 		return {status:0, statusText: "properties of all instances are well formed"}
 	}
-	function checkNodes(rL,ndL) {	// resourceList, nodeList
+	function checkNodes(rL,ndL,lvl) {	// resourceList, nodeList, hierarchy level
 		// Any node's "resource" must be the id of a member of "resources". 
 		if( ndL ) {
 			var rc = null;
 			for( var i=ndL.length-1;i>-1;i-- ){
-				if(indexById(rL,ndL[i].resource)<0) return {status:909, statusText: "hierarchy node with identifier '"+ndL[i].id+"' must reference a valid resource"};	// check the node itself
-				rc = checkNodes(rL,ndL[i].nodes);	// check references of next hierarchy levels recursively
-				if(rc.status!=0) return rc	
+				// Starting v0.10.8, hierarchy root nodes (lvl==0) reference a resource, but not before.
+				// To recognize <v0.10.8, check for hClasses.
+				if( (lvl>0 || !hClasses) && indexById(rL,ndL[i].resource)<0 ) 
+					return {status:909, statusText: "hierarchy node with identifier '"+ndL[i].id+"' must reference a valid resource"};	// check the node itself
+				rc = checkNodes(rL,ndL[i].nodes,lvl+1);	// check references of next hierarchy levels recursively
+				if(rc.status!=0) 
+					return rc	
 			}
 		};
 		return {status:0, statusText: "hierarchy nodes reference valid resources"}		// all's fine!

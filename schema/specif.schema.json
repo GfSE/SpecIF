@@ -1,5 +1,5 @@
 {
-  "id": "http://specif.de/v0.10.8/schema#",
+  "$id": "http://specif.de/v0.10.8/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "JSON-Schema for SpecIF v0.10.8",
   "description": "The Specification Integration Facility (SpecIF) aims at integrating partial system models from different methods and tools in a semantic net. The goal is to browse and audit engineering results by navigating and seaching in a common context. Also, the exchange of model information between organizations and tools is facilitated. SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications.",
@@ -28,7 +28,7 @@
       "pattern": "^(\\d{4}(?!\\d{2}\\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
     },
     "icon": {
-      "description": "A symbol for display as a prefix to titles; applicable to all instances of the class. Is usually a XML-encoded UTF-8 symbol.",
+      "description": "A symbol for display as a prefix to titles; applicable to all instances of the class. Is usually a XML-encoded UTF-8 symbol, can be an URL or dataURL.",
       "type": "string"
     },
     "instantiation": {
@@ -348,7 +348,7 @@
             "maxLength":  {
               "type": "integer",
               "title": "Maximum String Length",
-              "description": "Optional use by dataTypes 'xs:string' and 'XHTML'.",
+              "description": "Optional use by dataTypes 'xs:string' and 'xhtml'.",
               "minimum": 0
             },
             "revision": {
@@ -483,7 +483,8 @@
             "type": "string"
           },
           "extends": {
-            "$ref": "#/definitions/id"
+            "$ref": "#/definitions/id",
+            "description": "Must be a member of resourceClasses."
           },
           "icon": {
             "$ref": "#/definitions/icon"
@@ -536,7 +537,8 @@
             "type": "string"
           },
           "extends": {
-            "$ref": "#/definitions/id"
+            "$ref": "#/definitions/id",
+            "description": "Must be a member of statementClasses."
           },
           "icon": {
             "$ref": "#/definitions/icon"
