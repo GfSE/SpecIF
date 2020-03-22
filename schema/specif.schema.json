@@ -2,7 +2,7 @@
   "$id": "http://specif.de/v0.10.8/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "JSON-Schema for SpecIF v0.10.8",
-  "description": "The Specification Integration Facility (SpecIF) aims at integrating partial system models from different methods and tools in a semantic net. The goal is to browse and audit engineering results by navigating and seaching in a common context. Also, the exchange of model information between organizations and tools is facilitated. SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications.",
+  "description": "SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.",
   "definitions": {
     "id": {
       "description": "A unique identifier.",
