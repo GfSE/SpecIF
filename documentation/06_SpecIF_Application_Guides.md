@@ -52,7 +52,7 @@ in the following three tables.
 |ActivityFinalNode|StateNode with Subtype=101|FMC:Event|OMG:UML:2.5.1:ActivityFinal|
 |FlowFinalNode|StateNode with Subtype=102|FMC:Event|OMG:UML:2.5.1:FlowFinal|
 |-|-|-|-|-|
-|Requirement|Requirement|IREB:Requirement|-|OMG:UML:2.5.1:Requirement||
+|Requirement|Requirement|IREB:Requirement|OMG:UML:2.5.1:Requirement||
 
 ### Property mapping table
 
