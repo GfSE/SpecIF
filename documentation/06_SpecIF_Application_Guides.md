@@ -1,15 +1,18 @@
-#SpecIF Application Guide
-For the usage of SpecIF, applications needs to be developed. At the moment there are approaches for ReqIF, BPMN, Excel and SysML.
+# SpecIF Application Guide
+For the usage of SpecIF, applications need to be developed. At the moment there are approaches for ReqIF, BPMN, Excel and SysML.
 The implementation of a new application there is some work to be done. Applications need a mapping to match Metaelements of diffrent standards.
 For example in for the SysML a mapping provides rules which SysML-Metaelement is transformed in which SpecIF metaelements.
-With these mapping rules a Transformation from SysML to SpecIF can be implemented. This methodology can be used for various applications, e.g. BPMN and ReqIF.
+With these mapping rules a Transformation from SysML to SpecIF can be implemented. This methodology can be used for various 
+applications, e.g. BPMN and ReqIF.
 This Application Guide shows mappings and examples for different modeling languages.
 
 ## SysML to SpecIF Mapping
-The mapping from SysML to SpecIF was discussed in a working group. At the moment there is a sketch for a mapping of SysML- to SpecIF-Elements.
-This Mapping Table is not released and still in discussion. It consists of a resource, property and statement mapping and only contains elements that are used in activity and block definition diagrams
+The mapping from SysML to SpecIF was discussed in a working group. At the moment there is a sketch for a mapping of 
+SysML- to SpecIF-Elements.This Mapping Table is not released and still in discussion. It consists of a resource, property
+and statement mapping and 
+only contains elements that are used in activity and block definition diagrams
 
-###Resource mapping table
+### Resource mapping table
 |UML-Metaclass |EA-Element.Type |SpecIF Resource Class |dcterms:type|Remark|
 | ------------- |:-------------:| -----:|-----:|-----:|
 |Model|-|SpecIF:Collection|OMG:UML:2.5.1:Model|
@@ -96,7 +99,8 @@ This Mapping Table is not released and still in discussion. It consists of a res
 
 A Mapping for BPMN to SpecIF was developed in a Masterthesis from Robert Kanitz. The following Mapping Table shows the Mapping between BPMN- and SpecIF-Elements.
 The implementation of the Transformation is accessible in the GFSE-Github (https://github.com/GfSE/BPMN-SpecIF-Bridge). 
-###BPMN to SpecIF mapping table
+
+### BPMN to SpecIF mapping table
 |BPMN-Element | SpecIF-Element | Remark|
 | ------------- |:-------------:| -----------:|
 |Process| SpecIF:Diagram | SpecIF:Diagram and SpecIF:shows Statements for Elements belonging to the diagram|
