@@ -1,6 +1,5 @@
 # SpecIF Application Guide
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 For the usage of SpecIF, applications need to be developed. At the moment there are approaches for ReqIF, BPMN, Excel and SysML.
 Before a new application is implemented there is some work to be done. Applications require a mapping to match meta elements of 
 different modeling environments to SpecIF. In case of the SysML the mapping provides rules which SysML-Metaelement is transformed 
