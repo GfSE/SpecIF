@@ -92,9 +92,13 @@ in the following three tables.
 
 ### Examples for the SysML mapping
 
-![Versioning in SpecIF](./images/ElementsView.png)
+![SysML and SpecIF Representation of Objects](./images/Mapping_SysML_Representation.png)
 
-![Versioning in SpecIF](./images/ActivityPartition.png)
+![ActivityPartition Transformation](./images/Mapping_SysML_ActivityPartition.png)
+
+![DecisionNode Transformation](./images/Mapping_SysML_DecisionNode.png)
+
+![MergeNode Transformation](./images/Mapping_SysML_MergeNode.PNG)
 
 ## BPMN to SpecIF Mapping
 
