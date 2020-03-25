@@ -92,11 +92,11 @@ in the following three tables.
 
 ### Examples for the SysML mapping
 
-![SysML and SpecIF Representation of Objects](./images/Mapping_SysML_Representation.png)
+![SysML and SpecIF Representation of Objects](./images/Mapping_SysML_Representation.PNG)
 
-![ActivityPartition Transformation](./images/Mapping_SysML_ActivityPartition.png)
+![ActivityPartition Transformation](./images/Mapping_SysML_ActivityPartition.PNG)
 
-![DecisionNode Transformation](./images/Mapping_SysML_DecisionNode.png)
+![DecisionNode Transformation](./images/Mapping_SysML_DecisionNode.PNG)
 
 ![MergeNode Transformation](./images/Mapping_SysML_MergeNode.PNG)
 
