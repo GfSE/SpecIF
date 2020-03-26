@@ -1,0 +1,75 @@
+{
+  "$schema": "https://specif.de/v1.0/schema.json",
+  "id": "_38B2C4E6_2881_447E_A224_3027C5165E4A",
+  "title": "SpecIF property class definitions for domain 11-Testing",
+  "isExtension": true,
+  "createdAt": "2020-02-16T19:54:35.0595654+01:00",
+  "dataTypes": [],
+  "propertyClasses": [
+    {
+      "id": "PC-TestVerdict",
+      "title": "U2TP:Verdict",
+      "description": "A verdict is a predefined enumeration specifying the set of possible evaluations of a test case.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-TestVerdict",
+        "revision": "1"
+      },
+      "changedAt": "2020-03-26T20:32:25.411Z"
+    },
+    {
+      "id": "PC-ExpectedResult",
+      "title": "ISTQB:ExpectedResult",
+      "description": "The predicted observable behavior of a component or system executing under specified conditions, based on its specification or another source. [After ISO 29119]",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-FormattedText",
+        "revision": "1"
+      },
+      "changedAt": "2020-03-26T20:32:25.411Z"
+    },
+    {
+      "id": "PC-TestData",
+      "title": "ISTQB:TestData",
+      "description": "Data created or selected to satisfy the execution preconditions and inputs to execute one or more test cases. [After ISO 29119]",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-Text",
+        "revision": "1"
+      },
+      "changedAt": "2020-03-26T20:32:25.411Z"
+    },
+    {
+      "id": "PC-TestResultReason",
+      "title": "U2TP:ReasonMessage",
+      "description": "A textual note, describing a reason for a test result.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-Text",
+        "revision": "1"
+      },
+      "changedAt": "2020-03-26T20:32:25.411Z"
+    },
+    {
+      "id": "PC-TestPrecondition",
+      "title": "ISTQB:Precondition",
+      "description": "The required state of a test item and its environment prior to test case execution.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-Text",
+        "revision": "1"
+      },
+      "changedAt": "2020-03-26T20:32:25.411Z"
+    }
+  ],
+  "resourceClasses": [],
+  "statementClasses": [],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
+}
