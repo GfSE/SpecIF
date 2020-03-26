@@ -18,6 +18,7 @@
       "description": "For change and configuration management; the first revision has 0 entries, a simple modification has 1 entry and the result of a merge has 2 entries.",
       "type": "array",
       "maxItems": 2,
+      "uniqueItems": true,
       "items": {
         "$ref": "#/definitions/revision"
       }
@@ -62,6 +63,7 @@
     "alternativeIds": {
       "description": "The list of consolidated items which can be used in case a consolidated item shall be updated.",
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "description": "A list of pointers to resources resp statements which have been merged to this one.",
         "oneOf": [{
@@ -94,6 +96,7 @@
       }, {
         "description": "A list of items with text and language properties. Thus, the information can be given in multiple languages.",
         "type": "array",
+        "uniqueItems": true,
         "items": {
             "type": "object",
             "properties": {
@@ -114,6 +117,7 @@
     "nodes": {
       "description": "A list of pointers to resources; may be nested to build a tree, i.e. a hierarchy of pointers.",
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "properties": {
@@ -154,6 +158,7 @@
     "properties": {
       "description": "A list of properties of a resource or statement.",
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "properties": {
@@ -277,6 +282,7 @@
     "dataTypes": {
       "description": "The base data types for use by property class definitions.",
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "oneOf": [{
           "type": "object",
@@ -464,6 +470,7 @@
               "type": "array",
               "title": "Enumerated Values",
               "description": "Mandatory use by dataType 'xs:enumeration'. If 'multiple' is true 0..n options may be selected, otherwise exactly one must be selected.",
+              "uniqueItems": true,
               "items": {
                 "type": "object",
                 "properties": {
@@ -546,6 +553,7 @@
     "resourceClasses": {
       "description": "The class definitions for resources.",
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "properties": {
@@ -600,6 +608,7 @@
     "statementClasses": {
       "description": "The class definitions for statements in subject-predicate-object statements, where subject and object are resources.",
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "properties": {
@@ -673,6 +682,7 @@
     "resources": {
       "description": "The resources such as diagrams, model elements or requirements.",
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "properties": {
@@ -718,6 +728,7 @@
     "statements": {
       "description": "Subject-predicate-Object statements, where subject and object are resources. In other terms, statements are directed relations between two resources building a semantic net.",
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "properties": {
@@ -772,6 +783,7 @@
     "hierarchies": {
       "description": "A list of hierarchies with pointers to resources; may be nested to build a tree, i.e. a hierarchy of pointers.",
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "properties": {
@@ -810,7 +822,9 @@
       }
     },
     "files": {
+      "description": "A list of files being referenced by a resource's or statement's property of dataType XHTML using an <object> tag. A file should have a media type as defined by IANA (see below).",
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "properties": {

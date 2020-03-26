@@ -5,7 +5,7 @@ In the previous tutorials we have introduced all concepts we need to represent a
 ![Very Simple Model (FMC)](./images/Very-Simple-Model-FMC.svg)
 
 - In fact, this is not a model, but a diagram representing a model. It is a view of the model for a specific communication purpose; it is meant to be interpreted by a human being. In this particularly simple case, the diagram shows the whole model, but usually there are more and each diagram depicts a certain aspect of a model.
-- We see two model elements with a relation. The upper box represents an IT-System with some business logic and the lower box represents the information that is being processed. The directed connections represent a writing and a reading relationship; thus this application can write and read the data.
+- We see two model elements with two relations. The upper box represents an IT-System with some business logic and the lower box represents the information that is being processed. The directed connections represent a writing and a reading relationship; thus this application can write and read the data.
 - The notation being used is known as a block-diagram of the *Fundamental Modelling Concepts (FMC)*. A box with sharp corners represents an active element called *Actor*, while a box with rounded corners represents a passive element called *State*. *Actor* is a concept used for a system, tool, human role or function, whereas *State* is a concept used for information in gerneral, a document, a database, form or color.
 
 
