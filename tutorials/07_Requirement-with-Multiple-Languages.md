@@ -34,6 +34,7 @@ Some explanations:
 - The language is expected in an abbreviation as defined by IANA, for example "en", "en/US" or "de".
 - The same applies not only to values of an enumerated dataType, but also to all titles, descriptions and property-values. Try it yourself!
 - Which language is chosen in a given situation depends on the application. In case of the SpecIF Viewer, the language setting of the browser is used for selection. If the expected language is not provided by the SpecIF data-set, the first entry in the list is taken.
+- To see the effect, klick the link given on the lower right corner of this page, change the language setting of your browser and klick it again.
 
 Let us at last have a look at the full example:
 
@@ -148,7 +149,5 @@ Let us at last have a look at the full example:
     }]
 }
 ```
-
-To see the effect, klick the link given on the lower right corner of this page, change the language setting of your browser and klick it again.
 
 You may also view/download the example [Requirement with Multiple Languages](http://specif.de/examples/07_Requirement-with-Multiple-Languages.specif "SpecIF Example \'Requirement with Multiple Languages\'") or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/07_Requirement-with-Multiple-Languages.specif).
