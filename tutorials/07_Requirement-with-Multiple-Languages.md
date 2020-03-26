@@ -32,6 +32,7 @@ Some explanations:
 - The first value with "id":"V-Prio-0" is provided as a string in a single language.
 - The second value with "id":"V-Prio-1" is provided as a list of JSON objects with *text* and *language* attributes. 
 - The language is expected in an abbreviation as defined by IANA, for example "en", "en/US" or "de".
+- The same applies not only to values of an enumerated dataType, but also to all titles, descriptions and property-values. Try it yourself!
 - Which language is chosen in a given situation depends on the application. In case of the SpecIF Viewer, the language setting of the browser is used for selection. If the expected language is not provided by the SpecIF data-set, the first entry in the list is taken.
 
 Let us at last have a look at the full example:
@@ -116,19 +117,15 @@ Let us at last have a look at the full example:
     "statementClasses": [],
     "resources": [{
       "id": "Req-5ba3512b0000bca",
-      "title": "Minimum button size",
+      "title": [{
+        "text": "Minimum button size",
+        "language": "en"
+      },{
+        "text": "Minimale Größe des Tasters",
+        "language": "de"
+      }],
       "class": "RC-Requirement",
       "properties": [{
-        "class": "PC-Name",
-        "value": [{
-          "text": "Minimum button size",
-          "language": "en"
-        },{
-          "text": "Minimale Größe des Tasters",
-          "language": "de"
-        }],
-        "changedAt": "2020-03-26T22:59:00+02:00"
-      },{
         "class": "PC-Description",
         "value": [{
           "text": "<p>The <i>button size</i> MUST not be less than 20mm in diameter.</p>",
