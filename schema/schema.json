@@ -279,6 +279,10 @@
       },
       "required": [ "email" ]
     },
+    "language": {
+      "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of simple property values. Is superseded by a resource's, statement's or property's language value.",
+      "type": "string"
+    },
     "dataTypes": {
       "description": "The base data types for use by property class definitions.",
       "type": "array",
@@ -700,7 +704,7 @@
             "description": "Must be a member of resourceClasses."
           },
           "language": {
-            "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of simple property values.",
+            "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of simple property values. Is superseded by a property's language value.",
             "type": "string"
           },
           "properties": {
@@ -755,7 +759,7 @@
             "description": "Must be a member of resources or statements."
           },
           "language": {
-            "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of simple property values.",
+            "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of simple property values. Is superseded by a property's language value.",
             "type": "string"
           },
           "properties": {
