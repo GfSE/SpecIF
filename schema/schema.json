@@ -277,7 +277,6 @@
     "dataTypes": {
       "description": "The base data types for use by property class definitions.",
       "type": "array",
-      "minItems": 1,
       "items": {
         "oneOf": [{
           "type": "object",
