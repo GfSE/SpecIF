@@ -1,8 +1,8 @@
 {
+  "$schema": "https://specif.de/v1.0/schema.json",
   "id": "_C9426323_BA53_492D_96EC_77D42A2FBA2A",
   "title": "SpecIF property class definitions for domain 01-Base Definitions",
   "isExtension": true,
-  "specifVersion": "1.0",
   "createdAt": "2020-02-16T19:54:35.0595654+01:00",
   "dataTypes": [],
   "propertyClasses": [
