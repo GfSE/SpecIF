@@ -1,44 +1,61 @@
 # Tutorial 7: 'Requirement with Multiple Languages'
 
-Next, we would like to discuss how to add a property to a resource which may assume one of several predefined (\"enumerated\") values. The previously discussed requirement will now get a property indicating it's  priority.
-
-Again, let's start with the new elements of a SpecIF data-set.
+Now, let us examine how a value can be given in several languages. The previously discussed requirement has a property indicating it's  priority. Here one of enumerated priority values is provided in english and german language.
 
 ```json
 {
+    "dataTypes": [{
+      "id": "DT-Priority",
+      "title": "SpecIF:Priority",
+      "description": "Enumerated values for priority",
+      "type": "xs:enumeration",
+      "values": [{
+        "id": "V-Prio-0",
+        "value": "High"
+      },{
+        "id": "V-Prio-1",
+        "value": [{
+          "text": "Rather High",
+          "language": "en"
+        },{
+          "text": "Eher hoch",
+          "language": "de"
+        }]
+      }],
+      "multiple": false,
+      "changedAt": "2020-03-26T22:59:00+02:00"
+    }]
 }
 ```
 
 Some explanations:
-- W
+- The first value with "id":"V-Prio-0" is provided as a string in a single language.
+- The second value with "id":"V-Prio-1" is provided as a list of JSON objects with *text* and *language* attributes. 
+- The language is expected in an abbreviation as defined by IANA, for example "en", "en/US" or "de".
+- Which language is chosen in a given situation depends on the application. In case of the SpecIF Viewer, the language setting of the browser is used for selection. If the expected language is not provided by the SpecIF data-set, the first entry in the list is taken.
 
-Let us have a look at the full example, now:
+Let us at last have a look at the full example:
 
 ```json
 {
-    "id": "P-Requirement-with-Multilanguage-Content-D",
-    "title": "Requirement with Multilanguage-Content D",
-    "specifVersion": "1.0",
-    "rights": {
-        "title": "Creative Commons 4.0 CC BY-SA",
-        "type": "dcterms:rights",
-        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
-    },
-    "createdAt": "2019-05-29T14:12:59.960Z",
+    "id": "P-Requirement-with-Multiple-Languages",
+    "title": "Requirement with Multiple Languages",
+    "$schema": "https://specif.de/v1.0/schema.json",
+    "changedAt": "2020-03-26T22:59:00+02:00",
     "dataTypes": [{
       "id": "DT-ShortString",
       "title": "String[96]",
       "description": "String with max. length 96.",
       "type": "xs:string",
       "maxLength": 96,
-      "changedAt": "2016-05-26T08:59:00+02:00"
+      "changedAt": "2020-03-26T22:59:00+02:00"
     },{
       "id": "DT-FormattedText",
       "title": "Formatted Text",
       "description": "XHTML formatted text with max. length 8156.",
       "type": "xhtml",
       "maxLength": 8156,
-      "changedAt": "2016-05-26T08:59:00+02:00"
+      "changedAt": "2020-03-26T22:59:00+02:00"
     },{
       "id": "DT-Priority",
       "title": "SpecIF:Priority",
@@ -67,26 +84,26 @@ Let us have a look at the full example, now:
         "value": "Low"
       }],
       "multiple": false,
-      "changedAt": "2016-05-26T08:59:00+02:00"
+      "changedAt": "2020-03-26T22:59:00+02:00"
     }],
     "propertyClasses": [{
       "id": "PC-Name",
       "title": "dcterms:title",
       "description": "A name given to the resource.",
       "dataType": "DT-ShortString",
-      "changedAt": "2016-05-26T08:59:00+02:00"
+      "changedAt": "2020-03-26T22:59:00+02:00"
     },{
       "id": "PC-Description",
       "title": "dcterms:description",
       "description": "An account of the resource. Descriptive text about the resource represented as rich text in XHTML.",
       "dataType": "DT-FormattedText",
-      "changedAt": "2016-05-26T08:59:00+02:00"
+      "changedAt": "2020-03-26T22:59:00+02:00"
     },{
       "id": "PC-Priority",
       "title": "SpecIF:Priority",
       "description": "The 'Priority' of the resource.",
       "dataType": "DT-Priority",
-      "changedAt": "2016-05-26T08:59:00+02:00"
+      "changedAt": "2020-03-26T22:59:00+02:00"
     }],
     "resourceClasses": [{
       "id": "RC-Requirement",
@@ -94,7 +111,7 @@ Let us have a look at the full example, now:
       "description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
       "icon": "&#8623;",
       "propertyClasses": [ "PC-Name", "PC-Description", "PC-Priority" ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
+      "changedAt": "2020-03-26T22:59:00+02:00"
     }],
     "statementClasses": [],
     "resources": [{
@@ -110,7 +127,7 @@ Let us have a look at the full example, now:
           "text": "Minimale Größe des Tasters",
           "language": "de"
         }],
-        "changedAt": "2017-06-19T20:13:08+02:00"
+        "changedAt": "2020-03-26T22:59:00+02:00"
       },{
         "class": "PC-Description",
         "value": [{
@@ -124,19 +141,17 @@ Let us have a look at the full example, now:
         "class": "PC-Priority",
         "value": "V-Prio-1"
       }],
-      "changedAt": "2017-06-19T20:13:08+02:00"
+      "changedAt": "2020-03-26T22:59:00+02:00"
     }],
     "statements": [],
     "hierarchies": [{
       "id": "N-bca801377e3d1781",
       "resource": "Req-5ba3512b0000bca",
-      "changedAt": "2019-05-29T13:19:28.546Z"
+      "changedAt": "2020-03-26T22:59:00+02:00"
     }]
 }
 ```
 
-Some more explanations:
-- Here we see that the *resourceClass* has an additionally listed *propertyClass* \"PC-Priority\".
-- Also the resource's list of *properties* has an additional element with a priority value. Note that the *id* of the *dataType* is being referenced.
+To see the effect, klick the link given on the lower right corner of this page, change the language setting of your browser and klick it again.
 
 You may also view/download the example [Requirement with Multiple Languages](http://specif.de/examples/07_Requirement-with-Multiple-Languages.specif "SpecIF Example \'Requirement with Multiple Languages\'") or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/07_Requirement-with-Multiple-Languages.specif).
