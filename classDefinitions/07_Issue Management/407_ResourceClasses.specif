@@ -1,8 +1,8 @@
 {
+  "$schema": "https://specif.de/v1.0/schema.json",
   "id": "_373BFD06-84E9-4FF3-98EF-3DD047DD83F5",
   "title": "SpecIF resource class definitions for domain 07-Issue Management",
   "isExtension": true,
-  "specifVersion": "1.0",
   "createdAt": "2020-02-16T19:54:35.2386874+01:00",
   "dataTypes": [],
   "propertyClasses": [],

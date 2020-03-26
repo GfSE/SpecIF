@@ -1,74 +1,81 @@
 {
-    "id": "_E6FC4B89-F483-48BF-971B-2F568G2FF894",
-    "title": "Statement classes for domain 10_Vocabulary Definition",
-    "isExtension": true,
-    "specifVersion": "1.0",
-    "dataTypes": [],
-    "resourceClasses": [],
-    "statementClasses": [{
-        "id": "SC-isSynonymousResource",
-        "title": "SpecIF:isSynonymOf",
-        "description": "Synonymous resource-term",
-        "instantiation": ["user"],
-        "revision": "1",
-        "replaces": [],
-        "changedAt": "2017-12-12T21:16:17+01:00",
-        "subjectClasses": ["RC-ResourceTerm"],
-        "objectClasses": ["RC-ResourceTerm"]
-    }, {
-        "id": "SC-isSynonymousPredicate",
-        "title": "SpecIF:isSynonymOf",
-        "description": "Synonymous predicate-term",
-        "instantiation": ["user"],
-        "revision": "1",
-        "replaces": [],
-        "changedAt": "2017-12-12T21:16:54+01:00",
-        "subjectClasses": ["RC-PredicateTerm"],
-        "objectClasses": ["RC-PredicateTerm"]
-    }, {
-        "id": "SC-isSynonymousProperty",
-        "title": "SpecIF:isSynonymOf",
-        "description": "Synonymous property-term",
-        "instantiation": ["user"],
-        "revision": "1",
-        "replaces": [],
-        "changedAt": "2017-12-12T21:18:11+01:00",
-        "subjectClasses": ["RC-PropertyTerm"],
-        "objectClasses": ["RC-PropertyTerm"]
-    }, {
-        "id": "SC-isSynonymousValue",
-        "title": "SpecIF:isSynonymOf",
-        "description": "Synonymous value-term",
-        "instantiation": ["user"],
-        "revision": "1",
-        "replaces": [],
-        "changedAt": "2018-12-09T21:18:11+01:00",
-        "subjectClasses": ["RC-ValueTerm"],
-        "objectClasses": ["RC-ValueTerm"]
-    }, {
-        "id": "SC-isInverseOf",
-        "title": "SpecIF:isInverseOf",
-        "description": "Two terms are the inverse of each other, such as 'contains' and 'isContainedBy'.",
-        "instantiation": ["user"],
-        "revision": "1",
-        "replaces": [],
-        "changedAt": "2018-03-21T18:06:20+01:00",
-        "changedBy": "od",
-        "subjectClasses": ["RC-PredicateTerm"],
-        "objectClasses": ["RC-PredicateTerm"]
-    }, {
-        "id": "SC-isSpecialisationOf",
-        "title": "SpecIF:isSpecialisationOf",
-        "description": "A term is a specialization of another, such as 'Passenger Car' and 'Vehicle'.",
-        "instantiation": ["user"],
-        "revision": "1",
-        "replaces": [],
-        "changedAt": "2018-03-21T18:06:20+01:00",
-        "changedBy": "od",
-        "subjectClasses": ["RC-ResourceTerm"],
-        "objectClasses": ["RC-ResourceTerm"]
-    }],
-    "resources": [],
-    "statements": [],
-    "hierarchies": []
+  "$schema": "https://specif.de/v1.0/schema.json",
+  "id": "_E6FC4B89-F483-48BF-971B-2F568G2FF894",
+  "title": "Statement classes for domain 10_Vocabulary Definition",
+  "isExtension": true,
+  "dataTypes": [],
+  "resourceClasses": [],
+  "statementClasses": [
+    {
+      "id": "SC-isSynonymousResource",
+      "title": "SpecIF:isSynonymOf",
+      "description": "Synonymous resource-term",
+      "instantiation": [ "user" ],
+      "revision": "1",
+      "replaces": [],
+      "changedAt": "2017-12-12T21:16:17+01:00",
+      "subjectClasses": [ "RC-ResourceTerm" ],
+      "objectClasses": [ "RC-ResourceTerm" ]
+    },
+    {
+      "id": "SC-isSynonymousPredicate",
+      "title": "SpecIF:isSynonymOf",
+      "description": "Synonymous predicate-term",
+      "instantiation": [ "user" ],
+      "revision": "1",
+      "replaces": [],
+      "changedAt": "2017-12-12T21:16:54+01:00",
+      "subjectClasses": [ "RC-PredicateTerm" ],
+      "objectClasses": [ "RC-PredicateTerm" ]
+    },
+    {
+      "id": "SC-isSynonymousProperty",
+      "title": "SpecIF:isSynonymOf",
+      "description": "Synonymous property-term",
+      "instantiation": [ "user" ],
+      "revision": "1",
+      "replaces": [],
+      "changedAt": "2017-12-12T21:18:11+01:00",
+      "subjectClasses": [ "RC-PropertyTerm" ],
+      "objectClasses": [ "RC-PropertyTerm" ]
+    },
+    {
+      "id": "SC-isSynonymousValue",
+      "title": "SpecIF:isSynonymOf",
+      "description": "Synonymous value-term",
+      "instantiation": [ "user" ],
+      "revision": "1",
+      "replaces": [],
+      "changedAt": "2018-12-09T21:18:11+01:00",
+      "subjectClasses": [ "RC-ValueTerm" ],
+      "objectClasses": [ "RC-ValueTerm" ]
+    },
+    {
+      "id": "SC-isInverseOf",
+      "title": "SpecIF:isInverseOf",
+      "description": "Two terms are the inverse of each other, such as 'contains' and 'isContainedBy'.",
+      "instantiation": [ "user" ],
+      "revision": "1",
+      "replaces": [],
+      "changedAt": "2018-03-21T18:06:20+01:00",
+      "changedBy": "od",
+      "subjectClasses": [ "RC-PredicateTerm" ],
+      "objectClasses": [ "RC-PredicateTerm" ]
+    },
+    {
+      "id": "SC-isSpecialisationOf",
+      "title": "SpecIF:isSpecialisationOf",
+      "description": "A term is a specialization of another, such as 'Passenger Car' and 'Vehicle'.",
+      "instantiation": [ "user" ],
+      "revision": "1",
+      "replaces": [],
+      "changedAt": "2018-03-21T18:06:20+01:00",
+      "changedBy": "od",
+      "subjectClasses": [ "RC-ResourceTerm" ],
+      "objectClasses": [ "RC-ResourceTerm" ]
+    }
+  ],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
 }

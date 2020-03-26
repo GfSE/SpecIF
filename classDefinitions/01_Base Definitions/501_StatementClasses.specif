@@ -1,8 +1,8 @@
 {
+  "$schema": "https://specif.de/v1.0/schema.json",
   "id": "_4396F471_ECF8_4508_8F39_5CE2166ADD53",
   "title": "SpecIF statement class definitions for doamin 01_Base Definitions",
   "isExtension": true,
-  "specifVersion": "1.0",
   "createdAt": "2020-02-16T19:54:35.1763337+01:00",
   "dataTypes": [],
   "propertyClasses": [],
