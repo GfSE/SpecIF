@@ -90,7 +90,7 @@ in the following three tables.
 |Dependency|deploy|-|UML deployment connection|
 
 
-### Examples for the SysML mapping
+### Examples for SysML mapping and transformation
 
 ![SysML and SpecIF Representation of Objects](./images/Mapping_SysML_Representation.PNG)
 
