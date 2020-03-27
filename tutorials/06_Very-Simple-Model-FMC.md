@@ -10,12 +10,12 @@ In the previous tutorials we have introduced all concepts we need to represent a
 - The model-diagram above defines three resources, the diagram itself and each of the depicted model-elements.
 
 
-Let us first look at the relations of the model-elements; using SpecIF terminology we would say the statements made with the resources of the model. Below the statements for one of the model-elements, namely \'FiCo-Application\' are shown:
+Let us first look at the relations of the model-elements. A relation is represented by a statement made with the respective resources. Below, the statements for one of the model-elements, namely \'FiCo-Application\' are shown:
 
 ![Very Simple Model Relations](./images/Very-Simple-Model-Relations.png)
 
-- Whereas the model-diagram shown first was created by an engineer to define an aspect of the model, the diagram shown above is a dynamically created view of all relations of a particular model-element, \'FiCo-Application\' in this case. 
-- An accumulation of *all* relations is shown, no matter how and where they have been defined; it is the semantic net around the selected element with a radius of one. 
+- Whereas the model-diagram shown first was created by an engineer to define an aspect of the model, the graph above shows all relations with a particular model-element, \'FiCo-Application\' in this case. 
+- An accumulation of *all* relations with this model-element is shown, no matter where they have been defined; it is the semantic net around the selected element with a radius of one. 
 - We see that the selected model-element is shown on one diagram and that it writes and reads another model-element. 
 - Each arrow is a statement, e.g. \'FiCo-Application reads FiCo-Data\'. 
 - The icon in front of a model-element name helps to distinguish the fundamental model-element types. The icon is consistently defined for all instances in the respective *resourceClass* below.
@@ -73,10 +73,10 @@ Again, let's start with the new elements of a SpecIF data-set.
 }
 ```
 
-- In this example we need three *resourceClasses* for the diagram as well as model-elements of class *Actor* and *State*.
-- The forth resourceClass given with \"id\":\"RC-Event\" is not used by FMC Block Diagrams, but it is the third fundamental model-element type. One of the interesting principles of FMC is that *any model notation* consists of only three fundamental model-element types, namely *Actor*, *State* and *Event*.
+- In this example we need three *resourceClasses* for the diagram plus the model-elements of class *Actor* and *State*.
+- The forth resourceClass given with \"id\":\"RC-Event\" is not used here, but it is the third fundamental model-element type. One of the interesting principles of FMC is that *any model notation* consists of only three fundamental model-element types, namely *Actor*, *State* and *Event*.
 - Apart from the *propertyClasses* discussed in earlier tutorials, we find two new ones: 
-The diagram shall be shown by a property \"id\":\"PC-Diagram\" of it's own to give it a distinguished role by means of it's \"title\":\"SpecIF:Diagram\". 
+The diagram shall be referenced by a seoarate property \"id\":\"PC-Diagram\" to give it a distinguished role by means of it's \"title\":\"SpecIF:Diagram\". 
 The original type of each element, which can be seen as a subclass to the fundamental class, is specified in a property of class \"id\":\"PC-Type\".
 
 
