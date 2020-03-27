@@ -49,7 +49,7 @@
       "revision": "1",
       "replaces": [],
       "dataType": {
-        "id": "DT-Text",
+        "id": "DT-FormattedText",
         "revision": "1"
       },
       "changedAt": "2020-03-26T20:32:25.411Z"
