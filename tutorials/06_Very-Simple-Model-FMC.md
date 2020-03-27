@@ -16,8 +16,8 @@ Let us first look at the relations of the model-elements. A relation is represen
 
 - Whereas the model-diagram shown first was created by an engineer to define an aspect of the model, the graph above shows all relations with a particular model-element, \'FiCo-Application\' in this case. 
 - An accumulation of *all* relations with this model-element is shown, no matter where they have been defined; it is the semantic net around the selected element with a radius of one. 
-- We see that the selected model-element is shown on one diagram and that it writes and reads another model-element. 
 - Each arrow is a statement, e.g. \'FiCo-Application reads FiCo-Data\'. 
+- So we see that the selected model-element is shown on one diagram and that it writes and reads another model-element. 
 - The icon in front of a model-element name helps to distinguish the fundamental model-element types. The icon is consistently defined for all instances in the respective *resourceClass* below.
 - This relationship view lends itself particularly well to discover any inconsistendcy between model-views. Also it may help to discover model gaps, for example, if an information element is written, but never read.
 
