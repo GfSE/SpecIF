@@ -12,11 +12,10 @@ A series of tutorials for the *Specification Integration Facility* (SpecIF).
 1. [Requirement with Enumerated Property](./05_Requirement-with-Enumerated-Property.md)
 1. [Very Simple Model (FMC)](./06_Very-Simple-Model-FMC.md)
 1. [Requirement with Multiple Languages](./07_Requirement-with-Multiple-Languages.md)
-1. [Requirement with Vocabulary-Terms](./08_Requirement-with-Vocabulary-Terms.md)
+1. [Requirement with Vocabulary-Term](./08_Requirement-with-Vocabulary-Term.md)
 1. [Multiple revisions]() *(in preparation)*
 1. [Class Inheritance]() *(in preparation)*
 1. [SpecIF class vs. dcterms:type]() *(in preparation)*
-1. [Vocabulary-Terms vs. Multi-Language Values]() *(in preparation)*
 1. [Requirement List (Excel)]() *(in preparation)*
 1. [Very Simple Model (BPMN)]() *(in preparation)*
 1. [Very Simple Model (SysML)]() *(in preparation)*
