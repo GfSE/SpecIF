@@ -536,7 +536,7 @@
           },
           "value": {
             "$ref": "#/definitions/value",
-            "description": "An optional default value in case the corresponding resource's or statement's property is missing."
+            "description": "An optional default value in case the instantiated resource's or statement's property is missing."
           },
           "revision": {
             "$ref": "#/definitions/revision"

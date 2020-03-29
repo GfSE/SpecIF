@@ -1,0 +1,27 @@
+{
+  "$schema": "https://specif.de/v1.0/schema.json",
+  "id": "_C9426323_BA53_492D_96EC_77D42A2FBA2A",
+  "title": "SpecIF property class definitions for domain 01-Base Definitions",
+  "isExtension": true,
+  "createdAt": "2020-02-16T19:54:35.0595654+01:00",
+  "dataTypes": [],
+  "propertyClasses": [
+    {
+      "id": "PC-RequirementType",
+      "title": "IREB:RequirementType",
+      "description": "Enumerated value for the Requirement type according IREB",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-RequirementType",
+        "revision": "1"
+      },
+      "changedAt": "2020-03-29T20:32:25.411Z"
+    }
+  ],
+  "resourceClasses": [],
+  "statementClasses": [],
+  "resources": [],
+  "statements": [],
+  "hierarchies": []
+}

@@ -8,51 +8,6 @@
   "propertyClasses": [],
   "resourceClasses": [
     {
-      "id": "RC-Folder",
-      "title": "SpecIF:Heading",
-      "description": "Folders with title and text for chapters or descriptive paragraphs.",
-      "revision": "1",
-      "replaces": [],
-      "isHeading": true,
-      "instantiation": [
-        "user"
-      ],
-      "propertyClasses": [
-        {
-          "id": "PC-Name",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Description",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Type",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "RC-Paragraph",
-      "title": "SpecIF:Paragraph",
-      "description": "Information with title and text for descriptive paragraphs.",
-      "revision": "1",
-      "replaces": [],
-      "isHeading": false,
-      "instantiation": [
-        "auto",
-        "user"
-      ],
-      "propertyClasses": [
-        {
-          "id": "PC-Description",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2019-03-16T18:59:00+01:00"
-    },
-    {
       "id": "RC-Requirement",
       "title": "IREB:Requirement",
       "description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
@@ -77,7 +32,7 @@
           "revision": "1"
         },
         {
-          "id": "PC-Status",
+          "id": "PC-RequirementType",
           "revision": "1"
         },
         {
@@ -93,7 +48,7 @@
           "revision": "1"
         },
         {
-          "id": "PC-Type",
+          "id": "PC-Status",
           "revision": "1"
         }
       ],
