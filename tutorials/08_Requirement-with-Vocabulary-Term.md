@@ -152,8 +152,7 @@ Let us at last have a look at the full example:
 ```
 
 When to use values with multiple languages or a vocabulary term? Some aspects are considered, here:
-- A vocabulary term is most often preferred, if it exists. It is a clear definition of the concept without limitation to a specific domain or national language.
-- The systems working with SpecIF data-sets must then be prepared to provide suitable translations for the users.
-- In case of multiple-language values, the SpecIF data-set carries some language options and thus the systems used do not need to handle vocabulary terms.
+- A vocabulary term is most often preferred, if it exists. It is a clear definition of the concept without limitation to a specific domain or national language. The systems working with SpecIF data-sets must then be prepared to provide suitable translations for the users.
+- In case of multiple-language values, the SpecIF data-set carries some language options and thus the systems used do not need to lookup vocabulary terms.
 
 You may also view/download the example [Requirement with Vocabulary Term](http://specif.de/examples/08_Requirement-with-Vocabulary-Term.specif "SpecIF Example \'Requirement with Vocabulary Term\'") or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/08_Requirement-with-Vocabulary-Term.specif).
