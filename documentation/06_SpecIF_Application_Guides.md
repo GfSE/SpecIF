@@ -112,9 +112,21 @@ used for the transformation of JoinNodes and ForkNodes.
 
 ![MergeNode Transformation](./images/Mapping_SysML_MergeNode.PNG)
 
+Regarding the model structure SysML-Tools provide a containment tree, that shows diagrams and elements that are assigned
+to a diagramm (shown in the figure below). Additional Relations between the elements and global Signals or SignalEvents 
+are shown in the containment tree. After the transformationto SpecIF this structure is provided by the SpecIF-Hierarchy. 
+Different structure levels are defined by hierarchy-elements and nodes. E.g a Activity (in the example CabinProcess) can
+be a hierarchy-element. A nodelist can be added to this hierarchy-element to create a structure. One hierarchy-element is 
+always linked to one model-element. In the figure below the model structure is shown in a Cameo Systems Modeler containment
+tree and in the SpecIF-Viewer. The SpecIF-Viewer is offering a possibility to read a SpecIF files and create a overview.
+The model structure is shown on the left side in the hierarchy tree. Information about model elements are provided by the 
+"Document" section and relations to other model elements are provided by the "Statements" section.  
+
+![Structure_Mapping](./images/Strucuture_Mapping_example.PNG)
+
 ## BPMN to SpecIF Mapping
 
-A Mapping for BPMN to SpecIF was developed in a Masterthesis from Robert Kanitz. The following Mapping Table shows the Mapping between BPMN- and SpecIF-Elements.
+A Mapping for BPMN to SpecIF was developed in the Masterthesis of Robert Kanitz. The following Mapping Table shows the Mapping between BPMN- and SpecIF-Elements.
 The implementation of the Transformation is accessible in the GFSE-Github (https://github.com/GfSE/BPMN-SpecIF-Bridge). 
 
 ### BPMN to SpecIF mapping table
