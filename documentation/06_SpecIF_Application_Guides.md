@@ -122,7 +122,7 @@ tree and in the SpecIF-Viewer. The SpecIF-Viewer is offering a possibility to re
 The model structure is shown on the left side in the hierarchy tree. Information about model elements are provided by the 
 "Document" section and relations to other model elements are provided by the "Statements" section.  
 
-![Structure_Mapping](./images/Strucuture_Mapping_example.PNG)
+![Structure_Mapping](./images/Strucuture_Mapping_example.png)
 
 ## BPMN to SpecIF Mapping
 
