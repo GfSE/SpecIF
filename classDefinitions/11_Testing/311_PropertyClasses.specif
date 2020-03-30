@@ -65,6 +65,18 @@
         "revision": "1"
       },
       "changedAt": "2020-03-26T20:32:25.411Z"
+    },
+    {
+      "id": "PC-TestObject",
+      "title": "ISTQB:TestObject",
+      "description": "The work product to be tested.",
+      "revision": "1",
+      "replaces": [],
+      "dataType": {
+        "id": "DT-FormattedText",
+        "revision": "1"
+      },
+      "changedAt": "2020-03-27T20:32:25.411Z"
     }
   ],
   "resourceClasses": [],

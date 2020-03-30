@@ -49,8 +49,8 @@
     },
     {
       "id": "RC-TestStep",
-      "title": "SpecIF:TestStep",
-      "description": "A test step.",
+      "title": "U2TP:TestStep",
+      "description": "The smallest atomic (i.e., indivisible) part of a test case specification that is executed by a a test execution system during test case execution.",
       "revision": "1",
       "replaces": [],
       "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABaUlEQVRIx72WP48BQRjGfyMk6EUkEgUJUZNIJGiFSuITqJUKjUShV/gW19JpNjQ6pUJDJ0FBJBrmirnNnluDc3u7yZvd952Z55l5/80KXnukxi6eLRSvgEoNvBDPsXQEUgeq3am4jyecAH9EIpwC15EIJ8HvkYi/gG+3sFio73gcIhH9SaSUlkSjyK8sskm3izydkPW6fWwysTDMLPTe21mpBLsd7Pcwm0EwCMWiGkskoNeDjw8Ih6HZBL8fxmO4XvUpeVcMQ+0kmby1l8vK3mrd2i+XWx2QnneCmE6rd78P7TZsNkr3eBw6wfGILBQs3/t8yE7Hvt6Mw68JTBkOkfm8RTQYOOQiM5iVCkynUKsp3TDsc73vEDQakMlALgfnMyyXyh4KPeic72TRd4nFkKuV3f8PK/lwgPkcAgHIZi37bgejEazXSk+loFpV9fCzkoXTfUhH8O/NzpV27cqF48qV6cql79hvyyeAgFLJbczVZwAAAABJRU5ErkJggg==",
@@ -81,7 +81,59 @@
           "revision": "1"
         }
       ],
-      "changedAt": "2019-03-16T18:59:00+01:00"
+      "changedAt": "2020-03-26T18:59:00+01:00"
+    },
+    {
+      "id": "RC-TestModel",
+      "title": "U2TP:TestModel",
+      "description": "A set of test case definitions. Used as SpecIF hierarchy-root element.",
+      "revision": "1",
+      "replaces": [],
+      "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABq0lEQVRIx72Wz0vbYBjHP2/ypralKRsrOlYqu3sSYdIxRxkDh2zgCoUxHBNPgkf/Ag/usqMMdhO8iMwNlFV2UTwMBO9SlIGH3MYOWzbW2YS+O6REq42JEPOFEJ73x+ebvO+b54kgmlRAuwibKKJA81Zvvl0SoawgAxUEDVLHTEQxuDL8MhMRFzzIRMQJ72Ui4oafN9G4ZsmzQev9W9S/5oVBWuku8vEzWstLXlwcxKhN+/3towOcrY8esFxBH314YWNV3lJK3LylOue/65Llisp9/ebHIpNV5uEff15qatbv65tf8NsB1bVE5r6F2bBJvZ4DIL34DrNhk13ZOj12t4uo5l/cnXrn8ds4Xz4hCgM9l6h7D9IZRM4EI+XB+tJenM74Q/ShYdB1nM01ANy9XdSP78h7YxEMIkgbuIM+ch93u46yf+J+/oAo9KOPPojHACD1YgZaJ7j1dZyNVYwnVdD0+Azk+CRIg5OlN6jfv5BPa8FvDIhzWTFUIn8D+WiCtnWMKPQjy5X4PzTj+UvvXn0FmhZaD64tVSSW7BJJ14kUnERKZiJFP7bflv/A7qVNlIuVnQAAAABJRU5ErkJggg==",
+      "isHeading": false,
+      "propertyClasses": [
+        {
+          "id": "PC-Name",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Description",
+          "revision": "1"
+        }
+      ],
+      "changedAt": "2020-03-29T18:59:00+01:00"
+    },
+    {
+      "id": "RC-TestSuite",
+      "title": "ISTQB:TestSuite",
+      "description": "A set of test scripts or test procedures to be executed in a specific test run.",
+      "revision": "1",
+      "replaces": [],
+      "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB30lEQVRIx72Wz2sTURDHP/M22XQbQVFIwdijomIVD2qrtoIeFFqQkoM/rkr1L5AiHqT3Kp6UggV/FCWIR1GQihX/BHsRLSS3QBIR2sQ0m/HSBrPNa9a6ZuAddt6b72ff23kzK4QztfilU6CEEV32am0XJCtuRy0bQG2iNluDSRjAX4tvBpGoxG0QiVK8HUSiFg9CYsGJmfojihStgaNmjMPmCCUtMus/5nPjExWt4kkPQ+YUt2KT1qzRZa+me2WfrqVo2/HQndHFnq+aktSGOQ+vqbOe5rHg8dyO36GsZQCm6nf5oWXGnQzDZgSAE2aQ+/VpClogyTZeJLIckgHymuOVn+XPu5OsuNry9sGRlrQCei/+oMU/7mQU0H7p16L30xoPqNnKBxwyJwHIa55j1aPM+c9YZbXt2i0BJmI3ueRcAeC7fmOido2B6n4WGh+jAcSJM+s+4V3iPaPOWHM3mV8XKWjh3wHrdtqMkHVfM+e+BGCFFd423mwASKAqdrTn/lMWG1+az2nZ07K7TS9aGPvgz3PDv06f9NFLLznNAZCSFOfNhfBHdNwMMmzOsFvSLf6zzjkOmIOUtMSSLrFddnDZucp8YoGdsstarv9rsetKue5Kw+lKy+xK04/st+U3/Xj1K3yUvKkAAAAASUVORK5CYII=",
+      "isHeading": false,
+      "propertyClasses": [
+        {
+          "id": "PC-Name",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Description",
+          "revision": "1"
+        },
+        {
+          "id": "PC-TestObject",
+          "revision": "1"
+        },
+        {
+          "id": "PC-TestVerdict",
+          "revision": "1"
+        },
+        {
+          "id": "PC-TestResultReason",
+          "revision": "1"
+        }
+      ],
+      "changedAt": "2020-03-27T18:59:00+01:00"
     }
   ],
   "statementClasses": [],
