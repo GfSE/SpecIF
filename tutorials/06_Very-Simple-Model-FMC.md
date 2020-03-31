@@ -5,21 +5,21 @@ In the previous tutorials we have introduced all concepts we need to represent a
 ![Very Simple Model (FMC)](./images/Very-Simple-Model-FMC.svg)
 
 - In fact, this is not a model, but a diagram representing a model. It is a view of the model for a specific communication purpose; it is meant to be interpreted by a human being. In this particularly simple case, the diagram shows the whole model, but usually there are more and each diagram depicts a certain aspect of a model.
-- We see two model elements with two relations. The upper box represents an IT-System with some business logic and the lower box represents the information that is being processed. The directed connections represent a writing and a reading relationship; thus this application can write and read the data.
+- We see two model elements with two relations. The upper box represents an IT-System with some business logic and the lower box represents the information being processed. The directed connections represent a writing and a reading relationship; thus this application can write and read the data.
 - The notation being used is known as a block-diagram of the *Fundamental Modelling Concepts (FMC)*. A box with sharp corners represents an active element called *Actor*, while a box with rounded corners represents a passive element called *State*. *Actor* is a concept used for a system, tool, human role or function, whereas *State* is a concept used for information in gerneral, a document, a database, form or color.
-- The model-diagram above defines three resources, the diagram itself and each of the depicted model-elements.
+- The model-diagram above defines three resources, namely each of the depicted model-elements plus the diagram itself.
 
 
 Let us first look at the relations of the model-elements. A relation is represented by a statement made with the respective resources. Below, the statements for one of the model-elements, namely \'FiCo-Application\' are shown:
 
 ![Very Simple Model Relations](./images/Very-Simple-Model-Relations.png)
 
-- Whereas the model-diagram shown first was created by an engineer to define an aspect of the model, the graph above shows all relations with a particular model-element, \'FiCo-Application\' in this case. 
-- An accumulation of *all* relations with this model-element is shown, no matter where they have been defined; it is the semantic net around the selected element with a radius of one. 
+- Whereas the model-diagram shown first was created by an engineer to define an aspect of the model, the graph above shows all statements with a particular model-element, \'FiCo-Application\' in this case. 
+- An accumulation of *all* statements with this model-element is shown, no matter where they have been defined; it is the semantic net around the selected element with a radius of one. 
 - Each arrow is a statement, e.g. \'FiCo-Application reads FiCo-Data\'. 
 - So we see that the selected model-element is shown on one diagram and that it writes and reads another model-element. 
 - The icon in front of a model-element name helps to distinguish the fundamental model-element types. The icon is consistently defined for all instances in the respective *resourceClass* below.
-- This relationship view lends itself particularly well to discover any inconsistendcy between model-views. Also it may help to discover model gaps, for example, if an information element is written, but never read.
+- This statement view lends itself particularly well to discover any inconsistendcy between model-views. Also it may help to discover model gaps, for example, if an information element is written, but never read.
 
 
 Again, let's start with the new elements of a SpecIF data-set.
@@ -76,7 +76,7 @@ Again, let's start with the new elements of a SpecIF data-set.
 - In this example we need three *resourceClasses* for the diagram plus the model-elements of class *Actor* and *State*.
 - The forth resourceClass given with \"id\":\"RC-Event\" is not used here, but it is the third fundamental model-element type. One of the interesting principles of FMC is that *any model notation* consists of only three fundamental model-element types, namely *Actor*, *State* and *Event*.
 - Apart from the *propertyClasses* discussed in earlier tutorials, we find two new ones: 
-The diagram shall be referenced by a seoarate property \"id\":\"PC-Diagram\" to give it a distinguished role by means of it's \"title\":\"SpecIF:Diagram\". 
+The diagram shall be referenced by a separate property \"id\":\"PC-Diagram\" to give it a distinguished role by means of it's \"title\":\"SpecIF:Diagram\". 
 The original type of each element, which can be seen as a subclass to the fundamental class, is specified in a property of class \"id\":\"PC-Type\".
 
 
