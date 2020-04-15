@@ -194,7 +194,7 @@ function checkConstraints( data, options ) {
                 function containsByKey( L, el ) {
                     // L[i] and el must be an item/key consisting of id and revision
                     // return true, if el is contained in L;
-                    let lR=null, eR=el.revision;
+                    let lR, eR=el.revision || 0;
                     for( var i=L.length-1;i>-1;i-- ) {
                         lR = L[i].revision || 0;
                         if ( L[i].id==el.id && ( lR==eR || lR==0 || eR==0 ) ) return true
@@ -208,7 +208,6 @@ function checkConstraints( data, options ) {
                 if( L[i].id==undefined ) continue;
                 // But if it is defined, it must be unique:
                 e1 = L[i]; 
-                e1.revision = L[i].revision || 0;
                 // check the element's id:
                 if( containsByKey(allKeys,e1) ) return e1;
                 // check the identifiers of enumerated values in dataTypes:
@@ -496,17 +495,18 @@ function checkConstraints( data, options ) {
         //  - If k has a revision, there must be an item in L with the same key consisting of id and revision.
         //  - The uniqueness of keys has been checked, before.
 
-        // normalize k:
+        // clone the key k to not modify the submitted data-set ... and normalize:
+		let _k;
         switch( typeof(k) ) {
-            case 'object': break;
-            case 'string': k = {id: k, revision: 0}; break;
-            default: return null
+            case 'object': _k = {id:k.id,revision:k.revision}; break;
+            case 'string': _k = {id:k, revision: ""}; break;
+            default: return null  // should never arrive here
         };
-        let lR=null, eR = k.revision || 0;
+        let lR=null, eR = _k.revision || 0;
         for( var i=L.length-1;i>-1;i-- ) {
             lR = L[i].revision || 0;
-            // check existence of k:
-            if ( L[i].id==k.id && ( lR==eR || eR==0 ) ) return true
+            // check existence of _k:
+            if ( L[i].id==_k.id && ( lR==eR || eR==0 ) ) return true
         };
         return false
     }  */
@@ -517,28 +517,31 @@ function checkConstraints( data, options ) {
         //  - If k has a revision, the item in L having an an equal or the next lower revision applies.
         //  - The uniqueness of keys has been checked, before.
 
-        // normalize the key k:
+        // Clone the key k to not modify the submitted data-set ... and normalize:
+		let _k;
         switch( typeof(k) ) {
-            case 'object': break;
-            case 'string': k = {id: k, revision: 0}; break;
-            default: return null
+            case 'object': _k = {id:k.id,revision:k.revision}; break;
+            case 'string': _k = {id:k, revision: ""}; break;
+            default: return null  // should never arrive here
         };
-        // find all elements with the same id:
-        let sId = L.filter( function(el) { return el.id==k.id });
-        if( sId.length<1 ) return; // undefined
-        // we assume that all found elements have a revision or there is a single item without:
-        if( sId[0].revision==undefined ) {
-            // a single item without revision:
-            if( k.revision>0 ) return null
-            else return sId[0] // both the found element and the key have no revision
+        // Find all elements with the same id:
+        let itemsWithEqId = L.filter( function(el) { return el.id==_k.id });
+        if( itemsWithEqId.length<1 ) return; // no element with the specified id
+		
+        if( itemsWithEqId.length==1 && !itemsWithEqId[0].revision ) {
+            // a single item without revision has been found:
+            if( _k.revision ) return // revisions don't match (this should not occur)
+            else return itemsWithEqId[0] // both the found element and the key have no revision
         };
-        // The elements in L have a revision and there may be more than 1 of them:
-        // sort revisions with descending order:
-        sId.sort(function(laurel, hardy) { return hardy.revision - laurel.revision });
-        if( k.revision == 0 ) return sId[0]; // the latest revision
-        // find all elements with equal or smaller revision:
-        sId = sId.filter( function(el) { return el.revision<=k.revision });
-        if( sId.length>0 ) return sId[0];
+		
+        // The elements in L have a revision and there may be more than 1 of them.
+        // Sort revisions with descending order:
+        itemsWithEqId.sort(function(laurel,hardy) { return hardy.changedAt - laurel.changedAt });
+        if( !_k.revision ) return itemsWithEqId[0]; // return the latest revision
+		
+        // Find the element with equal revision:
+        itemsWithEqId = itemsWithEqId.filter( function(el) { return el.revision==_k.revision });
+		if( itemsWithEqId.length>0 ) return itemsWithEqId[0];
         // else, there is no element with the requested revision:
         // return undefined
     }  
