@@ -159,7 +159,7 @@
       "revision": "1",
       "replaces": [],
       "dataType": {
-        "id": "DT-Date",
+        "id": "DT-DateTime",
         "revision": "1"
       },
       "changedAt": "2016-05-26T08:59:00+02:00"

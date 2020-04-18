@@ -273,7 +273,7 @@ function checkConstraints( data, options ) {
         if( cL ) {
             let propertyC, i, j, rc;
             for( i=cL.length-1;i>-1;i-- ){
-				// for each class in cL:
+                // for each class in cL:
                 if( cL[i][pClasses] ) {
                     for( j=cL[i][pClasses].length-1;j>-1;j-- ) {
                         propertyC = cL[i][pClasses][j];
@@ -308,7 +308,7 @@ function checkConstraints( data, options ) {
 
     function checkStatementClasses() {    
         // All statementClass' "subjectClasses" must be the key of a member of "resourceClasses" or "statementClasses". 
-		// "subjectClasses" is optional, but if present, the list may not be empty (as enforced by the schema).
+        // "subjectClasses" is optional, but if present, the list may not be empty (as enforced by the schema).
         // Similarly for "objectClasses".
         let aCL = data[rClasses].concat(data[sClasses]), 
             sCL = data[sClasses];    // statementClasses
@@ -358,8 +358,8 @@ function checkConstraints( data, options ) {
             /*      // early SpecIF versions did not specify maxLength in case of xhtml:
                     if( dT.maxLength==undefined ) break;  */
                 case 'xs:string': 
-					// A property value of this type may be either a string or a list of objects with 'text' and 'language' attributes.
-					// here, the checking is more restrictive than the schema which does not require a 'maxLength' attribute:
+                    // A property value of this type may be either a string or a list of objects with 'text' and 'language' attributes.
+                    // here, the checking is more restrictive than the schema which does not require a 'maxLength' attribute:
                     if( dT.maxLength==undefined && options.dontCheck.indexOf('text.length')<0 ) 
                         return {status:922, statusText: "A dataType 'string' or 'xhtml' must specify 'maxLength'."}; 
                     let txt = etxt+": string value must not exceed maxLength";
@@ -429,10 +429,10 @@ function checkConstraints( data, options ) {
                 if( iL[i].properties ) {
                     instanceC = itemByKey(cL,iL[i][typ]); // the instance's class.
                     // ToDo: error 919 is equal to 903, but there has been a case in which 919 has been raised. 
-					// The instance's class must be members of cL (has already been checked with checkClasses()):
+                    // The instance's class must be members of cL (has already been checked with checkClasses()):
                     if( !instanceC ) 
                         return {status:903, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
-					
+                    
                     for( a=iL[i].properties.length-1;a>-1;a-- ){
                         prp = iL[i].properties[a];
                         et = "property with class '"+prp[pClass]+"' of instance with identifier '"+iL[i].id+"'";
@@ -496,7 +496,7 @@ function checkConstraints( data, options ) {
         //  - The uniqueness of keys has been checked, before.
 
         // clone the key k to not modify the submitted data-set ... and normalize:
-		let _k;
+        let _k;
         switch( typeof(k) ) {
             case 'object': _k = {id:k.id,revision:k.revision}; break;
             case 'string': _k = {id:k, revision: ""}; break;
@@ -518,7 +518,7 @@ function checkConstraints( data, options ) {
         //  - The uniqueness of keys has been checked, before.
 
         // Clone the key k to not modify the submitted data-set ... and normalize:
-		let _k;
+        let _k;
         switch( typeof(k) ) {
             case 'object': _k = {id:k.id,revision:k.revision}; break;
             case 'string': _k = {id:k, revision: ""}; break;
@@ -527,21 +527,21 @@ function checkConstraints( data, options ) {
         // Find all elements with the same id:
         let itemsWithEqId = L.filter( function(el) { return el.id==_k.id });
         if( itemsWithEqId.length<1 ) return; // no element with the specified id
-		
+        
         if( itemsWithEqId.length==1 && !itemsWithEqId[0].revision ) {
             // a single item without revision has been found:
             if( _k.revision ) return // revisions don't match (this should not occur)
             else return itemsWithEqId[0] // both the found element and the key have no revision
         };
-		
+    
         // The elements in L have a revision and there may be more than 1 of them.
         // Sort revisions with descending order:
         itemsWithEqId.sort(function(laurel,hardy) { return hardy.changedAt - laurel.changedAt });
         if( !_k.revision ) return itemsWithEqId[0]; // return the latest revision
-		
+        
         // Find the element with equal revision:
         itemsWithEqId = itemsWithEqId.filter( function(el) { return el.revision==_k.revision });
-		if( itemsWithEqId.length>0 ) return itemsWithEqId[0];
+        if( itemsWithEqId.length>0 ) return itemsWithEqId[0];
         // else, there is no element with the requested revision:
         // return undefined
     }  

@@ -70,9 +70,9 @@
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
-      "id": "DT-Date",
+      "id": "DT-DateTime",
       "title": "Date or Timestamp",
-      "description": [],
+      "description": "Date or Timestamp in ISO-Format",
       "revision": "1",
       "replaces": [],
       "type": "xs:dateTime",
@@ -90,8 +90,9 @@
     },
     {
       "id": "DT-Text",
-      "title": "dcterms:description",
+      "title": "Plain text",
       "description": "A text string",
+      "maxLength": 16384,
       "revision": "1",
       "replaces": [],
       "type": "xs:string",
@@ -124,6 +125,7 @@
       "revision": "1",
       "replaces": [],
       "type": "xhtml",
+	  "maxLength": 16384,
       "changedAt": "2016-05-26T08:59:00+02:00"
     }
   ],
