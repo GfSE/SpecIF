@@ -32,6 +32,8 @@ The following list shows the currently identified domains and their IDs:
 |08|BOM|Bill of materials|Unreleased|
 |09|Variant Management|Feature model-based variant management|Unreleased|
 |10|Vocabulary Definition|Resources to define Vocabularies (e.g. SpecIF Vocabulary)|Unreleased|
+|11|Testing|System and software testing domain (using definitions from ISQB and UML2 testing profile)|Unreleased|
+|12|SpecIF-Events|SpecIF data events (CRUD) for event-based notifications about SpecIF data changes.|Unreleased|
 
 ## File naming schema
 For the discussion process the metadata files have a special naming schema with a 3 digit number as prefix in the filename:
