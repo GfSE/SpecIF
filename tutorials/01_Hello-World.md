@@ -39,4 +39,4 @@ Some explanations may help to understand the principles:
 
 A SpecIF data-set in JSON format has a file extension \'.specif\'. It may be contained in a ZIP-file in which case it has a file extension \'.specifz\'.
 
-You may view/download the example [Hello World](http://specif.de/examples/01_Hello-World.specif "SpecIF Example \'Hello World\'") or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/01_Hello-World.specif).
+You may view/download the example [Hello World](http://specif.de/examples/01_Hello-World.specif "SpecIF Example \'Hello World\'") or display it using the [SpecIF Viewer](http://specif.de/apps/view.html#import=../examples/01_Hello-World.specif).
