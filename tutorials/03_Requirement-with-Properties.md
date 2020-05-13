@@ -138,4 +138,4 @@ Some more explanations:
 - Note that the added title property has a title, whereas the description property has not. This is just for demonstration purposes: If a properties' title is specified, it takes of course precedence. I it is not specified, the respective propertyClass' title applies.
 
 
-You may also view/download the example [Requirement with Properties](http://specif.de/examples/03_Requirement-with-Properties.specif "SpecIF Example \'Requirement with Properties\'") or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/03_Requirement-with-Properties.specif).
+You may also view/download the example [Requirement with Properties](http://specif.de/examples/03_Requirement-with-Properties.specif "SpecIF Example \'Requirement with Properties\'") or display it using the [SpecIF Viewer](http://specif.de/apps/view.html#import=../examples/03_Requirement-with-Properties.specif).
