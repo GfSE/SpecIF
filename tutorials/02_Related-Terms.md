@@ -88,4 +88,4 @@ Some more explanations:
 - In the example, the statementCLass with \"id\":\"SC-isSpecialisationOf\" determines that it's instance statement with \"id\":\"S-X0lXi7lJP9DQs\" may only have resources with a resourceClass \"id\":\"RC-ResourceTerm\".
 - This discussion may appear somewhat irrelevant here, as there are only a single resourceClass and a single statementClass. But it is a strong feature of SpecIF which develops its power, when there are multiple resourceClasses as well as statementClasses and it comes to select all resources which can be taken into consideration as subject or object for a given statement. It is rarely seen elsewhere. 
 
-You may also view/download the example [Related Terms](http://specif.de/examples/02_Related-Terms.specif "SpecIF Example \'Related Terms\'") or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/02_Related-Terms.specif).
+You may also view/download the example [Related Terms](http://specif.de/examples/02_Related-Terms.specif "SpecIF Example \'Related Terms\'") or display it using the [SpecIF Viewer](http://specif.de/apps/view.html#import=../examples/02_Related-Terms.specif).
