@@ -156,4 +156,4 @@ When to use values with multiple languages or a vocabulary term? Some aspects ar
 - In case of multiple-language values, the SpecIF data-set carries some language options and thus the systems used do not need to lookup vocabulary terms.
 - Try with different language settings of your Web-Browser: In the example given below, the SpecIF Viewer shows the priority value "low", "niedrig" or "bas".
 
-You may also view/download the example [Requirement with Vocabulary Term](http://specif.de/examples/08_Requirement-with-Vocabulary-Term.specif "SpecIF Example \'Requirement with Vocabulary Term\'") or display it using the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/08_Requirement-with-Vocabulary-Term.specif).
+You may also view/download the example [Requirement with Vocabulary Term](http://specif.de/examples/08_Requirement-with-Vocabulary-Term.specif "SpecIF Example \'Requirement with Vocabulary Term\'") or display it using the [SpecIF Viewer](http://specif.de/apps/view#import=../examples/08_Requirement-with-Vocabulary-Term.specif).
