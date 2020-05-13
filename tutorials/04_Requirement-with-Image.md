@@ -105,4 +105,4 @@ Let us have a look at the full example, now:
 ```
 
 
-You may also download the example [Requirement with Image](http://specif.de/examples/04_Requirement-with-Image.specifz) or display it using the [SpecIF Viewer](http://specif.de/apps/view.html#import=../examples/04_Requirement-with-Image.specifz).
+You may also download the example [Requirement with Image](http://specif.de/examples/04_Requirement-with-Image.specifz) or display it using the [SpecIF Viewer](http://specif.de/apps/view#import=../examples/04_Requirement-with-Image.specifz).
