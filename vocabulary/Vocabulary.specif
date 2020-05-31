@@ -2156,7 +2156,7 @@
     }, {
         "id": "R-852227595",
         "title": "oslc_rm:elaboratedBy",
-        "class": "RC-PropertyTerm",
+        "class": "RC-PredicateTerm",
         "properties": [{
             "title": "dcterms:title",
             "class": "PC-title",
@@ -2176,7 +2176,7 @@
     }, {
         "id": "R-852227594",
         "title": "oslc_rm:elaborates",
-        "class": "RC-PropertyTerm",
+        "class": "RC-PredicateTerm",
         "properties": [{
             "title": "dcterms:title",
             "class": "PC-title",
@@ -2196,7 +2196,7 @@
     }, {
         "id": "R-852227593",
         "title": "oslc_rm:specifiedBy",
-        "class": "RC-PropertyTerm",
+        "class": "RC-PredicateTerm",
         "properties": [{
             "title": "dcterms:title",
             "class": "PC-title",
@@ -2216,7 +2216,7 @@
     }, {
         "id": "R-852227592",
         "title": "oslc_rm:specifies",
-        "class": "RC-PropertyTerm",
+        "class": "RC-PredicateTerm",
         "properties": [{
             "title": "dcterms:title",
             "class": "PC-title",
@@ -2236,7 +2236,7 @@
     }, {
         "id": "R-852227591",
         "title": "oslc_rm:affectedBy",
-        "class": "RC-PropertyTerm",
+        "class": "RC-PredicateTerm",
         "properties": [{
             "title": "dcterms:title",
             "class": "PC-title",
@@ -2256,7 +2256,7 @@
     }, {
         "id": "R-852227590",
         "title": "oslc_rm:trackedBy",
-        "class": "RC-PropertyTerm",
+        "class": "RC-PredicateTerm",
         "properties": [{
             "title": "dcterms:title",
             "class": "PC-title",
@@ -2276,7 +2276,7 @@
     }, {
         "id": "R-852227589",
         "title": "oslc_rm:implementedBy",
-        "class": "RC-PropertyTerm",
+        "class": "RC-PredicateTerm",
         "properties": [{
             "title": "dcterms:title",
             "class": "PC-title",
@@ -2296,7 +2296,7 @@
     }, {
         "id": "R-852227588",
         "title": "oslc_rm:validatedBy",
-        "class": "RC-PropertyTerm",
+        "class": "RC-PredicateTerm",
         "properties": [{
             "title": "dcterms:title",
             "class": "PC-title",
@@ -2316,7 +2316,7 @@
     }, {
         "id": "R-852227564",
         "title": "oslc_rm:decomposedBy",
-        "class": "RC-PropertyTerm",
+        "class": "RC-PredicateTerm",
         "properties": [{
             "title": "dcterms:title",
             "class": "PC-title",
@@ -2336,7 +2336,7 @@
     }, {
         "id": "R-852227563",
         "title": "oslc_rm:decomposes",
-        "class": "RC-PropertyTerm",
+        "class": "RC-PredicateTerm",
         "properties": [{
             "title": "dcterms:title",
             "class": "PC-title",
@@ -2356,7 +2356,7 @@
     }, {
         "id": "R-852227562",
         "title": "oslc_rm:constrainedBy",
-        "class": "RC-PropertyTerm",
+        "class": "RC-PredicateTerm",
         "properties": [{
             "title": "dcterms:title",
             "class": "PC-title",
@@ -2376,7 +2376,7 @@
     }, {
         "id": "R-852227561",
         "title": "oslc_rm:constrains",
-        "class": "RC-PropertyTerm",
+        "class": "RC-PredicateTerm",
         "properties": [{
             "title": "dcterms:title",
             "class": "PC-title",
@@ -3292,7 +3292,7 @@
     }, {
         "id": "R-514389528",
         "title": "IREB:Stakeholder",
-        "class": "RC-ResourceTerm",
+        "class": "RC-ValueTerm",
         "properties": [{
             "title": "dcterms:title",
             "class": "PC-title",
@@ -3316,7 +3316,7 @@
     }, {
         "id": "R-VXtiAplKLoeYA4innkDjQwRbsBC",
         "title": "SpecIF:UserRole",
-        "class": "RC-ResourceTerm",
+        "class": "RC-ValueTerm",
         "properties": [{
             "title": "dcterms:title",
             "class": "PC-title",

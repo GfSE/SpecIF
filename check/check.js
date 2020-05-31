@@ -1,4 +1,4 @@
-/*    Schema and constraint checking for native SpecIF data in JSON format. 
+/*  Schema and constraint checking for native SpecIF data in JSON format. 
     Requires: ajv 4.8 or higher.
     License: Apache 2.0 (http://www.apache.org/licenses/)
     Author: se@enso-managers.de, enso managers gmbh, Berlin (http://www.enso-managers.de)
@@ -282,7 +282,7 @@ function checkConstraints( data, options ) {
                         // - propertyC is an object: Then, it can be 
                         // -- either a key pointing to an element of data.propertyClasses (starting v0.10.6 resp v0.11.6)
                         // -- or a property class defined here (up until v0.10.5 resp v0.11.2)
-                        // Note that itemByKey() handles keys in both forms 'identifier' or {id:'identifier',revision:n},
+                        // Note that itemByKey() handles keys in both forms 'identifier' or {id:'identifier',revision:'str'},
                         // so we have just to decide whether propertyC is a key or a propertyClass definition:
                         if( data.propertyClasses ) {
                             // starting v0.10.6 resp v0.11.6: 
@@ -465,7 +465,7 @@ function checkConstraints( data, options ) {
     }
     function checkNodes(rL,ndL,lvl) {    // resourceList, nodeList, hierarchy level
         // Any node's "resource" must be the key of a member of "resources". 
-        // A resource can just be an id string (where the revision=0 is assumed) or a key consisting of id and revision.
+        // A resource can just be an id string (where the latest revision is assumed) or a key consisting of id and revision.
         if( ndL ) {
             var rc = null;
             for( var i=ndL.length-1;i>-1;i-- ){
