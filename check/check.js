@@ -250,7 +250,7 @@ function checkConstraints( data, options ) {
                             return {status:929, statusText: "double types must have "+fractionDigits+">0"};
                         // no break;
                     case 'xs:integer':
-                        // more restrictive than the schema, where min and may are optional:
+                        // more restrictive than the schema, where min and max are optional:
                         if( L[i][minInclusive]==undefined || L[i][maxInclusive]==undefined || L[i][minInclusive]+1>L[i][maxInclusive] ) 
                             return {status:929, statusText: "number types must have "+minInclusive+" and "+maxInclusive+", while the former must be smaller or equal than the latter"}
                 }                        
