@@ -1,5 +1,5 @@
 {
-  "$id": "http://specif.de/v1.0/schema#",
+  "$id": "http://specif.de/v1.1/schema#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "JSON-Schema for SpecIF v1.0",
   "description": "The Specification Integration Facility (SpecIF) integrates partial system models from different methods and tools in a semantic net. Collaborators shall browse, search and audit engineering results in a common context. Also, the exchange of model information between organizations and tools is facilitated. SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications.",
@@ -91,7 +91,7 @@
     "value": {
       "description": "A property value according to the property class.",
       "oneOf": [{
-        "description": "A string containing some text or a special value.",
+        "description": "A string containing some text or a numeric value; a value-id in case of an enumerated type.",
         "type": "string"
       }, {
         "description": "A list of items with text and language properties. Thus, the information can be given in multiple languages.",
@@ -115,7 +115,7 @@
       }]
     },
     "nodes": {
-      "description": "A list of pointers to resources; may be nested to build a tree, i.e. a hierarchy of pointers.",
+      "description": "A list of pointers to resources; may be nested forming a tree, i.e. a hierarchy of pointers.",
       "type": "array",
       "uniqueItems": true,
       "items": {
@@ -152,7 +152,7 @@
             "type": "string"
           }
         },
-        "required": [ "id", "resource", "changedAt" ]
+        "required": [ "id", "resource" ]
       }
     },
     "properties": {
@@ -176,9 +176,13 @@
             "$ref": "#/definitions/key",
             "description": "Must be a member of propertyClasses. In addition, it must be listed in the propertyClasses of the parent's class."
           },
-          "value": {
-            "$ref": "#/definitions/value",
-            "description": "If the value is unknown, omit the whole property. By default, the class' value applies."
+          "values": {
+            "description": "If the value is unknown, omit the whole property. By default, the class' value applies.",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/definitions/value"
+            }
           },
           "revision": {
             "$ref": "#/definitions/revision"
@@ -293,9 +297,9 @@
           "properties": {
             "type": {
               "type": "string",
-              "title": "Data-type 'Boolean' or 'dateTime'",
+              "title": "Data-type 'Boolean', 'dateTime' or 'URI'",
               "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
-              "enum": [ "xs:boolean", "xs:dateTime" ]
+              "enum": [ "xs:boolean", "xs:dateTime", "xs:anyURI" ]
             },
             "id": {
               "$ref": "#/definitions/id"
@@ -814,8 +818,45 @@
             "$ref": "#/definitions/key"
           },
           "nodes": {
-            "description": "The next hierarchy level.",
-            "$ref": "#/definitions/nodes"
+            "description": "A list of pointers to resources; may be nested forming a tree, i.e. a hierarchy of pointers.",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "$ref": "#/definitions/id"
+                },
+                "title": {
+                  "$ref": "#/definitions/value",
+                  "description": "The node's label; if missing, the title of the referenced resource is applied."
+                },
+                "description": {
+                  "$ref": "#/definitions/value"
+                },
+                "resource": {
+                  "description": "The pointer to the resource to be displayed at this position.",
+                  "$ref": "#/definitions/key"
+                },
+                "nodes": {
+                  "description": "The next hierarchy level.",
+                  "$ref": "#/definitions/nodes"
+                },
+                "revision": {
+                  "$ref": "#/definitions/revision"
+                },
+                "replaces": {
+                  "$ref": "#/definitions/replaces"
+                },
+                "changedAt": {
+                  "$ref": "#/definitions/dateTime"
+                },
+                "changedBy": {
+                  "type": "string"
+                }
+              },
+              "required": [ "id", "resource", "changedAt" ]
+            }
           },
           "revision": {
             "$ref": "#/definitions/revision"
