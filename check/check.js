@@ -101,13 +101,13 @@ function checkConstraints( data, options ) {
     if( rc.status>0 ) errL.push(rc);
 
     // A propertyClass's "dataType" must be the key of a member of "dataTypes":
-    rc = checkPropertyClasses( [data] );  // propertyClasses at top level starting with v0.10.6 and v0.11.6
+    rc = checkPropertyClasses( data.propertyClasses );  // propertyClasses at top level starting with v0.10.6 and v0.11.6
     if( rc.status>0 ) errL.push(rc);
-    rc = checkPropertyClasses( data[rClasses] );
+    rc = checkElementPropertyClasses( data[rClasses] );
     if( rc.status>0 ) errL.push(rc);
-    rc = checkPropertyClasses( data[sClasses] );
+    rc = checkElementPropertyClasses( data[sClasses] );
     if( rc.status>0 ) errL.push(rc);
-    rc = checkPropertyClasses( data[hClasses] );
+    rc = checkElementPropertyClasses( data[hClasses] );
     if( rc.status>0 ) errL.push(rc);
 
     // statementClass' subjectClasses and objectClasses must be resourceClass or statementClass ids:
@@ -270,11 +270,30 @@ function checkConstraints( data, options ) {
         return {status:0, statusText: "all instances' attribute named '"+type+"' reference valid types"}    
     }
     function checkPropertyClasses(cL) {  // class list
-        if( cL ) {
+        if( Array.isArray(cL) ) {
+            let propertyC, i, rc;
+            for( i=cL.length-1;i>-1;i-- ){
+                // for each class in cL:
+                // starting v0.10.6 resp v0.11.6: 
+                // A propertyClass's "dataType" must be the key of a member of "dataTypes":
+                propertyC = cL[i];
+                if( itemByKey( data.dataTypes, propertyC.dataType)==undefined ) 
+                    return {status:904, statusText: "property class with identifier '"+propertyC.id+"' must reference a valid dataType"};
+                // check the value (to be used by default of an instance's - thus property's value):
+                rc = checkValue(propertyC,propertyC,"property class '"+propertyC.id+"'");
+                if( rc.status>0 ) return rc;
+            }
+        };
+        // all is fine: 
+        return {status:0, statusText: "if present, propertyClasses reference valid dataTypes"}
+    }
+    function checkElementPropertyClasses(cL) {  // class list
+        if( Array.isArray(cL) ) {
             let propertyC, i, j, rc;
             for( i=cL.length-1;i>-1;i-- ){
                 // for each class in cL:
-                if( cL[i][pClasses] ) {
+                if( Array.isArray( cL[i][pClasses] ) ) {
+                    // the list element has propertyClasses:
                     for( j=cL[i][pClasses].length-1;j>-1;j-- ) {
                         propertyC = cL[i][pClasses][j];
                         // depending on the version, 
@@ -292,12 +311,12 @@ function checkConstraints( data, options ) {
                         } else {
                             // up until v0.10.5 resp v0.11.2:
                             // A propertyClass's "dataType" must be the key of a member of "dataTypes":
-                            if( itemByKey(data.dataTypes,propertyC.dataType)==undefined ) 
+                            if( itemByKey( data.dataTypes, propertyC.dataType)==undefined ) 
                                 return {status:904, statusText: "property class with identifier '"+propertyC.id+"' must reference a valid dataType"};
-                        };
-                        // check the value (to be used by default of an instance's - thus property's value):
-                        rc = checkValue(propertyC,propertyC,"property class '"+propertyC.id+"'");
-                        if( rc.status>0 ) return rc;
+							// check the value (to be used by default of an instance's - thus property's value):
+							rc = checkValue(propertyC,propertyC,"property class '"+propertyC.id+"'");
+							if( rc.status>0 ) return rc;
+                        }
                     }
                 }
             }
