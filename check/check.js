@@ -271,10 +271,11 @@ function checkConstraints( data, options ) {
     }
     function checkPropertyClasses(cL) {  // class list
         if( Array.isArray(cL) ) {
+            // cL is the top-level list of propertyClasses for use by all resourceClasses and statementClasses:
+            // starting v0.10.6 resp v0.11.6: 
             let propertyC, i, rc;
             for( i=cL.length-1;i>-1;i-- ){
-                // for each class in cL:
-                // starting v0.10.6 resp v0.11.6: 
+                // for each propertyClass in cL:
                 // A propertyClass's "dataType" must be the key of a member of "dataTypes":
                 propertyC = cL[i];
                 if( itemByKey( data.dataTypes, propertyC.dataType)==undefined ) 
@@ -287,15 +288,16 @@ function checkConstraints( data, options ) {
         // all is fine: 
         return {status:0, statusText: "if present, propertyClasses reference valid dataTypes"}
     }
-    function checkElementPropertyClasses(cL) {  // class list
+    function checkElementPropertyClasses(cL) {  
         if( Array.isArray(cL) ) {
+            // cL is a list of elements, such as resourceClasses
             let propertyC, i, j, rc;
             for( i=cL.length-1;i>-1;i-- ){
                 // for each class in cL:
                 if( Array.isArray( cL[i][pClasses] ) ) {
-                    // the list element has propertyClasses:
+                    // an element has propertyClasses:
                     for( j=cL[i][pClasses].length-1;j>-1;j-- ) {
-                        propertyC = cL[i][pClasses][j];
+                        propertyC = cL[i][pClasses][j]; // an element's propertyClass
                         // depending on the version, 
                         // - propertyC is a string: It is the identifier of an element of data.propertyClasses (starting v0.10.6 resp v0.11.6)
                         // - propertyC is an object: Then, it can be 
@@ -313,9 +315,9 @@ function checkConstraints( data, options ) {
                             // A propertyClass's "dataType" must be the key of a member of "dataTypes":
                             if( itemByKey( data.dataTypes, propertyC.dataType)==undefined ) 
                                 return {status:904, statusText: "property class with identifier '"+propertyC.id+"' must reference a valid dataType"};
-							// check the value (to be used by default of an instance's - thus property's value):
-							rc = checkValue(propertyC,propertyC,"property class '"+propertyC.id+"'");
-							if( rc.status>0 ) return rc;
+                            // check the value (to be used by default of an instance's - thus property's value):
+                            rc = checkValue(propertyC,propertyC,"property class '"+propertyC.id+"'");
+                            if( rc.status>0 ) return rc;
                         }
                     }
                 }
