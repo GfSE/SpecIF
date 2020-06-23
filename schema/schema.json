@@ -176,13 +176,17 @@
             "$ref": "#/definitions/key",
             "description": "Must be a member of propertyClasses. In addition, it must be listed in the propertyClasses of the parent's class."
           },
-          "values": {
-            "description": "If the value is unknown, omit the whole property. By default, the class' value applies.",
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
+          "value": {
+            "description": "Is a singular value, if 'multiple' is undefined or false, and is a list otherwise. If the value is unknown, omit the whole property. By default, the class' value applies.",
+            "oneOf": [{
               "$ref": "#/definitions/value"
-            }
+            },{
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/definitions/value"
+              }
+            }],
           },
           "revision": {
             "$ref": "#/definitions/revision"
@@ -536,7 +540,7 @@
           },
           "multiple": {
             "type": "boolean",
-            "description": "Optional use by a propertyClass with dataType 'xs:enumeration'. Indicates whether multiple values can be chosen. If omitted, the 'multiple' property of the dataType applies; by default the value is 'false'."
+            "description": "Optional use by all propertyClasses. Indicates whether multiple values can be given. If omitted, the 'multiple' property of the dataType applies; by default the value is 'false'."
           },
           "value": {
             "$ref": "#/definitions/value",
