@@ -186,7 +186,7 @@
               "items": {
                 "$ref": "#/definitions/value"
               }
-            }],
+            }]
           },
           "revision": {
             "$ref": "#/definitions/revision"
