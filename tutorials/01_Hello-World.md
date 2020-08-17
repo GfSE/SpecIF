@@ -4,7 +4,7 @@ At first, we would like to present the shortest SpecIF data-set ever. It contain
 
 ```json
 {
-    "specifVersion": "1.0",
+    "$schema": "https://specif.de/v1.0/schema.json",
     "id": "P-Test-Hello-World",
     "title": "Project 'Hello World'",
     "resourceClasses": [{
@@ -29,7 +29,7 @@ At first, we would like to present the shortest SpecIF data-set ever. It contain
 ```
 
 Some explanations may help to understand the principles:
-- The first item indicates the SpecIF version used, so that the respective schema can be applied.
+- The first item indicates the SpecIF schema to be applied.
 - Of course, a SpecIF data-set must have an identifier. ASCII alphanumeric characters a-z, A-Z and 0-9 can be used as well as \'\_\', \'-\' and \'.\'. An \'id\' must begin with a letter or underscore \'\_\', though.
 - The *title* applies to the whole data-set or project.
 - The actual content is provided in the list *resources*. Every resource has a unique identifier *id*, a *title* and an indication, when it has been changed last.
