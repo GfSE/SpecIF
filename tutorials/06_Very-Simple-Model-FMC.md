@@ -122,9 +122,9 @@ Let us at last have a look at the full example, now:
 
 ```json
 {
-    "id": "ACP-Very-Simple-Model-FMC",
+    "$schema": "https://specif.de/v1.0/schema.json",
+    "$id": "ACP-Very-Simple-Model-FMC",
     "title": "Very Simple Model (FMC)",
-    "specifVersion": "1.0",
     "createdAt": "2020-03-06T09:05:00+01:00",
     "dataTypes": [{
         "id": "DT-ShortString",
