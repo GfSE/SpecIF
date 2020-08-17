@@ -69,7 +69,7 @@ Let us have a look at the full example, now:
 
 ```json
 {
-    "specifVersion": "1.0",
+    "$schema": "https://specif.de/v1.0/schema.json",
     "id": "P-Requirement-with-Properties",
     "title": "Requirements Template",
     "dataTypes": [{
