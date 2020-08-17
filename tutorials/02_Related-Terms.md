@@ -33,7 +33,7 @@ Let us have a look at the full example, now:
 
 ```json
 {
-    "specifVersion": "1.0",
+    "$schema": "https://specif.de/v1.0/schema.json",
     "id": "P-Related-Terms",
     "title": "Project 'Related Terms'",
     "resourceClasses": [{
