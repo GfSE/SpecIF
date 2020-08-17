@@ -45,7 +45,7 @@ Let us have a look at the full example, now:
 ```json
 {
     "$schema": "https://specif.de/v1.0/schema.json",
-    "$id": "P-Requirement-with-Enumerated-Property",
+    "id": "P-Requirement-with-Enumerated-Property",
     "title": "Requirement with Enumerated Property",
     "createdAt": "2020-03-04T20:12:59.960Z",
     "dataTypes": [{
