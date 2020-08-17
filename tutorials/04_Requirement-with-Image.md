@@ -42,9 +42,9 @@ Let us have a look at the full example, now:
 
 ```json
 {
+    "$schema": "https://specif.de/v1.0/schema.json",
     "id": "P-Requirement-with-Image",
     "title": "Requirement with Image",
-    "specifVersion": "1.0",
     "dataTypes": [{
       "id": "DT-ShortString",
       "title": "String[96]",
