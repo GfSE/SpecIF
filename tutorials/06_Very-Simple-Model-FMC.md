@@ -1,6 +1,6 @@
 # Tutorial 6: 'Very Simple Model (FMC)'
 
-In the previous tutorials we have introduced all concepts we need to represent a simple model with SpecIF. Let's start with a block-diagram using the notation of the Fundamental Modelling Concepts (FMC). Let us first look at the model, itself:
+In the previous tutorials we have introduced all concepts we need to represent a simple model with SpecIF. Let's start with a block-diagram using the notation of the [Fundamental Modelling Concepts (FMC)](http://f-m-c.org/). Let us first look at the model, itself:
 
 ![Very Simple Model (FMC)](./images/Very-Simple-Model-FMC.svg)
 
