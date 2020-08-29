@@ -57,7 +57,7 @@ Some explanations may help to understand the principles:
 
 Some more explanations:
 - Now the type for a parent element, *resourceClass* in this case, is defined. 
-- The *title* denotes the role of the resource; here a requirement according to the IREB.
+- The *title* denotes the role of the derived instances, i.e. *resources*; here a requirement according to the [International Requirements Engineering Board (IREB)](https://www.ireb.org/de/).
 - An *icon* may be specified that can be used with all instances of the resourceClass. A value can be for example one or more HTML-encoded UTF-8 characters as in the example, a data-URL with encoded image-data or even an URL for use in a XHTML img-tag.
 - The *propertyClasses* to be used are referenced by identifier.
 - Finally, a *resource* is an instance of a *resourceClass*.
