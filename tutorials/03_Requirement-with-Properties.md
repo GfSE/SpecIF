@@ -28,7 +28,7 @@ Some explanations may help to understand the principles:
 - Properties have a base *dataType*. The SpecIF schema accepts a number of boolean, numeric, character string and enumerated data types.
 - Above, we see a *dataType* for formatted text of a certain maximum length. Properties using this dataType may use XHTML tags to format the text content.
 - Next, a *propertyClass* is to be defined with it's dataType. 
-- The role of the properties instantiated from a propertyClass is assigned in it's *title*. In this case the properties shall be used for describing the parent resource or statement. Note that a vocabulary term introduced by the Dublin Core Metadata Initiative, namely \"dcterms:description\" is used.
+- The role of the properties instantiated from a propertyClass is assigned in it's *title*. In this case the properties shall be used for describing the parent resource or statement. Note that a vocabulary term introduced by the [Dublin Core Metadata Initiative](https://dublincore.org/), namely \"dcterms:description\" is used.
 - A given propertyClass can of course be used by several resourceClasses or statementClasses.
 
 
