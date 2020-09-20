@@ -11,14 +11,14 @@ The following figure shows the base structure of the SpecIF data format as an UM
 
 A SpecIF data set contains some descriptional elements and arrays to store the SpecIF data type definitions and data itself. It is possible to include all necessary information a tool needs to work with SpecIF data into one data set.
 
-Each SpecIF element has a unique identifier (GUID) with the JSON-property name *id*. To support the versioning in SpecIF each element type in a SpecIF data set can have a revision identifier. Also these revision hes to be unique inside the same element id, to ensure that no version conflicts occur.
+Each SpecIF element has a unique identifier (GUID) with the JSON-property name *id*. To support the versioning in SpecIF each element type in a SpecIF data set can have a revision identifier. Also these revision has to be unique inside the same element id, to ensure that no version conflicts occur.
 
 If a tool does not support versioning, the *changedAt* attribute can be used to create a revision hierarchy.  
 
 ## SpecIF projects
 The SpecIF class is the outermost element of the SpecIF JSON representation. It defines attributes to describe the entire SpecIF data set represented in a SpecIF file or a SpecIF Web API. In a Web API context a SpecIF instance is often used to define a project context. A SpecIF data set can contain the entire content of PLM data created in a project context. 
 
-SpecIF allows the selected and distributed inclusion of data into a SpecIF data set. So you can have also a set of SpecIF files containing the data and class definitions and a second, separated set containing the data content, but referencing the required data types. A SpecIF instance has an attribute called *isExtension* of type boolean. If this value is set to true, a tool that is working with this data, needs further SpecIF data to get the complete definition all required data types and (meta-)classes.
+SpecIF allows the selected and distributed inclusion of data into a SpecIF data set. So you can have also a set of SpecIF files containing the data and class definitions and a second, separated set containing the data content, but referencing the required data types. A SpecIF instance has an attribute called *isExtension* of type boolean. If this value is set to true, a tool that is working with this data, needs further SpecIF data to get the complete definition of all required data types and (meta-)classes.
    
 ### SpecIF JSON example
 
@@ -180,7 +180,7 @@ The following data type definitions show an example for an enumeration data type
 
 ### Property classes
    
-Property classes define the type and kind of a property. The property is the element in specif containing the values of the PLM data. Resource and Statement elements contain a array of defined property instances to store the PLM values.
+Property classes define the type and kind of a property. The property is the element in SpecIF containing the values of the PLM data. Resource and Statement elements contain a array of defined property instances to store the PLM values.
 
 The property class definitions are very important, because here the name reps. title of a property is defined. Properties are in principle key/value pairs representing data. The *title* JSON-property of the property class defines the key.
 
@@ -195,8 +195,8 @@ An example of property class definitions is given below:
     "revision": "1",
     "replaces": [],
     "dataType": {
-    "id": "DT-ShortString",
-    "revision": "1"
+        "id": "DT-ShortString",
+        "revision": "1"
     },
     "changedAt": "2016-05-26T08:59:00+02:00"
 },
@@ -207,8 +207,8 @@ An example of property class definitions is given below:
     "revision": "1",
     "replaces": [],
     "dataType": {
-    "id": "DT-FormattedText",
-    "revision": "1"
+        "id": "DT-FormattedText",
+        "revision": "1"
     },
     "changedAt": "2016-05-26T08:59:00+02:00"
 }
@@ -232,7 +232,7 @@ An example resource class definition is shown below. The example shows the resou
     "icon": "&#8623;",
     "isHeading": false,
     "instantiation": [
-    "user"
+        "user"
     ],
     "propertyClasses": [
     {
@@ -284,7 +284,7 @@ The following example of a statement class definition defines a statement that c
     "revision": "1",
     "replaces": [],
     "instantiation": [
-    "user"
+        "user"
     ],
     "subjectClasses": [
     {
@@ -422,8 +422,8 @@ The following example shows the application of nodes to create a hierarchy:
       "title": [],
       "description": "Requirement specification",
       "resource": {
-        "id": "_5D647B1D_D622_4a45_90EB_5FC6ECCD405C",
-        "revision": "F583802E-FE82-4D10-BCBF-1B387C04A84C"
+          "id": "_5D647B1D_D622_4a45_90EB_5FC6ECCD405C",
+          "revision": "F583802E-FE82-4D10-BCBF-1B387C04A84C"
       },
       "nodes": [
         {
@@ -433,8 +433,8 @@ The following example shows the application of nodes to create a hierarchy:
           "title": [],
           "description": "Element: Introduction",
           "resource": {
-            "id": "_7BBB98BF_6966_46cd_A2B4_677B15CEC761",
-            "revision": "0D737A07-8DFE-4502-958A-04BBF1B0B16F"
+              "id": "_7BBB98BF_6966_46cd_A2B4_677B15CEC761",
+              "revision": "0D737A07-8DFE-4502-958A-04BBF1B0B16F"
           },
           "nodes": [
             {
@@ -444,8 +444,8 @@ The following example shows the application of nodes to create a hierarchy:
               "title": [],
               "description": "Element: Login",
               "resource": {
-                "id": "_73392B3D_CF8F_4ac0_BC77_E6A2C9415EF4",
-                "revision": "F16C40BE-DFC4-46BB-85C4-FDF9433F8E73"
+                  "id": "_73392B3D_CF8F_4ac0_BC77_E6A2C9415EF4",
+                  "revision": "F16C40BE-DFC4-46BB-85C4-FDF9433F8E73"
               },
               "nodes": [],
               "changedAt": "2019-05-31T15:13:54.0813277+02:00"
