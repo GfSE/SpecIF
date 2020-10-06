@@ -43,4 +43,4 @@ In addition to the schema, the following constraints apply:
 ## Examples
 
 ## Acknowledgements
-This work has been sponsored by [enso-managers gmbh](http://enso-managers.de), Berlin
+This work has been sponsored by [enso-managers gmbh](http://enso-managers.de) and [mdd4all](http://mdd4all.de).
