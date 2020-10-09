@@ -233,26 +233,10 @@ function checkConstraints( data, options ) {
         if( L )
             for( var i=L.length-1;i>-1;i-- ){
                 switch(L[i].type) {
-                    case 'xhtml':
-                        // break, if specifVersion is '0.10.2' or '0.11.1':
-                        if( data.specifVersion
-                            && (data.specifVersion.indexOf('0.10.2')>-1
-                               || data.specifVersion.indexOf('0.11.1')>-1 )) 
-                            break;
-                    case 'xs:string': 
-                        // more restrictive than the schema, where maxLength is optional:
-                        if( !L[i].maxLength ) 
-                            return {status:928, statusText: "string and xhtml types must have maxLength>0"};
-                        break;
                     case 'xs:double':
-                        // more restrictive than the schema, where accuracy is optional:
-                        if( !L[i][fractionDigits] ) 
-                            return {status:929, statusText: "double types must have "+fractionDigits+">0"};
-                        // no break;
                     case 'xs:integer':
-                        // more restrictive than the schema, where min and max are optional:
-                        if( L[i][minInclusive]==undefined || L[i][maxInclusive]==undefined || L[i][minInclusive]+1>L[i][maxInclusive] ) 
-                            return {status:929, statusText: "number types must have "+minInclusive+" and "+maxInclusive+", while the former must be smaller or equal than the latter"}
+                        if( L[i][minInclusive]+1>L[i][maxInclusive] ) 
+                            return {status:929, statusText: "if number types have "+minInclusive+" and "+maxInclusive+", the former must be smaller or equal than the latter"}
                 }                        
             };
         return {status:0, statusText: "dataTypes are correct"}
@@ -403,9 +387,9 @@ function checkConstraints( data, options ) {
                     val = parseFloat( val );
                     if( val=='NaN' ) 
                         return {status:925, statusText:etxt+": value is an invalid number"}; 
-                    if( val<dT[minInclusive] ) 
+                    if( dT[minInclusive] && val<dT[minInclusive] ) 
                         return {status:923, statusText:etxt+": double value must be larger than min"};
-                    if( val>dT[maxInclusive] ) 
+                    if( dT[maxInclusive] && val>dT[maxInclusive] ) 
                         return {status:924, statusText:etxt+": double value must be smaller than max"}; 
                     break;
                 case 'xs:integer':
@@ -413,9 +397,9 @@ function checkConstraints( data, options ) {
                     val = parseInt( val );
                     if( val=='NaN' ) 
                         return {status:925, statusText:etxt+": value is an invalid number"}; 
-                    if( val<dT[minInclusive] ) 
+                    if( dT[minInclusive] && val<dT[minInclusive] ) 
                         return {status:923, statusText:etxt+": integer value must be larger than min"};
-                    if( val>dT[maxInclusive] ) 
+                    if( dT[maxInclusive] && val>dT[maxInclusive] ) 
                         return {status:924, statusText:etxt+": integer value must be smaller than max"}; 
                     break;
                 case 'xs:boolean':
