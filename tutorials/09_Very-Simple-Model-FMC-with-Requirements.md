@@ -2,13 +2,7 @@
 
 Before, we have discussed how to represent a very simple model, see Tutorial 6: [Very Simple Model (FMC)](./06_Very-Simple-Model-FMC.md). Now we will relate some requirements to the model-elements.
 
-
-Let us first look at the relations of the model-elements. A relation is represented by a statement made with the respective resources. Below, the statements for one of the model-elements, namely \'FiCo-Application\' are shown:
-
-![Very Simple Model with Requirements - Relations](./images/Very-Simple-Model-with-Requirements-Relations.png)
-
-
-Let us at last have a look at the full example, now:
+As we have discussed all concepts before, let's right away discuss the full example:
 
 ```json
 {
@@ -354,10 +348,10 @@ Let us at last have a look at the full example, now:
 }
 ```
 
-The instances, the actual model content, have not been discussed, yet:
-- You can easily see the diagram and the two model-elements in *resources*. The *properties* carry the information payload; those without a defined value can be omitted, e.g. the diagram has no property of type \"PC-Text\" and the model-elements have no property of type \"PC-Type\".
-- The four *statements* are equally easy to interpret: One *shows* relationship per model-element plus the *writes* and *reads* relationships between the model-elements.
-- By the way, if you display this example with the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/06_Very-Simple-Model-FMC.specifz) and you hover the mouse over one of the model-elements or double-click it, you can see the potential of web-technology. This is not by virtue of SpecIF, but when the SVG is generated in a way that the model-element *id* is associated to a graphic element and an app like the SpecIF Viewer finds it, such behaviour is easily implemented.
+
+Let's inspect the relations of model-element 'FiCo-Application'. In addition to the 'shows', 'reads' and 'writes' relations already presented in [Tutorial 6](./06_Very-Simple-Model-FMC.md), we see the additional 'satisfies' relation with it's requirement. In practice, there will of course be many more requirements. It is however easily seen that requirements related to the affected model-elements are much easier to interpret when compared to a situation with a requirements list and a model side-by-side in different tools.
+
+![Very Simple Model with Requirements - Relations](./images/Very-Simple-Model-with-Requirements-Relations.png)
 
 
-You may also view/download the example [Very Simple Model (FMC)](http://specif.de/examples/09_Very-Simple-Model-FMC-with-Requirements_PNG.specifz "SpecIF Example \'Very Simple Model (FMC) with Requirements\'") or view it using the [SpecIF Viewer](http://specif.de/apps/view#import=../examples/09_Very-Simple-Model-FMC-with-Requirements_PNG.specifz).
+You may also view/download the example [Very Simple Model (FMC)](http://specif.de/examples/09_Very-Simple-Model-FMC-with-Requirements_PNG.specifz "SpecIF Example \'Very Simple Model with Requirements\'") or view it using the [SpecIF Viewer](http://specif.de/apps/view#import=../examples/09_Very-Simple-Model-FMC-with-Requirements_PNG.specifz).
