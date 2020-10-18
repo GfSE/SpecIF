@@ -44,7 +44,7 @@ Let us at last have a look at the full example, now:
           "value": "SpecIF:priorityHigh"
         },{
           "id": "V-Prio-1",
-		  "value": "SpecIF:priorityRatherHigh"
+          "value": "SpecIF:priorityRatherHigh"
         },{
           "id": "V-Prio-2",
           "value": "SpecIF:priorityMedium"
@@ -86,14 +86,14 @@ Let us at last have a look at the full example, now:
         "changedAt": "2020-03-26T22:59:00+02:00"
     }],
     "resourceClasses": [{
-		"id": "RC-Folder",
-		"title": "SpecIF:Heading",
-		"description": "Folder with title and text for chapters or descriptive paragraphs.",
-		"isHeading": true,
-		"instantiation": ["auto","user"],
-		"propertyClasses": ["PC-Name","PC-Description"],
-		"changedAt": "2016-05-26T08:59:00+02:00"
-	},{
+        "id": "RC-Folder",
+        "title": "SpecIF:Heading",
+        "description": "Folder with title and text for chapters or descriptive paragraphs.",
+        "isHeading": true,
+        "instantiation": ["auto","user"],
+        "propertyClasses": ["PC-Name","PC-Description"],
+        "changedAt": "2016-05-26T08:59:00+02:00"
+    },{
         "id": "RC-Diagram",
         "title": "SpecIF:Diagram",
         "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
@@ -315,39 +315,39 @@ Let us at last have a look at the full example, now:
         "changedAt": "2020-10-17T10:00:00+01:00"
     }],
     "hierarchies": [{
-		"id": "N-Folder-Requirements",
-		"resource": "Folder-Requirements",
-		"nodes": [{
-			"id": "N-1a8016e2872e78ecadc50feddc00029b",
-			"resource": "Req-1a8016e2872e78ecadc50feddc00029b",
+        "id": "N-Folder-Requirements",
+        "resource": "Folder-Requirements",
+        "nodes": [{
+            "id": "N-1a8016e2872e78ecadc50feddc00029b",
+            "resource": "Req-1a8016e2872e78ecadc50feddc00029b",
             "changedAt": "2020-10-17T10:00:00+01:00"
-		}, {
-			"id": "N-0Z7916e2872e78ecadc50feddc00918a",
-			"resource": "Req-0Z7916e2872e78ecadc50feddc00918a",
+        }, {
+            "id": "N-0Z7916e2872e78ecadc50feddc00918a",
+            "resource": "Req-0Z7916e2872e78ecadc50feddc00918a",
             "changedAt": "2020-10-17T10:00:00+01:00"
-		}, {
-			"id": "N-2b9016e2872e78ecadc50feddc0013Ac",
-			"resource": "Req-2b9016e2872e78ecadc50feddc0013Ac",
+        }, {
+            "id": "N-2b9016e2872e78ecadc50feddc0013Ac",
+            "resource": "Req-2b9016e2872e78ecadc50feddc0013Ac",
             "changedAt": "2020-10-17T10:00:00+01:00"
-		}],
+        }],
         "changedAt": "2020-10-17T10:00:00+01:00"
     }, {
-		"id": "N-Folder-SystemModel",
-		"resource": "Folder-SystemModel",
-		"nodes": [{
-			"id": "N-Diagram-aec0df7900010000017001eaf53e8876",
-			"resource": "Diagram-aec0df7900010000017001eaf53e8876",
-			"nodes": [{
-				"id": "N-50fbfe8f0029b1a8016ea86245a9d83a",
-				"resource": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
-				"changedAt": "2020-03-06T09:05:00+01:00"
-			}, {
-				"id": "N-50feddc00029b1a8016e2872e78ecadc",
-				"resource": "MEl-50feddc00029b1a8016e2872e78ecadc",
-				"changedAt": "2020-03-06T09:05:00+01:00"
-			}],
-			"changedAt": "2020-10-17T10:00:00+01:00"
-		}],
+        "id": "N-Folder-SystemModel",
+        "resource": "Folder-SystemModel",
+        "nodes": [{
+            "id": "N-Diagram-aec0df7900010000017001eaf53e8876",
+            "resource": "Diagram-aec0df7900010000017001eaf53e8876",
+            "nodes": [{
+                "id": "N-50fbfe8f0029b1a8016ea86245a9d83a",
+                "resource": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
+                "changedAt": "2020-03-06T09:05:00+01:00"
+            }, {
+                "id": "N-50feddc00029b1a8016e2872e78ecadc",
+                "resource": "MEl-50feddc00029b1a8016e2872e78ecadc",
+                "changedAt": "2020-03-06T09:05:00+01:00"
+            }],
+            "changedAt": "2020-10-17T10:00:00+01:00"
+        }],
         "changedAt": "2020-10-17T10:00:00+01:00"
     }],
     "files": []
@@ -360,4 +360,4 @@ The instances, the actual model content, have not been discussed, yet:
 - By the way, if you display this example with the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/06_Very-Simple-Model-FMC.specifz) and you hover the mouse over one of the model-elements or double-click it, you can see the potential of web-technology. This is not by virtue of SpecIF, but when the SVG is generated in a way that the model-element *id* is associated to a graphic element and an app like the SpecIF Viewer finds it, such behaviour is easily implemented.
 
 
-You may also view/download the example [Very Simple Model (FMC)](http://specif.de/examples/06_Very-Simple-Model-FMC.specifz "SpecIF Example \'Very Simple Model (FMC)\'") or view it using the [SpecIF Viewer](http://specif.de/apps/view#import=../examples/06_Very-Simple-Model-FMC.specifz).
+You may also view/download the example [Very Simple Model (FMC)](http://specif.de/examples/09_Very-Simple-Model-FMC-with-Requirements_PNG.specifz "SpecIF Example \'Very Simple Model (FMC) with Requirements\'") or view it using the [SpecIF Viewer](http://specif.de/apps/view#import=../examples/09_Very-Simple-Model-FMC-with-Requirements_PNG.specifz).
