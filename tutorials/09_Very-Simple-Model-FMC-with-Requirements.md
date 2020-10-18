@@ -361,4 +361,4 @@ Finally, let's inspect the relations of model-element 'FiCo-Application' in a gr
 ![Very Simple Model with Requirements - Relations](./images/Very-Simple-Model-with-Requirements-Relations.png)
 
 
-You may also view/download the example [Very Simple Model (FMC)](http://specif.de/examples/09_Very-Simple-Model-FMC-with-Requirements_PNG.specifz "SpecIF Example \'Very Simple Model with Requirements\'") or view it using the [SpecIF Viewer](http://specif.de/apps/view#import=../examples/09_Very-Simple-Model-FMC-with-Requirements_PNG.specifz).
+You may also download the example [Very Simple Model with Requirements](http://specif.de/examples/09_Very-Simple-Model-FMC-with-Requirements_PNG.specifz "SpecIF Example \'Very Simple Model with Requirements\'") or view it using the [SpecIF Viewer](http://specif.de/apps/view#import=../examples/09_Very-Simple-Model-FMC-with-Requirements_PNG.specifz).
