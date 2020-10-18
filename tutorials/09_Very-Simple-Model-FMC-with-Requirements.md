@@ -351,7 +351,8 @@ Let us at last have a look at the full example, now:
         "changedAt": "2020-10-17T10:00:00+01:00"
     }],
     "files": []
-}```
+}
+```
 
 The instances, the actual model content, have not been discussed, yet:
 - You can easily see the diagram and the two model-elements in *resources*. The *properties* carry the information payload; those without a defined value can be omitted, e.g. the diagram has no property of type \"PC-Text\" and the model-elements have no property of type \"PC-Type\".
