@@ -43,7 +43,7 @@ Again, let's start with the new elements of a SpecIF data-set.
         "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
         "instantiation": ["user"],
         "icon": "&#9635;",
-        "propertyClasses": ["PC-Name","PC-Text","PC-Diagram","PC-Type"],
+        "propertyClasses": ["PC-Name","PC-Description","PC-Diagram","PC-Type"],
         "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
         "id": "RC-Actor",
@@ -51,7 +51,7 @@ Again, let's start with the new elements of a SpecIF data-set.
         "description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
         "instantiation": ["auto"],
         "icon": "&#9632;",
-        "propertyClasses": ["PC-Name","PC-Text","PC-Type"],
+        "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
         "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
         "id": "RC-State",
@@ -59,7 +59,7 @@ Again, let's start with the new elements of a SpecIF data-set.
         "description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a document, an information storage or even a physical shape.",
         "instantiation": ["auto"],
         "icon": "&#9679;",
-        "propertyClasses": ["PC-Name","PC-Text","PC-Type"],
+        "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
         "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
         "id": "RC-Event",
@@ -67,7 +67,7 @@ Again, let's start with the new elements of a SpecIF data-set.
         "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
         "instantiation": ["auto"],
         "icon": "&#9830;",
-        "propertyClasses": ["PC-Name","PC-Text","PC-Type"],
+        "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
         "changedAt": "2018-05-10T11:54:00+01:00"
     }],
 }
@@ -85,7 +85,7 @@ Next, we look at the *statementClasses*:
 ```json
 {
     "statementClasses": [{
-        "id": "SC-Visibility",
+        "id": "SC-shows",
         "title": "SpecIF:shows",
         "description": "'Diagram' shows 'Model-Element'",
         "instantiation": ["auto"],
@@ -93,7 +93,7 @@ Next, we look at the *statementClasses*:
         "objectClasses": ["RC-Actor", "RC-State", "RC-Event"],
         "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "SC-Writing",
+        "id": "SC-writes",
         "title": "SpecIF:writes",
         "description": "'Actor' (Role, Function) writes 'State' (Information)",
         "instantiation": ["auto"],
@@ -101,7 +101,7 @@ Next, we look at the *statementClasses*:
         "objectClasses": ["RC-State"],
         "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "SC-Reading",
+        "id": "SC-reads",
         "title": "SpecIF:reads",
         "description": "'Actor' (Role, Function) reads 'State' (Information)",
         "instantiation": ["auto"],
@@ -112,7 +112,7 @@ Next, we look at the *statementClasses*:
 }
 ```
 
-- The first statementClass with \"id\":\"SC-Visibility\" will be used to relate the diagram to all depicted model-elements. In a more complex model it allows to easily find out on which diagrams a given model-element appears. 
+- The first statementClass with \"id\":\"SC-shows\" will be used to relate the diagram to all depicted model-elements. In a more complex model it allows to easily find out on which diagrams a given model-element appears. 
 - In such a statement, only an instance of the class with \"id\":\"RC-Diagram" can serve as a subject (source) and only an instance of any fundamental model-element type can serve as an object (target).
 - The last two statementClasses will be used for the 'writes' and 'reads' predicates (relationships) discussed in the beginning. We see that in both cases only an instance of the class with \"id\":\"RC-Actor" can serve as a subject and only an instance of the class with \"id\":\"RC-State" can serve as an object.
 - The attribute *subjectClasses* can be omitted as discussed in Tutorial 2: [Related-Terms](./02_Related-Terms.md), then any resource can be used as a subject. Similarly for *objectClasses*.
@@ -146,7 +146,7 @@ Let us at last have a look at the full example, now:
         "dataType": "DT-ShortString",
         "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "PC-Text",
+        "id": "PC-Description",
         "title": "dcterms:description",
         "dataType": "DT-FormattedText",
         "changedAt": "2018-05-10T11:54:00+01:00"
@@ -167,7 +167,7 @@ Let us at last have a look at the full example, now:
         "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
         "instantiation": ["user"],
         "icon": "&#9635;",
-        "propertyClasses": ["PC-Name","PC-Text","PC-Diagram","PC-Type"],
+        "propertyClasses": ["PC-Name","PC-Description","PC-Diagram","PC-Type"],
         "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
         "id": "RC-Actor",
@@ -175,7 +175,7 @@ Let us at last have a look at the full example, now:
         "description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
         "instantiation": ["auto"],
         "icon": "&#9632;",
-        "propertyClasses": ["PC-Name","PC-Text","PC-Type"],
+        "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
         "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
         "id": "RC-State",
@@ -183,7 +183,7 @@ Let us at last have a look at the full example, now:
         "description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a document, an information storage or even a physical shape.",
         "instantiation": ["auto"],
         "icon": "&#9679;",
-        "propertyClasses": ["PC-Name","PC-Text","PC-Type"],
+        "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
         "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
         "id": "RC-Event",
@@ -191,11 +191,11 @@ Let us at last have a look at the full example, now:
         "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
         "instantiation": ["auto"],
         "icon": "&#9830;",
-        "propertyClasses": ["PC-Name","PC-Text","PC-Type"],
+        "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
         "changedAt": "2018-05-10T11:54:00+01:00"
     }],
     "statementClasses": [{
-        "id": "SC-Visibility",
+        "id": "SC-shows",
         "title": "SpecIF:shows",
         "description": "'Diagram' shows 'Model-Element'",
         "instantiation": ["auto"],
@@ -203,7 +203,7 @@ Let us at last have a look at the full example, now:
         "objectClasses": ["RC-Actor", "RC-State", "RC-Event"],
         "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "SC-Writing",
+        "id": "SC-writes",
         "title": "SpecIF:writes",
         "description": "'Actor' writes 'State'.",
         "instantiation": ["auto"],
@@ -211,7 +211,7 @@ Let us at last have a look at the full example, now:
         "objectClasses": ["RC-State"],
         "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "SC-Reading",
+        "id": "SC-reads",
         "title": "SpecIF:reads",
         "description": "'Actor' reads 'State'.",
         "instantiation": ["auto"],
@@ -242,7 +242,7 @@ Let us at last have a look at the full example, now:
             "class": "PC-Name",
             "value": "FiCo-Application"
         }, {
-            "class": "PC-Text",
+            "class": "PC-Description",
             "value": "<div><p>IT-Application for Finance and Controlling.</p></div>"
         }],
         "changedAt": "2020-03-06T09:04:00+01:00"
@@ -254,7 +254,7 @@ Let us at last have a look at the full example, now:
             "class": "PC-Name",
             "value": "FiCo-Data"
         }, {
-            "class": "PC-Text",
+            "class": "PC-Description",
             "value": "<div><p>Finance and Controlling Data, such as cost-units per project with budget, accrued cost etc.</p></div>"
         }],
         "changedAt": "2020-03-06T09:03:00+01:00"
@@ -263,7 +263,7 @@ Let us at last have a look at the full example, now:
         "id": "SVis-aec0df7900010000017001eaf53e8876-50fbfe8f0029b1a8016ea86245a9d83a",
         "title": "SpecIF:shows",
         "description": "'Notation: FMC Block Diagram' shows 'FiCo-Application'",
-        "class": "SC-Visibility",
+        "class": "SC-shows",
         "subject": "Diagram-aec0df7900010000017001eaf53e8876",
         "object": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
         "changedAt": "2020-03-06T08:32:00+01:00"
@@ -271,7 +271,7 @@ Let us at last have a look at the full example, now:
         "id": "SVis-aec0df7900010000017001eaf53e8876-50feddc00029b1a8016e2872e78ecadc",
         "title": "SpecIF:shows",
         "description": "'Notation: FMC Block Diagram' shows 'FiCo-Data'",
-        "class": "SC-Visibility",
+        "class": "SC-shows",
         "subject": "Diagram-aec0df7900010000017001eaf53e8876",
         "object": "MEl-50feddc00029b1a8016e2872e78ecadc",
         "changedAt": "2020-03-06T08:32:00+01:00"
@@ -279,7 +279,7 @@ Let us at last have a look at the full example, now:
         "id": "SWri-50fbfe8f0029b1a8016ea86245a9d83a-50feddc00029b1a8016e2872e78ecadc",
         "title": "SpecIF:writes",
         "description": "'FiCo-Application' writes 'FiCo-Data'",
-        "class": "SC-Writing",
+        "class": "SC-writes",
         "subject": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
         "object": "MEl-50feddc00029b1a8016e2872e78ecadc",
         "changedAt": "2020-03-06T09:05:00+01:00"
@@ -287,7 +287,7 @@ Let us at last have a look at the full example, now:
         "id": "SRea-50fbfe8f0029b1a8016ea86245a9d83a-50feddc00029b1a8016e2872e78ecadc",
         "title": "SpecIF:reads",
         "description": "'FiCo-Application' reads 'FiCo-Data'",
-        "class": "SC-Reading",
+        "class": "SC-reads",
         "subject": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
         "object": "MEl-50feddc00029b1a8016e2872e78ecadc",
         "changedAt": "2020-03-06T09:05:00+01:00"
@@ -311,7 +311,7 @@ Let us at last have a look at the full example, now:
 ```
 
 The instances, the actual model content, have not been discussed, yet:
-- You can easily see the diagram and the two model-elements in *resources*. The *properties* carry the information payload; those without a defined value can be omitted, e.g. the diagram has no property of type \"PC-Text\" and the model-elements have no property of type \"PC-Type\".
+- You can easily see the diagram and the two model-elements in *resources*. The *properties* carry the information payload; those without a defined value can be omitted, e.g. the diagram has no property of type \"PC-Description\" and the model-elements have no property of type \"PC-Type\".
 - The four *statements* are equally easy to interpret: One *shows* relationship per model-element plus the *writes* and *reads* relationships between the model-elements.
 - By the way, if you display this example with the [SpecIF Viewer](http://specif.de/apps-alpha/view.html#import=../examples/06_Very-Simple-Model-FMC.specifz) and you hover the mouse over one of the model-elements or double-click it, you can see the potential of web-technology. This is not by virtue of SpecIF, but when the SVG is generated in a way that the model-element *id* is associated to a graphic element and an app like the SpecIF Viewer finds it, such behaviour is easily implemented.
 
