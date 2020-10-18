@@ -360,25 +360,23 @@ function checkConstraints( data, options ) {
             if( !dT ) return {status:904, statusText: "propertyClass with identifier '"+pC.id+"' must reference a valid dataType"}; 
             switch(dT.type) {
                 case 'xhtml':
-            /*      // early SpecIF versions did not specify maxLength in case of xhtml:
-                    if( dT.maxLength==undefined ) break;  */
                 case 'xs:string': 
-                    // A property value of this type may be either a string or a list of objects with 'text' and 'language' attributes.
+                    // A property value of this type may be either a string or a list of objects with 'text' and 'language' attributes:
                     // here, the checking is more restrictive than the schema which does not require a 'maxLength' attribute:
-                    if( dT.maxLength==undefined && options.dontCheck.indexOf('text.length')<0 ) 
-                        return {status:922, statusText: "A dataType 'string' or 'xhtml' must specify 'maxLength'."}; 
+                    if( dT.maxLength==undefined || options.dontCheck.indexOf('text.length')>-1 ) 
+						break;
                     let txt = etxt+": string value must not exceed maxLength";
                     switch( typeof(val) ) {
                         case 'object':
                             // val is a list with some text in different languages, so check every one of them:
                             for( var p=val.length-1;p>-1;p-- ) {
-                                if( val[p]['text'].length>dT.maxLength && options.dontCheck.indexOf('text.length')<0 ) 
+                                if( val[p]['text'].length>dT.maxLength ) 
                                     return {status:921, statusText:txt}
                             };
                             break;
                         case 'string':
-                            // single language according to schema 0.10.x:
-                            if( val.length>dT.maxLength && options.dontCheck.indexOf('text.length')<0 ) 
+                            // single language:
+                            if( val.length>dT.maxLength ) 
                                 return {status:921, statusText:txt}
                     };
                     break;
