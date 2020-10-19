@@ -1,15 +1,15 @@
 # Tutorial 9: 'Very Simple Model (FMC) with Requirements'
 
 Before, we have discussed how to represent a very simple model, see Tutorial 6: [Very Simple Model (FMC)](./06_Very-Simple-Model-FMC.md). Now we will relate some requirements to the model-elements. The following items have been added:
+
+As we have discussed all concepts before, let's right away discuss the full example:
 - A *dataType* "DT-Priority" with enumerated values. Note that vocabulary terms have been used.
 - A *propertyClass* "PC-Priority" using the *dataType* "DT-Priority".
 - Two additional *resourceClasses* "RC-Folder" and "RC-Requirement". The instances of the former are used as chapter titles in the hierarchy and the instances of the latter are the requirements, of course.
 - A *statementClass* "SC-satisfies" for satisfies-relations between instances, where any instance of "RC-Actor" or "RC-State" can serve as *subject* and any instance of "RC-Requirement" can serve as *object*.
-- Three new *resources* of class "RC-Requirement".
+- Three requirements have been added as *resources* of class "RC-Requirement".
 - Three new *statements* of class "SC-satisfies. The example shows that a model-element can satisfy multiple requirements, but generally it is also possible that a requirement must be satisfied by several model-elements. Each of the n:m relations are a separate *statement*.
 - Finally the hierarchy defines two chapters with requirements and the system-model; where the model-elements shown in the diagram are placed in a subordinated folder. In other cases, a glossary as a separate chapter lists the model-elements appearing on any of the model-diagrams.
-
-As we have discussed all concepts before, let's right away discuss the full example:
 
 ```json
 {
