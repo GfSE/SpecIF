@@ -1,8 +1,8 @@
 # Tutorial 9: 'Very Simple Model (FMC) with Requirements'
 
-Before, we have discussed how to represent a very simple model, see Tutorial 6: [Very Simple Model (FMC)](./06_Very-Simple-Model-FMC.md). Now we will relate some requirements to the model-elements. The following items have been added:
+Before, we have discussed how to represent a very simple model, see Tutorial 6: [Very Simple Model (FMC)](./06_Very-Simple-Model-FMC.md). Now we will relate some requirements to the model-elements. 
 
-As we have discussed all concepts before, let's right away discuss the full example:
+As we have discussed all concepts before, let's right away discuss the full example. The following items have been added:
 - A *dataType* "DT-Priority" with enumerated values. Note that vocabulary terms have been used.
 - A *propertyClass* "PC-Priority" using the *dataType* "DT-Priority".
 - Two additional *resourceClasses* "RC-Folder" and "RC-Requirement". The instances of the former are used as chapter titles in the hierarchy and the instances of the latter are the requirements, of course.
@@ -356,7 +356,7 @@ As we have discussed all concepts before, let's right away discuss the full exam
 ```
 
 
-Finally, let's inspect the relations of model-element 'FiCo-Application' in a graphical view. In addition to the 'shows', 'reads' and 'writes' relations already presented in [Tutorial 6](./06_Very-Simple-Model-FMC.md), we see the additional 'satisfies' relation with it's requirement named 'Response Time'. In practice, there will of course be many more requirements. It is however obvious that requirements related to the affected model-elements are much easier to interpret when compared to a situation with a requirements list and a model side-by-side in different tools.
+Finally, let's inspect the relations of model-element 'FiCo-Application' in a graphical view. In addition to the 'shows', 'reads' and 'writes' relations already presented in [Tutorial 6](./06_Very-Simple-Model-FMC.md), we see the additional 'satisfies' relation with it's requirement named 'Response Time'. In practice, there will of course be many more related requirements. It is however obvious that requirements related to the affected model-elements are much easier to analyse when compared to a situation with a requirements list and a model side-by-side in different tools.
 
 ![Very Simple Model with Requirements - Relations](./images/Very-Simple-Model-with-Requirements-Relations.png)
 
