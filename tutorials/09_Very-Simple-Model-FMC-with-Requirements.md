@@ -1,6 +1,6 @@
 # Tutorial 9: 'Very Simple Model (FMC) with Requirements'
 
-Before, we have discussed how to represent a very simple model, see Tutorial 6: [Very Simple Model (FMC)](./06_Very-Simple-Model-FMC.md). Now we will relate some requirements to the model-elements. 
+In Tutorial 6: [Very Simple Model (FMC)](./06_Very-Simple-Model-FMC.md), we have discussed the basics to represent a system-model in SpecIF. Now we will relate some requirements to the model-elements. 
 
 As we have discussed all concepts before, let's right away discuss the full example. The following items have been added:
 - A *dataType* "DT-Priority" with enumerated values. Note that vocabulary terms have been used.
