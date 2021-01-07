@@ -1,9 +1,9 @@
 
 # Excel Format Specification
-Excel guidelines for the SpecIF Viewer  
+Guidelines for importing Excel-files to the SpecIF-Viewer/Editor.
 
 ## Introduction
-An Excel sheet has to use the SpecIF Vocabulary Terms found here:  specif.de/apps/edit#import=../examples/Vocabulary.specifz
+An Excel sheet may use the [SpecIF Vocabulary Terms](specif.de/apps/edit#import=../examples/Vocabulary.specifz)
 
 ### Resources 
 Resources represent an artefact, e.g. a model element or a requirement.
