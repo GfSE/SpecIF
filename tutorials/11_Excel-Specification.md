@@ -12,21 +12,26 @@ The *type* of the contained resources can be included in the filename within bra
 Unfortunately SpecIF vocabulary terms cannot be used with domain name, because a DOS/Windows and Linux filename may not contain a colon (':'). Instead, use the vocabulary term without domain name in this case.
 
 ### Properties
-Attributes use the term 'properties'
-A **property** carries information 'payload' and may be applied to resources or statements. The SpecIF terms listed in this chapter are used as property name/title, whereas the information is provided as 'value'. Usually a combination of complimentary properties is used per resource or statement class.
+Attributes use the term 'properties'.
+A *property* carries information 'payload' and may be applied to resources and statements. 
+The SpecIF terms listed in this chapter are used as property name/title, whereas the information is provided as 'value'. 
+Usually a combination of complimentary properties is used per resource or statement class.
 
 ###  Statements
 Relationships use the term 'statements'
-A **statement** represents a logic affinity or association between two resources, i.e. system specification artefacts. The terms listed in the dictionary may be used as predicates to distinguish different classes (types) of statements. Each statement class may define an individual set of properties for carrying the information 'payload'.
+A *statement* represents a logic assertion or association between two resources, i.e. system specification artefacts. 
+The terms listed in the vocabulary may be used as predicates to distinguish classes (types) of statements. 
+Each statement class may define an individual set of properties for carrying the information 'payload'.
 
 ## Mapping
-The visual mapping can currently be found in the [config.ts](https://github.com/GfSE/SpecIF-Viewer/blob/master/src/config/config.ts) file of the SpecIF-Viewer
+The visual mapping can currently be found (and modified) in the [config.ts](https://github.com/GfSE/SpecIF-Viewer/blob/master/src/config/config.ts) file of the SpecIF-Viewer.
 
 ### Keywords (for visibilty and arrangement)
 ####  idProperties
 >All property titles which denote a property as identifier in another context.
 Is necessary in certain use-cases such as updating content via Excel-sheet.
 The value of the first element found in idProperties will be used to form the internal id.
+
 * dcterms:identifier
 * DC.identifier
 * ReqIF.ForeignID
@@ -36,21 +41,21 @@ The value of the first element found in idProperties will be used to form the in
 * Identifier
 
 #### headingProperties
-
 >If a resourceClass or a resource has a property carrying a title equal to one of the values in the following list,
 it is considered a heading (chapter title) and will be included in the outline numbering.
 Also, this property will be used for the title when displaying the resource.
+
 * SpecIF:Outline
 * SpecIF:Heading
 * ReqIF.ChapterName
 * Überschrift
 
 #### titleProperties
-
 > The content of the property with a title in this list will be used for the title when displaying the resource:
 The sequence defines a priority, in case a resource has multiple properties with a title appearing in this list.
 For example, if a resource has a property with title 'Title' and another with title 'ReqiF.Name',
 the value of the latter will be the title of the resource.
+
 * dcterms:title
 * DC.title
 * ReqIF.Name
@@ -83,10 +88,12 @@ You must enter the title used by SpecIF (after translation)
 
 #### hiddenStatements
 > A list of relations not to show in tab named CONFIG.relations, specified by title
+
 * SpecIF:commentRefersTo
 
 #### hierarchyRoots
 > A list of resourceClasses serving as hierarchyRoot with meta-data
+
 * SpecIF:Outline
 * SpecIF:HierarchyRoot
 * SpecIF:Hierarchy
@@ -94,10 +101,12 @@ You must enter the title used by SpecIF (after translation)
 
 #### diagramClasses
 >A list of resources representing Model Diagrams, specified by resource title
+
 * SpecIF:Diagram
 * FMC:Plan
 
 #### folderClasses
+
 * SpecIF:Outline
 * SpecIF:Heading
 
@@ -105,6 +114,7 @@ You must enter the title used by SpecIF (after translation)
 >A list with all model-element types by title,
 is used for example to build a glossary;
 it is expected that a plural of any list element exists ( element+'s' )
+
 * FMC:Actor
 * FMC:State
 * FMC:Event
@@ -113,6 +123,7 @@ it is expected that a plural of any list element exists ( element+'s' )
 #### statementClasses
 >A list of statement types by title,
 is used for example to recognize a statement to create when importing an xls sheet
+
 * oslc_rm:satisfies
 * oslc_rm:satisfiedBy
 * oslc_rm:implements
