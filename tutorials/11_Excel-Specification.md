@@ -7,6 +7,7 @@ Excel sheets may use the [SpecIF Vocabulary Terms](https://specif.de/apps/edit#i
 
 ### Resources 
 Resources represent artefacts, e.g. requirements or user-stories. 
+Basically, all types of artefacts can be imported, however usually model-elements are defined via model-diagrams (FMC, BPMN, SysML or other) using a model authoring tool.
 The *type* of the contained resources can be included in the filename within brackets: For example, the filename "ProjectName (Requirement).xslx" would specify *requirements*. 
 Unfortunately SpecIF vocabulary terms cannot be used with domain name, because a DOS/Windows and Linux filename may not contain a colon (':'). Instead, use the vocabulary term without domain name in this case.
 
