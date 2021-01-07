@@ -1,8 +1,8 @@
 
 # Excel Format Specification
 Excel guidelines for the SpecIF Viewer  
-## Introduction
 
+## Introduction
 An Excel sheet has to use the SpecIF Vocabulary Terms found here:  specif.de/apps/edit#import=../examples/Vocabulary.specifz
 
 ### Resources 
@@ -13,12 +13,13 @@ Additionally a file name may specify the *type* of the contained model elements 
 Attributes use the term 'properties'
 A **property** carries information 'payload' and may be applied to resources or statements. The SpecIF terms listed in this chapter are used as property name/title, whereas the information is provided as 'value'. Usually a combination of complimentary properties is used per resource or statement class.
 
-
 ###  Statements
 Relationships use the term 'statements'
 A **statement** represents a logic affinity or association between two resources, i.e. system specification artefacts. The terms listed in the dictionary may be used as predicates to distinguish different classes (types) of statements. Each statement class may define an individual set of properties for carrying the information 'payload'.
+
 ## Mapping
-The visual mapping can currently be found in the [config.ts](https://github.com/GfSE/SpecIF-Viewer/blob/master/src/config/config.ts) file of the SpecIF- Viewer 
+The visual mapping can currently be found in the [config.ts](https://github.com/GfSE/SpecIF-Viewer/blob/master/src/config/config.ts) file of the SpecIF-Viewer
+
 ### Keywords (for visibilty and arrangement)
 ####  idProperties
 >All property titles which denote a property as identifier in another context.
@@ -48,7 +49,6 @@ Also, this property will be used for the title when displaying the resource.
 The sequence defines a priority, in case a resource has multiple properties with a title appearing in this list.
 For example, if a resource has a property with title 'Title' and another with title 'ReqiF.Name',
 the value of the latter will be the title of the resource.
-
 * dcterms:title
 * DC.title
 * ReqIF.Name
@@ -125,7 +125,7 @@ is used for example to recognize a statement to create when importing an xls she
 
 ![Excel](./images/SpecIF_ViewerVocabs.png)
 
-The first row is reserved for attribute names (SpecIF Vocabaulary if possible) *where*:
+The first row is reserved for attribute names (SpecIF Vocabaulary if possible), where:
 **dcterms:identifier**, **dcterms:title**, **dcterms:description**, **dcterms:modified**, **SpecIF:Priority** and **IREB:RequirementType** are **properties**; **oslc_rm:satisfiedBy** and **IREB:refines** are **statements** in this example.
 
 The columns in the excel sheet consists of a custom identifier which is needed to recognize the correct item on update.
