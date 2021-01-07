@@ -7,7 +7,7 @@ An Excel sheet has to use the SpecIF Vocabulary Terms found here:  specif.de/app
 
 ### Resources 
 Resources represent an artefact, e.g. a model element or a requirement.
-Additionally a file name may contain the type of model elements, which is specified in square brackets, e. g. "Produktname [IREB:Requirement].xslx". The specified file here is representing requirements. System interpretable terms are found in the SpecIF vocabulary in this case for the model element **resources**.
+Additionally a file name may specify the *type* of the contained model elements in brackets: e.g. "Produktname (Requirement).xslx" would specify *requirements*. Unfortunately SpecIF vocabulary terms cannot be used with domain name, because a DOS/Windows and Linux filename may not contain a colon (':'). Instead, use the vocabulary term without domain name in this case.
 
 ### Properties
 Attributes use the term 'properties'
@@ -28,7 +28,6 @@ The value of the first element found in idProperties will be used to form the in
 * DC.identifier
 * ReqIF.ForeignID
 * Object Identifier
-* VALUE-Object Identifier
 * id
 * ID
 * Identifier
@@ -41,7 +40,7 @@ Also, this property will be used for the title when displaying the resource.
 * SpecIF:Outline
 * SpecIF:Heading
 * ReqIF.ChapterName
-* Überschrift > _berschrift
+* Überschrift
 
 #### titleProperties
 
@@ -58,18 +57,13 @@ the value of the latter will be the title of the resource.
 * Titel
 
 #### descProperties
->The content of all properties with a title in this list will be concatenated to form the description in the 'document' view
+>The content of all properties with a title in this list will be concatenated to form the description when displaying the resource.
 
 * dcterms:description
 * DC.description
 * SpecIF:Diagram
 * ReqIF.Text
-* DBRD.Text
-* Preview
 * Object Text
-
-#### stereotypeProperties
-* UML:Stereotype
 
 #### hiddenProperties
 >A list of properties to suppress generally, specified by title.
@@ -95,34 +89,6 @@ You must enter the title used by SpecIF (after translation)
 * SpecIF:HierarchyRoot
 * SpecIF:Hierarchy
 * SpecIF:BillOfMaterials
-
-#### excludedFromTypeFiltering
->A list of classes which are excluded from the class filtering, specified by title:
-All types for resources which are not referenced in the tree should be listed, here.
-Only resources which are referenced in a hierarchy (tree) are included in the filter process
-
-* SpecIF:Comment
-
-#### excludedFromDeduplication
->A list of model elements to be exluded from deduplication on model import or model integration,
-specified by value of a property titled CONFIG.propClassType
-even if they have the same or no title/name.
-Note: For example, these are generated items when transforming BPMN models
-
-* SpecIF:Heading
-* SpecIF:Paragraph
-* SpecIF:Condition
-* BPMN:exclusiveGateway
-* BPMN:inclusiveGateway
-* BPMN:boundaryEvent
-* BPMN:intermediateThrowEvent
-* BPMN:intermediateCatchEvent
-* BPMN:callActivity
-
-#### clickElementClasses
->A list of SVG element class names. A click handler will be attached to all SVG elements having a class in the list
-* clickEl
-* com.arcway.cockpit.uniqueelement
 
 #### diagramClasses
 >A list of resources representing Model Diagrams, specified by resource title
@@ -159,7 +125,7 @@ is used for example to recognize a statement to create when importing an xls she
 
 ![Excel](./images/SpecIF_ViewerVocabs.png)
 
-The first row is reserved for attribute names (SpecIF Vocabaulary if possible) *whereas*:
+The first row is reserved for attribute names (SpecIF Vocabaulary if possible) *where*:
 **dcterms:identifier**, **dcterms:title**, **dcterms:description**, **dcterms:modified**, **SpecIF:Priority** and **IREB:RequirementType** are **properties**; **oslc_rm:satisfiedBy** and **IREB:refines** are **statements** in this example.
 
 The columns in the excel sheet consists of a custom identifier which is needed to recognize the correct item on update.
