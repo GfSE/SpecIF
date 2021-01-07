@@ -1,13 +1,14 @@
 
-# Excel Format Specification
-Guidelines for importing Excel-files to the SpecIF-Viewer/Editor.
+# Guidelines for importing Excel-files to the SpecIF-Viewer/Editor
+The tutorial explains how resources such as requirements can be imported and transformed to valid SpecIF using Excel spreadsheets. Semantic notion can be transported by using suiting vocabulary terms.
 
 ## Introduction
-An Excel sheet may use the [SpecIF Vocabulary Terms](specif.de/apps/edit#import=../examples/Vocabulary.specifz)
+Excel sheets may use the [SpecIF Vocabulary Terms](https://specif.de/apps/edit#import=../examples/Vocabulary.specifz).
 
 ### Resources 
-Resources represent an artefact, e.g. a model element or a requirement.
-Additionally a file name may specify the *type* of the contained model elements in brackets: e.g. "Produktname (Requirement).xslx" would specify *requirements*. Unfortunately SpecIF vocabulary terms cannot be used with domain name, because a DOS/Windows and Linux filename may not contain a colon (':'). Instead, use the vocabulary term without domain name in this case.
+Resources represent artefacts, e.g. requirements or user-stories. 
+The *type* of the contained resources can be included in the filename within brackets: For example, the filename "ProjectName (Requirement).xslx" would specify *requirements*. 
+Unfortunately SpecIF vocabulary terms cannot be used with domain name, because a DOS/Windows and Linux filename may not contain a colon (':'). Instead, use the vocabulary term without domain name in this case.
 
 ### Properties
 Attributes use the term 'properties'
