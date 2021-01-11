@@ -11,8 +11,8 @@ TO BE DEFINED...
 | laneSet | dataObjectReference | startEvent |  |
 | lane | dataStoreReference | intermediateThrowEvent |  |
 | task |  | intermediateCatchEvent |  |
-| manualTask |  | endEvent |  |
-| userTask |  | boundaryEvent |  |
+| manualTask |  | boundaryEvent |  |
+| userTask |  | endEvent |  |
 | scriptTask |  |  |  |
 | serviceTask |  |  |  |
 | sendTask |  |  |  |
@@ -24,8 +24,18 @@ TO BE DEFINED...
 |  |  |  |  |
 |  |  |  |  |
 
+Here is the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).
 
 ## Archimate-SpecIF mapping
+
+| FMC:Actor | FMC:State | FMC:Event | SpecIF:Collection |
+| --- | --- | --- | --- |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+
+Here is the current code of the [Archimate to SpecIF transformation](https://github.com/GfSE/Archimate-SpecIF-Bridge/blob/master/source/js/archimate2SpecIF.js).
 
 ## UML-SpecIF mapping
 
