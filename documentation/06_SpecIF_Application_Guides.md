@@ -54,7 +54,7 @@ The following excerpt from BPMN-XML representing a task and a sequenceFlow:
     "class":"RC-Actor",
     "properties":[{
         "class":"PC-Type",
-        "value":"BPMN:userTask"
+        "value":"bpmn:userTask"
     }],
     "changedAt":"2020-05-23T20:06:54.000Z"
 }
@@ -64,11 +64,15 @@ The following excerpt from BPMN-XML representing a task and a sequenceFlow:
     "class":"SC-signals",
     "subject":"Activity_0spdj4v",
     "object":"Event_0hukwut",
+    "properties":[{
+        "class":"PC-Type",
+        "value":"bpmn:sequenceFlow"
+    }],
     "changedAt":"2020-05-23T20:06:54.000Z"
 }
 ```
 
-Please refer to the tutorials for an explanation of SpecIF resources and statements with their respective classes.
+Please refer to the [tutorials](https://github.com/GfSE/SpecIF/tree/master/tutorials) for an explanation of SpecIF resources and statements with their respective classes.
 
 ### Transformation Code
 Here you may look at the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).
