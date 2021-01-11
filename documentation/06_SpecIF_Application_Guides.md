@@ -2,8 +2,12 @@
 
 TO BE DEFINED...
 
+## FMC-SpecIF mapping
+
 ## BPMN-SpecIF mapping
+
+## Archimate-SpecIF mapping
 
 ## UML-SpecIF mapping
 
-## FMC-SpecIF mapping
+## SysML-SpecIF mapping
