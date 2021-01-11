@@ -9,7 +9,7 @@ TO BE DEFINED...
 | FMC:Actor | FMC:State | FMC:Event | SpecIF:Collection |
 | --- | --- | --- | --- |
 | laneSet | dataObjectReference | startEvent |  |
-| lane | dataStoreReference | intermediateThrowEvent |  |
+| lane<sup>1</sup> | dataStoreReference | intermediateThrowEvent |  |
 | task |  | intermediateCatchEvent |  |
 | manualTask |  | boundaryEvent |  |
 | userTask |  | endEvent |  |
@@ -19,10 +19,14 @@ TO BE DEFINED...
 | receiveTask |  |  |  |
 | callActivity |  |  |  |
 | subProcess |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| parallelGateway |  |  |  |
+| eventBasedGateway |  |  |  |
+| exclusiveGateway |  |  |  |
+| inclusiveGateway |  |  |  |
+
+Comments:
+1. A lane is considered a responsible person or role, thus an Actor.
+
 
 Here is the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).
 
