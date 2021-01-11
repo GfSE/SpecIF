@@ -6,6 +6,25 @@ TO BE DEFINED...
 
 ## BPMN-SpecIF mapping
 
+| FMC:Actor | FMC:State | FMC:Event | SpecIF:Collection |
+| --- | --- | --- | --- |
+| laneSet | dataObjectReference | startEvent |  |
+| lane | dataStoreReference | intermediateThrowEvent |  |
+| task |  | intermediateCatchEvent |  |
+| manualTask |  | endEvent |  |
+| userTask |  | boundaryEvent |  |
+| scriptTask |  |  |  |
+| serviceTask |  |  |  |
+| sendTask |  |  |  |
+| receiveTask |  |  |  |
+| callActivity |  |  |  |
+| subProcess |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+
+
 ## Archimate-SpecIF mapping
 
 ## UML-SpecIF mapping
