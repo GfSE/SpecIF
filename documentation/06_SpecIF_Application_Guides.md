@@ -1,8 +1,11 @@
 # SpecIF Application Guides
 
-TO BE DEFINED...
+The mapping of model elements of different notations to SpecIF is discussed in this chapter.
 
 ## FMC-SpecIF mapping
+
+The mapping of FMC model element types to SpecIF is straight forward, as SpecIF uses the FMC model element types to integrate models of different notations.
+Thus, FMC Actors, States and Events are directly mapped to FMC:Actor, FMC:State and FMC:Event respectively.
 
 ## BPMN-SpecIF mapping
 
@@ -20,19 +23,59 @@ TO BE DEFINED...
 | callActivity |  |  |  |
 | subProcess |  |  |  |
 | parallelGateway |  |  |  |
-| eventBasedGateway |  |  |  |
 | exclusiveGateway<sup>2</sup> |  |  |  |
 | inclusiveGateway<sup>2</sup> |  |  |  |
+| eventBasedGateway |  |  |  |
+
+The original model element type is stored in a property named _dcterms:type_. 
 
 Comments:
 1. A lane is considered a responsible person or role, thus an Actor.
 1. A forking exclusive or inclusive gateway is transformed to an Actor plus an Event per outgoing path.
-1. Interestingly enough, the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_. Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
+1. Interestingly enough, in BPMN the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_. Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
 
+### Example
 
-Here is the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).
+The following excerpt from BPMN-XML representing a task and a sequenceFlow:
+```
+    <bpmn:userTask id="Activity_0spdj4v" name="Drink a beer">
+      <bpmn:incoming>Flow_0ze546v</bpmn:incoming>
+      <bpmn:outgoing>Flow_1to3p2q</bpmn:outgoing>
+    </bpmn:userTask>
+...
+    <bpmn:sequenceFlow id="Flow_1to3p2q" sourceRef="Activity_0spdj4v" targetRef="Event_0af34ci" />
+```
+
+... is transformed to SpecIF, as follows:
+```
+{
+    "id":"Activity_0spdj4v",
+    "title":"Drink a beer",
+    "class":"RC-Actor",
+    "properties":[{
+        "class":"PC-Type",
+        "value":"BPMN:userTask"
+    }],
+    "changedAt":"2020-05-23T20:06:54.000Z"
+}
+...
+{
+    "id":"Flow_1to3p2q",
+    "class":"SC-signals",
+    "subject":"Activity_0spdj4v",
+    "object":"Event_0hukwut",
+    "changedAt":"2020-05-23T20:06:54.000Z"
+}
+```
+
+Please refer to the tutorials for an explanation of SpecIF resources and statements with their respective classes.
+
+### Transformation Code
+Here you may look at the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).
 
 ## Archimate-SpecIF mapping
+
+_{ToDo}_
 
 | FMC:Actor | FMC:State | FMC:Event | SpecIF:Collection |
 | --- | --- | --- | --- |
@@ -41,8 +84,16 @@ Here is the current code of the [BPMN to SpecIF transformation](https://github.c
 |  |  |  |  |
 |  |  |  |  |
 
-Here is the current code of the [Archimate to SpecIF transformation](https://github.com/GfSE/Archimate-SpecIF-Bridge/blob/master/source/js/archimate2SpecIF.js).
+### Example
+
+### Transformation Code
+Here you may look at the current code of the [Archimate to SpecIF transformation](https://github.com/GfSE/Archimate-SpecIF-Bridge/blob/master/source/js/archimate2SpecIF.js).
 
 ## UML-SpecIF mapping
 
+_{ToDo}_
+
 ## SysML-SpecIF mapping
+
+_{ToDo}_
+
