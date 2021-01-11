@@ -382,15 +382,11 @@
     {
       "id": "R-HCsjbO8uzOnwz6X1HUOT3YZKoGD",
       "changedAt": "2018-03-04T12:28:57+01:00",
-      "title": "BPMN:Timer",
+      "title": "bpmn:timer",
       "revision": "160",
       "changedBy": "od",
       "class": "RC-ValueTerm",
       "properties": [
-        {
-          "class": "PC-Name",
-          "value": "BPMN:Timer"
-        },
         {
           "class": "PC-Text",
           "value": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Actor]] when used to represent a 'Timer' element in models created with BPMN.</p>"
@@ -404,15 +400,11 @@
     {
       "id": "R-lfOsfzREJIet1laDr1404MbiwFT",
       "changedAt": "2018-03-04T12:28:41+01:00",
-      "title": "BPMN:Join",
+      "title": "bpmn:join",
       "revision": "159",
       "changedBy": "od",
       "class": "RC-ValueTerm",
       "properties": [
-        {
-          "class": "PC-Name",
-          "value": "BPMN:Join"
-        },
         {
           "class": "PC-Text",
           "value": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Actor]] when used to represent a 'Join' element in models created with BPMN.</p>"
@@ -426,15 +418,11 @@
     {
       "id": "R-QPZO4xEKocjeIfTodAx8zq5k5I3",
       "changedAt": "2018-03-10T09:39:08+01:00",
-      "title": "BPMN:ProcessStep",
+      "title": "bpmn:processStep",
       "revision": "175",
       "changedBy": "od",
       "class": "RC-ValueTerm",
       "properties": [
-        {
-          "class": "PC-Name",
-          "value": "BPMN:ProcessStep"
-        },
         {
           "class": "PC-Text",
           "value": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Actor]] when used to represent a process step.</p>"
@@ -448,15 +436,11 @@
     {
       "id": "R-TLpywhxqtNxGGjd4L6KIPRR7EDd",
       "changedAt": "2018-03-10T09:46:52+01:00",
-      "title": "BPMN:EndEvent",
+      "title": "bpmn:endEvent",
       "revision": "187",
       "changedBy": "od",
       "class": "RC-ValueTerm",
       "properties": [
-        {
-          "class": "PC-Name",
-          "value": "BPMN:EndEvent"
-        },
         {
           "class": "PC-Text",
           "value": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Event]] when used to represent a general end event.</p>"
@@ -474,15 +458,11 @@
     {
       "id": "R-JUck1fa8PVWlW3tSSFRyKaD5tK4",
       "changedAt": "2018-03-10T09:46:22+01:00",
-      "title": "BPMN:IntermediateEvent",
+      "title": "bpmn:intermediateEvent",
       "revision": "185",
       "changedBy": "od",
       "class": "RC-ValueTerm",
       "properties": [
-        {
-          "class": "PC-Name",
-          "value": "BPMN:IntermediateEvent"
-        },
         {
           "class": "PC-Text",
           "value": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Event]] when used to represent a general intermediate event.</p>"
@@ -500,15 +480,11 @@
     {
       "id": "R-jbF2IzbCVx4LqrAkqe6N8ayxNYS",
       "changedAt": "2018-03-10T09:46:34+01:00",
-      "title": "BPMN:StartEvent",
+      "title": "bpmn:startEvent",
       "revision": "186",
       "changedBy": "od",
       "class": "RC-ValueTerm",
       "properties": [
-        {
-          "class": "PC-Name",
-          "value": "BPMN:StartEvent"
-        },
         {
           "class": "PC-Text",
           "value": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Event]] when used to represent a general start event.</p>"
@@ -3943,15 +3919,11 @@
     {
       "id": "R-VTZmZzQOMOVPCHvAQ3SZGUo9dVh",
       "changedAt": "2020-11-12T11:23:35.693Z",
-      "title": "BPMN:Group",
+      "title": "bpmn:group",
       "description": "BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. Like all BPMN 'artifacts', a group does not influence execution semantics. In PBMN, a group can be freely applied, even across pool boundaries. (source: BPMN Reference)",
       "revision": "196",
       "class": "RC-ResourceTerm",
       "properties": [
-        {
-          "class": "PC-Name",
-          "value": "BPMN:Group"
-        },
         {
           "class": "PC-Text",
           "value": "<p>BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. Like all BPMN 'artifacts', a group does not influence execution semantics. In PBMN, a group can be freely applied, even across pool boundaries. <small>(<i>source: <a href=\"https://camunda.com/bpmn/reference/#overview\">BPMN Reference</a></i>)</small></p>"
@@ -3970,7 +3942,7 @@
       "id": "R-g1Ghq3cGM7c3By1DQKNLFynTHBX",
       "changedAt": "2020-11-12T10:10:41.507Z",
       "title": "SpecIF:Collection",
-      "description": "A 'Collection' is a logic (often conceptual) group of resources linked with a [[SpecIF:contains]] statement. It corresponds to a 'Group' in BPMN Diagrams.BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. (source: BPMN Tool)",
+      "description": "A 'Collection' is a logic (often conceptual) group of resources linked with a [[SpecIF:contains]] statement. It corresponds to a 'Group' in BPMN Diagrams. BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. (source: BPMN Tool)",
       "revision": "143",
       "class": "RC-ResourceTerm",
       "properties": [
@@ -4136,7 +4108,7 @@
         },
         {
           "class": "PC-Text",
-          "value": "<p>An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.</p><p>It is advised to specify the particular use of FMC:Actor with a [[dcterms:type]] property. The values of that property can be defined terms, such as [[BPMN:Timer]].</p>"
+          "value": "<p>An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.</p><p>It is advised to specify the particular use of FMC:Actor with a [[dcterms:type]] property. The values of that property can be defined terms, such as [[bpmn:timer]].</p>"
         },
         {
           "class": "PC-Origin",
