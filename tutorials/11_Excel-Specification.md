@@ -1,6 +1,6 @@
-
 # Guidelines for importing Excel-files to the SpecIF-Viewer/Editor
-The tutorial explains how resources such as requirements can be imported and transformed to valid SpecIF using Excel spreadsheets. Semantic notion can be transported by using suiting vocabulary terms.
+The tutorial explains how resources such as requirements can be imported using Excel spreadsheets and transformed to valid SpecIF. 
+Semantic notion can be transported by using suitable vocabulary terms.
 
 ## Introduction
 Excel sheets may use the [SpecIF Vocabulary Terms](https://specif.de/apps/edit#import=../examples/Vocabulary.specifz).
@@ -9,7 +9,7 @@ Excel sheets may use the [SpecIF Vocabulary Terms](https://specif.de/apps/edit#i
 Resources represent artefacts, e.g. requirements or user-stories. 
 Basically, all types of artefacts can be imported, however usually model-elements are defined via model-diagrams (FMC, BPMN, SysML or other) using a model authoring tool.
 The *type* of the contained resources can be included in the filename within brackets: For example, the filename "ProjectName (Requirement).xslx" would specify *requirements*. 
-Unfortunately SpecIF vocabulary terms cannot be used with domain name, because a DOS/Windows and Linux filename may not contain a colon (':'). Instead, use the vocabulary term without domain name in this case.
+Unfortunately vocabulary terms cannot be used with name-space, because a DOS/Windows and Linux filename may not contain a colon (':'). Instead, use the vocabulary term without name-space in this case.
 
 ### Properties
 Attributes use the term 'properties'.
@@ -139,7 +139,8 @@ is used for example to recognize a statement to create when importing an xls she
 ![Excel](./images/SpecIF_ViewerVocabs.png)
 
 The first row is reserved for attribute names (SpecIF Vocabaulary if possible), where:
-**dcterms:identifier**, **dcterms:title**, **dcterms:description**, **dcterms:modified**, **SpecIF:Priority** and **IREB:RequirementType** are **properties**; **oslc_rm:satisfiedBy** and **IREB:refines** are **statements** in this example.
+**dcterms:identifier**, **dcterms:title**, **dcterms:description**, **dcterms:modified**, **SpecIF:Priority** and **IREB:RequirementType** 
+are **properties**; **oslc_rm:satisfiedBy** and **IREB:refines** are **statements** in this example.
 
 The columns in the excel sheet consists of a custom identifier which is needed to recognize the correct item on update.
 
@@ -155,11 +156,13 @@ Property terms are shown on the right next to title and paragraph blocks.
 ![SpecIF Viewer](./images/SpecIF_Viewer_Excel_Import.png)
 
 
-As seen dcterms:title is a title element and dcterms:description the corresponding description element to it on the same row. The other properties dcterms:identifier, IREB:RequirementType, SpecIF:Priority and dcterms:modified are complimentary Property-Terms.
+As seen dcterms:title is a title element and dcterms:description the corresponding description element to it on the same row. 
+The other properties dcterms:identifier, IREB:RequirementType, SpecIF:Priority and dcterms:modified are complimentary Property-Terms.
 
 The statements tab shows relationships,  e. g. "Nutzeridentifikation [...] refines Anmeldung erfordert Identifikation" as specified in the Excel sheet.
 
-The filter tab enables lookup for specific strings or resource classes. Looking up the Vocabulary.specifz file linked in the introduction enables filtering for **Recource-Terms**, **Predicate-Terms**, **Property-Terms** and **Value-Terms**.
+The filter tab enables lookup for specific strings or resource classes. Looking up the Vocabulary.specifz file linked in the introduction enables filtering 
+for **Recource-Terms**, **Predicate-Terms**, **Property-Terms** and **Value-Terms**.
 
 ## Enumerations
 
