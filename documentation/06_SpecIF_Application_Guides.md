@@ -8,8 +8,8 @@ TO BE DEFINED...
 
 | FMC:Actor | FMC:State | FMC:Event | SpecIF:Collection |
 | --- | --- | --- | --- |
-| laneSet | dataObjectReference | startEvent |  |
-| lane<sup>1</sup> | dataStoreReference | intermediateThrowEvent |  |
+| laneSet | dataObjectReference<sup>3</sup> | startEvent |  |
+| lane<sup>1</sup> | dataStoreReference<sup>3</sup> | intermediateThrowEvent |  |
 | task |  | intermediateCatchEvent |  |
 | manualTask |  | boundaryEvent |  |
 | userTask |  | endEvent |  |
@@ -26,7 +26,8 @@ TO BE DEFINED...
 
 Comments:
 1. A lane is considered a responsible person or role, thus an Actor.
-1. A forking exclusive or inclusive gateway is transformed to an Actor and an Event per outgoing path.
+1. A forking exclusive or inclusive gateway is transformed to an Actor plus an Event per outgoing path.
+1. Interestingly enough, the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_. Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
 
 
 Here is the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).
