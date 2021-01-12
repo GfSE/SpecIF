@@ -1,17 +1,23 @@
 # SpecIF Application Guides
 
-The mapping of model elements of different notations to SpecIF is discussed in this chapter.
+The mapping of model elements of different notations to SpecIF is discussed in this chapter. 
+A general introduction is given in [Model-Integration with SpecIF](https://specif.de/files/SpecIF/documents/2019-11-24%20Model-Integration%20with%20SpecIF).
+Please refer to the [tutorials](https://github.com/GfSE/SpecIF/tree/master/tutorials) for an explanation of SpecIF resources and statements with their respective classes.
 
 ## FMC-SpecIF mapping
 
 The mapping of FMC model element types to SpecIF is straight forward, as SpecIF uses the FMC model element types to integrate models of different notations.
 Thus, FMC Actors, States and Events are directly mapped to FMC:Actor, FMC:State and FMC:Event respectively.
 
+An explanation in detail is given in a tutorial [Very simple model using FMC](https://github.com/GfSE/SpecIF/blob/master/tutorials/06_Very-Simple-Model-FMC.md).
+
 ## BPMN-SpecIF mapping
+
+For introduction to BPMN, see the [BPMN 2.0 Symbol Reference](https://camunda.com/de/bpmn/bpmn-2-0-symbol-reference/), for example.
 
 | FMC:Actor | FMC:State | FMC:Event | SpecIF:Collection |
 | --- | --- | --- | --- |
-| laneSet | dataObjectReference<sup>3</sup> | startEvent |  |
+| laneSet | dataObjectReference<sup>3</sup> | startEvent | group |
 | lane<sup>1</sup> | dataStoreReference<sup>3</sup> | intermediateThrowEvent |  |
 | task |  | intermediateCatchEvent |  |
 | manualTask |  | boundaryEvent |  |
@@ -71,8 +77,6 @@ The following excerpt from BPMN-XML representing a task and a sequenceFlow:
     "changedAt":"2020-05-23T20:06:54.000Z"
 }
 ```
-
-Please refer to the [tutorials](https://github.com/GfSE/SpecIF/tree/master/tutorials) for an explanation of SpecIF resources and statements with their respective classes.
 
 ### Transformation Code
 Here you may look at the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).
