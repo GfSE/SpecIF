@@ -6,6 +6,8 @@ Please refer to the [tutorials](https://github.com/GfSE/SpecIF/tree/master/tutor
 
 ## FMC-SpecIF mapping
 
+For introduction to FMC, see the [FMC Overview](http://f-m-c.org/).
+
 The mapping of FMC model element types to SpecIF is straight forward, as SpecIF uses the FMC model element types to integrate models of different notations.
 Thus, FMC Actors, States and Events are directly mapped to FMC:Actor, FMC:State and FMC:Event respectively.
 
@@ -27,6 +29,7 @@ For introduction to BPMN, see the [BPMN 2.0 Symbol Reference](https://camunda.co
 | sendTask |  |  |  |
 | receiveTask |  |  |  |
 | callActivity |  |  |  |
+| transaction |  |  |  |
 | subProcess |  |  |  |
 | parallelGateway |  |  |  |
 | exclusiveGateway<sup>2</sup> |  |  |  |
@@ -87,10 +90,20 @@ _{ToDo}_
 
 | FMC:Actor | FMC:State | FMC:Event | SpecIF:Collection |
 | --- | --- | --- | --- |
+|  | Goal | BusinessEvent | Location |
+|  | Capability | ApplicationEvent | Grouping |
+|  | Contract | TechnologyEvent |  |
+|  | Representation |  |  |
+|  | Artefact |  |  |
+|  | Product |  |  |
+|  | BusinessObject |  |  |
+|  | DataObject |  |  |
 |  |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
+
+The original model element type is stored in a property named _dcterms:type_. 
 
 ### Example
 
