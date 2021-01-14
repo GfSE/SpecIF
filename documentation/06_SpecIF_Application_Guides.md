@@ -36,7 +36,7 @@ For introduction to BPMN, see the [BPMN 2.0 Symbol Reference](https://camunda.co
 | inclusiveGateway<sup>2</sup> |  |  |  |
 | eventBasedGateway |  |  |  |
 
-The original model element type is stored in a property named _dcterms:type_. 
+The original model element type (BPMN-XML tag) is stored in a property named _dcterms:type_. 
 
 Comments:
 1. A lane is considered a responsible person or role, thus an Actor.
@@ -55,7 +55,7 @@ The following excerpt from BPMN-XML representing a task and a sequenceFlow:
     <bpmn:sequenceFlow id="Flow_1to3p2q" sourceRef="Activity_0spdj4v" targetRef="Event_0af34ci" />
 ```
 
-... is transformed to SpecIF, as follows:
+... is transformed to a SpecIF resource and statement, as follows:
 ```
 {
     "id":"Activity_0spdj4v",
@@ -80,6 +80,11 @@ The following excerpt from BPMN-XML representing a task and a sequenceFlow:
     "changedAt":"2020-05-23T20:06:54.000Z"
 }
 ```
+
+The full example can be inspected, here:
+- [Telephone Connection Request (BPMN-XML)](https://specif.de/examples/Tel-Connection-Req.bpmn)
+- [Telephone Connection Request (specif)](https://specif.de/examples/Tel-Connection-Req.specif)
+- [Telephone Connection Request (SpecIF-Viewer)](https://specif.de/apps/view#import=../examples/Tel-Connection-Req.specif.zip)
 
 ### Transformation Code
 Here you may look at the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).

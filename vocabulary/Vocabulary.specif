@@ -3,14 +3,14 @@
   "title": "SpecIF Vocabulary",
   "$schema": "https://specif.de/v1.0/schema.json",
   "generator": "SpecIF Editor",
-  "generatorVersion": "v0.99.6.6",
+  "generatorVersion": "v0.99.6",
   "description": "The SpecIF Vocabulary (or Glossary) collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically.",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "type": "dcterms:rights",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
-  "changedAt": "2020-11-22T16:02:06.858Z",
+  "changedAt": "2021-01-12T23:20:40.564Z",
   "dataTypes": [
     {
       "id": "DT-ShortText",
@@ -2707,20 +2707,20 @@
       ]
     },
     {
-      "id": "R-isGeneralisationOf",
-      "changedAt": "2019-05-30T14:51:49+01:00",
-      "title": "SysML:isGeneralisationOf",
+      "id": "R-isGeneralizationOf",
+      "changedAt": "2021-01-12T23:17:50.205Z",
+      "title": "SysML:isGeneralizationOf",
+      "description": "An [[FMC:Actor]] is a generalization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].",
       "revision": "36",
-      "changedBy": "od",
       "class": "RC-PredicateTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SysML:isGeneralisationOf"
+          "value": "SysML:isGeneralizationOf"
         },
         {
           "class": "PC-Text",
-          "value": "<p>An [[FMC:Actor]] is a generalisation of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>"
+          "value": "<p>An [[FMC:Actor]] is a generalization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>"
         },
         {
           "class": "PC-Origin",
@@ -2733,20 +2733,20 @@
       ]
     },
     {
-      "id": "R-isSpecialisationOf",
-      "changedAt": "2019-05-30T14:51:49+01:00",
-      "title": "SysML:isSpecialisationOf",
+      "id": "R-isSpecializationOf",
+      "changedAt": "2021-01-12T23:17:31.963Z",
+      "title": "SysML:isSpecializationOf",
+      "description": "An [[FMC:Actor]] is a specialization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].",
       "revision": "36",
-      "changedBy": "od",
       "class": "RC-PredicateTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SysML:isSpecialisationOf"
+          "value": "SysML:isSpecializationOf"
         },
         {
           "class": "PC-Text",
-          "value": "<p>An [[FMC:Actor]] is a specialisation of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>"
+          "value": "<p>An [[FMC:Actor]] is a specialization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>"
         },
         {
           "class": "PC-Origin",
@@ -2886,15 +2886,15 @@
     },
     {
       "id": "R-isAssociatedWith",
-      "changedAt": "2018-02-17T14:51:49+01:00",
-      "title": "SpecIF:isAssociatedWith",
+      "changedAt": "2021-01-12T23:14:38.283Z",
+      "title": "SysML:isAssociatedWith",
+      "description": "A [[FMC:State]] is associated with another [[FMC:State]] (e.g. a class is associated with another class, as shown in a UML Class Diagram).",
       "revision": "36",
-      "changedBy": "od",
       "class": "RC-PredicateTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SpecIF:isAssociatedWith"
+          "value": "SysML:isAssociatedWith"
         },
         {
           "class": "PC-Text",
@@ -4056,7 +4056,7 @@
         },
         {
           "class": "PC-Text",
-          "value": "<p>An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.</p>"
+          "value": "<p>An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.</p>"
         },
         {
           "class": "PC-Origin",
@@ -4384,8 +4384,8 @@
       "revision": "195",
       "changedBy": "od",
       "class": "SC-isAntonymousPredicate",
-      "subject": "R-isGeneralisationOf",
-      "object": "R-isSpecialisationOf"
+      "subject": "R-isGeneralizationOf",
+      "object": "R-isSpecializationOf"
     },
     {
       "id": "S-e83R47P87bSg4tpnNWkGjReGEpO",
@@ -4920,13 +4920,13 @@
             {
               "id": "N-rFgSojoH8KY2IPsmY49TGtgVWnd",
               "changedAt": "2019-05-30T14:52:25+01:00",
-              "resource": "R-isSpecialisationOf",
+              "resource": "R-isSpecializationOf",
               "revision": "114"
             },
             {
               "id": "N-qEgSojoH8KY2IPsmY49TGtgVWmc",
               "changedAt": "2019-05-30T14:52:25+01:00",
-              "resource": "R-isGeneralisationOf",
+              "resource": "R-isGeneralizationOf",
               "revision": "114"
             },
             {
