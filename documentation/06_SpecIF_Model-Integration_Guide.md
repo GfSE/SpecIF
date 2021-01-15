@@ -19,6 +19,8 @@ An explanation in detail is given in a tutorial [Very simple model using FMC](ht
 
 For introduction to BPMN, see the [BPMN 2.0 Symbol Reference](https://camunda.com/de/bpmn/bpmn-2-0-symbol-reference/), for example.
 
+### Resources
+
 | FMC:Actor | FMC:State | FMC:Event | SpecIF:Collection |
 | --- | --- | --- | --- |
 | laneSet | dataObjectReference<sup>3</sup> | startEvent | group |
@@ -88,12 +90,18 @@ The full example can be inspected, here:
 - [Telephone Connection Request (specif)](https://specif.de/examples/Tel-Connection-Req.specif)
 - [Telephone Connection Request (SpecIF-Viewer)](https://specif.de/apps/view#import=../examples/Tel-Connection-Req.specif.zip)
 
+### Statements
+
+_{ToDo}_
+
 ### Transformation Code
 Here you may look at the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).
 
 ## Archimate-SpecIF mapping
 
 _{ToDo}_
+
+### Resources
 
 | FMC:Actor | FMC:State | FMC:Event | SpecIF:Collection |
 | --- | --- | --- | --- |
@@ -111,6 +119,10 @@ _{ToDo}_
 |  |  |  |  |
 
 The original model element type is stored in a property named _dcterms:type_. 
+
+### Statements
+
+_{ToDo}_
 
 ### Example
 
