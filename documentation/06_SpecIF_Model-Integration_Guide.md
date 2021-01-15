@@ -6,7 +6,7 @@ Please refer to the [tutorials](https://github.com/GfSE/SpecIF/tree/master/tutor
 
 ## FMC-SpecIF mapping
 
-For introduction to FMC, see the [FMC Overview](http://f-m-c.org/).
+For introduction to the Fundamental Modelling Concepts (FMC), see the [FMC Overview](http://f-m-c.org/).
 
 The mapping of FMC model element types to SpecIF is straight forward, as SpecIF uses the FMC model element types to integrate models of different notations.
 Thus, FMC Actors, States and Events are directly mapped to FMC:Actor, FMC:State and FMC:Event respectively.
@@ -17,7 +17,7 @@ An explanation in detail is given in a tutorial [Very simple model using FMC](ht
 
 ## BPMN-SpecIF mapping
 
-For introduction to BPMN, see the [BPMN 2.0 Symbol Reference](https://camunda.com/de/bpmn/bpmn-2-0-symbol-reference/), for example.
+For introduction to the Business Process Model and Notation (BPMN), see the [BPMN 2.0 Symbol Reference](https://camunda.com/de/bpmn/bpmn-2-0-symbol-reference/), for example.
 
 ### Resources
 
