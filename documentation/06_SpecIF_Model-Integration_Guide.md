@@ -21,7 +21,7 @@ For introduction to the Business Process Model and Notation (BPMN), see the [BPM
 
 ### Resources
 
-| FMC:Actor | FMC:State | FMC:Event | SpecIF:Collection |
+| [FMC:Actor](https://specif.de/apps/edit#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) | [FMC:State](https://specif.de/apps/edit#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) | [FMC:Event](https://specif.de/apps/edit#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) | [SpecIF:Collection](https://specif.de/apps/edit#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 | --- | --- | --- | --- |
 | laneSet | dataObjectReference<sup>3</sup> | startEvent | group |
 | lane<sup>1</sup> | dataStoreReference<sup>3</sup> | intermediateThrowEvent |  |
@@ -92,7 +92,7 @@ The following excerpt from BPMN-XML representing a task and a sequenceFlow:
 The full example can be inspected, here:
 - [Telephone Connection Request (BPMN-XML)](https://specif.de/examples/Tel-Connection-Req.bpmn)
 - [Telephone Connection Request (specif)](https://specif.de/examples/Tel-Connection-Req.specif)
-- [Telephone Connection Request (SpecIF-Viewer)](https://specif.de/apps/view#import=../examples/Tel-Connection-Req.specif.zip)
+- [Telephone Connection Request (SpecIF-Viewer)](https://specif.de/apps/view#import=../examples/Tel-Connection-Req.bpmn)
 
 ### Transformation Code
 Here you may look at the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).
