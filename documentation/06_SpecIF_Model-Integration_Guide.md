@@ -47,6 +47,10 @@ Comments:
 1. A forking exclusive or inclusive gateway is transformed to an Actor plus an Event per outgoing path.
 1. Interestingly enough, in BPMN the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_. Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
 
+### Statements
+
+_{ToDo}_
+
 ### Example
 
 The following excerpt from BPMN-XML representing a task and a sequenceFlow:
@@ -89,10 +93,6 @@ The full example can be inspected, here:
 - [Telephone Connection Request (BPMN-XML)](https://specif.de/examples/Tel-Connection-Req.bpmn)
 - [Telephone Connection Request (specif)](https://specif.de/examples/Tel-Connection-Req.specif)
 - [Telephone Connection Request (SpecIF-Viewer)](https://specif.de/apps/view#import=../examples/Tel-Connection-Req.specif.zip)
-
-### Statements
-
-_{ToDo}_
 
 ### Transformation Code
 Here you may look at the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).
