@@ -50,6 +50,16 @@ Comments:
 ### Statements
 
 At present, the following statements are derived from BPMN diagrams, where the _statement terms_ (_predicates_) are highlighted in _italics_:
+- diagram _SpecIF:shows_ model-element
+- task _SpecIF:reads_ data
+- task _SpecIF:writes_ data
+- ...
+
+Where:
+- 'model-element' is one of ['FMC:Actor', 'FMC:State', 'FMC:Event']
+- 'task' is ..
+- 'data' is one of []
+ 
 _{ToDo}_
 
 ### Example
