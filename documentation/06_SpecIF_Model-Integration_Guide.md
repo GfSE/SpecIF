@@ -76,28 +76,28 @@ The following excerpt from BPMN-XML representing a task and a sequenceFlow:
 
 ... is transformed to a SpecIF resource and statement, as follows:
 ```
-{
-    "id":"Activity_0spdj4v",
-    "title":"Drink a beer",
-    "class":"RC-Actor",
-    "properties":[{
-        "class":"PC-Type",
-        "value":"bpmn:userTask"
-    }],
-    "changedAt":"2020-05-23T20:06:54.000Z"
-}
+    {
+        "id":"Activity_0spdj4v",
+        "title":"Drink a beer",
+        "class":"RC-Actor",
+        "properties":[{
+            "class":"PC-Type",
+            "value":"bpmn:userTask"
+        }],
+        "changedAt":"2020-05-23T20:06:54.000Z"
+    }
 ...
-{
-    "id":"Flow_1to3p2q",
-    "class":"SC-signals",
-    "subject":"Activity_0spdj4v",
-    "object":"Event_0hukwut",
-    "properties":[{
-        "class":"PC-Type",
-        "value":"bpmn:sequenceFlow"
-    }],
-    "changedAt":"2020-05-23T20:06:54.000Z"
-}
+    {
+        "id":"Flow_1to3p2q",
+        "class":"SC-signals",
+        "subject":"Activity_0spdj4v",
+        "object":"Event_0hukwut",
+        "properties":[{
+            "class":"PC-Type",
+            "value":"bpmn:sequenceFlow"
+        }],
+        "changedAt":"2020-05-23T20:06:54.000Z"
+    }
 ```
 
 The full example can be inspected, here:
