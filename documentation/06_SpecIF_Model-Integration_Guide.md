@@ -43,9 +43,9 @@ For introduction to the Business Process Model and Notation (BPMN), see the [BPM
 The original model element type (BPMN-XML tag) is stored in a property named _dcterms:type_. 
 
 Comments:
-1. A lane is considered a responsible person or role, thus an Actor.
-1. A forking exclusive or inclusive gateway is transformed to an Actor plus an Event per outgoing path.
-1. Interestingly enough, in BPMN the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_. Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
+1. A lane is considered a responsible person or role, thus a FMC:Actor.
+1. A forking exclusive or inclusive gateway is transformed to an FMC:Actor plus an FMC:Event per outgoing path.
+1. Interestingly enough, in BPMN the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_ (rather than _dataObject_ resp _dataStore_). Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
 
 ### Statements
 
@@ -132,6 +132,8 @@ _{ToDo}_
 The original model element type is stored in a property named _dcterms:type_. 
 
 ### Statements
+
+At present, the following statements are derived from Archimate diagrams, where the _statement terms_ (_predicates_) are highlighted in _italics_:
 
 _{ToDo}_
 
