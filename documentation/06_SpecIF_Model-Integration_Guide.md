@@ -1,4 +1,4 @@
-# SpecIF Application Guides
+# SpecIF Model-Integration Guide
 
 The mapping of model elements of different notations to SpecIF is discussed in this chapter. 
 A general introduction is given in [Model-Integration with SpecIF](https://specif.de/files/SpecIF/documents/2019-11-24%20Model-Integration%20with%20SpecIF).
