@@ -49,6 +49,7 @@ Comments:
 
 ### Statements
 
+At present, the following statements are derived from BPMN diagrams, where the _statement terms_ (_predicates_) are highlighted in _italics_:
 _{ToDo}_
 
 ### Example
@@ -103,7 +104,7 @@ _{ToDo}_
 
 ### Resources
 
-| FMC:Actor | FMC:State | FMC:Event | SpecIF:Collection |
+| [FMC:Actor](https://specif.de/apps/edit#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) | [FMC:State](https://specif.de/apps/edit#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) | [FMC:Event](https://specif.de/apps/edit#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) | [SpecIF:Collection](https://specif.de/apps/edit#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 | --- | --- | --- | --- |
 |  | Goal | BusinessEvent | Location |
 |  | Capability | ApplicationEvent | Grouping |
