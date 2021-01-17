@@ -26,7 +26,7 @@ For introduction to the Business Process Model and Notation (BPMN), see the [BPM
 | participant, laneSet, lane<sup>1</sup>, task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess, parallelGateway, exclusiveGateway<sup>2</sup>, inclusiveGateway<sup>2</sup>, eventBasedGateway | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) |
 | dataObjectReference<sup>3</sup>, dataStoreReference<sup>3</sup>, messageFlow<sup>4</sup> | [FMC:State](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) |
 | startEvent, intermediateThrowEvent, intermediateCatchEvent, boundaryEvent, endEvent | [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) |
-| group | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
+| group<sup>5</sup> | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 
 The original model element type (BPMN-XML tag) is stored in a property named _dcterms:type_. 
 
@@ -35,25 +35,28 @@ Comments:
 1. A forking exclusive or inclusive gateway is transformed to an FMC:Actor plus an FMC:Event per outgoing path.
 1. Interestingly enough, in BPMN the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_ (rather than _dataObject_ or _dataStore_). Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
 1. A messageFlow between different processes is transformed to a dataObject with SpecIF:writes and SpecIF:reads statements connecting to the sending resp. receiving process steps or events.
+1. Currently a group is not represented as a SpecIF model-element, because some widely used BPMN modelers do not indicate in the BPMN-XML representation, which activities or other are contained. Thus, a group is without semantic value and therefore omitted. The diagram could be a graphically analyzed to identify any contained elements, of course.
 
 ### Statements
 
 At present, the following statements are derived from BPMN diagrams, where the _statement terms_ (_predicates_) are highlighted in _italics_:
 - diagram _SpecIF:shows_ model-element
-- task _SpecIF:reads_ data
-- task _SpecIF:writes_ data
-- ...
+- process _SpecIF:contains_ lane
+- activity _SpecIF:reads_ data ('dataInputAssociation')
+- activity _SpecIF:writes_ data ('dataOutputAssociation')
+- activity _SpecIF:precedes_ activity ('sequenceFlow')
+- event _SpecIF:triggers_ activity ('outgoing' with respect to the event)
+- activity _SpecIF:signals_ event ('incoming' with respect to the event)
+- annotation _SpecIF:refersTo_ model-element
 
 Where:
-- 'model-element' is one of ['FMC:Actor', 'FMC:State', 'FMC:Event']
-- 'task' is ..
-- 'data' is one of []
+- 'model-element' is one of [ 'FMC:Actor', 'FMC:State', 'FMC:Event' ]
+- 'activity' is one of [ task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess ], thus an FMC:Actor
+- 'data' is one of [ dataObjectReference, dataStoreReference ], thus a FMC:State
  
-_{ToDo}_
-
 ### Example
 
-The following excerpt from BPMN-XML representing a task and a sequenceFlow:
+The following excerpt from BPMN-XML representing an activity and a sequenceFlow:
 ```
     <bpmn:userTask id="Activity_0spdj4v" name="Drink a beer">
       <bpmn:incoming>Flow_0ze546v</bpmn:incoming>
