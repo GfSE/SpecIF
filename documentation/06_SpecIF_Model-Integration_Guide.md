@@ -42,6 +42,7 @@ Comments:
 At present, the following statements are derived from BPMN diagrams, where the _statement terms_ (_predicates_) are highlighted in _italics_:
 - diagram _SpecIF:shows_ model-element
 - process _SpecIF:contains_ lane
+- lane _SpecIF:contains_ activity or event
 - activity _SpecIF:reads_ data ('dataInputAssociation')
 - activity _SpecIF:writes_ data ('dataOutputAssociation')
 - activity _SpecIF:precedes_ activity ('sequenceFlow')
