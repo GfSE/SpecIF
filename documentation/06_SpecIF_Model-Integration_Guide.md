@@ -24,7 +24,7 @@ For introduction to the Business Process Model and Notation (BPMN), see the [BPM
 | [BPMN-XML](https://www.omg.org/spec/BPMN/2.0/About-BPMN/) | [SpecIF](https://specif.de) |
 | --- | --- |
 | participant, laneSet, lane<sup>1</sup>, task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess, parallelGateway, exclusiveGateway<sup>2</sup>, inclusiveGateway<sup>2</sup>, eventBasedGateway | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) |
-| dataObjectReference<sup>3</sup>, dataStoreReference<sup>3</sup> | [FMC:State](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) |
+| dataObjectReference<sup>3</sup>, dataStoreReference<sup>3</sup>, messageFlow<sup>4</sup> | [FMC:State](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) |
 | startEvent, intermediateThrowEvent, intermediateCatchEvent, boundaryEvent, endEvent | [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) |
 | group | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 
@@ -34,6 +34,7 @@ Comments:
 1. A lane is considered a responsible person or role, thus an FMC:Actor.
 1. A forking exclusive or inclusive gateway is transformed to an FMC:Actor plus an FMC:Event per outgoing path.
 1. Interestingly enough, in BPMN the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_ (rather than _dataObject_ or _dataStore_). Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
+1. A messageFlow between different processes is transformed to a dataObject with SpecIF:writes and SpecIF:reads statements connecting to the sending resp. receiving process steps or events.
 
 ### Statements
 
