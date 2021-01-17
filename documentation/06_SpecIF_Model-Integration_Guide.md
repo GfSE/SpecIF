@@ -8,8 +8,14 @@ Please refer to the [tutorials](https://github.com/GfSE/SpecIF/tree/master/tutor
 
 For introduction to the Fundamental Modelling Concepts (FMC), see the [FMC Overview](http://f-m-c.org/).
 
+### Resources
+
 The mapping of FMC model element types to SpecIF is straight forward, as SpecIF uses the FMC model element types to integrate models of different notations.
 Thus, FMC Actors, States and Events are directly mapped to FMC:Actor, FMC:State and FMC:Event respectively.
+
+### Statements
+
+_{ToDo}_
 
 ### Example
 
@@ -34,8 +40,8 @@ Comments:
 1. A lane is considered a responsible person or role, thus an FMC:Actor.
 1. A forking exclusive or inclusive gateway is transformed to an FMC:Actor plus an FMC:Event per outgoing path.
 1. Interestingly enough, in BPMN the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_ (rather than _dataObject_ or _dataStore_). Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
-1. A messageFlow between different processes is transformed to a dataObject with SpecIF:writes and SpecIF:reads statements connecting to the sending resp. receiving process steps or events.
-1. Currently a group is not represented as a SpecIF model-element, because some widely used BPMN modelers do not indicate in the BPMN-XML representation, which activities or other are contained. Thus, a group is without semantic value and therefore omitted. The diagram could be a graphically analyzed to identify any contained elements, of course.
+1. A messageFlow between different processes is transformed to a _dataObject_ with _SpecIF:writes_ and _SpecIF:reads statements_ connecting to the sending resp. receiving process steps or events.
+1. Currently a _group_ is not represented as a SpecIF model-element, because some widely used BPMN modelers do not indicate in the BPMN-XML representation, which activities or other are contained. Thus, a group is without semantic value and therefore omitted. The diagram could be a graphically analyzed to identify any contained elements, of course.
 
 ### Statements
 
