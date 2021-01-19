@@ -4,7 +4,7 @@ The mapping of model elements of different notations to SpecIF is discussed in t
 A general introduction is given in [Model-Integration with SpecIF](https://specif.de/files/SpecIF/documents/2019-11-24%20Model-Integration%20with%20SpecIF).
 Please refer to the [tutorials](https://github.com/GfSE/SpecIF/tree/master/tutorials) for an explanation of SpecIF resources and statements with their respective classes.
 
-The [model-element classes and eligible statement classes](https://github.com/GfSE/SpecIF/blob/master/documentation/images/ElementTypes-M0.png) used for model-integration are shown:
+The ![model-element classes and eligible statement classes](https://github.com/GfSE/SpecIF/blob/master/documentation/images/ElementTypes-M0.png) used for model-integration are shown:
 
 ## FMC-SpecIF mapping
 
