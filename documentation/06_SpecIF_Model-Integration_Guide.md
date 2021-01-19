@@ -41,7 +41,7 @@ Comments:
 1. A forking exclusive or inclusive gateway is transformed to an FMC:Actor plus an FMC:Event per outgoing path.
 1. Interestingly enough, in BPMN the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_ (rather than _dataObject_ or _dataStore_). Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
 1. A messageFlow between different processes is transformed to a _dataObject_ with _SpecIF:writes_ and _SpecIF:reads statements_ connecting to the sending resp. receiving process steps or events.
-1. Currently a _group_ is not represented as a SpecIF model-element, because some widely used BPMN modelers do not indicate in the BPMN-XML representation, which activities or other are contained. Thus, a group is without semantic value and therefore omitted. The diagram could be a graphically analyzed to identify any contained elements, of course.
+1. Currently a _group_ is not represented as a SpecIF model-element, because some (or even all) widely used BPMN modelers do not indicate explicitly in their BPMN-XML export, which activities or other are contained. Thus, the semantics of a group are not easily derived. The geometric coordinates of the diagram can be analyzed to identify contained elements of a group, of course: This is a development task to do.
 
 ### Statements
 
@@ -140,4 +140,3 @@ _{ToDo}_
 ## SysML-SpecIF mapping
 
 _{ToDo}_
-
