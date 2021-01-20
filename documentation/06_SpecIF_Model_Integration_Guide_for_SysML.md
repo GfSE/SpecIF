@@ -15,7 +15,7 @@ set of types. Therefore an abstraction (or mapping) to few _fundamental_ model-e
 for equality. The model-element types of the _Fundamental Modeling Concepts (FMC)_ have been selected for this purpose,
 namely _Actor_, _State_ and _Event_. Model-elements used by every method or notation can be mapped to these [Ref].
 
-![ActivityPartition Transformation](./images/Semantic_Integration.png)
+<img src="./images/Semantic_Integration.png" maxWidth="400px" />
 
 This Application Guide shows mappings and examples for transformations from different modeling environments to SpecIF.
 
@@ -27,8 +27,8 @@ in the following three tables.
 The general idea is to map a high number of SysML elements to a small model core in SpecIF. This model core consist of the
 fundamental modeling elements Actor, State and Event and the two SpecIF-Elements SpecIF:Diagram and SpecIF:Collection. 
 Mapped elements in the mapping tables should have a matching semantic meaning, e.g. a SysML Action is 
-an active element. Regarding to the SpecIF Vocabulary (https://specif.de/apps/view.html#import=%22../examples/Vocabulary.specifz%22),
-a FMC:Actor represents a active element. Since these definitions match both elements can be added to the mapping table. 
+an active element. Regarding to the [SpecIF Vocabulary](https://specif.de/apps/view.html#import=%22../examples/Vocabulary.specifz%22),
+a FMC:Actor represents an active element. Since these definitions match both elements can be added to the mapping table. 
 
 ### Resource mapping table
 |UML-Metaclass |EA-Element.Type |SpecIF Resource Class |dcterms:type|Remark|
