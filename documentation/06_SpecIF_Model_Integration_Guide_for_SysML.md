@@ -1,11 +1,11 @@
 # SpecIF Model Integration Guide for SysML
 
 The use of SpecIF for a specific purpose is called an 'application'. An important application is to
-integrate models and other specification artefacts from different sources. Currently transformations or importers exist for  
+integrate models and other specification artefacts from different sources. Currently transformations or importers exist for 
 BPMN, Archimate, ReqIF, Excel and SysML.
 
 Transformations are in fact a mapping from elements types of 
-different modeling environments to SpecIF. In case of the SysML, the mapping relates SysML model-element types to  
+different modeling environments to SpecIF. In case of the SysML, the mapping relates SysML model-element types to 
 SpecIF model-element types. The same applies to various other applications such as BPMN and ReqIF.
 
 The integration of elements of different sources is generally done by name and type. In other words, two elements in 
@@ -15,7 +15,7 @@ set of types. Therefore an abstraction (or mapping) to few _fundamental_ model-e
 for equality. The model-element types of the _Fundamental Modeling Concepts (FMC)_ have been selected for this purpose,
 namely _Actor_, _State_ and _Event_. Model-elements used by every method or notation can be mapped to these [Ref].
 
-<img src="./images/Semantic_Integration.png" width="400px" />
+<img src="./images/Semantic_Integration.png" width="600px" />
 
 This Application Guide shows mappings and examples for transformations from different modeling environments to SpecIF.
 
