@@ -14,6 +14,7 @@ is rather simple, but checking for equal types is almost impossible, since every
 set of types. Therefore an abstraction (or mapping) to few _fundamental_ model-element types is made before checking
 for equality. The model-element types of the _Fundamental Modeling Concepts (FMC)_ have been selected for this purpose,
 namely _Actor_, _State_ and _Event_. Model-elements used by every method or notation can be mapped to these [Ref].
+
 ![ActivityPartition Transformation](./images/Semantic_Integration.png)
 
 This Application Guide shows mappings and examples for transformations from different modeling environments to SpecIF.
