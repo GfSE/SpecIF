@@ -1,10 +1,21 @@
-# SpecIF Application Guide
+# SpecIF Model Integration Guide for SysML
 
-For the usage of SpecIF, applications need to be developed. At the moment there are approaches for ReqIF, BPMN, Excel and SysML.
-Before a new application is implemented there is some work to be done. Applications require a mapping to match meta elements of 
-different modeling environments to SpecIF. In case of the SysML the mapping provides rules which SysML-Metaelement is transformed 
-to which SpecIF-Metaelements. With these mapping rules a transformation from SysML to SpecIF can be implemented. This methodology 
-can be used for various other applications such as BPMN and ReqIF.
+The use of SpecIF for a specific purpose is called an 'application'. An important application is to
+integrate models and other specification artefacts from different sources. Currently transformations or importers exist for  
+BPMN, Archimate, ReqIF, Excel and SysML.
+
+Transformations are in fact a mapping from elements types of 
+different modeling environments to SpecIF. In case of the SysML, the mapping relates SysML model-element types to  
+SpecIF model-element types. The same applies to various other applications such as BPMN and ReqIF.
+
+The integration of elements of different sources is generally done by name and type. In other words, two elements in 
+different models/notations are considered the _same_, if their names and types are equal. The checking for equal names
+is rather simple, but checking for equal types is almost impossible, since every notation and tool is using a different
+set of types. Therefore an abstraction (or mapping) to few _fundamental_ model-element types is made before checking
+for equality. The model-element types of the _Fundamental Modeling Concepts (FMC)_ have been selected for this purpose,
+namely _Actor_, _State_ and _Event_. Model-elements used by every method or notation can be mapped to these [Ref].
+![ActivityPartition Transformation](./images/Semantic_Integration.png)
+
 This Application Guide shows mappings and examples for transformations from different modeling environments to SpecIF.
 
 ## SysML to SpecIF Mapping
