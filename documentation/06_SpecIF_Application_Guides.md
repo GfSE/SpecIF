@@ -152,5 +152,3 @@ The implementation of the Transformation is accessible in the GFSE-Github (https
 |Association| SpecIF:contains/refersTo | - |
 |Sequetialflow | SpecIF:triggers/signals/precedes | - |
 |Messageflow | FMC:State + SpecIF:reads/writes | Messageflow Object is represented by FMC:State|
-
-###Examples
