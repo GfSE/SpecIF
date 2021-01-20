@@ -15,7 +15,7 @@ set of types. Therefore an abstraction (or mapping) to few _fundamental_ model-e
 for equality. The model-element types of the _Fundamental Modeling Concepts (FMC)_ have been selected for this purpose,
 namely _Actor_, _State_ and _Event_. Model-elements used by every method or notation can be mapped to these [Ref].
 
-<img src="./images/Semantic_Integration.png" maxWidth="400px" />
+<img src="./images/Semantic_Integration.png" width="400px" />
 
 This Application Guide shows mappings and examples for transformations from different modeling environments to SpecIF.
 
