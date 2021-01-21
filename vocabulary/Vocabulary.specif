@@ -3,14 +3,14 @@
   "title": "SpecIF Vocabulary",
   "$schema": "https://specif.de/v1.0/schema.json",
   "generator": "SpecIF Editor",
-  "generatorVersion": "v0.99.6.6",
+  "generatorVersion": "v0.99.6",
   "description": "The SpecIF Vocabulary (or Glossary) collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically.",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "type": "dcterms:rights",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
-  "changedAt": "2020-11-22T16:02:06.858Z",
+  "changedAt": "2021-01-12T23:20:40.564Z",
   "dataTypes": [
     {
       "id": "DT-ShortText",
@@ -39,7 +39,7 @@
       "type": "xs:dateTime"
     },
     {
-      "id": "DT-SpecIF_Status",
+      "id": "DT-TermStatus",
       "changedAt": "2017-06-10T17:30:52+02:00",
       "title": "SpecIF:Status",
       "description": "The status of the term.",
@@ -47,23 +47,23 @@
       "type": "xs:enumeration",
       "values": [
         {
-          "id": "V-SpecIF_Status-6",
+          "id": "V-TermStatus-6",
           "value": "preferred"
         },
         {
-          "id": "V-SpecIF_Status-5",
+          "id": "V-TermStatus-5",
           "value": "equivalent"
         },
         {
-          "id": "V-SpecIF_Status-3",
+          "id": "V-TermStatus-3",
           "value": "submitted"
         },
         {
-          "id": "V-SpecIF_Status-1",
+          "id": "V-TermStatus-1",
           "value": "experimental"
         },
         {
-          "id": "V-SpecIF_Status-9",
+          "id": "V-TermStatus-9",
           "value": "deprecated"
         }
       ]
@@ -92,16 +92,16 @@
       "dataType": "DT-ShortText"
     },
     {
-      "id": "PC-Status",
+      "id": "PC-TermStatus",
       "changedAt": "2017-06-10T17:32:53+02:00",
       "title": "SpecIF:Status",
       "revision": "1",
-      "dataType": "DT-SpecIF_Status"
+      "dataType": "DT-TermStatus"
     }
   ],
   "resourceClasses": [
     {
-      "id": "RC-SpecIF_Heading",
+      "id": "RC-Heading",
       "changedAt": "2017-06-10T15:47:24+02:00",
       "title": "SpecIF:Heading",
       "description": "Object type for folders",
@@ -130,7 +130,7 @@
         "PC-Name",
         "PC-Text",
         "PC-Origin",
-        "PC-Status"
+        "PC-TermStatus"
       ]
     },
     {
@@ -147,7 +147,7 @@
         "PC-Name",
         "PC-Text",
         "PC-Origin",
-        "PC-Status"
+        "PC-TermStatus"
       ]
     },
     {
@@ -164,7 +164,7 @@
         "PC-Name",
         "PC-Text",
         "PC-Origin",
-        "PC-Status"
+        "PC-TermStatus"
       ]
     },
     {
@@ -181,7 +181,7 @@
         "PC-Name",
         "PC-Text",
         "PC-Origin",
-        "PC-Status"
+        "PC-TermStatus"
       ]
     },
     {
@@ -198,9 +198,9 @@
       ]
     },
     {
-      "id": "RC-SpecIF_Hierarchy",
+      "id": "RC-Hierarchy",
       "changedAt": "2017-06-10T15:47:24+02:00",
-      "title": "SpecIF:Hierarchy",
+      "title": "SpecIF:Outline",
       "description": "Document root",
       "revision": "1",
       "isHeading": true
@@ -359,7 +359,7 @@
       "changedAt": "2018-02-17T14:52:15+01:00",
       "title": "SpecIF Vocabulary",
       "revision": "114",
-      "class": "RC-SpecIF_Hierarchy"
+      "class": "RC-Hierarchy"
     },
     {
       "id": "F-Property_Values",
@@ -367,7 +367,7 @@
       "title": "Property Values",
       "revision": "199",
       "changedBy": "od",
-      "class": "RC-SpecIF_Heading",
+      "class": "RC-Heading",
       "properties": [
         {
           "class": "PC-Name",
@@ -382,81 +382,65 @@
     {
       "id": "R-HCsjbO8uzOnwz6X1HUOT3YZKoGD",
       "changedAt": "2018-03-04T12:28:57+01:00",
-      "title": "BPMN:Timer",
+      "title": "bpmn:timer",
       "revision": "160",
       "changedBy": "od",
       "class": "RC-ValueTerm",
       "properties": [
         {
-          "class": "PC-Name",
-          "value": "BPMN:Timer"
-        },
-        {
           "class": "PC-Text",
           "value": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Actor]] when used to represent a 'Timer' element in models created with BPMN.</p>"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
     {
       "id": "R-lfOsfzREJIet1laDr1404MbiwFT",
       "changedAt": "2018-03-04T12:28:41+01:00",
-      "title": "BPMN:Join",
+      "title": "bpmn:join",
       "revision": "159",
       "changedBy": "od",
       "class": "RC-ValueTerm",
       "properties": [
         {
-          "class": "PC-Name",
-          "value": "BPMN:Join"
-        },
-        {
           "class": "PC-Text",
           "value": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Actor]] when used to represent a 'Join' element in models created with BPMN.</p>"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
     {
       "id": "R-QPZO4xEKocjeIfTodAx8zq5k5I3",
       "changedAt": "2018-03-10T09:39:08+01:00",
-      "title": "BPMN:ProcessStep",
+      "title": "bpmn:processStep",
       "revision": "175",
       "changedBy": "od",
       "class": "RC-ValueTerm",
       "properties": [
         {
-          "class": "PC-Name",
-          "value": "BPMN:ProcessStep"
-        },
-        {
           "class": "PC-Text",
           "value": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Actor]] when used to represent a process step.</p>"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
     {
       "id": "R-TLpywhxqtNxGGjd4L6KIPRR7EDd",
       "changedAt": "2018-03-10T09:46:52+01:00",
-      "title": "BPMN:EndEvent",
+      "title": "bpmn:endEvent",
       "revision": "187",
       "changedBy": "od",
       "class": "RC-ValueTerm",
       "properties": [
-        {
-          "class": "PC-Name",
-          "value": "BPMN:EndEvent"
-        },
         {
           "class": "PC-Text",
           "value": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Event]] when used to represent a general end event.</p>"
@@ -466,23 +450,19 @@
           "value": "https://camunda.com/bpmn/reference/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
     {
       "id": "R-JUck1fa8PVWlW3tSSFRyKaD5tK4",
       "changedAt": "2018-03-10T09:46:22+01:00",
-      "title": "BPMN:IntermediateEvent",
+      "title": "bpmn:intermediateEvent",
       "revision": "185",
       "changedBy": "od",
       "class": "RC-ValueTerm",
       "properties": [
-        {
-          "class": "PC-Name",
-          "value": "BPMN:IntermediateEvent"
-        },
         {
           "class": "PC-Text",
           "value": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Event]] when used to represent a general intermediate event.</p>"
@@ -492,23 +472,19 @@
           "value": "https://camunda.com/bpmn/reference/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
     {
       "id": "R-jbF2IzbCVx4LqrAkqe6N8ayxNYS",
       "changedAt": "2018-03-10T09:46:34+01:00",
-      "title": "BPMN:StartEvent",
+      "title": "bpmn:startEvent",
       "revision": "186",
       "changedBy": "od",
       "class": "RC-ValueTerm",
       "properties": [
-        {
-          "class": "PC-Name",
-          "value": "BPMN:StartEvent"
-        },
         {
           "class": "PC-Text",
           "value": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Event]] when used to represent a general start event.</p>"
@@ -518,8 +494,8 @@
           "value": "https://camunda.com/bpmn/reference/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -540,8 +516,8 @@
           "value": "<p>This is a subclass of [[FMC:Actor]]; more precisely a value of it's property [[dcterms:type]].</p>"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -566,8 +542,8 @@
           "value": "https://www.ireb.org/content/downloads/1-cpre-glossary/ireb_cpre_glossary_17.pdf"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -591,8 +567,8 @@
           "value": "https://www.ireb.org/content/downloads/1-cpre-glossary/ireb_cpre_glossary_17.pdf"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-5"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-5"
         }
       ]
     },
@@ -616,8 +592,8 @@
           "value": "https://www.ireb.org/content/downloads/1-cpre-glossary/ireb_cpre_glossary_17.pdf"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-5"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-5"
         }
       ]
     },
@@ -641,8 +617,8 @@
           "value": "https://www.ireb.org/content/downloads/1-cpre-glossary/ireb_cpre_glossary_17.pdf"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-5"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-5"
         }
       ]
     },
@@ -666,8 +642,8 @@
           "value": "https://www.ireb.org/content/downloads/1-cpre-glossary/ireb_cpre_glossary_17.pdf"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -691,8 +667,8 @@
           "value": "https://www.ireb.org/content/downloads/1-cpre-glossary/ireb_cpre_glossary_17.pdf"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -716,8 +692,8 @@
           "value": "https://www.ireb.org/content/downloads/1-cpre-glossary/ireb_cpre_glossary_17.pdf"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -737,8 +713,8 @@
           "value": "A lifecycle status of a development artefact."
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -758,8 +734,8 @@
           "value": "A lifecycle status of a development artefact."
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -779,8 +755,8 @@
           "value": "A lifecycle status of a development artefact."
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -800,8 +776,8 @@
           "value": "A lifecycle status of a development artefact."
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -821,8 +797,8 @@
           "value": "A lifecycle status of a development artefact. Meets the requirements of the \"Definition of Done\" of the agile development method."
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -842,8 +818,8 @@
           "value": "A lifecycle status of a development artefact. Meets the requirements of the \"Definition of Ready\" of the agile development method."
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -863,8 +839,8 @@
           "value": "A lifecycle status of a development artefact."
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -884,8 +860,8 @@
           "value": "A lifecycle status of a development artefact."
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -905,8 +881,8 @@
           "value": "A lifecycle status of a development artefact."
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -926,8 +902,8 @@
           "value": "A lifecycle status of a development artefact."
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -947,8 +923,8 @@
           "value": "A lifecycle status of a development artefact."
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -973,8 +949,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -999,8 +975,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -1025,8 +1001,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -1051,8 +1027,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -1077,8 +1053,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -1103,8 +1079,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -1129,8 +1105,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -1155,8 +1131,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -1181,8 +1157,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -1207,8 +1183,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -1218,7 +1194,7 @@
       "title": "Property Names",
       "revision": "169",
       "changedBy": "od",
-      "class": "RC-SpecIF_Heading",
+      "class": "RC-Heading",
       "properties": [
         {
           "class": "PC-Name",
@@ -1247,8 +1223,8 @@
           "value": "Hersteller-Initiative Software"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1269,8 +1245,8 @@
           "value": "Hersteller-Initiative Software"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1291,8 +1267,8 @@
           "value": "Hersteller-Initiative Software"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1313,8 +1289,8 @@
           "value": "Hersteller-Initiative Software"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1339,8 +1315,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -1361,8 +1337,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1387,8 +1363,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-9"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-9"
         }
       ]
     },
@@ -1413,8 +1389,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1439,8 +1415,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-9"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-9"
         }
       ]
     },
@@ -1465,8 +1441,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1491,8 +1467,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1517,8 +1493,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-9"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-9"
         }
       ]
     },
@@ -1543,8 +1519,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1565,8 +1541,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1591,8 +1567,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1613,8 +1589,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1635,8 +1611,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1661,8 +1637,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1687,8 +1663,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1713,8 +1689,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1739,8 +1715,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1761,8 +1737,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1787,8 +1763,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1813,8 +1789,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-9"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-9"
         }
       ]
     },
@@ -1838,8 +1814,8 @@
           "value": "https://www.ireb.org/content/downloads/1-cpre-glossary/ireb_cpre_glossary_17.pdf"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -1865,8 +1841,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1891,8 +1867,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-9"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-9"
         }
       ]
     },
@@ -1917,8 +1893,8 @@
           "value": "http://dublincore.org/specifications/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -1943,8 +1919,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1969,8 +1945,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -1991,8 +1967,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2083,8 +2059,8 @@
           "value": "http://dublincore.org/specifications/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2109,8 +2085,8 @@
           "value": "http://dublincore.org/specifications/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2135,8 +2111,8 @@
           "value": "http://dublincore.org/specifications/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2161,8 +2137,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2187,8 +2163,8 @@
           "value": "http://dublincore.org/specifications/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-5"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-5"
         }
       ]
     },
@@ -2213,8 +2189,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2239,8 +2215,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2265,8 +2241,8 @@
           "value": "http://dublincore.org/specifications/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-5"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-5"
         }
       ]
     },
@@ -2291,8 +2267,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2317,8 +2293,8 @@
           "value": "http://dublincore.org/specifications/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-5"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-5"
         }
       ]
     },
@@ -2343,8 +2319,8 @@
           "value": "http://dublincore.org/specifications/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2369,8 +2345,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-9"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-9"
         }
       ]
     },
@@ -2395,8 +2371,8 @@
           "value": "http://dublincore.org/specifications/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2421,8 +2397,8 @@
           "value": "http://dublincore.org/specifications/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2447,8 +2423,8 @@
           "value": "http://dublincore.org/specifications/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2458,7 +2434,7 @@
       "title": "Statement Class Names",
       "revision": "200",
       "changedBy": "od",
-      "class": "RC-SpecIF_Heading",
+      "class": "RC-Heading",
       "properties": [
         {
           "class": "PC-Name",
@@ -2491,8 +2467,8 @@
           "value": "https://www.w3.org/TR/rdf-schema/#ch_type"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2517,8 +2493,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-5"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-5"
         }
       ]
     },
@@ -2543,8 +2519,8 @@
           "value": "https://www.w3.org/TR/owl-ref"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2569,8 +2545,8 @@
           "value": "https://en.wikipedia.org/wiki/Opposite_(semantics)"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -2595,8 +2571,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-9"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-9"
         }
       ]
     },
@@ -2621,8 +2597,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2647,8 +2623,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2673,8 +2649,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2699,8 +2675,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2725,60 +2701,60 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
     {
-      "id": "R-isGeneralisationOf",
-      "changedAt": "2019-05-30T14:51:49+01:00",
-      "title": "SysML:isGeneralisationOf",
+      "id": "R-isGeneralizationOf",
+      "changedAt": "2021-01-12T23:17:50.205Z",
+      "title": "SysML:isGeneralizationOf",
+      "description": "An [[FMC:Actor]] is a generalization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].",
       "revision": "36",
-      "changedBy": "od",
       "class": "RC-PredicateTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SysML:isGeneralisationOf"
+          "value": "SysML:isGeneralizationOf"
         },
         {
           "class": "PC-Text",
-          "value": "<p>An [[FMC:Actor]] is a generalisation of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>"
+          "value": "<p>An [[FMC:Actor]] is a generalization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>"
         },
         {
           "class": "PC-Origin",
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
     {
-      "id": "R-isSpecialisationOf",
-      "changedAt": "2019-05-30T14:51:49+01:00",
-      "title": "SysML:isSpecialisationOf",
+      "id": "R-isSpecializationOf",
+      "changedAt": "2021-01-12T23:17:31.963Z",
+      "title": "SysML:isSpecializationOf",
+      "description": "An [[FMC:Actor]] is a specialization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].",
       "revision": "36",
-      "changedBy": "od",
       "class": "RC-PredicateTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SysML:isSpecialisationOf"
+          "value": "SysML:isSpecializationOf"
         },
         {
           "class": "PC-Text",
-          "value": "<p>An [[FMC:Actor]] is a specialisation of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>"
+          "value": "<p>An [[FMC:Actor]] is a specialization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>"
         },
         {
           "class": "PC-Origin",
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2803,8 +2779,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2829,8 +2805,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2851,8 +2827,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2877,8 +2853,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2903,22 +2879,22 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
     {
       "id": "R-isAssociatedWith",
-      "changedAt": "2018-02-17T14:51:49+01:00",
-      "title": "SpecIF:isAssociatedWith",
+      "changedAt": "2021-01-12T23:14:38.283Z",
+      "title": "SysML:isAssociatedWith",
+      "description": "A [[FMC:State]] is associated with another [[FMC:State]] (e.g. a class is associated with another class, as shown in a UML Class Diagram).",
       "revision": "36",
-      "changedBy": "od",
       "class": "RC-PredicateTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SpecIF:isAssociatedWith"
+          "value": "SysML:isAssociatedWith"
         },
         {
           "class": "PC-Text",
@@ -2929,8 +2905,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2955,8 +2931,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -2981,8 +2957,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3007,8 +2983,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3033,8 +3009,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3059,8 +3035,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3085,8 +3061,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3111,8 +3087,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3137,8 +3113,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3163,8 +3139,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3189,8 +3165,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -3215,8 +3191,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3241,8 +3217,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-5"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-5"
         }
       ]
     },
@@ -3267,8 +3243,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3293,8 +3269,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3319,8 +3295,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3631,8 +3607,8 @@
           "value": "http://open-services.net/bin/view/Main/RmSpecificationV2"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3657,8 +3633,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3683,8 +3659,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-5"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-5"
         }
       ]
     },
@@ -3709,8 +3685,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3735,8 +3711,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3746,7 +3722,7 @@
       "title": "Resource Class Names",
       "revision": "201",
       "changedBy": "od",
-      "class": "RC-SpecIF_Heading",
+      "class": "RC-Heading",
       "properties": [
         {
           "class": "PC-Name",
@@ -3779,8 +3755,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3805,8 +3781,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-5"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-5"
         }
       ]
     },
@@ -3831,8 +3807,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3857,8 +3833,8 @@
           "value": "http://xmlns.com/foaf/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3883,8 +3859,8 @@
           "value": "https://www.ireb.org/content/downloads/1-cpre-glossary/ireb_cpre_glossary_17.pdf"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3909,8 +3885,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -3935,23 +3911,19 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
     {
       "id": "R-VTZmZzQOMOVPCHvAQ3SZGUo9dVh",
       "changedAt": "2020-11-12T11:23:35.693Z",
-      "title": "BPMN:Group",
+      "title": "bpmn:group",
       "description": "BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. Like all BPMN 'artifacts', a group does not influence execution semantics. In PBMN, a group can be freely applied, even across pool boundaries. (source: BPMN Reference)",
       "revision": "196",
       "class": "RC-ResourceTerm",
       "properties": [
-        {
-          "class": "PC-Name",
-          "value": "BPMN:Group"
-        },
         {
           "class": "PC-Text",
           "value": "<p>BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. Like all BPMN 'artifacts', a group does not influence execution semantics. In PBMN, a group can be freely applied, even across pool boundaries. <small>(<i>source: <a href=\"https://camunda.com/bpmn/reference/#overview\">BPMN Reference</a></i>)</small></p>"
@@ -3961,8 +3933,8 @@
           "value": "https://camunda.com/bpmn/reference/"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -3970,7 +3942,7 @@
       "id": "R-g1Ghq3cGM7c3By1DQKNLFynTHBX",
       "changedAt": "2020-11-12T10:10:41.507Z",
       "title": "SpecIF:Collection",
-      "description": "A 'Collection' is a logic (often conceptual) group of resources linked with a [[SpecIF:contains]] statement. It corresponds to a 'Group' in BPMN Diagrams.BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. (source: BPMN Tool)",
+      "description": "A 'Collection' is a logic (often conceptual) group of resources linked with a [[SpecIF:contains]] statement. It corresponds to a 'Group' in BPMN Diagrams. BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. (source: BPMN Tool)",
       "revision": "143",
       "class": "RC-ResourceTerm",
       "properties": [
@@ -3987,8 +3959,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-1"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-1"
         }
       ]
     },
@@ -4013,8 +3985,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -4039,8 +4011,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -4065,8 +4037,8 @@
           "value": "https://www.ireb.org/content/downloads/1-cpre-glossary/ireb_cpre_glossary_17.pdf"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -4084,15 +4056,15 @@
         },
         {
           "class": "PC-Text",
-          "value": "<p>An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.</p>"
+          "value": "<p>An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.</p>"
         },
         {
           "class": "PC-Origin",
           "value": "http://fmc-modeling.org/ "
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -4117,8 +4089,8 @@
           "value": "http://fmc-modeling.org/ "
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -4136,15 +4108,15 @@
         },
         {
           "class": "PC-Text",
-          "value": "<p>An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.</p><p>It is advised to specify the particular use of FMC:Actor with a [[dcterms:type]] property. The values of that property can be defined terms, such as [[BPMN:Timer]].</p>"
+          "value": "<p>An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.</p><p>It is advised to specify the particular use of FMC:Actor with a [[dcterms:type]] property. The values of that property can be defined terms, such as [[bpmn:timer]].</p>"
         },
         {
           "class": "PC-Origin",
           "value": "http://fmc-modeling.org/ "
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -4169,8 +4141,8 @@
           "value": "http://fmc-modeling.org/ "
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-5"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-5"
         }
       ]
     },
@@ -4195,8 +4167,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-9"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-9"
         }
       ]
     },
@@ -4221,8 +4193,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -4247,8 +4219,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -4273,8 +4245,8 @@
           "value": "http://specif.de"
         },
         {
-          "class": "PC-Status",
-          "value": "V-SpecIF_Status-6"
+          "class": "PC-TermStatus",
+          "value": "V-TermStatus-6"
         }
       ]
     },
@@ -4284,7 +4256,7 @@
       "title": "Introduction",
       "revision": "149",
       "changedBy": "od",
-      "class": "RC-SpecIF_Heading",
+      "class": "RC-Heading",
       "properties": [
         {
           "class": "PC-Name",
@@ -4412,8 +4384,8 @@
       "revision": "195",
       "changedBy": "od",
       "class": "SC-isAntonymousPredicate",
-      "subject": "R-isGeneralisationOf",
-      "object": "R-isSpecialisationOf"
+      "subject": "R-isGeneralizationOf",
+      "object": "R-isSpecializationOf"
     },
     {
       "id": "S-e83R47P87bSg4tpnNWkGjReGEpO",
@@ -4948,13 +4920,13 @@
             {
               "id": "N-rFgSojoH8KY2IPsmY49TGtgVWnd",
               "changedAt": "2019-05-30T14:52:25+01:00",
-              "resource": "R-isSpecialisationOf",
+              "resource": "R-isSpecializationOf",
               "revision": "114"
             },
             {
               "id": "N-qEgSojoH8KY2IPsmY49TGtgVWmc",
               "changedAt": "2019-05-30T14:52:25+01:00",
-              "resource": "R-isGeneralisationOf",
+              "resource": "R-isGeneralizationOf",
               "revision": "114"
             },
             {
