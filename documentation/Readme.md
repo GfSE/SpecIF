@@ -10,5 +10,5 @@ This document describes the release version 1.0 of the *Specification Integratio
 3. [SpecIF JSON-Schema](./03_SpecIF_JSON-Schema.md)
 4. [SpecIF Class Definitions](./04_SpecIF_Class_Definitions.md)
 5. [SpecIF Web API](./05_SpecIF_Web_API.md)
-6. [SpecIF Application Guides](./06_SpecIF_Application_Guides.md)
+6. [SpecIF Model Integration Guide for SysML](./06_SpecIF_Model_Integration_Guide_for_SysML.md)
 7. [License](./07_License.md)
