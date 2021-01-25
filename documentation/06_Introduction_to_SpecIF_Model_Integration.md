@@ -21,7 +21,7 @@ namely _Actor_, _State_ and _Event_. Model-elements used by every method or nota
 <img src="./images/Semantic_Integration.png" width="600px" />
 
 The fundamental model-element classes and eligible statement classes used for model-integration are shown:
-![model-element classes and eligible statement classes](https://github.com/GfSE/SpecIF/blob/master/documentation/images/ElementTypes-M0.png)
+<img src="./images/ElementTypes-M0.png" width="600px" />
 
 The following sections of the SpecIF Model Integration Guide shows mappings and examples for transformations from different modeling environments to SpecIF:
 
