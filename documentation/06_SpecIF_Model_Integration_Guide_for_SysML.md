@@ -1,6 +1,7 @@
 # SpecIF Model Integration Guide for SysML
 
 ## SysML to SpecIF Mapping
+
 The mapping from SysML to SpecIF is discussed in a working group. At the moment there is a sketch for a mapping of 
 SysML- to SpecIF-Elements. This Mapping Table is not released and still in discussion. It consists of a resource-, property-
 and statement-mapping and only contains elements that are used in activity and block definition diagrams. The mapping is shown
