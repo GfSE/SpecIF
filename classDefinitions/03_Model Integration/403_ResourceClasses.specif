@@ -185,7 +185,7 @@
       "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
       "revision": "1",
       "replaces": [],
-      "icon": "&#9830;",
+      "icon": "&#11047;",
       "isHeading": false,
       "instantiation": [
         "auto"
@@ -225,6 +225,53 @@
         }
       ],
       "changedAt": "2019-09-10T08:59:00+02:00"
+    },
+    {
+      "id": "RC-Collection",
+      "title": "SpecIF:Collection",
+      "description": "A 'Collection' is a logic (often conceptual) group of resources linked with a SpecIF:contains statement. It corresponds to a 'Group' in BPMN Diagrams.",
+      "revision": "1",
+      "replaces": [],
+      "icon": "&#11034;",
+      "isHeading": false,
+      "instantiation": [
+        "auto"
+      ],
+      "propertyClasses": [
+        {
+          "id": "PC-Name",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Description",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Status",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Visibility",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Type",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Stereotype",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Value",
+          "revision": "1"
+        },
+        {
+          "id": "PC-Alias",
+          "revision": "1"
+        }
+      ],
+      "changedAt": "2021-01-02T018:59:00+02:00"
     }
   ],
   "statementClasses": [],

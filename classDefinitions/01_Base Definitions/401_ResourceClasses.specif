@@ -1,97 +1,100 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_4ABD7538_8721_4FE3-AACA_968F5D625CCA",
-  "title": "Resource classes for domain 01_Base Definitions",
-  "isExtension": true,
-  "createdAt": "2020-02-16T19:54:35.141794+01:00",
-  "dataTypes": [],
-  "propertyClasses": [],
-  "resourceClasses": [
-    {
-      "id": "RC-Folder",
-      "title": "SpecIF:Heading",
-      "description": "Folders with title and text for chapters or descriptive paragraphs.",
-      "revision": "1",
-      "replaces": [],
-      "isHeading": true,
-      "instantiation": [
-        "user"
-      ],
-      "propertyClasses": [
+    "$schema": "https://specif.de/v1.0/schema.json",
+    "id": "_4ABD7538_8721_4FE3-AACA_968F5D625CCA",
+    "title": "Resource classes for domain 01_Base Definitions",
+    "isExtension": true,
+    "createdAt": "2020-02-16T19:54:35.141794+01:00",
+    "dataTypes": [],
+    "propertyClasses": [],
+    "resourceClasses": [
         {
-          "id": "PC-Name",
-          "revision": "1"
+            "id": "RC-Folder",
+            "title": "SpecIF:Heading",
+            "description": "Folders with title and text for chapters or descriptive paragraphs.",
+            "revision": "1",
+            "replaces": [],
+            "icon": "H",
+            "isHeading": true,
+            "instantiation": [
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Name",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Type",
+                    "revision": "1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "PC-Description",
-          "revision": "1"
+            "id": "RC-Paragraph",
+            "title": "SpecIF:Paragraph",
+            "description": "Information with title and text for descriptive paragraphs.",
+            "revision": "1",
+            "replaces": [],
+            "icon": "P",
+            "isHeading": false,
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Description",
+                    "revision": "1"
+                }
+            ],
+            "changedAt": "2019-03-16T18:59:00+01:00"
         },
         {
-          "id": "PC-Type",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "RC-Paragraph",
-      "title": "SpecIF:Paragraph",
-      "description": "Information with title and text for descriptive paragraphs.",
-      "revision": "1",
-      "replaces": [],
-      "isHeading": false,
-      "instantiation": [
-        "auto",
-        "user"
-      ],
-      "propertyClasses": [
-        {
-          "id": "PC-Description",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2019-03-16T18:59:00+01:00"
-    },
-    {
-      "id": "RC-Hierarchy",
-      "title": "SpecIF:Hierarchy",
-      "description": "Root node of a hierarchically organized specification (outline).",
-      "revision": "1",
-      "replaces": [],
-      "isHeading": false,
-      "propertyClasses": [
-        {
-          "id": "PC-Name",
-          "revision": "1"
+            "id": "RC-Hierarchy",
+            "title": "SpecIF:Hierarchy",
+            "description": "Root node of a hierarchically organized specification (outline).",
+            "revision": "1",
+            "replaces": [],
+            "icon": "&#128447;",
+            "isHeading": false,
+            "propertyClasses": [
+                {
+                    "id": "PC-Name",
+                    "revision": "1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "PC-Description",
-          "revision": "1"
+            "id": "RC-Comment",
+            "title": "SpecIF:Comment",
+            "description": "Comment referring to a model element ('resource' in general).",
+            "revision": "1",
+            "replaces": [],
+            "isHeading": false,
+            "instantiation": [
+                "auto"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Description",
+                    "revision": "1"
+                }
+            ],
+            "changedAt": "2019-03-16T18:59:00+01:00"
         }
-      ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "RC-Comment",
-      "title": "SpecIF:Comment",
-      "description": "Comment referring to a model element ('resource' in general).",
-      "revision": "1",
-      "replaces": [],
-      "isHeading": false,
-      "instantiation": [
-        "auto"
-      ],
-      "propertyClasses": [
-        {
-          "id": "PC-Description",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2019-03-16T18:59:00+01:00"
-    }
-  ],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

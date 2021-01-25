@@ -114,7 +114,6 @@ Let us have a look at the full example, now:
         "title": "Minimum button size",
         "class": "RC-Requirement",
         "properties": [{
-            "title": "dcterms:title",
             "class": "PC-Name",
             "value": "Minimum button size"
         },{

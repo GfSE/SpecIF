@@ -1,4 +1,28 @@
-# SpecIF Model Integration Guide for BPMN
+# SpecIF Model-Integration Guide
+
+The mapping of model elements of different notations to SpecIF is discussed in this chapter. 
+A general introduction is given in [Model-Integration with SpecIF](https://specif.de/files/SpecIF/documents/2019-11-24%20Model-Integration%20with%20SpecIF).
+Please refer to the [tutorials](https://github.com/GfSE/SpecIF/tree/master/tutorials) for an explanation of SpecIF resources and statements with their respective classes.
+
+The fundamental model-element classes and eligible statement classes used for model-integration are shown:
+![model-element classes and eligible statement classes](https://github.com/GfSE/SpecIF/blob/master/documentation/images/ElementTypes-M0.png)
+
+## FMC-SpecIF mapping
+
+For introduction to the Fundamental Modelling Concepts (FMC), see the [FMC Overview](http://f-m-c.org/).
+
+### Resources
+
+The mapping of FMC model element types to SpecIF is straight forward, as SpecIF uses the FMC model element types to integrate models of different notations.
+Thus, FMC Actors, States and Events are directly mapped to FMC:Actor, FMC:State and FMC:Event respectively.
+
+### Statements
+
+_{ToDo}_
+
+### Example
+
+An explanation in detail is given in a tutorial [Very simple model using FMC](https://github.com/GfSE/SpecIF/blob/master/tutorials/06_Very-Simple-Model-FMC.md).
 
 ## BPMN-SpecIF mapping
 
@@ -86,33 +110,36 @@ The full example can be inspected, here:
 ### Transformation Code
 Here you may look at the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).
 
-## BPMN to SpecIF Mapping
+## Archimate-SpecIF mapping
 
-_{ to be consolidated with the above }_
+_{ToDo}_
 
-A Mapping for BPMN to SpecIF was developed in the Masterthesis of Robert Kanitz. The following Mapping Table shows the Mapping between BPMN- and SpecIF-Elements.
-The implementation of the Transformation is accessible in the GFSE-Github (https://github.com/GfSE/BPMN-SpecIF-Bridge). 
+### Resources
 
-### BPMN to SpecIF mapping table
-|BPMN-Element | SpecIF-Element | Remark|
-| ------------- |:-------------:| -----------:|
-|Process| SpecIF:Diagram | SpecIF:Diagram and SpecIF:shows Statements for Elements belonging to the diagram|
-|Start-, interim-, endevent | FMC:Event |-|
-|Time or message event| FMC:Event | -|
-|Activity | FMC:Actor |-|
-|Parallel Gateway (Seperation) | Statements | Statements between incoming and outgoing Elements|
-|Parallel Gateway (Merge) | FMC:Actor | Actor with waiting function|
-|Exclusive Gateway (Seperation)| FMC:Actor + FMC:Event + SpecIF:signals| Events for different Activityflows|
-|Exclusive Gateway (Merge)| Statements | Statements between incoming and outgoing Elements|
-|Group| SpecIF:Collection | - |
-|Pool| FMC:Actor | Additional SpecIF:contains Statements for Elements that are contained by the Pool|
-|Lane| FMC:Actor | Additional SpecIF:contains Statements for Elements that are contained by the Lane|
-|Dataobject| FMC:State | - |
-|Datainput| FMC:State | - |
-|Dataoutput| FMC:State | - |
-|Datastorage| FMC:State | - |
-|Annotation| SpecIF:Note | - |
-|-|-|-|
-|Association| SpecIF:contains/refersTo | - |
-|Sequetialflow | SpecIF:triggers/signals/precedes | - |
-|Messageflow | FMC:State + SpecIF:reads/writes | Messageflow Object is represented by FMC:State|
+| [Archimate Open Exchange (XML)](https://www.opengroup.org/xsd/archimate/) | [SpecIF](https://specif.de) |
+| --- | --- |
+| BusinessActor, BusinessRole, BusinessCollaboration, BusinessInterface, BusinessProcess, BusinessFunction, BusinessInteraction, BusinessService, ApplicationComponent, ApplicationCollaboration, ApplicationInterface, ApplicationFunction, ApplicationInteraction, ApplicationProcess, ApplicationService, Node, Equipment, Facility, DistributionNetwork, Device, SystemSoftware, TechnologyCollaboration, TechnologyInterface, Path, CommunicationNetwork, TechnologyFunction, TechnologyProcess, TechnologyInteraction, TechnologyService, OrJunction, AndJunction | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) |
+| Goal, Capability, Contract, Representation, Artefact, Product, BusinessObject, DataObject | [FMC:State](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) |
+| BusinessEvent, ApplicationEvent, TechnologyEvent | [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) |
+| Location, Grouping | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
+
+The original model element type is stored in a property named _dcterms:type_. 
+
+### Statements
+
+At present, the following statements are derived from Archimate diagrams, where the _statement terms_ (_predicates_) are highlighted in _italics_:
+
+_{ToDo}_
+
+### Example
+
+### Transformation Code
+Here you may look at the current code of the [Archimate to SpecIF transformation](https://github.com/GfSE/Archimate-SpecIF-Bridge/blob/master/source/js/archimate2SpecIF.js).
+
+## UML-SpecIF mapping
+
+_{ToDo}_
+
+## SysML-SpecIF mapping
+
+_{ToDo}_

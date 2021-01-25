@@ -21,9 +21,9 @@ The following list shows the currently defined domains and their IDs:
 
 |Domain ID|Domain|Description|Release status|
 |---------|-|-|-|
-|01|Base definitions|Common definitions relevant for all domains (e.g. primitive data types)|Unreleased|
-|02|Requirements Engineering|Classical requirements engineering following the IREB definitions|Unreleased|
-|03|Model Integration|SpecIF mapping for the Fundamental Modeling Concepts approach usable to integrate system modeling data|Unreleased|
+|01|Base definitions|Common definitions relevant for all domains (e.g. primitive data types)|planed for Release 1|
+|02|Requirements Engineering|Classical requirements engineering following the IREB definitions|planed for Release 1|
+|03|Model Integration|SpecIF mapping for the Fundamental Modeling Concepts approach usable to integrate system modeling data|planed for Release 1|
 |04|Automotive Requirements Engineering|Automotive-specific requirements engineering extensions (VDA)|Unreleased|
 |05|Agile Requirements Engineering|Requirements engineering for agile development (e.g. epics and user stories)|Unreleased|
 |06|UML-SpecIF mapping|Extensions to map UML (Unified Modeling Language) models to SpecIF|Unreleased|
