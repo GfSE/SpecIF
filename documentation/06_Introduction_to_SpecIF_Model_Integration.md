@@ -24,6 +24,10 @@ The fundamental model-element classes and eligible statement classes used for mo
 <img src="./images/ElementTypes-M0.png" width="600px" />
 
 The following sections of the SpecIF Model Integration Guide shows mappings and examples for transformations from different modeling environments to SpecIF:
+1. [Model Integration Guide for FMC](./06_SpecIF_Model_Integration_Guide_for_FMC.md)
+1. [Model Integration Guide for FMC](./06_SpecIF_Model_Integration_Guide_for_BPMN.md)
+1. [Model Integration Guide for FMC](./06_SpecIF_Model_Integration_Guide_for_Archimate.md)
+1. [Model Integration Guide for FMC](./06_SpecIF_Model_Integration_Guide_for_SysML.md)
 
 
 
