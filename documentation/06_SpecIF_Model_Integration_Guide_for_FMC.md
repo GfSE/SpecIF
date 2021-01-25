@@ -16,11 +16,3 @@ _{ToDo}_
 ### Example
 
 An explanation in detail is given in a tutorial [Very simple model using FMC](https://github.com/GfSE/SpecIF/blob/master/tutorials/06_Very-Simple-Model-FMC.md).
-
-## UML-SpecIF mapping
-
-_{ToDo}_
-
-## SysML-SpecIF mapping
-
-_{ToDo}_
