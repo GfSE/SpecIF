@@ -262,7 +262,7 @@ Let us at last have a look at the full example, now:
     "statements": [{
         "id": "SVis-aec0df7900010000017001eaf53e8876-50fbfe8f0029b1a8016ea86245a9d83a",
         "title": "SpecIF:shows",
-        "description": "'Notation: FMC Block Diagram' shows 'FiCo-Application'",
+        "description": "'FMC Block Diagram' shows 'FiCo-Application'",
         "class": "SC-shows",
         "subject": "Diagram-aec0df7900010000017001eaf53e8876",
         "object": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
@@ -270,7 +270,7 @@ Let us at last have a look at the full example, now:
     }, {
         "id": "SVis-aec0df7900010000017001eaf53e8876-50feddc00029b1a8016e2872e78ecadc",
         "title": "SpecIF:shows",
-        "description": "'Notation: FMC Block Diagram' shows 'FiCo-Data'",
+        "description": "'FMC Block Diagram' shows 'FiCo-Data'",
         "class": "SC-shows",
         "subject": "Diagram-aec0df7900010000017001eaf53e8876",
         "object": "MEl-50feddc00029b1a8016e2872e78ecadc",

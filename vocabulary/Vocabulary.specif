@@ -700,13 +700,13 @@
     {
       "id": "R-A7JHwmw3atxcrgTFIZ7xuuGHr4k",
       "changedAt": "2020-11-08T16:21:51.926Z",
-      "title": "SpecIF:statusWithdrawn",
+      "title": "SpecIF:LifecycleStatusWithdrawn",
       "description": "A lifecycle status of a development artefact.",
       "class": "RC-ValueTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SpecIF:statusWithdrawn"
+          "value": "SpecIF:LifecycleStatusWithdrawn"
         },
         {
           "class": "PC-Text",
@@ -721,13 +721,13 @@
     {
       "id": "R-fa9V84wJNXEQQJqCIBVlXMxRyxA",
       "changedAt": "2020-11-08T16:21:37.422Z",
-      "title": "SpecIF:statusDeprecated",
+      "title": "SpecIF:LifecycleStatusDeprecated",
       "description": "A lifecycle status of a development artefact.",
       "class": "RC-ValueTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SpecIF:statusDeprecated"
+          "value": "SpecIF:LifecycleStatusDeprecated"
         },
         {
           "class": "PC-Text",
@@ -742,13 +742,13 @@
     {
       "id": "R-bLVl2PvCMy9bSu3IeC194RY2tiO",
       "changedAt": "2020-11-08T16:21:25.914Z",
-      "title": "SpecIF:statusReleased",
+      "title": "SpecIF:LifecycleStatusReleased",
       "description": "A lifecycle status of a development artefact.",
       "class": "RC-ValueTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SpecIF:statusReleased"
+          "value": "SpecIF:LifecycleStatusReleased"
         },
         {
           "class": "PC-Text",
@@ -763,13 +763,13 @@
     {
       "id": "R-bbaVEqXG79QKpDxNPtsCd7lbH2i",
       "changedAt": "2020-11-08T16:21:16.994Z",
-      "title": "SpecIF:statusValidated",
+      "title": "SpecIF:LifecycleStatusValidated",
       "description": "A lifecycle status of a development artefact.",
       "class": "RC-ValueTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SpecIF:statusValidated"
+          "value": "SpecIF:LifecycleStatusValidated"
         },
         {
           "class": "PC-Text",
@@ -784,13 +784,13 @@
     {
       "id": "R-6Tvl5lJS1LUBfyvdruaPzWcjWqG",
       "changedAt": "2020-11-08T16:21:03.920Z",
-      "title": "SpecIF:statusDone",
+      "title": "SpecIF:LifecycleStatusDone",
       "description": "A lifecycle status of a development artefact. Meets the requirements of the \"Definition of Done\" of the agile development method.",
       "class": "RC-ValueTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SpecIF:statusDone"
+          "value": "SpecIF:LifecycleStatusDone"
         },
         {
           "class": "PC-Text",
@@ -805,13 +805,13 @@
     {
       "id": "R-8JP2IBLr4ycFkOb7WVP19qKcmRB",
       "changedAt": "2020-11-08T16:20:52.954Z",
-      "title": "SpecIF:statusReady",
+      "title": "SpecIF:LifecycleStatusReady",
       "description": "A lifecycle status of a development artefact. Meets the requirements of the \"Definition of Ready\" of the agile development method.",
       "class": "RC-ValueTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SpecIF:statusReady"
+          "value": "SpecIF:LifecycleStatusReady"
         },
         {
           "class": "PC-Text",
@@ -826,13 +826,13 @@
     {
       "id": "R-HL9yT3xGFhRsvxEGtLP3QmzMoQ2",
       "changedAt": "2020-11-08T16:20:40.854Z",
-      "title": "SpecIF:statusApproved",
+      "title": "SpecIF:LifecycleStatusApproved",
       "description": "A lifecycle status of a development artefact.",
       "class": "RC-ValueTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SpecIF:statusApproved"
+          "value": "SpecIF:LifecycleStatusApproved"
         },
         {
           "class": "PC-Text",
@@ -847,13 +847,13 @@
     {
       "id": "R-v4oOIUQNRqoc0kqZLSLDVD2T8rC",
       "changedAt": "2020-11-08T16:20:30.222Z",
-      "title": "SpecIF:statusSubmitted",
+      "title": "SpecIF:LifecycleStatusSubmitted",
       "description": "A lifecycle status of a development artefact.",
       "class": "RC-ValueTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SpecIF:statusSubmitted"
+          "value": "SpecIF:LifecycleStatusSubmitted"
         },
         {
           "class": "PC-Text",
@@ -868,13 +868,13 @@
     {
       "id": "R-5C2ATeXhGQg5YdnOlYaoSuzDeHW",
       "changedAt": "2020-11-08T16:20:09.588Z",
-      "title": "SpecIF:statusDrafted",
+      "title": "SpecIF:LifecycleStatusDrafted",
       "description": "A lifecycle status of a development artefact.",
       "class": "RC-ValueTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SpecIF:statusDrafted"
+          "value": "SpecIF:LifecycleStatusDrafted"
         },
         {
           "class": "PC-Text",
@@ -889,13 +889,13 @@
     {
       "id": "R-n28XW0rtcgNmL4u1s1xnRBWKEeF",
       "changedAt": "2020-11-08T16:20:18.171Z",
-      "title": "SpecIF:statusInitial",
+      "title": "SpecIF:LifecycleStatusInitial",
       "description": "A lifecycle status of a development artefact.",
       "class": "RC-ValueTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SpecIF:statusInitial"
+          "value": "SpecIF:LifecycleStatusInitial"
         },
         {
           "class": "PC-Text",
@@ -910,13 +910,13 @@
     {
       "id": "R-vzI581EFCyFm4VCpsAJAY6gNrUv",
       "changedAt": "2020-11-08T16:34:16.573Z",
-      "title": "SpecIF:statusRejected",
+      "title": "SpecIF:LifecycleStatusRejected",
       "description": "A lifecycle status of a development artefact.",
       "class": "RC-ValueTerm",
       "properties": [
         {
           "class": "PC-Name",
-          "value": "SpecIF:statusRejected"
+          "value": "SpecIF:LifecycleStatusRejected"
         },
         {
           "class": "PC-Text",
@@ -1729,10 +1729,6 @@
       "class": "RC-PropertyTerm",
       "properties": [
         {
-          "class": "PC-Name",
-          "value": "SpecIF:Probability"
-        },
-        {
           "class": "PC-Origin",
           "value": "http://specif.de"
         },
@@ -1745,18 +1741,14 @@
     {
       "id": "R-852227557",
       "changedAt": "2018-02-17T14:52:00+01:00",
-      "title": "SpecIF:Status",
+      "title": "SpecIF:LifecycleStatus",
       "revision": "76",
       "changedBy": "od",
       "class": "RC-PropertyTerm",
       "properties": [
         {
-          "class": "PC-Name",
-          "value": "SpecIF:Status"
-        },
-        {
           "class": "PC-Text",
-          "value": "The 'Status', e.g. lifecycle state, of the resource."
+          "value": "The 'Lifecycle Status' of the resource."
         },
         {
           "class": "PC-Origin",
