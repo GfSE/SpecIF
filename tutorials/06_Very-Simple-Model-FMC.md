@@ -14,7 +14,7 @@ Let us first look at the relations of the model-elements. A relation is represen
 
 ![Very Simple Model Relations](./images/Very-Simple-Model-Relations.png)
 
-- Whereas the model-diagram shown first was created by an engineer to define an aspect of the model, the graph above shows all statements with a particular model-element, \'FiCo-Application\' in this case. 
+- While the model-diagram shown first was created by an engineer to define an aspect of the model, the graph above shows all statements with a particular model-element, \'FiCo-Application\' in this case. 
 - An accumulation of *all* statements with this model-element is shown, no matter where they have been defined; it is the semantic net around the selected element with a radius of one. 
 - Each arrow is a statement, e.g. \'FiCo-Application reads FiCo-Data\'. 
 - So we see that the selected model-element is shown on one diagram and that it writes and reads another model-element. 
