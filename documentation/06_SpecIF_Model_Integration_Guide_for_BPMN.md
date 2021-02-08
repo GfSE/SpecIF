@@ -134,6 +134,6 @@ The implementation of the Transformation is accessible in the GFSE-Github (https
 |||||
 |Annotation| SpecIF:Comment |OMG:BPMN:2.0:TextAnnotation| - |
 |||||
-|Association| SpecIF:contains/refersTo |OMG:BPMN:2.0:Association| - |
-|SequenceFlow| SpecIF:triggers/signals/precedes |OMG:BPMN:2.0:SequenceFlow| - |
-|MessageFlow| FMC:State + SpecIF:reads/writes |OMG:BPMN:2.0:SequenceFlow| Messageflow Object is represented by FMC:State|
+|Association| SpecIF:contains/refersTo || - |
+|SequenceFlow| SpecIF:triggers/signals/precedes || - |
+|MessageFlow| FMC:State + SpecIF:reads/writes || Messageflow Object is represented by FMC:State|
