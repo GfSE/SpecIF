@@ -94,25 +94,46 @@ A Mapping for BPMN to SpecIF was developed in the Masterthesis of Robert Kanitz.
 The implementation of the Transformation is accessible in the GFSE-Github (https://github.com/GfSE/BPMN-SpecIF-Bridge). 
 
 ### BPMN to SpecIF mapping table
-|BPMN-Element | SpecIF-Element | Remark|
-| ------------- |:-------------:| -----------:|
-|Process| SpecIF:Diagram | SpecIF:Diagram and SpecIF:shows Statements for Elements belonging to the diagram|
-|Start-, interim-, endevent | FMC:Event |-|
-|Time or message event| FMC:Event | -|
-|Activity | FMC:Actor |-|
-|Parallel Gateway (Seperation) | Statements | Statements between incoming and outgoing Elements|
-|Parallel Gateway (Merge) | FMC:Actor | Actor with waiting function|
-|Exclusive Gateway (Seperation)| FMC:Actor + FMC:Event + SpecIF:signals| Events for different Activityflows|
-|Exclusive Gateway (Merge)| Statements | Statements between incoming and outgoing Elements|
-|Group| SpecIF:Collection | - |
-|Pool| FMC:Actor | Additional SpecIF:contains Statements for Elements that are contained by the Pool|
-|Lane| FMC:Actor | Additional SpecIF:contains Statements for Elements that are contained by the Lane|
-|Dataobject| FMC:State | - |
-|Datainput| FMC:State | - |
-|Dataoutput| FMC:State | - |
-|Datastorage| FMC:State | - |
-|Annotation| SpecIF:Note | - |
-|-|-|-|
-|Association| SpecIF:contains/refersTo | - |
-|Sequetialflow | SpecIF:triggers/signals/precedes | - |
-|Messageflow | FMC:State + SpecIF:reads/writes | Messageflow Object is represented by FMC:State|
+|BPMN-Element | SpecIF Resource Class |dcterms:type| Remark|
+| ------------- |:-------------|-| -----------|
+|Process| SpecIF:Diagram |OMG:BPMN:2.0:Process| SpecIF:Diagram and SpecIF:shows Statements for Elements belonging to the diagram|
+|||||
+|Start Event | FMC:Event |OMG:BPMN:2.0:StartEvent|-|
+|Intermediate Event | FMC:Event |OMG:BPMN:2.0:IntermediateEvent|-|
+|End Event | FMC:Event |OMG:BPMN:2.0:EndEvent|-|
+|TimerStartEvent| FMC:Event |OMG:BPMN:2.0:TimerStartEvent| -|
+|TimerIntermediateEvent| FMC:Event |OMG:BPMN:2.0:TimerIntermediateEvent| -|
+|MessageStartEvent| FMC:Event |OMG:BPMN:2.0:MessageStartEvent| -|
+|MessageIntermediateEvent| FMC:Event |OMG:BPMN:2.0:MessageIntermediateEvent| -|
+|MessageEndEvent| FMC:Event |OMG:BPMN:2.0:MessageEndEvent| -|
+|||||
+|Activity| FMC:Actor |OMG:BPMN:2.0:Acticity|-|
+|Task| FMC:Actor |OMG:BPMN:2.0:Task|-|
+|SendTask| FMC:Actor |OMG:BPMN:2.0:SendTask|-|
+|ReceiveTask| FMC:Actor |OMG:BPMN:2.0:ReceiveTask|-|
+|ServiceTask| FMC:Actor |OMG:BPMN:2.0:ServiceTask|-|
+|UserTask| FMC:Actor |OMG:BPMN:2.0:UserTask|-|
+|ManualTask| FMC:Actor |OMG:BPMN:2.0:ManualTask|-|
+|ScriptTask| FMC:Actor |OMG:BPMN:2.0:ScriptTask|-|
+|BusinessRuleTask| FMC:Actor |OMG:BPMN:2.0:BusinessRuleTask|-|
+|||||
+|Parallel Gateway (Seperation) | Statements || Statements between incoming and outgoing Elements|
+|Parallel Gateway (Merge) | FMC:Actor || Actor with waiting function|
+|Exclusive Gateway (Seperation)| FMC:Actor + FMC:Event + SpecIF:signals|| Events for different Activityflows|
+|Exclusive Gateway (Merge)| Statements || Statements between incoming and outgoing Elements|
+|||||
+|Group| SpecIF:Collection |OMG:BPMN:2.0:Group| Additional SpecIF:contains Statements for Elements that are contained by the Group |
+|||||
+|Pool| FMC:Actor |OMG:BPMN:2.0:Participant| Additional SpecIF:contains Statements for Elements that are contained by the Pool|
+|Lane| FMC:Actor |OMG:BPMN:2.0:Participant| Additional SpecIF:contains Statements for Elements that are contained by the Lane|
+|DataObject| FMC:State |OMG:BPMN:2.0:DataObject| - |
+|DataObject is Collection| FMC:State |OMG:BPMN:2.0:DataObjectCollection| - |
+|Datainput| FMC:State |OMG:BPMN:2.0:DataInput| - |
+|Dataoutput| FMC:State |OMG:BPMN:2.0:DataOutput| - |
+|DataStore| FMC:State |OMG:BPMN:2.0:DataStore| - |
+|||||
+|Annotation| SpecIF:Comment |OMG:BPMN:2.0:TextAnnotation| - |
+|||||
+|Association| SpecIF:contains/refersTo |OMG:BPMN:2.0:Association| - |
+|SequenceFlow| SpecIF:triggers/signals/precedes |OMG:BPMN:2.0:SequenceFlow| - |
+|MessageFlow| FMC:State + SpecIF:reads/writes |OMG:BPMN:2.0:SequenceFlow| Messageflow Object is represented by FMC:State|

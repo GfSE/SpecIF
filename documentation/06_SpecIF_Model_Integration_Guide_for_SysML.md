@@ -1,77 +1,121 @@
-# SpecIF Model Integration Guide for SysML
+# SpecIF Model Integration Guide for UML and SysML
 
-## SysML to SpecIF Mapping
+To semantically map SysML to SpecIF we map the UML and include the elements and concepts of the UML-profile mechanism. 
+All SysML 1.x elements are profiled UML elements with stereotypes and tagged values. So it easy to map these elements using the UML metaclasses and the stereotypes.
+SpecIF defines the propertties dcterms:type for defining a UML-metamodel reference and the property UML:Stereotype to define a stereotype. So SysML elements are profiled UML elements.
 
-The mapping from SysML to SpecIF is discussed in a working group. At the moment there is a sketch for a mapping of 
-SysML- to SpecIF-Elements. This Mapping Table is not released and still in discussion. It consists of a resource-, property-
+## UML/SysML to SpecIF Mapping
+
+The mapping from UML/SysML to SpecIF is discussed in a working group. At the moment there is a sketch for a mapping of 
+UML and SysML to SpecIF-Elements. This Mapping Table is not released and still in discussion. It consists of a resource-, property-
 and statement-mapping and only contains elements that are used in activity and block definition diagrams. The mapping is shown
 in the following three tables.
-The general idea is to map a high number of SysML elements to a small model core in SpecIF. This model core consist of the
+The general idea is to map a high number of UML/SysML elements to a small model core in SpecIF. This model core consist of the
 fundamental modeling elements Actor, State and Event and the two SpecIF-Elements SpecIF:Diagram and SpecIF:Collection. 
 Mapped elements in the mapping tables should have a matching semantic meaning, e.g. a SysML Action is 
 an active element. Regarding to the [SpecIF Vocabulary](https://specif.de/apps/view.html#import=%22../examples/Vocabulary.specifz%22),
 a FMC:Actor represents an active element. Since these definitions match both elements can be added to the mapping table. 
 
 ### Resource mapping table
-|UML-Metaclass |EA-Element.Type |SpecIF Resource Class |dcterms:type|Remark|
-| ------------- |:-------------:| -----:|-----:|-----:|
-|Model|-|SpecIF:Collection|OMG:UML:2.5.1:Model|
-|Package|Package|SpecIF:Collection|OMG:UML:2.5.1:Package|
-|Diagram|Diagram|SpecIF:Diagram|OMG:UML:2.5.1:Diagram|
-|-|-|-|-|-|
-|Class|Class|FMC:State|OMG:UML:2.5.1:Class|
-|State|State|FMC:State|OMG:UML:2.5.1:State|
-|Port|Port|FMC:State|OMG:UML:2.5.1:Port|
-|Attribute|Attribute|FMC:State|OMG:UML:2.5.1:Attribute|
-|Object|Object|FMC:State|OMG:UML:2.5.1:Object|
-|TaggedValue|TaggedValue|FMC:State|OMG:UML:2.5.1:TaggedValue|
-|ObjectRunState|RunState|FMC:State|OMG:UML:2.5.1:RunState|
-|Constraint|Constraint|FMC:State|OMG:UML:2.5.1:Constraint|
-|Parameter|Parameter|FMC:State|OMG:UML:2.5.1:Parameter|
-|-|-|-|-|-|
-|Component|Component|FMC:Actor|OMG:UML:2.5.1:Component|
-|Activity|Activity|FMC:Actor|OMG:UML:2.5.1:Activity|
-|Action|Action|FMC:Actor|OMG:UML:2.5.1:Action|
-|CallBehaviorAction||FMC:Actor|OMG:UML:2.5.1:CallBehaviorAction|
-|InputPin||FMC:Actor|OMG:UML:2.5.1:InputPin|
-|OutputPin||FMC:Actor|OMG:UML:2.5.1:OutputPin|
-|Operation|Method|FMC:Actor|OMG:UML:2.5.1:Operation|
-|StateMachine|StateMachine|FMC:Actor|OMG:UML:2.5.1:StateMachine|
-|Actor|Actor|FMC:Actor|OMG:UML:2.5.1:Actor|
-|DecisionNode|DecisionNode|FMC:Actor + FMC:Event|OMG:UML:2.5.1:DecisionNode|
-|MergeNode|MergeNode|FMC:Actor|OMG:UML:2.5.1:MegeNode|
-|ForkNode|Synchronization|FMC:Actor|OMG:UML:2.5.1:ForkNode|
-|JoinNode|Synchronization|FMC:Actor|OMG:UML:2.5.1:JoinNode|
-|ActivityPartition|-|FMC:Actor (+ SpecIF:contains)|OMG:UML:2.5.1:ActivityPartition|
-|SendSignalAction|-|FMC:Actor (+ SpecIF:signals)|OMG:UML:2.5.1:SendSignalAction|
-|AcceptEventAction|-|FMC:Actor (+ SpecIF:triggers)|OMG:UML:2.5.1:AcceptEventAction|
-|TimeEvent|Event|FMC:Event|OMG:UML:2.5.1:TimeEvent|
-|Signal|-|FMC:Event|OMG:UML:2.5.1:Signal|
-|InitialNode|StateNode with SubType=100|FMC:Event|OMG:UML:2.5.1:InitialNode|
-|ActivityFinalNode|StateNode with Subtype=101|FMC:Event|OMG:UML:2.5.1:ActivityFinal|
-|FlowFinalNode|StateNode with Subtype=102|FMC:Event|OMG:UML:2.5.1:FlowFinal|
-|-|-|-|-|-|
-|Requirement|Requirement|IREB:Requirement|OMG:UML:2.5.1:Requirement||
 
-### Property mapping table
+|UML-Metaclass|UML:Stereotype|SpecIF Resource Class|dcterms:type|Remark|
+|-|-|-|-|-|
+|Model||SpecIF:Collection|OMG:UML:2.5.1:Model|A root model node (root package of a model repository).|
+|Package||SpecIF:Collection|OMG:UML:2.5.1:Package|A model package|
+|ClassDiagram||SpecIF:Diagram|OMG:UML:2.5.1:ClassDiagram|A UML class diagram|
+|CompositeStructureDiagram||SpecIF:Diagram|OMG:UML:2.5.1:CompositeStructureDiagram|A UML composite structure diagram|
+|ComponentDiagram||SpecIF:Diagram|OMG:UML:2.5.1:ComponentDiagram|A UML component diagram|
+|DeploymentDiagram||SpecIF:Diagram|OMG:UML:2.5.1:DeploymentDiagram|A UML deployment diagram|
+|ObjectDiagram||SpecIF:Diagram|OMG:UML:2.5.1:ObjectDiagram|A UML object diagram|
+|PackageDiagram||SpecIF:Diagram|OMG:UML:2.5.1:PackageDiagram|A UML/SysML package diagram|
+|ProfileDiagram||SpecIF:Diagram|OMG:UML:2.5.1:ProfileDiagram|A UML/SysML profile diagram|
+|ActivityDiagram||SpecIF:Diagram|OMG:UML:2.5.1:ActivityDiagram|A UML/SysML activity diagram|
+|SequenceDiagram||SpecIF:Diagram|OMG:UML:2.5.1:SequenceDiagram|A UML/SysML sequence diagram|
+|CommunicationDiagram||SpecIF:Diagram|OMG:UML:2.5.1:CommunicationDiagram|A UML communication diagram|
+|InteractionOverviewDiagram||SpecIF:Diagram|OMG:UML:2.5.1:InteractionOverviewDiagram|A UML interaction overview diagram|
+|TimingDiagram||SpecIF:Diagram|OMG:UML:2.5.1:TimingDiagram|A UML timing diagram|
+|UseCaseDiagram||SpecIF:Diagram|OMG:UML:2.5.1:UseCaseDiagram|A UML/SysML use case diagram|
+|StateMachineDiagram||SpecIF:Diagram|OMG:UML:2.5.1:StateMachineDiagram|A UML/SysML state machine diagram|
+|SysML-RequirementDiagram|Requirement|SpecIF:Diagram|OMG:UML:2.5.1:ClassDiagram|A SysML Requirement Diagram|
+|SysML-BlockDefinitionDiagram|BlockDefinition|SpecIF:Diagram|OMG:UML:2.5.1:ClassDiagram|A SysML Block Definition Diagram|
+|SysML-InternalBlockDiagram|InternalBlock|SpecIF:Diagram|OMG:UML:2.5.1:ObjectDiagram|A SysML Internal Block Diagram|
+|SysML-ParametricDiagram|Parametric|SpecIF:Diagram|OMG:UML:2.5.1:ObjectDiagram|A SysML Parametric Constraint Diagram|
+|FMC4SE FMC Diagram|FMC4SE|SpecIF:Diagram|OMG:UML:2.5.1:ObjectDiagram|A FMC4SE FMC Diagram|
+||
+|Class||FMC:State|OMG:UML:2.5.1:Class||
+|State||FMC:State|OMG:UML:2.5.1:State||
+|Port||FMC:State|OMG:UML:2.5.1:Port||
+|Attribute||FMC:State|OMG:UML:2.5.1:Attribute||
+|Object||FMC:State|OMG:UML:2.5.1:Object||
+|TaggedValue||FMC:State|OMG:UML:2.5.1:TaggedValue||
+|ObjectRunState||FMC:State|OMG:UML:2.5.1:RunState||
+|Constraint||FMC:State|OMG:UML:2.5.1:Constraint||
+|Parameter||FMC:State|OMG:UML:2.5.1:Parameter||
+||
+|Component||FMC:Actor|OMG:UML:2.5.1:Component||
+|Activity||FMC:Actor|OMG:UML:2.5.1:Activity||
+|Action||FMC:Actor|OMG:UML:2.5.1:Action||
+|CallBehaviorAction||FMC:Actor|OMG:UML:2.5.1:CallBehaviorAction||
+|InputPin||FMC:Actor|OMG:UML:2.5.1:InputPin||
+|OutputPin||FMC:Actor|OMG:UML:2.5.1:OutputPin||
+|Operation||FMC:Actor|OMG:UML:2.5.1:Operation||
+|StateMachine||FMC:Actor|OMG:UML:2.5.1:StateMachine||
+|Actor||FMC:Actor|OMG:UML:2.5.1:Actor||
+|DecisionNode||FMC:Actor + FMC:Event|OMG:UML:2.5.1:DecisionNode||
+|MergeNode||FMC:Actor|OMG:UML:2.5.1:MegeNode||
+|ForkNode||FMC:Actor|OMG:UML:2.5.1:ForkNode||
+|JoinNode||FMC:Actor|OMG:UML:2.5.1:JoinNode||
+|ActivityPartition||FMC:Actor (+ SpecIF:contains)|OMG:UML:2.5.1:ActivityPartition||
+|SendSignalAction||FMC:Actor (+ SpecIF:signals)|OMG:UML:2.5.1:SendSignalAction||
+|AcceptEventAction||FMC:Actor (+ SpecIF:triggers)|OMG:UML:2.5.1:AcceptEventAction||
+|TimeEvent||FMC:Event|OMG:UML:2.5.1:TimeEvent||
+|Signal||FMC:Event|OMG:UML:2.5.1:Signal||
+|InitialNode||FMC:Event|OMG:UML:2.5.1:InitialNode||
+|ActivityFinalNode||FMC:Event|OMG:UML:2.5.1:ActivityFinal||
+|FlowFinalNode||FMC:Event|OMG:UML:2.5.1:FlowFinal||
+||
+|Class|requirement|IREB:Requirement|OMG:UML:2.5.1:Class|A SysML requirement model element. Also map tool-specific requirement representations (e.g. EA-Requirement-Elements) to this resource class.|
 
-|UML-Name|EA-Name|SpecIF-Property|Remark|
-| ------------- |:-------------:| -----:|-----:|
-|NamedElement.name|Name|dcterms:title|The name of an UML element|
-|Comment|Notes|dcterms:description|The element descriptional text.|
-|NamedElement.visibility|Visibility|SpecIF:VisibilityKind|e.g. Public, Private, Protected, Package|
-|?|Status|SpecIF:Status|The element status value.|
-|Stereotype|Stereotype|SpecIF:Stereotype||
-|typeOf(Metaclass)|Type|dcterms:type|e.g. OMG:UML:2.5.1:Constraint. To avoid define a SpecIF Resource type for each UML element, a type attribute is used instead of metaclass inheritance.|
-|_VALUES_|TaggedValue.Value / Attribute.Default / Constraint.Notes |rdf:value|An (initial) value of an attribute, tagged value, object run state etc.|
-|alias|Alias|SpecIF:Alias||
 
 ### Statement mapping table
 
-|UML Metaclass|UML Stereotype|SpecIF Statement Class|Remark|
-| ------------- |:-------------:| -----:|-----:|
-|ObjectFlow|-|FMC:State + SpecIF:reads/writes + SpecIF:preceds|FMC:State + SpecIF:reads/writes to transfer the Object, additionally a control flow to trigger the reading actor|
-|ControlFlow|-|SpecIF:triggers/preceds/signals|The connection type (precedes/triggers/signals) depends on the types of the connected elements|
+|UML Metaclass|Stereotype|SpecIF Statement Class|dcterms:type|Remark|
+|-|-|-|-|-|
+|ObjectFlow|-|FMC:State + SpecIF:reads/writes + SpecIF:preceds|OMG:UML:2.5.1:ObjectFlow|FMC:State + SpecIF:reads/writes to transfer the Object, additionally a control flow to trigger the reading actor|
+|ControlFlow|-|SpecIF:triggers/preceds/signals|OMG:UML:2.5.1:ControlFlow|The connection type (precedes/triggers/signals) depends on the types of the connected elements|
+|Transition|-|???|OMG:UML:2.5.1:Transition|Used to interconnect states|
+|Connector (w/o direction)|acces type|SpecIF:stores|OMG:UML:2.5.1:Connector|Used in FMC4SE compositional structure modeling (---)|
+|Connector (Unidirectional)|access type|SpecIF:writes/SpecIF:reads|OMG:UML:2.5.1:Connector|Used in FMC4SE compositional structure modeling (-->)|
+|Connector (Bi-Directional)|access type|SpecIF:stores|OMG:UML:2.5.1:Connector|Used in FMC4SE compositional structure modeling (<->)|
+|Composition|-|SpecIF:contains|OMG:UML:2.5.1:CompositeAggregation|UML/SysML composition (black diamond)|
+|Aggregation|-|SpecIF:contains|OMG:UML:2.5.1:Aggregation|UML/SysML aggregation (white diamond)|
+|Association|-|???|OMG:UML:2.5.1:Association|UML/SysML association|
+|Dependency|-|SpecIF:dependsOn|OMG:UML:2.5.1:Dependency|UML/SysML dependency|
+|Dependency|satisfy|oslc_rm:satisfies|OMG:UML:2.5.1:Dependency|SysML satisfy connection|
+|Dependency|verify|SysML:verifies|OMG:UML:2.5.1:Dependency|SysML verify connection|
+|Dependency|allocate|SysML:allocates|OMG:UML:2.5.1:Dependency|SysML allocation connection|
+|Deployment|deploy|SysML:allocates|OMG:UML:2.5.1:Deployment|UML deployment connection|
+|Extension|-|UML:Extends|OMG:UML:2.5.1:Extension|UML Profile extension relation. The subject (stereotype) extends the object (metaclass).|
+|||||
+|Trigger||SpecIF:triggers||Triggers a AcceptEventAction|
+|Signal||SpecIF:signals||Signals a SignalEvent|
+|||||
+|Classifier of a model element/Resource||rdf:type||The object is the classifier/type of the subject.|
+|behavior is implemented by||UML:BehaviorReference?||The subject behavior is implemented by the object (a piece of source code)|
+
+### Property mapping table
+
+|UML-Name|SpecIF-Property Class|Remark|
+|-|-|-|
+|NamedElement.name|dcterms:title|The name of an UML element|
+|Comment|dcterms:description|The model element descriptional text.|
+|NamedElement.visibility|SpecIF:VisibilityKind|e.g. Public, Private, Protected, Package|
+|?|SpecIF:Status|The element status value.|
+|Stereotype|UML:Stereotype|The Stereotype of a model element|
+|typeOf(Metaclass)|dcterms:type|e.g. OMG:UML:2.5.1:Constraint. To avoid define a SpecIF Resource type for each UML element, a type attribute is used instead of metaclass inheritance. Have a look at the dterms:type vocabulary for details.|
+|_VALUES_ (TaggedValue.Value / Attribute.Default / Constraint.Notes)|rdf:value|An (initial) value of an attribute, tagged value, object run state etc.|
+|alias|SpecIF:Alias|An alias for a model element|
+
 
 ### Examples for SysML mapping and transformation of Activity diagrams
 In SpecIF model elements are representated as FMC:Actor (square), FMC:State (circle) and FMC:Event (diamond). Elements 
