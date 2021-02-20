@@ -344,10 +344,10 @@ function checkConstraints( data, options ) {
         let aL = dta.resources.concat(dta.statements);
         for( var i=sL.length-1;i>-1;i-- ) {
             if( itemByKey(aL, sL[i].subject)==undefined && options.dontCheck.indexOf('statement.subject')<0 ) 
-                return {status:908, statusText: "subject of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
+                return {status:908, statusText: "subject of statement["+i+"] with identifier '"+sL[i].id+"' must reference a valid resource"};
             // according to the schema, dta.statements is required, but not dta.files:
             if( itemByKey(aL, sL[i].object)==undefined && options.dontCheck.indexOf('statement.object')<0 ) 
-                return {status:909, statusText: "object of statement with identifier '"+sL[i].id+"' must reference a valid resource"};
+                return {status:909, statusText: "object of statement["+i+"] with identifier '"+sL[i].id+"' must reference a valid resource"};
         //  if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
         };
         return {status:0, statusText: "no anomaly with statement's subjects and objects"}
