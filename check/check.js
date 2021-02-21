@@ -337,17 +337,17 @@ function checkConstraints( data, options ) {
             return true
         }
     }
-    function checkStatements(dta,sL) {    // resources, statements
+    function checkStatements(dta,sL) { 
         // A statement's "subject" must be the key of a member of "resources" or "statements". 
         // Equally, an "object" must be the key of a member of "resources" or "statements".
         // (It has been checked before that any "resource" is indeed of type "resourceClass").
         let aL = dta.resources.concat(dta.statements);
         for( var i=sL.length-1;i>-1;i-- ) {
             if( itemByKey(aL, sL[i].subject)==undefined && options.dontCheck.indexOf('statement.subject')<0 ) 
-                return {status:908, statusText: "subject of statement["+i+"] with identifier '"+sL[i].id+"' must reference a valid resource"};
+                return {status:908, statusText: "subject of statement["+i+"] with identifier '"+sL[i].id+"' must reference a valid resource or statement"};
             // according to the schema, dta.statements is required, but not dta.files:
             if( itemByKey(aL, sL[i].object)==undefined && options.dontCheck.indexOf('statement.object')<0 ) 
-                return {status:909, statusText: "object of statement["+i+"] with identifier '"+sL[i].id+"' must reference a valid resource"};
+                return {status:909, statusText: "object of statement["+i+"] with identifier '"+sL[i].id+"' must reference a valid resource or statement"};
         //  if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
         };
         return {status:0, statusText: "no anomaly with statement's subjects and objects"}
