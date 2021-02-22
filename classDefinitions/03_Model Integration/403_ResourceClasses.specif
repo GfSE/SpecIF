@@ -8,54 +8,16 @@
   "propertyClasses": [],
   "resourceClasses": [
     {
-      "id": "RC-Collection",
-      "title": "SpecIF:Collection",
-      "description": "<p>A 'Collection' is an arbitrary group of resources linked with a [[SpecIF:contains]] statement. It corresponds to a <a href=\"https://camunda.com/bpmn/reference/\">'Group'</a> in BPMN Diagrams.</p><p>BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. <small>(<i>source: <a href=\"http://www.bpmn-tool.com/en/tutorial/\">BPMN Tool</a></i>)</small></p>",
-      "revision": "1",
-      "replaces": [],
-      "isHeading": false,
-      "instantiation": [
-        "auto"
-      ],
-      "propertyClasses": [
-        {
-          "id": "PC-Name",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Description",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Status",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Stereotype",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Visibility",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Type",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2019-08-29T16:56:47+02:00",
-      "changedBy": "oalt"
-    },
-    {
       "id": "RC-Diagram",
       "title": "SpecIF:Diagram",
       "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
-      "revision": "1",
-      "replaces": [],
+      "revision": "1.1",
+      "replaces": ["1"],
       "icon": "&#9635;",
       "isHeading": false,
       "instantiation": [
-        "auto"
+        "auto",
+		"user"
       ],
       "propertyClasses": [
         {
@@ -75,6 +37,10 @@
           "revision": "1"
         },
         {
+          "id": "PC-Notation",
+          "revision": "1"
+        },
+        {
           "id": "PC-Status",
           "revision": "1"
         },
@@ -83,7 +49,7 @@
           "revision": "1"
         }
       ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
+      "changedAt": "2021-02-22T08:59:00+02:00"
     },
     {
       "id": "RC-Actor",
