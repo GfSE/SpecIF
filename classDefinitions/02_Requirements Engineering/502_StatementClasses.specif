@@ -32,37 +32,6 @@
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
-      "id": "SC-satisfies",
-      "title": "oslc_rm:satisfies",
-      "description": "Statement: Model-Element satisfies Requirement",
-      "revision": "1",
-      "replaces": [],
-      "instantiation": [
-        "user"
-      ],
-      "subjectClasses": [
-        {
-          "id": "RC-Actor",
-          "revision": "1"
-        },
-        {
-          "id": "RC-State",
-          "revision": "1"
-        },
-        {
-          "id": "RC-Event",
-          "revision": "1"
-        }
-      ],
-      "objectClasses": [
-        {
-          "id": "RC-Requirement",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
       "id": "SC-duplicates",
       "title": "SpecIF:duplicates",
       "description": "The subject requirement duplicates the object requirement.",

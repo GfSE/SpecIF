@@ -16,6 +16,7 @@
             "icon": "H",
             "isHeading": true,
             "instantiation": [
+                "auto",
                 "user"
             ],
             "propertyClasses": [
@@ -37,9 +38,9 @@
         {
             "id": "RC-Paragraph",
             "title": "SpecIF:Paragraph",
-            "description": "Information with title and text for descriptive paragraphs.",
-            "revision": "1",
-            "replaces": [],
+            "description": "Information with text for descriptive paragraphs.",
+            "revision": "1.1",
+            "replaces": ["1"],
             "icon": "P",
             "isHeading": false,
             "instantiation": [
@@ -52,7 +53,7 @@
                     "revision": "1"
                 }
             ],
-            "changedAt": "2019-03-16T18:59:00+01:00"
+            "changedAt": "2021-02-21T08:59:00+02:00"
         },
         {
             "id": "RC-Hierarchy",
@@ -62,6 +63,10 @@
             "replaces": [],
             "icon": "&#128447;",
             "isHeading": false,
+            "instantiation": [
+                "auto",
+                "user"
+            ],
             "propertyClasses": [
                 {
                     "id": "PC-Name",
@@ -82,7 +87,7 @@
             "replaces": [],
             "isHeading": false,
             "instantiation": [
-                "auto"
+                "user"
             ],
             "propertyClasses": [
                 {

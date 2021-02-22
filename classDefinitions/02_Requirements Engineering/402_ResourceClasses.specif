@@ -11,8 +11,8 @@
       "id": "RC-Requirement",
       "title": "IREB:Requirement",
       "description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
-      "revision": "1",
-      "replaces": [],
+      "revision": "1.1",
+      "replaces": ["1"],
       "icon": "&#8623;",
       "isHeading": false,
       "instantiation": [
@@ -40,26 +40,26 @@
           "revision": "1"
         },
         {
+          "id": "PC-LifeCycleStatus",
+          "revision": "1"
+        },
+        {
           "id": "PC-Perspective",
           "revision": "1"
         },
         {
           "id": "PC-Discipline",
           "revision": "1"
-        },
-        {
-          "id": "PC-Status",
-          "revision": "1"
         }
       ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
+      "changedAt": "2021-02-22T08:59:00+02:00"
     },
     {
       "id": "RC-Feature",
       "title": "SpecIF:Feature",
       "description": "A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition.",
-      "revision": "1",
-      "replaces": [],
+      "revision": "1.1",
+      "replaces": ["1"],
       "icon": "&#10038;",
       "isHeading": false,
       "instantiation": [
@@ -79,11 +79,11 @@
           "revision": "1"
         },
         {
-          "id": "PC-Status",
+          "id": "PC-Priority",
           "revision": "1"
         },
         {
-          "id": "PC-Priority",
+          "id": "PC-LifeCycleStatus",
           "revision": "1"
         },
         {
@@ -93,13 +93,9 @@
         {
           "id": "PC-Discipline",
           "revision": "1"
-        },
-        {
-          "id": "PC-Type",
-          "revision": "1"
         }
       ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
+      "changedAt": "2021-02-22T08:59:00+02:00"
     }
   ],
   "statementClasses": [],

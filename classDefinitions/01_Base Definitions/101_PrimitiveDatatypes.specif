@@ -39,35 +39,21 @@
     {
       "id": "DT-Real",
       "title": "Real",
-      "description": "A floating point number (double) with 5 fraction digits.",
-      "revision": "1",
-      "replaces": [],
+      "description": "A floating point number (double) with up to 5 fraction digits.",
+      "revision": "1.1",
+      "replaces": ["1"],
       "type": "xs:double",
-      "fractionDigits": 5,
-      "minInclusive": -10000,
-      "maxInclusive": 10000,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "DT-Double",
-      "title": "Double",
-      "description": "The double floating point data type.",
-      "revision": "1",
-      "replaces": [],
-      "type": "xs:double",
-      "changedAt": "2020-02-28T08:59:00+02:00"
+      "changedAt": "2021-02-14T08:59:00+02:00"
     },
     {
       "id": "DT-Decimal2",
       "title": "Real with 2 Decimals",
       "description": "A floating point number (double) with two fraction digits.",
-      "revision": "1",
-      "replaces": [],
+      "revision": "1.1",
+      "replaces": ["1"],
       "type": "xs:double",
       "fractionDigits": 2,
-      "minInclusive": -10000,
-      "maxInclusive": 10000,
-      "changedAt": "2016-05-26T08:59:00+02:00"
+      "changedAt": "2021-02-14T08:59:00+02:00"
     },
     {
       "id": "DT-DateTime",
@@ -90,13 +76,12 @@
     },
     {
       "id": "DT-Text",
-      "title": "Plain text",
-      "description": "A text string",
-      "maxLength": 16384,
-      "revision": "1",
-      "replaces": [],
+      "title": "Plain or formatted Text",
+      "description": "A text string, plain, or formatted with XHTML or markdown",
+      "revision": "1.1",
+      "replaces": ["1"],
       "type": "xs:string",
-      "changedAt": "2016-05-26T08:59:00+02:00"
+      "changedAt": "2021-02-14T08:59:00+02:00"
     },
     {
       "id": "DT-URL",
@@ -116,16 +101,6 @@
       "replaces": [],
       "type": "xs:string",
       "maxLength": 256,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "DT-FormattedText",
-      "title": "Formatted Text",
-      "description": "XHTML formatted text.",
-      "revision": "1",
-      "replaces": [],
-      "type": "xhtml",
-	  "maxLength": 16384,
       "changedAt": "2016-05-26T08:59:00+02:00"
     }
   ],

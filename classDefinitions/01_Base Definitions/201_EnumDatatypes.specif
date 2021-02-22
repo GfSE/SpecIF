@@ -6,48 +6,60 @@
   "createdAt": "2020-02-16T19:54:35.0432812+01:00",
   "dataTypes": [
     {
-      "id": "DT-Status",
-      "title": "SpecIF:Status",
+      "id": "DT-LifeCycleStatus",
+      "title": "SpecIF:LifeCycleStatus",
       "description": "Enumerated values for status",
-      "revision": "1",
-      "replaces": [],
+      "revision": "1.1",
+      "replaces": ["1"],
       "type": "xs:enumeration",
       "values": [
         {
           "id": "V-Status-0",
-          "value": "00_deprecated"
+          "value": "SpecIF:LifecycleStatusDeprecated"
         },
         {
           "id": "V-Status-1",
-          "value": "01_rejected"
+          "value": "SpecIF:LifecycleStatusRejected"
         },
         {
           "id": "V-Status-2",
-          "value": "10_initial"
+          "value": "SpecIF:LifecycleStatusInitial"
         },
         {
           "id": "V-Status-3",
-          "value": "20_drafted"
+          "value": "SpecIF:LifecycleStatusDrafted"
         },
         {
           "id": "V-Status-4",
-          "value": "30_submitted"
+          "value": "SpecIF:LifecycleStatusSubmitted"
         },
         {
           "id": "V-Status-5",
-          "value": "40_approved"
+          "value": "SpecIF:LifecycleStatusApproved"
+        },
+        {
+          "id": "V-Status-8",
+          "value": "SpecIF:LifecycleStatusReady"
         },
         {
           "id": "V-Status-6",
-          "value": "60_completed"
+          "value": "SpecIF:LifecycleStatusDone"
+        },
+        {
+          "id": "V-Status-9",
+          "value": "SpecIF:LifecycleStatusValidated"
         },
         {
           "id": "V-Status-7",
-          "value": "80_released"
+          "value": "SpecIF:LifecycleStatusReleased"
+        },
+        {
+          "id": "V-Status-10",
+          "value": "SpecIF:LifecycleStatusWithdrawn"
         }
       ],
       "multiple": false,
-      "changedAt": "2016-05-26T08:59:00+02:00"
+      "changedAt": "2021-02-21T08:59:00+02:00"
     },
     {
       "id": "DT-Priority",
@@ -82,96 +94,36 @@
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
     {
-      "id": "DT-Perspective",
-      "title": "Perspective",
-      "description": "Enumerated values for perspective",
-      "revision": "1",
-      "replaces": [],
-      "type": "xs:enumeration",
-      "values": [
-        {
-          "id": "V-perspective-0",
-          "value": "Business"
-        },
-        {
-          "id": "V-perspective-1",
-          "value": "User"
-        },
-        {
-          "id": "V-perspective-2",
-          "value": "System"
-        }
-      ],
-      "multiple": false,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
       "id": "DT-Discipline",
       "title": "Discipline",
       "description": "Enumerated values for engineering discipline",
-      "revision": "1",
-      "replaces": [],
+      "revision": "1.1",
+      "replaces": ["1"],
       "type": "xs:enumeration",
       "values": [
         {
           "id": "V-discipline-4",
-          "value": "System"
+          "value": "SpecIF:DisciplineSystem"
         },
         {
           "id": "V-discipline-0",
-          "value": "Mechanics"
+          "value": "SpecIF:DisciplineMechanics"
         },
         {
           "id": "V-discipline-1",
-          "value": "Electronics"
+          "value": "SpecIF:DisciplineElectronics"
         },
         {
           "id": "V-discipline-2",
-          "value": "Software"
+          "value": "SpecIF:DisciplineSoftware"
         },
         {
           "id": "V-discipline-3",
-          "value": "Safety"
+          "value": "SpecIF:DisciplineSafety"
         }
       ],
       "multiple": false,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "DT-VisibilityKind",
-      "title": "SpecIF:VisibilityKind",
-      "description": "Enumerated values for visibility",
-      "revision": "1",
-      "replaces": [],
-      "type": "xs:enumeration",
-      "values": [
-        {
-          "id": "V-VisibilityKind-0",
-          "value": "Public"
-        },
-        {
-          "id": "V-VisibilityKind-1",
-          "value": "Private"
-        },
-        {
-          "id": "V-VisibilityKind-2",
-          "value": "Protected"
-        },
-        {
-          "id": "V-VisibilityKind-3",
-          "value": "Package"
-        },
-        {
-          "id": "V-VisibilityKind-4",
-          "value": "Internal"
-        },
-        {
-          "id": "V-VisibilityKind-5",
-          "value": "Protected Internal"
-        }
-      ],
-      "multiple": false,
-      "changedAt": "2019-03-08T15:00:00+01:00"
+      "changedAt": "2021-02-21T08:59:00+02:00"
     }
   ],
   "propertyClasses": [],
