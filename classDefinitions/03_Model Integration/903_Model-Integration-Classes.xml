@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specif>
+   <id>_20B10532_D3E3_47DF_A58D_EB22060878CC</id>
+   <title>Template with SpecIF classes useful for integrating partial models of different tools and notations.</title>
+   <isExtension>false</isExtension>
+   <createdAt>2020-02-16T19:54:34.4837474+01:00</createdAt>
+   <dataTypes>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>The Boolean data type.</description>
+         <id>DT-Boolean</id>
+         <replaces />
+         <revision>1</revision>
+         <title>Boolean</title>
+         <type>xs:boolean</type>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>A byte is an integer value in range between 0 and 255.</description>
+         <id>DT-Byte</id>
+         <maxInclusive>255</maxInclusive>
+         <minInclusive>0</minInclusive>
+         <replaces />
+         <revision>1</revision>
+         <title>Byte</title>
+         <type>xs:integer</type>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>A numerical integer value from -32768 to 32768.</description>
+         <id>DT-Integer</id>
+         <maxInclusive>32767</maxInclusive>
+         <minInclusive>-32768</minInclusive>
+         <replaces />
+         <revision>1</revision>
+         <title>Integer</title>
+         <type>xs:integer</type>
+      </item>
+      <item>
+         <changedAt>2021-02-14T08:59:00+02:00</changedAt>
+         <description>A floating point number (double) with up to 5 fraction digits.</description>
+         <id>DT-Real</id>
+         <replaces>
+            <item>1</item>
+         </replaces>
+         <revision>1.1</revision>
+         <title>Real</title>
+         <type>xs:double</type>
+      </item>
+      <item>
+         <changedAt>2021-02-14T08:59:00+02:00</changedAt>
+         <description>A floating point number (double) with two fraction digits.</description>
+         <fractionDigits>2</fractionDigits>
+         <id>DT-Decimal2</id>
+         <replaces>
+            <item>1</item>
+         </replaces>
+         <revision>1.1</revision>
+         <title>Real with 2 Decimals</title>
+         <type>xs:double</type>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>Date or Timestamp in ISO-Format</description>
+         <id>DT-DateTime</id>
+         <replaces />
+         <revision>1</revision>
+         <title>Date or Timestamp</title>
+         <type>xs:dateTime</type>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>String with max. length 256</description>
+         <id>DT-ShortString</id>
+         <maxLength>256</maxLength>
+         <replaces />
+         <revision>1</revision>
+         <title>String[256]</title>
+         <type>xs:string</type>
+      </item>
+      <item>
+         <changedAt>2021-02-14T08:59:00+02:00</changedAt>
+         <description>A text string, plain, or formatted with XHTML or markdown</description>
+         <id>DT-Text</id>
+         <replaces>
+            <item>1</item>
+         </replaces>
+         <revision>1.1</revision>
+         <title>Plain or formatted Text</title>
+         <type>xs:string</type>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>A uniform resource locator.</description>
+         <id>DT-URL</id>
+         <maxLength>1024</maxLength>
+         <replaces />
+         <revision>1</revision>
+         <title>URL</title>
+         <type>xs:string</type>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>Data type to represent an E-mail address.</description>
+         <id>DT-EmailAddress</id>
+         <maxLength>256</maxLength>
+         <replaces />
+         <revision>1</revision>
+         <title>E-mail</title>
+         <type>xs:string</type>
+      </item>
+      <item>
+         <changedAt>2021-02-21T08:59:00+02:00</changedAt>
+         <description>Enumerated values for status</description>
+         <id>DT-LifeCycleStatus</id>
+         <multiple>false</multiple>
+         <replaces>
+            <item>1</item>
+         </replaces>
+         <revision>1.1</revision>
+         <title>SpecIF:LifeCycleStatus</title>
+         <type>xs:enumeration</type>
+         <values>
+            <item>
+               <id>V-Status-0</id>
+               <value>SpecIF:LifecycleStatusDeprecated</value>
+            </item>
+            <item>
+               <id>V-Status-1</id>
+               <value>SpecIF:LifecycleStatusRejected</value>
+            </item>
+            <item>
+               <id>V-Status-2</id>
+               <value>SpecIF:LifecycleStatusInitial</value>
+            </item>
+            <item>
+               <id>V-Status-3</id>
+               <value>SpecIF:LifecycleStatusDrafted</value>
+            </item>
+            <item>
+               <id>V-Status-4</id>
+               <value>SpecIF:LifecycleStatusSubmitted</value>
+            </item>
+            <item>
+               <id>V-Status-5</id>
+               <value>SpecIF:LifecycleStatusApproved</value>
+            </item>
+            <item>
+               <id>V-Status-8</id>
+               <value>SpecIF:LifecycleStatusReady</value>
+            </item>
+            <item>
+               <id>V-Status-6</id>
+               <value>SpecIF:LifecycleStatusDone</value>
+            </item>
+            <item>
+               <id>V-Status-9</id>
+               <value>SpecIF:LifecycleStatusValidated</value>
+            </item>
+            <item>
+               <id>V-Status-7</id>
+               <value>SpecIF:LifecycleStatusReleased</value>
+            </item>
+            <item>
+               <id>V-Status-10</id>
+               <value>SpecIF:LifecycleStatusWithdrawn</value>
+            </item>
+         </values>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>Enumerated values for priority</description>
+         <id>DT-Priority</id>
+         <multiple>false</multiple>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:Priority</title>
+         <type>xs:enumeration</type>
+         <values>
+            <item>
+               <id>V-Prio-0</id>
+               <value>SpecIF:priorityHigh</value>
+            </item>
+            <item>
+               <id>V-Prio-1</id>
+               <value>SpecIF:priorityRatherHigh</value>
+            </item>
+            <item>
+               <id>V-Prio-2</id>
+               <value>SpecIF:priorityMedium</value>
+            </item>
+            <item>
+               <id>V-Prio-3</id>
+               <value>SpecIF:priorityRatherLow</value>
+            </item>
+            <item>
+               <id>V-Prio-4</id>
+               <value>SpecIF:priorityLow</value>
+            </item>
+         </values>
+      </item>
+      <item>
+         <changedAt>2021-02-21T08:59:00+02:00</changedAt>
+         <description>Enumerated values for engineering discipline</description>
+         <id>DT-Discipline</id>
+         <multiple>false</multiple>
+         <replaces>
+            <item>1</item>
+         </replaces>
+         <revision>1.1</revision>
+         <title>Discipline</title>
+         <type>xs:enumeration</type>
+         <values>
+            <item>
+               <id>V-discipline-4</id>
+               <value>SpecIF:DisciplineSystem</value>
+            </item>
+            <item>
+               <id>V-discipline-0</id>
+               <value>SpecIF:DisciplineMechanics</value>
+            </item>
+            <item>
+               <id>V-discipline-1</id>
+               <value>SpecIF:DisciplineElectronics</value>
+            </item>
+            <item>
+               <id>V-discipline-2</id>
+               <value>SpecIF:DisciplineSoftware</value>
+            </item>
+            <item>
+               <id>V-discipline-3</id>
+               <value>SpecIF:DisciplineSafety</value>
+            </item>
+         </values>
+      </item>
+      <item>
+         <changedAt>2021-02-21T08:59:00+02:00</changedAt>
+         <description>Enumerated values for the Requirement type according IREB</description>
+         <id>DT-RequirementType</id>
+         <multiple>false</multiple>
+         <replaces>
+            <item>1</item>
+         </replaces>
+         <revision>1.1</revision>
+         <title>IREB:RequirementType</title>
+         <type>xs:enumeration</type>
+         <values>
+            <item>
+               <id>V-RequirementType-0</id>
+               <value>IREB:FunctionalRequirement</value>
+            </item>
+            <item>
+               <id>V-RequirementType-1</id>
+               <value>IREB:QualityRequirement</value>
+            </item>
+            <item>
+               <id>V-RequirementType-2</id>
+               <value>IREB:Constraint</value>
+            </item>
+         </values>
+      </item>
+      <item>
+         <changedAt>2021-02-21T08:59:00+02:00</changedAt>
+         <description>Enumerated values for the perspective (of a requirement)</description>
+         <id>DT-Perspective</id>
+         <multiple>false</multiple>
+         <replaces>
+            <item>1</item>
+         </replaces>
+         <revision>1.1</revision>
+         <title>Perspective</title>
+         <type>xs:enumeration</type>
+         <values>
+            <item>
+               <id>V-perspective-0</id>
+               <value>IREB:PerspectiveBusiness</value>
+            </item>
+            <item>
+               <id>V-perspective-3</id>
+               <value>IREB:PerspectiveStakeholder</value>
+            </item>
+            <item>
+               <id>V-perspective-1</id>
+               <value>IREB:PerspectiveUser</value>
+            </item>
+            <item>
+               <id>V-perspective-4</id>
+               <value>IREB:PerspectiveOperator</value>
+            </item>
+            <item>
+               <id>V-perspective-2</id>
+               <value>IREB:PerspectiveSystem</value>
+            </item>
+         </values>
+      </item>
+      <item>
+         <changedAt>2021-02-21T08:59:00+02:00</changedAt>
+         <description>Enumerated values for visibility</description>
+         <id>DT-VisibilityKind</id>
+         <multiple>false</multiple>
+         <replaces>
+            <item>1</item>
+         </replaces>
+         <revision>1.1</revision>
+         <title>SpecIF:VisibilityKind</title>
+         <type>xs:enumeration</type>
+         <values>
+            <item>
+               <id>V-VisibilityKind-0</id>
+               <value>UML:Public</value>
+            </item>
+            <item>
+               <id>V-VisibilityKind-1</id>
+               <value>UML:Private</value>
+            </item>
+            <item>
+               <id>V-VisibilityKind-2</id>
+               <value>UML:Protected</value>
+            </item>
+            <item>
+               <id>V-VisibilityKind-3</id>
+               <value>UML:Package</value>
+            </item>
+            <item>
+               <id>V-VisibilityKind-4</id>
+               <value>UML:Internal</value>
+            </item>
+            <item>
+               <id>V-VisibilityKind-5</id>
+               <value>UML:ProtectedInternal</value>
+            </item>
+         </values>
+      </item>
+   </dataTypes>
+   <propertyClasses>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <dataType>DT-ShortString</dataType>
+         <description>&lt;p&gt;A unique reference to the resource within a given context. &lt;small&gt;(&lt;i&gt;source: &lt;a href="http://dublincore.org/documents/dcmi-terms/"&gt;DCMI&lt;/a&gt;&lt;/i&gt;)&lt;/small&gt;&lt;/p&gt;&lt;p&gt;An identifier for a resource. This identifier may be unique with a scope that is defined by the RM provider. Assigned by the service provider when a resource is created. Not intended for end-user display. &lt;small&gt;(&lt;i&gt;source: &lt;a href="http://open-services.net/"&gt;OSLC&lt;/a&gt;&lt;/i&gt;)&lt;/small&gt;&lt;/p&gt;</description>
+         <id>PC-VisibleId</id>
+         <replaces />
+         <revision>1</revision>
+         <title>dcterms:identifier</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <dataType>DT-ShortString</dataType>
+         <description>&lt;p&gt;A name given to the resource. &lt;small&gt;(&lt;i&gt;source: &lt;a href="http://dublincore.org/documents/dcmi-terms/"&gt;DCMI&lt;/a&gt;&lt;/i&gt;)&lt;/small&gt;&lt;/p&gt;&lt;p&gt;Title (reference: Dublin Core) of the resource represented as rich text in XHTML content. SHOULD include only content that is valid inside an XHTML &amp;lt;span&amp;gt; element. &lt;small&gt;(&lt;i&gt;source: &lt;a href="http://open-services.net/"&gt;OSLC&lt;/a&gt;&lt;/i&gt;)&lt;/small&gt;&lt;/p&gt;</description>
+         <id>PC-Name</id>
+         <replaces />
+         <revision>1</revision>
+         <title>dcterms:title</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <dataType>DT-Text</dataType>
+         <description>&lt;p&gt;An account of the resource. &lt;small&gt;(&lt;i&gt;source: &lt;a href="http://dublincore.org/documents/dcmi-terms/"&gt;DCMI&lt;/a&gt;&lt;/i&gt;)&lt;/small&gt;&lt;/p&gt;&lt;p&gt;Descriptive text (reference: Dublin Core) about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML &amp;lt;div&amp;gt; element. &lt;small&gt;(&lt;i&gt;source: &lt;a href="http://open-services.net/"&gt;OSLC&lt;/a&gt;&lt;/i&gt;)&lt;/small&gt;&lt;/p&gt;</description>
+         <id>PC-Description</id>
+         <replaces />
+         <revision>1</revision>
+         <title>dcterms:description</title>
+      </item>
+      <item>
+         <changedAt>2017-06-10T15:47:24+02:00</changedAt>
+         <dataType>DT-ShortString</dataType>
+         <description>The origin (source, reference) of an information or requirement</description>
+         <id>PC-Origin</id>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:Origin</title>
+      </item>
+      <item>
+         <changedAt>2021-02-21T08:59:00+02:00</changedAt>
+         <dataType>DT-Text</dataType>
+         <description>A partial graphical representation (diagram) of a model.</description>
+         <id>PC-Diagram</id>
+         <replaces>
+            <item>1</item>
+         </replaces>
+         <revision>1.1</revision>
+         <title>SpecIF:Diagram</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <dataType>DT-ShortString</dataType>
+         <description>The notation used by a model diagram, e.g. 'BPMN:2.0', 'OMG:SysML:1.3:Activity Diagram' or 'FMC:Block Diagram'.</description>
+         <id>PC-Notation</id>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:Notation</title>
+      </item>
+      <item>
+         <changedAt>2021-02-21T08:59:00+02:00</changedAt>
+         <dataType>DT-LifeCycleStatus</dataType>
+         <description>The 'Status', e.g. lifecycle state, of the resource.</description>
+         <id>PC-LifeCycleStatus</id>
+         <replaces>
+            <item>1</item>
+         </replaces>
+         <revision>1.1</revision>
+         <title>SpecIF:LifeCycleStatus</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <dataType>DT-Priority</dataType>
+         <description>The 'Priority' of the resource.</description>
+         <id>PC-Priority</id>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:Priority</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <dataType>DT-Discipline</dataType>
+         <description>The engineering discipline (system, electronics, mechanics, software, safety).</description>
+         <id>PC-Discipline</id>
+         <multiple>true</multiple>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:Discipline</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <dataType>DT-ShortString</dataType>
+         <description>The 'Person' being responsible for the resource.</description>
+         <id>PC-Responsible</id>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:Responsible</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <dataType>DT-DateTime</dataType>
+         <description>A 'Due Date' for the resource.</description>
+         <id>PC-DueDate</id>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:DueDate</title>
+      </item>
+      <item>
+         <changedAt>2019-03-31T17:10:23.443Z</changedAt>
+         <dataType>DT-ShortString</dataType>
+         <description>A stereotype gives an element an additional/different meaning.</description>
+         <id>PC-Stereotype</id>
+         <replaces />
+         <revision>1</revision>
+         <title>UML:Stereotype</title>
+      </item>
+      <item>
+         <changedAt>2019-04-26T12:00:00+02:00</changedAt>
+         <dataType>DT-ShortString</dataType>
+         <description>An abbreviation for the resource.</description>
+         <id>PC-Abbreviation</id>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:Abbreviation</title>
+      </item>
+      <item>
+         <changedAt>2019-08-20T20:32:25.411Z</changedAt>
+         <dataType>DT-ShortString</dataType>
+         <description>The element type resp. the metamodel element (e.g. OMG:UML:2.5.1:Class)</description>
+         <id>PC-Type</id>
+         <replaces />
+         <revision>1</revision>
+         <title>dcterms:type</title>
+      </item>
+      <item>
+         <changedAt>2019-04-26T12:00:00+02:00</changedAt>
+         <dataType>DT-ShortString</dataType>
+         <description>An alias name for the resource.</description>
+         <id>PC-Alias</id>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:Alias</title>
+      </item>
+      <item>
+         <changedAt>2019-09-10T20:32:25.411Z</changedAt>
+         <dataType>DT-Text</dataType>
+         <description>A value of different meaning, depending on the element type (attribute default value, a taggedValue value etc.)</description>
+         <id>PC-Value</id>
+         <replaces />
+         <revision>1</revision>
+         <title>rdf:value</title>
+      </item>
+      <item>
+         <changedAt>2020-03-29T20:32:25.411Z</changedAt>
+         <dataType>DT-RequirementType</dataType>
+         <description>Enumerated value for the Requirement type according IREB</description>
+         <id>PC-RequirementType</id>
+         <replaces />
+         <revision>1</revision>
+         <title>IREB:RequirementType</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <dataType>DT-Perspective</dataType>
+         <description>Enumerated values for the perspective (of a requirement)</description>
+         <id>PC-Perspective</id>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:Perspective</title>
+      </item>
+      <item>
+         <changedAt>2019-09-10T08:59:00+02:00</changedAt>
+         <dataType>DT-VisibilityKind</dataType>
+         <description>The visibility of a resource (e.g. Public, Private, Protected,...) as known from object orientation.</description>
+         <id>PC-Visibility</id>
+         <multiple>false</multiple>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:Visibility</title>
+      </item>
+   </propertyClasses>
+   <resourceClasses>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>Folders with title and text for chapters or descriptive paragraphs.</description>
+         <id>RC-Folder</id>
+         <instantiation>
+            <item>auto</item>
+            <item>user</item>
+         </instantiation>
+         <isHeading>true</isHeading>
+         <propertyClasses>
+            <item>PC-Name</item>
+            <item>PC-Description</item>
+            <item>PC-Type</item>
+         </propertyClasses>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:Heading</title>
+      </item>
+      <item>
+         <changedAt>2021-02-21T08:59:00+02:00</changedAt>
+         <description>Information with text for descriptive paragraphs.</description>
+         <id>RC-Paragraph</id>
+         <instantiation>
+            <item>auto</item>
+            <item>user</item>
+         </instantiation>
+         <isHeading>false</isHeading>
+         <propertyClasses>
+            <item>PC-Description</item>
+         </propertyClasses>
+         <replaces>
+            <item>1</item>
+         </replaces>
+         <revision>1.1</revision>
+         <title>SpecIF:Paragraph</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>Root node of a hierarchically organized specification (outline).</description>
+         <icon>&amp;#128447;</icon>
+         <id>RC-Hierarchy</id>
+         <instantiation>
+            <item>auto</item>
+            <item>user</item>
+         </instantiation>
+         <isHeading>false</isHeading>
+         <propertyClasses>
+            <item>PC-Name</item>
+            <item>PC-Description</item>
+         </propertyClasses>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:Hierarchy</title>
+      </item>
+      <item>
+         <changedAt>2019-03-16T18:59:00+01:00</changedAt>
+         <description>Comment referring to a model element ('resource' in general).</description>
+         <id>RC-Comment</id>
+         <instantiation>
+            <item>user</item>
+         </instantiation>
+         <isHeading>false</isHeading>
+         <propertyClasses>
+            <item>PC-Description</item>
+         </propertyClasses>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:Comment</title>
+      </item>
+      <item>
+         <changedAt>2021-02-22T08:59:00+02:00</changedAt>
+         <description>A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.</description>
+         <icon>&amp;#8623;</icon>
+         <id>RC-Requirement</id>
+         <instantiation>
+            <item>user</item>
+         </instantiation>
+         <isHeading>false</isHeading>
+         <propertyClasses>
+            <item>PC-VisibleId</item>
+            <item>PC-Name</item>
+            <item>PC-Description</item>
+            <item>PC-RequirementType</item>
+            <item>PC-Priority</item>
+            <item>PC-LifeCycleStatus</item>
+            <item>PC-Perspective</item>
+            <item>PC-Discipline</item>
+         </propertyClasses>
+         <replaces>
+            <item>1</item>
+         </replaces>
+         <revision>1.1</revision>
+         <title>IREB:Requirement</title>
+      </item>
+      <item>
+         <changedAt>2021-02-22T08:59:00+02:00</changedAt>
+         <description>A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition.</description>
+         <icon>&amp;#10038;</icon>
+         <id>RC-Feature</id>
+         <instantiation>
+            <item>user</item>
+         </instantiation>
+         <isHeading>false</isHeading>
+         <propertyClasses>
+            <item>PC-VisibleId</item>
+            <item>PC-Name</item>
+            <item>PC-Description</item>
+            <item>PC-Priority</item>
+            <item>PC-LifeCycleStatus</item>
+            <item>PC-Perspective</item>
+            <item>PC-Discipline</item>
+         </propertyClasses>
+         <replaces>
+            <item>1</item>
+         </replaces>
+         <revision>1.1</revision>
+         <title>SpecIF:Feature</title>
+      </item>
+      <item>
+         <changedAt>2021-02-22T08:59:00+02:00</changedAt>
+         <description>A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.</description>
+         <icon>&amp;#9635;</icon>
+         <id>RC-Diagram</id>
+         <instantiation>
+            <item>auto</item>
+            <item>user</item>
+         </instantiation>
+         <isHeading>false</isHeading>
+         <propertyClasses>
+            <item>PC-Name</item>
+            <item>PC-Description</item>
+            <item>PC-Diagram</item>
+            <item>PC-Type</item>
+            <item>PC-Notation</item>
+            <item>PC-LifeCycleStatus</item>
+            <item>PC-Stereotype</item>
+         </propertyClasses>
+         <replaces>
+            <item>1</item>
+         </replaces>
+         <revision>1.1</revision>
+         <title>SpecIF:Diagram</title>
+      </item>
+      <item>
+         <changedAt>2019-09-10T08:59:00+02:00</changedAt>
+         <description>An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.</description>
+         <icon>&amp;#9632;</icon>
+         <id>RC-Actor</id>
+         <instantiation>
+            <item>auto</item>
+         </instantiation>
+         <isHeading>false</isHeading>
+         <propertyClasses>
+            <item>PC-Name</item>
+            <item>PC-Description</item>
+            <item>PC-LifeCycleStatus</item>
+            <item>PC-Visibility</item>
+            <item>PC-Type</item>
+            <item>PC-Stereotype</item>
+            <item>PC-Value</item>
+            <item>PC-Alias</item>
+         </propertyClasses>
+         <replaces />
+         <revision>1</revision>
+         <title>FMC:Actor</title>
+      </item>
+      <item>
+         <changedAt>2019-09-10T08:59:00+02:00</changedAt>
+         <description>A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape.</description>
+         <icon>&amp;#9679;</icon>
+         <id>RC-State</id>
+         <instantiation>
+            <item>auto</item>
+         </instantiation>
+         <isHeading>false</isHeading>
+         <propertyClasses>
+            <item>PC-Name</item>
+            <item>PC-Description</item>
+            <item>PC-LifeCycleStatus</item>
+            <item>PC-Visibility</item>
+            <item>PC-Type</item>
+            <item>PC-Stereotype</item>
+            <item>PC-Value</item>
+            <item>PC-Alias</item>
+         </propertyClasses>
+         <replaces />
+         <revision>1</revision>
+         <title>FMC:State</title>
+      </item>
+      <item>
+         <changedAt>2019-09-10T08:59:00+02:00</changedAt>
+         <description>An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.</description>
+         <icon>&amp;#11047;</icon>
+         <id>RC-Event</id>
+         <instantiation>
+            <item>auto</item>
+         </instantiation>
+         <isHeading>false</isHeading>
+         <propertyClasses>
+            <item>PC-Name</item>
+            <item>PC-Description</item>
+            <item>PC-LifeCycleStatus</item>
+            <item>PC-Visibility</item>
+            <item>PC-Type</item>
+            <item>PC-Stereotype</item>
+            <item>PC-Value</item>
+            <item>PC-Alias</item>
+         </propertyClasses>
+         <replaces />
+         <revision>1</revision>
+         <title>FMC:Event</title>
+      </item>
+      <item>
+         <changedAt>2021-01-02T18:59:00+02:00</changedAt>
+         <description>A 'Collection' is a logic (often conceptual) group of resources linked with a SpecIF:contains statement. It corresponds to a 'Group' in BPMN Diagrams.</description>
+         <icon>&amp;#11034;</icon>
+         <id>RC-Collection</id>
+         <instantiation>
+            <item>auto</item>
+         </instantiation>
+         <isHeading>false</isHeading>
+         <propertyClasses>
+            <item>PC-Name</item>
+            <item>PC-Description</item>
+            <item>PC-LifeCycleStatus</item>
+            <item>PC-Visibility</item>
+            <item>PC-Type</item>
+            <item>PC-Stereotype</item>
+            <item>PC-Value</item>
+            <item>PC-Alias</item>
+         </propertyClasses>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:Collection</title>
+      </item>
+   </resourceClasses>
+   <resources />
+   <statementClasses>
+      <item>
+         <changedAt>2019-03-24T11:00:00+01:00</changedAt>
+         <description>States that the relation subject is an instance of the relation object.</description>
+         <id>SC-Classifier</id>
+         <instantiation>
+            <item>auto</item>
+            <item>user</item>
+         </instantiation>
+         <replaces />
+         <revision>1</revision>
+         <title>rdf:type</title>
+      </item>
+      <item>
+         <changedAt>2019-08-20T20:32:25+02:00</changedAt>
+         <description>A resource 'refers to' any other resource.</description>
+         <id>SC-refersTo</id>
+         <instantiation>
+            <item>auto</item>
+         </instantiation>
+         <propertyClasses>
+            <item>PC-Type</item>
+         </propertyClasses>
+         <replaces />
+         <revision>1</revision>
+         <title>SpecIF:refersTo</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>Statement: Requirement/Feature depends on Requirement/Feature</description>
+         <id>SC-dependsOn</id>
+         <instantiation>
+            <item>user</item>
+         </instantiation>
+         <objectClasses>
+            <item>RC-Requirement</item>
+         </objectClasses>
+         <replaces />
+         <revision>1</revision>
+         <subjectClasses>
+            <item>RC-Requirement</item>
+         </subjectClasses>
+         <title>SpecIF:dependsOn</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>Statement: Model-Element satisfies Requirement</description>
+         <id>SC-satisfies</id>
+         <instantiation>
+            <item>user</item>
+         </instantiation>
+         <objectClasses>
+            <item>RC-Requirement</item>
+         </objectClasses>
+         <replaces />
+         <revision>1</revision>
+         <subjectClasses>
+            <item>RC-Actor</item>
+            <item>RC-State</item>
+            <item>RC-Event</item>
+         </subjectClasses>
+         <title>oslc_rm:satisfies</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>The subject requirement duplicates the object requirement.</description>
+         <id>SC-duplicates</id>
+         <instantiation>
+            <item>user</item>
+         </instantiation>
+         <objectClasses>
+            <item>RC-Requirement</item>
+         </objectClasses>
+         <replaces />
+         <revision>1</revision>
+         <subjectClasses>
+            <item>RC-Requirement</item>
+         </subjectClasses>
+         <title>SpecIF:duplicates</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>The subject requirement contradicts the object requirement.</description>
+         <id>SC-contradicts</id>
+         <instantiation>
+            <item>user</item>
+         </instantiation>
+         <objectClasses>
+            <item>RC-Requirement</item>
+         </objectClasses>
+         <replaces />
+         <revision>1</revision>
+         <subjectClasses>
+            <item>RC-Requirement</item>
+         </subjectClasses>
+         <title>SpecIF:contradicts</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>The subject requirement refines the object requirement.</description>
+         <id>SC-refines</id>
+         <instantiation>
+            <item>user</item>
+         </instantiation>
+         <objectClasses>
+            <item>RC-Requirement</item>
+         </objectClasses>
+         <replaces />
+         <revision>1</revision>
+         <subjectClasses>
+            <item>RC-Requirement</item>
+         </subjectClasses>
+         <title>IREB:refines</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>Statement: Plan resp. diagram shows Model-Element</description>
+         <id>SC-shows</id>
+         <instantiation>
+            <item>auto</item>
+         </instantiation>
+         <objectClasses>
+            <item>RC-Actor</item>
+            <item>RC-State</item>
+            <item>RC-Event</item>
+         </objectClasses>
+         <replaces />
+         <revision>1</revision>
+         <subjectClasses>
+            <item>RC-Diagram</item>
+         </subjectClasses>
+         <title>SpecIF:shows</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>Statement: Model-Element contains Model-Element</description>
+         <id>SC-contains</id>
+         <instantiation>
+            <item>auto</item>
+            <item>user</item>
+         </instantiation>
+         <objectClasses>
+            <item>RC-Actor</item>
+            <item>RC-State</item>
+            <item>RC-Event</item>
+         </objectClasses>
+         <replaces />
+         <revision>1</revision>
+         <subjectClasses>
+            <item>RC-Actor</item>
+            <item>RC-State</item>
+            <item>RC-Event</item>
+         </subjectClasses>
+         <title>SpecIF:contains</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>Statement: Actor (Role, Function) writes and reads State (Information)</description>
+         <id>SC-stores</id>
+         <instantiation>
+            <item>auto</item>
+         </instantiation>
+         <objectClasses>
+            <item>RC-State</item>
+         </objectClasses>
+         <replaces />
+         <revision>1</revision>
+         <subjectClasses>
+            <item>RC-Actor</item>
+         </subjectClasses>
+         <title>SpecIF:stores</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>Statement: Actor (Role, Function) writes State (Information)</description>
+         <id>SC-writes</id>
+         <instantiation>
+            <item>auto</item>
+         </instantiation>
+         <objectClasses>
+            <item>RC-State</item>
+         </objectClasses>
+         <replaces />
+         <revision>1</revision>
+         <subjectClasses>
+            <item>RC-Actor</item>
+         </subjectClasses>
+         <title>SpecIF:writes</title>
+      </item>
+      <item>
+         <changedAt>2016-05-26T08:59:00+02:00</changedAt>
+         <description>Statement: Actor (Role, Function) reads State (Information)</description>
+         <id>SC-reads</id>
+         <instantiation>
+            <item>auto</item>
+         </instantiation>
+         <objectClasses>
+            <item>RC-State</item>
+         </objectClasses>
+         <replaces />
+         <revision>1</revision>
+         <subjectClasses>
+            <item>RC-Actor</item>
+         </subjectClasses>
+         <title>SpecIF:reads</title>
+      </item>
+      <item>
+         <changedAt>2019-08-20T20:32:25+02:00</changedAt>
+         <description>A FMC:Actor 'signals' a FMC:Event.</description>
+         <id>SC-signals</id>
+         <instantiation>
+            <item>auto</item>
+         </instantiation>
+         <objectClasses>
+            <item>RC-Event</item>
+         </objectClasses>
+         <replaces />
+         <revision>1</revision>
+         <subjectClasses>
+            <item>RC-Actor</item>
+         </subjectClasses>
+         <title>SpecIF:signals</title>
+      </item>
+      <item>
+         <changedAt>2020-02-17T20:32:25+02:00</changedAt>
+         <description>A FMC:Event 'trigers' an FMC:Actor.</description>
+         <id>SC-triggers</id>
+         <instantiation>
+            <item>auto</item>
+         </instantiation>
+         <objectClasses>
+            <item>RC-Actor</item>
+         </objectClasses>
+         <replaces />
+         <revision>1</revision>
+         <subjectClasses>
+            <item>RC-Event</item>
+         </subjectClasses>
+         <title>SpecIF:triggers</title>
+      </item>
+      <item>
+         <changedAt>2020-02-17T20:32:25+02:00</changedAt>
+         <description>An FMC:Actor 'preceeds' an FMC:Actor.</description>
+         <id>SC-preceeds</id>
+         <instantiation>
+            <item>auto</item>
+         </instantiation>
+         <objectClasses>
+            <item>RC-Actor</item>
+         </objectClasses>
+         <replaces />
+         <revision>1</revision>
+         <subjectClasses>
+            <item>RC-Actor</item>
+         </subjectClasses>
+         <title>SpecIF:preceeds</title>
+      </item>
+   </statementClasses>
+   <statements />
+   <hierarchies />
+</specif>

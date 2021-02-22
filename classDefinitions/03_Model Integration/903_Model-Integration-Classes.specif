@@ -1,7 +1,7 @@
 {
   "$schema": "https://specif.de/v1.0/schema.json",
   "id": "_20B10532_D3E3_47DF_A58D_EB22060878CC",
-  "title": "SpecIF primitive datatype definitions for domain 01-Base Definitions",
+  "title": "Template with SpecIF classes useful for integrating partial models of different tools and notations.",
   "isExtension": false,
   "createdAt": "2020-02-16T19:54:34.4837474+01:00",
   "dataTypes": [
@@ -338,20 +338,11 @@
     {
       "id": "PC-Description",
       "title": "dcterms:description",
-      "description": "<p>An account of the resource. <small>(<i>source: <a href=\"http://dublincore.org/documents/dcmi-terms/\">DCMI</a></i>)</small></p><p>Descriptive text (reference: Dublin Core) about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML &lt;div&gt; element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
+      "description": "An account of the resource (source: http://dublincore.org/documents/dcmi-terms/). Descriptive text about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML &lt;div&gt; element (source: http://open-services.net/).",
       "revision": "1",
       "replaces": [],
       "dataType": "DT-Text",
       "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "PC-Origin",
-      "title": "SpecIF:Origin",
-      "description": "The origin (source, reference) of an information or requirement",
-      "revision": "1",
-      "replaces": [],
-      "dataType": "DT-ShortString",
-      "changedAt": "2017-06-10T15:47:24+02:00"
     },
     {
       "id": "PC-Diagram",
@@ -370,6 +361,15 @@
       "replaces": [],
       "dataType": "DT-ShortString",
       "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "PC-Origin",
+      "title": "SpecIF:Origin",
+      "description": "The origin (source, reference) of an information or requirement",
+      "revision": "1",
+      "replaces": [],
+      "dataType": "DT-ShortString",
+      "changedAt": "2017-06-10T15:47:24+02:00"
     },
     {
       "id": "PC-LifeCycleStatus",
