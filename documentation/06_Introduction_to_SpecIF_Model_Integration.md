@@ -18,10 +18,15 @@ set of types. Therefore an abstraction (or mapping) to three _fundamental_ model
 for equality. The model-element types of the _Fundamental Modeling Concepts (FMC)_ have been selected for this purpose,
 namely _Actor_, _State_ and _Event_. Model-elements used by every method or notation can be mapped to these [Ref].
 
-<img src="./images/Semantic_Integration.png" width="600px" />
+<img src="./images/Semantic_Integration.png" width="900px" />
 
 The fundamental model-element classes and eligible statement classes used for model-integration are shown:
 <img src="./images/ElementTypes-M0.png" width="600px" />
+
+A collection of SpecIF classes for resources and statements which have been successfully used to integrate
+partial models from different sources and notations is 
+available [here](..//classDefinitions/03_Model Integration/903_Model-Integration-Classes.specif). 
+It is work in progress ...
 
 The following sections of the SpecIF Model Integration Guide shows mappings and examples for transformations from different modeling environments to SpecIF:
 1. [Model Integration Guide for FMC](./06_SpecIF_Model_Integration_Guide_for_FMC.md)
