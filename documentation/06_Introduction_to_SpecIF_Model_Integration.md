@@ -24,8 +24,8 @@ The fundamental model-element classes and eligible statement classes used for mo
 <img src="./images/ElementTypes-M0.png" width="900px" />
 
 A collection of SpecIF classes for resources and statements which have been successfully used to integrate
-partial models from different sources and notations is 
-available [here](../classDefinitions/03_Model Integration/903_Model-Integration-Classes.specif). 
+partial models from different sources and notations is available 
+[here](https://github.com/GfSE/SpecIF/blob/master/classDefinitions/03_Model%20Integration/903_Model-Integration-Classes.xml). 
 It is work in progress ...
 
 The following sections of the SpecIF Model Integration Guide shows mappings and examples for transformations from different modeling environments to SpecIF:
