@@ -27,48 +27,48 @@ Again, let's start with the new elements of a SpecIF data-set.
 ```json
 {
     "propertyClasses": [{
-        "id": "PC-Diagram",
-        "title": "SpecIF:Diagram",
-        "dataType": "DT-FormattedText",
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "PC-Diagram",
+      "title": "SpecIF:Diagram",
+      "dataType": "DT-FormattedText",
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "PC-Type",
-        "title": "dcterms:type",
-        "dataType": "DT-ShortString",
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "PC-Type",
+      "title": "dcterms:type",
+      "dataType": "DT-ShortString",
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }],
     "resourceClasses": [{
-        "id": "RC-Diagram",
-        "title": "SpecIF:Diagram",
-        "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
-        "instantiation": ["user"],
-        "icon": "&#9635;",
-        "propertyClasses": ["PC-Name","PC-Description","PC-Diagram","PC-Type"],
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "RC-Diagram",
+      "title": "SpecIF:Diagram",
+      "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
+      "instantiation": ["user"],
+      "icon": "&#9635;",
+      "propertyClasses": ["PC-Name","PC-Description","PC-Diagram","PC-Type"],
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "RC-Actor",
-        "title": "FMC:Actor",
-        "description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
-        "instantiation": ["auto"],
-        "icon": "&#9632;",
-        "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "RC-Actor",
+      "title": "FMC:Actor",
+      "description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
+      "instantiation": ["auto"],
+      "icon": "&#9632;",
+      "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "RC-State",
-        "title": "FMC:State",
-        "description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a document, an information storage or even a physical shape.",
-        "instantiation": ["auto"],
-        "icon": "&#9679;",
-        "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "RC-State",
+      "title": "FMC:State",
+      "description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a document, an information storage or even a physical shape.",
+      "instantiation": ["auto"],
+      "icon": "&#9679;",
+      "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "RC-Event",
-        "title": "FMC:Event",
-        "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
-        "instantiation": ["auto"],
-        "icon": "&#9830;",
-        "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "RC-Event",
+      "title": "FMC:Event",
+      "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
+      "instantiation": ["auto"],
+      "icon": "&#9830;",
+      "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }],
 }
 ```
@@ -85,29 +85,29 @@ Next, we look at the *statementClasses*:
 ```json
 {
     "statementClasses": [{
-        "id": "SC-shows",
-        "title": "SpecIF:shows",
-        "description": "'Diagram' shows 'Model-Element'",
-        "instantiation": ["auto"],
-        "subjectClasses": ["RC-Diagram"],
-        "objectClasses": ["RC-Actor", "RC-State", "RC-Event"],
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "SC-shows",
+      "title": "SpecIF:shows",
+      "description": "'Diagram' shows 'Model-Element'",
+      "instantiation": ["auto"],
+      "subjectClasses": ["RC-Diagram"],
+      "objectClasses": ["RC-Actor", "RC-State", "RC-Event"],
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "SC-writes",
-        "title": "SpecIF:writes",
-        "description": "'Actor' (Role, Function) writes 'State' (Information)",
-        "instantiation": ["auto"],
-        "subjectClasses": ["RC-Actor"],
-        "objectClasses": ["RC-State"],
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "SC-writes",
+      "title": "SpecIF:writes",
+      "description": "'Actor' (Role, Function) writes 'State' (Information)",
+      "instantiation": ["auto"],
+      "subjectClasses": ["RC-Actor"],
+      "objectClasses": ["RC-State"],
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "SC-reads",
-        "title": "SpecIF:reads",
-        "description": "'Actor' (Role, Function) reads 'State' (Information)",
-        "instantiation": ["auto"],
-        "subjectClasses": ["RC-Actor"],
-        "objectClasses": ["RC-State"],
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "SC-reads",
+      "title": "SpecIF:reads",
+      "description": "'Actor' (Role, Function) reads 'State' (Information)",
+      "instantiation": ["auto"],
+      "subjectClasses": ["RC-Actor"],
+      "objectClasses": ["RC-State"],
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }],
 }
 ```
@@ -127,170 +127,171 @@ Let us at last have a look at the full example, now:
     "title": "Very Simple Model (FMC)",
     "createdAt": "2020-03-06T09:05:00+01:00",
     "dataTypes": [{
-        "id": "DT-ShortString",
-        "title": "String [96]",
-        "description": "String with length 96",
-        "type": "xs:string",
-        "maxLength": 96,
-        "changedAt": "2018-05-10T11:54:00+01:00"
-    }, {
-        "id": "DT-FormattedText",
-        "title": "Formatted Text with length 8192",
-        "type": "xhtml",
-        "maxLength": 8192,
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "DT-ShortString",
+      "title": "String[96]",
+      "description": "String with max. length 96.",
+      "type": "xs:string",
+      "maxLength": 96,
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },{
+      "id": "DT-Text",
+      "title": "Plain or formatted Text",
+      "description": "A text string, plain, or formatted with XHTML or markdown",
+      "type": "xs:string",
+      "changedAt": "2021-02-14T08:59:00+02:00"
     }],
     "propertyClasses": [{
-        "id": "PC-Name",
-        "title": "dcterms:title",
-        "dataType": "DT-ShortString",
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "PC-Name",
+      "title": "dcterms:title",
+      "dataType": "DT-ShortString",
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "PC-Description",
-        "title": "dcterms:description",
-        "dataType": "DT-FormattedText",
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "PC-Description",
+      "title": "dcterms:description",
+      "description": "An account of the resource (source: http://dublincore.org/documents/dcmi-terms/). Descriptive text represented in plain or rich text using XHTML or Markdown. SHOULD include only content that is valid and suitable inside an XHTML &lt;div&gt; element (source: http://open-services.net/).",
+      "dataType": "DT-Text",
+      "changedAt": "2021-02-23T08:59:00+02:00"
     }, {
-        "id": "PC-Diagram",
-        "title": "SpecIF:Diagram",
-        "dataType": "DT-FormattedText",
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "PC-Diagram",
+      "title": "SpecIF:Diagram",
+      "dataType": "DT-FormattedText",
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "PC-Type",
-        "title": "dcterms:type",
-        "dataType": "DT-ShortString",
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "PC-Type",
+      "title": "dcterms:type",
+      "dataType": "DT-ShortString",
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }],
     "resourceClasses": [{
-        "id": "RC-Diagram",
-        "title": "SpecIF:Diagram",
-        "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
-        "instantiation": ["user"],
-        "icon": "&#9635;",
-        "propertyClasses": ["PC-Name","PC-Description","PC-Diagram","PC-Type"],
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "RC-Diagram",
+      "title": "SpecIF:Diagram",
+      "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
+      "instantiation": ["user"],
+      "icon": "&#9635;",
+      "propertyClasses": ["PC-Name","PC-Description","PC-Diagram","PC-Type"],
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "RC-Actor",
-        "title": "FMC:Actor",
-        "description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
-        "instantiation": ["auto"],
-        "icon": "&#9632;",
-        "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "RC-Actor",
+      "title": "FMC:Actor",
+      "description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
+      "instantiation": ["auto"],
+      "icon": "&#9632;",
+      "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "RC-State",
-        "title": "FMC:State",
-        "description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a document, an information storage or even a physical shape.",
-        "instantiation": ["auto"],
-        "icon": "&#9679;",
-        "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "RC-State",
+      "title": "FMC:State",
+      "description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a document, an information storage or even a physical shape.",
+      "instantiation": ["auto"],
+      "icon": "&#9679;",
+      "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "RC-Event",
-        "title": "FMC:Event",
-        "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
-        "instantiation": ["auto"],
-        "icon": "&#9830;",
-        "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "RC-Event",
+      "title": "FMC:Event",
+      "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
+      "instantiation": ["auto"],
+      "icon": "&#9830;",
+      "propertyClasses": ["PC-Name","PC-Description","PC-Type"],
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }],
     "statementClasses": [{
-        "id": "SC-shows",
-        "title": "SpecIF:shows",
-        "description": "'Diagram' shows 'Model-Element'",
-        "instantiation": ["auto"],
-        "subjectClasses": ["RC-Diagram"],
-        "objectClasses": ["RC-Actor", "RC-State", "RC-Event"],
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "SC-shows",
+      "title": "SpecIF:shows",
+      "description": "'Diagram' shows 'Model-Element'",
+      "instantiation": ["auto"],
+      "subjectClasses": ["RC-Diagram"],
+      "objectClasses": ["RC-Actor", "RC-State", "RC-Event"],
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "SC-writes",
-        "title": "SpecIF:writes",
-        "description": "'Actor' writes 'State'.",
-        "instantiation": ["auto"],
-        "subjectClasses": ["RC-Actor"],
-        "objectClasses": ["RC-State"],
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "SC-writes",
+      "title": "SpecIF:writes",
+      "description": "'Actor' writes 'State'.",
+      "instantiation": ["auto"],
+      "subjectClasses": ["RC-Actor"],
+      "objectClasses": ["RC-State"],
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }, {
-        "id": "SC-reads",
-        "title": "SpecIF:reads",
-        "description": "'Actor' reads 'State'.",
-        "instantiation": ["auto"],
-        "subjectClasses": ["RC-Actor"],
-        "objectClasses": ["RC-State"],
-        "changedAt": "2018-05-10T11:54:00+01:00"
+      "id": "SC-reads",
+      "title": "SpecIF:reads",
+      "description": "'Actor' reads 'State'.",
+      "instantiation": ["auto"],
+      "subjectClasses": ["RC-Actor"],
+      "objectClasses": ["RC-State"],
+      "changedAt": "2018-05-10T11:54:00+01:00"
     }],
     "resources": [{
-        "id": "Diagram-aec0df7900010000017001eaf53e8876",
-        "title": "IT-Integration: FiCo-Application and FiCo-Data",
-        "class": "RC-Diagram",
-        "properties": [{
-            "class": "PC-Name",
-            "value": "IT-Integration: FiCo-Application and FiCo-Data"
-        }, {
-            "class": "PC-Diagram",
-            "value": "<div><p class=\"inline-label\">Model Diagram:</p><p><object type=\"image/svg+xml\" data=\"files_and_images/Very-Simple-Model-FMC.svg\">Notation: FMC Block Diagram</object></p></div>"
-        }, {
-            "class": "PC-Type",
-            "value": "FMC Block Diagram"
-        }],
-        "changedAt": "2020-03-06T08:32:00+01:00"
+      "id": "Diagram-aec0df7900010000017001eaf53e8876",
+      "title": "IT-Integration: FiCo-Application and FiCo-Data",
+      "class": "RC-Diagram",
+      "properties": [{
+        "class": "PC-Name",
+        "value": "IT-Integration: FiCo-Application and FiCo-Data"
+      }, {
+        "class": "PC-Diagram",
+        "value": "<div><p class=\"inline-label\">Model Diagram:</p><p><object type=\"image/svg+xml\" data=\"files_and_images/Very-Simple-Model-FMC.svg\">Notation: FMC Block Diagram</object></p></div>"
+      }, {
+        "class": "PC-Type",
+        "value": "FMC Block Diagram"
+      }],
+      "changedAt": "2020-03-06T08:32:00+01:00"
     }, {
-        "id": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
-        "title": "FiCo-Application",
-        "class": "RC-Actor",
-        "properties": [{
-            "class": "PC-Name",
-            "value": "FiCo-Application"
-        }, {
-            "class": "PC-Description",
-            "value": "<div><p>IT-Application for Finance and Controlling.</p></div>"
-        }],
-        "changedAt": "2020-03-06T09:04:00+01:00"
+      "id": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
+      "title": "FiCo-Application",
+      "class": "RC-Actor",
+      "properties": [{
+        "class": "PC-Name",
+        "value": "FiCo-Application"
+      }, {
+        "class": "PC-Description",
+        "value": "<div><p>IT-Application for Finance and Controlling.</p></div>"
+      }],
+      "changedAt": "2020-03-06T09:04:00+01:00"
     }, {
-        "id": "MEl-50feddc00029b1a8016e2872e78ecadc",
-        "title": "FiCo-Data",
-        "class": "RC-State",
-        "properties": [{
-            "class": "PC-Name",
-            "value": "FiCo-Data"
-        }, {
-            "class": "PC-Description",
-            "value": "<div><p>Finance and Controlling Data, such as cost-units per project with budget, accrued cost etc.</p></div>"
-        }],
-        "changedAt": "2020-03-06T09:03:00+01:00"
+      "id": "MEl-50feddc00029b1a8016e2872e78ecadc",
+      "title": "FiCo-Data",
+      "class": "RC-State",
+      "properties": [{
+        "class": "PC-Name",
+        "value": "FiCo-Data"
+      }, {
+        "class": "PC-Description",
+        "value": "<div><p>Finance and Controlling Data, such as cost-units per project with budget, accrued cost etc.</p></div>"
+      }],
+      "changedAt": "2020-03-06T09:03:00+01:00"
     }],
     "statements": [{
-        "id": "SVis-aec0df7900010000017001eaf53e8876-50fbfe8f0029b1a8016ea86245a9d83a",
-        "title": "SpecIF:shows",
-        "description": "'FMC Block Diagram' shows 'FiCo-Application'",
-        "class": "SC-shows",
-        "subject": "Diagram-aec0df7900010000017001eaf53e8876",
-        "object": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
-        "changedAt": "2020-03-06T08:32:00+01:00"
+      "id": "SVis-aec0df7900010000017001eaf53e8876-50fbfe8f0029b1a8016ea86245a9d83a",
+      "title": "SpecIF:shows",
+      "description": "'FMC Block Diagram' shows 'FiCo-Application'",
+      "class": "SC-shows",
+      "subject": "Diagram-aec0df7900010000017001eaf53e8876",
+      "object": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
+      "changedAt": "2020-03-06T08:32:00+01:00"
     }, {
-        "id": "SVis-aec0df7900010000017001eaf53e8876-50feddc00029b1a8016e2872e78ecadc",
-        "title": "SpecIF:shows",
-        "description": "'FMC Block Diagram' shows 'FiCo-Data'",
-        "class": "SC-shows",
-        "subject": "Diagram-aec0df7900010000017001eaf53e8876",
-        "object": "MEl-50feddc00029b1a8016e2872e78ecadc",
-        "changedAt": "2020-03-06T08:32:00+01:00"
+      "id": "SVis-aec0df7900010000017001eaf53e8876-50feddc00029b1a8016e2872e78ecadc",
+      "title": "SpecIF:shows",
+      "description": "'FMC Block Diagram' shows 'FiCo-Data'",
+      "class": "SC-shows",
+      "subject": "Diagram-aec0df7900010000017001eaf53e8876",
+      "object": "MEl-50feddc00029b1a8016e2872e78ecadc",
+      "changedAt": "2020-03-06T08:32:00+01:00"
     }, {
-        "id": "SWri-50fbfe8f0029b1a8016ea86245a9d83a-50feddc00029b1a8016e2872e78ecadc",
-        "title": "SpecIF:writes",
-        "description": "'FiCo-Application' writes 'FiCo-Data'",
-        "class": "SC-writes",
-        "subject": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
-        "object": "MEl-50feddc00029b1a8016e2872e78ecadc",
-        "changedAt": "2020-03-06T09:05:00+01:00"
+      "id": "SWri-50fbfe8f0029b1a8016ea86245a9d83a-50feddc00029b1a8016e2872e78ecadc",
+      "title": "SpecIF:writes",
+      "description": "'FiCo-Application' writes 'FiCo-Data'",
+      "class": "SC-writes",
+      "subject": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
+      "object": "MEl-50feddc00029b1a8016e2872e78ecadc",
+      "changedAt": "2020-03-06T09:05:00+01:00"
     }, {
-        "id": "SRea-50fbfe8f0029b1a8016ea86245a9d83a-50feddc00029b1a8016e2872e78ecadc",
-        "title": "SpecIF:reads",
-        "description": "'FiCo-Application' reads 'FiCo-Data'",
-        "class": "SC-reads",
-        "subject": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
-        "object": "MEl-50feddc00029b1a8016e2872e78ecadc",
-        "changedAt": "2020-03-06T09:05:00+01:00"
+      "id": "SRea-50fbfe8f0029b1a8016ea86245a9d83a-50feddc00029b1a8016e2872e78ecadc",
+      "title": "SpecIF:reads",
+      "description": "'FiCo-Application' reads 'FiCo-Data'",
+      "class": "SC-reads",
+      "subject": "MEl-50fbfe8f0029b1a8016ea86245a9d83a",
+      "object": "MEl-50feddc00029b1a8016e2872e78ecadc",
+      "changedAt": "2020-03-06T09:05:00+01:00"
     }],
     "hierarchies": [{
 		"id": "N-Diagram-aec0df7900010000017001eaf53e8876",

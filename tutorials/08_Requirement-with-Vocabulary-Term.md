@@ -51,14 +51,13 @@ Let us at last have a look at the full example:
       "description": "String with max. length 96.",
       "type": "xs:string",
       "maxLength": 96,
-      "changedAt": "2020-03-26T22:59:00+02:00"
+      "changedAt": "2016-05-26T08:59:00+02:00"
     },{
-      "id": "DT-FormattedText",
-      "title": "Formatted Text",
-      "description": "XHTML formatted text with max. length 8156.",
-      "type": "xhtml",
-      "maxLength": 8156,
-      "changedAt": "2020-03-26T22:59:00+02:00"
+      "id": "DT-Text",
+      "title": "Plain or formatted Text",
+      "description": "A text string, plain, or formatted with XHTML or markdown",
+      "type": "xs:string",
+      "changedAt": "2021-02-14T08:59:00+02:00"
     },{
       "id": "DT-Priority",
       "title": "SpecIF:Priority",
@@ -98,9 +97,9 @@ Let us at last have a look at the full example:
     },{
       "id": "PC-Description",
       "title": "dcterms:description",
-      "description": "An account of the resource. Descriptive text about the resource represented as rich text in XHTML.",
-      "dataType": "DT-FormattedText",
-      "changedAt": "2020-03-26T22:59:00+02:00"
+      "description": "An account of the resource (source: http://dublincore.org/documents/dcmi-terms/). Descriptive text represented in plain or rich text using XHTML or Markdown. SHOULD include only content that is valid and suitable inside an XHTML &lt;div&gt; element (source: http://open-services.net/).",
+      "dataType": "DT-Text",
+      "changedAt": "2021-02-23T08:59:00+02:00"
     },{
       "id": "PC-Priority",
       "title": "SpecIF:Priority",

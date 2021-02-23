@@ -338,11 +338,11 @@
     {
       "id": "PC-Description",
       "title": "dcterms:description",
-      "description": "An account of the resource (source: http://dublincore.org/documents/dcmi-terms/). Descriptive text about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML &lt;div&gt; element (source: http://open-services.net/).",
-      "revision": "1",
-      "replaces": [],
+      "description": "An account of the resource (source: http://dublincore.org/documents/dcmi-terms/). Descriptive text represented in plain or rich text using XHTML or Markdown. SHOULD include only content that is valid and suitable inside an XHTML &lt;div&gt; element (source: http://open-services.net/).",
+      "revision": "1.1",
+      "replaces": ["1"],
       "dataType": "DT-Text",
-      "changedAt": "2016-05-26T08:59:00+02:00"
+      "changedAt": "2021-02-23T08:59:00+02:00"
     },
     {
       "id": "PC-Diagram",
