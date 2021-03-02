@@ -83,11 +83,11 @@
             "id": "RC-Comment",
             "title": "SpecIF:Comment",
             "description": "Comment referring to a model element ('resource' in general).",
-            "revision": "1",
-            "replaces": [],
+            "revision": "1.1",
+            "replaces": ["1"],
             "isHeading": false,
             "instantiation": [
-                "user"
+                "auto"
             ],
             "propertyClasses": [
                 {
@@ -95,7 +95,7 @@
                     "revision": "1"
                 }
             ],
-            "changedAt": "2019-03-16T18:59:00+01:00"
+            "changedAt": "2021-03-02T18:59:00+01:00"
         }
     ],
     "statementClasses": [],

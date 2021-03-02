@@ -21,7 +21,7 @@ namely _Actor_, _State_ and _Event_. Model-elements used by every method or nota
 <img src="./images/Semantic_Integration.png" width="600px" />
 
 The fundamental model-element classes and eligible statement classes used for model-integration are shown:
-<img src="./images/ElementTypes-M0.png" width="900px" />
+<img src="./images/ElementTypes-M1.png" width="900px" />
 
 A collection of SpecIF classes for resources and statements which have been successfully used to integrate
 partial models from different sources and notations is available 

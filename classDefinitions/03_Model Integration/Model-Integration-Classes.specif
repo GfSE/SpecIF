@@ -39,7 +39,7 @@
     {
       "id": "DT-Real",
       "title": "Real",
-      "description": "A floating point number (double) with up to 5 fraction digits.",
+      "description": "A floating point number (double).",
       "revision": "1.1",
       "replaces": ["1"],
       "type": "xs:double",
@@ -515,27 +515,16 @@
       "changedAt": "2021-02-21T08:59:00+02:00"
     },
     {
-      "id": "RC-Hierarchy",
-      "title": "SpecIF:Hierarchy",
-      "description": "Root node of a hierarchically organized specification (outline).",
-      "revision": "1",
-      "replaces": [],
-      "icon": "&#128447;",
+      "id": "RC-Diagram",
+      "title": "SpecIF:Diagram",
+      "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
+      "revision": "1.1",
+      "replaces": ["1"],
+      "icon": "&#9635;",
       "isHeading": false,
       "instantiation": [ "auto", "user" ],
-      "propertyClasses": [ "PC-Name", "PC-Description" ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "RC-Comment",
-      "title": "SpecIF:Comment",
-      "description": "Comment referring to a model element ('resource' in general).",
-      "revision": "1",
-      "replaces": [],
-      "isHeading": false,
-      "instantiation": [ "user" ],
-      "propertyClasses": [ "PC-Description" ],
-      "changedAt": "2019-03-16T18:59:00+01:00"
+      "propertyClasses": [ "PC-Name", "PC-Description", "PC-Diagram", "PC-Type", "PC-Notation", "PC-LifeCycleStatus", "PC-Stereotype" ],
+      "changedAt": "2021-02-22T08:59:00+02:00"
     },
     {
       "id": "RC-Requirement",
@@ -559,18 +548,6 @@
       "isHeading": false,
       "instantiation": [ "user" ],
       "propertyClasses": [ "PC-VisibleId", "PC-Name", "PC-Description", "PC-Priority", "PC-LifeCycleStatus", "PC-Perspective", "PC-Discipline" ],
-      "changedAt": "2021-02-22T08:59:00+02:00"
-    },
-    {
-      "id": "RC-Diagram",
-      "title": "SpecIF:Diagram",
-      "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
-      "revision": "1.1",
-      "replaces": ["1"],
-      "icon": "&#9635;",
-      "isHeading": false,
-      "instantiation": [ "auto", "user" ],
-      "propertyClasses": [ "PC-Name", "PC-Description", "PC-Diagram", "PC-Type", "PC-Notation", "PC-LifeCycleStatus", "PC-Stereotype" ],
       "changedAt": "2021-02-22T08:59:00+02:00"
     },
     {
@@ -620,6 +597,29 @@
       "instantiation": [ "auto" ],
       "propertyClasses": [ "PC-Name", "PC-Description", "PC-LifeCycleStatus", "PC-Visibility", "PC-Type", "PC-Stereotype", "PC-Value", "PC-Alias" ],
       "changedAt": "2021-01-02T18:59:00+02:00"
+    },
+    {
+      "id": "RC-Hierarchy",
+      "title": "SpecIF:Hierarchy",
+      "description": "Root node of a hierarchically organized specification (outline).",
+      "revision": "1",
+      "replaces": [],
+      "icon": "&#128447;",
+      "isHeading": false,
+      "instantiation": [ "auto", "user" ],
+      "propertyClasses": [ "PC-Name", "PC-Description" ],
+      "changedAt": "2016-05-26T08:59:00+02:00"
+    },
+    {
+      "id": "RC-Comment",
+      "title": "SpecIF:Comment",
+      "description": "Comment referring to a model element ('resource' in general).",
+      "revision": "1.1",
+      "replaces": ["1"],
+      "isHeading": false,
+      "instantiation": [ "auto" ],
+      "propertyClasses": [ "PC-Description" ],
+      "changedAt": "2021-03-02T18:59:00+01:00"
     }
   ],
   "statementClasses": [

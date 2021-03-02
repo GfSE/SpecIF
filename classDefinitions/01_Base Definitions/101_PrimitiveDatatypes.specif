@@ -39,7 +39,7 @@
     {
       "id": "DT-Real",
       "title": "Real",
-      "description": "A floating point number (double) with up to 5 fraction digits.",
+      "description": "A floating point number (double).",
       "revision": "1.1",
       "replaces": ["1"],
       "type": "xs:double",
