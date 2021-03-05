@@ -1,28 +1,16 @@
-# SpecIF JSON Schema
+﻿# SpecIF JSON-Schema
 
-The SpecIF JSON Schema describes the syntax of SpecIF data. The Schema follows the JSON Schema standard http://json-schema.org/draft-04/schema#.
+The SpecIF JSON-Schema describes the syntax of SpecIF data as a concrete instance of the SpecIF-Metamodel as descibed earlier in this specification.
+The JSON-Schema builds a platform-specific model, PSM following the OMG MDA approach.
+ 
+The Schema follows the JSON-Schema standard defined here: http://json-schema.org/draft-04/schema#.
 
-It is available in the SpecIF GitHub repository under https://github.com/GfSE/SpecIF/blob/master/schema/specif.schema.json.
+The schema definition file for SpecIF is available in the SpecIF GitHub repository under https://github.com/GfSE/SpecIF/blob/master/schema/specif.schema.json.
 
-## SpecIF Schema Overview
-   
-The following figure shows the base structure of the SpecIF data format as an UML class diagram.
-![The SpecIF data structure](./images/SpecIfDataStructure.png)
+## SpecIF JSON example
 
-A SpecIF data set contains some descriptional elements and arrays to store the SpecIF data type definitions and data itself. It is possible to include all necessary information a tool needs to work with SpecIF data into one data set.
-
-Each SpecIF element has a unique identifier (GUID) with the JSON-property name *id*. To support the versioning in SpecIF each element type in a SpecIF data set can have a revision identifier. Also these revision has to be unique inside the same element id, to ensure that no version conflicts occur.
-
-If a tool does not support versioning, the *changedAt* attribute can be used to create a revision hierarchy.  
-
-## SpecIF projects
-The SpecIF class is the outermost element of the SpecIF JSON representation. It defines attributes to describe the entire SpecIF data set represented in a SpecIF file or a SpecIF Web API. In a Web API context a SpecIF instance is often used to define a project context. A SpecIF data set can contain the entire content of PLM data created in a project context. 
-
-SpecIF allows the selected and distributed inclusion of data into a SpecIF data set. So you can have also a set of SpecIF files containing the data and class definitions and a second, separated set containing the data content, but referencing the required data types. A SpecIF instance has an attribute called *isExtension* of type boolean. If this value is set to true, a tool that is working with this data, needs further SpecIF data to get the complete definition of all required data types and (meta-)classes.
-   
-### SpecIF JSON example
-
-The following example shows an empty SpecIF JSON-object to demonstrate the principle of data representation within SpecIF using JSON. Not all JSON-properties are set, but the SpecIF schema defines just a selection as mandatory:
+The following example shows an empty SpecIF JSON-object to demonstrate the principle of data representation within SpecIF using JSON. 
+Not all JSON-properties are set, but the SpecIF schema defines just a selection as mandatory:
 
 ```json
 {
@@ -42,12 +30,6 @@ The following example shows an empty SpecIF JSON-object to demonstrate the princ
 
 ## Definition elements and data elements
 
-The figure below shows the SpecIF elements to define the data types (DataType, PropertyClass, ResourceClass and StatementClass) and the elements containing the PLM data values (Resources, Statements, Properties, Hierarchies). The last-mentioned elements are instances of the class elements and the object-class relation is expressed in SpecIF using the *class* JSON-property.
-
-![Data type definition elements and data elements](./images/SpecIfClassesAndDataElements.png) 
-
-A reference to a SpecIF element is always expressed using the *Key* -helper-element. It contains the *id* and the *revision*-ID of the element to reference.
-
 The data and class definition in SpecIF is a cascading data structure: At first a data type is defined out of a set of primitive data types. The list below shows the available primitive data types based on the data types defined in XML-schemas (XSD):
 
 * *xs:string* - a text string
@@ -61,6 +43,8 @@ The data and class definition in SpecIF is a cascading data structure: At first 
 Based on these primitive data types, a SpecIF user can define *DataType* elements. These data types can be used as base for *PropertyClass*-definitions. The property class definitions can then be used to define *ResourceClass*- and *StatementClass*-definitions. Using this approach all kind of data representation can be defined in SpecIF.
 
 The resources, statement, properties and hierarchies do instantiate the class definitions. A SpecIF-tool can automatically generate a property editor for a resource or statement element, because all necessary information is available in the class and data type definition elements. 
+
+A reference to another SpecIF element is always expressed using the *Key* -helper-element. It contains the *id* and the *revision*-ID of the element to reference.
 
 ## Definition elements
 

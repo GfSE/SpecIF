@@ -1,4 +1,4 @@
-# Introduction to SpecIF Model Integration
+﻿# Introduction to SpecIF Model Integration
 
 The use of SpecIF for a specific purpose is called an 'application'. An important application is to
 integrate models and other specification artefacts from different sources. Currently transformations or importers exist for 

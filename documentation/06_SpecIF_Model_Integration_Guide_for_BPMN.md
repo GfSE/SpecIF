@@ -1,4 +1,4 @@
-# SpecIF Model Integration Guide for BPMN
+﻿# SpecIF Model Integration Guide for BPMN
 
 ## BPMN-SpecIF mapping
 

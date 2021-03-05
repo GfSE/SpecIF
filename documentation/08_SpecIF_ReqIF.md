@@ -1,4 +1,4 @@
-
+﻿
 # SpecIF-ReqIF Documentation
 
 Transforming SpecIF to ReqIF is bidirectional. Files can be exported and imported back and forth without losing any data.

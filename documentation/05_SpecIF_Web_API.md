@@ -1,4 +1,4 @@
-# SpecIF Web API
+﻿# SpecIF Web API
 
 The SpecIF Web API defines REST endpoints for standardized access to SpecIF data available via online-services. 
 
