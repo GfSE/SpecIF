@@ -29,6 +29,12 @@ If this value is set to true, a tool that is working with this data, needs furth
 The classes *Creator* and *Org* (Organization) are used to describe the SpecIF-repository resp. the SpecIF project itself by describing the author and the organization that is responsible for 
 creation of the SpecIF repository.
 
+### SpecIF, Creator and Org
+
+![The SpecIF repository metaclasses](./images/Metaclass_SpecIF.png)
+
+tbd.
+
 ## Data and data type definitions
 
 In SpecIF it is possible to define concrete data using the concept of graph data, represented by the classes *Resource* - as graph nodes and *Statement* - as graph edges.
@@ -48,9 +54,9 @@ The SpecIF-Metamodel defines a set of classes that are responsible for these dat
 
 ## Hierarchies
 
-The metacalss *Hierarchy* defines a hierarchical structure to represent Resources as a tree. 
+The metacalss *Node* defines a hierarchical structure to represent Resources as a tree. 
 Hieraries are trees of so called *Nodes*. 
-Each Node does not contain the Resource data but holds a reference to a Resource element. 
+Each Node does not contain the Resource data, but holds a reference to a Resource element. 
 This allows that the same Resource can be contained in multiple Hierarchies. 
 So a Hierarchy is a tree structure view on Resources.
 Typical application scenarios of hierarchies are document structures in requirement specifications or the package/diagram/element-structure of a UML or SysML model.
@@ -216,35 +222,20 @@ A Statement is inherited from Resource and has the following additional attribut
 * *subject* - A reference to the Resource or Statement that is used as subject for the Statement.
 * *object* - A reference to the Resource or Statement that is used as object for the Statement.
 
-### Hierarchy and Node
+### Node
 
-![The metaclass *Hierarchy* and *Node*](./images/Metaclass_Hierarchy.png)
+![The metaclass *Node*](./images/Metaclass_Hierarchy.png)
 
-The metaclasses *Hierarchy* and *Node* allow it to define hierarchical data structures (trees) in SpecIF.
+The metaclasses *Node* allows it to define hierarchical data structures (trees) in SpecIF.
 Typlical application scenarios are hierarchical structures in textual specifications like documents and the structures in CAD and other modeling tools.
 
-The elements Hierarchy and Node are similar in some ways. 
-Hierarchies are the root nodes of a SpecIF hierarchy tree, the Node elements are the tree nodes. 
+The data is not directly included inside Node elements. 
+Instead, the Resources of a Node are just included via reference. 
+This allows a spearation of data model and view (view concept as known e.g. from UML-tools) and the inclusion of the same Resource elements into multiple Hierachy trees.
 
-The data is not directly included inside the Hierarchy and Node elements. 
-Instead, the Resources of a Hierarchy are just included via reference. 
-This allows a spearation of data model and view (view concept as known e.g. from UML-tools) and the inclusion of the same Resource elements into multiple Hierachies.
+The Node elemnt have the following attributes:
 
-The Hierarchy and Node elemnt have the following attributes:
-
-* *title: string* - A title for the Hierarchy/Node. Mostly used for internal purposes, because the title comes normally from the referenced Resource element properties.
+* *title: string* - A title for the Node. Mostly used for internal purposes, because the title comes normally from the referenced Resource element properties.
 * *description: string | LanguageValue[]* - A human readable description of the data type for documentation purposes. Mostly used for internal purposes, because the description comes normally from the referenced Resource element properies.
-* *nodes* - A collection of child node elements for the Hierarchy/Node.
-* *resource* - A reference to the Resource element used as Hierarchy/Node tree node data.
-
-### File
-
-tbd.
-
-### Creator
-
-tbd.
-
-### Org
-
-tbd.
+* *nodes* - A collection of child node elements for the Node.
+* *resource* - A reference to the Resource element used as Node tree node data.
