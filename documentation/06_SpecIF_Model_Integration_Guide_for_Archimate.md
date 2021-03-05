@@ -1,4 +1,4 @@
-# SpecIF Model Integration Guide for Archimate
+﻿# SpecIF Model Integration Guide for Archimate
 
 ## Archimate-SpecIF mapping
 

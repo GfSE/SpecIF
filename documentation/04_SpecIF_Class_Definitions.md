@@ -1,4 +1,4 @@
-# SpecIF Class Definitions
+﻿# SpecIF Class Definitions
 
 To define the semantics for SpecIF a collection of data type and class definitions is defined and is part of the SpecIF standard. 
 

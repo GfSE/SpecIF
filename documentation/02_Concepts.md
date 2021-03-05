@@ -1,4 +1,4 @@
-# Concepts
+﻿# Concepts
 
 ## Product Lifecycle Management
 
@@ -11,7 +11,7 @@ There are four phases defined to structure the PLM [[WikipediaPLM](https://en.wi
 3. Realization phase (Realize - Manufacture, make, build, procure, produce, sell and deliver)
 4. Service phase (Service - Use, operate, maintain, support, sustain, phase-out, retire, recycle and disposal)
 
-![PLM Wikipedia](https://upload.wikimedia.org/wikipedia/commons/9/90/Product_lifecycle_management.png)
+![Product Lifecycle Management (PLM)](https://upload.wikimedia.org/wikipedia/commons/9/90/Product_lifecycle_management.png)
 *Source: Wikipedia*
 
 In all phases of the PLM different data is created edited and exchanged between different stakeholders. SpecIF is defined as new universal standard for representation and exchange of PLM data of all kind in all phases.     
@@ -128,11 +128,11 @@ When SpecIF data is persisted to a JSON file it can be done in two ways:
 
 The following table shows an overview about the SpecIF file extensions:
 
-File extension | Meaning
--|-
-.specif | SpecIF file with JSON content defined by the SpecIF-JSON-Schema.
-.specifx | Reserved for future use to store SpecIF data saved as XML.
-.specifz | SpecIF zipped archive with at least one \*.specif (or \*.specifx) file at root level and the referenced files, often in a folder *files_and_images*.
+| File extension | Meaning |
+|-|-|
+|.specif | SpecIF file with JSON content defined by the SpecIF-JSON-Schema.|
+|.specifx | Reserved for future use to store SpecIF data saved as XML.|
+|.specifz | SpecIF zipped archive with at least one \*.specif (or \*.specifx) file at root level and the referenced files, often in a folder *files_and_images*.|
 
 ### XML representation
 
@@ -264,8 +264,8 @@ An optional attribute ```layoutStyle`` defines the connector layout style:
 
 To differ the tags defined by SpecIF, SVG and OMG Diagram Definition the concept of XML-manespaces is used. The following namespaces are relevant for SpecIF-SVG diagram exchange:
 
-* xmlns:specif="https://specif.de/schema/v1.0/DI" 
-* xmlns:di="http://www.omg.org/spec/DD/20100524/DI"   
+* xmlns:specif="https://specif.de/schema/v1.0/DI"
+* xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
 * xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
 
 The namespaces must be declared in the outermost tag of the SVG XML-structure. Example:

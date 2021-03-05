@@ -1,4 +1,4 @@
-# SpecIF Model Integration Guide for UML and SysML
+﻿# SpecIF Model Integration Guide for UML and SysML
 
 To semantically map SysML to SpecIF we map the UML and include the elements and concepts of the UML-profile mechanism. 
 All SysML 1.x elements are profiled UML elements with stereotypes and tagged values. So it easy to map these elements using the UML metaclasses and the stereotypes.
