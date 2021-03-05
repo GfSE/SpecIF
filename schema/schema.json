@@ -152,7 +152,7 @@
             "type": "string"
           }
         },
-        "required": [ "id", "resource" ]
+        "required": [ "id", "resource", "changedAt" ]
       }
     },
     "properties": {
@@ -427,7 +427,7 @@
             "type": {
               "type": "string",
               "title": "Data-type 'String' or 'Formatted Text'",
-              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ resp. https://www.w3.org/TR/xhtml1/ applies.",
+              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ resp. https://www.w3.org/TR/xhtml1/ applies. 'xhtml' is DEPRECATED.",
               "enum": [ "xs:string", "xhtml" ]
             },
             "id": {
@@ -802,81 +802,7 @@
     },
     "hierarchies": {
       "description": "A list of hierarchies with pointers to resources; may be nested to build a tree, i.e. a hierarchy of pointers.",
-      "type": "array",
-      "uniqueItems": true,
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "$ref": "#/definitions/id"
-          },
-          "title": {
-            "$ref": "#/definitions/value",
-            "description": "The node's label; if missing, the title of the referenced resource is applied."
-          },
-          "description": {
-            "$ref": "#/definitions/value"
-          },
-          "resource": {
-            "description": "The pointer to the resource to be displayed at this position.",
-            "$ref": "#/definitions/key"
-          },
-          "nodes": {
-            "description": "A list of pointers to resources; may be nested forming a tree, i.e. a hierarchy of pointers.",
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "$ref": "#/definitions/id"
-                },
-                "title": {
-                  "$ref": "#/definitions/value",
-                  "description": "The node's label; if missing, the title of the referenced resource is applied."
-                },
-                "description": {
-                  "$ref": "#/definitions/value"
-                },
-                "resource": {
-                  "description": "The pointer to the resource to be displayed at this position.",
-                  "$ref": "#/definitions/key"
-                },
-                "nodes": {
-                  "description": "The next hierarchy level.",
-                  "$ref": "#/definitions/nodes"
-                },
-                "revision": {
-                  "$ref": "#/definitions/revision"
-                },
-                "replaces": {
-                  "$ref": "#/definitions/replaces"
-                },
-                "changedAt": {
-                  "$ref": "#/definitions/dateTime"
-                },
-                "changedBy": {
-                  "type": "string"
-                }
-              },
-              "required": [ "id", "resource", "changedAt" ]
-            }
-          },
-          "revision": {
-            "$ref": "#/definitions/revision"
-          },
-          "replaces": {
-            "$ref": "#/definitions/replaces"
-          },
-          "changedAt": {
-            "$ref": "#/definitions/dateTime"
-          },
-          "changedBy": {
-            "type": "string"
-          }
-        },
-        "required": [ "id", "resource", "changedAt" ]
-      }
+      "$ref": "#/definitions/nodes"
     },
     "files": {
       "description": "A list of files being referenced by a resource's or statement's property of dataType XHTML using an <object> tag. A file should have a media type as defined by IANA (see below).",
