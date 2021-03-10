@@ -8,7 +8,7 @@
       "id": "DT-SpecIfEventType",
       "title": "SpecIF:specifEventType",
       "description": "The SpecIF Event Type.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "type": "xs:enumeration",
       "values": [

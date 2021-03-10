@@ -8,7 +8,7 @@
       "id": "DT-IssStatus",
       "title": "SpecIF:IssueStatus",
       "description": "Enumerated values for issue status",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "type": "xs:enumeration",
       "values": [

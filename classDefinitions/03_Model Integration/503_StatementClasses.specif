@@ -12,7 +12,7 @@
       "id": "SC-shows",
       "title": "SpecIF:shows",
       "description": "Statement: Plan resp. diagram shows Model-Element",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "instantiation": [
         "auto"
@@ -20,21 +20,21 @@
       "subjectClasses": [
         {
           "id": "RC-Diagram",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "objectClasses": [
         {
           "id": "RC-Actor",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "RC-State",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "RC-Event",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2016-05-26T08:59:00+02:00"
@@ -43,7 +43,7 @@
       "id": "SC-contains",
       "title": "SpecIF:contains",
       "description": "Statement: Model-Element contains Model-Element",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "instantiation": [
         "auto",
@@ -52,29 +52,29 @@
       "subjectClasses": [
         {
           "id": "RC-Actor",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "RC-State",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "RC-Event",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "objectClasses": [
         {
           "id": "RC-Actor",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "RC-State",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "RC-Event",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2016-05-26T08:59:00+02:00"
@@ -83,7 +83,7 @@
       "id": "SC-stores",
       "title": "SpecIF:stores",
       "description": "Statement: Actor (Role, Function) writes and reads State (Information)",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "instantiation": [
         "auto"
@@ -91,13 +91,13 @@
       "subjectClasses": [
         {
           "id": "RC-Actor",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "objectClasses": [
         {
           "id": "RC-State",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2016-05-26T08:59:00+02:00"
@@ -106,7 +106,7 @@
       "id": "SC-writes",
       "title": "SpecIF:writes",
       "description": "Statement: Actor (Role, Function) writes State (Information)",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "instantiation": [
         "auto"
@@ -114,13 +114,13 @@
       "subjectClasses": [
         {
           "id": "RC-Actor",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "objectClasses": [
         {
           "id": "RC-State",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2016-05-26T08:59:00+02:00"
@@ -129,7 +129,7 @@
       "id": "SC-reads",
       "title": "SpecIF:reads",
       "description": "Statement: Actor (Role, Function) reads State (Information)",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "instantiation": [
         "auto"
@@ -137,13 +137,13 @@
       "subjectClasses": [
         {
           "id": "RC-Actor",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "objectClasses": [
         {
           "id": "RC-State",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2016-05-26T08:59:00+02:00"
@@ -152,7 +152,7 @@
       "id": "SC-signals",
       "title": "SpecIF:signals",
       "description": "A FMC:Actor 'signals' a FMC:Event.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "instantiation": [
         "auto"
@@ -160,13 +160,13 @@
       "subjectClasses": [
         {
           "id": "RC-Actor",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "objectClasses": [
         {
           "id": "RC-Event",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2019-08-20T20:32:25+02:00"
@@ -175,7 +175,7 @@
       "id": "SC-triggers",
       "title": "SpecIF:triggers",
       "description": "A FMC:Event 'trigers' an FMC:Actor.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "instantiation": [
         "auto"
@@ -183,13 +183,13 @@
       "subjectClasses": [
         {
           "id": "RC-Event",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "objectClasses": [
         {
           "id": "RC-Actor",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2020-02-17T20:32:25+02:00"
@@ -198,7 +198,7 @@
       "id": "SC-preceeds",
       "title": "SpecIF:preceeds",
       "description": "An FMC:Actor 'preceeds' an FMC:Actor.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "instantiation": [
         "auto"
@@ -206,13 +206,13 @@
       "subjectClasses": [
         {
           "id": "RC-Actor",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "objectClasses": [
         {
           "id": "RC-Actor",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2020-02-17T20:32:25+02:00"
@@ -221,7 +221,7 @@
       "id": "SC-satisfies",
       "title": "oslc_rm:satisfies",
       "description": "Statement: Model-Element satisfies Requirement",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "instantiation": [
         "user"
@@ -229,21 +229,21 @@
       "subjectClasses": [
         {
           "id": "RC-Actor",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "RC-State",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "RC-Event",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "objectClasses": [
         {
           "id": "RC-Requirement",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2016-05-26T08:59:00+02:00"

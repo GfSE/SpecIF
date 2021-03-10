@@ -9,7 +9,7 @@
       "id": "DT-SupplierStatus",
       "title": "VDA:SupplierStatus",
       "description": "Enumerated values for VDA supplier-status",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "type": "xs:enumeration",
       "values": [
@@ -41,7 +41,7 @@
       "id": "DT-OemStatus",
       "title": "VDA:OemStatus",
       "description": "Enumerated values for VDA oem-status",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "type": "xs:enumeration",
       "values": [

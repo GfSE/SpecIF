@@ -9,8 +9,8 @@
       "id": "DT-RequirementType",
       "title": "IREB:RequirementType",
       "description": "Enumerated values for the Requirement type according IREB",
-      "revision": "1.1",
-      "replaces": ["1"],
+      "revision": "1.0",
+      "replaces": [],
       "type": "xs:enumeration",
       "values": [
         {
@@ -33,8 +33,8 @@
       "id": "DT-Perspective",
       "title": "Perspective",
       "description": "Enumerated values for the perspective (of a requirement)",
-      "revision": "1.1",
-      "replaces": ["1"],
+      "revision": "1.0",
+      "replaces": [],
       "type": "xs:enumeration",
       "values": [
         {

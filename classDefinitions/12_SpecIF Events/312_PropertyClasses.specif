@@ -10,11 +10,11 @@
       "id": "PC-ApiURL",
       "title": "SpecIF:apiURL",
       "description": "The SpecIF API server URL.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-URL",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2020-04-08T20:32:25.411Z"
     },
@@ -22,11 +22,11 @@
       "id": "PC-SpecIfProject",
       "title": "SpecIF:project",
       "description": "The SpecIF project ID.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-ShortString",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2020-04-08T20:32:25.411Z"
     },
@@ -34,11 +34,11 @@
       "id": "PC-SpecIfEventType",
       "title": "SpecIF:specifEventType",
       "description": "The SpecIF event type.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-SpecIfEventType",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2020-04-08T20:32:25.411Z"
     },
@@ -46,11 +46,11 @@
       "id": "PC-SpecIfId",
       "title": "SpecIF:id",
       "description": "The SpecIF element id.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-ShortString",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2020-04-08T20:32:25.411Z"
     },
@@ -58,11 +58,11 @@
       "id": "PC-SpecIfRevision",
       "title": "SpecIF:revision",
       "description": "The SpecIF element revision.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-ShortString",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2020-04-08T20:32:25.411Z"
     },
@@ -70,11 +70,11 @@
       "id": "PC-SpecIfClassId",
       "title": "SpecIF:classId",
       "description": "The SpecIF elemet class id.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-ShortString",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2020-04-08T20:32:25.411Z"
     },
@@ -82,11 +82,11 @@
       "id": "PC-SpecIfClassRevision",
       "title": "SpecIF:classRevision",
       "description": "The SpecIF element class revision.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-ShortString",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2020-04-08T20:32:25.411Z"
     }

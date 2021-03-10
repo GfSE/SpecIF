@@ -10,11 +10,11 @@
       "id": "PC-SupplierStatus",
       "title": "VDA:SupplierStatus",
       "description": [],
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-SupplierStatus",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
@@ -22,11 +22,11 @@
       "id": "PC-SupplierComment",
       "title": "VDA:SupplierComment",
       "description": [],
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-Text",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
@@ -34,11 +34,11 @@
       "id": "PC-OemStatus",
       "title": "VDA:OemStatus",
       "description": [],
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-OemStatus",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2016-05-26T08:59:00+02:00"
     },
@@ -46,11 +46,11 @@
       "id": "PC-OemComment",
       "title": "VDA:OemComment",
       "description": [],
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-Text",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2016-05-26T08:59:00+02:00"
     }

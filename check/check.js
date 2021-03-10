@@ -444,8 +444,8 @@ function checkConstraints( data, options ) {
                             // starting v0.10.6
                             // a) property class id must be listed by the instance class or the extended instance class:
                             extendedC = itemByKey( cL, instanceC['extends'] );
-                            if( instanceC.propertyClasses.indexOf(prp['class'])<0
-                                && (!extendedC || extendedC.propertyClasses.indexOf(prp['class'])<0 ) )
+                            if( (!instanceC.propertyClasses || instanceC.propertyClasses.indexOf(prp['class'])<0)
+                                && (!extendedC || !extendedC.propertyClasses || extendedC.propertyClasses.indexOf(prp['class'])<0 ) )
                                 return {status:920, statusText: et+": class must be listed with the instance class or the extended instance class"}
                             // b) the referenced property class must be defined:
                             propertyC = itemByKey( data.propertyClasses, prp['class'] )

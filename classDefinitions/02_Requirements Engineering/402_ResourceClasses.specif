@@ -11,8 +11,8 @@
       "id": "RC-Requirement",
       "title": "IREB:Requirement",
       "description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
-      "revision": "1.1",
-      "replaces": ["1"],
+      "revision": "1.0",
+      "replaces": [],
       "icon": "&#8623;",
       "isHeading": false,
       "instantiation": [
@@ -58,8 +58,8 @@
       "id": "RC-Feature",
       "title": "SpecIF:Feature",
       "description": "A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition.",
-      "revision": "1.1",
-      "replaces": ["1"],
+      "revision": "1.0",
+      "replaces": [],
       "icon": "&#10038;",
       "isHeading": false,
       "instantiation": [

@@ -9,7 +9,7 @@
       "id": "DT-FeatureKind",
       "title": "SpecIF:FeatureKind",
       "description": "Enumerated values for feature kind",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "type": "xs:enumeration",
       "values": [
@@ -37,7 +37,7 @@
       "id": "DT-FeatureSelectionState",
       "title": "SpecIF:FeatureSelectionState",
       "description": "Enumerated values for feature selection state",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "type": "xs:enumeration",
       "values": [

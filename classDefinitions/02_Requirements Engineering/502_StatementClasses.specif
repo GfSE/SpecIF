@@ -12,7 +12,7 @@
       "id": "SC-dependsOn",
       "title": "SpecIF:dependsOn",
       "description": "Statement: Requirement/Feature depends on Requirement/Feature",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "instantiation": [
         "user"
@@ -20,13 +20,13 @@
       "subjectClasses": [
         {
           "id": "RC-Requirement",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "objectClasses": [
         {
           "id": "RC-Requirement",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2016-05-26T08:59:00+02:00"
@@ -35,7 +35,7 @@
       "id": "SC-duplicates",
       "title": "SpecIF:duplicates",
       "description": "The subject requirement duplicates the object requirement.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "instantiation": [
         "user"
@@ -43,13 +43,13 @@
       "subjectClasses": [
         {
           "id": "RC-Requirement",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "objectClasses": [
         {
           "id": "RC-Requirement",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2016-05-26T08:59:00+02:00"
@@ -58,7 +58,7 @@
       "id": "SC-contradicts",
       "title": "SpecIF:contradicts",
       "description": "The subject requirement contradicts the object requirement.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "instantiation": [
         "user"
@@ -66,13 +66,13 @@
       "subjectClasses": [
         {
           "id": "RC-Requirement",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "objectClasses": [
         {
           "id": "RC-Requirement",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2016-05-26T08:59:00+02:00"
@@ -81,7 +81,7 @@
       "id": "SC-refines",
       "title": "IREB:refines",
       "description": "The subject requirement refines the object requirement.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "instantiation": [
         "user"
@@ -89,13 +89,13 @@
       "subjectClasses": [
         {
           "id": "RC-Requirement",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "objectClasses": [
         {
           "id": "RC-Requirement",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2016-05-26T08:59:00+02:00"

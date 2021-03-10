@@ -11,7 +11,7 @@
             "id": "RC-Folder",
             "title": "SpecIF:Heading",
             "description": "Folders with title and text for chapters or descriptive paragraphs.",
-            "revision": "1",
+            "revision": "1.0",
             "replaces": [],
             "icon": "H",
             "isHeading": true,
@@ -22,15 +22,15 @@
             "propertyClasses": [
                 {
                     "id": "PC-Name",
-                    "revision": "1"
+                    "revision": "1.0"
                 },
                 {
                     "id": "PC-Description",
-                    "revision": "1"
+                    "revision": "1.0"
                 },
                 {
                     "id": "PC-Type",
-                    "revision": "1"
+                    "revision": "1.0"
                 }
             ],
             "changedAt": "2016-05-26T08:59:00+02:00"
@@ -39,8 +39,8 @@
             "id": "RC-Paragraph",
             "title": "SpecIF:Paragraph",
             "description": "Information with text for descriptive paragraphs.",
-            "revision": "1.1",
-            "replaces": ["1"],
+            "revision": "1.0",
+            "replaces": [],
             "icon": "P",
             "isHeading": false,
             "instantiation": [
@@ -50,7 +50,7 @@
             "propertyClasses": [
                 {
                     "id": "PC-Description",
-                    "revision": "1"
+                    "revision": "1.0"
                 }
             ],
             "changedAt": "2021-02-21T08:59:00+02:00"
@@ -59,7 +59,7 @@
             "id": "RC-Hierarchy",
             "title": "SpecIF:Hierarchy",
             "description": "Root node of a hierarchically organized specification (outline).",
-            "revision": "1",
+            "revision": "1.0",
             "replaces": [],
             "icon": "&#128447;",
             "isHeading": false,
@@ -70,11 +70,11 @@
             "propertyClasses": [
                 {
                     "id": "PC-Name",
-                    "revision": "1"
+                    "revision": "1.0"
                 },
                 {
                     "id": "PC-Description",
-                    "revision": "1"
+                    "revision": "1.0"
                 }
             ],
             "changedAt": "2016-05-26T08:59:00+02:00"
@@ -83,8 +83,8 @@
             "id": "RC-Comment",
             "title": "SpecIF:Comment",
             "description": "Comment referring to a model element ('resource' in general).",
-            "revision": "1.1",
-            "replaces": ["1"],
+            "revision": "1.0",
+            "replaces": [],
             "isHeading": false,
             "instantiation": [
                 "auto"
@@ -92,7 +92,7 @@
             "propertyClasses": [
                 {
                     "id": "PC-Description",
-                    "revision": "1"
+                    "revision": "1.0"
                 }
             ],
             "changedAt": "2021-03-02T18:59:00+01:00"

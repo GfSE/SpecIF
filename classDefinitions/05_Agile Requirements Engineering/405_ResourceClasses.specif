@@ -11,11 +11,11 @@
       "id": "RC-Epic",
       "title": "SCRUM:Epic",
       "description": "An 'Epic' is a big user story and will be refined by user stories/requirements.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "extends": {
         "id": "RC-Requirement",
-        "revision": "1"
+        "revision": "1.0"
       },
       "isHeading": false,
       "instantiation": [
@@ -24,31 +24,31 @@
       "propertyClasses": [
         {
           "id": "PC-VisibleId",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Name",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Description",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Status",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Priority",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Perspective",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Discipline",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2019-06-26T08:59:00+02:00"

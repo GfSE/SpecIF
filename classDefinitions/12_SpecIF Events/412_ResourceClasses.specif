@@ -11,39 +11,39 @@
       "id": "RC-SpecIfEvent",
       "title": "SpecIF:specifEvent",
       "description": "A SpecIF change event.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "icon": "",
       "isHeading": false,
       "propertyClasses": [
         {
           "id": "PC-Origin",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-SpecIfProject",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-SpecIfEventType",
-          "revision": "1"
+          "revision": "1.0"
         },
 
         {
           "id": "PC-SpecIfId",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-SpecIfRevision",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-SpecIfClassId",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-SpecIfClassRevision",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2020-04-08T08:59:00+02:00"

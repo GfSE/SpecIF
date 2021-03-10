@@ -9,7 +9,7 @@
       "id": "RC-ResourceTerm",
       "title": "SpecIF:ResourceTerm",
       "description": "A term for resources (objects, entities) belonging to the SpecIF vocabulary",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "isHeading": false,
       "instantiation": [
@@ -19,19 +19,19 @@
       "propertyClasses": [
         {
           "id": "PC-Name",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Description",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Origin",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Status",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2017-06-10T15:47:24+02:00"
@@ -40,7 +40,7 @@
       "id": "RC-PredicateTerm",
       "title": "SpecIF:PredicateTerm",
       "description": "A term for statements (relations) belonging to the SpecIF vocabulary",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "isHeading": false,
       "instantiation": [
@@ -50,19 +50,19 @@
       "propertyClasses": [
         {
           "id": "PC-Name",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Description",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Origin",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Status",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2017-06-10T15:47:24+02:00"
@@ -71,7 +71,7 @@
       "id": "RC-PropertyTerm",
       "title": "SpecIF:PropertyTerm",
       "description": "A term for user-defined properties (attributes) belonging to the SpecIF vocabulary",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "isHeading": false,
       "instantiation": [
@@ -81,19 +81,19 @@
       "propertyClasses": [
         {
           "id": "PC-Name",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Description",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Origin",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Status",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2017-06-10T15:47:24+02:00"
@@ -102,7 +102,7 @@
       "id": "RC-ValueTerm",
       "title": "SpecIF:ValueTerm",
       "description": "A term for property values belonging to the SpecIF vocabulary",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "isHeading": false,
       "instantiation": [
@@ -112,19 +112,19 @@
       "propertyClasses": [
         {
           "id": "PC-Name",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Description",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Origin",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Status",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2018-02-05T00:29:45+01:00"

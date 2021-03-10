@@ -10,11 +10,11 @@
       "id": "PC-FeatureKind",
       "title": "SpecIF:FeatureKind",
       "description": "<p>The kind of a feature used in a feature tree (mandatory, optional, alternative, or).</p>",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-FeatureKind",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2019-12-30T07:59:00+01:00"
     },
@@ -22,11 +22,11 @@
       "id": "PC-FeatureSelectionState",
       "title": "SpecIF:FeatureSelectionState",
       "description": "<p>The selection state for a feature used in a variant model.</p>",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-FeatureSelectionState",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2019-12-30T07:59:00+01:00"
     }

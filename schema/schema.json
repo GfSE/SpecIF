@@ -643,6 +643,10 @@
           "instantiation": {
             "$ref": "#/definitions/instantiation"
           },
+          "isUndirected": {
+            "type": "boolean",
+            "description": "Indicates that an instance's subject and object are equivalent and can be exchanged without changing its meaning. Is superseded by a statement's definition."
+          },
           "propertyClasses": {
             "type": "array",
             "description": "A collection of keys of eligible property classes",
@@ -652,10 +656,6 @@
               "$ref": "#/definitions/key",
               "description": "Must be a member of propertyClasses."
             }
-          },
-          "isUndirected": {
-            "type": "boolean",
-            "description": "Indicates that an instance's subject and object are equivalent and can be exchanged without changing its meaning. Is superseded by a statement's definition."
           },
           "subjectClasses": {
             "type": "array",
@@ -761,10 +761,6 @@
           "class": {
             "$ref": "#/definitions/key",
             "description": "Must be a member of statementClasses."
-          },
-          "isUndirected": {
-            "type": "boolean",
-            "description": "Indicates that the subject and object are equivalent and can be exchanged without changing its meaning."
           },
           "subject": {
             "$ref": "#/definitions/key",

@@ -11,8 +11,8 @@
       "id": "RC-Diagram",
       "title": "SpecIF:Diagram",
       "description": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.",
-      "revision": "1.1",
-      "replaces": ["1"],
+      "revision": "1.0",
+      "replaces": [],
       "icon": "&#9635;",
       "isHeading": false,
       "instantiation": [
@@ -22,31 +22,31 @@
       "propertyClasses": [
         {
           "id": "PC-Name",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Description",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Diagram",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Type",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Notation",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Status",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Stereotype",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2021-02-22T08:59:00+02:00"
@@ -55,7 +55,7 @@
       "id": "RC-Actor",
       "title": "FMC:Actor",
       "description": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "icon": "&#9632;",
       "isHeading": false,
@@ -65,35 +65,35 @@
       "propertyClasses": [
         {
           "id": "PC-Name",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Description",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Status",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Visibility",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Type",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Stereotype",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Value",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Alias",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2019-09-10T08:59:00+02:00"
@@ -102,7 +102,7 @@
       "id": "RC-State",
       "title": "FMC:State",
       "description": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "icon": "&#9679;",
       "isHeading": false,
@@ -112,35 +112,35 @@
       "propertyClasses": [
         {
           "id": "PC-Name",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Description",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Status",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Visibility",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Type",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Stereotype",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Value",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Alias",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2019-09-10T08:59:00+02:00"
@@ -149,7 +149,7 @@
       "id": "RC-Event",
       "title": "FMC:Event",
       "description": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "icon": "&#11047;",
       "isHeading": false,
@@ -159,35 +159,35 @@
       "propertyClasses": [
         {
           "id": "PC-Name",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Description",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Status",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Visibility",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Type",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Stereotype",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Value",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Alias",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2019-09-10T08:59:00+02:00"
@@ -196,7 +196,7 @@
       "id": "RC-Collection",
       "title": "SpecIF:Collection",
       "description": "A 'Collection' is a logic (often conceptual) group of resources linked with a SpecIF:contains statement. It corresponds to a 'Group' in BPMN Diagrams.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "icon": "&#11034;",
       "isHeading": false,
@@ -206,35 +206,35 @@
       "propertyClasses": [
         {
           "id": "PC-Name",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Description",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Status",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Visibility",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Type",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Stereotype",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Value",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Alias",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2021-01-02T18:59:00+02:00"

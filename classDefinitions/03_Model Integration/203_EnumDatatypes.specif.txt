@@ -10,7 +10,7 @@
       "title": "SpecIF:VisibilityKind",
       "description": "Enumerated values for visibility",
       "revision": "1.1",
-      "replaces": [1],
+      "replaces": [],
       "type": "xs:enumeration",
       "values": [
         {

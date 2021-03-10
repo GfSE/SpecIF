@@ -11,7 +11,7 @@
       "id": "RC-Issue",
       "title": "SpecIF:Issue",
       "description": "An 'Issue' is a question to answer or decision to take which is worth tracking.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "isHeading": false,
       "instantiation": [
@@ -21,31 +21,31 @@
       "propertyClasses": [
         {
           "id": "PC-VisibleId",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Name",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Description",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-IssStatus",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Priority",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-Responsible",
-          "revision": "1"
+          "revision": "1.0"
         },
         {
           "id": "PC-DueDate",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2016-05-26T08:59:00+02:00"

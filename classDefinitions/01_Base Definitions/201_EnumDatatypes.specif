@@ -9,8 +9,8 @@
       "id": "DT-LifeCycleStatus",
       "title": "SpecIF:LifeCycleStatus",
       "description": "Enumerated values for status",
-      "revision": "1.1",
-      "replaces": ["1"],
+      "revision": "1.0",
+      "replaces": [],
       "type": "xs:enumeration",
       "values": [
         {
@@ -65,7 +65,7 @@
       "id": "DT-Priority",
       "title": "SpecIF:Priority",
       "description": "Enumerated values for priority",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "type": "xs:enumeration",
       "values": [
@@ -97,8 +97,8 @@
       "id": "DT-Discipline",
       "title": "Discipline",
       "description": "Enumerated values for engineering discipline",
-      "revision": "1.1",
-      "replaces": ["1"],
+      "revision": "1.0",
+      "replaces": [],
       "type": "xs:enumeration",
       "values": [
         {

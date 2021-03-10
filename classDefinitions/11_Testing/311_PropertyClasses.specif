@@ -10,11 +10,11 @@
       "id": "PC-TestVerdict",
       "title": "U2TP:Verdict",
       "description": "A verdict is a predefined enumeration specifying the set of possible evaluations of a test case.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-TestVerdict",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2020-03-26T20:32:25.411Z"
     },
@@ -22,11 +22,11 @@
       "id": "PC-ExpectedResult",
       "title": "ISTQB:ExpectedResult",
       "description": "The predicted observable behavior of a component or system executing under specified conditions, based on its specification or another source. [After ISO 29119]",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-FormattedText",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2020-03-26T20:32:25.411Z"
     },
@@ -34,11 +34,11 @@
       "id": "PC-TestData",
       "title": "ISTQB:TestData",
       "description": "Data created or selected to satisfy the execution preconditions and inputs to execute one or more test cases. [After ISO 29119]",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-Text",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2020-03-26T20:32:25.411Z"
     },
@@ -46,11 +46,11 @@
       "id": "PC-TestResultReason",
       "title": "U2TP:ReasonMessage",
       "description": "A textual note, describing a reason for a test result.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-FormattedText",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2020-03-26T20:32:25.411Z"
     },
@@ -58,11 +58,11 @@
       "id": "PC-TestPrecondition",
       "title": "ISTQB:Precondition",
       "description": "The required state of a test item and its environment prior to test case execution.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-Text",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2020-03-26T20:32:25.411Z"
     },
@@ -70,11 +70,11 @@
       "id": "PC-TestObject",
       "title": "ISTQB:TestObject",
       "description": "The work product to be tested.",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-FormattedText",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2020-03-27T20:32:25.411Z"
     }

@@ -10,11 +10,11 @@
       "id": "PC-RequirementType",
       "title": "IREB:RequirementType",
       "description": "Enumerated value for the Requirement type according IREB",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-RequirementType",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2020-03-29T20:32:25.411Z"
     },
@@ -22,11 +22,11 @@
       "id": "PC-Perspective",
       "title": "SpecIF:Perspective",
       "description": "Enumerated values for the perspective (of a requirement)",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "dataType": {
         "id": "DT-Perspective",
-        "revision": "1"
+        "revision": "1.0"
       },
       "changedAt": "2016-05-26T08:59:00+02:00"
     }

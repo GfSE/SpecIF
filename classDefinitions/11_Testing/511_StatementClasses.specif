@@ -12,7 +12,7 @@
       "id": "SC-verifies",
       "title": "ISTBQ:Verifies",
       "description": "Statement: The test case (subject) verifies the requirement (object).",
-      "revision": "1",
+      "revision": "1.0",
       "replaces": [],
       "instantiation": [
         "user"
@@ -20,13 +20,13 @@
       "subjectClasses": [
         {
           "id": "RC-TestCase",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "objectClasses": [
         {
           "id": "RC-Requirement",
-          "revision": "1"
+          "revision": "1.0"
         }
       ],
       "changedAt": "2020-03-26T08:59:00+02:00"
