@@ -24,23 +24,44 @@
       }
     },
     "key": {
-      "description": "A unique key for a particular revision of an identifiable item, e.g. of a resource.",
-      "oneOf": [{
-        "description": "A string with a valid identifier; where the last revision (i.e. revision=0) is implied.",
-        "$ref": "#/definitions/id"
-      }, {
-        "description": "A key consisting of a globally unique identifier and a revision. No or an undefined revision means the latest revision of the identified item.",
+      "description": "A key for a particular revision of an identifiable item, e.g. of a resource. A key consists of a globally unique identifier and a revision. No or an undefined revision means the latest revision of the identified item.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "revision": {
+          "description": "If missing, the latest revision is implied.",
+          "$ref": "#/definitions/revision"
+        }
+      },
+      "additionalProperties": false,
+      "required": [ "id" ]
+    },
+    "alternativeIds": {
+      "description": "The list of consolidated items which can be used in case a consolidated item shall be updated.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "description": "A list of pointers to resources resp. statements which have been merged to this one.",
         "type": "object",
         "properties": {
           "id": {
+            "description": "A string with a valid identifier of a model-element",
             "$ref": "#/definitions/id"
           },
           "revision": {
+            "description": "If missing, the latest revision is implied.",
             "$ref": "#/definitions/revision"
+          },
+          "project": {
+            "description": "A string with a valid project identifier",
+            "$ref": "#/definitions/id"
           }
         },
+        "additionalProperties": false,
         "required": [ "id" ]
-      }]
+      }
     },
     "dateTime": {
       "description": "An ISO-8601 dateTime string. For reduced accuracy, any number of values may be dropped, but only from right to left.",
@@ -60,59 +81,48 @@
         "enum": [ "auto", "user" ]
       }
     },
-    "alternativeIds": {
-      "description": "The list of consolidated items which can be used in case a consolidated item shall be updated.",
+    "textFormat": {
+      "type": "string",
+      "enum": [ "plain", "xhtml" ]
+    },
+    "multilanguageText": {
+      "description": "A list of items with text and language properties. If the information is be provided in multiple languages, the language must be specified for proper selection; it is however not required by the schema to avoid a lot of overhead in most cases with a single language.",
       "type": "array",
       "uniqueItems": true,
       "items": {
-        "description": "A list of pointers to resources resp statements which have been merged to this one.",
-        "oneOf": [{
-          "description": "A string with a valid identifier of a model-element; where the last revision (i.e. revision=0) is implied.",
-          "$ref": "#/definitions/id"
-        }, {
-          "type": "object",
-          "properties": {
-            "id": {
-              "description": "A string with a valid identifier of a model-element",
-              "$ref": "#/definitions/id"
-            },
-            "revision": {
-              "$ref": "#/definitions/revision"
-            },
-            "project": {
-              "description": "A string with a valid project identifier",
-              "$ref": "#/definitions/id"
-            }
+        "type": "object",
+        "properties": {
+          "text": {
+            "description": "A string containing some text.",
+            "type": "string"
           },
-          "required": [ "id" ]
-        }]
+		  "format": {
+            "description": "By default, the format is assumed 'plain'.",
+            "$ref": "#/definitions/textFormat"
+          },
+          "language": {
+            "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de'.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [ "text" ]
       }
     },
-    "value": {
-      "description": "A property value according to the property class.",
-      "oneOf": [{
-        "description": "A string containing some text or a numeric value; a value-id in case of an enumerated type.",
-        "type": "string"
-      }, {
-        "description": "A list of items with text and language properties. Thus, the information can be given in multiple languages.",
-        "type": "array",
-        "uniqueItems": true,
-        "items": {
-            "type": "object",
-            "properties": {
-              "text": {
-                "description": "A string containing some text.",
-                "type": "string"
-              },
-              "language": {
-                "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de'.",
-                "type": "string"
-              }
-            },
-            "additionalProperties": false,
-            "required": [ "text", "language" ]
-        }
-      }]
+    "values": {
+      "description": "If 'multiple' of the propertyClass is undefined or false, the array must contain one item. If the value is unknown, omit the whole property. By default, the class' value applies.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "oneOf": [{
+          "description": "For properties with a dataType other than 'xs:string'.",
+          "type": "string"
+        },{
+          "description": "For properties with dataType 'xs:string'.",
+          "$ref": "#/definitions/multilanguageText"
+        }]
+      }
     },
     "nodes": {
       "description": "A list of pointers to resources; may be nested forming a tree, i.e. a hierarchy of pointers.",
@@ -125,11 +135,11 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "$ref": "#/definitions/value",
-            "description": "The node's label; if missing, the title of the referenced resource is applied."
+            "description": "The node's label; if missing, the title of the referenced resource is applied.",
+            "type": "string"
           },
           "description": {
-            "$ref": "#/definitions/value"
+            "type": "string"
           },
           "resource": {
             "description": "The pointer to the resource to be displayed at this position.",
@@ -155,9 +165,19 @@
         "required": [ "id", "resource", "changedAt" ]
       }
     },
+	"propertyClasses": {
+	  "description": "A list of keys pointing to a member of propertyClasses.",
+	  "type": "array",
+	  "minItems": 1,
+	  "uniqueItems": true,
+	  "items": {
+	    "$ref": "#/definitions/key"
+	  }
+	},
     "properties": {
       "description": "A list of properties of a resource or statement.",
       "type": "array",
+      "minItems": 1,
       "uniqueItems": true,
       "items": {
         "type": "object",
@@ -166,66 +186,44 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "$ref": "#/definitions/value",
-            "description": "The property's label; if missing, the title of the property's class is applied."
+            "description": "The property's label; if missing, the title of the property's class is applied.",
+            "type": "string"
           },
           "description": {
-            "$ref": "#/definitions/value"
+            "type": "string"
           },
           "class": {
-            "$ref": "#/definitions/key",
-            "description": "Must be a member of propertyClasses. In addition, it must be listed in the propertyClasses of the parent's class."
+            "description": "Must be a member of propertyClasses. In addition, it must be listed in the propertyClasses of the parent's class.",
+            "$ref": "#/definitions/key"
           },
-          "value": {
-            "description": "Is a singular value, if 'multiple' is undefined or false, and is a list otherwise. If the value is unknown, omit the whole property. By default, the class' value applies.",
-            "oneOf": [{
-              "$ref": "#/definitions/value"
-            },{
-              "type": "array",
-              "uniqueItems": true,
-              "items": {
-                "$ref": "#/definitions/value"
-              }
-            }]
-          },
-          "revision": {
-            "$ref": "#/definitions/revision"
-          },
-          "replaces": {
-            "$ref": "#/definitions/replaces"
-          },
-          "changedAt": {
-            "$ref": "#/definitions/dateTime",
-            "description": "Without change information, the parent's change information applies."
-          },
-          "changedBy": {
-            "type": "string"
+          "values": {
+            "$ref": "#/definitions/values"
           }
         },
-        "required": [ "class", "value" ]
+        "required": [ "class", "values" ]
       }
     }
   },
   "type": "object",
   "properties": {
     "$schema": {
+      "description": "An absolute URL pointing to this SpecIF schema.",
       "type": "string",
       "format": "uri",
-      "pattern": "^https?:\\/\\/(specif\\.de\\/v1\\.0\\/schema|.+\\/specif-1\\.0)\\.json$",
-      "description": "An absolute URL pointing to this SpecIF schema."
+      "pattern": "^https?:\\/\\/(specif\\.de\\/v1\\.1\\/schema|.+\\/specif-1\\.1)\\.json$"
     },
     "id": {
       "$ref": "#/definitions/id"
     },
     "title": {
-      "$ref": "#/definitions/value"
+      "type": "string"
     },
     "description": {
-      "$ref": "#/definitions/value"
+      "type": "string"
     },
     "isExtension": {
-      "type": "boolean",
-      "description": "Indicates that the project is not schema-compliant on its own; by default the value is 'false'. Of course, it is expected that once extended the project is schema-compliant."
+      "description": "Indicates that the project is not schema-compliant on its own; by default the value is 'false'. Of course, it is expected that once extended the project is schema-compliant.",
+      "type": "boolean"
     },
     "generator": {
       "type": "string"
@@ -239,15 +237,12 @@
         "title": {
           "type": "string"
         },
-        "type": {
-          "type": "string"
-        },
         "url": {
           "type": "string",
           "format": "uri"
         }
       },
-      "required": [ "title", "type", "url" ]
+      "required": [ "title", "url" ]
     },
     "createdAt": {
       "$ref": "#/definitions/dateTime"
@@ -288,7 +283,7 @@
       "required": [ "email" ]
     },
     "language": {
-      "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of simple property values. Is superseded by a resource's, statement's or property's language value.",
+      "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of the project. Is superseded by a resource's, statement's or property's language value.",
       "type": "string"
     },
     "dataTypes": {
@@ -300,19 +295,19 @@
           "type": "object",
           "properties": {
             "type": {
+              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "type": "string",
               "title": "Data-type 'Boolean', 'dateTime' or 'URI'",
-              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "enum": [ "xs:boolean", "xs:dateTime", "xs:anyURI" ]
             },
             "id": {
               "$ref": "#/definitions/id"
             },
             "title": {
-              "$ref": "#/definitions/value"
+              "type": "string"
             },
             "description": {
-              "$ref": "#/definitions/value"
+              "type": "string"
             },
             "revision": {
               "$ref": "#/definitions/revision"
@@ -333,19 +328,19 @@
           "type": "object",
           "properties": {
             "type": {
+              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "type": "string",
               "title": "Data-type 'Integer'",
-              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "enum": [ "xs:integer" ]
             },
             "id": {
               "$ref": "#/definitions/id"
             },
             "title": {
-              "$ref": "#/definitions/value"
+              "type": "string"
             },
             "description": {
-              "$ref": "#/definitions/value"
+              "type": "string"
             },
             "minInclusive":  {
               "type": "number",
@@ -376,35 +371,35 @@
           "type": "object",
           "properties": {
             "type": {
+              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "type": "string",
               "title": "Data-type 'Double'",
-              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "enum": [ "xs:double" ]
             },
             "id": {
               "$ref": "#/definitions/id"
             },
             "title": {
-              "$ref": "#/definitions/value"
+              "type": "string"
             },
             "description": {
-              "$ref": "#/definitions/value"
+              "type": "string"
             },
             "fractionDigits": {
+              "description": "Optional use by dataType 'xs:double', indicates the number of decimals.",
               "type": "integer",
               "title": "Number of fraction digits of a Decimal Number",
-              "description": "Optional use by dataType 'xs:double', indicates the number of decimals.",
               "minimum": 1
             },
             "minInclusive":  {
+              "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'.",
               "type": "number",
-              "title": "Minimum Value of a Number",
-              "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
+              "title": "Minimum Value of a Number"
             },
             "maxInclusive":  {
+              "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'.",
               "type": "number",
-              "title": "Maximum Value of a Number",
-              "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
+              "title": "Maximum Value of a Number"
             },
             "revision": {
               "$ref": "#/definitions/revision"
@@ -425,24 +420,24 @@
           "type": "object",
           "properties": {
             "type": {
+              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "type": "string",
-              "title": "Data-type 'String' or 'Formatted Text'",
-              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ resp. https://www.w3.org/TR/xhtml1/ applies. 'xhtml' is DEPRECATED.",
-              "enum": [ "xs:string", "xhtml" ]
+              "title": "Data-type 'String' with plain or formatted text. The property's text object MAY specify the format and language.",
+              "enum": [ "xs:string" ]
             },
             "id": {
               "$ref": "#/definitions/id"
             },
             "title": {
-              "$ref": "#/definitions/value"
+              "type": "string"
             },
             "description": {
-              "$ref": "#/definitions/value"
+              "type": "string"
             },
             "maxLength":  {
+              "description": "Optional use by dataType 'xs:string'.",
               "type": "integer",
               "title": "Maximum String Length",
-              "description": "Optional use by dataTypes 'xs:string' and 'xhtml'.",
               "minimum": 0
             },
             "revision": {
@@ -464,24 +459,24 @@
           "type": "object",
           "properties": {
             "type": {
+              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "type": "string",
               "title": "Data-type 'Enumeration'",
-              "description": "The corresponding definition in https://www.w3.org/TR/xmlschema-2/ applies.",
               "enum": [ "xs:enumeration" ]
             },
             "id": {
               "$ref": "#/definitions/id"
             },
             "title": {
-              "$ref": "#/definitions/value"
+              "type": "string"
             },
             "description": {
-              "$ref": "#/definitions/value"
+              "type": "string"
             },
             "values": {
+              "description": "Mandatory use by dataType 'xs:enumeration'. If 'multiple' is true 0..n options may be selected, otherwise exactly one must be selected.",
               "type": "array",
               "title": "Enumerated Values",
-              "description": "Mandatory use by dataType 'xs:enumeration'. If 'multiple' is true 0..n options may be selected, otherwise exactly one must be selected.",
               "uniqueItems": true,
               "items": {
                 "type": "object",
@@ -490,15 +485,15 @@
                     "$ref": "#/definitions/id"
                   },
                   "value": {
-                    "$ref": "#/definitions/value"
+                    "$ref": "#/definitions/multilanguageText"
                   }
                 },
                 "required": [ "id", "value" ]
               }
             },
             "multiple": {
-              "type": "boolean",
-              "description": "Optional use by dataType 'xs:enumeration'. Indicates whether multiple values can be chosen; by default the value is 'false'."
+              "description": "Optional use by dataType 'xs:enumeration'. Indicates whether multiple values can be chosen; by default the value is 'false'.",
+              "type": "boolean"
             },
             "revision": {
               "$ref": "#/definitions/revision"
@@ -529,22 +524,22 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "$ref": "#/definitions/value"
+            "type": "string"
           },
           "description": {
-            "$ref": "#/definitions/value"
+            "type": "string"
           },
           "dataType": {
-            "$ref": "#/definitions/key",
-            "description": "Must be a member of dataTypes."
+            "description": "Must be a member of dataTypes.",
+            "$ref": "#/definitions/key"
           },
           "multiple": {
-            "type": "boolean",
-            "description": "Optional use by all propertyClasses. Indicates whether multiple values can be given. If omitted, the 'multiple' property of the dataType applies; by default the value is 'false'."
+            "description": "Optional use by all propertyClasses. Indicates whether multiple values can be given. If omitted, the 'multiple' property of the dataType applies; by default the value is 'false'.",
+            "type": "boolean"
           },
-          "value": {
-            "$ref": "#/definitions/value",
-            "description": "An optional default value in case the instantiated resource's or statement's property is missing."
+          "values": {
+            "description": "An optional list of default values in case the instantiated resource's or statement's property is missing.",
+            "$ref": "#/definitions/values"
           },
           "revision": {
             "$ref": "#/definitions/revision"
@@ -573,14 +568,14 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "$ref": "#/definitions/value"
+            "type": "string"
           },
           "description": {
-            "$ref": "#/definitions/value"
+            "type": "string"
           },
           "extends": {
-            "$ref": "#/definitions/key",
-            "description": "Must be a member of resourceClasses."
+            "description": "Must be a member of resourceClasses.",
+            "$ref": "#/definitions/key"
           },
           "icon": {
             "$ref": "#/definitions/icon"
@@ -592,14 +587,7 @@
             "$ref": "#/definitions/instantiation"
           },
           "propertyClasses": {
-            "type": "array",
-            "description": "A collection of keys of eligible property classes",
-            "minItems": 0,
-            "uniqueItems": true,
-            "items": {
-              "$ref": "#/definitions/key",
-              "description": "Must be a member of propertyClasses."
-            }
+            "$ref": "#/definitions/propertyClasses"
           },
           "revision": {
             "$ref": "#/definitions/revision"
@@ -614,7 +602,7 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "changedAt" ]
+        "required": [ "id", "title", "propertyClasses", "changedAt" ]
       }
     },
     "statementClasses": {
@@ -628,14 +616,14 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "$ref": "#/definitions/value"
+            "type": "string"
           },
           "description": {
-            "$ref": "#/definitions/value"
+            "type": "string"
           },
           "extends": {
-            "$ref": "#/definitions/key",
-            "description": "Must be a member of statementClasses."
+            "description": "Must be a member of statementClasses.",
+            "$ref": "#/definitions/key"
           },
           "icon": {
             "$ref": "#/definitions/icon"
@@ -644,23 +632,16 @@
             "$ref": "#/definitions/instantiation"
           },
           "isUndirected": {
-            "type": "boolean",
-            "description": "Indicates that an instance's subject and object are equivalent and can be exchanged without changing its meaning. Is superseded by a statement's definition."
+            "description": "Indicates that an instance's subject and object are equivalent and can be exchanged without changing its meaning. Is superseded by a statement's definition.",
+            "type": "boolean"
           },
           "propertyClasses": {
-            "type": "array",
-            "description": "A collection of keys of eligible property classes",
-            "minItems": 0,
-            "uniqueItems": true,
-            "items": {
-              "$ref": "#/definitions/key",
-              "description": "Must be a member of propertyClasses."
-            }
+            "$ref": "#/definitions/propertyClasses"
           },
           "subjectClasses": {
+            "description": "A collection of id's of eligible resource and statement classes; if 'subjectClasses' is missing, all resource or statement classes are eligible.",
             "type": "array",
             "title": "Resource and statement classes eligible as subject",
-            "description": "A collection of id's of eligible resource and statement classes; if 'subjectClasses' is missing, all resource or statement classes are eligible.",
             "minItems": 1,
             "uniqueItems": true,
             "items": {
@@ -669,14 +650,14 @@
             }
           },
           "objectClasses": {
+            "description": "A collection of id's of eligible resource and statement classes; if 'objectClasses' is missing, all resource or statement classes are eligible.",
             "type": "array",
             "title": "Resource and statement classes eligible as object",
-            "description": "A collection of id's of eligible resource and statement classes; if 'objectClasses' is missing, all resource or statement classes are eligible.",
             "minItems": 1,
             "uniqueItems": true,
             "items": {
-              "$ref": "#/definitions/key",
-              "description": "Must be a member of resourceClasses or statementClasses."
+              "description": "Must be a member of resourceClasses or statementClasses.",
+              "$ref": "#/definitions/key"
             }
           },
           "revision": {
@@ -705,18 +686,15 @@
           "id": {
             "$ref": "#/definitions/id"
           },
-          "title": {
-            "$ref": "#/definitions/value"
-          },
-          "description": {
-            "$ref": "#/definitions/value"
+          "alternativeIds": {
+            "$ref": "#/definitions/alternativeIds"
           },
           "class": {
             "$ref": "#/definitions/key",
             "description": "Must be a member of resourceClasses."
           },
           "language": {
-            "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of simple property values. Is superseded by a property's language value.",
+            "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of the resource. Is superseded by a property's language value.",
             "type": "string"
           },
           "properties": {
@@ -728,9 +706,6 @@
           "replaces": {
             "$ref": "#/definitions/replaces"
           },
-          "alternativeIds": {
-            "$ref": "#/definitions/alternativeIds"
-          },
           "changedAt": {
             "$ref": "#/definitions/dateTime"
           },
@@ -738,7 +713,7 @@
             "type": "string"
           }
         },
-        "required": [ "id", "title", "class", "changedAt" ]
+        "required": [ "id", "class", "properties", "changedAt" ]
       }
     },
     "statements": {
@@ -751,27 +726,23 @@
           "id": {
             "$ref": "#/definitions/id"
           },
-          "title": {
-            "$ref": "#/definitions/value",
-            "description": "The statement's appelation; if missing, the statementClass' title applies."
-          },
-          "description": {
-            "$ref": "#/definitions/value"
+          "alternativeIds": {
+            "$ref": "#/definitions/alternativeIds"
           },
           "class": {
             "$ref": "#/definitions/key",
             "description": "Must be a member of statementClasses."
           },
           "subject": {
-            "$ref": "#/definitions/key",
-            "description": "Must be a member of resources or statements."
+            "description": "Must be a member of resources or statements.",
+            "$ref": "#/definitions/key"
           },
           "object": {
-            "$ref": "#/definitions/key",
-            "description": "Must be a member of resources or statements."
+            "description": "Must be a member of resources or statements.",
+            "$ref": "#/definitions/key"
           },
           "language": {
-            "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of simple property values. Is superseded by a property's language value.",
+            "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of the statement. Is superseded by a property's language value.",
             "type": "string"
           },
           "properties": {
@@ -782,9 +753,6 @@
           },
           "replaces": {
             "$ref": "#/definitions/replaces"
-          },
-          "alternativeIds": {
-            "$ref": "#/definitions/alternativeIds"
           },
           "changedAt": {
             "$ref": "#/definitions/dateTime"
@@ -812,10 +780,10 @@
           },
           "title": {
             "description": "In case of a file, the title is the absolute or relative URL.",
-            "$ref": "#/definitions/value"
+            "type": "string"
           },
           "description": {
-            "$ref": "#/definitions/value"
+            "type": "string"
           },
           "type": {
             "description": "The file's media type (formerly MIME-type) according to https://www.iana.org/assignments/media-types/media-types.xhtml.",
@@ -842,6 +810,8 @@
     "$schema",
     "id",
     "title",
+	"dataTypes",
+	"propertyClasses",
     "resourceClasses",
     "statementClasses",
     "resources",
