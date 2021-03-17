@@ -84,7 +84,7 @@ In addition, a server may send some further error messages (e.g. code 500 - Inte
 |400|Bad Request|The data given as parameter is not correct enough to handle the request.|
 |403|Forbidden|This code shall not be used, because it reveals the existence of an item; use 404 instead.|
 |404|Not Found|The requested data was not found in the data repository.|
-|601|Specified item identifier within a POST request is not unique.|
+|601|Invalid id|Specified item identifier within a POST request is not unique.|
 
 ### Data model and data format
 
