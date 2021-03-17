@@ -541,6 +541,10 @@
             "description": "An optional list of default values in case the instantiated resource's or statement's property is missing.",
             "$ref": "#/definitions/values"
           },
+          "unit": {
+            "description": "The unit of the numeric value given; preferrably an SI unit symbol such as 'm^3/kg' (Système international (d'unités)) or a currency symbol.",
+            "type": "string"
+          },
           "revision": {
             "$ref": "#/definitions/revision"
           },

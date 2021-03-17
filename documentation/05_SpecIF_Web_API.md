@@ -43,13 +43,24 @@ Using a non-secured HTTP protocol will leaed to an error response.
 
 ### Role-based authorization
 
-To restrict the access to some endpoints of a ApecIF-WebAPI, a role-based authorization mechanism should be implemented with the following roles:
+To restrict the access to some endpoints of a SpecIF-WebAPI, role-based authorization should be implemented with the following roles. 
+The roles are assigned to a registered user per project, except for 'Anybody', which is obviously assigned to a project, only.
+Without role assignment, a user cannot see a project.
 
+|Role name|Role description|
+|-|-|
+|Anybody|Grants read permission for all instances (i.e. resources, statements, files and hierarchies) to anybody without authentication. Makes projects publicly available.|
+|Reader|Grants read privilege for the project's instances to the user.|
+|Editor|Grants create, read, update and delete privilege the project's instances to the user.|
+|Manager|Grants create, read, update as well as delete privilege the project's classes and instances to the user. In addition, projects can be created and deleted.|
+|Administrator|The Administrator role has unrestricted access to all endpoints of a SpecIF-WebAPI.|
+
+*previously:*
 |Role name|Role description|
 |-|-|
 |User|This is the standard role with the lowest access rights. The user role is automatically applied when a user is successfully autheticated as a SpecIF-WebAPI user. If no other role with higher access rights is specified for an enpoint, the endpoint shall always accept the request for a user-role.  |
 |Editor|The Editor role has extended access rights to a User role. An editor has rights to change data, a user can only read data.|
-|Administrator|The Administrator role has access to all endpoints of a SpecIF-WebAPI.|
+|Administrator|The Administrator role has unrestricted access to all endpoints of a SpecIF-WebAPI.|
 
 The endpoint specification below describes, if an endpoint requires further rights above the User role.
 
@@ -57,53 +68,53 @@ The endpoint specification below describes, if an endpoint requires further righ
 
 The SpecIF-WebAPI uses HTTP status codes for error handling. 
 The following tables define the standard error handling behavior of the API for application endpoints.
-Below of that some forther error messages can be sent by default by the server (e.g. code 500 - Internal Server Error etc.) in exceptional situations.
+In addition, a server may send some further error messages (e.g. code 500 - Internal Server Error etc.) in exceptional situations.
 
-### Error return codes
-
-|Code|Message|Description|
-|-|-|-|
-|400|Bad Request|The data given as parameter is not correct enough to handle the request.|
-|403|Forbidden|The client is not restricted to use the endpoint or the API.|
-|404|Not Found|The requested data was not found in the data repository.| 
-
-### Success return codes
+#### Success return codes
 
 |Code|Message|Description|
 |-|-|-|
 |200|OK|The request was successful and a result was provided if necessary.|
-|201|Created|Especially used for POST requests: The POST-request was successsful and the data was successfully created.| 
+|201|Created|Especially used for POST requests: The item was successfully created.| 
+
+#### Error return codes
+
+|Code|Message|Description|
+|-|-|-|
+|400|Bad Request|The data given as parameter is not correct enough to handle the request.|
+|403|Forbidden|This code shall not be used, because it reveals the existence of an item; use 404 instead.|
+|404|Not Found|The requested data was not found in the data repository.|
+|601|Specified item identifier within a POST request is not unique.|
 
 ### Data model and data format
 
-The data used in the SpecIF-WebAPI is exactly the same, as defined by the SpecIF JSON-schema described above.
-Currently only JSON is defined a SpecIF format.
-So SpecIF-WebAPI requests shall accept all data as `application/json` and also respond with `application/json` data!
+The data used in the SpecIF-WebAPI corresponds exactly with the SpecIF JSON-schema described above.
+Currently only JSON is defined a SpecIF data set.
+So SpecIF-WebAPI requests shall accept all data as `application/json` and also respond with `application/json` data.
 
 ### Parameters
 
-Parameter data in SpecIF-WebAPI requests can be transmitted in three different ways:
+Parameter data in SpecIF-WebAPI requests are transmitted in three different ways:
 
-* As part of the endpount URL, defined in curly brackets (e.g. `/specif/v1.0/resources/{id}`), called path-parameters
-* As query partameter using the syntax `?parameter=1234`. Query parameters are optional parameters!
-* As body content
+* As part of the endpoint URL, defined in curly brackets (e.g. `/specif/v1.0/resources/{id}`), called path-parameters
+* As query parameter appended to the URL such as `?parameterA=1234;parameterB=foe`. Query parameters are optional!
+* As body content in JSON format. *(OD: I am not sure whether parameters are included in the message body ... only data payload ??)*
 
-The parameters for the endpoints are defned below and it is described for each endpoint which parameters are available and how the shall be provided.
+The parameters for the endpoints are defined below and it is described for each endpoint which parameters are available and how the shall be provided.
 
 ## Handling of revisions
 
 Some endpoints have a path parameter `id` to query for data. 
-The `revision` parameter is defined as an optional query parameter to give a specific revision identifer.
+The `revision` parameter is defined as an optional query parameter to specify a specific revision.
 If the revision parameter is missing, the element with the newest change date is used.
 
-A `POST` request always shall create a new element. 
-If an element with the given ID still existst, the API has to change the ID and return it in the result body data as first revsion (no `replaces` entries).
+A `POST` request shall always create a new element. 
+If an element with a specified ID already exists, the API has to change the ID and return it in the result body data as first revsion (no `replaces` entries).
 
 To create a new revsion of an existing element a `PUT` request shall be used. 
 The data send as body parameter in a PUT request shall have the same `id` as the still existant element.
 
-We have do differentiate the following cases:
-
+We have to differentiate the following cases:
 * If the `id`, `revision` and `replaces` value is identical to an existing element, the API has to calculate a new revision identifier and add the data as new revision to the still existing element.
 * If the `id` and `replaces` values are set to valid values, the API shall check if the `revision` value is unique and if not, calculate a new revision and add the data as new revision to the element that are referenced by the `replaces` values.
 
