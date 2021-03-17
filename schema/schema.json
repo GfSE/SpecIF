@@ -81,10 +81,6 @@
         "enum": [ "auto", "user" ]
       }
     },
-    "textFormat": {
-      "type": "string",
-      "enum": [ "plain", "xhtml" ]
-    },
     "multilanguageText": {
       "description": "A list of items with text and language properties. If the information is be provided in multiple languages, the language must be specified for proper selection; it is however not required by the schema to avoid a lot of overhead in most cases with a single language.",
       "type": "array",
@@ -98,7 +94,8 @@
           },
 		  "format": {
             "description": "By default, the format is assumed 'plain'.",
-            "$ref": "#/definitions/textFormat"
+            "type": "string",
+            "enum": [ "plain", "xhtml" ]
           },
           "language": {
             "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de'.",
@@ -267,17 +264,8 @@
           "required": [ "organizationName" ]
         },
         "email": {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string"
-            },
-            "value": {
-              "type": "string",
-              "format": "email"
-            }
-          },
-          "required": [ "value" ]
+          "type": "string",
+          "format": "email"
         }
       },
       "required": [ "email" ]
