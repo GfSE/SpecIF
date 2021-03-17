@@ -25,7 +25,8 @@ You can find a table listing the version dependencies for the different parts of
 
 ### Authentication and Authorization
 
-The SpecIF-WebAPI should implement authorization and athentication technology to restrict the access for some endpoints to realize know-how protection or restrict the access for changing common used data lile data type definition endpoints.
+The SpecIF-WebAPI should implement authorization and authentication technology to restrict the access for some endpoints 
+to realize know-how protection or restrict the access for changing common used data lile data type definition endpoints.
 
 ### API Key Authentication
 
@@ -58,7 +59,7 @@ Without role assignment, a user cannot see a project.
 *previously:*
 |Role name|Role description|
 |-|-|
-|User|This is the standard role with the lowest access rights. The user role is automatically applied when a user is successfully autheticated as a SpecIF-WebAPI user. If no other role with higher access rights is specified for an enpoint, the endpoint shall always accept the request for a user-role.  |
+|User|This is the standard role with the lowest access rights. The user role is automatically applied when a user is successfully authenticated as a SpecIF-WebAPI user. If no other role with higher access rights is specified for an enpoint, the endpoint shall always accept the request for a user-role.  |
 |Editor|The Editor role has extended access rights to a User role. An editor has rights to change data, a user can only read data.|
 |Administrator|The Administrator role has unrestricted access to all endpoints of a SpecIF-WebAPI.|
 
