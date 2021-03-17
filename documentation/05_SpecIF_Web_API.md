@@ -49,11 +49,11 @@ Without role assignment, a user cannot see a project.
 
 |Role name|Role description|
 |-|-|
-|Anybody|Grants read permission for all instances (i.e. resources, statements, files and hierarchies) to anybody without authentication. Makes projects publicly available.|
-|Reader|Grants read privilege for the project's instances to the user.|
-|Editor|Grants create, read, update and delete privilege for the project's instances to the user.|
-|Manager|Grants create, read, update as well as delete privilege for the project's classes and instances to the user. In addition, projects can be created and deleted.|
-|Administrator|The Administrator role has unrestricted access to all endpoints of a SpecIF-WebAPI.|
+|Anybody|Grants permission to read all instances (i.e. resources, statements, files and hierarchies) to anybody without authentication. Makes projects publicly available.|
+|Reader|A user is granted read privilege for the project's instances.|
+|Editor|A user is granted create, read, update and delete privilege for the project's instances.|
+|Manager|A user is granted create, read, update as well as delete privilege for the project's classes and instances. In addition, projects can be created and deleted.|
+|Administrator|A user has unrestricted access to all endpoints of a SpecIF-WebAPI.|
 
 *previously:*
 |Role name|Role description|
