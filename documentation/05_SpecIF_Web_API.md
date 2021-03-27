@@ -51,17 +51,10 @@ Without role assignment, a user cannot see a project.
 |Role name|Role description|
 |-|-|
 |Anybody|Grants permission to read all instances (i.e. resources, statements, files and hierarchies) to anybody without authentication. Makes projects publicly available.|
-|Reader|A user is granted read privilege for the project's instances.|
-|Editor|A user is granted create, read, update and delete privilege for the project's instances.|
-|Manager|A user is granted create, read, update as well as delete privilege for the project's classes and instances. In addition, projects can be created and deleted.|
-|Administrator|A user has unrestricted access to all endpoints of a SpecIF-WebAPI.|
-
-*previously:*
-|Role name|Role description|
-|-|-|
-|User|This is the standard role with the lowest access rights. The user role is automatically applied when a user is successfully authenticated as a SpecIF-WebAPI user. If no other role with higher access rights is specified for an enpoint, the endpoint shall always accept the request for a user-role.  |
-|Editor|The Editor role has extended access rights to a User role. An editor has rights to change data, a user can only read data.|
-|Administrator|The Administrator role has unrestricted access to all endpoints of a SpecIF-WebAPI.|
+|Reader|A user is granted read privilege for the project's instances. This is the standard role with the lowest access rights. The user role is automatically applied when a user is successfully authenticated as a SpecIF-WebAPI user.|
+|Editor|An Editor is granted create, read, update and delete privilege for the project's instances.|
+|Manager|A Manager is granted create, read, update as well as delete privilege for the project's classes and instances. In addition, projects can be created and deleted.|
+|Administrator|An Administrator has unrestricted access to all endpoints of a SpecIF-WebAPI.|
 
 The endpoint specification below describes, if an endpoint requires further rights above the User role.
 
@@ -112,8 +105,8 @@ If the revision parameter is missing, the element with the newest change date is
 A `POST` request shall always create a new element. 
 If an element with a specified ID already exists, the API has to change the ID and return it in the result body data as first revsion (no `replaces` entries).
 
-To create a new revsion of an existing element a `PUT` request shall be used. 
-The data send as body parameter in a PUT request shall have the same `id` as the still existant element.
+To create a new revision of an existing element a `PUT` request shall be used. 
+The data send as body parameter in a PUT request shall have the same `id` as the still existnt element.
 
 We have to differentiate the following cases:
 * If the `id`, `revision` and `replaces` value is identical to an existing element, the API has to calculate a new revision identifier and add the data as new revision to the still existing element.
@@ -122,14 +115,6 @@ We have to differentiate the following cases:
 ## Data definition endpoints
 
 The following sections describe the SpecIF-Web-API endpoints for the data definition endpoints.
-
-### Primitive types
-
-Endpoint to get information about the primitive data types used to define SpecIF DataType elements.
-
-|Endpoint|Parameters|Response data|Minimum access role|Description|
-|-|-|-|-|-|
-|`GET /specif/v1.1/primitiveTypes`|-|string[]|-|This endpoint is available to inform about the primitive type values used in SpecIF.|
 
 ### Data types
 
