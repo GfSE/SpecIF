@@ -42,17 +42,17 @@ To express additional information about the SpecIF repository resp. the project 
 
 The SpecIF metaclass has the following attributes:
 
-* *id: string* -  A unique identifier for the SpecIF repository resp. the project represented by the SpecIF repository/file.
-* *title: string | LanguageValue[]* - A human readable description for the entire SpecIF repository/project.
-* *description: string | LanguageValue[]* - A human readable description for documentation purposes.
-* *isExtension: bool* - Indicates that the project is not schema-compliant on its own; by default the value is 'false'. Of course, it is expected that once extended the project is schema-compliant.
-* *generator: string* - The generator that generate the SpecIF data.
-* *generatorVersion: string* - The SpecIF generator tool version.
-* *language: string* - An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of simple property values. 
+- *id: string* -  A unique identifier for the SpecIF repository resp. the project represented by the SpecIF repository/file.
+- *title: MultilanguageText[]* - A human readable description for the entire SpecIF repository/project.
+- *description: MultilanguageText[]* - A human readable description for documentation purposes.
+- *isExtension: bool* - Indicates that the project is not schema-compliant on its own; by default the value is 'false'. Of course, it is expected that once extended the project is schema-compliant.
+- *generator: string* - The generator that generate the SpecIF data.
+- *generatorVersion: string* - The SpecIF generator tool version.
+- *language: string* - An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of simple property values. 
 Is superseded by a resource's, statement's or property's language value.
-* *createdAt: DateTime* - The creation date.
-* *createdBy: Creator* - The creator of the SpecIF data-set. If specified, at least an e-mail address must be given.
-* *rights: Rights* - A copyright and/or license information.
+- *createdAt: DateTime* - The creation date.
+- *createdBy: Creator* - The creator of the SpecIF data-set. If specified, at least an e-mail address must be given.
+- *rights: Rights* - A copyright and/or license information.
 
 #### Creator
 
@@ -62,15 +62,8 @@ The *Creator* metaclass defines information about the SpecIF data creator.
 
 * *familiyName: string* - The creators family name.
 * *givenName: string* - The creators given name.
-* *email: Email* - The creators E-Mail.
+* *email: string* - The creators E-Mail.
 * *org: Org* - The creators organization.
-
-#### Email
-
-The *Email* metaclass has the following attributes:
-
-* *type: string* - Tbd.
-* *value: string* - A valid E-Mail address.
 
 #### Org
 
@@ -84,7 +77,6 @@ The *Rights* metaclass defines a data structure to represent copyright and/or li
 It has the following attributes:
 
 * *title: string* - A title for the copyright/license information (e.g. 'Apache license v2')
-* *type: string* - A type information for the copyright/license information.
 * *url: string* - A valid uniform resource locator to forther copyright/license information.
 
 ## Data representation and data type definitions in SpecIF
@@ -134,21 +126,36 @@ The following metaclasses are inherited from BaseElement:
 * Resource
 * Statement
 * Node
-* Property
 * File
 
 Remark: The attributes of the base metaclass BaseElement are not described for each child class any more!
 
-### LanguageValue
+### MultilanguageText
 
-![The metaclass *LanguageValue*](./images/Metaclass_LanguageValue.png)
+![The metaclass *MultilanguageText*](./images/Metaclass_LanguageValue.png)
 
-To realize the concept of data storage in multiple languages, SpecIF defines a metaclass called *LanguageValue*.
+To realize the concept of data storage in multiple languages, SpecIF defines a metaclass called *MultilanguageText*.
+
+This class defines three attributes:
+
+* *text: string* - This attribute takes the data content in a certain language.
+* *format: TextFormat* - An enumeration value describing the text format. Allowed values are *plain* for plain text or *xhtml* for formatted content.
+* *language: string* - An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language.
+
+Typically an array of these MultilanguageText objects is used to represent a value in multiple languages.
+Each single array value contains the same text content but in a specific language (english, german etc.).
+
+### EnumerationValue
+
+![The metaclass *EnumerationValue*](./images/Metaclass_EnumerationValue.png)
+
+To define enumerations in SpecIF the metaclass *EnumerationValue* is used to define the values for a enumeration data type.
 
 This class defines two attributes:
 
-* *text: string* - This attribute takes the data content in a certain language.
-* *language: string* - An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language.
+* *id: string* - An identifier for the enumeration value. 
+This id must be unique within the collection of enumeration value for a enumeration data type definition.
+* *value: MultilanguageText[]* - The enumeration value definition in multiple languages.
 
 ### AlternativeId
 
@@ -186,7 +193,7 @@ SpecIF allows the definition of primitive data types for numbers, formated or un
 So the DataType metaclass defines the following attributes to stisfy these requirements:
 
 * *title: string* - A unique name for the defined data type (e.g. 'string')
-* *description: string | LanguageValue[]* - A human readable description of the data type for documentation purposes.
+* *description: MultilanguageText[]* - A human readable description of the data type for documentation purposes.
 * *type* - A formal definition of the used base type. The allowed types are:
   * string
   * integer
@@ -195,8 +202,9 @@ So the DataType metaclass defines the following attributes to stisfy these requi
   * Enumeration
 * *maxInclusive* - The maximum value for a numeric data type
 * *fractionDigits* - The number of digits for floating point numbers
-* *values* - A list of enumeration values
+* *values* - A list of enumeration values.
 * *multiple: bool* - This flag indicates for enumeration definitions, that a multiple selection of enumeration values should be possible.
+* *maxLength: int* - The maximum length of a text value.
 
 ### PropertyClass
 
@@ -207,7 +215,7 @@ Properties are used to define data of Resource and Statement elements.
 The PropertyClass has the following attributes:
 
 *  *title: string* - A unique name for the defined PropertyClass (e.g. 'dcterms:title')
-*  *description: string | LanguageValue[]* - A human readable description of the data type for documentation purposes.
+*  *description: MultilanguageText[]* - A human readable description of the data type for documentation purposes.
 *  *multiple: bool* - This flag indicates for the Property, that the property value can hold multiple values (muliple enumeration values or an array of primitive data).
 *  *dataType* - This association references the used *DataType* for the ProperyClass.
 
@@ -223,7 +231,7 @@ It is possible to add new properties and reuse the existing ones from the base e
 The ResourceClass has the following attributes:
 
 * *title: string* - A unique name for the defined ResourceClass (e.g. 'IREB:Requirement')
-* *description: string | LanguageValue[]* - A human readable description of the data type for documentation purposes.
+* *description: MultilanguageText[]* - A human readable description of the data type for documentation purposes.
 * *icon: string* - A icon definition usable by authoring tools for the Resources. This can be a language code of a unicode symbol or a base64 encoded image.
 * *isHeading: bool* - Indicates, that the defined resource is a heading.
 * *instantiation* - Values: 'user' or 'system'. Tbd.
@@ -231,6 +239,8 @@ The ResourceClass has the following attributes:
 * *propertyClasses* - A list of PropertyClass references to define which Properties shall be used for the defined Resource type. 
  
 ### StatementClass
+
+![The metaclass *StatementClass*](./images/Metaclass_StatementClass.png)
 
 A *StatementClass* inherits the ResourceClass and defines the data type definition of a SpecIF statement. 
 Statements are the edeges in a SpecIF graph data structure. 
@@ -240,6 +250,7 @@ This is done by referencing the allowed subject ResourceClass elements and objec
 
 The StatementClass has the following attributes:
 
+* *isUndirected: bool* - This flag indicates that a statement defined by this statement class has no direction. It can be used and navigated in both directions.
 * *subjectClasses* - A collection of references to ResourceClass elements to define the allowed types for the Statement subject.
 * *objectClasses* - A collection of references to ResourceClass elements to define the allowed types for the Statement object. 
 
@@ -248,12 +259,18 @@ The StatementClass has the following attributes:
 ![The metaclass *Property*](./images/Metaclass_Property.png)
 
 A *Property* is an instance of a PropertyClass and is used to store a concrete data value in SpecIF.
-SpecIF allows, that a property value can be a simple string value, a collection of LanguageValue elements for multi-language data or an array of values. 
-Arrays can be a collection of simple string values or a collection of LanguagValue elements.
+Each Property in SpecIF is defined as an array of values. 
+The attribute *isMultiple* in the PropertyClass specifies if a property value is an array or a single value.
+
+If isMultiple is set to false and the propery attribute values contains more than one value, only the first value shall be used and all other array elements shall be ignored!
+
+Depending on the DataTyoe, that is used as for definition of the PropertyClass, the each value of the value is an array of MultilanguegeText for textual content 
+or a string for all other contents (numbers).
 
 A Property has the following attributes:
 
-* *value* - The value of the property to store the property data.
+* *id: string* - A unique identifier for the Property.
+* *values* - The values of the property to store the property data (multiple or single values).
 * *class* - A reference to the PropertyClass element defining the Property type.
 
 ### Resource
@@ -266,8 +283,6 @@ This might be a Requirement, a model element in UML or SysML or an electrical ci
 
 A Resource has the following attributes:
 
-* *language* - This attribute is used to specify the used language in the Property values when no LanguageValue elements are used, but just simple strings. 
-This enables a tool to display the correct language settings (e.g spell checking etc.) for simple string values.
 * *alternativeIds* - Alternative ID values are used to define further ID values in addition to the *id* attribute in SpecIF. This is helpful for data integrations where multiple tools have their own internal ids. So you can represent these 'legacy' IDs in SpecIF.
 * *class* - A reference to the ResourceClass element defining the Resource type.
 * *properties* - A collection of Property elements to store property data for the Resource.
@@ -296,8 +311,8 @@ This allows a spearation of data model and view (view concept as known e.g. from
 
 The Node elemnt have the following attributes:
 
-* *title: string* - A title for the Node. Mostly used for internal purposes, because the title comes normally from the referenced Resource element properties.
-* *description: string | LanguageValue[]* - A human readable description for documentation purposes. Mostly used for internal purposes, because the description comes normally from the referenced Resource element properies.
+* *title: MultilanguageText[]* - A title for the Node. Mostly used for internal purposes, because the title comes normally from the referenced Resource element properties.
+* *description: MultilanguageText[]* - A human readable description for documentation purposes. Mostly used for internal purposes, because the description comes normally from the referenced Resource element properies.
 * *nodes* - A collection of child node elements for the Node.
 * *resource* - A reference to the Resource element used as Node tree node data.
 
@@ -313,5 +328,6 @@ The File-element allows to describe and reference files contained in a SpecIF re
 The metaclass File has the following attributes:
 
 * *title: string* - In case of a file, the title is the absolute or relative URL.
-* *description: string | LanguageValue[]* - A human readable description for documentation purposes.
+* *description: MultilanguageText[]* - A human readable description for documentation purposes.
 * *type: string* - The file's media type (formerly MIME-type) according to https://www.iana.org/assignments/media-types/media-types.xhtml. 
+* *url: string* - An absolute or relative URL to the file. If missing, the title applies.
