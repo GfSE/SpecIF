@@ -1,13 +1,12 @@
-﻿
-# SpecIF-ReqIF Documentation
+﻿# SpecIF-ReqIF Mapping
 
 Transforming SpecIF to ReqIF is bidirectional. Files can be exported and imported back and forth without losing any data.
 
 Note that there are SpecIF-Attributes which don't have a ReqIF equivalent yet, such as "revisions", "replaces" and "alternativeIds".  A way to utilize those attributes is creating an additional ATTRIBUTE-DEFINITION in ReqIF.
 
-# Datatypes
+## Datatypes
 
-## Strings
+### Strings
 
 | SpecIF	| ReqIF  |
 |  -  | - |
@@ -18,7 +17,7 @@ Note that there are SpecIF-Attributes which don't have a ReqIF equivalent yet, s
 | type: xs string | REQIF:DATATYPE-DEFINITION-STRING
 |maxLength | MAX-LENGTH
 
-## Boolean
+### Boolean
 
 | SpecIF	| ReqIF  |
 |  -  | - |
@@ -29,7 +28,7 @@ Note that there are SpecIF-Attributes which don't have a ReqIF equivalent yet, s
 | changedAt | LAST-CHANGE
 
 
-## Byte
+### Byte
 
  | SpecIF	| ReqIF  |
 |  -  | - |
@@ -41,7 +40,7 @@ Note that there are SpecIF-Attributes which don't have a ReqIF equivalent yet, s
 | maxInclusive | MAX
 | changedAt | LAST-CHANGE
 
-## Integer 
+### Integer 
 
  | SpecIF	| ReqIF  |
 |  -  | - |
@@ -53,7 +52,7 @@ Note that there are SpecIF-Attributes which don't have a ReqIF equivalent yet, s
 | maxInclusive | MAX
 | changedAt | LAST-CHANGE
 
-## Real
+### Real
 
  | SpecIF	| ReqIF  |
 |  -  | - |
@@ -66,7 +65,7 @@ Note that there are SpecIF-Attributes which don't have a ReqIF equivalent yet, s
 | minInclusive | MIN
 | fractionDigits | ACCURACY
 
-## Date
+### Date
 
  | SpecIF	| ReqIF  |
 |  -  | - |
@@ -76,7 +75,7 @@ Note that there are SpecIF-Attributes which don't have a ReqIF equivalent yet, s
 | changedAt | LAST-CHANGE
 | type: xs:dateTime | DATATYPE-DEFINITION-DATE
 
-## XHTML
+### XHTML
  | SpecIF	| ReqIF  |
 |  -  | - |
 | id  | IDENTIFIER
@@ -85,7 +84,7 @@ Note that there are SpecIF-Attributes which don't have a ReqIF equivalent yet, s
 | changedAt | LAST-CHANGE
 |type: xhtml | DATATYPE-DEFINITION-XHTML
 
-## Enumeration
+### Enumeration
 
  | SpecIF	| ReqIF  |
 |  -  | - |
@@ -117,16 +116,13 @@ Example for values in SpecIF:
 
 Redundant data in this example like LAST-CHANGE is deduplicated by SpecIF.
 
-
----
-
-# SpecIF schema attributes
+## SpecIF schema attributes
 
 SpecIF has propertyClasses that can be used by all resourceClasses and statementClasses, while in ReqIF they have to be defined anew for each OBJECT-TYPE and RELATION-TYPE.
 
 SpecIF has no equivalent for SPECIFICATION-TYPES, instead a normal resource is used as root.
 
-## resourceClasses
+### ResourceClasses
 
  | SpecIF	| ReqIF  |
 |  -  | - |
@@ -173,7 +169,7 @@ in ReqIF:
 ```
 Redundant data is like LAST-CHANGE is deduplicated
 
-## statementClasses
+### StatementClasses
 
  | SpecIF	| ReqIF  |
 |  -  | - |
@@ -213,7 +209,7 @@ in ReqIF:
 </SPEC-RELATION-TYPE>
 ```
 
-## resources
+### Resources
 
  | SpecIF	| ReqIF  |
 |  -  | - |
@@ -279,7 +275,7 @@ in ReqIF:
 </SPEC-OBJECT>
 ```
 
-## statements
+### Statements
 
  | SpecIF	| ReqIF  |
 |  -  | - |
@@ -329,7 +325,7 @@ in ReqIF:
 
 ```
 
-# hierarchies
+## Hierarchies
 
  | SpecIF	| ReqIF  |
 |  -  | - |
@@ -405,5 +401,3 @@ in ReqIF:
 	</CHILDREN>
 </SPEC-HIERARCHY>
 ```
-
----
