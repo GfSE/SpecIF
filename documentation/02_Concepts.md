@@ -233,3 +233,25 @@ With the definition of the data format (syntax) and the term definitions (semant
 But another thing for a tool vendor is to know how to map more complex data structures to SpecIF. 
 
 For example an UML- or SysML-model has many as aspects how it can be represented in the syntax and semantics of SpecIF. To come to a common understanding and achieve a tool-comprehensive data exchange, the SpecIF standard shall define application guidelines describing the different scenarios how tool content has to be mapped to SpecIF. This is the purpose of the SpecIF application guides.
+
+## Versioning of this specification
+
+This specification document consists of different parts. 
+They all together describe the complete concepts behind SpecIF. 
+
+Some parts of SpecIF have their own version numbers/revisions. 
+So it a SpecIF release consists of a set of different parts with different versions.
+
+This specification describes the release of SpecIF 1.1.
+The revision SpecIF 1.1 is the first official release of SpecIF.
+It is not called 1.0, because the development of the different parts of SpecIF took some time and parts where presented earlier as version 1.0. 
+To avoid misunderstandings and confusion, the first offical release is called SpecIF 1.1!
+
+This release of *SpecIF 1.1* consists of the following parts, described in the following chapters:
+
+| Title | Revision |
+|-|-|
+|SpecIF-Metamodel|1.1|
+|SpecIF JSON-schema|1.1|
+|SpecIF class definitions|1.1|
+|SpecIF-WebAPI|1.1| 
