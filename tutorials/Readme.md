@@ -1,4 +1,4 @@
-![SpecIF logo](http://specif.de/files/template/specif-logo.png "SpecIF Specification Integration Facility")
+![SpecIF logo](../logo/SpecIF_Logo_small.png)
 
 # SpecIF Tutorials
 

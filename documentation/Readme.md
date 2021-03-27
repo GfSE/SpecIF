@@ -1,10 +1,11 @@
-﻿![SpecIF logo](http://specif.de/files/template/specif-logo.png "SpecIF Open SE Models")
+﻿![SpecIF logo](../logo/SpecIF_Logo_small.png)
 
-# SpecIF 1.0 Specification
+# SpecIF 1.1 Specification
 
-This document describes the release version 1.0 of the *Specification Integration Facility* (SpecIF). 
+This document describes the release version 1.1 of the *Specification Integration Facility* (SpecIF). 
 
 ## Table of contents
+1. [Preface](./00_Preface.md)
 1. [Introduction](./01_Introduction.md)
 1. [Concepts](./02_Concepts.md)
 3. [SpecIF-Metamodel](./03_SpecIF_Metamodel.md)
@@ -16,4 +17,5 @@ This document describes the release version 1.0 of the *Specification Integratio
     1. [Model Integration Guide for BPMN](./06_SpecIF_Model_Integration_Guide_for_BPMN.md)
     1. [Model Integration Guide for Archimate](./06_SpecIF_Model_Integration_Guide_for_Archimate.md)
     1. [Model Integration Guide for SysML](./06_SpecIF_Model_Integration_Guide_for_SysML.md)
+9. [SpecIF to ReqIF-mapping](./08_SpecIF_ReqIF.md)
 1. [License](./07_License.md)

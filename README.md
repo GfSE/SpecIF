@@ -1,6 +1,6 @@
-![alt text](http://specif.de/files/template/specif-logo.png "SpecIF Open SE Models")
+![SpecIF - Specification Integration Facility](./logo/SpecIF_Logo_small.png)
 
-# Specification Integration Facility - schema, constraints, checker and examples
+# Specification Integration Facility - schema, constraints, checker, documentation and examples
 
 ## Purpose
 SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.
@@ -13,7 +13,7 @@ Basic Assumptions:
 That‘s where SpecIF kicks in.
 
 
-For details see http://specif.de.
+For details see http://specif.de and [the SpecIF specification documentation](./documentation/Readme.md) in this repository.
 
 This branch details schema and constraints for 'fully-flegded' SpecIF. It is characterized by
 - A SpecIF data set (container) may have information elements of multiple revisions. The identifiers are identical and the revision tags change. The combination of identifier and revision, called 'key', must be unique, however. 
@@ -26,6 +26,8 @@ This branch details schema and constraints for 'fully-flegded' SpecIF. It is cha
 Thanks to @oalt for the discussion about support for multiple revisions and multiple languages!
 
 ## Schema
+
+The SpecIF-[JSON-schema](http://json-schema.org) that defines the JSON-based data format of SpecIF can be found [here](./schema/schema.json).
 
 ## Constraints
 
@@ -40,7 +42,11 @@ In addition to the schema, the following constraints apply:
 
 ## Checker
 
+A syntax and constraint checker is available as JavaScript function: https://github.com/GfSE/SpecIF/tree/master/check
+
 ## Examples
+
+For examples have a look into the [tutorials](./tutorials/Readme.md).
 
 ## Acknowledgements
 This work has been sponsored by [enso-managers gmbh](http://enso-managers.de) and [mdd4all](http://mdd4all.de).
