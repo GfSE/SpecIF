@@ -13,7 +13,7 @@ function checkSchema( data, options ) {
     if( !options || !options.schema ) return null;
     if( typeof(options.allErrors)!='boolean' ) options.allErrors = true;
 
-    let ajv = Ajv({allErrors: options.allErrors});
+    const ajv = new Ajv({allErrors: options.allErrors});
     let validate = ajv.compile(options.schema);
         
     // check data against schema using the compiled validation routine:
@@ -32,7 +32,7 @@ function checkConstraints( data, options ) {
     // ToDo: localize messages and provide them by call parameter.
 
     if( data.specifVersion && data.specifVersion.indexOf( '0.9.' )>-1 ) 
-        return { status: 903, statusText: 'SpecIF version 0.9.x is not any more supported!' };
+        return { status: 900, statusText: 'SpecIF version 0.9.x is not any more supported!' };
 
     // Set property names according to SpecIF version:
     switch( data['$schema'] || data.specifVersion ) {
@@ -41,7 +41,7 @@ function checkConstraints( data, options ) {
         case '0.10.7':
         case '0.11.0':
         case '0.11.7':
-            return { status: 903, statusText: 'SpecIF version '+data.specifVersion+' is not any more supported!' };
+            return { status: 900, statusText: 'SpecIF version '+data.specifVersion+' is not any more supported!' };
         case '0.10.2':
         case '0.10.3':
         case '0.11.1':
@@ -90,70 +90,54 @@ function checkConstraints( data, options ) {
     if( !Array.isArray(options.dontCheck) ) options.dontCheck = [];
 
     // Handling return code and error list:
-    var rc={},errL=[];
+    var errorL=[];
 
     // ids must be unique unless when used as a reference:
-    rc = checkUniqueKeys( data );
-    if( rc.status>0 ) errL.push(rc);
+    checkUniqueKeys( data );
 
     // dataTypes must respect certain constraints depending on their base type:
-    rc = checkDataTypes( data.dataTypes );
-    if( rc.status>0 ) errL.push(rc);
+    checkDataTypes( data.dataTypes );
 
     // A propertyClass's "dataType" must be the key of a member of "dataTypes":
-    rc = checkPropertyClasses( data.propertyClasses );  // propertyClasses at top level starting with v0.10.6 and v0.11.6
-    if( rc.status>0 ) errL.push(rc);
-    rc = checkElementPropertyClasses( data[rClasses] );
-    if( rc.status>0 ) errL.push(rc);
-    rc = checkElementPropertyClasses( data[sClasses] );
-    if( rc.status>0 ) errL.push(rc);
-    rc = checkElementPropertyClasses( data[hClasses] );
-    if( rc.status>0 ) errL.push(rc);
+    checkPropertyClasses( data.propertyClasses );  // propertyClasses at top level starting with v0.10.6 and v0.11.6
+
+    checkElementPropertyClasses( data[rClasses] );
+    checkElementPropertyClasses( data[sClasses] );
+    // up until v0.10.6 resp. v0.11.6:
+    if( hClasses )
+        checkElementPropertyClasses( data[hClasses] );
 
     // statementClass' subjectClasses and objectClasses must be resourceClass or statementClass ids:
-    rc = checkStatementClasses();
-    if( rc.status>0 ) errL.push(rc);
+    checkStatementClasses();
 
     // extends must specify a valid resource resp statement class: 
-    rc = checkClasses( data[rClasses], data[rClasses], 'extends' );
-    if( rc.status>0 ) errL.push(rc);
-    rc = checkClasses( data[sClasses], data[sClasses], 'extends' );
-    if( rc.status>0 ) errL.push(rc);
+    checkClasses( data[rClasses], data[rClasses], 'extends' );
+    checkClasses( data[sClasses], data[sClasses], 'extends' );
 
     // in case of resources, the value of "class" must be the id of a member of "resourceClasses":
-    rc = checkClasses( data[rClasses], data.resources, rClass );
-    if( rc.status>0 ) errL.push(rc);
+    checkClasses( data[rClasses], data.resources, rClass );
     // in case of statements, the value of "class" must be the id of a member of "statementClasses":
-    rc = checkClasses( data[sClasses], data.statements, sClass );
-    if( rc.status>0 ) errL.push(rc);
+    checkClasses( data[sClasses], data.statements, sClass );
     // in case of hierarchies, the value of "class" must be the id of a member of "hierarchyClasses",
     // up until v0.10.6 resp. v0.11.6:
-    if( hClasses ) {
-        rc = checkClasses( data[hClasses], data.hierarchies, hClass );
-        if( rc.status>0 ) errL.push(rc)
-    };
+    if( hClasses )
+        checkClasses( data[hClasses], data.hierarchies, hClass );
 
     // property values ("content") must fit the respective class' range:
-    rc = checkProperties( data[rClasses], data.resources, rClass );
-    if( rc.status>0 ) errL.push(rc);
-    rc = checkProperties( data[sClasses], data.statements, sClass );
-    if( rc.status>0 ) errL.push(rc);
+    checkProperties( data[rClasses], data.resources, rClass );
+    checkProperties( data[sClasses], data.statements, sClass );
     // up until v0.10.6 resp. v0.11.6:
-    if( hClasses ) {
-        rc = checkProperties( data[hClasses], data.hierarchies, hClass );
-        if( rc.status>0 ) errL.push(rc)
-    };
+    if( hClasses )
+        checkProperties( data[hClasses], data.hierarchies, hClass );
 
     // statement's subject and object must be resource keys:
-    rc = checkStatements( data, data.statements );
-    if( rc.status>0 ) errL.push(rc);
+    checkStatements( data, data.statements );
 
     // A hierarchy node's "resource" must be the key of a member of "resources":
-    rc = checkNodes( data.resources, data.hierarchies, 0 );
-    if( rc.status>0 ) errL.push(rc);
+    checkNodes( data.resources, data.hierarchies, 0 );
 
-    return errL.length<1?{ status: 0, statusText: 'SpecIF constraints have been checked successfully!' }
-            :{ status: 902, statusText: 'SpecIF constraints are violated', responseType: 'text', responseText: errorsText(errL) };
+    return errorL.length<1?{ status: 0, statusText: 'SpecIF constraints have been checked successfully!' }
+            :{ status: 902, statusText: 'SpecIF constraints are violated', responseType: 'text', responseText: errorsText(errorL) };
 
     // The checking routines:
     function checkUniqueKeys(iE) {
@@ -161,26 +145,6 @@ function checkConstraints( data, options ) {
         // Further conditions: 
         //  - all occurrences of items with the same id have a specified revision>0.
         //  - or there is just one occurrence of an id without revision
-        let allKeys=[],
-            dK = duplicateKey(iE.dataTypes);
-        if( dK ) return {status:911, statusText: "dataType "+dK.id+" with revision "+dK.revision+" is not unique"};
-        dK = duplicateKey(iE.propertyClasses);        // starting with v0.10.6 resp v0.11.6
-        if( dK ) return {status:911, statusText: "propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
-        dK = duplicateKey(iE[rClasses]);
-        if( dK ) return {status:911, statusText: rClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
-        dK = duplicateKey(iE[sClasses]);
-        if( dK ) return {status:911, statusText: sClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
-        dK = duplicateKey(iE[hClasses]);
-        if( dK ) return {status:911, statusText: hClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"};
-        dK = duplicateKey(iE.resources);
-        if( dK ) return {status:911, statusText: "resource "+dK.id+" with revision "+dK.revision+" is not unique"};
-        dK = duplicateKey(iE.statements);
-        if( dK ) return {status:911, statusText: "statement "+dK.id+" with revision "+dK.revision+" is not unique"};
-        dK = duplicateKey(iE.hierarchies);
-        if( dK ) return {status:911, statusText: "hierarchy "+dK.id+" with revision "+dK.revision+" is not unique"};
-        dK = duplicateKey(iE.files);
-        if( dK ) return {status:911, statusText: "file identifier '"+dK.id+"' with revision "+dK.revision+" is not unique"};
-        return {status:0, statusText: 'all keys are unique'};
 
         function duplicateKey(L) {
             if( !L || L.length<1 ) return;
@@ -223,23 +187,43 @@ function checkConstraints( data, options ) {
                 dk = duplicateKey(e1.nodes);
                 if( dk ) return dk;
                 // all is fine, but add the latest key to the list:
-                allKeys.push(e1)
+                allKeys.push(e1);
             };
-            return
         }
+
+        let allKeys=[],
+            dK = duplicateKey(iE.dataTypes);
+        if( dK ) errorL.push({status:911, statusText: "dataType "+dK.id+" with revision "+dK.revision+" is not unique"});
+        dK = duplicateKey(iE.propertyClasses);        // starting with v0.10.6 resp v0.11.6
+        if( dK ) errorL.push({status:911, statusText: "propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"});
+        dK = duplicateKey(iE[rClasses]);
+        if( dK ) errorL.push({status:911, statusText: rClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"});
+        dK = duplicateKey(iE[sClasses]);
+        if( dK ) errorL.push({status:911, statusText: sClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"});
+        dK = duplicateKey(iE[hClasses]);
+        if( dK ) errorL.push({status:911, statusText: hClass+" or propertyClass "+dK.id+" with revision "+dK.revision+" is not unique"});
+        dK = duplicateKey(iE.resources);
+        if( dK ) errorL.push({status:911, statusText: "resource "+dK.id+" with revision "+dK.revision+" is not unique"});
+        dK = duplicateKey(iE.statements);
+        if( dK ) errorL.push({status:911, statusText: "statement "+dK.id+" with revision "+dK.revision+" is not unique"});
+        dK = duplicateKey(iE.hierarchies);
+        if( dK ) errorL.push({status:911, statusText: "hierarchy "+dK.id+" with revision "+dK.revision+" is not unique"});
+        dK = duplicateKey(iE.files);
+        if( dK ) errorL.push({status:911, statusText: "file identifier '"+dK.id+"' with revision "+dK.revision+" is not unique"});
     }
     function checkDataTypes(L) {
         // starting v0.10.8 resp. v0.11.8 the dataTypes are optional and thus may be omitted in simple cases:
-        if( L )
-            for( var i=L.length-1;i>-1;i-- ){
-                switch(L[i].type) {
+        if( Array.isArray(L) ) {
+            L.forEach( function( dT ) {
+                switch(dT.type) {
                     case 'xs:double':
                     case 'xs:integer':
-                        if( L[i][minInclusive]+1>L[i][maxInclusive] ) 
-                            return {status:929, statusText: "if number types have "+minInclusive+" and "+maxInclusive+", the former must be smaller or equal than the latter"}
+                        if( dT[minInclusive]+1>dT[maxInclusive] ) 
+                            errorL.push({status:929, statusText: "if number types have "+minInclusive+" and "+maxInclusive+", the former must be smaller or equal than the latter"});
                 }                        
-            };
-        return {status:0, statusText: "dataTypes are correct"}
+            });
+		}
+        // all is fine
     }
     function checkClasses(cL,iL,type) {  // class list, instance list
         // This routine is used in 2 situations:
@@ -247,41 +231,37 @@ function checkConstraints( data, options ) {
         //   Similarly for statements and hierarchies.
         // - In case of resourceClasses, the value of "extends" (if it exists) must be the key of a member of "resourceClasses". 
         //   Similarly for statements.
-        for( var i=iL.length-1;i>-1;i-- ){
-            if( typeof(iL[i][type])=='string' && itemByKey(cL, iL[i][type])==undefined ) 
-                return {status:903, statusText: "item with identifier '"+iL[i].id+"' must reference a valid "+type }
+        if( Array.isArray(cL) ) {
+			iL.forEach( function( el ){
+				if( el[type] && !itemByKey(cL, el[type]) ) 
+					errorL.push({status:903, statusText: "item with identifier '"+el.id+"' must reference a valid "+type });
+			});
         };
-        return {status:0, statusText: "all instances' attribute named '"+type+"' reference valid types"}    
+        // all is fine
     }
     function checkPropertyClasses(cL) {  // class list
         if( Array.isArray(cL) ) {
             // cL is the top-level list of propertyClasses for use by all resourceClasses and statementClasses:
             // starting v0.10.6 resp v0.11.6: 
-            let propertyC, i, rc;
-            for( i=cL.length-1;i>-1;i-- ){
-                // for each propertyClass in cL:
+            cL.forEach( function( propertyC ){
                 // A propertyClass's "dataType" must be the key of a member of "dataTypes":
-                propertyC = cL[i];
                 if( itemByKey( data.dataTypes, propertyC.dataType)==undefined ) 
-                    return {status:904, statusText: "property class with identifier '"+propertyC.id+"' must reference a valid dataType"};
+                    errorL.push({status:904, statusText: "property class with identifier '"+propertyC.id+"' must reference a valid dataType"});
                 // check the value (to be used by default of an instance's - thus property's value):
-                rc = checkValue(propertyC,propertyC,"property class '"+propertyC.id+"'");
-                if( rc.status>0 ) return rc;
-            }
+                checkValue(propertyC,propertyC,"property class '"+propertyC.id+"'");
+            });
         };
-        // all is fine: 
-        return {status:0, statusText: "if present, propertyClasses reference valid dataTypes"}
+        // all is fine
     }
     function checkElementPropertyClasses(cL) {  
         if( Array.isArray(cL) ) {
             // cL is a list of elements, such as resourceClasses
-            let propertyC, i, j, rc;
-            for( i=cL.length-1;i>-1;i-- ){
+            cL.forEach( function( eC ){
                 // for each class in cL:
-                if( Array.isArray( cL[i][pClasses] ) ) {
+                if( Array.isArray( eC[pClasses] ) ) {
                     // an element has propertyClasses:
-                    for( j=cL[i][pClasses].length-1;j>-1;j-- ) {
-                        propertyC = cL[i][pClasses][j]; // an element's propertyClass
+                    eC[pClasses].forEach( function( propertyC ) {
+                        // An element's propertyClass
                         // depending on the version, 
                         // - propertyC is a string: It is the identifier of an element of data.propertyClasses (starting v0.10.6 resp v0.11.6)
                         // - propertyC is an object: Then, it can be 
@@ -293,71 +273,101 @@ function checkConstraints( data, options ) {
                             // starting v0.10.6 resp v0.11.6: 
                             // The propertyClass must be a valid key of an item in data.propertyClasses:
                             if( itemByKey( data.propertyClasses, propertyC )==undefined )
-                                return {status:930, statusText: "property class of item with identifier '"+cL[i].id+"' must reference an item in 'propertyClasses'" }
+                                errorL.push({status:930, statusText: "property class of item with identifier '"+eC.id+"' must reference an item in 'propertyClasses'" });
                         } else {
                             // up until v0.10.5 resp v0.11.2:
                             // A propertyClass's "dataType" must be the key of a member of "dataTypes":
                             if( itemByKey( data.dataTypes, propertyC.dataType)==undefined ) 
-                                return {status:904, statusText: "property class with identifier '"+propertyC.id+"' must reference a valid dataType"};
+                                errorL.push({status:904, statusText: "property class with identifier '"+propertyC.id+"' must reference a valid dataType"});
                             // check the value (to be used by default of an instance's - thus property's value):
-                            rc = checkValue(propertyC,propertyC,"property class '"+propertyC.id+"'");
-                            if( rc.status>0 ) return rc;
+                            checkValue(propertyC,propertyC,"property class '"+propertyC.id+"'");
                         }
-                    }
-                }
-            }
+                    });
+                };
+            });
         };
-        // all is fine: 
-        return {status:0, statusText: "if present, propertyClasses reference valid dataTypes"}
+        // all is fine
     }
 
     function checkStatementClasses() {    
         // All statementClass' "subjectClasses" must be the key of a member of "resourceClasses" or "statementClasses". 
         // "subjectClasses" is optional, but if present, the list may not be empty (as enforced by the schema).
         // Similarly for "objectClasses".
-        let aCL = data[rClasses].concat(data[sClasses]), 
-            sCL = data[sClasses];    // statementClasses
-        for( var i=sCL.length-1;i>-1;i-- ){
-            if( !checkEls(aCL, sCL[i][subClasses]) ) 
-                return {status:906, statusText: subClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass };
-            if( !checkEls(aCL, sCL[i][objClasses]) ) 
-                return {status:907, statusText: objClasses+" of "+sClass+" with identifier '"+sCL[i].id+"' must reference a valid "+rClass }
-        };
-        return {status:0, statusText: "statementClass' "+subClasses+" and "+objClasses+" reference valid "+rClasses };
-
         function checkEls(aCL,cL) {
             // No subjectClasses resp. objectClasses means all classes are eligible.
             // The propertyClasses have already been checked by checkClsses().
             if( cL ) { 
                 // each value in cL must be the key of a member of aCL:
                 for( var i=cL.length-1;i>-1;i-- ) {
-                    if( itemByKey(aCL, cL[i])==undefined ) return false
+                    if( itemByKey(aCL, cL[i])==undefined ) return false;
                 }
             };
-            return true
+            return true;
         }
+
+        let aCL = data[rClasses].concat(data[sClasses]), 
+            sCL = data[sClasses];    // statementClasses
+        sCL.forEach( function( sC ){
+            if( !checkEls(aCL, sC[subClasses]) ) 
+                errorL.push({status:906, statusText: subClasses+" of "+sClass+" with identifier '"+sC.id+"' must reference a valid "+rClass });
+            if( !checkEls(aCL, sC[objClasses]) ) 
+                errorL.push({status:907, statusText: objClasses+" of "+sClass+" with identifier '"+sC.id+"' must reference a valid "+rClass });
+        });
     }
-    function checkStatements(dta,sL) { 
-        // A statement's "subject" must be the key of a member of "resources" or "statements". 
-        // Equally, an "object" must be the key of a member of "resources" or "statements".
-        // (It has been checked before that any "resource" is indeed of type "resourceClass").
-        let aL = dta.resources.concat(dta.statements);
-        for( var i=sL.length-1;i>-1;i-- ) {
-            if( itemByKey(aL, sL[i].subject)==undefined && options.dontCheck.indexOf('statement.subject')<0 ) 
-                return {status:908, statusText: "subject of statement["+i+"] with identifier '"+sL[i].id+"' must reference a valid resource or statement"};
-            // according to the schema, dta.statements is required, but not dta.files:
-            if( itemByKey(aL, sL[i].object)==undefined && options.dontCheck.indexOf('statement.object')<0 ) 
-                return {status:909, statusText: "object of statement["+i+"] with identifier '"+sL[i].id+"' must reference a valid resource or statement"};
-        //  if( sL[i].subject == sL[i].object ) return {status:90X, statusText: ""}
-        };
-        return {status:0, statusText: "no anomaly with statement's subjects and objects"}
+    function checkStatements(dta,staL) { 
+        // (It has been checked before that any "statement" is indeed of type "statementClass").
+        let instanceL = dta.resources.concat(dta.statements),
+            classL = dta[rClasses].concat(dta[sClasses]);
+        staL.forEach( function(sta,i) {
+
+            // A statement's "subject" must be the key of a member of "resources" or "statements":
+            if( itemByKey( instanceL, sta.subject )==undefined && options.dontCheck.indexOf('statement.subject')<0 ) 
+                errorL.push({status:908, statusText: "subject of statement["+i+"] with identifier '"+sta.id+"' must reference a valid resource or statement"});
+
+            // Equally, an "object" must be the key of a member of "resources" or "statements":
+            if( itemByKey( instanceL, sta.object )==undefined && options.dontCheck.indexOf('statement.object')<0 ) 
+                errorL.push({status:909, statusText: "object of statement["+i+"] with identifier '"+sta.id+"' must reference a valid resource or statement"});
+
+            let staC = itemByKey( dta[sClasses], sta[sClass] );		// the statement's class
+			
+            if( Array.isArray(staC[subClasses]) ) {
+                // If there are no staC[subClasses], all subjectClasses are eligible and so no checking is necessary.
+                let subj = itemByKey( instanceL, sta.subject ),	// the statement's subject, can be a resource or (starting with v0.10.8) a statement
+                    eligibleCL = [];							// the list of eligible classes
+                if( staC[subClasses] ) staC[subClasses].forEach( function(c) { let e=itemByKey( classL, c ); if(e) eligibleCL.push(e); });
+//              console.debug('checkStatements',i,sta,staC,subj,obj,eligibleCL);
+
+                // The subject's class must be listed in the statementClass' subjectClasses;
+			    // in earlier versions, only resources were eligible as subject and object,
+			    // and in later versions, where resources and statements are eligible, both have the same 'class' attribute, so subj[rClass] covers all cases:
+                if( !itemByKey( eligibleCL, subj[rClass] ) )
+                    errorL.push({status:919, statusText: "the subject of statement["+i+"] with identifier '"+sta.id+"' has a class which is not listed in the statementClass's subjectClasses"});
+            };
+
+            // ... and similarly for object's class: 
+            if( Array.isArray(staC[objClasses]) ) {
+                let obj = itemByKey( instanceL, sta.object ),	// the statement's object, can be a resource or (starting with v0.10.8) a statement
+                    eligibleCL = [];							// the list of eligible classes
+                if( staC[objClasses] ) staC[objClasses].forEach( function(c) { let e=itemByKey( classL, c ); if(e) eligibleCL.push(e); });
+
+                if( !itemByKey( eligibleCL, obj[[rClass]] ) )
+                    errorL.push({status:919, statusText: "the object of statement["+i+"] with identifier '"+sta.id+"' has a class which is not listed in the statementClass's objectClasses"});
+            };
+
+        /*  // The statement's subject and object must not be the same:
+            if( sta.subject == sta.object ) 
+                errorL.push({status:90X, statusText: ""}); */
+        });
     }
     function checkValue(pC,prp,etxt) { 
         let val = prp.value;
         if( val ) {
             // according to the schema, all property values are of type 'string', including boolean and numbers:
             let dT = itemByKey(data.dataTypes,pC.dataType);
-            if( !dT ) return {status:904, statusText: "propertyClass with identifier '"+pC.id+"' must reference a valid dataType"}; 
+            if( !dT ) {
+				errorL.push({status:904, statusText: "propertyClass with identifier '"+pC.id+"' must reference a valid dataType"});
+                return;	
+            };				
             switch(dT.type) {
                 case 'xhtml':
                 case 'xs:string': 
@@ -369,76 +379,73 @@ function checkConstraints( data, options ) {
                     switch( typeof(val) ) {
                         case 'object':
                             // val is a list with some text in different languages, so check every one of them:
-                            for( var p=val.length-1;p>-1;p-- ) {
-                                if( val[p]['text'].length>dT.maxLength ) 
-                                    return {status:921, statusText:txt}
-                            };
+                            val.forEach( function( lv ) {
+                                if( lv['text'].length>dT.maxLength ) 
+                                    errorL.push({status:921, statusText:txt});
+                            });
                             break;
                         case 'string':
                             // single language:
                             if( val.length>dT.maxLength ) 
-                                return {status:921, statusText:txt}
+                                errorL.push({status:921, statusText:txt});
                     };
                     break;
                 case 'xs:double':
             //      if( (val*Math.pow(10,dT[fractionDigits])%1)==0 ) return {status:922,statusText:""};
                     val = parseFloat( val );
                     if( val=='NaN' ) 
-                        return {status:925, statusText:etxt+": value is an invalid number"}; 
+                        errorL.push({status:925, statusText:etxt+": value is an invalid number"}); 
                     if( dT[minInclusive] && val<dT[minInclusive] ) 
-                        return {status:923, statusText:etxt+": double value must be larger than min"};
+                        errorL.push({status:923, statusText:etxt+": double value must be larger than min"});
                     if( dT[maxInclusive] && val>dT[maxInclusive] ) 
-                        return {status:924, statusText:etxt+": double value must be smaller than max"}; 
+                        errorL.push({status:924, statusText:etxt+": double value must be smaller than max"}); 
                     break;
                 case 'xs:integer':
                     // according to the schema, all property values are of type 'string', including the numbers:
                     val = parseInt( val );
                     if( val=='NaN' ) 
-                        return {status:925, statusText:etxt+": value is an invalid number"}; 
+                        errorL.push({status:925, statusText:etxt+": value is an invalid number"}); 
                     if( dT[minInclusive] && val<dT[minInclusive] ) 
-                        return {status:923, statusText:etxt+": integer value must be larger than min"};
+                        errorL.push({status:923, statusText:etxt+": integer value must be larger than min"});
                     if( dT[maxInclusive] && val>dT[maxInclusive] ) 
-                        return {status:924, statusText:etxt+": integer value must be smaller than max"}; 
+                        errorL.push({status:924, statusText:etxt+": integer value must be smaller than max"}); 
                     break;
                 case 'xs:boolean':
                     // according to the schema, all property values are of type 'string', including boolean:
                     if( val!='true' && val!='false' ) 
-                        return {status:925, statusText:etxt+": boolean value is an invalid"}; 
+                        errorL.push({status:925, statusText:etxt+": boolean value is an invalid"}); 
                     break;
                 case 'xs:enumeration':
                     var vL=val.split(',');
                     // 'multiple' property at propertyClass supersedes 'multiple' at the dataType:
-                    if( vL.length>1 && !(pC.multiple || (pC.multiple==undefined && dT.multiple)) ) 
-                            return {status:926, statusText: etxt+": may not have more than one value"};
+                    if( vL.length>1 && !( pC.multiple || ( typeof(pC.multiple)!=boolean && dT.multiple ))) 
+                            errorL.push({status:926, statusText: etxt+": may not have more than one value"});
                     // enumerated values in properties must be defined in the dataType of the corresponding propertyClass
-                    for( var v=vL.length-1;v>-1;v-- ) {
-                        vL[v] = vL[v].trim();
-                        if( vL[v] && indexById( dT.values, vL[v] )<0 ) 
-                            return {status:927, statusText: etxt+": enumerated values must be defined by the respective property type"}
-                    }
+                    vL.forEach( function( v ) {
+                        v = v.trim();
+                        if( v && indexById( dT.values, v )<0 ) 
+                            errorL.push({status:927, statusText: etxt+": enumerated values must be defined by the respective property type"});
+                    })
             }
             // all is fine
         };
-        // else: empty values are allowed, so no return with error code
-        return {status:0, statusText: etxt+": value lies within it's type value range"}
+        // else: empty values are allowed
     }
     function checkProperties(cL,iL,typ) { 
         // check all properties of the instances listed in iL,
         // cL: instance class list, 
         // iL: instance list (resources, statements or up until v0.10.6 resp v0.11.6 hierarchies) to be checked:
-        if( iL ) {
-            let prp, propertyC, instanceC, extendedC, a, rc, et;
-            for( var i=iL.length-1;i>-1;i-- ){
-                if( iL[i].properties ) {
-                    instanceC = itemByKey(cL,iL[i][typ]); // the instance's class.
-                    // ToDo: error 919 is equal to 903, but there has been a case in which 919 has been raised. 
+        if( Array.isArray(cL) && iL ) {
+            let prp, propertyC, instanceC, extendedC, rc, et;
+            iL.forEach( function( el ){
+                if( el.properties ) {
+                    instanceC = itemByKey(cL,el[typ]); // the instance's class.
                     // The instance's class must be members of cL (has already been checked with checkClasses()):
                     if( !instanceC ) 
-                        return {status:903, statusText: "instance with identifier '"+iL[i].id+"' must reference a valid "+typ }; 
+                        errorL.push({status:903, statusText: "instance with identifier '"+el.id+"' must reference a valid "+typ }); 
                     
-                    for( a=iL[i].properties.length-1;a>-1;a-- ){
-                        prp = iL[i].properties[a];
-                        et = "property with class '"+prp[pClass]+"' of instance with identifier '"+iL[i].id+"'";
+                    el.properties.forEach( function( prp ){
+                        et = "property with class '"+prp[pClass]+"' of instance with identifier '"+el.id+"'";
                         // Property's propertyClass must point to a propertyClass of the respective resourceClass or statementClass:
                         if( data.propertyClasses ) {
                             // starting v0.10.6
@@ -446,49 +453,44 @@ function checkConstraints( data, options ) {
                             extendedC = itemByKey( cL, instanceC['extends'] );
                             if( (!instanceC.propertyClasses || instanceC.propertyClasses.indexOf(prp['class'])<0)
                                 && (!extendedC || !extendedC.propertyClasses || extendedC.propertyClasses.indexOf(prp['class'])<0 ) )
-                                return {status:920, statusText: et+": class must be listed with the instance class or the extended instance class"}
+                                errorL.push({status:920, statusText: et+": class must be listed with the instance class or the extended instance class"});
                             // b) the referenced property class must be defined:
                             propertyC = itemByKey( data.propertyClasses, prp['class'] )
                         } else {
                             // up until v0.10.5 there is no class inheritance/extension:
                             propertyC = itemById( instanceC[pClasses], prp[pClass] )
                         };
-                        if( !propertyC ) 
-                            return {status:920, statusText: et+" must reference a valid propertyClass"}; 
+                        if( propertyC ) 
+                            // Property's value ("content") must fit to the respective type's range
+                            checkValue(propertyC,prp,et);
+                        else
+                            errorL.push({status:920, statusText: et+" must reference a valid propertyClass"}); 
                         
-                        // Property's value ("content") must fit to the respective type's range
-                        rc = checkValue(propertyC,prp,et);
-                        if( rc.status>0 ) 
-                            return rc;
-                    }
-                }
-            }
+                    });
+                };
+            });
         };
-        return {status:0, statusText: "properties of all instances are well formed"}
     }
     function checkNodes(rL,ndL,lvl) {    // resourceList, nodeList, hierarchy level
         // Any node's "resource" must be the key of a member of "resources". 
         // A resource can just be an id string (where the latest revision is assumed) or a key consisting of id and revision.
         if( ndL ) {
-            var rc = null;
-            for( var i=ndL.length-1;i>-1;i-- ){
+            ndL.forEach( function( nd ){
                 // Starting v0.10.8, hierarchy root nodes (lvl==0) reference a resource, but not before.
                 // To recognize <v0.10.8, check for hClasses.
-                if( (lvl>0 || !hClasses) && itemByKey(rL,ndL[i].resource)==undefined ) 
-                    return {status:909, statusText: "hierarchy node with identifier '"+ndL[i].id+"' must reference a valid resource"};    // check the node itself
-                rc = checkNodes(rL,ndL[i].nodes,lvl+1);    // check references of next hierarchy levels recursively
-                if(rc.status!=0) 
-                    return rc    
-            }
+                if( (lvl>0 || !hClasses) && !itemByKey(rL,nd.resource) ) 
+                    errorL.push({status:909, statusText: "hierarchy node with identifier '"+nd.id+"' must reference a valid resource"});    // check the node itself
+                checkNodes(rL,nd.nodes,lvl+1);    // check references of next hierarchy levels recursively
+            })
         };
-        return {status:0, statusText: "hierarchy nodes reference valid resources"}        // all's fine!
     }
     function indexById(L,id) {
-        if(!L||!id) return -1;
-        // given the id of an element in a list, return it's index:
-        id = id.trim();
-        for( var i=L.length-1;i>-1;i-- )
-            if( L[i].id === id ) return i;   // return list index 
+        if( Array.isArray(L) && id ) {
+            // given the id of an element in a list, return it's index:
+            id = id.trim();
+            for( var i=L.length-1;i>-1;i-- )
+                if( L[i].id === id ) return i;   // return list index 
+		};
         return -1
     }
 /*    function existsByKey( L, k ) {
@@ -525,10 +527,10 @@ function checkConstraints( data, options ) {
         switch( typeof(k) ) {
             case 'object': _k = {id:k.id,revision:k.revision}; break;
             case 'string': _k = {id:k, revision: ""}; break;
-            default: return null  // should never arrive here
+            default: return  // should never arrive here
         };
         // Find all elements with the same id:
-        let itemsWithEqId = L.filter( function(el) { return el.id==_k.id });
+        let itemsWithEqId = L.filter( function(e) { return e.id==_k.id });
         if( itemsWithEqId.length<1 ) return; // no element with the specified id
         
         if( itemsWithEqId.length==1 && !itemsWithEqId[0].revision ) {
@@ -539,12 +541,12 @@ function checkConstraints( data, options ) {
     
         // The elements in L have a revision and there may be more than 1 of them.
         // Sort revisions with descending order:
-        itemsWithEqId.sort(function(laurel,hardy) { return hardy.changedAt - laurel.changedAt });
+        itemsWithEqId.sort( function(laurel,hardy) { return hardy.changedAt - laurel.changedAt });
         if( !_k.revision ) return itemsWithEqId[0]; // return the latest revision
         
         // Find the element with equal revision:
-        itemsWithEqId = itemsWithEqId.filter( function(el) { return el.revision==_k.revision });
-        if( itemsWithEqId.length>0 ) return itemsWithEqId[0];
+        let itemsWithEqRev = itemsWithEqId.filter( function(e) { return e.revision==_k.revision });
+        if( itemsWithEqRev.length>0 ) return itemsWithEqRev[0];
         // else, there is no element with the requested revision:
         // return undefined
     }  

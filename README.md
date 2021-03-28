@@ -27,11 +27,13 @@ Thanks to @oalt for the discussion about support for multiple revisions and mult
 
 ## Schema
 
-The SpecIF-[JSON-schema](http://json-schema.org) that defines the JSON-based data format of SpecIF can be found [here](./schema/schema.json).
+The SpecIF schema is developed according to [JSON-schema](http://json-schema.org) using this [Github repository](./schema/schema.json). It is hosted by
+- SpecIF Home: https://specif.de/v1.0/schema.json
+- Schemastore.org: https://json.schemastore.org/specif-1.0.json
 
 ## Constraints
 
-In addition to the schema, the following constraints apply:
+In addition to the schema, the following constraints on apply:
 - Any item's *key* consisting of *id* and *revision* must be unique. By default of a revision, the id must be unique.
 - A propertyClass's *dataType* value must be the *id* of a member of *dataTypes*.
 - ... 
@@ -39,8 +41,6 @@ In addition to the schema, the following constraints apply:
 - Similarly, A statement's *class* value must be the *id* of a member of *statementClasses*.
 - ...
 - A node's *resource* value must be the *id* of a member of *resources*.
-
-## Checker
 
 A syntax and constraint checker is available as JavaScript function: https://github.com/GfSE/SpecIF/tree/master/check
 

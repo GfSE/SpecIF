@@ -9,18 +9,29 @@
       "type": "string",
       "pattern": "^[_a-zA-Z]{1}[_a-zA-Z0-9.-]*$"
     },
-    "revision": {
-      "description": "A globally unique revision tag with one or multiple blocks with alphanumeric characters separated by a special character [.:,;/-]. Sequential as well as branching/merging notations are possible.",
-      "type": "string",
-      "pattern": "^(?:[0-9a-zA-Z]+[.:,;\/-])*[0-9a-zA-Z]+$"
-    },
-    "replaces": {
-      "description": "For change and configuration management; the first revision has 0 entries, a simple modification has 1 entry and the result of a merge has 2 entries.",
+    "alternativeIds": {
+      "description": "The list of consolidated items to be used in case a consolidated item shall be updated.",
       "type": "array",
-      "maxItems": 2,
       "uniqueItems": true,
       "items": {
-        "$ref": "#/definitions/revision"
+        "description": "A list of pointers to resources resp. statements which have been merged to this one.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "A string with a valid identifier of a model-element",
+            "$ref": "#/definitions/id"
+          },
+          "revision": {
+            "description": "If missing, the latest revision is implied.",
+            "$ref": "#/definitions/revision"
+          },
+          "project": {
+            "description": "A string with a valid project identifier in case the identifier is not globally unique.",
+            "$ref": "#/definitions/id"
+          }
+        },
+        "additionalProperties": false,
+        "required": [ "id" ]
       }
     },
     "key": {
@@ -38,48 +49,18 @@
       "additionalProperties": false,
       "required": [ "id" ]
     },
-    "alternativeIds": {
-      "description": "The list of consolidated items which can be used in case a consolidated item shall be updated.",
-      "type": "array",
-      "uniqueItems": true,
-      "items": {
-        "description": "A list of pointers to resources resp. statements which have been merged to this one.",
-        "type": "object",
-        "properties": {
-          "id": {
-            "description": "A string with a valid identifier of a model-element",
-            "$ref": "#/definitions/id"
-          },
-          "revision": {
-            "description": "If missing, the latest revision is implied.",
-            "$ref": "#/definitions/revision"
-          },
-          "project": {
-            "description": "A string with a valid project identifier",
-            "$ref": "#/definitions/id"
-          }
-        },
-        "additionalProperties": false,
-        "required": [ "id" ]
-      }
-    },
-    "dateTime": {
-      "description": "An ISO-8601 dateTime string. For reduced accuracy, any number of values may be dropped, but only from right to left.",
+	"keys": {
+	  "description": "A list of keys referencing items such as propertyClasses, resourceClasses or statementClasses.",
+	  "type": "array",
+	  "minItems": 1,
+	  "uniqueItems": true,
+	  "items": {
+	    "$ref": "#/definitions/key"
+	  }
+	},
+    "textFormat": {
       "type": "string",
-      "pattern": "^(\\d{4}(?!\\d{2}\\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
-    },
-    "icon": {
-      "description": "A symbol for display as a prefix to titles; applicable to all instances of the class. Is usually a XML-encoded UTF-8 symbol, can be an URL or dataURL.",
-      "type": "string"
-    },
-    "instantiation": {
-      "description": "Indicates whether an instance of the class is created automatically, manually or both. All is allowed, if the property is omitted. The class is abstract and cannot be instantiated, if the property list is present, but empty.",
-      "type": "array",
-      "uniqueItems": true,
-      "items": {
-        "type": "string",
-        "enum": [ "auto", "user" ]
-      }
+      "enum": [ "plain", "xhtml" ]
     },
     "multilanguageText": {
       "description": "A list of items with text and language properties. If the information is be provided in multiple languages, the language must be specified for proper selection; it is however not required by the schema to avoid a lot of overhead in most cases with a single language.",
@@ -94,8 +75,7 @@
           },
 		  "format": {
             "description": "By default, the format is assumed 'plain'.",
-            "type": "string",
-            "enum": [ "plain", "xhtml" ]
+            "$ref": "#/definitions/textFormat"
           },
           "language": {
             "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de'.",
@@ -105,6 +85,13 @@
         "additionalProperties": false,
         "required": [ "text" ]
       }
+    },
+    "classTitle": {
+      "description": "A good class name indicates it's role. The use of a vocabulary-term is recommended, which in turn can be translated to any natural or domain language.",
+      "type": "string"
+    },
+    "nodeTitle": {
+      "$ref": "#/definitions/multilanguageText"
     },
     "values": {
       "description": "If 'multiple' of the propertyClass is undefined or false, the array must contain one item. If the value is unknown, omit the whole property. By default, the class' value applies.",
@@ -121,6 +108,38 @@
         }]
       }
     },
+    "revision": {
+      "description": "A globally unique revision tag with one or multiple blocks with alphanumeric characters separated by a special character [.:,;/-]. Sequential as well as branching/merging notations are possible.",
+      "type": "string",
+      "pattern": "^(?:[0-9a-zA-Z]+[.:,;\/-])*[0-9a-zA-Z]+$"
+    },
+    "replaces": {
+      "description": "For change and configuration management; the first revision has 0 entries, a simple modification has 1 entry and the result of a merge has 2 entries.",
+      "type": "array",
+      "maxItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/definitions/revision"
+      }
+    },
+    "dateTime": {
+      "description": "An ISO-8601 dateTime string. For reduced accuracy, any number of values may be dropped, but only from right to left.",
+      "type": "string",
+      "format":"date-time"
+    },
+    "icon": {
+      "description": "A symbol for display as a prefix to titles; applicable to all instances of the class. Is usually a XML-encoded UTF-8 symbol, can be an URL or dataURL.",
+      "type": "string"
+    },
+    "instantiation": {
+      "description": "Indicates whether an instance of the class is created automatically, manually or both. All is allowed, if the property is omitted. The class is abstract and cannot be instantiated, if the property list is present, but empty.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [ "auto", "user" ]
+      }
+    },
     "nodes": {
       "description": "A list of pointers to resources; may be nested forming a tree, i.e. a hierarchy of pointers.",
       "type": "array",
@@ -133,10 +152,10 @@
           },
           "title": {
             "description": "The node's label; if missing, the title of the referenced resource is applied.",
-            "type": "string"
+            "$ref": "#/definitions/nodeTitle"
           },
           "description": {
-            "type": "string"
+            "$ref": "#/definitions/multilanguageText"
           },
           "resource": {
             "description": "The pointer to the resource to be displayed at this position.",
@@ -162,15 +181,6 @@
         "required": [ "id", "resource", "changedAt" ]
       }
     },
-	"propertyClasses": {
-	  "description": "A list of keys pointing to a member of propertyClasses.",
-	  "type": "array",
-	  "minItems": 1,
-	  "uniqueItems": true,
-	  "items": {
-	    "$ref": "#/definitions/key"
-	  }
-	},
     "properties": {
       "description": "A list of properties of a resource or statement.",
       "type": "array",
@@ -181,13 +191,6 @@
         "properties": {
           "id": {
             "$ref": "#/definitions/id"
-          },
-          "title": {
-            "description": "The property's label; if missing, the title of the property's class is applied.",
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
           },
           "class": {
             "description": "Must be a member of propertyClasses. In addition, it must be listed in the propertyClasses of the parent's class.",
@@ -204,19 +207,21 @@
   "type": "object",
   "properties": {
     "$schema": {
-      "description": "An absolute URL pointing to this SpecIF schema.",
+      "description": "An absolute URL pointing to this SpecIF schema. Supports both specif.de and schemastore.org.",
       "type": "string",
       "format": "uri",
-      "pattern": "^https?:\\/\\/(specif\\.de\\/v1\\.1\\/schema|.+\\/specif-1\\.1)\\.json$"
+      "pattern": "^https?:\\/\\/(specif\\.de\\/v1\\.1\\/schema|\\/specif-1\\.1)\\.json$"
     },
     "id": {
       "$ref": "#/definitions/id"
     },
     "title": {
-      "type": "string"
+      "description": "The project's name; if missing, the first hierarchy node's title applies.",
+      "$ref": "#/definitions/nodeTitle"
     },
     "description": {
-      "type": "string"
+      "description": "The project's description; if missing, the first hierarchy node's description applies.",
+      "$ref": "#/definitions/multilanguageText"
     },
     "isExtension": {
       "description": "Indicates that the project is not schema-compliant on its own; by default the value is 'false'. Of course, it is expected that once extended the project is schema-compliant.",
@@ -292,10 +297,10 @@
               "$ref": "#/definitions/id"
             },
             "title": {
-              "type": "string"
+              "$ref": "#/definitions/classTitle"
             },
             "description": {
-              "type": "string"
+              "$ref": "#/definitions/multilanguageText"
             },
             "revision": {
               "$ref": "#/definitions/revision"
@@ -325,10 +330,10 @@
               "$ref": "#/definitions/id"
             },
             "title": {
-              "type": "string"
+              "$ref": "#/definitions/classTitle"
             },
             "description": {
-              "type": "string"
+              "$ref": "#/definitions/multilanguageText"
             },
             "minInclusive":  {
               "type": "number",
@@ -368,10 +373,10 @@
               "$ref": "#/definitions/id"
             },
             "title": {
-              "type": "string"
+              "$ref": "#/definitions/classTitle"
             },
             "description": {
-              "type": "string"
+              "$ref": "#/definitions/multilanguageText"
             },
             "fractionDigits": {
               "description": "Optional use by dataType 'xs:double', indicates the number of decimals.",
@@ -417,10 +422,10 @@
               "$ref": "#/definitions/id"
             },
             "title": {
-              "type": "string"
+              "$ref": "#/definitions/classTitle"
             },
             "description": {
-              "type": "string"
+              "$ref": "#/definitions/multilanguageText"
             },
             "maxLength":  {
               "description": "Optional use by dataType 'xs:string'.",
@@ -456,10 +461,10 @@
               "$ref": "#/definitions/id"
             },
             "title": {
-              "type": "string"
+              "$ref": "#/definitions/classTitle"
             },
             "description": {
-              "type": "string"
+              "$ref": "#/definitions/multilanguageText"
             },
             "values": {
               "description": "Mandatory use by dataType 'xs:enumeration'. If 'multiple' is true 0..n options may be selected, otherwise exactly one must be selected.",
@@ -512,10 +517,10 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "type": "string"
+            "$ref": "#/definitions/classTitle"
           },
           "description": {
-            "type": "string"
+            "$ref": "#/definitions/multilanguageText"
           },
           "dataType": {
             "description": "Must be a member of dataTypes.",
@@ -529,8 +534,12 @@
             "description": "An optional list of default values in case the instantiated resource's or statement's property is missing.",
             "$ref": "#/definitions/values"
           },
+          "format": {
+            "description": "The default format of a property's text value. Is superseded by a text value's format attribute.",
+            "$ref": "#/definitions/textFormat"
+          },
           "unit": {
-            "description": "The unit of the numeric value given; preferrably an SI unit symbol such as 'm^3/kg' (Système international (d'unités)) or a currency symbol.",
+            "description": "The unit of a property's numeric value; preferrably an SI unit symbol such as 'm^3/kg' (Système international (d'unités)) or a currency symbol.",
             "type": "string"
           },
           "revision": {
@@ -560,10 +569,10 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "type": "string"
+            "$ref": "#/definitions/classTitle"
           },
           "description": {
-            "type": "string"
+            "$ref": "#/definitions/multilanguageText"
           },
           "extends": {
             "description": "Must be a member of resourceClasses.",
@@ -579,7 +588,8 @@
             "$ref": "#/definitions/instantiation"
           },
           "propertyClasses": {
-            "$ref": "#/definitions/propertyClasses"
+            "description": "A list of keys referencing propertyClasses.",
+            "$ref": "#/definitions/keys"
           },
           "revision": {
             "$ref": "#/definitions/revision"
@@ -598,7 +608,7 @@
       }
     },
     "statementClasses": {
-      "description": "The class definitions for statements in subject-predicate-object statements, where subject and object are resources.",
+      "description": "The class definitions for statements in subject-predicate-object statements, where subject and object are resources or statements.",
       "type": "array",
       "uniqueItems": true,
       "items": {
@@ -608,10 +618,10 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "type": "string"
+            "$ref": "#/definitions/classTitle"
           },
           "description": {
-            "type": "string"
+            "$ref": "#/definitions/multilanguageText"
           },
           "extends": {
             "description": "Must be a member of statementClasses.",
@@ -624,33 +634,20 @@
             "$ref": "#/definitions/instantiation"
           },
           "isUndirected": {
-            "description": "Indicates that an instance's subject and object are equivalent and can be exchanged without changing its meaning. Is superseded by a statement's definition.",
+            "description": "Indicates that an instance's subject and object are equivalent and can be exchanged without change in meaning.",
             "type": "boolean"
           },
           "propertyClasses": {
-            "$ref": "#/definitions/propertyClasses"
+            "description": "A list of keys referencing propertyClasses.",
+            "$ref": "#/definitions/keys"
           },
           "subjectClasses": {
-            "description": "A collection of id's of eligible resource and statement classes; if 'subjectClasses' is missing, all resource or statement classes are eligible.",
-            "type": "array",
-            "title": "Resource and statement classes eligible as subject",
-            "minItems": 1,
-            "uniqueItems": true,
-            "items": {
-              "$ref": "#/definitions/key",
-              "description": "Must be a member of resourceClasses or statementClasses."
-            }
+            "description": "A list of keys referencing eligible resource and statement classes for a statement's subject; if missing, all resource or statement classes are eligible.",
+            "$ref": "#/definitions/keys"
           },
           "objectClasses": {
-            "description": "A collection of id's of eligible resource and statement classes; if 'objectClasses' is missing, all resource or statement classes are eligible.",
-            "type": "array",
-            "title": "Resource and statement classes eligible as object",
-            "minItems": 1,
-            "uniqueItems": true,
-            "items": {
-              "description": "Must be a member of resourceClasses or statementClasses.",
-              "$ref": "#/definitions/key"
-            }
+            "description": "A list of keys referencing eligible resource and statement classes for a statement's object; if missing, all resource or statement classes are eligible.",
+            "$ref": "#/definitions/keys"
           },
           "revision": {
             "$ref": "#/definitions/revision"
@@ -771,10 +768,14 @@
             "$ref": "#/definitions/id"
           },
           "title": {
-            "description": "In case of a file, the title is the absolute or relative URL.",
+            "description": "The file's name.",
             "type": "string"
           },
           "description": {
+            "$ref": "#/definitions/multilanguageText"
+          },
+          "url": {
+            "description": "An absolute or relative URL to the file; will be of format 'uri-reference' in future. If missing, the title applies.",
             "type": "string"
           },
           "type": {
@@ -801,7 +802,6 @@
   "required": [ 
     "$schema",
     "id",
-    "title",
 	"dataTypes",
 	"propertyClasses",
     "resourceClasses",

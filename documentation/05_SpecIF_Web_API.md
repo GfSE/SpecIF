@@ -34,7 +34,7 @@ A SpecIF-WebAPI shall provide a [API Key-based authentication](https://swagger.i
 It is not part of the standard to define how these API keys are managed or generated. 
 This is a task for the API implementer.
 
-The API key shall be send inside the HTTP request header, for example:
+The API key shall be sent inside the HTTP request header, for example:
 
 `X-API-KEY abcdef12345`
 
