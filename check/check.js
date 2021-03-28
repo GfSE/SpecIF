@@ -241,8 +241,8 @@ function checkConstraints( data, options ) {
     }
     function checkPropertyClasses(cL) {  // class list
         if( Array.isArray(cL) ) {
+            // starting v0.10.6 resp v0.11.6,
             // cL is the top-level list of propertyClasses for use by all resourceClasses and statementClasses:
-            // starting v0.10.6 resp v0.11.6: 
             cL.forEach( function( propertyC ){
                 // A propertyClass's "dataType" must be the key of a member of "dataTypes":
                 if( itemByKey( data.dataTypes, propertyC.dataType)==undefined ) 
@@ -255,13 +255,13 @@ function checkConstraints( data, options ) {
     }
     function checkElementPropertyClasses(cL) {  
         if( Array.isArray(cL) ) {
-            // cL is a list of elements, such as resourceClasses
+            // cL is a list of resourceClasses, statementClasses or in earlier versions hierarchyClasses:
             cL.forEach( function( eC ){
-                // for each class in cL:
+                // for each class:
                 if( Array.isArray( eC[pClasses] ) ) {
-                    // an element has propertyClasses:
+                    // a resourceClass, statementClass or hierarchyClass *has* propertyClasses:
                     eC[pClasses].forEach( function( propertyC ) {
-                        // An element's propertyClass
+                        // A class's propertyClass
                         // depending on the version, 
                         // - propertyC is a string: It is the identifier of an element of data.propertyClasses (starting v0.10.6 resp v0.11.6)
                         // - propertyC is an object: Then, it can be 
@@ -330,28 +330,28 @@ function checkConstraints( data, options ) {
 
             let staC = itemByKey( dta[sClasses], sta[sClass] );		// the statement's class
 			
+            // If there are no staC[subClasses], all subjectClasses are eligible and so no checking is necessary.
             if( Array.isArray(staC[subClasses]) ) {
-                // If there are no staC[subClasses], all subjectClasses are eligible and so no checking is necessary.
                 let subj = itemByKey( instanceL, sta.subject ),	// the statement's subject, can be a resource or (starting with v0.10.8) a statement
                     eligibleCL = [];							// the list of eligible classes
-                if( staC[subClasses] ) staC[subClasses].forEach( function(c) { let e=itemByKey( classL, c ); if(e) eligibleCL.push(e); });
+                staC[subClasses].forEach( function(c) { let e=itemByKey( classL, c ); if(e) eligibleCL.push(e); });
 //              console.debug('checkStatements',i,sta,staC,subj,obj,eligibleCL);
 
                 // The subject's class must be listed in the statementClass' subjectClasses;
 			    // in earlier versions, only resources were eligible as subject and object,
 			    // and in later versions, where resources and statements are eligible, both have the same 'class' attribute, so subj[rClass] covers all cases:
                 if( !itemByKey( eligibleCL, subj[rClass] ) )
-                    errorL.push({status:919, statusText: "the subject of statement["+i+"] with identifier '"+sta.id+"' has a class which is not listed in the statementClass's subjectClasses"});
+                    errorL.push({status:919, statusText: "the subject of statement["+i+"] with identifier '"+sta.id+"' has a class which is not listed in the "+subClasses+" of the statement's class"});
             };
 
             // ... and similarly for object's class: 
             if( Array.isArray(staC[objClasses]) ) {
                 let obj = itemByKey( instanceL, sta.object ),	// the statement's object, can be a resource or (starting with v0.10.8) a statement
                     eligibleCL = [];							// the list of eligible classes
-                if( staC[objClasses] ) staC[objClasses].forEach( function(c) { let e=itemByKey( classL, c ); if(e) eligibleCL.push(e); });
+                staC[objClasses].forEach( function(c) { let e=itemByKey( classL, c ); if(e) eligibleCL.push(e); });
 
                 if( !itemByKey( eligibleCL, obj[[rClass]] ) )
-                    errorL.push({status:919, statusText: "the object of statement["+i+"] with identifier '"+sta.id+"' has a class which is not listed in the statementClass's objectClasses"});
+                    errorL.push({status:919, statusText: "the object of statement["+i+"] with identifier '"+sta.id+"' has a class which is not listed in the "+objClasses+" of the statement's class"});
             };
 
         /*  // The statement's subject and object must not be the same:
@@ -433,19 +433,19 @@ function checkConstraints( data, options ) {
     }
     function checkProperties(cL,iL,typ) { 
         // check all properties of the instances listed in iL,
-        // cL: instance class list, 
-        // iL: instance list (resources, statements or up until v0.10.6 resp v0.11.6 hierarchies) to be checked:
-        if( Array.isArray(cL) && iL ) {
-            let prp, propertyC, instanceC, extendedC, rc, et;
-            iL.forEach( function( el ){
-                if( el.properties ) {
-                    instanceC = itemByKey(cL,el[typ]); // the instance's class.
+        // iL: instance list (resources, statements or up until v0.10.6 resp v0.11.6 hierarchies) to be checked
+        // cL: the instance's respective classes (i.e. resourceClasses, if iL contains resources)
+        if( Array.isArray(cL) && Array.isArray(iL) ) {
+            let prp, propertyC, instanceC, extendedC, et;
+            iL.forEach( function( ins ){
+                if( ins.properties ) {
+                    instanceC = itemByKey(cL,ins[typ]); // the instance's class.
                     // The instance's class must be members of cL (has already been checked with checkClasses()):
                     if( !instanceC ) 
-                        errorL.push({status:903, statusText: "instance with identifier '"+el.id+"' must reference a valid "+typ }); 
+                        errorL.push({status:903, statusText: "instance with identifier '"+ins.id+"' must reference a valid "+typ }); 
                     
-                    el.properties.forEach( function( prp ){
-                        et = "property with class '"+prp[pClass]+"' of instance with identifier '"+el.id+"'";
+                    ins.properties.forEach( function( prp ){
+                        et = "property with class '"+prp[pClass]+"' of instance with identifier '"+ins.id+"'";
                         // Property's propertyClass must point to a propertyClass of the respective resourceClass or statementClass:
                         if( data.propertyClasses ) {
                             // starting v0.10.6
