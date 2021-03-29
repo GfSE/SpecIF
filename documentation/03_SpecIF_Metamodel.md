@@ -2,7 +2,7 @@
 
 This section describes the SpecIF-Metamodel.
 
-The describtion by a Metamodel is done in a technology independent way following the OMG [Meta Object Facility (MOF) Metamodeling](https://www.omg.org/mof/) technology 
+The description by a metamodel is done in a technology independent way following the OMG [Meta Object Facility (MOF) Metamodeling](https://www.omg.org/mof/) technology 
 and the OMG [Model Driven Architecture (MDA)](https://www.omg.org/mda/) approach. 
 The metamodel defines a platform-independent model (PIM).
 
@@ -22,7 +22,7 @@ The following figure shows the entry point to the SpecIF-Metamodel. The attribut
 
 The SpecIF class is the outermost element of a SpecIF data representation. 
 We can call it a repository or data set.
-It defines the entire SpecIF data set represented in platform-specific implementation by a SpecIF file or a SpecIF persistance layer like a data base or data provided by a WebAPI. 
+It defines the entire SpecIF data set represented in platform-specific implementation by a SpecIF file or a SpecIF persistence layer like a data base or data provided by a WebAPI. 
 Such a SpecIF repository instance is often identical with a project context in a development project. 
 It can contain the entire content of PLM data created in a project context. 
 
@@ -77,7 +77,7 @@ The *Rights* metaclass defines a data structure to represent copyright and/or li
 It has the following attributes:
 
 * *title: string* - A title for the copyright/license information (e.g. 'Apache license v2')
-* *url: string* - A valid uniform resource locator to forther copyright/license information.
+* *url: string* - A valid uniform resource locator to further copyright/license information.
 
 ## Data representation and data type definitions in SpecIF
 
@@ -96,7 +96,7 @@ The SpecIF-Metamodel defines a set of classes that are responsible for these dat
 *  The *StatementClass* defines the type of a *Statement*.
 *  The *PropertyClass* defines the type of a *Property*.  
 *  The *DataType* defines the primitive data types (Integer, String, Double, Boolean, DateTime, Enumerations) used as data types for property definitions. 
-The type string can represent formatted text or unformated text.
+The type string can represent formatted text or unformatted text.
 
 ## Metamodel helper classes
 
@@ -178,7 +178,7 @@ and hierarchical structures.
 
 ![SpecIF Metamodel elements with Associations](./images/MetaModel-M2.png)
 
-On the right you can see the classes defining the data structures for concrete data elements like *Resource*, *Statement*, *Propery*, *Hierarchy* and *Node*.
+On the right you can see the classes defining the data structures for concrete data elements like *Resource*, *Statement*, *Property*, *Hierarchy* and *Node*.
 On the left you can see the data type defining elements like *ResourceClass*, *StatementClass*, *PropertyClass* and *DataType*.
 
 In the following sections the semantics of all elements is described in detail.
@@ -188,9 +188,9 @@ In the following sections the semantics of all elements is described in detail.
 
 ![The metaclass *DataType*](./images/Metaclass_DataType.png)
 
-A *DataType* is used to define the base data types (promitive data types) where all other type definitions are based on. 
-SpecIF allows the definition of primitive data types for numbers, formated or unformated text strings, DateTime values and Enumerations.
-So the DataType metaclass defines the following attributes to stisfy these requirements:
+A *DataType* is used to define the base data types (primitive data types) where all other type definitions are based on. 
+SpecIF allows the definition of primitive data types for numbers, formated or unformatted text strings, DateTime values and Enumerations.
+So the DataType metaclass defines the following attributes to satisfy these requirements:
 
 * *title: string* - A unique name for the defined data type (e.g. 'string')
 * *description: MultilanguageText[]* - A human readable description of the data type for documentation purposes.
@@ -216,7 +216,7 @@ The PropertyClass has the following attributes:
 
 *  *title: string* - A unique name for the defined PropertyClass (e.g. 'dcterms:title')
 *  *description: MultilanguageText[]* - A human readable description of the data type for documentation purposes.
-*  *multiple: bool* - This flag indicates for the Property, that the property value can hold multiple values (muliple enumeration values or an array of primitive data).
+*  *multiple: bool* - This flag indicates for the Property, that the property value can hold multiple values (multiple enumeration values or an array of primitive data).
 *  *dataType* - This association references the used *DataType* for the ProperyClass.
 
 ### ResourceClass
@@ -235,7 +235,7 @@ The ResourceClass has the following attributes:
 * *icon: string* - A icon definition usable by authoring tools for the Resources. This can be a language code of a unicode symbol or a base64 encoded image.
 * *isHeading: bool* - Indicates, that the defined resource is a heading.
 * *instantiation* - Values: 'user' or 'system'. Tbd.
-* *extends* - Reference to a parent ResourceClass element when inheriatnce is used in the data definition. 
+* *extends* - Reference to a parent ResourceClass element when inheritance is used in the data definition. 
 * *propertyClasses* - A list of PropertyClass references to define which Properties shall be used for the defined Resource type. 
  
 ### StatementClass
@@ -243,7 +243,7 @@ The ResourceClass has the following attributes:
 ![The metaclass *StatementClass*](./images/Metaclass_StatementClass.png)
 
 A *StatementClass* inherits the ResourceClass and defines the data type definition of a SpecIF statement. 
-Statements are the edeges in a SpecIF graph data structure. 
+Statements are the edges in a SpecIF graph data structure. 
 A Statement has two ends called *subject* and *object*.  
 The StatementClass allows the definition of possible Resource types for the subject an object elements of the Statement. 
 This is done by referencing the allowed subject ResourceClass elements and object ResourceClass element.
@@ -262,28 +262,29 @@ A *Property* is an instance of a PropertyClass and is used to store a concrete d
 Each Property in SpecIF is defined as an array of values. 
 The attribute *isMultiple* in the PropertyClass specifies if a property value is an array or a single value.
 
-If isMultiple is set to false and the propery attribute values contains more than one value, only the first value shall be used and all other array elements shall be ignored!
+If isMultiple is set to false and the property attribute values contains more than one value, only the first value shall be used and all other array elements shall be ignored!
 
-Depending on the DataTyoe, that is used as for definition of the PropertyClass, the each value of the value is an array of MultilanguegeText for textual content 
-or a string for all other contents (numbers).
+Depending on the DataType, that is used as for definition of the PropertyClass, each value of the array is either a MultilanguegeText for plain or xtml-textual content 
+or a string for all other contents (e.g. numbers, enumerations etc.).
+For enumerations the id of the EnumerationValue is stored as property value.
 
 A Property has the following attributes:
 
-* *id: string* - A unique identifier for the Property.
-* *values* - The values of the property to store the property data (multiple or single values).
+* *values* - The values of the property to store the property content data (multiple or single values).
 * *class* - A reference to the PropertyClass element defining the Property type.
 
 ### Resource
 
 ![The metaclass *Resource*](./images/Metaclass_Resource.png)
 
-A *Resource* is an instance of a PropertyClass and the elemnt in SpecIF that represents a node in the graph data structure. 
+A *Resource* is an instance of a PropertyClass and the element in SpecIF that represents a node in the graph data structure. 
 Resources represent all kind of concrete data in PLM. 
 This might be a Requirement, a model element in UML or SysML or an electrical circuit in an E-CAD model etc.
 
 A Resource has the following attributes:
 
-* *alternativeIds* - Alternative ID values are used to define further ID values in addition to the *id* attribute in SpecIF. This is helpful for data integrations where multiple tools have their own internal ids. So you can represent these 'legacy' IDs in SpecIF.
+* *alternativeIds* - Alternative ID values are used to define further ID values in addition to the *id* attribute in SpecIF. This is helpful for data integrations where multiple tools have their own internal ids. 
+So you can represent these 'legacy' IDs in SpecIF.
 * *class* - A reference to the ResourceClass element defining the Resource type.
 * *properties* - A collection of Property elements to store property data for the Resource.
 
@@ -303,16 +304,16 @@ A Statement is inherited from Resource and has the following additional attribut
 ![The metaclass *Node*](./images/Metaclass_Hierarchy.png)
 
 The metaclasses *Node* allows it to define hierarchical data structures (trees) in SpecIF.
-Typlical application scenarios are hierarchical structures in textual specifications like documents and the structures in CAD and other modeling tools.
+Typical application scenarios are hierarchical structures in textual specifications like documents and the structures in CAD and other modeling tools.
 
 The data is not directly included inside Node elements. 
 Instead, the Resources of a Node are just included via reference. 
-This allows a spearation of data model and view (view concept as known e.g. from UML-tools) and the inclusion of the same Resource elements into multiple Hierachy trees.
+This allows a separation of data model and view (view concept as known e.g. from UML-tools) and the inclusion of the same Resource elements into multiple Hierarchy trees.
 
-The Node elemnt have the following attributes:
+The Node element have the following attributes:
 
 * *title: MultilanguageText[]* - A title for the Node. Mostly used for internal purposes, because the title comes normally from the referenced Resource element properties.
-* *description: MultilanguageText[]* - A human readable description for documentation purposes. Mostly used for internal purposes, because the description comes normally from the referenced Resource element properies.
+* *description: MultilanguageText[]* - A human readable description for documentation purposes. Mostly used for internal purposes, because the description comes normally from the referenced Resource element properties.
 * *nodes* - A collection of child node elements for the Node.
 * *resource* - A reference to the Resource element used as Node tree node data.
 
