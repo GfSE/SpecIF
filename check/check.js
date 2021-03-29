@@ -275,7 +275,7 @@ function checkConstraints( data, options ) {
                             if( itemByKey( data.propertyClasses, propertyC )==undefined )
                                 errorL.push({status:930, statusText: "property class of item with identifier '"+eC.id+"' must reference an item in 'propertyClasses'" });
                         } else {
-                            // up until v0.10.5 resp v0.11.2:
+                            // up until v0.10.5 resp v0.11.2 the propertyClasses are defined with each resourceClass, statementClass and hierarchyClass.
                             // A propertyClass's "dataType" must be the key of a member of "dataTypes":
                             if( itemByKey( data.dataTypes, propertyC.dataType)==undefined ) 
                                 errorL.push({status:904, statusText: "property class with identifier '"+propertyC.id+"' must reference a valid dataType"});

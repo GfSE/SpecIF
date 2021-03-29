@@ -189,9 +189,6 @@
       "items": {
         "type": "object",
         "properties": {
-          "id": {
-            "$ref": "#/definitions/id"
-          },
           "class": {
             "description": "Must be a member of propertyClasses. In addition, it must be listed in the propertyClasses of the parent's class.",
             "$ref": "#/definitions/key"
