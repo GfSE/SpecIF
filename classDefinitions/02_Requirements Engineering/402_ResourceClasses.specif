@@ -1,105 +1,117 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_6C2F780D-108C-4CFF-8AC6-E098CB4C8986",
-  "title": "SpecIF resource class definitions for domain 02-Requirements Engineering",
-  "isExtension": true,
-  "createdAt": "2020-02-16T19:54:35.1941664+01:00",
-  "dataTypes": [],
-  "propertyClasses": [],
-  "resourceClasses": [
-    {
-      "id": "RC-Requirement",
-      "title": "IREB:Requirement",
-      "description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
-      "revision": "1.0",
-      "replaces": [],
-      "icon": "&#8623;",
-      "isHeading": false,
-      "instantiation": [
-        "user"
-      ],
-      "propertyClasses": [
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_6C2F780D-108C-4CFF-8AC6-E098CB4C8986",
+    "title": [
         {
-          "id": "PC-VisibleId",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Name",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Description",
-          "revision": "1"
-        },
-        {
-          "id": "PC-RequirementType",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Priority",
-          "revision": "1"
-        },
-        {
-          "id": "PC-LifeCycleStatus",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Perspective",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Discipline",
-          "revision": "1"
+            "text": "SpecIF resource class definitions for domain 02-Requirements Engineering"
         }
-      ],
-      "changedAt": "2021-02-22T08:59:00+02:00"
-    },
-    {
-      "id": "RC-Feature",
-      "title": "SpecIF:Feature",
-      "description": "A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition.",
-      "revision": "1.0",
-      "replaces": [],
-      "icon": "&#10038;",
-      "isHeading": false,
-      "instantiation": [
-        "user"
-      ],
-      "propertyClasses": [
+    ],
+    "isExtension": true,
+    "createdAt": "2020-02-16T19:54:35.1941664+01:00",
+    "dataTypes": [],
+    "propertyClasses": [],
+    "resourceClasses": [
         {
-          "id": "PC-VisibleId",
-          "revision": "1"
+            "id": "RC-Requirement",
+            "title": "IREB:Requirement",
+            "description": [
+                {
+                    "text": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "&#8623;",
+            "isHeading": false,
+            "instantiation": [
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-VisibleId",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-RequirementType",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Priority",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-LifeCycleStatus",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Perspective",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Discipline",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-02-22T08:59:00+02:00"
         },
         {
-          "id": "PC-Name",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Description",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Priority",
-          "revision": "1"
-        },
-        {
-          "id": "PC-LifeCycleStatus",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Perspective",
-          "revision": "1"
-        },
-        {
-          "id": "PC-Discipline",
-          "revision": "1"
+            "id": "RC-Feature",
+            "title": "SpecIF:Feature",
+            "description": [
+                {
+                    "text": "A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "&#10038;",
+            "isHeading": false,
+            "instantiation": [
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-VisibleId",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Priority",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-LifeCycleStatus",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Perspective",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Discipline",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-02-22T08:59:00+02:00"
         }
-      ],
-      "changedAt": "2021-02-22T08:59:00+02:00"
-    }
-  ],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

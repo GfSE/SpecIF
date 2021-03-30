@@ -1,107 +1,127 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_6C2F780D-108C-4CFF-8AC6-E098CB4C8986",
-  "title": "SpecIF statement class definitions for domain 02-Requirements Engineering",
-  "isExtension": true,
-  "createdAt": "2020-02-16T19:54:35.2005092+01:00",
-  "dataTypes": [],
-  "propertyClasses": [],
-  "resourceClasses": [],
-  "statementClasses": [
-    {
-      "id": "SC-dependsOn",
-      "title": "SpecIF:dependsOn",
-      "description": "Statement: Requirement/Feature depends on Requirement/Feature",
-      "revision": "1.0",
-      "replaces": [],
-      "instantiation": [
-        "user"
-      ],
-      "subjectClasses": [
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_6C2F780D-108C-4CFF-8AC6-E098CB4C8986",
+    "title": [
         {
-          "id": "RC-Requirement",
-          "revision": "1.0"
+            "text": "SpecIF statement class definitions for domain 02-Requirements Engineering"
         }
-      ],
-      "objectClasses": [
+    ],
+    "isExtension": true,
+    "createdAt": "2020-02-16T19:54:35.2005092+01:00",
+    "dataTypes": [],
+    "propertyClasses": [],
+    "resourceClasses": [],
+    "statementClasses": [
         {
-          "id": "RC-Requirement",
-          "revision": "1.0"
-        }
-      ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "SC-duplicates",
-      "title": "SpecIF:duplicates",
-      "description": "The subject requirement duplicates the object requirement.",
-      "revision": "1.0",
-      "replaces": [],
-      "instantiation": [
-        "user"
-      ],
-      "subjectClasses": [
+            "id": "SC-dependsOn",
+            "title": "SpecIF:dependsOn",
+            "description": [
+                {
+                    "text": "Statement: Requirement/Feature depends on Requirement/Feature"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "user"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Requirement",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-Requirement",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
         {
-          "id": "RC-Requirement",
-          "revision": "1.0"
-        }
-      ],
-      "objectClasses": [
+            "id": "SC-duplicates",
+            "title": "SpecIF:duplicates",
+            "description": [
+                {
+                    "text": "The subject requirement duplicates the object requirement."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "user"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Requirement",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-Requirement",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
         {
-          "id": "RC-Requirement",
-          "revision": "1.0"
-        }
-      ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "SC-contradicts",
-      "title": "SpecIF:contradicts",
-      "description": "The subject requirement contradicts the object requirement.",
-      "revision": "1.0",
-      "replaces": [],
-      "instantiation": [
-        "user"
-      ],
-      "subjectClasses": [
+            "id": "SC-contradicts",
+            "title": "SpecIF:contradicts",
+            "description": [
+                {
+                    "text": "The subject requirement contradicts the object requirement."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "user"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Requirement",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-Requirement",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
         {
-          "id": "RC-Requirement",
-          "revision": "1.0"
+            "id": "SC-refines",
+            "title": "IREB:refines",
+            "description": [
+                {
+                    "text": "The subject requirement refines the object requirement."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "user"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Requirement",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-Requirement",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
         }
-      ],
-      "objectClasses": [
-        {
-          "id": "RC-Requirement",
-          "revision": "1.0"
-        }
-      ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "SC-refines",
-      "title": "IREB:refines",
-      "description": "The subject requirement refines the object requirement.",
-      "revision": "1.0",
-      "replaces": [],
-      "instantiation": [
-        "user"
-      ],
-      "subjectClasses": [
-        {
-          "id": "RC-Requirement",
-          "revision": "1.0"
-        }
-      ],
-      "objectClasses": [
-        {
-          "id": "RC-Requirement",
-          "revision": "1.0"
-        }
-      ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    }
-  ],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

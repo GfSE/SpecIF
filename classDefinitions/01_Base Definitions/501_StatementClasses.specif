@@ -1,44 +1,56 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_4396F471_ECF8_4508_8F39_5CE2166ADD53",
-  "title": "SpecIF statement class definitions for doamin 01_Base Definitions",
-  "isExtension": true,
-  "createdAt": "2020-02-16T19:54:35.1763337+01:00",
-  "dataTypes": [],
-  "propertyClasses": [],
-  "resourceClasses": [],
-  "statementClasses": [
-    {
-      "id": "SC-Classifier",
-      "title": "rdf:type",
-      "description": "States that the relation subject is an instance of the relation object.",
-      "revision": "1.0",
-      "replaces": [],
-      "instantiation": [
-        "auto",
-        "user"
-      ],
-      "changedAt": "2019-03-24T11:00:00+01:00"
-    },
-    {
-      "id": "SC-refersTo",
-      "title": "SpecIF:refersTo",
-      "description": "A resource 'refers to' any other resource.",
-      "revision": "1.0",
-      "replaces": [],
-      "instantiation": [
-        "auto"
-      ],
-      "propertyClasses": [
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_4396F471_ECF8_4508_8F39_5CE2166ADD53",
+    "title": [
         {
-          "id": "PC-Type",
-          "revision": "1.0"
+            "text": "SpecIF statement class definitions for domain 01_Base Definitions"
         }
-      ],
-      "changedAt": "2019-08-20T20:32:25+02:00"
-    }
-  ],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "isExtension": true,
+    "createdAt": "2020-02-16T19:54:35.1763337+01:00",
+    "dataTypes": [],
+    "propertyClasses": [],
+    "resourceClasses": [],
+    "statementClasses": [
+        {
+            "id": "SC-Classifier",
+            "title": "rdf:type",
+            "description": [
+                {
+                    "text": "States that the relation subject is an instance of the relation object."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "changedAt": "2019-03-24T11:00:00+01:00"
+        },
+        {
+            "id": "SC-refersTo",
+            "title": "SpecIF:refersTo",
+            "description": [
+                {
+                    "text": "A resource 'refers to' any other resource."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Type",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2019-08-20T20:32:25+02:00"
+        }
+    ],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

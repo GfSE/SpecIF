@@ -1,135 +1,238 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_D24239F3-DE44-4AB5-8765-5FE55158CEC9",
-  "title": "SpecIF enumeration datatype definitions for domain 01-Base Definitions",
-  "isExtension": false,
-  "createdAt": "2020-02-16T19:54:35.0432812+01:00",
-  "dataTypes": [
-    {
-      "id": "DT-LifeCycleStatus",
-      "title": "SpecIF:LifeCycleStatus",
-      "description": "Enumerated values for status",
-      "revision": "1.0",
-      "replaces": [],
-      "type": "xs:enumeration",
-      "values": [
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_D24239F3-DE44-4AB5-8765-5FE55158CEC9",
+    "title": [
         {
-          "id": "V-Status-0",
-          "value": "SpecIF:LifecycleStatusDeprecated"
-        },
-        {
-          "id": "V-Status-1",
-          "value": "SpecIF:LifecycleStatusRejected"
-        },
-        {
-          "id": "V-Status-2",
-          "value": "SpecIF:LifecycleStatusInitial"
-        },
-        {
-          "id": "V-Status-3",
-          "value": "SpecIF:LifecycleStatusDrafted"
-        },
-        {
-          "id": "V-Status-4",
-          "value": "SpecIF:LifecycleStatusSubmitted"
-        },
-        {
-          "id": "V-Status-5",
-          "value": "SpecIF:LifecycleStatusApproved"
-        },
-        {
-          "id": "V-Status-8",
-          "value": "SpecIF:LifecycleStatusReady"
-        },
-        {
-          "id": "V-Status-6",
-          "value": "SpecIF:LifecycleStatusDone"
-        },
-        {
-          "id": "V-Status-9",
-          "value": "SpecIF:LifecycleStatusValidated"
-        },
-        {
-          "id": "V-Status-7",
-          "value": "SpecIF:LifecycleStatusReleased"
-        },
-        {
-          "id": "V-Status-10",
-          "value": "SpecIF:LifecycleStatusWithdrawn"
+            "text": "SpecIF enumeration datatype definitions for domain 01-Base Definitions",
+            "language": "en",
+            "format": "plain"
         }
-      ],
-      "multiple": false,
-      "changedAt": "2021-02-21T08:59:00+02:00"
-    },
-    {
-      "id": "DT-Priority",
-      "title": "SpecIF:Priority",
-      "description": "Enumerated values for priority",
-      "revision": "1.0",
-      "replaces": [],
-      "type": "xs:enumeration",
-      "values": [
+    ],
+    "isExtension": false,
+    "createdAt": "2020-02-16T19:54:35.0432812+01:00",
+    "dataTypes": [
         {
-          "id": "V-Prio-0",
-          "value": "SpecIF:priorityHigh"
+            "id": "DT-LifeCycleStatus",
+            "title": "SpecIF:LifeCycleStatus",
+            "description": [
+                {
+                    "text": "Enumerated values for status"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:enumeration",
+            "values": [
+                {
+                    "id": "V-Status-0",
+                    "value": [
+                        {
+                            "text": "SpecIF:LifecycleStatusDeprecated"
+                        }
+
+                    ]
+                },
+                {
+                    "id": "V-Status-1",
+                    "value": [
+                        {
+                            "text": "SpecIF:LifecycleStatusRejected"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-Status-2",
+                    "value": [
+                        {
+                            "text": "SpecIF:LifecycleStatusInitial"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-Status-3",
+                    "value": [
+                        {
+                            "text": "SpecIF:LifecycleStatusDrafted"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-Status-4",
+                    "value": [
+                        {
+                            "text": "SpecIF:LifecycleStatusSubmitted"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-Status-5",
+                    "value": [
+                        {
+                            "text": "SpecIF:LifecycleStatusApproved"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-Status-8",
+                    "value": [
+                        {
+                            "text": "SpecIF:LifecycleStatusReady"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-Status-6",
+                    "value": [
+                        {
+                            "text": "SpecIF:LifecycleStatusDone"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-Status-9",
+                    "value": [
+                        {
+                            "text": "SpecIF:LifecycleStatusValidated"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-Status-7",
+                    "value": [
+                        {
+                            "text": "SpecIF:LifecycleStatusReleased"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-Status-10",
+                    "value": [
+                        {
+                            "text": "SpecIF:LifecycleStatusWithdrawn"
+                        }
+                    ]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2021-02-21T08:59:00+02:00"
         },
         {
-          "id": "V-Prio-1",
-          "value": "SpecIF:priorityRatherHigh"
+            "id": "DT-Priority",
+            "title": "SpecIF:Priority",
+            "description": [
+                {
+                    "text": "Enumerated values for priority"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:enumeration",
+            "values": [
+                {
+                    "id": "V-Prio-0",
+                    "value": [
+                        {
+                            "text": "SpecIF:priorityHigh"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-Prio-1",
+                    "value": [
+                        {
+                            "text": "SpecIF:priorityRatherHigh"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-Prio-2",
+                    "value": [
+                        {
+                            "text": "SpecIF:priorityMedium"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-Prio-3",
+                    "value": [
+                        {
+                            "text": "SpecIF:priorityRatherLow"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-Prio-4",
+                    "value": [
+                        {
+                            "text": "SpecIF:priorityLow"
+                        }
+                    ]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "V-Prio-2",
-          "value": "SpecIF:priorityMedium"
-        },
-        {
-          "id": "V-Prio-3",
-          "value": "SpecIF:priorityRatherLow"
-        },
-        {
-          "id": "V-Prio-4",
-          "value": "SpecIF:priorityLow"
+            "id": "DT-Discipline",
+            "title": "SpecIF:Discipline",
+            "description": [
+                {
+                    "text": "Enumerated values for engineering discipline"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:enumeration",
+            "values": [
+                {
+                    "id": "V-discipline-4",
+                    "value": [
+                        {
+                            "text": "SpecIF:DisciplineSystem"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-discipline-0",
+                    "value": [
+                        {
+                            "text": "SpecIF:DisciplineMechanics"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-discipline-1",
+                    "value": [
+                        {
+                            "text": "SpecIF:DisciplineElectronics"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-discipline-2",
+                    "value": [
+                        {
+                            "text": "SpecIF:DisciplineSoftware"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-discipline-3",
+                    "value": [
+                        {
+                            "text": "SpecIF:DisciplineSafety"
+                        }
+                    ]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2021-02-21T08:59:00+02:00"
         }
-      ],
-      "multiple": false,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "DT-Discipline",
-      "title": "Discipline",
-      "description": "Enumerated values for engineering discipline",
-      "revision": "1.0",
-      "replaces": [],
-      "type": "xs:enumeration",
-      "values": [
-        {
-          "id": "V-discipline-4",
-          "value": "SpecIF:DisciplineSystem"
-        },
-        {
-          "id": "V-discipline-0",
-          "value": "SpecIF:DisciplineMechanics"
-        },
-        {
-          "id": "V-discipline-1",
-          "value": "SpecIF:DisciplineElectronics"
-        },
-        {
-          "id": "V-discipline-2",
-          "value": "SpecIF:DisciplineSoftware"
-        },
-        {
-          "id": "V-discipline-3",
-          "value": "SpecIF:DisciplineSafety"
-        }
-      ],
-      "multiple": false,
-      "changedAt": "2021-02-21T08:59:00+02:00"
-    }
-  ],
-  "propertyClasses": [],
-  "resourceClasses": [],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "propertyClasses": [],
+    "resourceClasses": [],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

@@ -1,71 +1,115 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_D24239F3-DE44-4AB5-8765-5FE55158CEC9",
-  "title": "SpecIF enumeration datatype definitions for domain 01-Base Definitions",
-  "isExtension": true,
-  "createdAt": "2020-03-29T19:54:35.0432812+01:00",
-  "dataTypes": [
-    {
-      "id": "DT-RequirementType",
-      "title": "IREB:RequirementType",
-      "description": "Enumerated values for the Requirement type according IREB",
-      "revision": "1.0",
-      "replaces": [],
-      "type": "xs:enumeration",
-      "values": [
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_D24239F3-DE44-4AB5-8765-5FE55158CEC9",
+    "title": [
         {
-          "id": "V-RequirementType-0",
-          "value": "IREB:FunctionalRequirement"
-        },
-        {
-          "id": "V-RequirementType-1",
-          "value": "IREB:QualityRequirement"
-        },
-        {
-          "id": "V-RequirementType-2",
-          "value": "IREB:Constraint"
+            "text": "SpecIF enumeration datatype definitions for domain 01-Base Definitions"
         }
-      ],
-      "multiple": false,
-      "changedAt": "2021-02-21T08:59:00+02:00"
-    },
-    {
-      "id": "DT-Perspective",
-      "title": "Perspective",
-      "description": "Enumerated values for the perspective (of a requirement)",
-      "revision": "1.0",
-      "replaces": [],
-      "type": "xs:enumeration",
-      "values": [
+    ],
+    "isExtension": true,
+    "createdAt": "2020-03-29T19:54:35.0432812+01:00",
+    "dataTypes": [
         {
-          "id": "V-perspective-0",
-          "value": "IREB:PerspectiveBusiness"
+            "id": "DT-RequirementType",
+            "title": "IREB:RequirementType",
+            "description": [
+                {
+                    "text": "Enumerated values for the Requirement type according IREB"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:enumeration",
+            "values": [
+                {
+                    "id": "V-RequirementType-0",
+                    "value": [
+                        {
+                            "text": "IREB:FunctionalRequirement"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-RequirementType-1",
+                    "value": [
+                        {
+                            "text": "IREB:QualityRequirement"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-RequirementType-2",
+                    "value": [
+                        {
+                            "text": "IREB:Constraint"
+                        }
+                    ]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2021-02-21T08:59:00+02:00"
         },
         {
-          "id": "V-perspective-3",
-          "value": "IREB:PerspectiveStakeholder"
-        },
-        {
-          "id": "V-perspective-1",
-          "value": "IREB:PerspectiveUser"
-        },
-        {
-          "id": "V-perspective-4",
-          "value": "IREB:PerspectiveOperator"
-        },
-        {
-          "id": "V-perspective-2",
-          "value": "IREB:PerspectiveSystem"
+            "id": "DT-Perspective",
+            "title": "Perspective",
+            "description": [
+                {
+                    "text": "Enumerated values for the perspective (of a requirement)"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:enumeration",
+            "values": [
+                {
+                    "id": "V-perspective-0",
+                    "value": [
+                        {
+                            "text": "IREB:PerspectiveBusiness"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-perspective-3",
+                    "value": [
+                        {
+                            "text": "IREB:PerspectiveStakeholder"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-perspective-1",
+                    "value": [
+                        {
+                            "text": "IREB:PerspectiveUser"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-perspective-4",
+                    "value": [
+                        {
+                            "text": "IREB:PerspectiveOperator"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-perspective-2",
+                    "value": [
+                        {
+                            "text": "IREB:PerspectiveSystem"
+                        }
+                    ]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2021-02-21T08:59:00+02:00"
         }
-      ],
-      "multiple": false,
-      "changedAt": "2021-02-21T08:59:00+02:00"
-    },
-  ],
-  "propertyClasses": [],
-  "resourceClasses": [],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "propertyClasses": [],
+    "resourceClasses": [],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }
