@@ -273,7 +273,7 @@
       "required": [ "email" ]
     },
     "language": {
-      "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of the project. Is superseded by a resource's, statement's or property's language value.",
+      "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of the project. Is superseded by a resource's, statement's or property's language value. By default, 'en' is assumed.",
       "type": "string"
     },
     "dataTypes": {
