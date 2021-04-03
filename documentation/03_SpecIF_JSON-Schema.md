@@ -1,11 +1,10 @@
 ﻿# SpecIF JSON-Schema
 
-The SpecIF JSON-Schema describes the syntax of SpecIF data as a concrete instance of the SpecIF-Metamodel as descibed earlier in this specification.
+The SpecIF JSON-Schema describes the syntax of SpecIF data as a concrete instance of the SpecIF-Metamodel how it was described earlier in this specification.
 The JSON-Schema builds a platform-specific model, PSM following the OMG MDA approach.
- 
-The Schema follows the JSON-Schema standard defined here: http://json-schema.org/draft-04/schema#.
+ The Schema follows the JSON-Schema standard defined here: http://json-schema.org/draft-04/schema#.
 
-The schema definition file for SpecIF is available in the SpecIF GitHub repository under https://github.com/GfSE/SpecIF/blob/master/schema/specif.schema.json.
+The schema definition file for SpecIF is available under https://specif.de/v1.1/schema.json.
 
 ## SpecIF JSON example
 
@@ -14,10 +13,21 @@ Not all JSON-properties are set, but the SpecIF schema defines just a selection 
 
 ```json
 {
+    "$schema": "https://specif.de/v1.1/schema.json",
     "id": "_3555D75E_0344_4BDF_B127_2340C7F2BF9A",
-    "title": "Empty SpecIF file",
+    "title": [ 
+                {
+                    "text": "Empty SpecIF file",
+                    "format": "plain" 
+                    "language": "en",
+                },
+                {
+                    "text": "Eine leere SpecIF-Datei",
+                    "format": "plain" 
+                    "language": "de",
+                }
+             ],
     "isExtension": false,
-    "specifVersion": "1.0",
     "dataTypes": [],
     "resourceClasses": [],
     "statementClasses": [],
@@ -30,21 +40,27 @@ Not all JSON-properties are set, but the SpecIF schema defines just a selection 
 
 ## Definition elements and data elements
 
-The data and class definition in SpecIF is a cascading data structure: At first a data type is defined out of a set of primitive data types. The list below shows the available primitive data types based on the data types defined in XML-schemas (XSD):
+The data and class definition in SpecIF is a cascading data structure: At first a data type is defined out of a set of primitive data types. 
+The list below shows the available primitive data types based on the data types defined in XML-schemas (XSD):
 
-* *xs:string* - a text string
+* *xs:string* - a formatted or unformatted text string
 * *xs:boolean* - a boolean value
 * *xs:integer* - a number value
 * *xs:double* - a floating point number
 * *xs:enumeration* - an enumeration of values (list selection)
 * *xs:dateTime* - a date value
-* *xhtml* - XHTML formated content
 
-Based on these primitive data types, a SpecIF user can define *DataType* elements. These data types can be used as base for *PropertyClass*-definitions. The property class definitions can then be used to define *ResourceClass*- and *StatementClass*-definitions. Using this approach all kind of data representation can be defined in SpecIF.
+Based on these primitive data types, a SpecIF user can define *DataType* elements. 
+These data types can be used as base for *PropertyClass*-definitions. 
+The property class definitions can then be used to define *ResourceClass*- and *StatementClass*-definitions. 
+Using this approach all kind of data representation can be defined in SpecIF.
 
-The resources, statement, properties and hierarchies do instantiate the class definitions. A SpecIF-tool can automatically generate a property editor for a resource or statement element, because all necessary information is available in the class and data type definition elements. 
+The resources, statement, properties and hierarchies do instantiate the class definitions. 
+A SpecIF-tool can automatically generate a property editor for a resource or statement element, because all necessary information is available in the class and data type definition elements. 
 
-A reference to another SpecIF element is always expressed using the *Key* -helper-element. It contains the *id* and the *revision*-ID of the element to reference.
+A reference to another SpecIF element is always expressed using the *Key* -helper-element. 
+It contains the *id* and the *revision*-ID of the element to reference.
+If no *revision* is given, the element with the newest ``changedAt`` date shall be used.
 
 ## Definition elements
 
@@ -58,8 +74,14 @@ The JOSN-snippet below shows some data type definitions for non-enumeration type
 {
     "id": "DT-Boolean",
     "title": "Boolean",
-    "description": [],
-    "revision": "1",
+    "description": [
+        {
+            "text": "The Boolean data type.",
+            "format": "plain",
+            "language": "en"
+        }
+    ],
+    "revision": "1.1",
     "replaces": [],
     "type": "xs:boolean",
     "changedAt": "2016-05-26T08:59:00+02:00"
@@ -67,8 +89,14 @@ The JOSN-snippet below shows some data type definitions for non-enumeration type
 {
     "id": "DT-Byte",
     "title": "Byte",
-    "description": [],
-    "revision": "1",
+    "description": [
+        {
+            "text": "A byte is an integer value in range between 0 and 255.",
+            "format": "plain",
+            "language": "en"
+        }
+    ],
+    "revision": "1.1",
     "replaces": [],
     "type": "xs:integer",
     "minInclusive": 0,
@@ -78,8 +106,14 @@ The JOSN-snippet below shows some data type definitions for non-enumeration type
 {
     "id": "DT-Integer",
     "title": "Integer",
-    "description": [],
-    "revision": "1",
+    "description": [
+        {
+            "text": "A numerical integer value from -32768 to 32768.",
+            "format": "plain",
+            "language": "en"
+        }
+    ],
+    "revision": "1.1",
     "replaces": [],
     "type": "xs:integer",
     "minInclusive": -32768,
@@ -89,22 +123,110 @@ The JOSN-snippet below shows some data type definitions for non-enumeration type
 {
     "id": "DT-Real",
     "title": "Real",
-    "description": [],
-    "revision": "1",
+    "description": [
+        {
+            "text": "A floating point number (double).",
+            "format": "plain",
+            "language": "en"
+        }
+    ],
+    "revision": "1.1",
     "replaces": [],
     "type": "xs:double",
-    "fractionDigits": 5,
-    "minInclusive": -10000,
-    "maxInclusive": 10000,
+    "changedAt": "2021-02-14T08:59:00+02:00"
+},
+{
+    "id": "DT-Decimal2",
+    "title": "Real with 2 Decimals",
+    "description": [
+        {
+            "text": "A floating point number (double) with two fraction digits.",
+            "format": "plain",
+            "language": "en"
+        }
+    ],
+    "revision": "1.1",
+    "replaces": [],
+    "type": "xs:double",
+    "fractionDigits": 2,
+    "changedAt": "2021-02-14T08:59:00+02:00"
+},
+{
+    "id": "DT-DateTime",
+    "title": "Date or Timestamp",
+    "description": [
+        {
+            "text": "Date or Timestamp in ISO-Format",
+            "format": "plain",
+            "language": "en"
+        }
+    ],
+    "revision": "1.1",
+    "replaces": [],
+    "type": "xs:dateTime",
     "changedAt": "2016-05-26T08:59:00+02:00"
 },
 {
-    "id": "DT-FormattedText",
-    "title": "Formatted Text",
-    "description": [],
-    "revision": "1",
+    "id": "DT-ShortString",
+    "title": "String[256]",
+    "description": [
+        {
+            "text": "String with max. length 256",
+            "format": "plain",
+            "language": "en"
+        }
+    ],
+    "revision": "1.1",
     "replaces": [],
-    "type": "xhtml",
+    "type": "xs:string",
+    "maxLength": 256,
+    "changedAt": "2016-05-26T08:59:00+02:00"
+},
+{
+    "id": "DT-Text",
+    "title": "Plain or formatted Text",
+    "description": [
+        {
+            "text": "An account of the resource (source: http://dublincore.org/documents/dcmi-terms/). Descriptive text represented in plain or rich text using XHTML. SHOULD include only content that is valid and suitable inside an XHTML &lt;div&gt; element (source: http://open-services.net/).",
+            "format": "plain",
+            "language": "en"
+        }
+    ],
+    "revision": "1.1",
+    "replaces": [],
+    "type": "xs:string",
+    "changedAt": "2021-02-23T08:59:00+02:00"
+},
+{
+    "id": "DT-URL",
+    "title": "URL",
+    "description": [
+        {
+            "text": "A uniform resource locator.",
+            "format": "plain",
+            "language": "en"
+        }
+    ],
+    "revision": "1.1",
+    "replaces": [],
+    "type": "xs:string",
+    "maxLength": 1024,
+    "changedAt": "2016-05-26T08:59:00+02:00"
+},
+{
+    "id": "DT-EmailAddress",
+    "title": "E-mail",
+    "description": [
+        {
+            "text": "Data type to represent an E-mail address.",
+            "format": "plain",
+            "language": "en"
+        }
+    ],
+    "revision": "1.1",
+    "replaces": [],
+    "type": "xs:string",
+    "maxLength": 256,
     "changedAt": "2016-05-26T08:59:00+02:00"
 }
 ```
@@ -117,48 +239,109 @@ The following data type definitions show an example for an enumeration data type
 
 ```json
 {
-    "id": "DT-Status",
-    "title": "SpecIF:Status",
-    "description": "Enumerated values for status",
-    "revision": "1",
+    "id": "DT-LifeCycleStatus",
+    "title": "SpecIF:LifeCycleStatus",
+    "description": [
+        {
+            "text": "Enumerated values for status"
+        }
+    ],
+    "revision": "1.1",
     "replaces": [],
     "type": "xs:enumeration",
     "values": [
-    {
-        "id": "V-Status-0",
-        "title": "00_deprecated"
-    },
-    {
-        "id": "V-Status-1",
-        "title": "01_rejected"
-    },
-    {
-        "id": "V-Status-2",
-        "title": "10_initial"
-    },
-    {
-        "id": "V-Status-3",
-        "title": "20_drafted"
-    },
-    {
-        "id": "V-Status-4",
-        "title": "30_submitted"
-    },
-    {
-        "id": "V-Status-5",
-        "title": "40_approved"
-    },
-    {
-        "id": "V-Status-6",
-        "title": "60_completed"
-    },
-    {
-        "id": "V-Status-7",
-        "title": "80_released"
-    }
+        {
+            "id": "V-Status-0",
+            "value": [
+                {
+                    "text": "SpecIF:LifecycleStatusDeprecated"
+                }
+
+            ]
+        },
+        {
+            "id": "V-Status-1",
+            "value": [
+                {
+                    "text": "SpecIF:LifecycleStatusRejected"
+                }
+            ]
+        },
+        {
+            "id": "V-Status-2",
+            "value": [
+                {
+                    "text": "SpecIF:LifecycleStatusInitial"
+                }
+            ]
+        },
+        {
+            "id": "V-Status-3",
+            "value": [
+                {
+                    "text": "SpecIF:LifecycleStatusDrafted"
+                }
+            ]
+        },
+        {
+            "id": "V-Status-4",
+            "value": [
+                {
+                    "text": "SpecIF:LifecycleStatusSubmitted"
+                }
+            ]
+        },
+        {
+            "id": "V-Status-5",
+            "value": [
+                {
+                    "text": "SpecIF:LifecycleStatusApproved"
+                }
+            ]
+        },
+        {
+            "id": "V-Status-8",
+            "value": [
+                {
+                    "text": "SpecIF:LifecycleStatusReady"
+                }
+            ]
+        },
+        {
+            "id": "V-Status-6",
+            "value": [
+                {
+                    "text": "SpecIF:LifecycleStatusDone"
+                }
+            ]
+        },
+        {
+            "id": "V-Status-9",
+            "value": [
+                {
+                    "text": "SpecIF:LifecycleStatusValidated"
+                }
+            ]
+        },
+        {
+            "id": "V-Status-7",
+            "value": [
+                {
+                    "text": "SpecIF:LifecycleStatusReleased"
+                }
+            ]
+        },
+        {
+            "id": "V-Status-10",
+            "value": [
+                {
+                    "text": "SpecIF:LifecycleStatusWithdrawn"
+                }
+            ]
+        }
     ],
     "multiple": false,
-    "changedAt": "2016-05-26T08:59:00+02:00"
+    "changedAt": "2021-02-21T08:59:00+02:00"
 }
 ```
 
@@ -166,33 +349,52 @@ The following data type definitions show an example for an enumeration data type
    
 Property classes define the type and kind of a property. The property is the element in SpecIF containing the values of the PLM data. Resource and Statement elements contain a array of defined property instances to store the PLM values.
 
-The property class definitions are very important, because here the name reps. title of a property is defined. Properties are in principle key/value pairs representing data. The *title* JSON-property of the property class defines the key.
+The property class definitions are very important, because here the name reps. title of a property is defined. 
+Properties are in principle key/value pairs representing data. 
+The *title* JSON-property of the property class defines the term used for the property.
 
-The SpecIF standard also contains a standardized set of data type and class definitions. The properties are one integral part of a standardized vocabulary for the SpecIF data format (syntax) and the standardization allows the data exchange between different tools without manual data mapping. 
+The SpecIF standard also contains a standardized set of data type and class definitions. 
+The properties are one integral part of a standardized vocabulary for the SpecIF data format (syntax) and the standardization allows the data exchange between different tools without manual data mapping. 
 
-An example of property class definitions is given below:
+An example of property class definitions is given below. 
+If no ``format`` attribute is explicitly set, ``plain`` is used as default.
+
 ```json
 {
     "id": "PC-Name",
     "title": "dcterms:title",
-    "description": "<p>A name given to the resource. <small>(<i>source: <a href=\"http://dublincore.org/documents/dcmi-terms/\">DCMI</a></i>)</small></p><p>Title (reference: Dublin Core) of the resource represented as rich text in XHTML content. SHOULD include only content that is valid inside an XHTML &lt;span&gt; element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
-    "revision": "1",
+    "description": [
+        {
+            "text": "<p>A name given to the resource. <small>(<i>source: <a href=\"http://dublincore.org/documents/dcmi-terms/\">DCMI</a></i>)</small></p><p>Title (reference: Dublin Core) of the resource represented as rich text in XHTML content. SHOULD include only content that is valid inside an XHTML &lt;span&gt; element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
+            "format": "xhtml",
+            "language": "en"
+        }
+    ],
+    "revision": "1.1",
     "replaces": [],
     "dataType": {
         "id": "DT-ShortString",
-        "revision": "1"
+        "revision": "1.1"
     },
     "changedAt": "2016-05-26T08:59:00+02:00"
 },
 {
     "id": "PC-Description",
     "title": "dcterms:description",
-    "description": "<p>An account of the resource. <small>(<i>source: <a href=\"http://dublincore.org/documents/dcmi-terms/\">DCMI</a></i>)</small></p><p>Descriptive text (reference: Dublin Core) about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML &lt;div&gt; element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
-    "revision": "1",
+    "description": [
+        {
+            "text": "<p>An account of the resource. <small>(<i>source: <a href=\"http://dublincore.org/documents/dcmi-terms/\">DCMI</a></i>)</small></p><p>Descriptive text (reference: Dublin Core) about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML &lt;div&gt; element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
+            "format": "xhtml",
+            "language": "en"
+        }
+    ],
+
+    "revision": "1.1",
     "replaces": [],
+    "format": "xhtml",
     "dataType": {
-        "id": "DT-FormattedText",
-        "revision": "1"
+        "id": "DT-Text",
+        "revision": "1.1"
     },
     "changedAt": "2016-05-26T08:59:00+02:00"
 }
@@ -204,14 +406,19 @@ In the example you can see that as tile for the property with the ID *PC-Name* t
    
 Resource classes define the resource types used to store PLM data. A resource class contains similar to a property class a definition for a title value, defining the syntax. Also it defines a list of key elements pointing to the property classes to define which properties are available to store data values in a resource based on that resource class (JSON-property *propertyClasses*).
 
-An example resource class definition is shown below. The example shows the resource class defining the data structure to store a requirement element following the IREB recommendation.
+An example resource class definition is shown below. 
+The example shows the resource class defining the data structure to store a requirement element following the IREB recommendation.
 
 ```json
 {
     "id": "RC-Requirement",
     "title": "IREB:Requirement",
-    "description": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.",
-    "revision": "1",
+    "description": [
+        {
+            "text": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform."
+        }
+    ],
+    "revision": "1.1",
     "replaces": [],
     "icon": "&#8623;",
     "isHeading": false,
@@ -219,40 +426,40 @@ An example resource class definition is shown below. The example shows the resou
         "user"
     ],
     "propertyClasses": [
-    {
-        "id": "PC-VisibleId",
-        "revision": "1"
-    },
-    {
-        "id": "PC-Name",
-        "revision": "1"
-    },
-    {
-        "id": "PC-Description",
-        "revision": "1"
-    },
-    {
-        "id": "PC-Status",
-        "revision": "1"
-    },
-    {
-        "id": "PC-Priority",
-        "revision": "1"
-    },
-    {
-        "id": "PC-Perspective",
-        "revision": "1"
-    },
-    {
-        "id": "PC-Discipline",
-        "revision": "1"
-    },
-    {
-        "id": "PC-Type",
-        "revision": "1"
-    }
+        {
+            "id": "PC-VisibleId",
+            "revision": "1.1"
+        },
+        {
+            "id": "PC-Name",
+            "revision": "1.1"
+        },
+        {
+            "id": "PC-Description",
+            "revision": "1.1"
+        },
+        {
+            "id": "PC-RequirementType",
+            "revision": "1.1"
+        },
+        {
+            "id": "PC-Priority",
+            "revision": "1.1"
+        },
+        {
+            "id": "PC-LifeCycleStatus",
+            "revision": "1.1"
+        },
+        {
+            "id": "PC-Perspective",
+            "revision": "1.1"
+        },
+        {
+            "id": "PC-Discipline",
+            "revision": "1.1"
+        }
     ],
-    "changedAt": "2016-05-26T08:59:00+02:00"
+    "changedAt": "2021-02-22T08:59:00+02:00"
 }
 ```
 ### Statement Classes
@@ -264,23 +471,27 @@ The following example of a statement class definition defines a statement that c
 {
     "id": "SC-refines",
     "title": "IREB:refines",
-    "description": "The subject requirement refines the object requirement.",
-    "revision": "1",
+    "description": [
+        {
+            "text": "The subject requirement refines the object requirement."
+        }
+    ],
+    "revision": "1.1",
     "replaces": [],
     "instantiation": [
         "user"
     ],
     "subjectClasses": [
-    {
-        "id": "RC-Requirement",
-        "revision": "1"
-    }
+        {
+            "id": "RC-Requirement",
+            "revision": "1.1"
+        }
     ],
     "objectClasses": [
-    {
-        "id": "RC-Requirement",
-        "revision": "1"
-    }
+        {
+            "id": "RC-Requirement",
+            "revision": "1.1"
+        }
     ],
     "changedAt": "2016-05-26T08:59:00+02:00"
 }
@@ -295,64 +506,71 @@ SpecIF-properties defined for a resource or statement are stored inside a resour
 
 Resources are the nodes in a SpecIF data set graph. The contain the concrete data values. All elements, that are no relations resp. connectors between elements are represented as resources in SpecIF.
 
-The following example shows a resource representing a requirement element:
+The following example shows a resource representing a requirement element.
+In the description property value the attributes for ``format`` and ``language`` are not explicitly set. 
+So the default values are used: English as default language and the format defined in the *PropertyClass* of the Property. 
+
+The property values with representing textual content are using the *MultilanguageText* data structure. 
+The status value, defined as enumeration uses a string with the ``EnumerationValue`` identifier (id).
 
 ```json
 {
     "id": "_73392B3D_CF8F_4ac0_BC77_E6A2C9415EF4",
     "revision": "F16C40BE-DFC4-46BB-85C4-FDF9433F8E73",
     "replaces": [],
-    "title": "Login",
     "class": {
         "id": "RC-Requirement",
-        "revision": "1"
+        "revision": "1.1"
     },
-    "description": [],
     "properties": [
         {
-            "id": "_73392B3D_CF8F_4ac0_BC77_E6A2C9415EF4_NAME",
-            "revision": "F16C40BE-DFC4-46BB-85C4-FDF9433F8E73",
-            "replaces": [],
-            "title": "dcterms:title",
-            "value": "Login",
-            "description": [],
+            "values": [
+                [
+                    {
+                        "text" : "Login",
+                        "format" : "plain",
+                        "language" : "en"
+                    },
+                    {
+                        "text" : "Benutzeranmeldung",
+                        "format" : "plain",
+                        "language" : "de"
+                    },
+                ]
+            ],
             "class": {
                 "id": "PC-Name",
-                "revision": "1"
-            },
-            "changedAt": "2019-03-07T11:16:21",
-            "changedBy": "oa"
+                "revision": "1.1"
+            }
         },
         {
-            "id": "_73392B3D_CF8F_4ac0_BC77_E6A2C9415EF4_NOTES",
-            "revision": "F16C40BE-DFC4-46BB-85C4-FDF9433F8E73",
-            "replaces": [],
-            "title": "dcterms:description",
-            "value": "The system shall provide the user with the ability to login.",
-            "description": [],
+            "values": [
+                [
+                    {
+                        "text" : "The system shall provide the user with the ability to login."
+                    },
+                    {
+                        "text" : "Das System muss dem Benutzer die Möglichkeit bieten sich anzumelden.",
+                        "language" : "de"
+                    }
+                ]
+            ],
             "class": {
                 "id": "PC-Description",
-                "revision": "1"
-            },
-            "changedAt": "2019-03-07T11:16:21",
-            "changedBy": "oa"
+                "revision": "1.1"
+            }
         },
         {
-            "id": "_73392B3D_CF8F_4ac0_BC77_E6A2C9415EF4_STATUS",
-            "revision": "1",
-            "replaces": [],
-            "title": "SpecIF:Status",
-            "value": "V-Status-5",
-            "description": [],
+            "values": [ 
+                "V-Status-5" 
+            ],
             "class": {
-                "id": "PC-Status",
-                "revision": "1"
-            },
-            "changedAt": "2019-03-07T11:16:21",
-            "changedBy": "oa"
+                "id": "PC-LifecycleStatus",
+                "revision": "1.1"
+            }
         }
     ],
-    "changedAt": "2019-03-07T11:16:21",
+    "changedAt": "2021-03-07T11:16:21",
     "changedBy": "oa"
 }
 ```
@@ -370,11 +588,9 @@ The following example shows a statement example. This statement has no propertie
     "id": "_2186cb8d_390f_427c_9df3_a9756763b6ed",
     "revision": "820BFEE3-5808-4395-A0C2-F11E27FAFE59",
     "replaces": [],
-    "title": "SpecIF:contains",
-    "description": [],
     "class": {
         "id": "SC-contains",
-        "revision": "1"
+        "revision": "1.1"
     },
     "subject": {
         "id": "_7BBB98BF_6966_46cd_A2B4_677B15CEC761",
@@ -385,7 +601,7 @@ The following example shows a statement example. This statement has no propertie
         "revision": "E6F0C4F3-6939-4A82-B4D9-2E48B702B8A6"
     },
     "properties": [],
-    "changedAt": "2019-05-31T15:13:54.0813277+02:00",
+    "changedAt": "2021-03-29T15:13:54.0813277+02:00",
     "changedBy": "oa"
 }
 ``` 
@@ -404,7 +620,11 @@ The following example shows the application of nodes to create a hierarchy:
       "revision": "60BF9E2F-D684-481B-B7A3-4C401DBE7762",
       "replaces": [],
       "title": [],
-      "description": "Requirement specification",
+      "description": [
+          {
+              "text" : "Requirement specification"
+          }
+      ],
       "resource": {
           "id": "_5D647B1D_D622_4a45_90EB_5FC6ECCD405C",
           "revision": "F583802E-FE82-4D10-BCBF-1B387C04A84C"
@@ -415,7 +635,11 @@ The following example shows the application of nodes to create a hierarchy:
           "revision": "F583802E-FE82-4D10-BCBF-1B387C04A84C",
           "replaces": [],
           "title": [],
-          "description": "Element: Introduction",
+          "description": [
+              {
+                  "text" : "Element: Introduction"
+              }
+          ],
           "resource": {
               "id": "_7BBB98BF_6966_46cd_A2B4_677B15CEC761",
               "revision": "0D737A07-8DFE-4502-958A-04BBF1B0B16F"
@@ -426,7 +650,11 @@ The following example shows the application of nodes to create a hierarchy:
               "revision": "00875EE1-7491-4AD9-92D1-27B377FCFDCD",
               "replaces": [],
               "title": [],
-              "description": "Element: Login",
+              "description": [
+                  {
+                      "text" : "Element: Login"
+                  }
+              ],
               "resource": {
                   "id": "_73392B3D_CF8F_4ac0_BC77_E6A2C9415EF4",
                   "revision": "F16C40BE-DFC4-46BB-85C4-FDF9433F8E73"
@@ -439,7 +667,7 @@ The following example shows the application of nodes to create a hierarchy:
         }
       ],
       "changedAt": "2019-05-31T15:13:53.8253311+02:00"
-    }
-  ]
-}
+   }
+]
+
 ``` 
