@@ -17,14 +17,14 @@ Not all JSON-properties are set, but the SpecIF schema defines just a selection 
     "id": "_3555D75E_0344_4BDF_B127_2340C7F2BF9A",
     "title": [ 
                 {
-                    "text" : "Empty SpecIF file",
-                    "format" : "plain" 
-                    "language" : "en",
+                    "text": "Empty SpecIF file",
+                    "format": "plain", 
+                    "language": "en"
                 },
                 {
-                    "text" : "Eine leere SpecIF-Datei",
-                    "format" : "plain" 
-                    "language" : "de",
+                    "text": "Eine leere SpecIF-Datei",
+                    "format": "plain", 
+                    "language": "de"
                 }
              ],
     "isExtension": false,
