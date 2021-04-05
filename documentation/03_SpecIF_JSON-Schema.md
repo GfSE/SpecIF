@@ -671,3 +671,29 @@ The following example shows the application of nodes to create a hierarchy:
 ]
 
 ``` 
+
+## Files
+
+SpecIF allows - beside the usage of JSON - the storage of native files as additional data.
+For that purpose the SpecIF-schema defines a data structure to describe and manage these files.
+The data structure contains an URL value to define the access path to the file. 
+The URL can be defined absolute or relative to the SpecIF data where the file description is included.
+If the URL is missing, the title applies.
+
+```json
+{
+    "id": "_9DCD9463_74E4_49B8_8C63_0E0877CDD47E",
+    "revision": "95C00759-5CB5-49CF-B2AE-174B2C938730",
+    "replaces": [],
+    "title": "SystemArchitecture.png",
+    "description": [
+        {
+            "text": "The logical system architecture as PNG image."
+        }
+    ],
+    "url": "./files_and_images/SystemArchitecture.png",
+    "type": "image/png",
+    "changedAt": "2021-03-30T13:13:53.8253311+02:00",
+    "changedBy": "oa" 
+}
+```
