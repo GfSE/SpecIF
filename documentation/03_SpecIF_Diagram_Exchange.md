@@ -1,33 +1,44 @@
-﻿# SpecIF Diagram Exchange with SVG
+﻿# SpecIF Diagram Exchange using SVG
 
-Diagram exchange is an essential concept of SpecIF to achieve the goal of data interchange in the entire PLM lifecycle where different tools are used that create data containing diagram drwawings.
+Diagram exchange is an essential concept of SpecIF to achieve the goal of data interchange in the entire PLM life-cycle where different tools are used that create data
+containing diagram drawings.
+To achieve this the Scalable Vector Graphics format (SVG) is used to define diagram information.
+SVG is a standardized format, defined by the W3C to represent (2D) graphical information as vector graphics using an XML-based format.
 
-The SpecIF standard defines some additional XML tags and attributes to include semantic diagram information into SVG graphics as SVG metadata. 
-Also SpecIF (re-)uses some tags defined in the OMG standard for Diagram Definition (DD) (OMG No.: formal/2015-06-01).
+The SpecIF standard defines some additional XML-tags and attributes to include semantic diagram information into SVG graphics as SVG metadata. 
+For this purpose SpecIF (re-)uses some tags defined in the OMG standard for Diagram Definition (DD) (OMG No.: formal/2015-06-01).
 
-## XML manespaces in SVG
+So the resulting SVG data consists of the graphical diagram information, represented as SVG graphics. 
+Such a SVG can be shown with each SVG viewer (e.g. a web browser), so that a user can simply view the diagram.
+Beside the SVG information, some SpecIF-specific meta-information is added to the SVG data.
+With this information, a semantical diagram exchange (export/import) between different modeling tools implementing SpecIF is possible.
+Typical meta-information are coordinates of the diagram nodes and edges and references to the SpecIF-resources and -statements shown in the diagram.  
 
-To differ the tags defined by SpecIF, SVG and OMG Diagram Definition the concept of XML-manespaces is used. 
-The following namespaces are relevant for SpecIF-SVG diagram exchange:
+## XML namespaces in SVG
 
-* xmlns:specif="https://specif.de/schema/v1.1/DI"
-* xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
-* xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+To differ the tags defined by SpecIF, SVG and OMG Diagram Definition the concept of the XML-namespaces is used. 
+The following namespaces are relevant for SpecIF-SVG diagram exchange, defined by SpecIF and re-used from OMG diagram interchange (di) and diagram common (dc) standards.
+
+* ```xmlns:specif="https://specif.de/schema/v1.1/DI"```
+* ```xmlns:di="http://www.omg.org/spec/DD/20100524/DI"``` - [OMG Diagram Interchange v1.0](https://www.omg.org/spec/UMLDI/1.0/PDF)
+* ```xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"``` - [OMG Diagram Definition v1.1](https://www.omg.org/spec/DD/1.1/PDF)
 
 The namespaces and the used SVG version must be declared in the outermost tag (Tagname: *svg*) of the SVG XML-structure. 
 Example:
 
-    <svg xmlns:di="http://www.omg.org/spec/DD/20100524/DI"  
-         xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" 
-         xmlns="http://www.w3.org/2000/svg"
-         xmlns:specif="https://specif.de/schema/v1.1/DI"
-         version="1.1"
-         ...
-         >
+```xml
+<svg xmlns:di="http://www.omg.org/spec/DD/20100524/DI"  
+     xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" 
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:specif="https://specif.de/schema/v1.1/DI"
+     version="1.1"
+     ...
+     >
+```
 
 The tags defined by SpecIF are defined by a XML-schema definition with the namespace URI https://specif.de/schema/v1.1/DI. 
 Tags reused from the OMG diagram exchange specifications are defined in the other two namespaces.
-SVG builds typically the standard namespace, so each XML-tag without an explicit namespace setting is a SVG-tag.
+SVG 1.1 builds typically the standard namespace, so each XML-tag without an explicit namespace setting is a SVG-tag.
   
 ## Embedding SpecIF-SVG data into Resource-Elements
 
@@ -39,14 +50,14 @@ The property value is able to store formatted XHTML-data.
 To include the diagram in a SpecIF data set, two possible ways are available:
 
 1.  Embedd the SVG or a binary graphic data format directly into the XHTML as XML resp. base64-encoded image data.
-2.  Store the diagram data in a seperate file and include a image-reference (*img*-tag) to the XHTML property vale.
+2.  Store the diagram data in a separate file and include a image-reference (*img*-tag) to the XHTML property value.
   
-The usage of SVG with metadata should be the prefered way in embedding diagram information in SpecIF. 
+The usage of SVG with metadata should be the preferred way in embedding diagram information in SpecIF. 
 By using binary graphic formats you loose the possibility of metadata and you can not exchange the diagram information semantically, but only graphically. 
 
 ## Coordinate system
 
-The SpecIF-conformant SVG graphics follows the definition of the SVG and the OMG Diagram Definiton standard. 
+The SpecIF-conform SVG graphics follows the definition of the SVG and the OMG Diagram Definiton standard. 
 The x-axis is horizontal and its coordinate values increases to the right with negative coordinates allowed. 
 Similarly, the y-axis is vertical and its coordinate values increases to the bottom with negative coordinates allowed. 
 
@@ -54,100 +65,187 @@ Similarly, the y-axis is vertical and its coordinate values increases to the bot
 
 ## SVG structure and grouping
 
-TO BE REWORKED...
-
-The SVG standard defines the concept of groups. 
+To structure SVG data in a hierarchical way, the SVG standard defines the concept of groups. 
 A group can contain further groups as child elements and/or a set of graphical elements like circles, rectangles or lines. 
-A SVG diagram that follows the SpecIF standard defines one SVG group for the entire diagram as outermost element. 
-Inside these diagram group, a list of children define the graphical visualization elements for resources and statements. 
-Also these children are group elements. 
-So for each resource and statement, that is visible on the graphics a SVG group is definied.
+
+A SVG diagram that follows the SpecIF standard shall use the following structure using SVG groups:
+
+* One SVG group represents the entire diagram as outermost element. 
+* Inside these diagram group, a list of child groups define the graphical visualization elements for resources and statements. 
+So for each resource and statement, that is visible on the graphics a SVG group is defined.
 
 ![Principle of the SpecIF SVG grouping](./images/DiagramGrouping.png)
 
 The image above shows the principle. 
 The big box around is the group of the entire diagram. 
-Inside we have three child groups for the three contained elements: Two boxes, named with 1 and 2, and one connector, named with 3. 
+Inside we have three children in form of SVG-groups for the three contained elements: Two boxes, named with 1 and 2, and one connector, named with 3. 
 
-In the SVG we will use always the following group structure for SpecIF diagram interchange example:
+In the SVG we will use always the following group structure for SpecIF diagram interchange example. 
+Inside each group graphical SVG standard elements can be included to define the diagram as visible SVG graphics.
+Beside the graphical definitions each group should contain a set of semantic diagram exchange information, included inside the SVG *metadata* tags.  
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <svg xmlns:di="http://www.omg.org/spec/DD/20100524/DI" 
-         xmlns:specif="https://specif.de/schema/v1.0/DI" 
-         xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" 
-         width="1322" height="1134" version="1.1" 
-         xmlns="http://www.w3.org/2000/svg">
-      <g class="specif-diagram">
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns:di="http://www.omg.org/spec/DD/20100524/DI" 
+        xmlns:specif="https://specif.de/schema/v1.0/DI" 
+        xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" 
+        width="1322" height="1134" version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+    <g class="specif-diagram">
+    <metadata>
+        ... <!-- metadata for semantically diagram interchange -->
+    </metadata>
+    <g class="specif-resource-diagram-element"  >
         <metadata>
             ... <!-- metadata for semantically diagram interchange -->
         </metadata>
-        <g class="specif-resource-diagram-element"  >
-          <metadata>
-              ... <!-- metadata for semantically diagram interchange -->
-          </metadata>
-          ... <!-- graphical definition of the resource -->
-        </g>
-        ... <!-- more diagram elements -->
-        <g class="specif-statement-diagram-element">
-          <metadata>
-              ... <!-- metadata for semantically diagram interchange -->
-          </metadata>
-          ...  <!-- graphical definition of the statement -->
-        </g>
-      </g>
-    </svg>
+        ... <!-- SVG definition of the resource -->
+    </g>
+    ... <!-- more diagram elements -->
+    <g class="specif-statement-diagram-element">
+        <metadata>
+            ... <!-- metadata for semantically diagram interchange -->
+        </metadata>
+        ...  <!-- SVG definition of the statement -->
+    </g>
+    </g>
+</svg>
+```
 
 The sequence of the group elements determine the drawing order. 
 So the top-most element shall be defined with the last group-child. 
-In the example the drawing is done in the sequence: diagram, 1, 2, 3
+
+In the example the drawing is done in the sequence: diagram, element #1, element #2, connector #3
 
 ## SpecIF diagram exchange metadata
 
-TO BE REWORKED...
+To enable the navigation from SVG to the resource and statement data and to include some additional semantic information to SVG, 
+the SpecIF standard defines tags to be included in the metadata of the SVG group elements (&lt;g&gt;)
 
-To enable the navigation from SVG to the resource and statement data and to include some additional semantic information to SVG, the SpecIF standard defines tags to be included in the metadata of the SVG group elements (&lt;g&gt;)
-
-For declaring groups as diagram elements representing resources, statements or the entire diagram, the ``class`` attribute of the group tag is set to the following values:
+For declaring groups representing resources, statements or the entire diagram, the ``class``-attribute of the group tag is set to the following values:
 
 * ``specif-diagram`` for the root-group, representing the entire diagram
 * ``specif-resource-diagram-element`` for a group defining the visualization of a SpecIF resource - child of specif-diagram group.
 * ``specif-statement-diagram-element`` for a group defining the visualization of a SpecIF statement - child of specif-diagram group.
- 
-In the SVG-group defining the graphical representation of a Resource, a tag called ``resourceDiagramElement`` is used to define a reference to the Resource elemenet.
-The tag has an attribute to reference the ID of a Resource and an attribute to reference the revision of the Resource. The revision reference attribute may be empty. In that case the newest revision of the resource is referenced.
-    
-    <g class="specif-resource-diagram-element">
-      <metadata>
-        <specif:resourceDiagramElement idRef="_2290801A_126B_499d_B607_F78D0FB4D822" revisionRef="79dc4f81cc4081ca982d191b2ed44e3564582cb1">
-          <dc:Bounds x="365" y="363" width="570" height="398" />
-        </specif:resourceDiagramElement>
-      </metadata>
-      ...
 
-Inside the resourceDiagramElement-tag a Bounds-tag definig the coordinates and boundaries of the graphical representation is mandatory. The Bounds-tag is reused from the OMG Diagram Definition standard. 
+### References to data elements
+ 
+In the SVG-group defining the graphical representation of a Resource, a tag called ``resourceDiagramElement`` is used to define a reference to the Resource element.
+The tag has an attribute to reference the ID of a Resource and an attribute to reference the revision of the Resource. 
+The revision reference attribute may be empty. 
+In that case the newest revision of the resource is referenced.
+    
+The tags to define a reference to a SpecIF resource or statement are called:
+
+* ```specif:resourceReference ``` for references to resources
+* ```specif:statementReference ``` for references to statements
+* ```specif:sourceResourceReference``` for a reference to a resource used as a connector source
+* ```specif:targetResourceReference``` for a reference to a resource used as a connector target
+
+## The tags specif:shape and specif:edge
+
+All elements in modeling tools are typically graphical data consisting of nodes and edges. 
+The nodes can have different kinds of shape.
+
+To represent these elements semantically in SpecIF as SVG metadata the tags ```specif:shape``` for nodes and ```specif:edge``` for
+connectors are defined. 
+Inside these metadata elements, the semantic information in form of references to SpecIF data elements and graphical coordinates and drawing information is included.
+
+### Diagram metadata
+
+To represent the metadata for the entire diagram, the following structure is used:
+
+```xml
+<g class="specif-diagram">
+       <metadata>
+            <specif:shape>
+                <specif:resourceReference id="_BF30DD09_E13E_451b_B210_786F93A74936"
+                                          revision="87acec461201406dc2b54e25f4a1f436a6763d41" />
+                <dc:Bounds x="0" y="0" width="537" height="1134" />
+            </specif:shape>
+        </metadata>
+       ... <!-- groups specifying the elements and connectors, visible on the diagram -->
+</g>
+``` 
+
+* The group is tagged with the class attribute *specif-diagram*
+* The metadata of the group contains a *specif:shape* child tag
+* Inside the shape tag a *specif:resourceReference*  points to the SpecIF data element, that represents the diagram
+* The diagram coordinates and width and height are expressed using a *dc:Bounds*-tag
+
+### Element metadata
+
+To represent the metadata for a diagram element (node), the following structure is used:
+
+```xml
+<g class="specif-resource-diagram-element">
+    <metadata>
+        <specif:shape>
+            <specif:resourceReference id="_65624FBC_FE08_4dad_971E_5D26EF996570" 
+                                      revision="5d3656420cdeb3e4a88dd9927236dbdc23a9b946" />
+            <dc:Bounds x="100" y="210" width="100" height="80" />
+        </specif:shape>
+    </metadata>
+    ... <!-- graphical SVG data -->
+</g>
+```
+
+* The group defining the element is tagged with the class attribute *specif-resource-diagram-element*
+* The metadata of the group contains a *specif:shape* child tag
+* Inside the shape tag a *specif:resourceReference*  points to the SpecIF data element, that represents the resource visualized on the diagram
+* The element coordinates, width and height are expressed using a *dc:Bounds*-tag
+
+### Connector metadata
+
+To represent the metadata for a diagram connector (edge), the following structure is used:
 
 For a statement the following metadata structure is used, defining a SpecIF-specific tag called ``statementDiagramElement``:
 
-    <g class="specif-statement-diagram-element">
-      <metadata>
-        <specif:statementDiagramElement idRef="_FE3E03B7_5CB9_4371_BE9F_699C78CC410E" revisionRef="79dc4f81cc4081ca982daaab2ed44e3564582cb1" layoutStyle="bezier">
-          <di:waypoint x="403" y="271" />
-          <di:waypoint x="72" y="271" />
-          <di:waypoint x="72" y="330" />
-        </specif:statementDiagramElement>
-      </metadata>
-      ...
+```xml
+<g class="specif-statement-diagram-element">
+    <metadata>
+        <specif:edge direction="unidirectional"
+                     layoutStyle="rounded">
+            <specif:statementReferences>
+                <specif:statementReference id="_AE57392_ABD3_451b_B210_786F93A74936"
+                                           revision="87acec461201406dc2b54e25f4a1f436a6763d41">
+                <specif:resourceReference id="_BF30DD09_E13E_451b_B210_786F93A74936"
+                                          revision="87acec461201406dc2b54e25f4a1f436a6763d41" />
+            </specif:statementReferences>
 
-The sub-tags of the statementDiagramElement-tag are waypoint tags. They define the coordinates of the connector in the diagram from start to end. 
-If the connector is not a direct line, the waypoints of the connector are the start points, the points in between and the end point. 
-So each connector has two or more waypoints defined.
+            <specif:sourceResourceReference id="_E64C5208_A8DF_45a5_B022_85C853722664" 
+                                            revision="5d3656420cdeb3e4a88dd9927236dbdc23a9b946" />
+            <specif:targetResourceReference id="_3EFC0279_A6F2_48c8_9F48_13C05288DBA6" 
+                                            revision="b6d540498c1d3720addf7714545543b3835cfc96" />
+            <di:waypoints>
+                <di:Waypoint x="238" y="105" />
+                <di:Waypoint x="407" y="105" />
+            </di:waypoints>
+        </specif:edge>
+    </metadata>
+    ... <!-- graphical SVG data -->
+</g>
+```
 
-The reference to the statement is done similar as the reference to a resource element using the unique IDs for ID and optional for revision.
+* The group defining the connection is tagged with the class attribute *specif-statement-diagram-element*
+* The metadata of the group contains a *specif:edge* child tag
+* Inside the edge tag the following child tags can be present:
+  * A *specif:statementReferences*-tag containing a set of *statementReference*- and/or *resourceReference*-tags. A connector on a diagram can represent in some special cases more than on SpecIF data element, so it is possible to define a set of references here.
+  * A *specif:sourceResourceReference*-tag referencing the connector source SpecIF resource data element
+  * A *specif:targetResourceReference*-tag referencing the connector target SpecIF resource data element
+  * A diagram interchange waypoint collection to define the graphical coordinates of the visualized connector. It contains always at least the start and end coordinate and optional some supporting points in between
 
-An optional attribute ```layoutStyle`` defines the connector layout style:
+The *specif:edge*-tag can have two optional attributes: ```direction``` and ```layoutStyle```.
 
-* If the attribute is missing, the connector is drawn as a path of direct lines using the cooredinates defined by the waypoint tags. 
-* ``bezier`` The connector is drawn as bezier curve
-* ``rounded`` The corners of the connector in the waypoints inbetween start and end are connected rounded 
+The attribute *direction* defines the connector direction. Allowed values are:
 
+*  ```unidirectional``` - The connector is directed from source to target.
+*  ```bidirectional``` - The connector is bi-directional.
+*  If the attribute is missing (not set), the connector has no direction.
+
+The attribute *layoutStyle* specifies the layout style of the connector. Allowed valuies are:
+
+* ``bezier`` The connector is drawn as Bezier curve
+* ``rounded`` The corners of the connector in the waypoints in between start and end are connected rounded 
+* If the attribute is missing (not set), the connector is drawn as a path of direct lines using the coordinates defined by the waypoint tags. 
 
