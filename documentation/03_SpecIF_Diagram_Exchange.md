@@ -92,22 +92,23 @@ Beside the graphical definitions each group should contain a set of semantic dia
         width="1322" height="1134" version="1.1" 
         xmlns="http://www.w3.org/2000/svg">
     <g class="specif-diagram">
-    <metadata>
-        ... <!-- metadata for semantically diagram interchange -->
-    </metadata>
-    <g class="specif-resource-diagram-element"  >
         <metadata>
             ... <!-- metadata for semantically diagram interchange -->
         </metadata>
-        ... <!-- SVG definition of the resource -->
-    </g>
-    ... <!-- more diagram elements -->
-    <g class="specif-statement-diagram-element">
-        <metadata>
-            ... <!-- metadata for semantically diagram interchange -->
-        </metadata>
-        ...  <!-- SVG definition of the statement -->
-    </g>
+        <g class="specif-resource-diagram-element"  >
+            <metadata>
+                ... <!-- metadata for semantically diagram element interchange -->
+            </metadata>
+            ... <!-- SVG definition of the resource -->
+        </g>
+        ... <!-- more diagram elements -->
+        <g class="specif-statement-diagram-element">
+            <metadata>
+                ... <!-- metadata for semantically diagram connector interchange -->
+            </metadata>
+            ...  <!-- SVG definition of the statement -->
+        </g>
+        ... <!-- more diagram connectors -->
     </g>
 </svg>
 ```
