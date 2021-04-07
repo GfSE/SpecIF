@@ -1,10 +1,11 @@
 ## Domain 01: Base Definitions
 
 ### Data types of domain 01: Base Definitions
+
 |title|id|revision|type|description|
-|-|-|-|-|
-|Boolean|DT-Boolean|1.1|xs:boolean|The Boolean data type.
-|Byte|DT-Byte|1.1|xs:integer|A byte is an integer value in range between 0 and 255.
+|-|-|-|-|-|
+|Boolean|DT-Boolean|1.1|xs:boolean|The Boolean data type.|
+|Byte|DT-Byte|1.1|xs:integer|A byte is an integer value in range between 0 and 255.|
 |Integer|DT-Integer|1.1|xs:integer|A numerical integer value from -32768 to 32768.
 |Real|DT-Real|1.1|xs:double|A floating point number (double).
 |Real with 2 Decimals|DT-Decimal2|1.1|xs:double|A floating point number (double) with two fraction digits.
@@ -62,7 +63,7 @@
 
 ### Data types of domain 02: Requirements Engineering
 |title|id|revision|type|description|
-|-|-|-|-|
+|-|-|-|-|-|
 |IREB:RequirementType|DT-RequirementType|1.1|xs:enumeration|<p>Enumerated values for the Requirement type according IREB</p><ul><li>IREB:FunctionalRequirement [V-RequirementType-0]</li><li>IREB:QualityRequirement [V-RequirementType-1]</li><li>IREB:Constraint [V-RequirementType-2]</li></ul>
 |Perspective|DT-Perspective|1.1|xs:enumeration|<p>Enumerated values for the perspective (of a requirement)</p><ul><li>IREB:PerspectiveBusiness [V-perspective-0]</li><li>IREB:PerspectiveStakeholder [V-perspective-3]</li><li>IREB:PerspectiveUser [V-perspective-1]</li><li>IREB:PerspectiveOperator [V-perspective-4]</li><li>IREB:PerspectiveSystem [V-perspective-2]</li></ul>
 |IREB:RequirementType|DT-RequirementType|1.1|xs:enumeration|<p>Enumerated values for the Requirement type according IREB</p><ul><li>IREB:FunctionalRequirement [V-RequirementType-0]</li><li>IREB:QualityRequirement [V-RequirementType-1]</li><li>IREB:Constraint [V-RequirementType-2]</li></ul>
@@ -88,7 +89,7 @@
 
 ### Data types of domain 03: Model Integration
 |title|id|revision|type|description|
-|-|-|-|-|
+|-|-|-|-|-|
 |SpecIF:VisibilityKind|DT-VisibilityKind|1.1|xs:enumeration|<p>Enumerated values for visibility</p><ul><li>UML:Public [V-VisibilityKind-0]</li><li>UML:Private [V-VisibilityKind-1]</li><li>UML:Protected [V-VisibilityKind-2]</li><li>UML:Package [V-VisibilityKind-3]</li><li>UML:Internal [V-VisibilityKind-4]</li><li>UML:ProtectedInternal [V-VisibilityKind-5]</li></ul>
 |SpecIF:VisibilityKind|DT-VisibilityKind|1.1|xs:enumeration|<p>Enumerated values for visibility</p><ul><li>UML:Public [V-VisibilityKind-0]</li><li>UML:Private [V-VisibilityKind-1]</li><li>UML:Protected [V-VisibilityKind-2]</li><li>UML:Package [V-VisibilityKind-3]</li><li>UML:Internal [V-VisibilityKind-4]</li><li>UML:ProtectedInternal [V-VisibilityKind-5]</li></ul>
 ### Resource classes of domain 03: Model Integration
