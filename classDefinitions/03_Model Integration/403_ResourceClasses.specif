@@ -222,7 +222,7 @@
             ],
             "revision": "1.1",
             "replaces": [],
-            "icon": "&#11034;",
+            "icon": "&#128447;",
             "isHeading": false,
             "instantiation": [
                 "auto"
