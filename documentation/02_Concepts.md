@@ -225,14 +225,62 @@ without the effort of manual mapping data types and property types when exportin
 
 ## Semantic model-data integration using the Fundamental Modeling Concepts
 
-Tbd.
+Few methods span all needed aspects of a complex system. 
+In large organizations, business process management, IT architecture management and requirement management, all being
+recognized fields of specialization and expertise, use different methods and tools. 
+The fact is equally apparent in mechatronic system development, where mechanical, electrical and
+software engineers are designing a common system with their respective methods. 
+Design alternatives should be discussed and weighted in a common effort of all disciplines. 
+But how to document the results? An overarching modeling approach is needed: Different models must be semantically integrated.
 
-## Application Guides
+It is no viable approach to ask all stakeholders to use the same method or even the same tool. 
+Our approach keeps the proven methods and tools for the different disciplines: A team may choose the most beneficial method and tool – without compromise.
+Added value is created by setting the results of ‚any’ modeling effort into a common context. 
+So far disparate models shall be semantically integrated in certain aspects of interest. 
+Specific model elements are mapped to abstract ones in the integration model. 
+By exploring the results in a common context it is possible to get insight into mutual dependencies and to uncover inconsistencies.
 
-With the definition of the data format (syntax) and the term definitions (semantics) a big step forward is done in comparison with other PLM data formats. 
+Imagine the results of different modeling techniques can be assessed side-by-side in a common context. 
+Which elements are conceptually the same and are comparable, therefore? 
+How to identify the same entities in different model views?
+A variety of graphical notations and model element types is used in different methods.
+There are many conceptual similarities, though. 
+
+Based on the approach of the [Fundamental Modeling Concepts](http://www.fmc-modeling.org/) (FMC), developed by Prof. Siegfried Wendt and his team in 1970s the  and considering widely used 
+model elements in system specifications, the following abstract model element types (ObjectTypes) are proposed for SpecIF to realize the semantic integration:
+
+* A ▣ *Diagram* is a model diagram with a specific communication purpose, e.g. a business process, a system composition or a schematic drawing.
+
+* An ■ *Actor* is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a user role.
+
+* A ● *State* is a fundamental model element type representing a passive entity, be it a value, an information store, even a color or shape.
+
+* An ♦ *Event* is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.
+
+* A ✶ *Feature* is an intentional distinguishing characteristic of a system, often a so-called ‘Unique Selling Proposition’.
+
+* A ↯ *Requirement* is a singular documented physical and functional need that a particular design, product or process must be able to perform. 
+
+* A 🖿 *Collection* is a logic (often conceptual) group of elements or other collections. Examples for collections are folders is a file system, groups in BPMN or packages in UML/SysML.
+
+With these few fundamental elements, a model integration can be done with SpecIF.
+Each individual element of a specific tool or specific modeling language is mapped to these fundamental element types.
+This creates a semantic integration layer for any kind of engineering model data, because all elements are mapped to this common base.
+
+The SpecIF user or a SpecIF tool can always use or display at least this abstract semantic data representation with well defined semantics, 
+to get a basic understanding of the model data, represented by SpecIF.
+
+A description how to apply the fundamental elements for model integration is given in more detail in the chapter *Introduction to SpecIF Model Integration*.
+
+## Model Integration Guides
+
+With the definition of the data format (syntax), the term definitions (semantics) and fundamental elements to represent engineering models (semantic integration) a big step forward is done in comparison with other PLM data formats. 
 But another thing for a tool vendor is to know how to map more complex data structures to SpecIF. 
 
-For example an UML- or SysML-model has many as aspects how it can be represented in the syntax and semantics of SpecIF. To come to a common understanding and achieve a tool-comprehensive data exchange, the SpecIF standard shall define application guidelines describing the different scenarios how tool content has to be mapped to SpecIF. This is the purpose of the SpecIF application guides.
+For example an UML- or SysML-model has many as aspects how it can be represented in the syntax and semantics of SpecIF. 
+To come to a common understanding and achieve a tool-comprehensive data exchange, the SpecIF standard shall define model integration guidelines describing the different scenarios 
+how tool content has to be mapped to and from SpecIF. 
+This is the purpose of the SpecIF model integration guides.
 
 ## Versioning of this specification
 
