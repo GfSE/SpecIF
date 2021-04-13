@@ -246,7 +246,7 @@ How to identify the same entities in different model views?
 A variety of graphical notations and model element types is used in different methods.
 There are many conceptual similarities, though. 
 
-Based on the approach of the [Fundamental Modeling Concepts](http://www.fmc-modeling.org/) (FMC), developed by Prof. Siegfried Wendt and his team in 1970s the  and considering widely used 
+Based on the approach of the [Fundamental Modeling Concepts](http://www.fmc-modeling.org/) (FMC), developed by Prof. Siegfried Wendt and his team in the 1970s, and considering widely used 
 model elements in system specifications, the following abstract model element types (ObjectTypes) are proposed for SpecIF to realize the semantic integration:
 
 * A ▣ *Diagram* is a model diagram with a specific communication purpose, e.g. a business process, a system composition or a schematic drawing.
@@ -261,7 +261,7 @@ model elements in system specifications, the following abstract model element ty
 
 * A ↯ *Requirement* is a singular documented physical and functional need that a particular design, product or process must be able to perform. 
 
-* A 🖿 *Collection* is a logic (often conceptual) group of elements or other collections. Examples for collections are folders is a file system, groups in BPMN or packages in UML/SysML.
+* A 🖿 *Collection* is a logical (often conceptual) group of elements or other collections. Examples for collections are folders is a file system, groups in BPMN or packages in UML/SysML.
 
 With these few fundamental elements, a model integration can be done with SpecIF.
 Each individual element of a specific tool or specific modeling language is mapped to these fundamental element types.
