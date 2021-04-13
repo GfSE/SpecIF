@@ -1,38 +1,134 @@
 ﻿# Introduction to SpecIF Model Integration
 
-The use of SpecIF for a specific purpose is called an 'application'. An important application is to
-integrate models and other specification artefacts from different sources. Currently transformations or importers exist for 
-BPMN, Archimate, ReqIF, Excel and SysML.
+The usage of SpecIF for a specific purpose is called an 'application'. 
+An important application is to integrate models and other specification artifacts from different sources. 
+Currently transformations or importers exist for BPMN, Archimate, ReqIF, Excel and UML/SysML.
 
-A general introduction is given in [Model-Integration with SpecIF](https://specif.de/files/SpecIF/documents/2019-11-24%20Model-Integration%20with%20SpecIF).
-Please refer to the [tutorials](https://github.com/GfSE/SpecIF/tree/master/tutorials) for an explanation of SpecIF resources and statements with their respective classes.
+The integration of elements of different sources is generally done by name and type. 
+In other words, two elements in different models/notations are considered the _same_, if their names and types are equal. 
+The checking for equal names is rather simple, but checking for equal types is almost impossible, since every notation and tool is 
+using a different set of types. 
 
-Transformations are in fact a mapping from element types of 
-different modeling environments to SpecIF. In case of the SysML, the mapping relates SysML model-element types to 
-SpecIF model-element types. The same applies to various other applications such as BPMN and Archimate.
+Therefore an abstraction (or mapping) to three _fundamental_ model-element types is made, before checking for equality. 
+The model-element types of the _Fundamental Modeling Concepts (FMC)_ have been selected for this purpose,
+namely _Actor_, _State_ and _Event_. 
+Model-elements used by every method or notation can be mapped to these [Ref].
 
-The integration of elements of different sources is generally done by name and type. In other words, two elements in 
-different models/notations are considered the _same_, if their names and types are equal. The checking for equal names
-is rather simple, but checking for equal types is almost impossible, since every notation and tool is using a different
-set of types. Therefore an abstraction (or mapping) to three _fundamental_ model-element types is made before checking
-for equality. The model-element types of the _Fundamental Modeling Concepts (FMC)_ have been selected for this purpose,
-namely _Actor_, _State_ and _Event_. Model-elements used by every method or notation can be mapped to these [Ref].
+![Model Integration resource and statement types](./images/ModelIntegration.png)
 
-<img src="./images/Semantic_Integration.png" width="600px" />
+The (class-)diagram above gives an overview of the element types, defined in SpecIF used for semantic model integration.
+This is called the *SpecIF Integration-Model*
+Beside the class elements, representing the resource classes, the association connection between the classes show the available statements, defined
+by SpecIF statement classes. 
 
-The fundamental model-element classes and eligible statement classes used for model-integration are shown:
-<img src="./images/ElementTypes-M1.png" width="900px" />
+Not each possible connection is shown on the diagram for better readability, but the most relevant.
+The resources ans statements for model integration and their meanings are described in the following sections in detail.
 
-A collection of SpecIF classes for resources and statements which have been successfully used to integrate
-partial models from different sources and notations is available 
-[here](https://github.com/GfSE/SpecIF/blob/master/classDefinitions/03_Model%20Integration/903_Model-Integration-Classes.specif). 
-It is work in progress ...
+## Model Integration Resources
 
-The following sections of the SpecIF Model Integration Guide shows mappings and examples for transformations from different modeling environments to SpecIF:
+The SpecIF resources used for semantic model integration are just a few elements, 
+based on the concepts defined by the Fundamental Modeling Concepts (FMC) approach as mentioned before.
+
+### Three fundamental model elements
+
+FMC defines three fundamental elements to represent all semantic aspects expressed by model elements:
+
+* An ■ *Actor* is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a user role.
+
+* A ● *State* is a fundamental model element type representing a passive entity, be it a value, an information store, even a color or shape.
+
+* An ♦ *Event* is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.
+
+The idea behind using just these three elements is, that all kind of structural or behavioral modeling can be expressed  as a bipartite graph of just there elements.
+One example are Petri-Nets consisting of transitions (actors) and places (states). 
+Another example taken from structural modeling are component diagrams in UML or similar diagrams in SysML (internal block diagrams).
+
+Hereby the components are active elements (represented as actors in SpecIF), because the components are active system elements, 
+able to change the state of the system.
+Passive elements, representing just data, like UML-object-elements with attributes are mapped to state-elements, 
+because they represent a current state of the system by their attribute values and do not change the system state by their own.
+
+### Views
+
+In many engineering models the data of the elements defining the model are visualized in a graphical way. 
+Such visualizations are called a view or diagram. 
+SpecIF defines the resource type ▣ *Diagram* to represent all kind of graphical visualizations of model data.
+All kind of diagrams from all kind of graphical notations can be visualized using the SpecIF element diagram. 
+
+### Structural aspects    
+
+Models can express a logical or conceptual structure of modeled aspects or the model itself by grouping elements together.
+This aspect is covered by the resource class 🖿 *Collection*.
+Examples for collections are folders is a file system, groups in BPMN or packages in UML/SysML.
+
+By expressing that a collection can also contain another collection, a structure hierarchy (typically a tree structure) can be expressed using SpecIF.
+
+### Requirement and Feature
+
+As extension to the fundamental modeling elements and the collection two further elements are defined in SpecIF: The resource classes *Requirement* and *Feature*.
+
+* A ✶ *Feature* is an intentional distinguishing characteristic of a system, often a so-called ‘Unique Selling Proposition’.
+
+* A ↯ *Requirement* is a singular documented physical and functional need that a particular design, product or process must be able to perform. 
+
+These elements are widely used in Systems Engineering of all kind of systems and have a huge practical meaning.
+So these elements complement the set of fundamental elements used to express contents required for system modeling in the Product Lifecycle Management.
+
+## Model Integration Statements
+
+The statements in SpecIF are used to express a predicate logic (subject - predicate - object) between SpecIF elements.
+Examples for such logical expressions are:
+
+* A *collection* *contains* a *diagram*.
+* An *event* *triggers* an *actor*
+* A *diagram* *shows* a *state*
+
+In the context of model integration we differentiate between statements to express behavioral aspects and structural aspects.
+
+### Structural aspects
+
+Structural aspects are expressed with the following statements:
+
+* The *contains* statement expresses that a element is contained in another element. 
+Typical application scenarios are to express for example that a collection *contains* a diagram or a state *contains* a sub-state etc. 
+* The *shows* statement expresses that a element is visualized (shown) on a diagram. This is semantic relation between the element visualization and the elements.
+By using the shows-statement it is possible to express that the same element is shown on multiple diagrams. This is known as the concept of separation of model and view.
+* To express traceability-dependencies between requirement elements and requirements or other element types, the following statements are used:
+  * A requirement *refines* a requirement
+  * A requirement *dependsOn* a requirement
+  * A requirement *duplicates* a requirement
+  * A requirement *contradicts* a requirement 
+  * A model element (state, actor or event) *satisfies* a requirement
+* The concept of Allocation known systems engineering is mapped to SpecIF by defining the *allocates* statement
+
+### Behavioral aspects
+
+To express the behavioral aspects of a system or a process the following statements are available in SpecIF:
+
+* An actor *writes* a state. In a system composition a function writes a value.
+* An actor *reads* a state. In a system composition a function reads a value.
+* An actor *stores* a state. This is the combination of read and write and equates to a bi-directional data or material exchange.
+* An event *triggers* an actor. This means that the event activates the actor (active element).
+* An actor *signals* an event. The actor is the event sender. Used to express asynchronous (event-based) communication.
+* An actor *precedes* and actor. This is used typically to express that a behavior consists of a sequence of actions. 
+
+## Mapping of different modeling environments to SpecIF
+ 
+Transformations are in fact a mapping from element types of different modeling environments to SpecIF. 
+In case of the SysML, the mapping relates SysML model-element types to SpecIF model-element types. 
+The same applies to various other applications such as BPMN and Archimate.
+
+![Principle of semantic model integration](./images/Semantic_Integration.png)
+
+The following chapters describe semantic mappings and examples for transformations from different modeling environments to SpecIF.
+It is work in progress. 
+The first release of SpecIF will not define a fully-complete mapping for each modeling environment, 
+but still tries to define a subset for the most important elements and how to map them to SpecIF.  
+
 1. [Model Integration Guide for FMC](./06_SpecIF_Model_Integration_Guide_for_FMC.md)
 1. [Model Integration Guide for BPMN](./06_SpecIF_Model_Integration_Guide_for_BPMN.md)
 1. [Model Integration Guide for Archimate](./06_SpecIF_Model_Integration_Guide_for_Archimate.md)
-1. [Model Integration Guide for SysML](./06_SpecIF_Model_Integration_Guide_for_SysML.md)
+1. [Model Integration Guide for UML and SysML](./06_SpecIF_Model_Integration_Guide_for_SysML.md)
 
 
 
