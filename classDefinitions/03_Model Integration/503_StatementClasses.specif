@@ -204,7 +204,7 @@
             "title": "SpecIF:triggers",
             "description": [
                 {
-                    "text": "A FMC:Event 'trigers' an FMC:Actor."
+                    "text": "A FMC:Event 'triggers' an FMC:Actor."
                 }
             ],
             "revision": "1.1",
@@ -227,11 +227,11 @@
             "changedAt": "2020-02-17T20:32:25+02:00"
         },
         {
-            "id": "SC-preceeds",
-            "title": "SpecIF:preceeds",
+            "id": "SC-precedes",
+            "title": "SpecIF:precedes",
             "description": [
                 {
-                    "text": "An FMC:Actor 'preceeds' an FMC:Actor."
+                    "text": "An FMC:Actor 'precedes' an FMC:Actor."
                 }
             ],
             "revision": "1.1",

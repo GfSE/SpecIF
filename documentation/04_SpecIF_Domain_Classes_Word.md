@@ -246,7 +246,7 @@
 |                   |               |          | <p>rdf:value [PC-Value 1.1]</p>                                                                                                                            |
 |                   |               |          | <p>SpecIF:Alias [PC-Alias 1.1]</p>                                                                                                                         |
 +-------------------+---------------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| FMC:Event         | RC-Event      | 1.1      | An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive.   |
+| FMC:Event         | RC-Event      | 1.1      | An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.   |
 |                   |               |          | <p>Property classes:</p>                                                                                                                                   |
 |                   |               |          | <p>dcterms:title [PC-Name 1.1]</p>                                                                                                                         |
 |                   |               |          | <p>dcterms:description [PC-Description 1.1]</p>                                                                                                            |
@@ -285,9 +285,9 @@
 +-------------------+--------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 | SpecIF:signals    | SC-signals   | 1.1      | A FMC:Actor 'signals' a FMC:Event.                                                                                                           |
 +-------------------+--------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-| SpecIF:triggers   | SC-triggers  | 1.1      | A FMC:Event 'trigers' an FMC:Actor.                                                                                                          |
+| SpecIF:triggers   | SC-triggers  | 1.1      | A FMC:Event 'triggers' an FMC:Actor.                                                                                                         |
 +-------------------+--------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-| SpecIF:preceeds   | SC-preceeds  | 1.1      | An FMC:Actor 'preceeds' an FMC:Actor.                                                                                                        |
+| SpecIF:precedes   | SC-precedes  | 1.1      | An FMC:Actor 'precedes' an FMC:Actor.                                                                                                        |
 +-------------------+--------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 | oslc_rm:satisfies | SC-satisfies | 1.1      | Statement: Model-Element satisfies Requirement                                                                                               |
 +-------------------+--------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
