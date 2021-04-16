@@ -255,7 +255,7 @@ model elements in system specifications, the following abstract model element ty
 
 * A ● *State* is a fundamental model element type representing a passive entity, be it a value, an information store, even a color or shape.
 
-* An &#11047; *Event* is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.
+* An ⬧ *Event* is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.
 
 * A ✶ *Feature* is an intentional distinguishing characteristic of a system, often a so-called ‘Unique Selling Proposition’.
 
