@@ -19,8 +19,8 @@
             ],
             "revision": "1.1",
             "replaces": [],
-            "type": "xs:enumeration",
-            "values": [
+            "type": "xs:string",
+            "enumeration": [
                 {
                     "id": "V-RequirementType-0",
                     "value": [
@@ -59,8 +59,8 @@
             ],
             "revision": "1.1",
             "replaces": [],
-            "type": "xs:enumeration",
-            "values": [
+            "type": "xs:string",
+            "enumeration": [
                 {
                     "id": "V-perspective-0",
                     "value": [
