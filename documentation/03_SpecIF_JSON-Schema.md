@@ -1,10 +1,16 @@
 ﻿# SpecIF JSON-Schema
 
 The SpecIF JSON-Schema describes the syntax of SpecIF data as a concrete instance of the SpecIF-Metamodel how it was described earlier in this specification.
-The JSON-Schema builds a platform-specific model, PSM following the OMG MDA approach.
- The Schema follows the JSON-Schema standard defined here: http://json-schema.org/draft-04/schema#.
+The JSON-Schema builds a platform-specific model (PSM), following the OMG MDA approach, realizing a JSON representation for SpecIF, based on the SpecIF-Metamodel.
+The Schema follows the JSON-Schema standard defined here: http://json-schema.org/draft-04/schema#.
 
 The schema definition file for SpecIF is available under https://specif.de/v1.1/schema.json.
+
+__Remark:__ The names, internally used in the JSON-Schema for SpecIF all get a prefix `Specif` 
+followed by the names defined in the Metamodel to avoid naming conflicts in 
+implementations and code, generated from the Schema definition, with equal names defined by other standards 
+(e.g. the term *Node* is in the JavaScript world used by NodeJS and also defined in the SpecIF-Metamodel). 
+So the Metamodel term *Node* is called *SpecifNode* in the JSON-Schema definition etc.
 
 ## SpecIF JSON example
 
@@ -47,8 +53,8 @@ The list below shows the available primitive data types based on the data types 
 * *xs:boolean* - a boolean value
 * *xs:integer* - a number value
 * *xs:double* - a floating point number
-* *xs:enumeration* - an enumeration of values (list selection)
 * *xs:dateTime* - a date value
+* *xs:anyURL* - a uniform resource locator (URL)
 
 Based on these primitive data types, a SpecIF user can define *DataType* elements. 
 These data types can be used as base for *PropertyClass*-definitions. 
@@ -233,9 +239,12 @@ The JOSN-snippet below shows some data type definitions for non-enumeration type
 
 #### Enumeration definitions
 
-The definition of an enumeration data type is a little bit different. Here it is necessary to define a list of available values for the enumeration  type. SpecIF supports enumeration with multiple selection, so more than one value of an enumeration can be selected in a SpecIF-property. This is expressed by setting the JOSN-attribute *multiple*. If it is set to *true*, multiple selection is allowed.
+The definition of an enumeration data type is done by using the attribute *enumeration* to define a list of available/allowed values for the type. 
+SpecIF supports enumeration with multiple selection, so more than one value of an enumeration can be selected in a SpecIF-property. 
+This is expressed by setting the JOSN-attribute *multiple*. 
+If it is set to *true*, multiple selection is allowed.
 
-The following data type definitions show an example for an enumeration data type definition with SpecIF:
+The following data type definitions show an example for an enumeration data type definition with SpecIF using the *xs:string* data type:
 
 ```json
 {
@@ -248,8 +257,8 @@ The following data type definitions show an example for an enumeration data type
     ],
     "revision": "1.1",
     "replaces": [],
-    "type": "xs:enumeration",
-    "values": [
+    "type": "xs:string",
+    "enumeration": [
         {
             "id": "V-Status-0",
             "value": [
