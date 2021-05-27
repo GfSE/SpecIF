@@ -1,4 +1,4 @@
-﻿# Introduction to SpecIF Model Integration
+﻿# Introduction to SpecIF Model Integration and Application
 
 The usage of SpecIF for a specific purpose is called an 'application'. 
 An important application is to integrate models and other specification artifacts from different sources. 
@@ -14,20 +14,23 @@ The model-element types of the _Fundamental Modeling Concepts (FMC)_ have been s
 namely _Actor_, _State_ and _Event_. 
 Model-elements used by every method or notation can be mapped to these [Ref].
 
-![Model Integration resource and statement types](./images/ModelIntegration.png)
-
-The (class-)diagram above gives an overview of the element types, defined in SpecIF used for semantic model integration.
-This is called the *SpecIF Integration-Model*
-Beside the class elements, representing the resource classes, the association connection between the classes show the available statements, defined
-by SpecIF statement classes. 
-
-Not each possible connection is shown on the diagram for better readability, but the most relevant.
-The resources ans statements for model integration and their meanings are described in the following sections in detail.
 
 ## Model Integration Resources
 
 The SpecIF resources used for semantic model integration are just a few elements, 
 based on the concepts defined by the Fundamental Modeling Concepts (FMC) approach as mentioned before.
+
+![Model Integration resource and statement types](./images/ModelIntegration.png)
+
+The (class-)diagram above gives an overview of the most important element types, defined in SpecIF used for semantic model integration.
+This is called the *SpecIF Integration-Model*
+Beside the class elements, representing the resource classes, the association connection between the classes shows the available statements, defined
+by SpecIF statement classes. 
+
+For better readability of the class diagrams, the aspects are shown on more than one diagram. 
+You have to read the diagrams as a superset to get the complete picture of the SpecIF application.
+If two diagrams show a resource class with the same name, it is the same element and all associations defined by one diagram are also valid for the second diagram.
+   
 
 ### Three fundamental model elements
 
@@ -47,6 +50,10 @@ Hereby the components are active elements (represented as actors in SpecIF), bec
 able to change the state of the system.
 Passive elements, representing just data, like UML-object-elements with attributes are mapped to state-elements, 
 because they represent a current state of the system by their attribute values and do not change the system state by their own.
+
+By using the concept of mapping all model elements to the three fundamental elements it is necessary the keep the information about the original model element, that was mapped.
+This is done by the property *dcterms:type*. 
+By storing the type name of the original model element in the dcterms:type property, it allows a transformation from the legacy model to SpecIF and back again. 
 
 ### Views
 
@@ -90,7 +97,10 @@ In the context of model integration we differentiate between statements to expre
 Structural aspects are expressed with the following statements:
 
 * The *contains* statement expresses that a element is contained in another element. 
-Typical application scenarios are to express for example that a collection *contains* a diagram or a state *contains* a sub-state etc. 
+Typical application scenarios are to express for example that a collection *contains* a diagram or a state *contains* a sub-state etc.
+
+![Appliocation of the contains statement in SpecIF](./images/Contains.png)
+ 
 * The *shows* statement expresses that a element is visualized (shown) on a diagram. This is semantic relation between the element visualization and the elements.
 By using the shows-statement it is possible to express that the same element is shown on multiple diagrams. This is known as the concept of separation of model and view.
 * To express traceability-dependencies between requirement elements and requirements or other element types, the following statements are used:
@@ -112,17 +122,51 @@ To express the behavioral aspects of a system or a process the following stateme
 * An actor *signals* an event. The actor is the event sender. Used to express asynchronous (event-based) communication.
 * An actor *precedes* and actor. This is used typically to express that a behavior consists of a sequence of actions. 
 
+### Class-Instance semantics
+
+To express that a resource is an instance of another resource (e.g. an Object is an instance of a Class, a Method return type is an instance of a type definition etc.) the statement 
+*rdf:type* is used. 
+This statement expresses that the subject is an instance of the statement object.
+Use this statement in all cases where a class-instance semantics shall be expressed. 
+
+### Document structures
+
+SpecIF defines resource class types useful for applications dealing with textual documentation. 
+Typical application scenarios are 
+* Document-based requirement specifications
+* Use manuals
+* Any other kind of textual specifications or text documents
+
+The following class diagram shows the SpecIF application for document structures.
+
+![Resource and statement usage for document structures](./images/RequirementDocuments.png)
+
+* The ⬚	 *Hierarchy* element is the root for a document
+* A __H__ *Heading* is used to define a heading text and to bring structure into a document
+* A __P__ *Paragraph* can be used to include some text paragraphs with no special semantics (e.g. prose text) a the document
+* A ↯ *Requirement*, as still explained above, is used to represent a textual requirement
+
+The statement *contains* is used to define the semantics for the document hierarchy. 
+
+### Comments
+
+The SpecIF resource type *Comment* is used to include or add additional comments to a resource in a model or a document element. 
+To assign a comment to a resource the statement type *refersTo* is used. 
+Typical application scenarios for using comments are reviews (review comments) or comments attached to a resource as additional short information.
+
+![Usage of the Comment resource type in SpecIF](./images/Comment.png)
+
 ## Mapping of different modeling environments to SpecIF
  
-Transformations are in fact a mapping from element types of different modeling environments to SpecIF. 
+Transformations are in fact a mapping from element types of different modeling environments resp. data models to SpecIF. 
 In case of the SysML, the mapping relates SysML model-element types to SpecIF model-element types. 
 The same applies to various other applications such as BPMN and Archimate.
 
 ![Principle of semantic model integration](./images/Semantic_Integration.png)
 
 The following chapters describe semantic mappings and examples for transformations from different modeling environments to SpecIF.
-It is work in progress. 
-The first release of SpecIF will not define a fully-complete mapping for each modeling environment, 
+It is currently still work in progress and not complete for 100%. 
+The first release of SpecIF will therefore not define a fully-complete mapping for each modeling environment, 
 but still tries to define a subset for the most important elements and how to map them to SpecIF.  
 
 1. [Model Integration Guide for FMC](./06_SpecIF_Model_Integration_Guide_for_FMC.md)
