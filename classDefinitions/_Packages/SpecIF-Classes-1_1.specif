@@ -1,6 +1,6 @@
 {
   "$schema": "https://specif.de/v1.1/schema.json",
-  "id": "_869d65ae_40e3_4255_a25d_96d2002e82e7",
+  "id": "_d89d4735_be09_40c7_ac57_0d93956510b8",
   "title": [
     {
       "text": "SpecIF classes for SpecIF 1.1",
@@ -10,7 +10,7 @@
   ],
   "isExtension": false,
   "generator": "SpecIFicator Vocabulary Generator",
-  "createdAt": "2021-05-17T17:14:47.6130131+02:00",
+  "createdAt": "2021-05-27T12:05:21.3553801+02:00",
   "dataTypes": [
     {
       "id": "DT-Boolean",
@@ -541,6 +541,84 @@
           "value": [
             {
               "text": "IREB:PerspectiveSystem",
+              "format": "plain",
+              "language": "en"
+            }
+          ]
+        }
+      ],
+      "multiple": false,
+      "changedAt": "2021-02-21T07:59:00+01:00"
+    },
+    {
+      "id": "DT-VisibilityKind",
+      "title": "SpecIF:VisibilityKind",
+      "description": [
+        {
+          "text": "Enumerated values for visibility",
+          "format": "plain",
+          "language": "en"
+        }
+      ],
+      "revision": "1.1",
+      "replaces": [],
+      "type": "xs:string",
+      "enumeration": [
+        {
+          "id": "V-VisibilityKind-0",
+          "value": [
+            {
+              "text": "UML:Public",
+              "format": "plain",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "id": "V-VisibilityKind-1",
+          "value": [
+            {
+              "text": "UML:Private",
+              "format": "plain",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "id": "V-VisibilityKind-2",
+          "value": [
+            {
+              "text": "UML:Protected",
+              "format": "plain",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "id": "V-VisibilityKind-3",
+          "value": [
+            {
+              "text": "UML:Package",
+              "format": "plain",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "id": "V-VisibilityKind-4",
+          "value": [
+            {
+              "text": "UML:Internal",
+              "format": "plain",
+              "language": "en"
+            }
+          ]
+        },
+        {
+          "id": "V-VisibilityKind-5",
+          "value": [
+            {
+              "text": "UML:ProtectedInternal",
               "format": "plain",
               "language": "en"
             }

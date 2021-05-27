@@ -1,0 +1,86 @@
+{
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_D24239F3-DE44-4AB5-8765-5FE55158CEC9",
+    "title": [
+        {
+            "text": "SpecIF enumeration datatype definitions for domain 03-Model Integration",
+            "language": "en",
+            "format": "plain"
+        }
+    ],
+    "isExtension": false,
+    "createdAt": "2020-02-16T19:54:35.0432812+01:00",
+    "dataTypes": [
+        {
+            "id": "DT-VisibilityKind",
+            "title": "SpecIF:VisibilityKind",
+            "description": [
+                {
+                    "text": "Enumerated values for visibility"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "enumeration": [
+                {
+                    "id": "V-VisibilityKind-0",
+                    "value": [
+                        {
+                            "text": "UML:Public"
+
+                        } 
+                    ]
+                },
+                {
+                    "id": "V-VisibilityKind-1",
+                    "value": [
+                        {
+                            "text": "UML:Private" 
+                        }
+                    ]
+                },
+                {
+                    "id": "V-VisibilityKind-2",
+                    "value": [
+                        {
+                            "text": "UML:Protected"
+                        } 
+                    ]
+                },
+                {
+                    "id": "V-VisibilityKind-3",
+                    "value": [
+                        {
+                            "text": "UML:Package"
+                        } 
+                    ]
+                },
+                {
+                    "id": "V-VisibilityKind-4",
+                    "value": [
+                        {
+                            "text": "UML:Internal" 
+                        }
+                    ]
+                },
+                {
+                    "id": "V-VisibilityKind-5",
+                    "value": [
+                        {
+                            "text": "UML:ProtectedInternal"
+                        } 
+                    ]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2021-02-21T08:59:00+02:00"
+        }
+    ],
+    "propertyClasses": [],
+    "resourceClasses": [],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
+}
