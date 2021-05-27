@@ -1,6 +1,6 @@
 ﻿# SpecIF-Metamodel
 
-This section describes the SpecIF-Metamodel.
+This section describes the SpecIF-Metamodel used to define the syntax of SpecIF.
 
 The description by a metamodel is done in a technology independent way following the OMG [Meta Object Facility (MOF) Metamodeling](https://www.omg.org/mof/) technology 
 and the OMG [Model Driven Architecture (MDA)](https://www.omg.org/mda/) approach. 
@@ -145,11 +145,13 @@ This class defines three attributes:
 Typically an array of these MultilanguageText objects is used to represent a value in multiple languages.
 Each single array value contains the same text content but in a specific language (english, german etc.).
 
-### EnumerationValue
+### EnumeratedValue
 
-![The metaclass *EnumerationValue*](./images/Metaclass_EnumerationValue.png)
+![The metaclass *EnumeratedValue*](./images/Metaclass_EnumerationValue.png)
 
-To define enumerations in SpecIF the metaclass *EnumerationValue* is used to define the values for a enumeration data type.
+To define enumerations in SpecIF the metaclass *EnumerationValue* is used to define the values for a enumerations in data types. 
+In SpecIF different data types can be defined as Enumerations by defining a set of predefined values. 
+This is done using the EnumeratedValue. 
 
 This class defines two attributes:
 
@@ -194,17 +196,26 @@ So the DataType metaclass defines the following attributes to satisfy these requ
 
 * *title: string* - A unique name for the defined data type (e.g. 'string')
 * *description: MultilanguageText[]* - A human readable description of the data type for documentation purposes.
-* *type* - A formal definition of the used base type. The allowed types are:
-  * string
-  * integer
-  * double
-  * DateTime
-  * Enumeration
+* *type* - A formal definition of the used base type. The allowed types are taken from the XML-stylesheet-standard (https://www.w3.org/TR/xmlschema11-1/) and defined in the metamodel as Enumeration *DataTypeTypes* as follows:
+  * xs:boolean
+  * xs:dateTime
+  * xs:anyURI
+  * xs:integer
+  * xs:double
+  * xs:string
 * *maxInclusive* - The maximum value for a numeric data type
 * *fractionDigits* - The number of digits for floating point numbers
-* *values* - A list of enumeration values.
+* *enumeration* - A list of enumeration values.
 * *multiple: bool* - This flag indicates for enumeration definitions, that a multiple selection of enumeration values should be possible.
 * *maxLength: int* - The maximum length of a text value.
+
+It is possible to restrict the possible values for a data type. 
+In this manner enumerated data types can be defined and used. 
+The allowed values are defined by the attribute *enumeration* using a list of *EnumeratedValue* elements.
+
+Because of the fact, that different data types are allowed for an enumeration definition, it is possible to define for example a set of strings as enumeration or a set of numbers etc.
+This might be helpful for example to define a data type for story points used in the agile project management, often defined as Fibonacci numbers.
+
 
 ### PropertyClass
 
@@ -292,18 +303,18 @@ So you can represent these 'legacy' IDs in SpecIF.
 
 A *Statement* is an instance of a StatementClass and the element in SpecIf that defines the edge in the graph data structure.
 Statements allow to define predicate logic in form of *Subject - Predicate - Object*. 
-The subject and the object are Resources or Statements, the Predicate is always a Statement.
+The subject and the object are Resources, Statements of File elements, the Predicate is always a Statement.
 
 A Statement is inherited from Resource and has the following additional attributes:
 
-* *subject* - A reference to the Resource or Statement that is used as subject for the Statement.
-* *object* - A reference to the Resource or Statement that is used as object for the Statement.
+* *subject* - A reference to the Resource, Statement or File that is used as subject for the Statement.
+* *object* - A reference to the Resource, Statement or File that is used as object for the Statement.
 
 ### Node
 
 ![The metaclass *Node*](./images/Metaclass_Hierarchy.png)
 
-The metaclasses *Node* allows it to define hierarchical data structures (trees) in SpecIF.
+The metaclass *Node* allows it to define hierarchical data structures (trees) in SpecIF.
 Typical application scenarios are hierarchical structures in textual specifications like documents and the structures in CAD and other modeling tools.
 
 The data is not directly included inside Node elements. 
