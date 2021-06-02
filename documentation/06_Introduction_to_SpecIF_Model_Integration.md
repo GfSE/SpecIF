@@ -143,7 +143,8 @@ The following class diagram shows the SpecIF application for document structures
 * The ⬚	 *Hierarchy* element is the root for a document
 * A __H__ *Heading* is used to define a heading text and to bring structure into a document
 * A __P__ *Paragraph* can be used to include some text paragraphs with no special semantics (e.g. prose text) a the document
-* A ↯ *Requirement*, as still explained above, is used to represent a textual requirement
+* A ✶ *Feature* and
+* a ↯ *Requirement* are, as explained above, important to describe benefits and needs of a system to develop.
 
 The statement *contains* is used to define the semantics for the document hierarchy. 
 
