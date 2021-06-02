@@ -29,9 +29,9 @@ FMC defines three fundamental elements to represent all semantic aspects express
 * A ● *State* is a fundamental model element type representing a passive entity, be it a value, an information store, even a color or shape.
 * An ♦ *Event* is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.
 
-The idea behind using just these three elements is, that all kind of structural or behavioral modeling can be expressed  as a bipartite graph of just there elements.
+The idea behind using just these three elements is, that all kinds of structural or behavioral modeling can be expressed as a bipartite graph of just these elements.
 One example are Petri-Nets consisting of transitions (actors) and places (states). 
-Another example taken from structural modeling are component diagrams in UML or similar diagrams in SysML (internal block diagrams).
+Another example taken from structural modeling are Component Diagrams in UML or Internal Block Diagrams in SysML.
 
 Hereby the components are active elements (represented as actors in SpecIF), because the components are active system elements, 
 able to change the state of the system.
