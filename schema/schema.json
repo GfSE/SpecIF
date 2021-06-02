@@ -664,6 +664,10 @@
           "$ref": "#/definitions/SpecifKey",
           "description": "Must be a member of statementClasses."
         },
+        "language": {
+          "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of the statement. Is superseded by a property's language value.",
+          "type": "string"
+        },
         "subject": {
           "description": "Must be a member of resources or statements.",
           "$ref": "#/definitions/SpecifKey"
@@ -671,10 +675,6 @@
         "object": {
           "description": "Must be a member of resources or statements.",
           "$ref": "#/definitions/SpecifKey"
-        },
-        "language": {
-          "description": "An IETF language tag such as 'en', 'en-US, 'fr' or 'de' showing the used language of the statement. Is superseded by a property's language value.",
-          "type": "string"
         },
         "properties": {
           "$ref": "#/definitions/SpecifProperties"
