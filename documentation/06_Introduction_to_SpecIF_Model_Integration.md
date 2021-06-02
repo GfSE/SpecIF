@@ -154,6 +154,9 @@ The SpecIF resource type *Comment* is used to include or add additional comments
 To assign a comment to a resource the statement type *refersTo* is used. 
 Typical application scenarios for using comments are reviews (review comments) or comments attached to a resource as additional short information.
 
+Comments are usually transient: Upon agreement the model or text is changed accordingly and the comment deleted.
+When generating a document, the comments can be included or omitted, similarly to MS Word.
+
 ![Usage of the Comment resource type in SpecIF](./images/Comment.png)
 
 ## Mapping of different modeling environments to SpecIF
