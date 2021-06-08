@@ -141,8 +141,8 @@ The following class diagram shows the SpecIF application for document structures
 ![Resource and statement usage for document structures](./images/RequirementDocuments.png)
 
 * The ⬚	 *Hierarchy* element is the root for a document
-* A __H__ *Heading* is used to define a heading text and to bring structure into a document
-* A __P__ *Paragraph* can be used to include some text paragraphs with no special semantics (e.g. prose text) a the document
+* A *Heading* is used to define a heading text and to bring structure into a document
+* A *Paragraph* can be used to include some text paragraphs with no special semantics (e.g. prose text) a the document
 * A ✶ *Feature* and
 * a ↯ *Requirement* are, as explained above, important to describe benefits and needs of a system to develop.
 
@@ -158,6 +158,16 @@ Comments are usually transient: Upon agreement the model or text is changed acco
 When generating a document, the comments can be included or omitted, similarly to MS Word.
 
 ![Usage of the Comment resource type in SpecIF](./images/Comment.png)
+
+## SpecIF Classes for Model Integration
+
+As discussed, the SpecIF schema is generic and allows various applications such as model integration. 
+Each application is characterized by a set of agreed-upon data types and classes. 
+The class definitions for integration of models from different tools and notations have been developed over many years
+through projects in the arena of enterprise Architecture (notations FMC, BPMN and Archimate) and in the arena of 
+Mechatronic Systems Engineering (notations FMC and SysML).
+
+Inspect or employ the current set of [Classes for Model-Integration](../classDefinitions/03_Classes-for-Model-Integration.specif), if you like.
 
 ## Mapping of different modeling environments to SpecIF
  
