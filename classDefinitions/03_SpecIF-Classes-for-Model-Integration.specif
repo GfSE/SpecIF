@@ -1,0 +1,1564 @@
+{
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "x03_SpecIF-Classes-for-Model-Integration",
+    "title": [{
+        "text": "All SpecIF DataTypes and Classes used for integration of models of different tools and notations."
+    }],
+    "isExtension": true,
+    "createdAt": "2020-02-16T19:54:35.2070506+01:00",
+    "dataTypes": [{
+            "id": "DT-Boolean",
+            "title": "Boolean",
+            "description": [{
+                "text": "The Boolean data type.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:boolean",
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "DT-Byte",
+            "title": "Byte",
+            "description": [{
+                "text": "A byte is an integer value in range between 0 and 255.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:integer",
+            "minInclusive": 0,
+            "maxInclusive": 255,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "DT-Integer",
+            "title": "Integer",
+            "description": [{
+                "text": "A numerical integer value from -32768 to 32768.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:integer",
+            "minInclusive": -32768,
+            "maxInclusive": 32767,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "DT-Real",
+            "title": "Real",
+            "description": [{
+                "text": "A floating point number (double).",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:double",
+            "changedAt": "2021-02-14T08:59:00+02:00"
+        },
+        {
+            "id": "DT-Decimal2",
+            "title": "Real with 2 Decimals",
+            "description": [{
+                "text": "A floating point number (double) with two fraction digits.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:double",
+            "fractionDigits": 2,
+            "changedAt": "2021-02-14T08:59:00+02:00"
+        },
+        {
+            "id": "DT-DateTime",
+            "title": "Date or Timestamp",
+            "description": [{
+                "text": "Date or Timestamp in ISO-Format",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:dateTime",
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "DT-ShortString",
+            "title": "String[256]",
+            "description": [{
+                "text": "String with max. length 256",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "maxLength": 256,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "DT-Text",
+            "title": "Plain or formatted Text",
+            "description": [{
+                "text": "An account of the resource (source: http://dublincore.org/documents/dcmi-terms/). Descriptive text represented in plain or rich text using XHTML. SHOULD include only content that is valid and suitable inside an XHTML &lt;div&gt; element (source: http://open-services.net/).",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "changedAt": "2021-02-23T08:59:00+02:00"
+        },
+        {
+            "id": "DT-URL",
+            "title": "URL",
+            "description": [{
+                "text": "A uniform resource locator.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "maxLength": 1024,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "DT-EmailAddress",
+            "title": "E-mail",
+            "description": [{
+                "text": "Data type to represent an E-mail address.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "maxLength": 256,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "DT-LifeCycleStatus",
+            "title": "SpecIF:LifeCycleStatus",
+            "description": [{
+                "text": "Enumerated values for status"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "enumeration": [{
+                    "id": "V-Status-0",
+                    "value": [{
+                            "text": "SpecIF:LifecycleStatusDeprecated"
+                        }
+
+                    ]
+                },
+                {
+                    "id": "V-Status-1",
+                    "value": [{
+                        "text": "SpecIF:LifecycleStatusRejected"
+                    }]
+                },
+                {
+                    "id": "V-Status-2",
+                    "value": [{
+                        "text": "SpecIF:LifecycleStatusInitial"
+                    }]
+                },
+                {
+                    "id": "V-Status-3",
+                    "value": [{
+                        "text": "SpecIF:LifecycleStatusDrafted"
+                    }]
+                },
+                {
+                    "id": "V-Status-4",
+                    "value": [{
+                        "text": "SpecIF:LifecycleStatusSubmitted"
+                    }]
+                },
+                {
+                    "id": "V-Status-5",
+                    "value": [{
+                        "text": "SpecIF:LifecycleStatusApproved"
+                    }]
+                },
+                {
+                    "id": "V-Status-8",
+                    "value": [{
+                        "text": "SpecIF:LifecycleStatusReady"
+                    }]
+                },
+                {
+                    "id": "V-Status-6",
+                    "value": [{
+                        "text": "SpecIF:LifecycleStatusDone"
+                    }]
+                },
+                {
+                    "id": "V-Status-9",
+                    "value": [{
+                        "text": "SpecIF:LifecycleStatusValidated"
+                    }]
+                },
+                {
+                    "id": "V-Status-7",
+                    "value": [{
+                        "text": "SpecIF:LifecycleStatusReleased"
+                    }]
+                },
+                {
+                    "id": "V-Status-10",
+                    "value": [{
+                        "text": "SpecIF:LifecycleStatusWithdrawn"
+                    }]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2021-02-21T08:59:00+02:00"
+        },
+        {
+            "id": "DT-Priority",
+            "title": "SpecIF:Priority",
+            "description": [{
+                "text": "Enumerated values for priority"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "enumeration": [{
+                    "id": "V-Prio-0",
+                    "value": [{
+                        "text": "SpecIF:priorityHigh"
+                    }]
+                },
+                {
+                    "id": "V-Prio-1",
+                    "value": [{
+                        "text": "SpecIF:priorityRatherHigh"
+                    }]
+                },
+                {
+                    "id": "V-Prio-2",
+                    "value": [{
+                        "text": "SpecIF:priorityMedium"
+                    }]
+                },
+                {
+                    "id": "V-Prio-3",
+                    "value": [{
+                        "text": "SpecIF:priorityRatherLow"
+                    }]
+                },
+                {
+                    "id": "V-Prio-4",
+                    "value": [{
+                        "text": "SpecIF:priorityLow"
+                    }]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "DT-Discipline",
+            "title": "SpecIF:Discipline",
+            "description": [{
+                "text": "Enumerated values for engineering discipline"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "enumeration": [{
+                    "id": "V-discipline-4",
+                    "value": [{
+                        "text": "SpecIF:DisciplineSystem"
+                    }]
+                },
+                {
+                    "id": "V-discipline-0",
+                    "value": [{
+                        "text": "SpecIF:DisciplineMechanics"
+                    }]
+                },
+                {
+                    "id": "V-discipline-1",
+                    "value": [{
+                        "text": "SpecIF:DisciplineElectronics"
+                    }]
+                },
+                {
+                    "id": "V-discipline-2",
+                    "value": [{
+                        "text": "SpecIF:DisciplineSoftware"
+                    }]
+                },
+                {
+                    "id": "V-discipline-3",
+                    "value": [{
+                        "text": "SpecIF:DisciplineSafety"
+                    }]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2021-02-21T08:59:00+02:00"
+        },
+        {
+            "id": "DT-RequirementType",
+            "title": "IREB:RequirementType",
+            "description": [{
+                "text": "Enumerated values for the Requirement type according IREB"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "enumeration": [{
+                    "id": "V-RequirementType-0",
+                    "value": [{
+                        "text": "IREB:FunctionalRequirement"
+                    }]
+                },
+                {
+                    "id": "V-RequirementType-1",
+                    "value": [{
+                        "text": "IREB:QualityRequirement"
+                    }]
+                },
+                {
+                    "id": "V-RequirementType-2",
+                    "value": [{
+                        "text": "IREB:Constraint"
+                    }]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2021-02-21T08:59:00+02:00"
+        },
+        {
+            "id": "DT-Perspective",
+            "title": "Perspective",
+            "description": [{
+                "text": "Enumerated values for the perspective (of a requirement)"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "enumeration": [{
+                    "id": "V-perspective-0",
+                    "value": [{
+                        "text": "IREB:PerspectiveBusiness"
+                    }]
+                },
+                {
+                    "id": "V-perspective-3",
+                    "value": [{
+                        "text": "IREB:PerspectiveStakeholder"
+                    }]
+                },
+                {
+                    "id": "V-perspective-1",
+                    "value": [{
+                        "text": "IREB:PerspectiveUser"
+                    }]
+                },
+                {
+                    "id": "V-perspective-4",
+                    "value": [{
+                        "text": "IREB:PerspectiveOperator"
+                    }]
+                },
+                {
+                    "id": "V-perspective-2",
+                    "value": [{
+                        "text": "IREB:PerspectiveSystem"
+                    }]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2021-02-21T08:59:00+02:00"
+        },
+        {
+            "id": "DT-VisibilityKind",
+            "title": "SpecIF:VisibilityKind",
+            "description": [{
+                "text": "Enumerated values for visibility"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "enumeration": [{
+                    "id": "V-VisibilityKind-0",
+                    "value": [{
+                        "text": "UML:Public"
+
+                    }]
+                },
+                {
+                    "id": "V-VisibilityKind-1",
+                    "value": [{
+                        "text": "UML:Private"
+                    }]
+                },
+                {
+                    "id": "V-VisibilityKind-2",
+                    "value": [{
+                        "text": "UML:Protected"
+                    }]
+                },
+                {
+                    "id": "V-VisibilityKind-3",
+                    "value": [{
+                        "text": "UML:Package"
+                    }]
+                },
+                {
+                    "id": "V-VisibilityKind-4",
+                    "value": [{
+                        "text": "UML:Internal"
+                    }]
+                },
+                {
+                    "id": "V-VisibilityKind-5",
+                    "value": [{
+                        "text": "UML:ProtectedInternal"
+                    }]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2021-02-21T08:59:00+02:00"
+        }
+    ],
+    "propertyClasses": [{
+            "id": "PC-VisibleId",
+            "title": "dcterms:identifier",
+            "description": [{
+                    "text": "<p>A unique reference to the resource within a given context. <small>(<i>source: <a href=\"http://dublincore.org/documents/dcmi-terms/\">DCMI</a></i>)</small></p><p>An identifier for a resource. This identifier may be unique with a scope that is defined by the RM provider. Assigned by the service provider when a resource is created. Not intended for end-user display. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
+                    "format": "xhtml",
+                    "language": "en"
+                }
+
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-ShortString",
+                "revision": "1.1"
+            },
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Name",
+            "title": "dcterms:title",
+            "description": [{
+                "text": "<p>A name given to the resource. <small>(<i>source: <a href=\"http://dublincore.org/documents/dcmi-terms/\">DCMI</a></i>)</small></p><p>Title (reference: Dublin Core) of the resource represented as rich text in XHTML content. SHOULD include only content that is valid inside an XHTML &lt;span&gt; element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
+                "format": "xhtml",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-ShortString",
+                "revision": "1.1"
+            },
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Description",
+            "title": "dcterms:description",
+            "description": [{
+                "text": "<p>An account of the resource. <small>(<i>source: <a href=\"http://dublincore.org/documents/dcmi-terms/\">DCMI</a></i>)</small></p><p>Descriptive text (reference: Dublin Core) about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML &lt;div&gt; element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
+                "format": "xhtml",
+                "language": "en"
+            }],
+
+            "revision": "1.1",
+            "replaces": [],
+            "format": "xhtml",
+            "dataType": {
+                "id": "DT-Text",
+                "revision": "1.1"
+            },
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Origin",
+            "title": "SpecIF:Origin",
+            "description": [{
+                "text": "The origin (source, reference) of an information or requirement",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-ShortString",
+                "revision": "1.1"
+            },
+            "changedAt": "2017-06-10T15:47:24+02:00"
+        },
+        {
+            "id": "PC-Diagram",
+            "title": "SpecIF:Diagram",
+            "description": [{
+                "text": "A partial graphical representation (diagram) of a model.",
+                "format": "plain",
+                "language": "en"
+
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "format": "xhtml",
+            "dataType": {
+                "id": "DT-Text",
+                "revision": "1.1"
+            },
+            "changedAt": "2021-02-21T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Notation",
+            "title": "SpecIF:Notation",
+            "description": [{
+                "text": "The notation used by a model diagram, e.g. 'BPMN:2.0', 'OMG:SysML:1.3:Activity Diagram' or 'FMC:Block Diagram'.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-ShortString",
+                "revision": "1.1"
+            },
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-LifeCycleStatus",
+            "title": "SpecIF:LifeCycleStatus",
+            "description": [{
+                "text": "The 'Status', e.g. lifecycle state, of the resource.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-LifeCycleStatus",
+                "revision": "1.1"
+            },
+            "changedAt": "2021-02-21T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Priority",
+            "title": "SpecIF:Priority",
+            "description": [{
+                "text": "The 'Priority' of the resource.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-Priority",
+                "revision": "1.1"
+            },
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Discipline",
+            "title": "SpecIF:Discipline",
+            "description": [{
+                "text": "The engineering discipline (system, electronics, mechanics, software, safety).",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-Discipline",
+                "revision": "1.1"
+            },
+            "multiple": true,
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Responsible",
+            "title": "SpecIF:Responsible",
+            "description": [{
+                "text": "The 'Person' being responsible for the resource.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-ShortString",
+                "revision": "1.1"
+            },
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-DueDate",
+            "title": "SpecIF:DueDate",
+            "description": [{
+                "text": "A 'Due Date' for the resource.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-DateTime",
+                "revision": "1.1"
+            },
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Stereotype",
+            "title": "UML:Stereotype",
+            "description": [{
+                "text": "A stereotype gives an element an additional/different meaning.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-ShortString",
+                "revision": "1.1"
+            },
+            "changedAt": "2019-03-31T17:10:23.443Z"
+        },
+        {
+            "id": "PC-Abbreviation",
+            "title": "SpecIF:Abbreviation",
+            "description": [{
+                "text": "An abbreviation for the resource or statement.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-ShortString",
+                "revision": "1.1"
+            },
+            "changedAt": "2019-04-26T12:00:00+02:00"
+        },
+        {
+            "id": "PC-Type",
+            "title": "dcterms:type",
+            "description": [{
+                "text": "The element type resp. the metamodel element (e.g. OMG:UML:2.5.1:Class)",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-ShortString",
+                "revision": "1.1"
+            },
+            "changedAt": "2019-08-20T20:32:25.411Z"
+        },
+        {
+            "id": "PC-Alias",
+            "title": "SpecIF:Alias",
+            "description": [{
+                "text": "An alias name for the resource.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-ShortString",
+                "revision": "1.1"
+            },
+            "changedAt": "2019-04-26T12:00:00+02:00"
+        },
+        {
+            "id": "PC-Value",
+            "title": "rdf:value",
+            "description": [{
+                "text": "A value of different meaning, depending on the element type (attribute default value, a taggedValue value etc.)",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-Text",
+                "revision": "1.1"
+            },
+            "changedAt": "2019-09-10T20:32:25.411Z"
+        },
+        {
+            "id": "PC-RequirementType",
+            "title": "IREB:RequirementType",
+            "description": [{
+                "text": "Enumerated value for the Requirement type according IREB"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-RequirementType",
+                "revision": "1.1"
+            },
+            "changedAt": "2020-03-29T20:32:25.411Z"
+        },
+        {
+            "id": "PC-Perspective",
+            "title": "SpecIF:Perspective",
+            "description": [{
+                "text": "Enumerated values for the perspective (of a requirement)"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-Perspective",
+                "revision": "1.1"
+            },
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-Visibility",
+            "title": "SpecIF:Visibility",
+            "description": [{
+                "text": "The visibility of a resource (e.g. Public, Private, Protected,...) as known from object orientation.",
+                "format": "plain",
+                "language": "en"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-VisibilityKind",
+                "revision": "1.1"
+            },
+            "multiple": false,
+            "changedAt": "2019-09-10T08:59:00+02:00"
+        }
+    ],
+    "resourceClasses": [{
+            "id": "RC-Folder",
+            "title": "SpecIF:Heading",
+            "description": [{
+                "text": "Folders with title and text for chapters or descriptive paragraphs."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "H",
+            "isHeading": true,
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "propertyClasses": [{
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Type",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "RC-Paragraph",
+            "title": "SpecIF:Paragraph",
+            "description": [{
+                "text": "Information with text for descriptive paragraphs."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "P",
+            "isHeading": false,
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "propertyClasses": [{
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-03-30T08:59:00+02:00"
+        },
+        {
+            "id": "RC-Hierarchy",
+            "title": "SpecIF:Hierarchy",
+            "description": [{
+                "text": "Root node of a hierarchically organized specification (outline)."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "&#11034;",
+            "isHeading": false,
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "propertyClasses": [{
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "RC-Comment",
+            "title": "SpecIF:Comment",
+            "description": [{
+                "text": "Comment referring to a model element ('resource' or 'statement' in general)."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "isHeading": false,
+            "instantiation": [
+                "auto"
+            ],
+            "propertyClasses": [{
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-03-30T18:59:00+01:00"
+        },
+        {
+            "id": "RC-Requirement",
+            "title": "IREB:Requirement",
+            "description": [{
+                "text": "A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "&#8623;",
+            "isHeading": false,
+            "instantiation": [
+                "user"
+            ],
+            "propertyClasses": [{
+                    "id": "PC-VisibleId",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-RequirementType",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Priority",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-LifeCycleStatus",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Perspective",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Discipline",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-02-22T08:59:00+02:00"
+        },
+        {
+            "id": "RC-Feature",
+            "title": "SpecIF:Feature",
+            "description": [{
+                "text": "A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "&#10038;",
+            "isHeading": false,
+            "instantiation": [
+                "user"
+            ],
+            "propertyClasses": [{
+                    "id": "PC-VisibleId",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Priority",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-LifeCycleStatus",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Perspective",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Discipline",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-02-22T08:59:00+02:00"
+        },
+        {
+            "id": "RC-Diagram",
+            "title": "SpecIF:Diagram",
+            "description": [{
+                "text": "A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "&#9635;",
+            "isHeading": false,
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "propertyClasses": [{
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Diagram",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Type",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Notation",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-LifeCycleStatus",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Stereotype",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-02-22T08:59:00+02:00"
+        },
+        {
+            "id": "RC-Actor",
+            "title": "FMC:Actor",
+            "description": [{
+                "text": "An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "&#9632;",
+            "isHeading": false,
+            "instantiation": [
+                "auto"
+            ],
+            "propertyClasses": [{
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-LifeCycleStatus",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Visibility",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Type",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Stereotype",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Value",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Alias",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2019-09-10T08:59:00+02:00"
+        },
+        {
+            "id": "RC-State",
+            "title": "FMC:State",
+            "description": [{
+                "text": "A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "&#9679;",
+            "isHeading": false,
+            "instantiation": [
+                "auto"
+            ],
+            "propertyClasses": [{
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-LifeCycleStatus",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Visibility",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Type",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Stereotype",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Value",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Alias",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2019-09-10T08:59:00+02:00"
+        },
+        {
+            "id": "RC-Event",
+            "title": "FMC:Event",
+            "description": [{
+                "text": "An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronisation primitive."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "&#11047;",
+            "isHeading": false,
+            "instantiation": [
+                "auto"
+            ],
+            "propertyClasses": [{
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-LifeCycleStatus",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Visibility",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Type",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Stereotype",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Value",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Alias",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2019-09-10T08:59:00+02:00"
+        },
+        {
+            "id": "RC-Collection",
+            "title": "SpecIF:Collection",
+            "description": [{
+                "text": "A 'Collection' is a logic (often conceptual) group of resources linked with a SpecIF:contains statement. It corresponds to a 'Group' in BPMN Diagrams."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "&#128447;",
+            "isHeading": false,
+            "instantiation": [
+                "auto"
+            ],
+            "propertyClasses": [{
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-LifeCycleStatus",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Visibility",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Type",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Stereotype",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Value",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Alias",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-01-02T18:59:00+02:00"
+        }
+    ],
+    "statementClasses": [{
+            "id": "SC-Classifier",
+            "title": "rdf:type",
+            "description": [{
+                "text": "States that the relation subject is an instance of the relation object."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "changedAt": "2019-03-24T11:00:00+01:00"
+        },
+        {
+            "id": "SC-refersTo",
+            "title": "SpecIF:refersTo",
+            "description": [{
+                "text": "A resource 'refers to' any other resource."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto"
+            ],
+            "propertyClasses": [{
+                "id": "PC-Type",
+                "revision": "1.1"
+            }],
+            "changedAt": "2019-08-20T20:32:25+02:00"
+        },
+        {
+            "id": "SC-dependsOn",
+            "title": "SpecIF:dependsOn",
+            "description": [{
+                "text": "Statement: Requirement/Feature depends on Requirement/Feature"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "user"
+            ],
+            "subjectClasses": [{
+                "id": "RC-Requirement",
+                "revision": "1.1"
+            }],
+            "objectClasses": [{
+                "id": "RC-Requirement",
+                "revision": "1.1"
+            }],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "SC-duplicates",
+            "title": "SpecIF:duplicates",
+            "description": [{
+                "text": "The subject requirement duplicates the object requirement."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "user"
+            ],
+            "subjectClasses": [{
+                "id": "RC-Requirement",
+                "revision": "1.1"
+            }],
+            "objectClasses": [{
+                "id": "RC-Requirement",
+                "revision": "1.1"
+            }],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "SC-contradicts",
+            "title": "SpecIF:contradicts",
+            "description": [{
+                "text": "The subject requirement contradicts the object requirement."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "user"
+            ],
+            "subjectClasses": [{
+                "id": "RC-Requirement",
+                "revision": "1.1"
+            }],
+            "objectClasses": [{
+                "id": "RC-Requirement",
+                "revision": "1.1"
+            }],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "SC-refines",
+            "title": "IREB:refines",
+            "description": [{
+                "text": "The subject requirement refines the object requirement."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "user"
+            ],
+            "subjectClasses": [{
+                "id": "RC-Requirement",
+                "revision": "1.1"
+            }],
+            "objectClasses": [{
+                "id": "RC-Requirement",
+                "revision": "1.1"
+            }],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "SC-shows",
+            "title": "SpecIF:shows",
+            "description": [{
+                "text": "Statement: Plan resp. diagram shows Model-Element"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto"
+            ],
+            "subjectClasses": [{
+                "id": "RC-Diagram",
+                "revision": "1.1"
+            }],
+            "objectClasses": [{
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "SC-contains",
+            "title": "SpecIF:contains",
+            "description": [{
+                "text": "Statement: Model-Element contains Model-Element"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "subjectClasses": [{
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [{
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "SC-stores",
+            "title": "SpecIF:stores",
+            "description": [{
+                "text": "Statement: Actor (Role, Function) writes and reads State (Information)"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto"
+            ],
+            "subjectClasses": [{
+                "id": "RC-Actor",
+                "revision": "1.1"
+            }],
+            "objectClasses": [{
+                "id": "RC-State",
+                "revision": "1.1"
+            }],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "SC-writes",
+            "title": "SpecIF:writes",
+            "description": [{
+                "text": "Statement: Actor (Role, Function) writes State (Information)"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto"
+            ],
+            "subjectClasses": [{
+                "id": "RC-Actor",
+                "revision": "1.1"
+            }],
+            "objectClasses": [{
+                "id": "RC-State",
+                "revision": "1.1"
+            }],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "SC-reads",
+            "title": "SpecIF:reads",
+            "description": [{
+                "text": "Statement: Actor (Role, Function) reads State (Information)"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto"
+            ],
+            "subjectClasses": [{
+                "id": "RC-Actor",
+                "revision": "1.1"
+            }],
+            "objectClasses": [{
+                "id": "RC-State",
+                "revision": "1.1"
+            }],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "SC-signals",
+            "title": "SpecIF:signals",
+            "description": [{
+                "text": "A FMC:Actor 'signals' a FMC:Event."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto"
+            ],
+            "subjectClasses": [{
+                "id": "RC-Actor",
+                "revision": "1.1"
+            }],
+            "objectClasses": [{
+                "id": "RC-Event",
+                "revision": "1.1"
+            }],
+            "changedAt": "2019-08-20T20:32:25+02:00"
+        },
+        {
+            "id": "SC-triggers",
+            "title": "SpecIF:triggers",
+            "description": [{
+                "text": "A FMC:Event 'triggers' an FMC:Actor."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto"
+            ],
+            "subjectClasses": [{
+                "id": "RC-Event",
+                "revision": "1.1"
+            }],
+            "objectClasses": [{
+                "id": "RC-Actor",
+                "revision": "1.1"
+            }],
+            "changedAt": "2020-02-17T20:32:25+02:00"
+        },
+        {
+            "id": "SC-precedes",
+            "title": "SpecIF:precedes",
+            "description": [{
+                "text": "An FMC:Actor 'precedes' an FMC:Actor."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto"
+            ],
+            "subjectClasses": [{
+                "id": "RC-Actor",
+                "revision": "1.1"
+            }],
+            "objectClasses": [{
+                "id": "RC-Actor",
+                "revision": "1.1"
+            }],
+            "changedAt": "2020-02-17T20:32:25+02:00"
+        },
+        {
+            "id": "SC-satisfies",
+            "title": "oslc_rm:satisfies",
+            "description": [{
+                "text": "Statement: Model-Element satisfies Requirement"
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "user"
+            ],
+            "subjectClasses": [{
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [{
+                "id": "RC-Requirement",
+                "revision": "1.1"
+            }],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "SC-allocates",
+            "title": "SpecIF:allocates",
+            "description": [{
+                "text": "Statement: Model-Element is allocated to Model-Element. The semantics is equal to the Allocation in SysML or the deployment relation in UML."
+            }],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "user"
+            ],
+            "subjectClasses": [{
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [{
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-03-30T08:59:00+02:00"
+        }
+    ],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
+}

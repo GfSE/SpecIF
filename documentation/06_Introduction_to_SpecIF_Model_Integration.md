@@ -54,7 +54,7 @@ So these elements complement the set of fundamental elements used to express con
 
 ### First Glimpse on the Elements of SpecIF Model Integration
 
-![Model Integration resource and statement types](./images/ModelIntegration.png)
+![Model Integration resource and statement types](./images/ElementTypes_#1_(M0).png)
 
 The (class-)diagram above gives an overview of the most important element types, defined in SpecIF used for semantic model integration.
 This is called the *SpecIF Integration-Model*
@@ -167,7 +167,7 @@ The class definitions for integration of models from different tools and notatio
 through projects in the arena of enterprise Architecture (notations FMC, BPMN and Archimate) and in the arena of 
 Mechatronic Systems Engineering (notations FMC and SysML).
 
-Inspect or employ the current set of [Classes for Model-Integration](../classDefinitions/03_Classes-for-Model-Integration.specif), if you like.
+Inspect or employ the current set of [Classes for Model-Integration](../classDefinitions/03_SpecIF-Classes-for-Model-Integration.specif), if you like.
 
 ## Mapping of different modeling environments to SpecIF
  

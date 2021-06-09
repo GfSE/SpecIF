@@ -179,25 +179,6 @@
             "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-            "id": "PC-Visibility",
-            "title": "SpecIF:Visibility",
-            "description": [
-                {
-                    "text": "The visibility of a resource (e.g. Public, Private, Protected,...) as known from object orientation.",
-                    "format": "plain",
-                    "language": "en"
-                }
-            ],
-            "revision": "1.1",
-            "replaces": [],
-            "dataType": {
-                "id": "DT-VisibilityKind",
-                "revision": "1.1"
-            },
-            "multiple": false,
-            "changedAt": "2019-09-10T08:59:00+02:00"
-        },
-        {
             "id": "PC-Responsible",
             "title": "SpecIF:Responsible",
             "description": [
