@@ -1,49 +1,83 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_C64FD18A_A4C8_4960_9A6B_27BEF8DD24FD",
-  "title": "SpecIF enumeration datatype definitions for domain 07-Issue Management",
-  "isExtension": false,
-  "dataTypes": [
-    {
-      "id": "DT-IssStatus",
-      "title": "SpecIF:IssueStatus",
-      "description": "Enumerated values for issue status",
-      "revision": "1.0",
-      "replaces": [],
-      "type": "xs:enumeration",
-      "values": [
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_C64FD18A_A4C8_4960_9A6B_27BEF8DD24FD",
+    "title": [
         {
-          "id": "V-IssStatus-0",
-          "value": "open"
-        },
-        {
-          "id": "V-IssStatus-1",
-          "value": "assigned"
-        },
-        {
-          "id": "V-IssStatus-2",
-          "value": "in progress"
-        },
-        {
-          "id": "V-IssStatus-3",
-          "value": "closed"
-        },
-        {
-          "id": "V-IssStatus-4",
-          "value": "reopened"
-        },
-        {
-          "id": "V-IssStatus-5",
-          "value": "rejected"
+            "text": "SpecIF enumeration datatype definitions for domain 07-Issue Management"
         }
-      ],
-      "multiple": false,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    }
-  ],
-  "resourceClasses": [],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "isExtension": false,
+    "dataTypes": [
+        {
+            "id": "DT-IssStatus",
+            "title": "SpecIF:IssueStatus",
+            "description": [
+                {
+                    "text": "Enumerated values for issue status"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "enumeration": [
+                {
+                    "id": "V-IssStatus-0",
+                    "value": [
+                        {
+                            "text": "open"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-IssStatus-1",
+                    "value": [
+                        {
+                            "text": "assigned"
+                        }
+                    ]
+
+                },
+                {
+                    "id": "V-IssStatus-2",
+                    "value": [
+                        {
+                            "text": "in progress"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-IssStatus-3",
+                    "value": [
+                        {
+                            "text": "closed"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-IssStatus-4",
+                    "value": [
+                        {
+                            "text": "reopened"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-IssStatus-5",
+                    "value": [
+                        {
+                            "text": "rejected"
+                        }
+                    ]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2021-06-27T08:59:00+02:00"
+        }
+    ],
+    "propertyClasses": [],
+    "resourceClasses": [],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

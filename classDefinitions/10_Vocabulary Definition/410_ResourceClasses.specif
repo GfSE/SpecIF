@@ -1,137 +1,157 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_E6FC4B89-F483-48BF-971B-2E457F1EE783",
-  "title": "Resource classes for domain 10_Vocabulary Definition",
-  "isExtension": true,
-  "dataTypes": [],
-  "resourceClasses": [
-    {
-      "id": "RC-ResourceTerm",
-      "title": "SpecIF:ResourceTerm",
-      "description": "A term for resources (objects, entities) belonging to the SpecIF vocabulary",
-      "revision": "1.0",
-      "replaces": [],
-      "isHeading": false,
-      "instantiation": [
-        "auto",
-        "user"
-      ],
-      "propertyClasses": [
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_E6FC4B89-F483-48BF-971B-2E457F1EE783",
+    "title": [
         {
-          "id": "PC-Name",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Description",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Origin",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Status",
-          "revision": "1.0"
+            "text": "Resource classes for domain 10_Vocabulary Definition"
         }
-      ],
-      "changedAt": "2017-06-10T15:47:24+02:00"
-    },
-    {
-      "id": "RC-PredicateTerm",
-      "title": "SpecIF:PredicateTerm",
-      "description": "A term for statements (relations) belonging to the SpecIF vocabulary",
-      "revision": "1.0",
-      "replaces": [],
-      "isHeading": false,
-      "instantiation": [
-        "auto",
-        "user"
-      ],
-      "propertyClasses": [
+    ],
+    "isExtension": true,
+    "dataTypes": [],
+    "resourceClasses": [
         {
-          "id": "PC-Name",
-          "revision": "1.0"
+            "id": "RC-ResourceTerm",
+            "title": "SpecIF:ResourceTerm",
+            "description": [
+                {
+                    "text": "A term for resources (objects, entities) belonging to the SpecIF vocabulary"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "isHeading": false,
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Origin",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-LifecycleStatus",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-06-27T15:47:24+02:00"
         },
         {
-          "id": "PC-Description",
-          "revision": "1.0"
+            "id": "RC-PredicateTerm",
+            "title": "SpecIF:PredicateTerm",
+            "description": [
+                {
+                    "text": "A term for statements (relations) belonging to the SpecIF vocabulary"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "isHeading": false,
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Origin",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-LifecycleStatus",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-06-27T15:47:24+02:00"
         },
         {
-          "id": "PC-Origin",
-          "revision": "1.0"
+            "id": "RC-PropertyTerm",
+            "title": "SpecIF:PropertyTerm",
+            "description": [
+                {
+                    "text": "A term for user-defined properties (attributes) belonging to the SpecIF vocabulary"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "isHeading": false,
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Origin",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-LifecycleStatus",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-06-27T15:47:24+02:00"
         },
         {
-          "id": "PC-Status",
-          "revision": "1.0"
+            "id": "RC-ValueTerm",
+            "title": "SpecIF:ValueTerm",
+            "description": [
+                {
+                    "text": "A term for property values belonging to the SpecIF vocabulary"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "isHeading": false,
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Origin",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-LifecycleStatus",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-06-27T00:29:45+01:00"
         }
-      ],
-      "changedAt": "2017-06-10T15:47:24+02:00"
-    },
-    {
-      "id": "RC-PropertyTerm",
-      "title": "SpecIF:PropertyTerm",
-      "description": "A term for user-defined properties (attributes) belonging to the SpecIF vocabulary",
-      "revision": "1.0",
-      "replaces": [],
-      "isHeading": false,
-      "instantiation": [
-        "auto",
-        "user"
-      ],
-      "propertyClasses": [
-        {
-          "id": "PC-Name",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Description",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Origin",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Status",
-          "revision": "1.0"
-        }
-      ],
-      "changedAt": "2017-06-10T15:47:24+02:00"
-    },
-    {
-      "id": "RC-ValueTerm",
-      "title": "SpecIF:ValueTerm",
-      "description": "A term for property values belonging to the SpecIF vocabulary",
-      "revision": "1.0",
-      "replaces": [],
-      "isHeading": false,
-      "instantiation": [
-        "auto",
-        "user"
-      ],
-      "propertyClasses": [
-        {
-          "id": "PC-Name",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Description",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Origin",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Status",
-          "revision": "1.0"
-        }
-      ],
-      "changedAt": "2018-02-05T00:29:45+01:00"
-    }
-  ],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

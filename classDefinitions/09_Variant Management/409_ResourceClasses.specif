@@ -1,124 +1,124 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_ABA0DF90_2E71_4D31_BD17_C324BA242C19",
-  "title": "Resource classes for domain 09_Variant Managament",
-  "isExtension": true,
-  "createdAt": "2020-02-16T19:54:35.2621445+01:00",
-  "dataTypes": [],
-  "propertyClasses": [],
-  "resourceClasses": [
-    {
-      "id": "RC-FeatureModel",
-      "title": "SpecIF:FeatureModel",
-      "description": "A 'Feature Model' is the root resource of a feature tree to structure the set of features for a system as a tree structure (hierarchy).",
-      "revision": "1.0",
-      "replaces": [],
-      "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACJUlEQVRYw+2Xz0tUURTHP9eZxlErQzQaGCmFEBXdiDmjo4LQQtTKbBPh1pUb/wc3rt1YuxbhStAULETaqJNMqGBE6oRCTtGiFi0szR8t7oPrm3nvzgwzvt6iCxfOO/f8+N5zzzv3XEGWY3+SM9168DEiG3siH05zASMuwnE2QMRFO08HQjjhXAdCOOXcDoRw0rkVCOG082QQBfzjIZJ3P7cK8YS18L0wVAdgehn2vin+3Saov5kqPzEHv4/U91APFBeao+BNVppZhvmYNYD6WxLA1BK82VD8T19gfNgsu/UZRl+YeU+6zAAAvLrwdDSC59whlV9NUvbA8Qm8egcHh2bjL9+aZeyGV5d8z0bgst9euToA2/vw6xAW16EvZI4kQNUN2EnYF7uckrCiFILlxo5XFH89LnOkxA81Qb0NLYDYR1g1Zmwrdf30DPojkl5Yg58Hkp41wt/dDL5LegDaHBgcU7TfB/HnqTIPWmF8Wp7z6xgMdMBsVK71hWFmJYcI+H1qFvmsZWoqoaHKOPcoRD/A1x9wpRg6G9MfozYCG0/1SXg+Cpu7sPQeAmWK5/Wk181LJeyPyN/1+ETWCIDeUGa6eQFw/RqEaiV99EfWi3BdhgCy7eHsxqN2RT9sh4IMrFqW4vttsuQCFNpkyEAEmm5DsELxuu9A4rtho1Xxe1pkwQIoKcrgMnL6Sv7fD7inJXNFU+qKttwVDxNXPM1c8Th14nn+F3Yeo5VyMlKzAAAAAElFTkSuQmCC",
-      "isHeading": false,
-      "instantiation": [
-        "user"
-      ],
-      "propertyClasses": [
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_ABA0DF90_2E71_4D31_BD17_C324BA242C19",
+    "title": [
         {
-          "id": "PC-VisibleId",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Name",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Description",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Status",
-          "revision": "1.0"
+            "text": "Resource classes for domain 09_Variant Managament"
         }
-      ],
-      "changedAt": "2019-12-30T07:59:00+01:00"
-    },
-    {
-      "id": "RC-VariantModel",
-      "title": "SpecIF:VariantModel",
-      "description": "A 'Variant Model' is an instance of a feature model, where  a subset of features is selected to define a concrete system variant.",
-      "revision": "1.0",
-      "replaces": [],
-      "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC5ElEQVRYw+WXy0tUURzHP+fOvWdSYcYRFUVQo8cfoGQZZUEmiogPfL+giHZBu6BNBNEmKKRtiPZalEWoYUahtbC056KoqBa1yTbmIh8zd8bTwjzNOOOMUo4DHbgw9/c75/f7nC+/e+Z3BGscvjSlovnllBBriSf+RdK/gRHrkXgtIGK9k8eCEPFIHg1CxCv5ShAinskjQYh4J18OYbDBQ2zE7oNVMJdezs+fY07NYWBwIukkxjJxhuy7vPS/AKDd2YlE0u29pP0u4eLYpuNhSZ77nzFsD+n3ArOQCqsyvPLrZaMCFKAeuEaVL02FPAVmoQJUskhWPzw/1ZhrQs9fet65P4atq5F1IXOOOI9qH4Cx9KPD2amBBn0DIYCTC9/07susclJESojfwgLgiu9yiH1GzXDfvqf9kT55rXOpVYZbuLXcwWPQ/gPULjvCAm1zbAfglu9miL3fvsOsmmWLY+uKdWAE76JKVgPwIfCez4FPetKArx8At3BTISvDguwwi/S6t4E32n7NexWAInNnbACABtkYQr8k4yP/CABVsjqinDWylmSRDECvtweAaTXNiP0QgFbZtjqAUquMdJEesuvH/lFm1SwALbI1YhCXcFNmlQNw29cHQJ/vBjY2BWYh+Y7NqwOwsKiT9QCM+58yraY1SIaRyQHr4IqBDjkPA/B14QsT/nGu/5Y/WNWYAAD1sgEAG5the4gBexGg1qoLOxuWq+cRHgB6vN088Y/hwEFbhKKNClBi7SfDyASga/4C3xcmAWh0NkcNZGHRIJsWP0dvLwECFJu7yTKyowMs/3s0MKi16vQpBpBr5FFi7ot5tDY7F2vEi3dV8sspISJq2h50KAG6LmKNPeZeco08rUiLsz3mGjOScZdZzJmks9jYADTJlrA5OUYOp5JOA5Bv5Gt7V8pFXvtfkWVkkypSAfCIND23wCyM3BH93/1AQrRkCdGUJkRbnhAXk4S4miXE5TQe1/NfY7Q1kCjTK2kAAAAASUVORK5CYII=",
-      "isHeading": false,
-      "instantiation": [
-        "user"
-      ],
-      "propertyClasses": [
+    ],
+    "isExtension": true,
+    "createdAt": "2020-02-16T19:54:35.2621445+01:00",
+    "dataTypes": [],
+    "propertyClasses": [],
+    "resourceClasses": [
         {
-          "id": "PC-VisibleId",
-          "revision": "1.0"
+            "id": "RC-FeatureModel",
+            "title": "SpecIF:FeatureModel",
+            "description": [
+                {
+                    "text": "A 'Feature Model' is the root resource of a feature tree to structure the set of features for a system as a tree structure (hierarchy)."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACJUlEQVRYw+2Xz0tUURTHP9eZxlErQzQaGCmFEBXdiDmjo4LQQtTKbBPh1pUb/wc3rt1YuxbhStAULETaqJNMqGBE6oRCTtGiFi0szR8t7oPrm3nvzgwzvt6iCxfOO/f8+N5zzzv3XEGWY3+SM9168DEiG3siH05zASMuwnE2QMRFO08HQjjhXAdCOOXcDoRw0rkVCOG082QQBfzjIZJ3P7cK8YS18L0wVAdgehn2vin+3Saov5kqPzEHv4/U91APFBeao+BNVppZhvmYNYD6WxLA1BK82VD8T19gfNgsu/UZRl+YeU+6zAAAvLrwdDSC59whlV9NUvbA8Qm8egcHh2bjL9+aZeyGV5d8z0bgst9euToA2/vw6xAW16EvZI4kQNUN2EnYF7uckrCiFILlxo5XFH89LnOkxA81Qb0NLYDYR1g1Zmwrdf30DPojkl5Yg58Hkp41wt/dDL5LegDaHBgcU7TfB/HnqTIPWmF8Wp7z6xgMdMBsVK71hWFmJYcI+H1qFvmsZWoqoaHKOPcoRD/A1x9wpRg6G9MfozYCG0/1SXg+Cpu7sPQeAmWK5/Wk181LJeyPyN/1+ETWCIDeUGa6eQFw/RqEaiV99EfWi3BdhgCy7eHsxqN2RT9sh4IMrFqW4vttsuQCFNpkyEAEmm5DsELxuu9A4rtho1Xxe1pkwQIoKcrgMnL6Sv7fD7inJXNFU+qKttwVDxNXPM1c8Th14nn+F3Yeo5VyMlKzAAAAAElFTkSuQmCC",
+            "isHeading": false,
+            "instantiation": [
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-VisibleId",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Status",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-06-27T07:59:00+01:00"
         },
         {
-          "id": "PC-Name",
-          "revision": "1.0"
+            "id": "RC-VariantModel",
+            "title": "SpecIF:VariantModel",
+            "description": [
+                {
+                    "text": "A 'Variant Model' is an instance of a feature model, where  a subset of features is selected to define a concrete system variant."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC5ElEQVRYw+WXy0tUURzHP+fOvWdSYcYRFUVQo8cfoGQZZUEmiogPfL+giHZBu6BNBNEmKKRtiPZalEWoYUahtbC056KoqBa1yTbmIh8zd8bTwjzNOOOMUo4DHbgw9/c75/f7nC+/e+Z3BGscvjSlovnllBBriSf+RdK/gRHrkXgtIGK9k8eCEPFIHg1CxCv5ShAinskjQYh4J18OYbDBQ2zE7oNVMJdezs+fY07NYWBwIukkxjJxhuy7vPS/AKDd2YlE0u29pP0u4eLYpuNhSZ77nzFsD+n3ArOQCqsyvPLrZaMCFKAeuEaVL02FPAVmoQJUskhWPzw/1ZhrQs9fet65P4atq5F1IXOOOI9qH4Cx9KPD2amBBn0DIYCTC9/07susclJESojfwgLgiu9yiH1GzXDfvqf9kT55rXOpVYZbuLXcwWPQ/gPULjvCAm1zbAfglu9miL3fvsOsmmWLY+uKdWAE76JKVgPwIfCez4FPetKArx8At3BTISvDguwwi/S6t4E32n7NexWAInNnbACABtkYQr8k4yP/CABVsjqinDWylmSRDECvtweAaTXNiP0QgFbZtjqAUquMdJEesuvH/lFm1SwALbI1YhCXcFNmlQNw29cHQJ/vBjY2BWYh+Y7NqwOwsKiT9QCM+58yraY1SIaRyQHr4IqBDjkPA/B14QsT/nGu/5Y/WNWYAAD1sgEAG5the4gBexGg1qoLOxuWq+cRHgB6vN088Y/hwEFbhKKNClBi7SfDyASga/4C3xcmAWh0NkcNZGHRIJsWP0dvLwECFJu7yTKyowMs/3s0MKi16vQpBpBr5FFi7ot5tDY7F2vEi3dV8sspISJq2h50KAG6LmKNPeZeco08rUiLsz3mGjOScZdZzJmks9jYADTJlrA5OUYOp5JOA5Bv5Gt7V8pFXvtfkWVkkypSAfCIND23wCyM3BH93/1AQrRkCdGUJkRbnhAXk4S4miXE5TQe1/NfY7Q1kCjTK2kAAAAASUVORK5CYII=",
+            "isHeading": false,
+            "instantiation": [
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-VisibleId",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Name",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Description",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Status",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-06-27T07:59:00+01:00"
         },
         {
-          "id": "PC-Description",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Status",
-          "revision": "1.0"
+            "id": "RC-FeatureModelFeature",
+            "title": "SpecIF:FeatureModelFeature",
+            "description": [
+                {
+                    "text": "A 'Feture Model Feature' is a feature used in a feature tree resp. feature model structure."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "extends": {
+                "id": "RC_Feature",
+                "revision": "1.1"
+            },
+            "icon": "",
+            "isHeading": false,
+            "instantiation": [
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-FeatureKind",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-FeatureSelectionState",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-Abbreviation",
+                    "revision": "1.0"
+                }
+            ],
+            "changedAt": "2021-06-27T07:59:00+01:00"
         }
-      ],
-      "changedAt": "2019-12-30T07:59:00+01:00"
-    },
-    {
-      "id": "RC-FeatureModelFeature",
-      "title": "SpecIF:FeatureModelFeature",
-      "description": "A 'Feture Model Feature' is a feature used in a feature tree resp. feature model structure.",
-      "revision": "1.0",
-      "replaces": [],
-      "icon": "",
-      "isHeading": false,
-      "instantiation": [
-        "user"
-      ],
-      "propertyClasses": [
-        {
-          "id": "PC-VisibleId",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Name",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Abbreviation",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-FeatureKind",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Description",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Status",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Discipline",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-FeatureSelectionState",
-          "revision": "1.0"
-        }
-      ],
-      "changedAt": "2019-12-30T07:59:00+01:00"
-    }
-  ],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

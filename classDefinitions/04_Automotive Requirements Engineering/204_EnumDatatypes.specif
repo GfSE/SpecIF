@@ -1,75 +1,133 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_FFF7098C-3C99-4A4E-91C9-4E65AE5E3352",
-  "title": "SpecIF enumeration datatype definitions for doamin 04-Automotive Requirements Engineering",
-  "isExtension": true,
-  "createdAt": "2020-02-16T19:54:35.2169651+01:00",
-  "dataTypes": [
-    {
-      "id": "DT-SupplierStatus",
-      "title": "VDA:SupplierStatus",
-      "description": "Enumerated values for VDA supplier-status",
-      "revision": "1.0",
-      "replaces": [],
-      "type": "xs:enumeration",
-      "values": [
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_FFF7098C-3C99-4A4E-91C9-4E65AE5E3352",
+    "title": [
         {
-          "id": "V-SupplierStatus-0",
-          "value": "VDA:notApplicable"
-        },
-        {
-          "id": "V-SupplierStatus-1",
-          "value": "VDA:toClarify"
-        },
-        {
-          "id": "V-SupplierStatus-2",
-          "value": "VDA:agreed"
-        },
-        {
-          "id": "V-SupplierStatus-3",
-          "value": "VDA:partlyAgreed"
-        },
-        {
-          "id": "V-SupplierStatus-4",
-          "value": "VDA:notAgreed"
+            "text": "SpecIF enumeration datatype definitions for domain 04-Automotive Requirements Engineering"
         }
-      ],
-      "multiple": false,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "DT-OemStatus",
-      "title": "VDA:OemStatus",
-      "description": "Enumerated values for VDA oem-status",
-      "revision": "1.0",
-      "replaces": [],
-      "type": "xs:enumeration",
-      "values": [
+    ],
+    "isExtension": true,
+    "createdAt": "2020-02-16T19:54:35.2169651+01:00",
+    "dataTypes": [
         {
-          "id": "V-OemStatus-0",
-          "value": "VDA:notToEvaluate"
+            "id": "DT-SupplierStatus",
+            "title": "VDA:SupplierStatus",
+            "description": [
+                {
+                    "text": "Enumerated values for VDA supplier-status"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "enumeration": [
+                {
+                    "id": "V-SupplierStatus-0",
+                    "value": [
+                        {
+                            "text": "VDA:notApplicable"
+                        }
+
+                    ]
+                },
+                {
+                    "id": "V-SupplierStatus-1",
+                    "value": [
+                        {
+                            "text": "VDA:toClarify"
+                        }
+
+                    ],
+
+                },
+                {
+                    "id": "V-SupplierStatus-2",
+                    "value": [
+                        {
+                            "text": "VDA:agreed"
+                        }
+
+                    ]
+                },
+                {
+                    "id": "V-SupplierStatus-3",
+                    "value": [
+                        {
+                            "text": "VDA:partlyAgreed"
+                        }
+
+                    ]
+                },
+                {
+                    "id": "V-SupplierStatus-4",
+                    "value": [
+                        {
+                            "text": "VDA:notAgreed"
+                        }
+
+                    ]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "V-OemStatus-1",
-          "value": "VDA:toEvaluate"
-        },
-        {
-          "id": "V-OemStatus-2",
-          "value": "VDA:accepted"
-        },
-        {
-          "id": "V-OemStatus-3",
-          "value": "VDA:notAccepted"
+            "id": "DT-OemStatus",
+            "title": "VDA:OemStatus",
+            "description": [
+                {
+                    "text": "Enumerated values for VDA oem-status"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "enumeration": [
+                {
+                    "id": "V-OemStatus-0",
+                    "value": [
+                        {
+                            "text": "VDA:notToEvaluate"
+                        }
+
+                    ]
+                },
+                {
+                    "id": "V-OemStatus-1",
+                    "value": [
+                        {
+                            "text": "VDA:toEvaluate"
+                        }
+
+                    ]
+                },
+                {
+                    "id": "V-OemStatus-2",
+                    "value": [
+                        {
+                            "text": "VDA:accepted"
+                        }
+
+                    ]
+                },
+                {
+                    "id": "V-OemStatus-3",
+                    "value": [
+                        {
+                            "text": "VDA:notAccepted"
+                        }
+
+                    ]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2016-05-26T08:59:00+02:00"
         }
-      ],
-      "multiple": false,
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    }
-  ],
-  "propertyClasses": [],
-  "resourceClasses": [],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "propertyClasses": [],
+    "resourceClasses": [],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

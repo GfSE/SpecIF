@@ -1,63 +1,67 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_0791B811-0780-4392-84F2-A0032ED10B9F",
-  "title": "SpecIF property class definitions for doamin 04-Automotive Requirements Engineering",
-  "isExtension": true,
-  "createdAt": "2020-02-16T19:54:35.2228755+01:00",
-  "dataTypes": [],
-  "propertyClasses": [
-    {
-      "id": "PC-SupplierStatus",
-      "title": "VDA:SupplierStatus",
-      "description": [],
-      "revision": "1.0",
-      "replaces": [],
-      "dataType": {
-        "id": "DT-SupplierStatus",
-        "revision": "1.0"
-      },
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "PC-SupplierComment",
-      "title": "VDA:SupplierComment",
-      "description": [],
-      "revision": "1.0",
-      "replaces": [],
-      "dataType": {
-        "id": "DT-Text",
-        "revision": "1.0"
-      },
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "PC-OemStatus",
-      "title": "VDA:OemStatus",
-      "description": [],
-      "revision": "1.0",
-      "replaces": [],
-      "dataType": {
-        "id": "DT-OemStatus",
-        "revision": "1.0"
-      },
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "PC-OemComment",
-      "title": "VDA:OemComment",
-      "description": [],
-      "revision": "1.0",
-      "replaces": [],
-      "dataType": {
-        "id": "DT-Text",
-        "revision": "1.0"
-      },
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    }
-  ],
-  "resourceClasses": [],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_0791B811-0780-4392-84F2-A0032ED10B9F",
+    "title": [
+        {
+            "text": "SpecIF property class definitions for domain 04-Automotive Requirements Engineering"
+        }
+    ],
+    "isExtension": true,
+    "createdAt": "2020-02-16T19:54:35.2228755+01:00",
+    "dataTypes": [],
+    "propertyClasses": [
+        {
+            "id": "PC-SupplierStatus",
+            "title": "VDA:SupplierStatus",
+            "description": [],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-SupplierStatus",
+                "revision": "1.1"
+            },
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-SupplierComment",
+            "title": "VDA:SupplierComment",
+            "description": [],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-Text",
+                "revision": "1.1"
+            },
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-OemStatus",
+            "title": "VDA:OemStatus",
+            "description": [],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-OemStatus",
+                "revision": "1.1"
+            },
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
+        {
+            "id": "PC-OemComment",
+            "title": "VDA:OemComment",
+            "description": [],
+            "revision": "1.0",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-Text",
+                "revision": "1.1"
+            },
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        }
+    ],
+    "resourceClasses": [],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

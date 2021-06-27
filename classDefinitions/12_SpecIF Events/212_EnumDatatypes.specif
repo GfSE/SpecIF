@@ -1,49 +1,82 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_ED0A2E92_9E4A_4521-868A_2D74152BB5DB",
-  "title": "SpecIF enumeration datatype definitions for domain 12-SpecIF Events",
-  "isExtension": false,
-  "dataTypes": [
-    {
-      "id": "DT-SpecIfEventType",
-      "title": "SpecIF:specifEventType",
-      "description": "The SpecIF Event Type.",
-      "revision": "1.0",
-      "replaces": [],
-      "type": "xs:enumeration",
-      "values": [
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_ED0A2E92_9E4A_4521-868A_2D74152BB5DB",
+    "title": [
         {
-          "id": "V-SET-ResourceCreated",
-          "value": "Resource created"
-        },
-        {
-          "id": "V-SET-ResourceUpdated",
-          "value": "Resource updated"
-        },
-        {
-          "id": "V-SET-ResourceDeleted",
-          "value": "Resource deleted"
-        },
-        {
-          "id": "V-SET-StatementCreated",
-          "value": "Statement created"
-        },
-        {
-          "id": "V-SET-StatementUpdated",
-          "value": "Statement updated"
-        },
-        {
-          "id": "V-SET-StatementDeleted",
-          "value": "Statement deleted"
+            "text": "SpecIF enumeration datatype definitions for domain 12-SpecIF Events"
         }
-      ],
-      "multiple": false,
-      "changedAt": "2020-04-08T08:59:00+02:00"
-    }
-  ],
-  "resourceClasses": [],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "isExtension": false,
+    "dataTypes": [
+        {
+            "id": "DT-SpecIfEventType",
+            "title": "SpecIF:specifEventType",
+            "description": [
+                {
+                    "text": "The SpecIF Event Type."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "enumeration": [
+                {
+                    "id": "V-SET-ResourceCreated",
+                    "value": [
+                        {
+                            "text": "Resource created"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-SET-ResourceUpdated",
+                    "value": [
+                        {
+                            "text": "Resource updated"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-SET-ResourceDeleted",
+                    "value": [
+                        {
+                            "text": "Resource deleted"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-SET-StatementCreated",
+                    "value": [
+                        {
+                            "text": "Statement created"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-SET-StatementUpdated",
+                    "value": [
+                        {
+                            "text": "Statement updated"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-SET-StatementDeleted",
+                    "value": [
+                        {
+                            "text": "Statement deleted"
+                        }
+                    ]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2021-06-27T08:59:00+02:00"
+        }
+    ],
+    "propertyClasses": [],
+    "resourceClasses": [],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

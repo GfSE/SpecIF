@@ -1,71 +1,115 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_E7466A8F_546F_4DEB_95D0_776AAF5BC8EE",
-  "title": "SpecIF enumeration datatype definitions for domain 09-Variant Management",
-  "isExtension": true,
-  "createdAt": "2020-02-16T19:54:35.2484817+01:00",
-  "dataTypes": [
-    {
-      "id": "DT-FeatureKind",
-      "title": "SpecIF:FeatureKind",
-      "description": "Enumerated values for feature kind",
-      "revision": "1.0",
-      "replaces": [],
-      "type": "xs:enumeration",
-      "values": [
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_E7466A8F_546F_4DEB_95D0_776AAF5BC8EE",
+    "title": [
         {
-          "id": "V-FeatureKind-Mandatory",
-          "value": "Mandatory"
-        },
-        {
-          "id": "V-FeatureKind-Alternative",
-          "value": "Alternative"
-        },
-        {
-          "id": "V-FeatureKind-Optional",
-          "value": "Optional"
-        },
-        {
-          "id": "V-FeatureKind-Or",
-          "value": "Or"
+            "text": "SpecIF enumeration datatype definitions for domain 09-Variant Management"
         }
-      ],
-      "multiple": false,
-      "changedAt": "2019-12-30T07:59:00+01:00"
-    },
-    {
-      "id": "DT-FeatureSelectionState",
-      "title": "SpecIF:FeatureSelectionState",
-      "description": "Enumerated values for feature selection state",
-      "revision": "1.0",
-      "replaces": [],
-      "type": "xs:enumeration",
-      "values": [
+    ],
+    "isExtension": true,
+    "createdAt": "2020-02-16T19:54:35.2484817+01:00",
+    "dataTypes": [
         {
-          "id": "V-FeatureSelectionState-Unchecked",
-          "value": "Unchecked"
+            "id": "DT-FeatureKind",
+            "title": "SpecIF:FeatureKind",
+            "description": [
+                {
+                    "text": "Enumerated values for feature kind"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "enumeration": [
+                {
+                    "id": "V-FeatureKind-Mandatory",
+                    "value": [
+                        {
+                            "text": "Mandatory"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-FeatureKind-Alternative",
+                    "value": [
+                        {
+                            "text": "Alternative"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-FeatureKind-Optional",
+                    "value": [
+                        {
+                            "text": "Optional"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-FeatureKind-Or",
+                    "value": [
+                        {
+                            "text": "Or"
+                        }
+                    ]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2021-06-27T07:59:00+01:00"
         },
         {
-          "id": "V-FeatureSelectionState-Checked",
-          "value": "Checked"
-        },
-        {
-          "id": "V-FeatureSelectionState-Forbidden",
-          "value": "Forbidden"
-        },
-        {
-          "id": "V-FeatureSelectionState-Recommended",
-          "value": "Recommended"
+            "id": "DT-FeatureSelectionState",
+            "title": "SpecIF:FeatureSelectionState",
+            "description": [
+                {
+                    "text": "Enumerated values for feature selection state"
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "type": "xs:string",
+            "enumeration": [
+                {
+                    "id": "V-FeatureSelectionState-Unchecked",
+                    "value": [
+                        {
+                            "text": "Unchecked"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-FeatureSelectionState-Checked",
+                    "value": [
+                        {
+                            "text": "Checked"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-FeatureSelectionState-Forbidden",
+                    "value": [
+                        {
+                            "text": "Forbidden"
+                        }
+                    ]
+                },
+                {
+                    "id": "V-FeatureSelectionState-Recommended",
+                    "value": [
+                        {
+                            "text": "Recommended"
+                        }
+                    ]
+                }
+            ],
+            "multiple": false,
+            "changedAt": "2021-06-27T07:59:00+01:00"
         }
-      ],
-      "multiple": false,
-      "changedAt": "2019-12-30T07:59:00+01:00"
-    }
-  ],
-  "propertyClasses": [],
-  "resourceClasses": [],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "propertyClasses": [],
+    "resourceClasses": [],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

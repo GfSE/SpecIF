@@ -1,61 +1,41 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_7E4B253F-FB81-46FA-8BFA-BBE685F9F61E",
-  "title": "SpecIF resource class definitions for domain 05-Agile Requirements Engineering",
-  "isExtension": true,
-  "createdAt": "2020-02-16T19:54:35.2317065+01:00",
-  "dataTypes": [],
-  "propertyClasses": [],
-  "resourceClasses": [
-    {
-      "id": "RC-Epic",
-      "title": "SCRUM:Epic",
-      "description": "An 'Epic' is a big user story and will be refined by user stories/requirements.",
-      "revision": "1.0",
-      "replaces": [],
-      "extends": {
-        "id": "RC-Requirement",
-        "revision": "1.0"
-      },
-      "isHeading": false,
-      "instantiation": [
-        "user"
-      ],
-      "propertyClasses": [
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_7E4B253F-FB81-46FA-8BFA-BBE685F9F61E",
+    "title": [
         {
-          "id": "PC-VisibleId",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Name",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Description",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Status",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Priority",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Perspective",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-Discipline",
-          "revision": "1.0"
+            "text": "SpecIF resource class definitions for domain 05-Agile Requirements Engineering"
         }
-      ],
-      "changedAt": "2019-06-26T08:59:00+02:00"
-    }
-  ],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "isExtension": true,
+    "createdAt": "2020-02-16T19:54:35.2317065+01:00",
+    "dataTypes": [],
+    "propertyClasses": [],
+    "resourceClasses": [
+        {
+            "id": "RC-Epic",
+            "title": "SCRUM:Epic",
+            "description": [
+                {
+                    "text": "An 'Epic' is a big user story and will be refined by user stories/requirements."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "extends": {
+                "id": "RC-Requirement",
+                "revision": "1.1"
+            },
+            "isHeading": false,
+            "instantiation": [
+                "user"
+            ],
+            "propertyClasses": [
+            ],
+            "changedAt": "2021-06-27T08:59:00+02:00"
+        }
+    ],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

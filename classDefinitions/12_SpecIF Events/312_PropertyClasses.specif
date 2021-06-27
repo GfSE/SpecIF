@@ -1,99 +1,131 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_A4C10FBD_0C1D_46DB_9593_3F1D5568241B",
-  "title": "SpecIF property class definitions for domain 12-SpecIF Events",
-  "isExtension": true,
-  "createdAt": "2020-04-08T19:54:35.0595654+01:00",
-  "dataTypes": [],
-  "propertyClasses": [
-    {
-      "id": "PC-ApiURL",
-      "title": "SpecIF:apiURL",
-      "description": "The SpecIF API server URL.",
-      "revision": "1.0",
-      "replaces": [],
-      "dataType": {
-        "id": "DT-URL",
-        "revision": "1.0"
-      },
-      "changedAt": "2020-04-08T20:32:25.411Z"
-    },
-    {
-      "id": "PC-SpecIfProject",
-      "title": "SpecIF:project",
-      "description": "The SpecIF project ID.",
-      "revision": "1.0",
-      "replaces": [],
-      "dataType": {
-        "id": "DT-ShortString",
-        "revision": "1.0"
-      },
-      "changedAt": "2020-04-08T20:32:25.411Z"
-    },
-    {
-      "id": "PC-SpecIfEventType",
-      "title": "SpecIF:specifEventType",
-      "description": "The SpecIF event type.",
-      "revision": "1.0",
-      "replaces": [],
-      "dataType": {
-        "id": "DT-SpecIfEventType",
-        "revision": "1.0"
-      },
-      "changedAt": "2020-04-08T20:32:25.411Z"
-    },
-    {
-      "id": "PC-SpecIfId",
-      "title": "SpecIF:id",
-      "description": "The SpecIF element id.",
-      "revision": "1.0",
-      "replaces": [],
-      "dataType": {
-        "id": "DT-ShortString",
-        "revision": "1.0"
-      },
-      "changedAt": "2020-04-08T20:32:25.411Z"
-    },
-    {
-      "id": "PC-SpecIfRevision",
-      "title": "SpecIF:revision",
-      "description": "The SpecIF element revision.",
-      "revision": "1.0",
-      "replaces": [],
-      "dataType": {
-        "id": "DT-ShortString",
-        "revision": "1.0"
-      },
-      "changedAt": "2020-04-08T20:32:25.411Z"
-    },
-    {
-      "id": "PC-SpecIfClassId",
-      "title": "SpecIF:classId",
-      "description": "The SpecIF elemet class id.",
-      "revision": "1.0",
-      "replaces": [],
-      "dataType": {
-        "id": "DT-ShortString",
-        "revision": "1.0"
-      },
-      "changedAt": "2020-04-08T20:32:25.411Z"
-    },
-    {
-      "id": "PC-SpecIfClassRevision",
-      "title": "SpecIF:classRevision",
-      "description": "The SpecIF element class revision.",
-      "revision": "1.0",
-      "replaces": [],
-      "dataType": {
-        "id": "DT-ShortString",
-        "revision": "1.0"
-      },
-      "changedAt": "2020-04-08T20:32:25.411Z"
-    }
-  ],
-  "resourceClasses": [],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_A4C10FBD_0C1D_46DB_9593_3F1D5568241B",
+    "title": [
+        {
+            "text": "SpecIF property class definitions for domain 12-SpecIF Events"
+        }
+    ],
+    "isExtension": true,
+    "createdAt": "2020-04-08T19:54:35.0595654+01:00",
+    "dataTypes": [],
+    "propertyClasses": [
+        {
+            "id": "PC-ApiURL",
+            "title": "SpecIF:apiURL",
+            "description": [
+                {
+                    "text": "The SpecIF API server URL."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-URL",
+                "revision": "1.1"
+            },
+            "changedAt": "2021-06-27T20:32:25.411Z"
+        },
+        {
+            "id": "PC-SpecIfProject",
+            "title": "SpecIF:project",
+            "description": [
+                {
+                    "text": "The SpecIF project ID."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-ShortString",
+                "revision": "1.1"
+            },
+            "changedAt": "2021-06-27T20:32:25.411Z"
+        },
+        {
+            "id": "PC-SpecIfEventType",
+            "title": "SpecIF:specifEventType",
+            "description": [
+                {
+                    "text": "The SpecIF event type."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-SpecIfEventType",
+                "revision": "1.1"
+            },
+            "changedAt": "2021-06-21T20:32:25.411Z"
+        },
+        {
+            "id": "PC-SpecIfId",
+            "title": "SpecIF:id",
+            "description": [
+                {
+                    "text": "The SpecIF element id."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-ShortString",
+                "revision": "1.1"
+            },
+            "changedAt": "2021-06-27T20:32:25.411Z"
+        },
+        {
+            "id": "PC-SpecIfRevision",
+            "title": "SpecIF:revision",
+            "description": [
+                {
+                    "text": "The SpecIF element revision."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-ShortString",
+                "revision": "1.1"
+            },
+            "changedAt": "2021-06-21T20:32:25.411Z"
+        },
+        {
+            "id": "PC-SpecIfClassId",
+            "title": "SpecIF:classId",
+            "description": [
+                {
+                    "text": "The SpecIF element class id."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-ShortString",
+                "revision": "1.1"
+            },
+            "changedAt": "2021-06-27T20:32:25.411Z"
+        },
+        {
+            "id": "PC-SpecIfClassRevision",
+            "title": "SpecIF:classRevision",
+            "description": [
+                {
+                    "text": "The SpecIF element class revision."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-ShortString",
+                "revision": "1.1"
+            },
+            "changedAt": "2021-06-27T20:32:25.411Z"
+        }
+    ],
+    "resourceClasses": [],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

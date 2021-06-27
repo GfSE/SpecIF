@@ -1,56 +1,64 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_3EB4B335-3827_430D-A04F_18154770AC9B",
-  "title": "Resource classes for domain 12-SpecIF Events",
-  "isExtension": true,
-  "createdAt": "2020-04-08T19:54:35.141794+01:00",
-  "dataTypes": [],
-  "propertyClasses": [],
-  "resourceClasses": [
-    {
-      "id": "RC-SpecIfEvent",
-      "title": "SpecIF:specifEvent",
-      "description": "A SpecIF change event.",
-      "revision": "1.0",
-      "replaces": [],
-      "icon": "",
-      "isHeading": false,
-      "propertyClasses": [
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_3EB4B335-3827_430D-A04F_18154770AC9B",
+    "title": [
         {
-          "id": "PC-Origin",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-SpecIfProject",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-SpecIfEventType",
-          "revision": "1.0"
-        },
-
-        {
-          "id": "PC-SpecIfId",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-SpecIfRevision",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-SpecIfClassId",
-          "revision": "1.0"
-        },
-        {
-          "id": "PC-SpecIfClassRevision",
-          "revision": "1.0"
+            "text": "Resource classes for domain 12-SpecIF Events"
         }
-      ],
-      "changedAt": "2020-04-08T08:59:00+02:00"
-    }
-  ],
-  "statementClasses": [],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "isExtension": true,
+    "createdAt": "2020-04-08T19:54:35.141794+01:00",
+    "dataTypes": [],
+    "propertyClasses": [],
+    "resourceClasses": [
+        {
+            "id": "RC-SpecIfEvent",
+            "title": "SpecIF:specifEvent",
+            "description": [
+                {
+                    "text": "A SpecIF change event."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "icon": "",
+            "isHeading": false,
+            "propertyClasses": [
+                {
+                    "id": "PC-Origin",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-SpecIfProject",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-SpecIfEventType",
+                    "revision": "1.1"
+                },
+
+                {
+                    "id": "PC-SpecIfId",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-SpecIfRevision",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-SpecIfClassId",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "PC-SpecIfClassRevision",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-06-27T08:59:00+02:00"
+        }
+    ],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

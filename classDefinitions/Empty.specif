@@ -1,7 +1,11 @@
 {
-    "$schema": "https://specif.de/v1.0/schema.json",
+    "$schema": "https://specif.de/v1.1/schema.json",
     "id": "_3555D75E_0344_4BDF_B127_2340C7F2BF9A",
-    "title": "Empty SpecIF file",
+    "title": [
+        {
+            "text": "Empty SpecIF file"
+        }
+    ],
     "isExtension": false,
     "dataTypes": [],
     "resourceClasses": [],
