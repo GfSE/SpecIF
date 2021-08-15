@@ -30,7 +30,6 @@
 |SpecIF:LifeCycleStatus|PC-LifeCycleStatus|1.1|SpecIF:LifeCycleStatus|The 'Status', e.g. lifecycle state, of the resource.|
 |SpecIF:Priority|PC-Priority|1.1|SpecIF:Priority|The 'Priority' of the resource.|
 |SpecIF:Discipline|PC-Discipline|1.1|SpecIF:Discipline|The engineering discipline (system, electronics, mechanics, software, safety).|
-|SpecIF:Visibility|PC-Visibility|1.1|SpecIF:VisibilityKind|The visibility of a resource (e.g. Public, Private, Protected,...) as known from object orientation.|
 |SpecIF:Responsible|PC-Responsible|1.1|String[256]|The 'Person' being responsible for the resource.|
 |SpecIF:DueDate|PC-DueDate|1.1|Date or Timestamp|A 'Due Date' for the resource.|
 |UML:Stereotype|PC-Stereotype|1.1|String[256]|A stereotype gives an element an additional/different meaning.|
@@ -87,6 +86,11 @@
 |title|id|revision|type|description|
 |-|-|-|-|-|
 |SpecIF:VisibilityKind|DT-VisibilityKind|1.1|xs:string|<p>Enumerated values for visibility</p><ul><li>UML:Public [V-VisibilityKind-0]</li><li>UML:Private [V-VisibilityKind-1]</li><li>UML:Protected [V-VisibilityKind-2]</li><li>UML:Package [V-VisibilityKind-3]</li><li>UML:Internal [V-VisibilityKind-4]</li><li>UML:ProtectedInternal [V-VisibilityKind-5]</li></ul>|
+### Property classes of domain 03: Model Integration
+
+|title|id|revision|dataType|description|
+|-|-|-|-|-|
+|SpecIF:Visibility|PC-Visibility|1.1|SpecIF:VisibilityKind|The visibility of a resource (e.g. Public, Private, Protected,...) as known from object orientation.|
 ### Resource classes of domain 03: Model Integration
 
 |title|id|revision|description|
