@@ -40,7 +40,7 @@
                     "revision": "1.1"
                 },
                 {
-                    "id": "PC-Status",
+                    "id": "PC-LifeCycleStatus",
                     "revision": "1.1"
                 }
             ],
@@ -75,7 +75,7 @@
                     "revision": "1.1"
                 },
                 {
-                    "id": "PC-Status",
+                    "id": "PC-LifeCycleStatus",
                     "revision": "1.1"
                 }
             ],
@@ -111,7 +111,7 @@
                 },
                 {
                     "id": "PC-Abbreviation",
-                    "revision": "1.0"
+                    "revision": "1.1"
                 }
             ],
             "changedAt": "2021-06-27T07:59:00+01:00"

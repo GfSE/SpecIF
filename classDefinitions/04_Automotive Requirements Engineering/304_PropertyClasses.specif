@@ -50,7 +50,7 @@
             "id": "PC-OemComment",
             "title": "VDA:OemComment",
             "description": [],
-            "revision": "1.0",
+            "revision": "1.1",
             "replaces": [],
             "dataType": {
                 "id": "DT-Text",

@@ -1,0 +1,31 @@
+{
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_BE70AF38-1944-4D12-99D9-6DABF5AD9217",
+    "title": [
+        {
+            "text": "SpecIF property class definitions for domain 07-Issue Management"
+        }
+    ],
+    "isExtension": true,
+    "createdAt": "2021-08-15T08:54:35.2228755+01:00",
+    "dataTypes": [],
+    "propertyClasses": [
+        {
+            "id": "PC-IssStatus",
+            "title": "SpecIF:IssueStatus",
+            "description": [],
+            "revision": "1.1",
+            "replaces": [],
+            "dataType": {
+                "id": "DT-IssStatus",
+                "revision": "1.1"
+            },
+            "changedAt": "2021-08-15T08:59:00+02:00"
+        }
+    ],
+    "resourceClasses": [],
+    "statementClasses": [],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
+}
