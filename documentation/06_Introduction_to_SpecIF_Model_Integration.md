@@ -27,7 +27,7 @@ FMC defines three fundamental elements to represent all semantic aspects express
 
 * An ■ *Actor* is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a user role.
 * A ● *State* is a fundamental model element type representing a passive entity, be it a value, an information store, even a color or shape.
-* An ♦ *Event* is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.
+* An ⬧ *Event* is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.
 
 The idea behind using just these three elements is, that all kinds of structural or behavioral modeling can be expressed as a bipartite graph of just these elements.
 One example are Petri-Nets consisting of transitions (actors) and places (states). 
@@ -54,7 +54,7 @@ So these elements complement the set of fundamental elements used to express con
 
 ### First Glimpse on the Elements of SpecIF Model Integration
 
-![Model Integration resource and statement types](./images/ElementTypes_#1_(M0).png)
+![Model Integration resource and statement types](./images/ElementClasses_#1_(M0).png)
 
 The (class-)diagram above gives an overview of the most important element types, defined in SpecIF used for semantic model integration.
 This is called the *SpecIF Integration-Model*
@@ -75,7 +75,7 @@ All diagrams of all kinds of graphical notations can be visualized applying this
 ### Grouping
 
 Models can express a logical or conceptual structure of modeled aspects or the model itself by grouping elements together.
-This aspect is covered by the resource class 🖿 *Collection*.
+This aspect is covered by the resource class ⬚ *Collection*.
 Examples for collections are folders in a file system, groups in BPMN or packages in UML/SysML.
 
 Because a collection can contain other collections, a hierarchy structure (or 'tree') can be expressed using SpecIF.
@@ -98,7 +98,7 @@ Structural aspects are expressed with the following statements:
 * The *contains* statement expresses that a element is contained in another element. 
 Typical application scenarios are to express for example that a collection *contains* an actor or a state *contains* a sub-state etc.
 
-![Appliocation of the contains statement in SpecIF](./images/Contains.png)
+![Application of the contains statement in SpecIF](./images/Contains.png)
  
 * The *shows* statement expresses that a model-element is depicted on a diagram.  
 This semantic relation is obvious for a human observer of a diagram, but it gets easily queried by the machine, if there is the explicit statement.
@@ -140,7 +140,7 @@ The following class diagram shows the SpecIF application for document structures
 
 ![Resource and statement usage for document structures](./images/RequirementDocuments.png)
 
-* The ⬚	 *Hierarchy* element is the root for a document
+* The 🖿	 *Hierarchy* element is the root for a document
 * A *Heading* is used to define a heading text and to bring structure into a document
 * A *Paragraph* can be used to include some text paragraphs with no special semantics (e.g. prose text) a the document
 * A ✶ *Feature* and

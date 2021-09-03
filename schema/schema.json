@@ -67,9 +67,8 @@
       "required": [ "id" ]
     },
     "SpecifKeys": {
-      "description": "A list of keys referencing items such as propertyClasses, resourceClasses or statementClasses.",
+      "description": "A list of keys referencing items such as propertyClasses, resourceClasses or statementClasses; any list must have >0 entries including those of any parent element.",
       "type": "array",
-      "minItems": 1,
       "uniqueItems": true,
       "items": {
         "$ref": "#/definitions/SpecifKey"
@@ -117,6 +116,10 @@
       },
       "required": [ "email" ]
     },
+    "SpecifText": {
+      "description": "A good class name indicates it's role. The use of a vocabulary-term is recommended, which in turn can be translated to any natural or domain language.",
+      "type": "string"
+    },
     "SpecifTextFormat": {
       "type": "string",
       "enum": [ "plain", "xhtml" ]
@@ -144,10 +147,6 @@
         "additionalProperties": false,
         "required": [ "text" ]
       }
-    },
-    "SpecifText": {
-      "description": "A good class name indicates it's role. The use of a vocabulary-term is recommended, which in turn can be translated to any natural or domain language.",
-      "type": "string"
     },
     "SpecifValue": {
       "oneOf": [
@@ -267,11 +266,11 @@
               "$ref": "#/definitions/SpecifMultiLanguageText"
             },
             "enumeration": {
-              "description": "Optional use by all dataTypes except 'xs:boolean' when just enumerated values are valid.",
+              "description": "An optional list of values to choose from for a specific instance; multiple values are allowed, if 'multiple' is set to 'true'.",
               "$ref": "#/definitions/SpecifEnumeratedValues"
             },
             "multiple": {
-              "description": "Indicates whether multiple values can be chosen especially in case of an enumeration; by default the value is 'false'.",
+              "description": "Indicates whether multiple values are allowed; by default the value is 'false'.",
               "type": "boolean"
             },
             "revision": {
@@ -319,11 +318,11 @@
               "description": "Optional use by dataTypes 'xs:integer' and 'xs:double'."
             },
             "enumeration": {
-              "description": "Optional use by all dataTypes except 'xs:boolean' when just enumerated values are valid.",
+              "description": "An optional list of values to choose from for a specific instance; multiple values are allowed, if 'multiple' is set to 'true'.",
               "$ref": "#/definitions/SpecifEnumeratedValues"
             },
             "multiple": {
-              "description": "Indicates whether multiple values can be chosen especially in case of an enumeration; by default the value is 'false'.",
+              "description": "Indicates whether multiple values are allowed; by default the value is 'false'.",
               "type": "boolean"
             },
             "revision": {
@@ -377,11 +376,11 @@
               "title": "Maximum Value of a Number"
             },
             "enumeration": {
-              "description": "Optional use by all dataTypes except 'xs:boolean' when just enumerated values are valid.",
+              "description": "An optional list of values to choose from for a specific instance; multiple values are allowed, if 'multiple' is set to 'true'.",
               "$ref": "#/definitions/SpecifEnumeratedValues"
             },
             "multiple": {
-              "description": "Indicates whether multiple values can be chosen especially in case of an enumeration; by default the value is 'false'.",
+              "description": "Indicates whether multiple values are allowed; by default the value is 'false'.",
               "type": "boolean"
             },
             "revision": {
@@ -425,11 +424,11 @@
               "minimum": 0
             },
             "enumeration": {
-              "description": "Optional use by all dataTypes except 'xs:boolean' when just enumerated values are valid.",
+              "description": "An optional list of values to choose from for a specific instance; multiple values are allowed, if 'multiple' is set to 'true'.",
               "$ref": "#/definitions/SpecifEnumeratedValues"
             },
             "multiple": {
-              "description": "Indicates whether multiple values can be chosen especially in case of an enumeration; by default the value is 'false'.",
+              "description": "Indicates whether multiple values are allowed; by default the value is 'false'.",
               "type": "boolean"
             },
             "revision": {
@@ -495,6 +494,7 @@
           "type": "string"
         }
       },
+      "additionalProperties": false,
       "required": [ "id", "title", "dataType", "changedAt" ]
     },
     "SpecifResourceClass": {
@@ -523,7 +523,7 @@
           "$ref": "#/definitions/SpecifInstantiation"
         },
         "propertyClasses": {
-          "description": "A list of keys referencing propertyClasses.",
+          "description": "A list of keys referencing propertyClasses; a base resourceClass must have at least one propertyClass, whereas an extending class may have none.",
           "$ref": "#/definitions/SpecifKeys"
         },
         "revision": {
@@ -539,6 +539,7 @@
           "type": "string"
         }
       },
+      "additionalProperties": false,
       "required": [ "id", "title", "propertyClasses", "changedAt" ]
     },
     "SpecifStatementClass": {
@@ -568,7 +569,7 @@
           "type": "boolean"
         },
         "propertyClasses": {
-          "description": "A list of keys referencing propertyClasses.",
+          "description": "A list of keys referencing propertyClasses; a statementClass may exist without propertyClasses.",
           "$ref": "#/definitions/SpecifKeys"
         },
         "subjectClasses": {
@@ -592,13 +593,14 @@
           "type": "string"
         }
       },
+      "additionalProperties": false,
       "required": [ "id", "title", "changedAt" ]
     },
     "SpecifProperty": {
       "type": "object",
       "properties": {
         "class": {
-          "description": "Must be a member of propertyClasses. In addition, it must be listed in the propertyClasses of the parent's class.",
+          "description": "Must be a member of 'propertyClasses'. In addition, it must be listed in the propertyClasses of the respective resource's or statement's (or any of it's parent's) class.",
           "$ref": "#/definitions/SpecifKey"
         },
         "values": {
@@ -608,9 +610,8 @@
       "required": [ "class", "values" ]
     },
     "SpecifProperties": {
-      "description": "A list of properties of a resource or statement.",
+      "description": "A list of properties of a resource or statement; the number of properties including any parent's properties must be >0.",
       "type": "array",
-      "minItems": 1,
       "uniqueItems": true,
       "items": {
         "$ref": "#/definitions/SpecifProperty"
@@ -677,6 +678,7 @@
           "$ref": "#/definitions/SpecifKey"
         },
         "properties": {
+          "description": "If there is no title property, the statementClass' title applies.",
           "$ref": "#/definitions/SpecifProperties"
         },
         "revision": {
@@ -702,7 +704,7 @@
         },
         "title": {
           "description": "The node's label; if missing, the title of the referenced resource is applied.",
-          "$ref": "#/definitions/SpecifMultiLanguageText"
+          "$ref": "#/definitions/SpecifText"
         },
         "description": {
           "$ref": "#/definitions/SpecifMultiLanguageText"
@@ -781,14 +783,17 @@
       "description": "An absolute URL pointing to this SpecIF schema. Supports both specif.de and schemastore.org.",
       "type": "string",
       "format": "uri",
-      "pattern": "^https?:\\/\\/(specif\\.de\\/v1\\.1\\/schema|\\/specif-1\\.1)\\.json$"
+      "pattern": "^https?:\\/\\/(specif\\.de\\/v1\\.1\\/schema|json\\.schemastore\\.org\\/specif-1\\.1)\\.json$"
     },
     "id": {
       "$ref": "#/definitions/SpecifId"
     },
+    "revision": {
+      "$ref": "#/definitions/SpecifRevision"
+    },
     "title": {
       "description": "The project's name; if missing, the first hierarchy node's title applies.",
-      "$ref": "#/definitions/SpecifMultiLanguageText"
+      "$ref": "#/definitions/SpecifText"
     },
     "description": {
       "description": "The project's description; if missing, the first hierarchy node's description applies.",
