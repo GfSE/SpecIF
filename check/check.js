@@ -202,9 +202,9 @@ function checkConstraints( data, options ) {
         // - an extension (specialization)of a resourceClass may have zero or more propertyClasses
         // - a statementClass may also have zero or more propertyClasses, also no list at all is allowed
         if( Array.isArray( elementC[pClasses] ) ) {
-            if( type=='resourceClass' && !elementC.extends && elementC[pClasses].length<1 ) 
+            if( type=='resourceClass' && !elementC['extends'] && elementC[pClasses].length<1 ) 
                     errorL.push({status:976, statusText: "resource class '"+elementC.id+"' must have at least one property class" });
-            // a resourceClass or statementClass *has* propertyClasses:
+
             elementC[pClasses].forEach( function( propertyC ) {
                 // A class's propertyClass,
                 // it must be a valid key of an item in propertyClasses and therefore it must not be 'unique':
@@ -322,9 +322,9 @@ function checkConstraints( data, options ) {
         // - any value is a string except for properties of type 'xs:string', where every value is a list of multilanguage objects
 
         let dT = itemByKey(data.dataTypes,prpC.dataType);
-        // Has been checked already in checkPropertyClasses():
         if( !dT ) {
-            errorL.push({status:975, statusText: "prpC with identifier '"+prpC.id+"' must reference a valid dataType"});
+            // Has been checked already in checkPropertyClasses():
+        //  errorL.push({status:975, statusText: "property class '"+prpC.id+"' must reference a valid dataType"});
             return;    
         };                
 
@@ -446,9 +446,9 @@ function checkConstraints( data, options ) {
                 propertyC, 
                 instanceC = itemByKey(classL,ins[typ]); // the instance's class
 
-            // The instance's class must be a member of classL (has already been checked with checkClasses()):
             if( !instanceC ) {
-                errorL.push({status:977, statusText: typ+" of instance '"+ins.id+"' must reference a valid resourceClass resp. statementClass" }); 
+                // The instance's class must be a member of classL (has already been checked with checkClasses())
+            //  errorL.push({status:977, statusText: typ+" of instance '"+ins.id+"' must reference a valid resourceClass resp. statementClass" }); 
                 return;
             };
             
