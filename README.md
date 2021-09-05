@@ -27,8 +27,8 @@ Thanks to @oalt for the discussion about support for multiple revisions and mult
 
 ## Schema
 
-The SpecIF schema is developed according to [JSON-schema](http://json-schema.org) using this [Github repository](./schema/schema.json). It is hosted by
-- SpecIF Home: https://specif.de/v1.0/schema.json
+The SpecIF schema is developed according to [JSON-schema](http://json-schema.org) using this [Github repository](./schema/). It is hosted by
+- SpecIF Home: https://specif.de/v1.0/schema.json and https://specif.de/v1.1/schema.json
 - Schemastore.org: https://json.schemastore.org/specif-1.0.json
 
 ## Constraints
@@ -42,7 +42,8 @@ In addition to the schema, the following constraints on apply:
 - ...
 - A node's *resource* value must be the *id* of a member of *resources*.
 
-A syntax and constraint checker is available as JavaScript function: https://github.com/GfSE/SpecIF/tree/master/check
+A syntax and constraint checker is available as JavaScript function using this [Github repository](./check/). It is hosted by 
+- SpecIF Home: https://specif.de/v1.0/check.js and https://specif.de/v1.1/check.js
 
 ## Examples
 
