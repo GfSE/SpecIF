@@ -2,7 +2,7 @@
 
 In the previous tutorials we have introduced all concepts we need to represent a simple model with SpecIF. Let's start with a block-diagram using the notation of the [Fundamental Modelling Concepts (FMC)](http://f-m-c.org/). Let us first look at the model, itself:
 
-![Very Simple Model (FMC)](./images/Very-Simple-Model-FMC.svg)
+![Very Simple Model (FMC)](./../images/Very-Simple-Model-FMC.svg)
 
 - In fact, this is not a model, but a diagram representing a model. It is a view of the model for a specific communication purpose; it is meant to be interpreted by a human being. In this particularly simple case, the diagram shows the whole model, but usually there are more and each diagram depicts a certain aspect of a model.
 - We see two model elements with two relations. The upper box represents an IT-System with some business logic and the lower box represents the information being processed. The directed connections represent a writing and a reading relationship; thus this application can write and read the data.
@@ -12,7 +12,7 @@ In the previous tutorials we have introduced all concepts we need to represent a
 
 Let us first look at the relations of the model-elements. A relation is represented by a statement made with the respective resources. Below, the statements for one of the model-elements, namely \'FiCo-Application\' are shown:
 
-![Very Simple Model Relations](./images/Very-Simple-Model-Relations.png)
+![Very Simple Model Relations](./../images/Very-Simple-Model-Relations.png)
 
 - While the model-diagram shown first was created by an engineer to define an aspect of the model, the graph above shows all statements with a particular model-element, \'FiCo-Application\' in this case. 
 - An accumulation of *all* statements with this model-element is shown, no matter where they have been defined; it is the semantic net around the selected element with a radius of one. 
