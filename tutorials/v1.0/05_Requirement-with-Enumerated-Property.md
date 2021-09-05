@@ -145,7 +145,7 @@ Some more explanations:
 
 Finally let us have a look at the tab \"Reports\" of the SpecIF-Viewer. You may check yourself by clicking the link at the very lower right corner of this page. 
 
-![Requirement with Enumerated-Property Reports](./images/Requirement-with-Enumerated-Property-Reports.png)
+![Requirement with Enumerated-Property Reports](./../images/Requirement-with-Enumerated-Property-Reports.png)
 
 - The first report panel on the left shows how many *resourceClasses* are defined, one in this case, and how many resources of that class exist, also a single one in this case.
 - The second report panel shows how how many instances of the given class (see the title of the report) have any of the defined value of a property with an enumerated dataType. Also trivial in this case: Resources of class \"IREB-Requirement\" have one property with enumerated values and the single instance has the value \"Rather High\".
