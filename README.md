@@ -31,6 +31,13 @@ The SpecIF schema is developed according to [JSON-schema](http://json-schema.org
 - SpecIF Home: https://specif.de/v1.0/schema.json and https://specif.de/v1.1/schema.json
 - Schemastore.org: https://json.schemastore.org/specif-1.0.json
 
+Sometimes the question is raised why there is a version v1.1 so shortly after v1.0. In fact there is no need for an additional feature.  
+SpecIF v1.0 is particularly suited to get acquainted with SpecIF concepts, as simple tasks allow a simple representation. If more advanced features such as multi-language support are needed, 
+the SpecIF schema v1.0 would allow a more elaborate structure. 
+While the learning is facilitated, the structural variance makes system implementation more complicated; also some system may only implement certain structure variants.
+For that reason the schema v1.1 has eliminated all structural variance. Now the data structure seems to be more complicated, because all features are always accounted for,
+but the structure is always the same: When any element *may* have several values, it is always a list, even if it has only one member.
+
 ## Constraints
 
 In addition to the schema, the following constraints on apply:
