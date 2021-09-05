@@ -16,7 +16,8 @@ That‘s where SpecIF kicks in.
 For details see http://specif.de and [the SpecIF specification documentation](./documentation/Readme.md) in this repository.
 
 This branch details schema and constraints for 'fully-flegded' SpecIF. It is characterized by
-- A SpecIF data set (container) may have information elements of multiple revisions. The identifiers are identical and the revision tags change. The combination of identifier and revision, called 'key', must be unique, however. 
+- A SpecIF data set (container) may have information elements of multiple revisions. The identifiers are identical and the revision tags change. 
+The combination of identifier and revision, called 'key', must be unique, however. 
 - Information content may be provided for more than one language.
 - A transformation to ReqIF is possible, if a certain revision level and a certain language is chosen.
 - A lossless transformation from ReqIF is always possible.
@@ -31,10 +32,10 @@ The SpecIF schema is developed according to [JSON-schema](http://json-schema.org
 - SpecIF Home: https://specif.de/v1.0/schema.json and https://specif.de/v1.1/schema.json
 - Schemastore.org: https://json.schemastore.org/specif-1.0.json
 
-Sometimes the question is raised why there is a version v1.1 so shortly after v1.0. In fact there is no need for an additional feature. 
-SpecIF v1.0 is particularly suited to get acquainted with SpecIF concepts, as simple tasks allow a simple representation. If more advanced features such as multi-language support are needed, 
-the SpecIF schema v1.0 would allow a more elaborate structure. 
-While the learning is facilitated, the structural variance makes system implementation more complicated; also some system may only implement certain structure variants.
+Sometimes the question is raised why there is a version v1.1 so shortly after v1.0. In fact there is no need for any additional feature. 
+SpecIF v1.0 is particularly well suited to get acquainted with SpecIF concepts, as simple tasks allow a simple representation. 
+If more advanced features such as multi-language support are needed, the SpecIF schema v1.0 would allow a more elaborate structure. 
+While the learning is facilitated, the structural variance makes system implementation more complicated; also some systems may only implement certain structure variants.
 For that reason the schema v1.1 has eliminated all structural variance. Now the data structure seems to be more complicated, because all features are always accounted for,
 but the structure is always the same: When any element *may* have several values, it is always a list, even if it has only one member.
 
