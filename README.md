@@ -1,4 +1,4 @@
-![SpecIF - Specification Integration Facility](./logo/SpecIF-Logo-small.png)
+![SpecIF - Specification Integration Facility](./logo/SpecIF_Logo_small.png)
 
 # Specification Integration Facility - schema, constraints, checker, documentation and examples
 
