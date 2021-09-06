@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generiert durch Microsoft Visio, SVG Export SpecIF-Logo-big.svg big -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="11.6929in" height="8.26772in"
+		viewBox="0 0 841.89 595.276" xml:space="preserve" color-interpolation-filters="sRGB" class="st10">
+	<v:documentProperties v:langID="1031" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st2 {fill:#5cb400;font-family:Work Sans Medium;font-size:13.3333em}
+		.st3 {fill:#7f7f7f;font-family:Work Sans Medium;font-size:2.70834em}
+		.st4 {fill:none;stroke:#7f7f7f;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.70079}
+		.st5 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st6 {stroke:#7f7f7f;stroke-linecap:butt;stroke-width:9}
+		.st7 {stroke:#ffffff;stroke-linecap:butt;stroke-width:5.6}
+		.st8 {fill:#ffffff;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:5.66929}
+		.st9 {fill:#5cb400;stroke:#7f7f7f;stroke-linecap:butt;stroke-width:4.25197}
+		.st10 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="4" v:index="2" v:groupContext="foregroundPage">
+		<title>big</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Verbinder" v:index="0"/>
+		<g id="shape6-1" v:mID="6" v:groupContext="shape" transform="translate(289.701,-363.669)">
+			<title>Tabelle.6</title>
+			<desc>SpecIF</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="272.409" cy="535.387" width="544.82" height="119.777"/>
+			<rect x="0" y="475.499" width="544.819" height="119.777" class="st1"/>
+			<text x="4" y="583.39" class="st2" v:langID="1031"><v:paragraph/><v:tabList/>SpecIF</text>		</g>
+		<g id="shape7-4" v:mID="7" v:groupContext="shape" transform="translate(295.654,-268.87)">
+			<title>Tabelle.7</title>
+			<desc>Specification Integration Facility</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="266.457" cy="569.09" width="532.92" height="52.3705"/>
+			<rect x="0" y="542.905" width="532.913" height="52.3705" class="st1"/>
+			<text x="4" y="578.84" class="st3" v:langID="1031"><v:paragraph/><v:tabList/>Specification Integration Facility</text>		</g>
+		<g id="group23-7" transform="translate(7.61485,-250.961)" v:mID="23" v:groupContext="group">
+			<title>Tabelle.23</title>
+			<g id="shape8-8" v:mID="8" v:groupContext="shape" transform="translate(88.7438,-69.4488)">
+				<title>Sechseck.8</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<path d="M87.19 484.72 L23.36 484.72 L-8.55 540 L23.36 595.28 L87.19 595.28 L119.1 540 L87.19 484.72 Z" class="st4"/>
+			</g>
+			<g id="shape2-10" v:mID="2" v:groupContext="shape" transform="translate(30.6335,-11.3386)">
+				<title>Sechseck.2</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<path d="M178.85 368.5 L47.92 368.5 L-17.54 481.89 L47.92 595.28 L178.85 595.28 L244.31 481.89 L178.85 368.5 Z"
+						class="st5"/>
+			</g>
+			<g id="shape3-12" v:mID="3" v:groupContext="shape" v:layerMember="0" transform="translate(78.556,-238.11)">
+				<title>Dynamischer Verbinder</title>
+				<path d="M0 595.28 L64.28 706.62 A2.3622 2.3622 0 0 1 66.64 710.71 L130.93 822.05" class="st6"/>
+			</g>
+			<g id="shape4-15" v:mID="4" v:groupContext="shape" v:layerMember="0" transform="translate(13.0927,-117.638)">
+				<title>Dynamischer Verbinder.4</title>
+				<path d="M0 588.19 L128.56 588.19 A2.3622 2.3622 0 1 1 133.29 588.19 L261.85 588.19" class="st6"/>
+			</g>
+			<g id="shape5-18" v:mID="5" v:groupContext="shape" v:layerMember="0" transform="translate(209.483,-238.11)">
+				<title>Dynamischer Verbinder.5</title>
+				<path d="M0 595.28 L-130.93 822.05" class="st6"/>
+			</g>
+			<g id="group19-21" v:mID="19" v:groupContext="group">
+				<title>Tabelle.19</title>
+				<g id="shape16-22" v:mID="16" v:groupContext="shape" transform="translate(30.6335,-11.3386)">
+					<title>Sechseck.16</title>
+					<v:userDefs>
+						<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+					</v:userDefs>
+					<path d="M178.85 368.5 L47.92 368.5 L-17.54 481.89 L47.92 595.28 L178.85 595.28 L244.31 481.89 L178.85 368.5 Z"
+							class="st5"/>
+				</g>
+				<g id="shape15-24" v:mID="15" v:groupContext="shape" v:layerMember="0" transform="translate(78.556,-238.11)">
+					<title>Dynamischer Verbinder.15</title>
+					<path d="M0 595.28 L64.28 706.62 A2.3622 2.3622 0 0 1 66.64 710.71 L130.93 822.05" class="st7"/>
+				</g>
+				<g id="shape17-27" v:mID="17" v:groupContext="shape" v:layerMember="0" transform="translate(13.0927,-117.638)">
+					<title>Dynamischer Verbinder.17</title>
+					<path d="M0 588.19 L128.56 588.19 A2.3622 2.3622 0 1 1 133.29 588.19 L261.85 588.19" class="st7"/>
+				</g>
+				<g id="shape18-30" v:mID="18" v:groupContext="shape" v:layerMember="0" transform="translate(209.483,-238.11)">
+					<title>Dynamischer Verbinder.18</title>
+					<path d="M0 595.28 L-130.93 822.05" class="st7"/>
+				</g>
+			</g>
+			<g id="shape14-33" v:mID="14" v:groupContext="shape" transform="translate(89.5941,-70.2992)">
+				<title>Sechseck.14</title>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<path d="M85.85 486.43 L23 486.43 L-8.42 540.85 L23 595.28 L85.85 595.28 L117.27 540.85 L85.85 486.43 Z"
+						class="st8"/>
+			</g>
+		</g>
+		<g id="shape1-35" v:mID="1" v:groupContext="shape" transform="translate(104.863,-328.913)">
+			<title>Sechseck</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M73.78 501.73 L19.77 501.73 L-7.24 548.5 L19.77 595.28 L73.78 595.28 L100.78 548.5 L73.78 501.73 Z"
+					class="st9"/>
+		</g>
+	</g>
+</svg>
