@@ -1,4 +1,4 @@
-![SpecIF logo](../logo/SpecIF_Logo_small.png)
+![SpecIF logo](../logo/SpecIF-Logo-120.png)
 
 # SpecIF Tutorials
 
