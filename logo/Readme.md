@@ -1,6 +1,6 @@
 # The SpecIF-logo
 
-![The SpecIF logo](./SpecIF_Logo_medium.png)
+![The SpecIF logo](./SpecIF-Logo-120.png)
 
 The idea behind the SpecIF-logo is to express the integrating character of the SpecIF approach. 
 The green hexagon symbolizes the integrating element. 
