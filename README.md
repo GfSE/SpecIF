@@ -38,18 +38,38 @@ If more advanced features such as multi-language support are needed, the SpecIF 
 While the learning is facilitated, the structural variance makes system implementation including transformations more complicated. 
 Also, some development teams may decide to only implement certain structure variants, resulting in compatibility problems.
 For that reason the schema v1.1 has eliminated all structural variances. Now the data structure seems to be more complicated, because all features are always accounted for,
-but the structure is always the same: When any element *may* have several values, it is always a list, even if it has only one member.
+but the structure is always the same: When a certain element *may* have several values, it is always a list, even if it has only one member.
 
 ## Constraints
 
-In addition to the schema, the following constraints on apply:
-- Any item's *key* consisting of *id* and *revision* must be unique. By default of a revision, the id must be unique.
-- A propertyClass's *dataType* value must be the *id* of a member of *dataTypes*.
-- ... 
-- A resource's *class* value must be the *id* of a member of *resourceClasses*. 
-- Similarly, A statement's *class* value must be the *id* of a member of *statementClasses*.
-- ...
-- A node's *resource* value must be the *id* of a member of *resources*.
+In addition to the schema, the following constraints apply:
+- An item's *key* consisting of *id* and *revision* must be unique. By default of a revision, the id must be unique.
+- dataType 'xs:integer' or 'xs:double': If both exist, 'minInclusive' must be smaller or equal than 'maxInclusive'.
+- dataType except 'xs:boolean': If present, a list of enumerated values must have at least one entry.
+- dataType except 'xs:string' and 'xs:boolean': If present, a list of enumerated values must have entries of type string.
+- dataType 'xs:string': If present, a list of enumerated values must have entries with a list of multi-language texts each.
+- A propertyClass's 'dataType' must reference a member of dataTypes by key.
+- propertyClass referencing dataType 'xs:boolean': If present, the list of default values must not have more than one value.
+- propertyClass referencing dataType except 'xs:boolean': If present, the list of default values must not have more than one value, unless 'multiple' is true.
+- propertyClass referencing dataType defining enumerated values: If present, the list of default values must have entries defined as id in the dataType's enumeration list.
+- propertyClass referencing dataType without enumerated values: If present, the list of default values must have valid entries according to the referenced dataType (see below).
+- resourceClass not extending another: The list of propertyClasses must reference at least one a member of propertyClasses by key.
+- resourceClass extending another: If present, the list of propertyClasses must reference members of propertyClasses by key.
+- A resourceClass's 'extends' must reference a resourceClass by key.
+- statementClass: If present, a list of propertyClasses must reference members of propertyClasses by key.
+- A statementClass's 'subjectClasses': If present, the list must reference members of resourceClasses or statementClasses by key.
+- A statementClass's 'objectClasses': If present, the list must reference members of resourceClasses or statementClasses by key.
+- A statementClass's 'extends' must reference a statementClass by key.
+- A resource's 'class' must reference a member of resourceClasses by key. 
+- A resource's 'properties' must have valid entries according to the referenced dataType (see below).
+- A statement's 'class' must reference a member of statementClasses by key.
+- A statement's 'subject' must reference a valid resource or statement.
+- A statement's 'subject' must have a class which is listed in the subjectClasses of the statement's class, if such subjectClasses are defined.
+- A statement's 'object' must reference a valid resource or statement.
+- A statement's 'object' must have a class which is listed in the objectClasses of the statement's class, if such objectClasses are defined.
+- A statement's 'properties' must have valid entries according to the referenced dataType (see below).
+- A node's 'resource' must be the *key* of a member of *resources*.
+- A value ...
 
 A syntax and constraint checker is available as JavaScript function using this [Github repository](./check/). It is hosted by 
 - SpecIF Home: https://specif.de/v1.0/check.js and https://specif.de/v1.1/check.js
