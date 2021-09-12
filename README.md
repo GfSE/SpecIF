@@ -42,17 +42,15 @@ but the structure is always the same: When a certain element *may* have several 
 
 ## Constraints
 
-In addition to the schema, the following constraints apply:
+In addition to the schema, the following constraints apply for SpecIF v1.1:
 - An item's *key* consisting of *id* and *revision* must be unique. By default of a revision, the id must be unique.
 - dataType 'xs:integer' or 'xs:double': If both exist, 'minInclusive' must be smaller or equal than 'maxInclusive'.
-- dataType except 'xs:boolean': If present, a list of enumerated values must have at least one entry.
-- dataType except 'xs:string' and 'xs:boolean': If present, a list of enumerated values must have entries of type string.
+- dataType: If present, a list of enumerated values must have at least one entry.
+- dataType except 'xs:string': If present, a list of enumerated values must have entries of type string.
 - dataType 'xs:string': If present, a list of enumerated values must have entries with a list of multi-language texts each.
 - A propertyClass's 'dataType' must reference a member of dataTypes by key.
-- propertyClass referencing dataType 'xs:boolean': If present, the list of default values must not have more than one value.
-- propertyClass referencing dataType except 'xs:boolean': If present, the list of default values must not have more than one value, unless 'multiple' is true.
-- propertyClass referencing dataType defining enumerated values: If present, the list of default values must have entries defined as id in the dataType's enumeration list.
-- propertyClass referencing dataType without enumerated values: If present, the list of default values must have valid entries according to the referenced dataType (see below).
+- propertyClass: If present, the list of default values must not have more than one value, unless 'multiple' is true.
+- propertyClass: If present, the list of default values must have valid entries according to the referenced dataType (see below).
 - resourceClass not extending another: The list of propertyClasses must reference at least one a member of propertyClasses by key.
 - resourceClass extending another: If present, the list of propertyClasses must reference members of propertyClasses by key.
 - A resourceClass's 'extends' must reference a resourceClass by key.
@@ -68,10 +66,21 @@ In addition to the schema, the following constraints apply:
 - A statement's 'object' must reference a valid resource or statement.
 - A statement's 'object' must have a class which is listed in the objectClasses of the statement's class, if such objectClasses are defined.
 - A statement's 'properties' must have valid entries according to the referenced dataType (see below).
-- A node's 'resource' must be the *key* of a member of *resources*.
-- A value ...
+- A node's 'resource' must reference a member of resources by key.
+- The list of values must not have more than one item, unless 'multiple' of the propertyClass (or by default of the dataType) is true.
+- Underlying dataType defines enumerated values: If present, the list of values must have entries defined as id in the dataType's enumeration list.
+- Underlying dataType 'xs:string' without enumerated values: If present, the list of values must have multilanguage text items.
+- Underlying dataType except 'xs:string' without enumerated values: If present, the list of values must have string items.
+- Underlying dataType 'xs:boolean' without enumerated values: Each item of the value list must be either 'true' or 'false'.
+- Underlying dataType 'xs:dateTime' without enumerated values: Each item of the value list must be a date-time according to ISO 8601.
+- Underlying dataType 'xs:anyURI' without enumerated values: Each item of the value list must be a valid URI string according to according to RFC 3986.
+- Underlying dataType 'xs:integer' without enumerated values: Each item of the value list must be a valid integer number.
+- Underlying dataType 'xs:double' without enumerated values: Each item of the value list must be a valid number.
+- Underlying dataType 'xs:integer' or 'xs:double' without enumerated values: Each item of the value list must be larger or equal to the dataTypes 'minInclusive', if defined.
+- Underlying dataType 'xs:integer' or 'xs:double'  without enumerated values: Each item of the value list must be smaller or equal to the dataTypes 'maxInclusive', if defined.
+- Underlying dataType 'xs:string' without enumerated values: Each multilanguage object of the value list must not be longer than 'maxLength', if defined.
 
-A syntax and constraint checker is available as JavaScript function using this [Github repository](./check/). It is hosted by 
+A constraint checker is available as JavaScript function using this [Github repository](./check/). It is hosted by 
 - SpecIF Home: https://specif.de/v1.0/check.js and https://specif.de/v1.1/check.js
 
 ## Examples

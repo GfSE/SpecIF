@@ -142,16 +142,16 @@ function checkConstraints( data, options ) {
         // Check all elements for unique keys, i.e. the combination of id and revision):
         let allKeys=[keyOf(data)]; // the list of found keys initially with the id of the SpecIF dataset
         [
-            { L:data.dataTypes, name:'dataType or enumerated value' },
-            { L:data[pClasses], name:'propertyClass' },
-            { L:data[rClasses], name:'resourceClass' },
-            { L:data[sClasses], name:'statementClass' },
-            { L:data.resources, name:'resource' },
-            { L:data.statements, name:'statement' },
-            { L:data.hierarchies, name:'hierarchy or node' },
-            { L:data.files, name:'file' }
+            { list:data.dataTypes, name:'dataType or enumerated value' },
+            { list:data[pClasses], name:'propertyClass' },
+            { list:data[rClasses], name:'resourceClass' },
+            { list:data[sClasses], name:'statementClass' },
+            { list:data.resources, name:'resource' },
+            { list:data.statements, name:'statement' },
+            { list:data.hierarchies, name:'hierarchy or node' },
+            { list:data.files, name:'file' }
         ].forEach( function( def ) {
-            let dK = duplicateKey(def.L);
+            let dK = duplicateKey(def.list);
             if( dK ) errorL.push({status:973, statusText: "key of "+def.name+" '"+dK.id+"' with revision "+dK.revision+" is not unique"});
         });
     }
@@ -170,17 +170,20 @@ function checkConstraints( data, options ) {
                 case "xs:anyURI":
                 case "xs:string":
                     if( Array.isArray(dT.enumeration) ) {
-                        for(var i=dT.enumeration.length-1;i>-1;i--) {
-                            // The presence of valid ids has been checked by schema,
-                            // now check the values:
-                            if( dT.type=="xs:string" ) {
-                                if( !isSpecifMultiLanguageText( dT.enumeration[i].value ) )
-                                    errorL.push({status:974, statusText: "dataType '"+dT.id+"' of type 'xs:string' must have enumerated values, each with a list of multi-language texts"});
-                            }
-                            else
-                                if( !isString( dT.enumeration[i].value ) )
-                                    errorL.push({status:974, statusText: "dataType '"+dT.id+"' of type '"+dT.type+"' must have enumerated string values"});
-                        };
+						if( dT.enumeration.length>0 ) {
+							for(var i=dT.enumeration.length-1;i>-1;i--) {
+								// The presence of valid ids has been checked by schema, now check the values:
+								if( dT.type=="xs:string" ) {
+									if( !isSpecifMultiLanguageText( dT.enumeration[i].value ) )
+										errorL.push({status:974, statusText: "dataType '"+dT.id+"' of type 'xs:string' must have enumerated values, each with a list of multi-language texts"});
+								}
+								else
+									if( !isString( dT.enumeration[i].value ) )
+										errorL.push({status:974, statusText: "dataType '"+dT.id+"' of type '"+dT.type+"' must have enumerated string values"});
+							};
+						} 
+						else
+										errorL.push({status:974, statusText: "dataType '"+dT.id+"' must have at least one enumerated value"});
                     };
             //    case "xs:boolean": // nothing to check
             };
@@ -332,15 +335,10 @@ function checkConstraints( data, options ) {
         if( Array.isArray(prpValues) ) {
 
             // Check the length of the value list:
-            switch(dT.type) {
-                case 'xs:boolean':
-                    if( prpValues.length>1 )
-                        errorL.push({status:982, statusText: etxt+": property of dataType 'xs:boolean' must not have more than one value"});
-                    break;
-                default:
-                    if( !(prpC.multiple || dT.multiple) && prpValues.length>1 )
-                        errorL.push({status:983, statusText: etxt+": neither propertyClass nor dataType allow multiple values"});
-            };
+			// If the propertyClass defines 'multiple' explicitly, either 'true' or 'false', it supersedes the dataType's definition;
+			// thus the dataType's definition comes only into effect, if the propertyClass has no 'multiple' attribute at all:
+			if( !(prpC.multiple || typeof(prpC.multiple)!='boolean' && dT.multiple) && prpValues.length>1 )
+				errorL.push({status:983, statusText: etxt+": neither propertyClass nor dataType allow multiple values"});
             
             prpValues.forEach( function(val) {
 
