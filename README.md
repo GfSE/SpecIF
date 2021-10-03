@@ -89,26 +89,25 @@ Usage:
 ```js
 {
     // Required: https://github.com/epoberezkin/ajv/releases/tag/4.8.0 or later 
-	// 
     var checker = new CCheck();
-	// 1. Check schema:
-	let rc = checker.checkSchema(_<specif-data>_, { schema: _<specif-schema>_ });
-	if (rc.status == 0) {
-		// 2. Check further constraints:
-		rc = checker.checkConstraints(_<specif-data>_, { dontCheck: ['statement.subject','subject.object','text.length'] });
-		if (rc.status == 0) {
-			// all is fine, continue processing:
-			...
-		}
-		else {
-			// constraint checking has failed:
-			... process/show rc
-		};
-	}
-	else {
-		// schema checking has failed:
-		... process/show rc
-	};
+    // 1. Check schema:
+    let rc = checker.checkSchema(_<specif-data>_, { schema: _<specif-schema>_ });
+    if (rc.status == 0) {
+        // 2. Check further constraints:
+        rc = checker.checkConstraints(_<specif-data>_, { dontCheck: ['statement.subject','subject.object','text.length'] });
+        if (rc.status == 0) {
+            // all is fine, continue processing:
+            ...
+        }
+        else {
+            // constraint checking has failed:
+            ... process/show rc
+        };
+    }
+    else {
+        // schema checking has failed:
+        ... process/show rc
+    };
 }
 ```
 
