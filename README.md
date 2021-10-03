@@ -111,7 +111,10 @@ else {
 ...
 ```
 
-An object similar to jqXHR, namely {status:900,statusText:"abc",responseType:"text",responseText:"xyz"}, is returned.
+The checking routines return an object similar to jqXHR, namely 
+```json
+{status:900,statusText:"abc",responseType:"text",responseText:"xyz"}.
+```
 
 ## Examples
 
