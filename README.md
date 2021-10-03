@@ -79,9 +79,9 @@ In addition to the schema, the following constraints apply for SpecIF v1.1:
 - Underlying dataType 'xs:integer' or 'xs:double'  without enumerated values: Each item of the value list must be smaller or equal to the dataTypes 'maxInclusive', if defined.
 - Underlying dataType 'xs:string' without enumerated values: Each multilanguage object of the value list must not be longer than 'maxLength', if defined.
 
-### Constraint Checking
+## Checking
 
-A constraint checker is available as JavaScript class using this [Github repository](./check/). It is hosted by 
+A schema and constraint checker is available as JavaScript class using this [Github repository](./check/). It is hosted by 
 - SpecIF Home: https://specif.de/v1.0/CCheck.js, https://specif.de/v1.0/CCheck.min.js, https://specif.de/v1.1/CCheck.js and https://specif.de/v1.1/CCheck.min.js
 - or https://specif.de/v1.0/check.js and https://specif.de/v1.1/check.js (DEPRECATED)
 
@@ -89,24 +89,25 @@ Usage:
 ```js
 ...
 // Required: https://github.com/epoberezkin/ajv/releases/tag/4.8.0 or later 
-var checker = new CCheck();
-// 1. Check schema:
-let rc = checker.checkSchema(<specif-data>, { schema: <specif-schema> });
-if (rc.status == 0) {
-    // 2. Check further constraints:
-    rc = checker.checkConstraints(<specif-data>, { dontCheck: ['statement.subject','subject.object','text.length'] });
-    if (rc.status == 0) {
+let checker = new CCheck(),
+    result;
+// 1. Check the schema:
+result = checker.checkSchema(<specif-data>, { schema: <specif-schema> });
+if (result.status == 0) {
+    // 2.  Further check the constraints:
+    result = checker.checkConstraints(<specif-data>, { dontCheck: ['statement.subject','subject.object','text.length'] });
+    if (result.status == 0) {
         // all is fine, continue processing:
         ...
     }
     else {
         // constraint checking has failed:
-        ... process/show rc
+        ... process/show result
     };
 }
 else {
     // schema checking has failed:
-    ... process/show rc
+    ... process/show result
 };
 ...
 ```

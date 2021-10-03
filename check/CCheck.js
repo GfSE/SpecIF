@@ -24,7 +24,7 @@ class CCheck {
             valid = validate(data);
         
         return valid?{ status: 0, statusText: 'SpecIF schema has been checked successfully!' }
-                :{ status: 971, statusText: 'SpecIF schema is violated', responseType: 'text', responseText: this.ajv.errorsText(validate.errors) };
+                :{ status: 970, statusText: 'SpecIF schema is violated', responseType: 'text', responseText: this.ajv.errorsText(validate.errors) };
     }
     checkConstraints( data, options ) {
         "use strict";
@@ -40,12 +40,17 @@ class CCheck {
         // - 'text.length'
 
         if( data.specifVersion )
-            return { status: 970, statusText: "This constraint checker does not support any SpecIF version below 1.1" };
+            return { status: 971, statusText: "This constraint checker does not support any SpecIF version below 1.1" };
 
         switch( data['$schema'] ) {
+            case "https://specif.de/v1.1/schema.json":
+            case "https://json.schemastore.org/specif-1.1.json":
+				break;
             case "https://specif.de/v1.0/schema.json":
             case "https://json.schemastore.org/specif-1.0.json":
-                return { status: 970, statusText: "This constraint checker does not support SpecIF version 1.0" };
+                return { status: 971, statusText: "This constraint checker does not support SpecIF version 1.0" };
+			default:
+                return { status: 972, statusText: "Invalid schema location" };
         };
 
         // Set default:
@@ -94,7 +99,7 @@ class CCheck {
         checkNodes( data.resources, data.hierarchies, 0 );
 
         return errorL.length<1?{ status: 0, statusText: 'SpecIF constraints have been checked successfully!' }
-                :{ status: 972, statusText: 'SpecIF constraints are violated', responseType: 'text', responseText: errorsText(errorL) };
+                :{ status: 973, statusText: 'SpecIF constraints are violated', responseType: 'text', responseText: errorsText(errorL) };
 
         // The checking routines:
         function checkUniqueKeys() {
