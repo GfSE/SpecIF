@@ -91,10 +91,10 @@ Usage:
 // Required: https://github.com/epoberezkin/ajv/releases/tag/4.8.0 or later 
 var checker = new CCheck();
 // 1. Check schema:
-let rc = checker.checkSchema(_<specif-data>_, { schema: _<specif-schema>_ });
+let rc = checker.checkSchema(<specif-data>, { schema: <specif-schema> });
 if (rc.status == 0) {
     // 2. Check further constraints:
-    rc = checker.checkConstraints(_<specif-data>_, { dontCheck: ['statement.subject','subject.object','text.length'] });
+    rc = checker.checkConstraints(<specif-data>, { dontCheck: ['statement.subject','subject.object','text.length'] });
     if (rc.status == 0) {
         // all is fine, continue processing:
         ...
@@ -112,8 +112,8 @@ else {
 ```
 
 The checking routines return an object similar to jqXHR, namely 
-```json
-{status:900,statusText:"abc",responseType:"text",responseText:"xyz"}.
+```js
+{status:900,statusText:"<string>",responseType:"text",responseText:"<string>"}.
 ```
 
 ## Examples
