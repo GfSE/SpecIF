@@ -86,7 +86,7 @@ A constraint checker is available as JavaScript class using this [Github reposit
 - or https://specif.de/v1.0/check.js and https://specif.de/v1.1/check.js (DEPRECATED)
 
 Usage:
-```json
+```js
 {
     // Required: https://github.com/epoberezkin/ajv/releases/tag/4.8.0 or later 
 	// 
