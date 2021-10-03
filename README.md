@@ -15,14 +15,13 @@ That‘s where SpecIF kicks in.
 
 For details see http://specif.de and [the SpecIF specification documentation](./documentation/Readme.md) in this repository.
 
-This branch details schema and constraints for 'fully-flegded' SpecIF. It is characterized by
+This repository details schema and constraints for 'fully-flegded' SpecIF. It is characterized by
 - A SpecIF data set (container) may have information elements of multiple revisions. The identifiers are identical and the revision tags change. 
 The combination of identifier and revision, called 'key', must be unique, however. 
-- Information content may be provided for more than one language.
+- Text content may be provided for more than one language.
+- Any property may have multiple values. Properties of data-type 'xs:string' may have multiple values of multiple languages, each.
 - A transformation to ReqIF is possible, if a certain revision level and a certain language is chosen.
 - A lossless transformation from ReqIF is always possible.
-- For a simpler SpecIF schema without support for multiple revisions and without multi-language support, please consult the branch 'SpecIF Level-1' starting version 0.10.2.
-- All SpecIF data sets (containers) conforming with schema v0.10.2 and above also conform with SpecIF v0.11.1 and above.
 
 Thanks to @oalt for the discussion about support for multiple revisions and multiple languages!
 
@@ -80,8 +79,40 @@ In addition to the schema, the following constraints apply for SpecIF v1.1:
 - Underlying dataType 'xs:integer' or 'xs:double'  without enumerated values: Each item of the value list must be smaller or equal to the dataTypes 'maxInclusive', if defined.
 - Underlying dataType 'xs:string' without enumerated values: Each multilanguage object of the value list must not be longer than 'maxLength', if defined.
 
-A constraint checker is available as JavaScript function using this [Github repository](./check/). It is hosted by 
-- SpecIF Home: https://specif.de/v1.0/check.js and https://specif.de/v1.1/check.js
+### Constraint Checking
+
+A constraint checker is available as JavaScript class using this [Github repository](./check/). It is hosted by 
+- SpecIF Home: https://specif.de/v1.0/CCheck.js, https://specif.de/v1.0/CCheck.min.js, https://specif.de/v1.1/CCheck.js and https://specif.de/v1.1/CCheck.min.js
+- or https://specif.de/v1.0/check.js and https://specif.de/v1.1/check.js (DEPRECATED)
+
+Usage:
+```json
+{
+    // Required: https://github.com/epoberezkin/ajv/releases/tag/4.8.0 or later 
+	// 
+    var checker = new CCheck();
+	// 1. Check schema:
+	let rc = checker.checkSchema(_<specif-data>_, { schema: _<specif-schema>_ });
+	if (rc.status == 0) {
+		// 2. Check further constraints:
+		rc = checker.checkConstraints(_<specif-data>_, { dontCheck: ['statement.subject','subject.object','text.length'] });
+		if (rc.status == 0) {
+			// all is fine, continue processing:
+			...
+		}
+		else {
+			// constraint checking has failed:
+			... process/show rc
+		};
+	}
+	else {
+		// schema checking has failed:
+		... process/show rc
+	};
+}
+```
+
+An object similar to jqXHR, namely {status:900,statusText:"abc",responseType:"text",responseText:"xyz"}, is returned.
 
 ## Examples
 

@@ -4,6 +4,8 @@
 *   Author: se@enso-managers.de, enso managers gmbh, Berlin (http://www.enso-managers.de)
 *   We appreciate any correction, comment or contribution via e-mail to issues@specif.de
 *   .. or even better as Github issue (https://github.com/GfSE/SpecIF/issues)
+*
+*   Note: This implementation is DEPRECATED, please use CCheck.js or CCheck.min.js instead.
 */
 window.ajv || (window.ajv = new Ajv({allErrors: true}));
 function checkSchema( data, options ) {
@@ -30,11 +32,11 @@ function checkConstraints( data, options ) {
     // The return code uses properties similar to jqXHR, namely {status:900,statusText:"abc",responseType:"text",responseText:"xyz"}
     // ToDo: localize messages
 
-	// Certain checks are skipped, if listed in options.dontCheck;
-	// the following values are recognized:
-	// - 'statement.subject'
-	// - 'statement.object'
-	// - 'text.length'
+    // Certain checks are skipped, if listed in options.dontCheck;
+    // the following values are recognized:
+    // - 'statement.subject'
+    // - 'statement.object'
+    // - 'text.length'
 
     if( data.specifVersion )
         return { status: 970, statusText: "This constraint checker does not support any SpecIF version below 1.1" };
@@ -170,20 +172,20 @@ function checkConstraints( data, options ) {
                 case "xs:anyURI":
                 case "xs:string":
                     if( Array.isArray(dT.enumeration) ) {
-						if( dT.enumeration.length>0 ) {
-							for(var i=dT.enumeration.length-1;i>-1;i--) {
-								// The presence of valid ids has been checked by schema, now check the values:
-								if( dT.type=="xs:string" ) {
-									if( !isSpecifMultiLanguageText( dT.enumeration[i].value ) )
-										errorL.push({status:974, statusText: "dataType '"+dT.id+"' of type 'xs:string' must have enumerated values, each with a list of multi-language texts"});
-								}
-								else
-									if( !isString( dT.enumeration[i].value ) )
-										errorL.push({status:974, statusText: "dataType '"+dT.id+"' of type '"+dT.type+"' must have enumerated string values"});
-							};
-						} 
-						else
-										errorL.push({status:974, statusText: "dataType '"+dT.id+"' must have at least one enumerated value"});
+                        if( dT.enumeration.length>0 ) {
+                            for(var i=dT.enumeration.length-1;i>-1;i--) {
+                                // The presence of valid ids has been checked by schema, now check the values:
+                                if( dT.type=="xs:string" ) {
+                                    if( !isSpecifMultiLanguageText( dT.enumeration[i].value ) )
+                                        errorL.push({status:974, statusText: "dataType '"+dT.id+"' of type 'xs:string' must have enumerated values, each with a list of multi-language texts"});
+                                }
+                                else
+                                    if( !isString( dT.enumeration[i].value ) )
+                                        errorL.push({status:974, statusText: "dataType '"+dT.id+"' of type '"+dT.type+"' must have enumerated string values"});
+                            };
+                        } 
+                        else
+                                        errorL.push({status:974, statusText: "dataType '"+dT.id+"' must have at least one enumerated value"});
                     };
             //    case "xs:boolean": // nothing to check
             };
@@ -215,6 +217,17 @@ function checkConstraints( data, options ) {
                     errorL.push({status:977, statusText: "property class '"+propertyC.id+"' of element '"+elementC.id+"' must reference an item in 'propertyClasses'" });
             });
         };
+    }
+    function checkClasses(classL,instanceL,type,name) {  // class list, instance list
+        // This routine is used in 2 situations:
+        // - In case of resourceClasses, the value of "extends" (if it exists) must be the key of a member of "resourceClasses". 
+        // - Similarly for statementClasses.
+        // - In case of resources, the value of "class" must be the key of a member of "resourceClasses". 
+        // - Similarly for statements.
+        instanceL.forEach( function( el ){
+            if( el[type] && uniqueByKey(classL, el[type]) ) 
+                errorL.push({status:979, statusText: "key '"+type+"' of item with identifier '"+el.id+"' must reference a valid "+name });
+        });
     }
     function checkResourceClasses() {    
         data[rClasses].forEach( function(resourceC) { checkPropertyClassReference( resourceC, 'resourceClass')} );
@@ -250,17 +263,6 @@ function checkConstraints( data, options ) {
         });
         // The key of 'extends' must specify a valid statement class: 
         checkClasses( data[sClasses], data[sClasses], 'extends', 'statementClass' );
-    }
-    function checkClasses(classL,instanceL,type,name) {  // class list, instance list
-        // This routine is used in 2 situations:
-        // - In case of resources, the value of "class" must be the key of a member of "resourceClasses". 
-        //   Similarly for statements and hierarchies.
-        // - In case of resourceClasses, the value of "extends" (if it exists) must be the key of a member of "resourceClasses". 
-        //   Similarly for statements.
-        instanceL.forEach( function( el ){
-            if( el[type] && uniqueByKey(classL, el[type]) ) 
-                errorL.push({status:979, statusText: "key '"+type+"' of item with identifier '"+el.id+"' must reference a valid "+name });
-        });
     }
     function checkResources() { 
         // A resources' value of "class" must be the id of a member of "resourceClasses":
@@ -335,10 +337,10 @@ function checkConstraints( data, options ) {
         if( Array.isArray(prpValues) ) {
 
             // Check the length of the value list:
-			// If the propertyClass defines 'multiple' explicitly, either 'true' or 'false', it supersedes the dataType's definition;
-			// thus the dataType's definition comes only into effect, if the propertyClass has no 'multiple' attribute at all:
-			if( !(prpC.multiple || typeof(prpC.multiple)!='boolean' && dT.multiple) && prpValues.length>1 )
-				errorL.push({status:983, statusText: etxt+": neither propertyClass nor dataType allow multiple values"});
+            // If the propertyClass defines 'multiple' explicitly, either 'true' or 'false', it supersedes the dataType's definition;
+            // thus the dataType's definition comes only into effect, if the propertyClass has no 'multiple' attribute at all:
+            if( !(prpC.multiple || typeof(prpC.multiple)!='boolean' && dT.multiple) && prpValues.length>1 )
+                errorL.push({status:983, statusText: etxt+": neither propertyClass nor dataType allow multiple values"});
             
             prpValues.forEach( function(val) {
 
@@ -421,7 +423,7 @@ function checkConstraints( data, options ) {
                                 // val is a list with some text in different languages, so check every one of them:
                                 if( typeof(dT.maxLength)=='number' && options.dontCheck.indexOf('text.length')<0 ) {
                                     val.forEach( function(languageO) {
-                                        if( languageO['text'].length>dT.maxLength )
+                                        if( languageO['text'].length>dT.maxLength && options.dontCheck.indexOf('text.length')<0 )
                                             errorL.push({status:986, statusText: etxt+": length of string value must not exceed "+dT.maxLength});
                                     });
                                 };
