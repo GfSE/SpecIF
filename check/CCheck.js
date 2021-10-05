@@ -328,9 +328,9 @@ class CCheck {
             checkProperties( data[sClasses], data.statements, sClass );
         }
         function checkValues(prpC,prpValues,etxt) { 
-            // prpValues is a list of property values
-            // - all but properties of type 'xs:boolean' may have multiple values in the list
+            // prpValues is a list of values per property (new in SpecIF v1.1)
             // - any value is a string except for properties of type 'xs:string', where every value is a list of multilanguage objects
+			// - any property value can be enumerated, except for xs:boolean (which is already enumerated ;-)
 
             let dT = itemByKey(data.dataTypes,prpC.dataType);
             if( !dT ) {
@@ -339,7 +339,8 @@ class CCheck {
                 return;    
             };                
 
-            // The property list is mandatory for resources, but optional for statements:
+            // The property list is mandatory for resources, but optional for statements;
+            // this has been checked by the schema:
             if( Array.isArray(prpValues) ) {
 
                 // Check the length of the value list:
@@ -441,7 +442,6 @@ class CCheck {
                     };
                 });
             };
-            // else: The presence of a property list has been checked by the schema (needed for a resources, optional for a statement).
         }
         function checkProperties(classL,instanceL,typ) { 
             // check all properties of the instances listed in instanceL,
