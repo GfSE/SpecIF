@@ -1,0 +1,4 @@
+[submodule "classDefinitions"]
+	path = classDefinitions
+	url = https://github.com/GfSE/SpecIF-Class-Definitions.git
+	branch = main
