@@ -703,8 +703,8 @@
           "$ref": "#/definitions/SpecifId"
         },
         "title": {
-          "description": "The node's label; if missing, the title of the referenced resource is applied.",
-          "$ref": "#/definitions/SpecifText"
+          "description": "The node's label; if missing, the value of the referenced resource's title property is applied.",
+          "$ref": "#/definitions/SpecifMultiLanguageText"
         },
         "description": {
           "$ref": "#/definitions/SpecifMultiLanguageText"
@@ -793,7 +793,7 @@
     },
     "title": {
       "description": "The project's name; if missing, the first hierarchy node's title applies.",
-      "$ref": "#/definitions/SpecifText"
+      "$ref": "#/definitions/SpecifMultiLanguageText"
     },
     "description": {
       "description": "The project's description; if missing, the first hierarchy node's description applies.",
