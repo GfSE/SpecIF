@@ -391,6 +391,12 @@ class CCheck {
                                 ).status>0 )
                                     errorL.push({status:986, statusText: etxt+": value must be a valid date-time string according to ISO 8601"});
                                 break;
+                            case 'xs:duration':
+								// No check of the value so far. 
+								// In a similar approach we would need JSON Schema draft 2019-09 ... and a newer version of AJV.
+								// Alternative: Apply a RegEx, but results would probably differ from a check built-in with schema 2019-09.
+								// See: https://github.com/GfSE/SpecIF/issues/63
+                                break;
                             case 'xs:anyURI':
                                 if( checkSchema(
                                     '{"value":"'+val+'"}',
