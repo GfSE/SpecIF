@@ -52,19 +52,6 @@ As extension to the fundamental modeling elements and the collection two further
 These elements are widely used in Systems Engineering of all kind of systems and are in fact highly important in practice.
 So these elements complement the set of fundamental elements used to express contents required for system modeling in the Product Lifecycle Management.
 
-### First Glimpse on the Elements of SpecIF Model Integration
-
-![Model Integration resource and statement types](./images/ElementClasses_#1_(M0).png)
-
-The (class-)diagram above gives an overview of the most important element types, defined in SpecIF used for semantic model integration.
-This is called the *SpecIF Integration-Model*
-Beside the class elements, representing the resource classes, the association connection between the classes shows the available statements, defined
-by SpecIF statement classes. 
-
-For better readability of the class diagrams, the aspects are shown on more than one diagram. 
-You have to interpret the diagrams in combination to get the complete picture of SpecIF Model Integration.
-If two diagrams show a resource class with the same name, it is the same element and all associations defined by one diagram are also valid for the second diagram.
-   
 ### View
 
 In many engineering models the elements defining a concept or documentation are visualized graphically. 
@@ -80,6 +67,19 @@ Examples for collections are folders in a file system, groups in BPMN or package
 
 Because a collection can contain other collections, a hierarchy structure (or 'tree') can be expressed using SpecIF.
 
+### First Glimpse on the Elements of SpecIF Model Integration
+
+![Model Integration resource and statement types](./images/ElementClasses-M0.png)
+
+The (class-)diagram above gives an overview of the most important element types, defined in SpecIF used for semantic model integration.
+This is called the *SpecIF Integration-Model*
+Beside the class elements, representing the resource classes, the association connection between the classes shows the available statements, defined
+by SpecIF statement classes. 
+
+For better readability of the class diagrams, the aspects are shown on more than one diagram. 
+You have to interpret the diagrams in combination to get the complete picture of SpecIF Model Integration.
+If two diagrams show a resource class with the same name, it is the same element and all associations defined by one diagram are also valid for the second diagram.
+   
 ## Model Integration Statements
 
 The statements in SpecIF are used to express a predicate logic (subject - predicate - object) between SpecIF elements.
