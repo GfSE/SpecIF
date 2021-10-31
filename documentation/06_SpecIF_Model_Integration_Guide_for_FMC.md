@@ -5,6 +5,8 @@
 For introduction to the Fundamental Modeling Concepts (FMC), see the [FMC Overview](http://f-m-c.org/). 
 The FMC Metamodel is given in [Knöpfel, Gröne, Tabeling: Fundamental Modeling Concepts - Effective Communication of IT-Systems](https://www.wiley.com/en-us/Fundamental+Modeling+Concepts%3A+Effective+Communication+of+IT+Systems-p-9780470027103).
 
+![FMC Metamodel](./images/FMC-Metamodel.png)
+
 However, this Metamodel seems to be rather theoretic and it is perhaps not complete for practical purposes. 
 When analyzing, among others we have the following questions:
 - Why are some relations named as nouns, others as verbs (e.g. *"Observability"* vs. *"triggers"*).
@@ -15,8 +17,6 @@ When analyzing, among others we have the following questions:
 
 As there is to our knowledge only one modeling tool for FMC, namely [ARCWAY Ccokpit](https://arcway.com),
 we will show in the following the mapping from the entities and relationships realized in this tool.
-
-![FMC Metamodel](./images/FMC-Metamodel.png)
 
 ### Resources
 
