@@ -15,12 +15,12 @@ When analyzing, among others we have the following questions:
 - Can *Agent*, *Operation*, *Storage* and perhaps other entities be hierarchically nested?
 - Is the relation *performs* shown in the correct direction?
 
-As to our knowledge there is only one modeling tool for FMC, namely [ARCWAY Ccokpit](https://arcway.com),
+There is no standard serialization defined for FMC. As to our knowledge there is only one modeling tool for FMC, namely [ARCWAY Ccokpit](https://arcway.com),
 we will show in the following the mapping from the entities and relationships realized in this tool.
 
 ### Resources
 
-| *No standard serialization of FMC defined* | [SpecIF](https://specif.de) |
+| [ARCWAY Ccokpit](https://arcway.com) | [SpecIF](https://specif.de) |
 | --- | --- |
 | Plan | [SpecIF:Diagram](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-vocjQYmvtlIzcGsieVchOGhCUmb) |
 | Function, Agent, Operation | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) |
@@ -32,7 +32,7 @@ The original model element type is stored in a property named _dcterms:type_.
 
 ### Statements
 
-| *No standard serialization of FMC defined* |  | [SpecIF](https://specif.de) | Comment |
+| [ARCWAY Ccokpit](https://arcway.com) |  | [SpecIF](https://specif.de) | Comment |
 | --- | --- | --- | --- |
 | Occurrence | A model-element occurs on a plan | SpecIF:shows | Inverted statement |
 | Containment | A model-element contains a model-element | SpecIF:contains |  |
