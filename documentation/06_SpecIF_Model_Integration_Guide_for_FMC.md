@@ -15,7 +15,7 @@ When analyzing, among others we have the following questions:
 - Can *Agent*, *Operation*, *Storage* and perhaps other entities be hierarchically nested?
 - Is the relation *performs* shown in the correct direction?
 
-As there is to our knowledge only one modeling tool for FMC, namely [ARCWAY Ccokpit](https://arcway.com),
+As to our knowledge there is only one modeling tool for FMC, namely [ARCWAY Ccokpit](https://arcway.com),
 we will show in the following the mapping from the entities and relationships realized in this tool.
 
 ### Resources
@@ -32,7 +32,7 @@ The original model element type is stored in a property named _dcterms:type_.
 ### Statements
 
 | *No standard serialization of a FMC model defined* |  | [SpecIF](https://specif.de) | Comment |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | Occurrence | A model-element occurs on a plan | SpecIF:shows | Inverted statement |
 | Containment | A model-element contains a model-element | SpecIF:contains |  |
 | Reading | An actor reads a state | SpecIF:reads |  |
