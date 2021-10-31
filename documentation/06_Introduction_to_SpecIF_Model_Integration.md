@@ -17,37 +17,36 @@ Model-elements used by every method or notation can be mapped to these [Ref].
 
 ## Model Integration Resources
 
-The SpecIF resources used for semantic model integration are just a few elements, 
-based on the concepts defined by the Fundamental Modeling Concepts (FMC) approach as mentioned before.
+There are just a few SpecIF resource classes used for semantic model integration.
 
 
-### Three fundamental model elements
+### Fundamental Model Element Types
 
-FMC defines three fundamental elements to represent all semantic aspects expressed by model elements:
+As mentioned before, the Fundamental Modeling Concepts (FMC) approach defines three fundamental element types to represent all semantic aspects:
 
-* An ■ *Actor* is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a user role.
-* A ● *State* is a fundamental model element type representing a passive entity, be it a value, an information store, even a color or shape.
-* An ⬧ *Event* is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.
+* An ■ *Actor* (vocabulary term FMC:Actor) is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a user role.
+* A ● *State* (vocabulary term FMC:State) is a fundamental model element type representing a passive entity, be it a value, an information store, even a color or shape.
+* An ⬧ *Event* (vocabulary term FMC:Event) is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.
 
 The idea behind using just these three elements is, that all kinds of structural or behavioral modeling can be expressed as a bipartite graph of just these elements.
-One example are Petri-Nets consisting of transitions (actors) and places (states). 
-Another example taken from structural modeling are Component Diagrams in UML or Internal Block Diagrams in SysML.
+An example taken from structural modeling are Component Diagrams in UML or Internal Block Diagrams in SysML.
+As an example of behavioral modeling, Petri-Nets consist of transitions (actors) and places (states). 
 
-Hereby the components are active elements (represented as actors in SpecIF), because the components are active system elements, 
+Hereby the components are active elements (represented as SpecIF:Actor), because the components are active system elements, 
 able to change the state of the system.
-Passive elements, representing just data, like UML-object-elements with attributes are mapped to state-elements, 
-because they represent a current state of the system by their attribute values and do not change the system state on their own.
+Passive elements (represented as SpecIF:State), may represent data, like UML-object-elements with attributes are mapped to state-elements, 
+because they represent a current system state by their attribute values.
 
-By using the concept of mapping all model elements to the three fundamental elements it is necessary the keep the information about the original model element, that was mapped.
-This is done by the property *dcterms:type*. 
-By storing the type name of the original model element in the dcterms:type property, it allows a transformation from the legacy model to SpecIF and back again. 
+While all model elements are mapped to the three fundamental elements, the original model element type
+is kept by the property *dcterms:type*. 
+Storing the the original model element in the dcterms:type property is also important for bidirectional transformations. 
 
 ### Requirement and Feature
 
 As extension to the fundamental modeling elements and the collection two further elements are defined in SpecIF: The resource classes *Requirement* and *Feature*.
 
-* A ✶ *Feature* is an intentional distinguishing characteristic of a system, often a so-called ‘Unique Selling Proposition’.
-* A ↯ *Requirement* is a singular documented physical and functional need that a particular design, product or process must be able to perform. 
+* A ✶ *Feature* (vocabulary term SpecIF:Feature) is an intentional distinguishing characteristic of a system, often a so-called ‘Unique Selling Proposition’.
+* A ↯ *Requirement* (vocabulary term IREB:Requirement) is a singular documented physical and functional need that a particular design, product or process must be able to perform. 
 
 These elements are widely used in Systems Engineering of all kind of systems and are in fact highly important in practice.
 So these elements complement the set of fundamental elements used to express contents required for system modeling in the Product Lifecycle Management.
@@ -56,13 +55,13 @@ So these elements complement the set of fundamental elements used to express con
 
 In many engineering models the elements defining a concept or documentation are visualized graphically. 
 Such visualizations are called a view or diagram. 
-SpecIF defines the resource class ▣ *Diagram* to represent all kinds of graphical visualizations of model data.
+SpecIF defines the resource class ▣ *Diagram* (vocabulary term SpecIF:Diagram) to represent all kinds of graphical visualizations of model data.
 All diagrams of all kinds of graphical notations can be visualized applying this resource class. 
 
-### Grouping
+### Collection
 
 Models can express a logical or conceptual structure of modeled aspects or the model itself by grouping elements together.
-This aspect is covered by the resource class ⬚ *Collection*.
+This aspect is covered by the resource class ⬚ *Collection* (vocabulary term SpecIF:Collection).
 Examples for collections are folders in a file system, groups in BPMN or packages in UML/SysML.
 
 Because a collection can contain other collections, a hierarchy structure (or 'tree') can be expressed using SpecIF.
