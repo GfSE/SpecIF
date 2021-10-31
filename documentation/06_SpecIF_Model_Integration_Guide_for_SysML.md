@@ -203,7 +203,7 @@ Elements  in SpecIF are named resources and relations between these resources ar
 The following figure shows the element representation in Cameo Systems Modeler and SpecIF. The notation that is shown in 
 the figure is also used for the following examples.
 
-<img src="./images/Mapping_SysML_Representation.PNG" width="600px" />
+![Mapping SysML Representation](./images/Mapping_SysML_Representation.PNG)
 
 In the next three figures examples for the transformation of activity diagram elements are shown in a small context. 
 The example elements are a ActivityPartition, a DecisionNode and a MergeNode. 
@@ -212,8 +212,8 @@ Actions are transformed into FMC:Actor resources as well as the activity partiti
 For the assignment that "Action 2" is contained by the ActivityPartition a statement SpecIF:contains is generated in the transformation. 
 Since the Actions are connected by two ControlFlows there are SpecIF:precedes statements between the actions. 
 SpecIF:precedes represents a ControlFlow between two FMC:Actors.
- 
-<img src="./images/Mapping_SysML_ActivityPartition.PNG" width="450px" />
+
+![Mapping SysML Activity Partition](./images/Mapping_SysML_ActivityPartition.PNG) 
 
 The following figure shows a example for the transformation of a DecisionNode. 
 The DecisionNode in the context has one  incoming ControlFlow from a action and two outgoing control flows to two actions. The DecisionNode is represented by a FMC:Actor
@@ -222,14 +222,12 @@ The statements between the resources are dependent on the types of the resources
 For statements from a FMC:Actor to a FMC:Actor a SpecIF:precedes statement, 
 from a FMC:Actor to a FMC:Event a SpecIF:signals statement and from a FMC:Event to a FMC:Actor a SpecIF:triggers statement is used. 
 
-<img src="./images/Mapping_SysML_DecisionNode.PNG" width="450px" />
+![Mapping SysML DecisionNode](./images/Mapping_SysML_DecisionNode.PNG) 
 
 In a MergeNode two incoming activity flows are merged into one outgoing activity flow. 
 The DecisionNode is transformed into a FMC:Actor. Incoming and outgoing ControlFlows in the example are from FMC:Actor to FMC:Actor. 
 This results in SpecIF:precedes statements for the connection from the other elements to the FMC:Actor of the MergeNode. The same SpecIF representation is
 used for the transformation of JoinNodes and ForkNodes. 
 
-<img src="./images/Mapping_SysML_MergeNode.PNG" width="450px" />
-
-
+![Mapping SysML Merge Node](./images/Mapping_SysML_MergeNode.PNG) 
 

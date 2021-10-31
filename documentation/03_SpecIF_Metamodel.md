@@ -27,9 +27,9 @@ Such a SpecIF repository instance is often identical with a project context in a
 It can contain the entire content of PLM data created in a project context. 
 
 SpecIF allows the selected and distributed inclusion of data into a SpecIF repository. 
-It is not required to have all data, that can be stored in a SpecIF data set in a single repository.  
-So you can have one SpecIF repository containing the data and class definitions, and a second, separated set containing the data content, but referencing the required data types by the unique identifiers. 
-A SpecIF instance has an attribute called *isExtension* of type boolean. 
+It is not required to have all data that can be stored in a SpecIF data set in a single repository.  
+Therefore, you can have one SpecIF repository containing the data and class definitions, and a second, separated set containing the data content, but referencing the required data types by the unique identifiers. 
+A SpecIF instance has a boolean attribute called *isExtension*. 
 If this value is set to true, a tool that is working with this data, needs further SpecIF data to get the complete definition of all required data types and data type definitions.
 
 ### SpecIF-Repository description attributes
@@ -82,9 +82,10 @@ It has the following attributes:
 ## Data representation and data type definitions in SpecIF
 
 In SpecIF it is possible to define concrete data using the concept of graph data, represented by the metaclasses *Resource* - as graph nodes and *Statement* - as graph edges.
-These two elements can contain *Property* elements to store a set of data elements (e.g a title and a description).
+These two elements can contain *Property* elements to store a set of data elements (e.g. a title and a description).
 A Property has a well defined (primitive) DataType (e.g. string, integer etc.). 
-This allows a tool to present, edit and validate property data using specialized editors for numbers, text or formated text.
+This allows a tool to present, edit and validate property data using specialized editors for numbers, 
+text or formatted text.
 
 The elements containing the data need a specification about the data structure and the data types. 
 This is done in SpecIF by defining a set of classifiers for the concrete data. 
@@ -103,10 +104,10 @@ The type string can represent formatted text or unformatted text.
 The SpecIF-metamodel defines three helper classes. 
 They are described in this section.
 
-### BaseElement
+### Base Element
 
 Some attributes in the metamodel are common for at least all metaclasses. 
-We define this in a abstract metaclass *BaseElement*.
+We define this in an abstract metaclass *BaseElement*.
 
 ![SpecIF metaclass base attributes](./images/Metaclass_BaseElement.png)
 
@@ -198,14 +199,15 @@ So the DataType metaclass defines the following attributes to satisfy these requ
 * *description: MultilanguageText[]* - A human readable description of the data type for documentation purposes.
 * *type* - A formal definition of the used base type. The allowed types are taken from the XML-stylesheet-standard (https://www.w3.org/TR/xmlschema11-1/) and defined in the metamodel as Enumeration *DataTypeTypes* as follows:
   * xs:boolean
-  * xs:dateTime
-  * xs:anyURI
   * xs:integer
   * xs:double
   * xs:string
+  * xs:anyURI
+  * xs:dateTime
+  * xs:duration
 * *maxInclusive* - The maximum value for a numeric data type
 * *fractionDigits* - The number of digits for floating point numbers
-* *enumeration* - A list of enumeration values.
+* *enumeration* - A list of enumerated values.
 * *multiple: bool* - This flag indicates for enumeration definitions, that a multiple selection of enumeration values should be possible.
 * *maxLength: int* - The maximum length of a text value.
 

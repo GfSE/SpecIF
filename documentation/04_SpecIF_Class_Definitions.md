@@ -2,12 +2,16 @@
 
 To define the semantics for SpecIF, a collection of data type and class definitions is defined and part of the SpecIF standard. 
 
-The class definitions provided as SpecIF-files are available here: https://github.com/GfSE/SpecIF/tree/master/classDefinitions
+The class definitions provided as SpecIF-files are available here: https://github.com/GfSE/SpecIF/tree/master/classDefinitions.
 
-It is strongly recommended to exactly use the data type and class definitions described here to get a SpecIF-file or SpecIF-data set that follows the official SpecIF standard.
-Of course you are able to define your own data types and classes to extend the standardized SpecIF semantics with your own domain-specific definitions.
-But try to reuse the standardized types as often as possible or use the concept of inheritance to define your own types based on still existing and standardizes ones.
-This ensures a compatibility with the SpecIF standard and allows a correct semantically interpretation of your data by tools supporting SpecIF.   
+It is strongly recommended to exactly use the data type and class definitions 
+described here to get a SpecIF-file or SpecIF-data set that follows the official SpecIF standard.
+Of course you are able to define your own data types and classes to extend the 
+standardized SpecIF semantics with your own domain-specific definitions.
+Nevertheless, try to reuse the standardized types as often as possible or use the concept of inheritance 
+to define your own types based on still existing and standardizes ones.
+This ensures a compatibility with the SpecIF standard and allows a correct semantically interpretation 
+of your data by tools supporting SpecIF.   
 
 ## Domains
 
@@ -22,7 +26,7 @@ For SpecIF 1.1 three domains are selected to be part of the first release:
 * 03 - Model Integration 
 
 The other domains are still under discussion and not yet part of an official SpecIF release. 
-It is planed to release them with a future release.
+It is planned to release them with a future release.
 
 ### Domain types
 The following list shows the currently defined domains and their IDs:

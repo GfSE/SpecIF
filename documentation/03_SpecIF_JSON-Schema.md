@@ -356,7 +356,9 @@ The following data type definitions show an example for an enumeration data type
 
 ### Property classes
    
-Property classes define the type and kind of a property. The property is the element in SpecIF containing the values of the PLM data. Resource and Statement elements contain a array of defined property instances to store the PLM values.
+Property classes define the type and kind of a property. 
+The property is the element in SpecIF containing the values of the PLM data. 
+Resource and Statement elements contain an array of defined property instances to store the PLM values.
 
 The property class definitions are very important, because here the name reps. title of a property is defined. 
 Properties are in principle key/value pairs representing data. 
@@ -513,7 +515,7 @@ SpecIF-properties defined for a resource or statement are stored inside a resour
 
 ### Resources
 
-Resources are the nodes in a SpecIF data set graph. The contain the concrete data values. All elements, that are no relations resp. connectors between elements are represented as resources in SpecIF.
+Resources are the nodes in a SpecIF data set graph. They contain the concrete data values. All elements, that are no relations resp. connectors between elements are represented as resources in SpecIF.
 
 The following example shows a resource representing a requirement element.
 In the description property value the attributes for ``format`` and ``language`` are not explicitly set. 
@@ -617,7 +619,11 @@ The following example shows a statement example. This statement has no propertie
 
 ## Hierarchies and Nodes
 
-The *hierarchies* array in the SpecIF data set contains a collection of *node*-SpecIF-elements. With a node-element it is possible to create a hierarchical view to a selected set of resource elements. The *Node* is defined as a recursive data structure. Each node includes a reference to a selected resource (JSON-property *resource*) and the node can contain a collection of child nodes in the JSON-property *nodes*. This allows to use the node to define a hierarchical view to SpecIF resource elements. 
+The *hierarchies* array in the SpecIF data set contains a collection of *node*-SpecIF-elements. 
+With a node-element it is possible to create a hierarchical view to a selected set of resource elements. 
+The *Node* is defined as a recursive data structure. 
+Each node includes a reference to a selected resource (JSON-property *resource*) and the node can contain a collection of child nodes in the JSON-property *nodes*. 
+This allows using the node to define a hierarchical view to SpecIF resource elements. 
 
 A typical application scenario is the representation of a chapter structure from a textual requirements specification. 
 
@@ -684,7 +690,7 @@ The following example shows the application of nodes to create a hierarchy:
 ## Files
 
 SpecIF allows - beside the usage of JSON - the storage of native files as additional data.
-For that purpose the SpecIF-schema defines a data structure to describe and manage these files.
+For that purpose, the SpecIF-schema defines a data structure to describe and manage these files.
 The data structure contains an URL value to define the access path to the file. 
 The URL can be defined absolute or relative to the SpecIF data where the file description is included.
 If the URL is missing, the title applies.

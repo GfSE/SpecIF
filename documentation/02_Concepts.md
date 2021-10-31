@@ -22,7 +22,8 @@ Data exchange and data integration in a product lifecycle is one of the main tas
 
 Some standards are available for single domains like CAD data exchange or requirements exchange. Unfortunately these standards are not cover the entire PLM and often a manual work is required when exchanging data between different tools, because of some tool-specific interpretations of the exchange standards.
 
-To solve these problems, SpecIF will define a standard for data exchange and integrate PLM data of any kind. To achieve this goal SpecIF defines a syntax for a data format and also a semantics, that describes how specific PLM data shall be expressed using the SpecIF syntax. So the SpecIF defines
+To solve these problems, SpecIF will define a standard for data exchange and integrate PLM data of any kind. To achieve this goal SpecIF defines a syntax for a data format and also a semantics, that describes how specific PLM data shall be expressed using the SpecIF syntax. 
+Therefore, the SpecIF defines
 
 1. A *syntax* for the data representation (data format(s))
 2. A definition of (data) type names and their meanings (*semantics*)
@@ -39,14 +40,17 @@ It can be used as data exchange format, to exchange PLM data between different t
 A typical example is the discipline of requirements engineering: A requirements engineer wants to provide a specification to a supplier or a customer for review. With SpecIF the requirements engineer can export the specification contents to a SpecIF file and send it to the different stakeholder. The stakeholder can then open or import the SpecIF data with his own SpecIF-supporting tools, make some additions or comments and send the result back to the requirements engineer. Because of the clear defined syntax and semantics of SpecIF, no manual work for data mapping or data integration is necessary.
 
 ### SpecIF as tool back-end for PLM tools
-The second application scenario is the usage of SpecIF as direct back-end for PLM tools. SpecIF provides with syntax, semantics and the Web API definition all capabilities to use it as a tool data back-end. The typical Create, Read, Update and Delete operations (CRUD) [[WikipediaCRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)] needed for any kind of PLM tool are supported. 
+The second application scenario is the usage of SpecIF as direct back-end for PLM tools. SpecIF provides with syntax, semantics and the Web API definition all capabilities to use it as a tool data back-end. 
+The typical Create, Read, Update and Delete operations (CRUD) 
+[[WikipediaCRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)] 
+are supported which are needed for any kind of PLM tool.
 
 Furthermore SpecIF implements the concept of separation of model and view (see section *View concept*) as used in many PLM tools like UML-based modeling platforms or requirements engineering tools.  
 
 ## Reuse of existing concepts and standards
 
 SpecIF does not want to reinvent the wheel again.
-Instead of that SpecIF reuses concepts and terms of still existing and established standards as often as possible.
+Instead, SpecIF reuses concepts and terms of still existing and established standards as often as possible.
 
 SpecIF uses selected concepts and terms defined by the following standards:
 
@@ -63,7 +67,7 @@ For SpecIF data syntax representation and definition the following existing stan
 * XHTML to represent formatted text
 * SVG to represent vector graphic data (used for diagram data exchange)
 * Swagger resp. OpenAPI for definition of the SpecIF WebAPI
-* The Meta Object Facility (MOF) metamodelling and the Model-driven Architecture (MDA) approaches defined by the [Object Management Group (OMG)](https://www.omg.org)
+* The Meta Object Facility (MOF) meta-modeling and the Model-driven Architecture (MDA) approaches defined by the [Object Management Group (OMG)](https://www.omg.org)
 
 ## SpecIF data is graph data
 
@@ -73,11 +77,11 @@ Resources and Statements can have a list of defined *Properties*. Each property 
 
 ![Principle of SpecIF data representation](./images/SpecIfDataPrinciple.png)
 
-A statement is not saved below the resource data. Instead of that it has two references using unique identifiers (GUIDs) to define the two connected resources. Each resource element has its own unique identifier. 
+A statement is not saved below the resource data. Instead, it has two references using unique identifiers (GUIDs) to define the two connected resources. Each resource element has its own unique identifier. 
 
 In a SpecIF statement the resource element where the statement starts is named as the statement *subject* and the resource element where the statement ends is named as the statement *object*.
 
-Statements itself can also be subject and/or object of another statement. So it is possible to create n-ary statements in SpecIF.
+Statements itself can also be subject and/or object of another statement. Therefore, it is possible to create n-ary statements in SpecIF.
 
 ## View concept
 
@@ -91,9 +95,13 @@ The following figure illustrates the concept:
 
 The hierarchy consists of a tree of nodes and each node links to a specific resource element. Typical application scenarios are a document view for a requirement document using hierarchy to provide a chapter and section structure. Another scenario is the representation of a model tree in a UML-tool consisting of UML-packages, UML-diagrams and UML-elements.
 
-## Data and Metadata - Classes and Data types
+## Data and Metadata - Classes and Data Types
 
-SpecIF allows not just the representation of PLM data, but provides also mechanisms to define how the data is structured and how a resource and statement is created to represent a specific kind of data. Each SpecIF resource and statement is defined with SpecIF itself. This principle is called meta-modeling in the domain of object oriented data modeling and is also known in the object-oriented software design called the principle of class and object or class and instance.
+SpecIF allows not just the representation of PLM data, but provides also mechanisms to define 
+how the data is structured and how a resource and statement is created to represent a 
+specific kind of data. Each SpecIF resource and statement is defined with SpecIF itself. 
+This principle is called meta-modeling in the domain of object-oriented data modeling and 
+is also known in the object-oriented software design called the principle of class and object or class and instance.
 
 For each SpecIF data element must exist a class element defining this data element. The terms in SpecIF for the data and meta data types (classes) are:
 
@@ -144,48 +152,55 @@ The following table shows an overview about the SpecIF file extensions:
 
 | File extension | Meaning |
 |-|-|
-|.specif | SpecIF file with JSON content defined by the SpecIF-JSON-Schema.|
-|.specifx | Reserved for future use to store SpecIF data saved as XML.|
-|.specifz | SpecIF zipped archive with at least one \*.specif (or \*.specifx) file at root level and the referenced files, often in a folder *files_and_images*.|
+| .specif.json or .specif | SpecIF file with JSON content defined by the SpecIF-JSON-Schema.|
+| .specif.xml or .specifx | Reserved for future use to store SpecIF data saved as XML.|
+| .specif.zip or .specifz | SpecIF zipped archive with at least one \*.specif (or \*.specifx) file at root level and the referenced files, often in a folder *files_and_images*.|
 
 ### XML representation
 
-SpecIF v1.0 does not define a XML resp. RDF representation. But it may be provided in future releases.
+SpecIF v1.0 does not define a XML resp. RDF representation. Nevertheless, it may be provided in future releases.
 
 ### SpecIF diagram interchange
 
 A diagram is a graphical representation of graph-based data. 
-Examples for such diagrams are electrical schematics, UML, SysML or FMC diagrams or any other diagrams showing graph data consisting of nodes and edges. 
+Examples for such diagrams are electrical schematics, UML, SysML or FMC diagrams or any other diagrams 
+showing graph data consisting of nodes and edges. 
 In SpecIF the data behind the graph nodes are the Resources and the data behind the edges are the Statements.
 
-The simplest way to include graphical diagrams in SpecIF-data is the usage of graphics in existing formates (e.g. PNG, GIF, TIFF etc.) and include them into a XHTML property as simple image. 
+The simplest way to include graphical diagrams in SpecIF-data is the usage of graphics in 
+existing formats (e.g. PNG, GIF, TIFF etc.) and include them into a XHTML property as simple image. 
 
-To semantically integrate diagram data in SpecIF, the Scalable Vector Graphics (SVG) standard is used (https://www.w3.org/TR/SVG2/). 
+To semantically integrate diagram data in SpecIF, the Scalable Vector Graphics (SVG) standard 
+is used (https://www.w3.org/TR/SVG2/). 
 SVG is an XML-standard, defined by the W3C, used to define scalable 2D vector graphic diagrams. 
-The standard defines a wide range of possibilities to define a vector-base graphics. 
-SVG graphics can be opened and viewed with all modern web browsers and SVG allows the inclusion of  meta-data extensions into the SVG file. 
+The standard defines a wide range of possibilities to define a vector-based graphics. 
+SVG graphics can be opened and viewed with all modern web browsers and SVG allows the inclusion of 
+meta-data extensions into the SVG file. 
 
 This is the main reason why SVG is selected as standard for SpecIF diagram exchange, because SpecIF uses SVG and extends the graphical data by meta information for semantic diagram exchange. 
 So the resulting SpecIF-conformant SVG contains the graphical information, that can be used with each SVG viewer, but it also contains some semantic meta-information that allows the traceability 
 to the SpecIF resources and statements, visualized in the SVG.
 
-The concrete definition of this SpecIF-SVG-metadata is defined in seperate chapter of this specification.
+The concrete definition of the SpecIF-SVG-metadata is defined in a seperate chapter of this specification.
 
 ## Web API
 
-Besides the possibility to store SpecIf data in a file, the data may be persisted using other physical storage options like SQL- and NoSQL-data bases. 
+Besides the possibility to store SpecIF data in a file, the data may be persisted using other physical storage options like SQL- and NoSQL-data bases. 
 To get a common access point for all SpecIF data a Web API definition is part of the SpecIF. 
 The Web API definition uses the technologies of Swagger/OpenAPI to define endpoints and data models to create, read, update and delete (CRUD operations) SpecIF data.
 
 ## Multilingualism
 
-In the product lifecycle often projects and products with international development teams, international markets and customers must be addressed. 
+In the product lifecycle often projects and products with international development teams, 
+international markets and customers must be addressed. 
 Therefore SpecIF supports the data representation in different languages in parallel.
- These multilingualism of SpecIF is defined as an option. 
-It is not required to store the data always in multiple languages, but you can use it.
+This multilingualism of SpecIF is of course optional. 
 
-If the multilingualism is not used in a SpecIF data set, the used language has to be declared inside the SpecIF data. 
-If no language type is given by the SpecIF data, a SpecIF user (e.g. a target tool) has to use the default language *English (UK)* - language code *en*.   
+For this purpose all property values of type *xs:string* are a list with object specifying the text itself, 
+it's language and it's format. Any user or hosting system may select the language to show.
+
+The preferred language may be specified at project, resource, statement or property level, where a more granular
+definition supersedes a more general one. If no preferred language is defined, 'en' is assumed.
 
 ## Versioning
 
@@ -210,12 +225,12 @@ A typical application scenario is a data export of PLM data form a source data p
 
 ## Semantics
 
-To avoid manual work of mapping data when exporting and importing data in different tools, the SpecIF standard defines standardized naming's (*title*) for data representations and their meanings (semantics).
+To avoid manual work of mapping data when exporting and importing data in different tools, 
+the SpecIF standard defines standardized naming's (*title*) for data representations and their meanings (semantics).
 The most names hereby come from the Dublin Core Metadata Initiative.
 
-One example: The Dublin Core Metadata Initiaive has defined the term *dcterms:title* to represent any kind of a name. 
-So in SpecIF a propertyClass for *dcterms:title* is defined. 
-These property class is then used in the class definitions for resources and statements each time a title resp. name is required for a special kind of data element.
+One example: The Dublin Core Metadata Initiative has defined the term *dcterms:title* to represent any kind of a name. 
+Therefore, in SpecIF a propertyClass named *dcterms:title* is used to assert an element's title. 
 
 In every application domains all properties containing a name using as key for this property the term *dcterms:title*. 
 It is used in a requirement to represent the requirement title just as in a SpecIF-UML- mapping to represent the name of a class or any other UML-model element and so on.
@@ -249,19 +264,13 @@ There are many conceptual similarities, though.
 Based on the approach of the [Fundamental Modeling Concepts](http://www.fmc-modeling.org/) (FMC), developed by Prof. Siegfried Wendt and his team in the 1970s, and considering widely used 
 model elements in system specifications, the following abstract model element types (ObjectTypes) are proposed for SpecIF to realize the semantic integration:
 
-* A ▣ *Diagram* is a model diagram with a specific communication purpose, e.g. a business process, a system composition or a schematic drawing.
-
-* An ■ *Actor* is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a user role.
-
-* A ● *State* is a fundamental model element type representing a passive entity, be it a value, an information store, even a color or shape.
-
-* An ⬧ *Event* is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.
-
-* A ✶ *Feature* is an intentional distinguishing characteristic of a system, often a so-called ‘Unique Selling Proposition’.
-
-* A ↯ *Requirement* is a singular documented physical and functional need that a particular design, product or process must be able to perform. 
-
-* A ⬚ *Collection* is a logical (often conceptual) group of elements or other collections. Examples for collections are folders is a file system, groups in BPMN or packages in UML/SysML.
+- A ▣ *Diagram* is a model diagram with a specific communication purpose, e.g. a business process, a system composition or a schematic drawing.
+- An ■ *Actor* is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a user role.
+- A ● *State* is a fundamental model element type representing a passive entity, be it a value, an information store, even a color or shape.
+- An ⬧ *Event* is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.
+- A ✶ *Feature* is an intentional distinguishing characteristic of a system, often a so-called ‘Unique Selling Proposition’.
+- A ↯ *Requirement* is a singular documented physical and functional need that a particular design, product or process must be able to perform. 
+- A ⬚ *Collection* is a logical (often conceptual) group of elements or other collections. Examples for collections are folders is a file system, groups in BPMN or packages in UML/SysML.
 
 With these few fundamental elements, a model integration can be done with SpecIF.
 Each individual element of a specific tool or specific modeling language is mapped to these fundamental element types.
@@ -277,8 +286,8 @@ A description how to apply the fundamental elements for model integration is giv
 With the definition of the data format (syntax), the term definitions (semantics) and fundamental elements to represent engineering models (semantic integration) a big step forward is done in comparison with other PLM data formats. 
 But another thing for a tool vendor is to know how to map more complex data structures to SpecIF. 
 
-For example an UML- or SysML-model has many as aspects how it can be represented in the syntax and semantics of SpecIF. 
-To come to a common understanding and achieve a tool-comprehensive data exchange, the SpecIF standard shall define model integration guidelines describing the different scenarios 
+For example an UML- or SysML-model has several options of representation in the syntax and semantics of SpecIF. 
+To develop a common understanding and to achieve a data exchange between tools, the SpecIF standard shall define model integration guidelines describing the different scenarios 
 how tool content has to be mapped to and from SpecIF. 
 This is the purpose of the SpecIF model integration guides.
 
@@ -287,13 +296,11 @@ This is the purpose of the SpecIF model integration guides.
 This specification document consists of different parts. 
 They all together describe the complete concepts behind SpecIF. 
 
-Some parts of SpecIF have their own version numbers/revisions. 
-So it a SpecIF release consists of a set of different parts with different versions.
+Some parts of SpecIF have their own version numbers/revisions to allow for independent development steps.
 
-This specification describes the release of SpecIF 1.1.
-The revision SpecIF 1.1 is the first official release of SpecIF.
+This specification describes the release of SpecIF 1.1, which is the first official release of SpecIF.
 It is not called 1.0, because the development of the different parts of SpecIF took some time and parts where presented earlier as version 1.0. 
-To avoid misunderstandings and confusion, the first offical release is called SpecIF 1.1!
+To avoid misunderstandings and confusion, the first official release is called SpecIF 1.1!
 
 This release of *SpecIF 1.1* consists of the following parts, described in the following chapters:
 

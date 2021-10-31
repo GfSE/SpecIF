@@ -1,7 +1,7 @@
-﻿# Introduction to SpecIF Model Integration and Application
+﻿# Introduction to SpecIF Model Integration
 
 The usage of SpecIF for a specific purpose is called an 'application'. 
-An important application is to integrate models and other specification artifacts from different sources. 
+An important application is to integrate models and other specification artefacts from different sources. 
 Currently transformations or importers exist for BPMN, Archimate, ReqIF, Excel and UML/SysML.
 
 The integration of elements of different sources is generally done by name and type. 
@@ -94,7 +94,7 @@ In the context of model integration we differentiate between statements to expre
 
 Structural aspects are expressed with the following statements:
 
-* The *contains* statement expresses that a element is contained in another element. 
+* The *contains* statement expresses that an element is contained in another element. 
 Typical application scenarios are to express for example that a collection *contains* an actor or a state *contains* a sub-state etc.
 
 ![Application of the contains statement in SpecIF](./images/Contains.png)
@@ -141,7 +141,7 @@ The following class diagram shows the SpecIF application for document structures
 
 * The 🖿	 *Hierarchy* element is the root for a document
 * A *Heading* is used to define a heading text and to bring structure into a document
-* A *Paragraph* can be used to include some text paragraphs with no special semantics (e.g. prose text) a the document
+* A *Paragraph* can be used to include some text paragraphs with no special semantics (e.g. prose text) in the document
 * A ✶ *Feature* and
 * a ↯ *Requirement* are, as explained above, important to describe benefits and needs of a system to develop.
 
@@ -153,7 +153,7 @@ The SpecIF resource type *Comment* is used to include or add additional comments
 To assign a comment to a resource the statement type *refersTo* is used. 
 Typical application scenarios for using comments are reviews (review comments) or comments attached to a resource as additional short information.
 
-Comments are usually transient: Upon agreement the model or text is changed accordingly and the comment deleted.
+Comments are usually transient: Upon agreement, the model or text is changed accordingly and the comment deleted.
 When generating a document, the comments can be included or omitted, similarly to MS Word.
 
 ![Usage of the Comment resource type in SpecIF](./images/Comment.png)

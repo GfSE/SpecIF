@@ -34,7 +34,7 @@ to realize know-how protection or restrict the access for changing common used d
 
 ### API Key Authentication
 
-A SpecIF-WebAPI shall provide a [API Key-based authentication](https://swagger.io/docs/specification/authentication/api-keys/) for the API users. 
+A SpecIF-WebAPI shall provide an [API Key-based authentication](https://swagger.io/docs/specification/authentication/api-keys/) for the API users. 
 It is not part of the standard to define how these API keys are managed or generated. 
 This is a task for the API implementer.
 
@@ -111,7 +111,7 @@ A `POST` request shall always create a new element.
 If an element with a specified ID already exists, the API has to change the ID and return it in the result body data as first revision (no `replaces` entries).
 
 To create a new revision of an existing element a `PUT` request shall be used. 
-The data send as body parameter in a PUT request shall have the same `id` as the still existent element.
+The data sent as body parameter in a PUT request shall have the same `id` as the still existent element.
 
 We have to differentiate the following cases:
 * If the `id`, `revision` and `replaces` value is identical to an existing element, the API has to calculate a new revision identifier and add the data as new revision to the still existing element.

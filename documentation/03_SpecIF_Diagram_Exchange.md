@@ -8,7 +8,7 @@ SVG is a standardized format, defined by the W3C to represent (2D) graphical inf
 The SpecIF standard defines some additional XML-tags and attributes to include semantic diagram information into SVG graphics as SVG metadata. 
 For this purpose SpecIF (re-)uses some tags defined in the OMG standard for Diagram Definition (DD) (OMG No.: formal/2015-06-01).
 
-So the resulting SVG data consists of the graphical diagram information, represented as SVG graphics. 
+Therefore, the resulting SVG data consists of the graphical diagram information, represented as SVG graphics. 
 Such a SVG can be shown with each SVG viewer (e.g. a web browser), so that a user can simply view the diagram.
 Beside the SVG information, some SpecIF-specific meta-information is added to the SVG data.
 With this information, a semantical diagram exchange (export/import) between different modeling tools implementing SpecIF is possible.
@@ -57,7 +57,7 @@ Binary graphic formats are supported as well, but you loose the possibility to r
 
 ## Coordinate system
 
-The SpecIF-conform SVG graphics follows the definition of the SVG and the OMG Diagram Definiton standard. 
+The SpecIF-conform SVG graphics follows the definition of the SVG and the OMG Diagram Definition standard. 
 The x-axis is horizontal and it's coordinate values increase to the right, where negative coordinates are allowed. 
 Similarly, the y-axis is vertical and it's coordinate values increase to the bottom with negative coordinates allowed. 
 

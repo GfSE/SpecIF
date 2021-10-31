@@ -31,8 +31,8 @@ At present, the following statements are derived from BPMN diagrams, where the _
 - activity _SpecIF:reads_ data ('dataInputAssociation')
 - activity _SpecIF:writes_ data ('dataOutputAssociation')
 - activity _SpecIF:precedes_ activity ('sequenceFlow')
-- event _SpecIF:triggers_ activity ('outgoing' with respect to the event)
-- activity _SpecIF:signals_ event ('incoming' with respect to the event)
+- event _SpecIF:precedes_ activity ('outgoing' with respect to the event)
+- activity _SpecIF:precedes_ event ('incoming' with respect to the event)
 - annotation _SpecIF:refersTo_ model-element
 
 Where:
