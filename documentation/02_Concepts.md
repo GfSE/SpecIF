@@ -261,7 +261,7 @@ model elements in system specifications, the following abstract model element ty
 
 * A ↯ *Requirement* is a singular documented physical and functional need that a particular design, product or process must be able to perform. 
 
-* A 🖿 *Collection* is a logical (often conceptual) group of elements or other collections. Examples for collections are folders is a file system, groups in BPMN or packages in UML/SysML.
+* A ⬚ *Collection* is a logical (often conceptual) group of elements or other collections. Examples for collections are folders is a file system, groups in BPMN or packages in UML/SysML.
 
 With these few fundamental elements, a model integration can be done with SpecIF.
 Each individual element of a specific tool or specific modeling language is mapped to these fundamental element types.
