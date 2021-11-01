@@ -16,7 +16,7 @@ When analyzing, among others we have the following questions:
 - Is the relation *performs* shown in the correct direction?
 
 There is no standard serialization defined for FMC. As to our knowledge there is only one modeling tool for FMC, namely [ARCWAY Ccokpit](https://arcway.com),
-we will show in the following the mapping from the entities and relationships realized in this tool.
+we will show in the following the mapping of the entities and relationships realized in this tool.
 
 ### Resources
 
@@ -49,6 +49,7 @@ The original model element type is stored in a property named _dcterms:type_.
 
 Where:
 - 'model-element' is one of [ 'FMC:Actor', 'FMC:State', 'FMC:Event' ]
+- All statement class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-blM4lfyHM55YlbfBZ3NWj4SYwa3).
 
 ### Example
 

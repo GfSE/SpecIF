@@ -117,9 +117,9 @@ The implementation of the Transformation is accessible in the GFSE-Github (https
 |ScriptTask| FMC:Actor |OMG:BPMN:2.0:ScriptTask|-|
 |BusinessRuleTask| FMC:Actor |OMG:BPMN:2.0:BusinessRuleTask|-|
 |||||
-|Parallel Gateway (Seperation) | Statements || Statements between incoming and outgoing Elements|
+|Parallel Gateway (Separation) | Statements || Statements between incoming and outgoing Elements|
 |Parallel Gateway (Merge) | FMC:Actor || Actor with waiting function|
-|Exclusive Gateway (Seperation)| FMC:Actor + FMC:Event + SpecIF:signals|| Events for different Activityflows|
+|Exclusive Gateway (Separation)| FMC:Actor + FMC:Event + SpecIF:signals|| Events for different Activityflows|
 |Exclusive Gateway (Merge)| Statements || Statements between incoming and outgoing Elements|
 |||||
 |Group| SpecIF:Collection |OMG:BPMN:2.0:Group| Additional SpecIF:contains Statements for Elements that are contained by the Group |
