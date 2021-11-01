@@ -10,18 +10,17 @@ For introduction to the Business Process Model and Notation (BPMN), see the [BPM
 | --- | --- |
 | bpmn:collaboration | SpecIF:Diagram |
 | bpmn:process | *tbd* |
-| bpmn:participant<sup>1</sup>, bpmn:laneSet, bpmn:lane<sup>2</sup>, bpmn:task, bpmn:manualTask, bpmn:userTask, bpmn:scriptTask, bpmn:serviceTask, bpmn:sendTask, bpmn:receiveTask, bpmn:callActivity, bpmn:transaction, bpmn:subProcess, bpmn:businessRuleTask, forking and joining bpmn:parallelGateway, joining bpmn:exclusiveGateway<sup>3</sup>, joining bpmn:inclusiveGateway<sup>3</sup> | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) |
-| forking bpmn:exclusiveGateway<sup>3</sup>, forking bpmn:inclusiveGateway<sup>3</sup>, forking bpmn:eventBasedGateway | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) plus [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) per outgoing sequenceFlow |
-| bpmn:dataObjectReference<sup>4</sup>, bpmn:dataStoreReference<sup>4</sup>, bpmn:messageFlow<sup>5</sup> | [FMC:State](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) |
+| bpmn:participant<sup>1</sup>, bpmn:laneSet, bpmn:lane<sup>2</sup>, bpmn:task, bpmn:manualTask, bpmn:userTask, bpmn:scriptTask, bpmn:serviceTask, bpmn:sendTask, bpmn:receiveTask, bpmn:callActivity, bpmn:transaction, bpmn:subProcess, bpmn:businessRuleTask, forking and joining bpmn:parallelGateway, joining bpmn:exclusiveGateway, joining bpmn:inclusiveGateway | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) |
+| forking bpmn:exclusiveGateway, forking bpmn:inclusiveGateway, forking bpmn:eventBasedGateway | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) plus [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) per outgoing sequenceFlow |
+| bpmn:dataObjectReference<sup>3</sup>, bpmn:dataStoreReference<sup>3</sup>, bpmn:messageFlow<sup>4</sup> | [FMC:State](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) |
 | bpmn:startEvent, bpmn:timerStartEvent, bpmn:messageStartEvent, bpmn:intermediateEvent, bpmn:messageThrowEvent, bpmn:intermediateThrowEvent, bpmn:intermediateCatchEvent, bpmn:intermediateTimerCatchEvent, bpmn:intermediateMessageCatchEvent, bpmn:boundaryEvent, bpmn:timerBoundaryEvent, bpmn:messageBoundaryEvent, bpmn:endEvent | [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) |
-| bpmn:group<sup>6</sup> | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
+| bpmn:group<sup>5</sup> | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 
 The original model element type (BPMN-XML tag) is stored in a property named _dcterms:type_. 
 
 Comments:
 1. A participant is also called a 'pool'.
 1. A lane is considered a responsible person or role, thus an FMC:Actor.
-1. A forking exclusive or inclusive gateway is transformed to an FMC:Actor plus an FMC:Event per outgoing path.
 1. Interestingly enough, in BPMN the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_ (rather than _dataObject_ or _dataStore_). Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
 1. A messageFlow between different processes is transformed to a _dataObject_ with _SpecIF:writes_ and _SpecIF:reads statements_ connecting to the sending resp. receiving process steps or events.
 1. Currently a _group_ is not represented as a SpecIF model-element, because some (or even all) widely used BPMN modelers do not indicate explicitly in their BPMN-XML export, which activities or other are contained. Thus, the semantics of a group are not easily derived. The geometric coordinates of the diagram can be analyzed to identify contained elements of a group, of course: This is a development task to do.
