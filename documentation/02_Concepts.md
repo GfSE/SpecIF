@@ -2,7 +2,7 @@
 
 ## Product Lifecycle Management
 
-The Specification Integration Facility addresses the problem domain of product lifecycle management (PLM). PLM is used to manage all processes, informations and data that will created in an entire product life cycle. From the first product idea until the end-of-life of the product.
+The Specification Integration Facility addresses the problem domain of product lifecycle management (PLM). PLM is used to manage all processes, information and data that will created in an entire product life cycle. From the first product idea until the end-of-life of the product.
 
 ![Product Lifecycle Management (PLM), *source: Wikipedia*](./images/Product_lifecycle_management.png)
 
@@ -69,7 +69,7 @@ For SpecIF data syntax representation and definition the following existing stan
 * XHTML to represent formatted text
 * SVG to represent vector graphic data (used for diagram data exchange)
 * Swagger resp. OpenAPI for definition of the SpecIF-WebAPI
-* The Meta Object Facility (MOF) meta-modeling and the Model-driven Architecture (MDA) approaches defined by the [Object Management Group (OMG)](https://www.omg.org)
+* The Meta Object Facility (MOF) meta-modeling and the Model-Driven Architecture (MDA) approaches defined by the [Object Management Group (OMG)](https://www.omg.org)
 
 ## SpecIF data is graph data
 
@@ -192,7 +192,7 @@ This is the main reason why SVG is selected as standard for SpecIF diagram excha
 So the resulting SpecIF-conformant SVG contains the graphical information, that can be used with each SVG viewer, but it also contains some semantic meta-information that allows the traceability 
 to the SpecIF resources and statements, visualized in the SVG.
 
-The concrete definition of the SpecIF-SVG-metadata is defined in a seperate chapter of this specification.
+The concrete definition of the SpecIF-SVG-metadata is defined in a separate chapter of this specification.
 
 ## Web API
 
