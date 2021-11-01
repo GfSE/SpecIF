@@ -4,6 +4,8 @@
 
 The Specification Integration Facility addresses the problem domain of product lifecycle management (PLM). PLM is used to manage all processes, informations and data that will created in an entire product life cycle. From the first product idea until the end-of-life of the product.
 
+![Product Lifecycle Management (PLM), *source: Wikipedia*](./images/Product_lifecycle_management.png)
+
 There are four phases defined to structure the PLM [[WikipediaPLM](https://en.wikipedia.org/wiki/)]:
 
 1. Concept phase (Conceive - Imagine, specify, plan, innovate)
@@ -11,10 +13,10 @@ There are four phases defined to structure the PLM [[WikipediaPLM](https://en.wi
 3. Realization phase (Realize - Manufacture, make, build, procure, produce, sell and deliver)
 4. Service phase (Service - Use, operate, maintain, support, sustain, phase-out, retire, recycle and disposal)
 
-![Product Lifecycle Management (PLM), *source: Wikipedia*](https://upload.wikimedia.org/wikipedia/commons/9/90/Product_lifecycle_management.png)
+![The four phases of PLM](./images/PLM_Stages.png)
 
-
-In all phases of the PLM different data is created edited and exchanged between different stakeholders. SpecIF is defined as new universal standard for representation and exchange of PLM data of all kind in all phases.     
+In all phases of the PLM different data is created, edited and exchanged between different stakeholders. 
+SpecIF is defined as new universal standard for representation, exchange and integration of PLM data of all kind in all phases.     
 
 ## Data exchange and data integration in PLM
 
@@ -26,7 +28,7 @@ To solve these problems, SpecIF will define a standard for data exchange and int
 Therefore, the SpecIF defines
 
 1. A *syntax* for the data representation (data format(s))
-2. A definition of (data) type names and their meanings (*semantics*)
+2. A definition of (data) type names and their meanings (*semantics*) - sometimes also called *Vocabulary*.
 3. Different *application guides*, that describe how to map a specific PLM data to SpecIF
 4. A definition of a *Web API* that is able to provide and consume SpecIF data - helpful for data integration scenarios using web technologies.    
 
@@ -66,7 +68,7 @@ For SpecIF data syntax representation and definition the following existing stan
 * JavaScript Object Notation (JSON) and the JSON-Schema for data format specification
 * XHTML to represent formatted text
 * SVG to represent vector graphic data (used for diagram data exchange)
-* Swagger resp. OpenAPI for definition of the SpecIF WebAPI
+* Swagger resp. OpenAPI for definition of the SpecIF-WebAPI
 * The Meta Object Facility (MOF) meta-modeling and the Model-driven Architecture (MDA) approaches defined by the [Object Management Group (OMG)](https://www.omg.org)
 
 ## SpecIF data is graph data
@@ -85,9 +87,16 @@ Statements itself can also be subject and/or object of another statement. Theref
 
 ## View concept
 
-SpecIF supports the concept of separation of model and view. The model is the collection of existing SpecIF-Resource elements. The view is a tree data structure called *hierarchy* where a selection of the SpecIF-Resource elements are shown in a hierarchical order. The elements of a hierarchy structure in SpecIF are called *nodes*.
+SpecIF supports the concept of separation of model and view. 
+The model is the collection of existing SpecIF-Resource elements. 
+The view is a tree data structure called *hierarchy* where a selection of the SpecIF-Resource elements are shown in a hierarchical order. 
+The elements of a hierarchy structure in SpecIF are called *nodes*.
 
-It is not required, that all available resources are part of a hierarchy structure. Each node in a hierarchy tree defines a reference to a specific resource element. The resources are linked by the nodes using the resource unique identifier. It is possible to reference the same resource element in multiple hierarchy structures. This allows reuse of existing data without copying the data. 
+It is not required, that all available resources are part of a hierarchy structure. 
+Each node in a hierarchy tree defines a reference to a specific resource element. 
+The resources are linked by the nodes using the resource unique identifier. 
+It is possible to reference the same resource element in multiple hierarchy structures. 
+This allows reuse of existing data without copying the data. 
 
 The following figure illustrates the concept: 
 
@@ -109,6 +118,8 @@ For each SpecIF data element must exist a class element defining this data eleme
 * A *resource class* element defines a resource type.
 * A *statement class* element defines a statement type.
 * A *data type* element defines the data types used in the property type definitions (property classes).
+
+![The SpecIF architecture](./images/SpecIF_Architecture.png)
 
 ## Inheritance
 
@@ -158,7 +169,7 @@ The following table shows an overview about the SpecIF file extensions:
 
 ### XML representation
 
-SpecIF v1.0 does not define a XML resp. RDF representation. Nevertheless, it may be provided in future releases.
+SpecIF v1.1 does not define a XML resp. RDF representation. Nevertheless, it may be provided in future releases.
 
 ### SpecIF diagram interchange
 
@@ -270,7 +281,7 @@ model elements in system specifications, the following abstract model element ty
 - An ⬧ *Event* is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.
 - A ✶ *Feature* is an intentional distinguishing characteristic of a system, often a so-called ‘Unique Selling Proposition’.
 - A ↯ *Requirement* is a singular documented physical and functional need that a particular design, product or process must be able to perform. 
-- A ⬚ *Collection* is a logical (often conceptual) group of elements or other collections. Examples for collections are folders is a file system, groups in BPMN or packages in UML/SysML.
+- A 🖿 *Collection* is a logical (often conceptual) group of elements or other collections. Examples for collections are folders is a file system, groups in BPMN or packages in UML/SysML.
 
 With these few fundamental elements, a model integration can be done with SpecIF.
 Each individual element of a specific tool or specific modeling language is mapped to these fundamental element types.
@@ -306,7 +317,6 @@ This release of *SpecIF 1.1* consists of the following parts, described in the f
 
 | Title | Revision |
 |-|-|
-|SpecIF-Metamodel|1.1|
-|SpecIF JSON-schema|1.1|
+|SpecIF-Metamodel and SpecIF JSON-schema|1.1|
 |SpecIF class definitions|1.1|
 |SpecIF-WebAPI|1.1| 

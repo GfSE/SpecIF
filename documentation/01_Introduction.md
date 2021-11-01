@@ -4,7 +4,8 @@
 
 In the field of Systems Engineering (SE) a multitude of methods is being used with benefit every day; 
 for example, requirements mana­gement, modeling of system structure and behavior with UML/SysML or simulation with 
-Modelica and other languages. There is infor­mation from various sources and in different formats, all providing valuable 
+Modelica and other languages. 
+There is infor­mation from various sources and in different formats, all providing valuable 
 input for system design and development.
 
 In practice, it is difficult or even impossible with acceptable effort to join the information and to put it in relation. 
@@ -14,7 +15,7 @@ Popular modeling standards such as UML/SysML are notations but leave semantic
 inter­pretation to tool-makers or users. For data (model) exchange there are several standards with respect to syntax, 
 but very few which address the semantics as well.
 
-The Specification Integration Facility (SpecIF) shall support the change from document-centric to artefact-centric colla­boration, which is a generally accepted goal in the domains of systems engineering and product lifecycle management (PLM). 
+The Specification Integration Facility (SpecIF) shall support the change from document-centric to artifact-centric colla­boration, which is a generally accepted goal in the domains of systems engineering and product lifecycle management (PLM). 
 SpecIF defines a language for describing system models with attention to both syntax and semantics. By creating a common context for graphical and textual content, an understanding (beyond mere communi­cation) is achieved on a logical level. 
 Existing technical formats and protocols such as ReqIF or RDF are adopted to take advantage of existing IT infra­structure.
 
@@ -51,6 +52,6 @@ The following tasks shall be supported:
 * Find and consolidate identical elements in different models,
 * Detect and store dependencies and logical relations between model elements, essentially that is interrelating model elements with a semantic net,
 * Detect errors, inconsistencies or violations of design rules,
-* Reference ('trace') artefacts in subsequent development steps without copying.
+* Reference ('trace') artifacts in subsequent development steps without copying.
 
 
