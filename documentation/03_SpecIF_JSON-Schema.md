@@ -2,9 +2,12 @@
 
 The SpecIF JSON-Schema describes the syntax of SpecIF data as a concrete instance of the SpecIF-Metamodel how it was described earlier in this specification.
 The JSON-Schema builds a platform-specific model (PSM), following the OMG MDA approach, realizing a JSON representation for SpecIF, based on the SpecIF-Metamodel.
-The Schema follows the JSON-Schema standard defined here: http://json-schema.org/draft-04/schema#.
+The Schema follows the JSON-Schema standard defined here: https://json-schema.org/draft/2019-09/schema#.
 
-The schema definition file for SpecIF is available under https://specif.de/v1.1/schema.json.
+The schema definition file for SpecIF is available under 
+
+* https://specif.de/v1.1/schema.json or
+* https://json.schemastore.org/specif-1.1.json
 
 __Remark:__ The names, internally used in the JSON-Schema for SpecIF all get a prefix `Specif` 
 followed by the names defined in the Metamodel to avoid naming conflicts in 
@@ -55,6 +58,7 @@ The list below shows the available primitive data types based on the data types 
 * *xs:double* - a floating point number
 * *xs:dateTime* - a date value
 * *xs:anyURL* - a uniform resource locator (URL)
+* *xs:duration* - a duration value
 
 Based on these primitive data types, a SpecIF user can define *DataType* elements. 
 These data types can be used as base for *PropertyClass*-definitions. 
