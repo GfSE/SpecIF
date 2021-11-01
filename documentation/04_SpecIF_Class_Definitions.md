@@ -2,7 +2,7 @@
 
 To define the semantics for SpecIF, a collection of data type and class definitions is defined and part of the SpecIF standard. 
 
-The class definitions provided as SpecIF-files are available here: https://github.com/GfSE/SpecIF/tree/master/classDefinitions.
+The class definitions provided as SpecIF-files are available here: https://github.com/GfSE/SpecIF-Class-Definitions.
 
 It is strongly recommended to exactly use the data type and class definitions 
 described here to get a SpecIF-file or SpecIF-data set that follows the official SpecIF standard.
