@@ -247,7 +247,7 @@ The ResourceClass has the following attributes:
 * *description: MultilanguageText[]* - A human readable description of the data type for documentation purposes.
 * *icon: string* - A icon definition usable by authoring tools for the Resources. This can be a language code of a unicode symbol or a base64 encoded image.
 * *isHeading: bool* - Indicates, that the defined resource is a heading.
-* *instantiation* - Values: 'user' or 'system'. Tbd.
+* *instantiation: InstantiationTypes* - Values: 'user' and/or 'system'. Indicates whether an instance of the class is created automatically, manually or both. All is allowed by default. The class is abstract and cannot be instantiated, if the value is set to 'none'.
 * *extends* - Reference to a parent ResourceClass element when inheritance is used in the data definition. 
 * *propertyClasses* - A list of PropertyClass references to define which Properties shall be used for the defined Resource type. 
  
