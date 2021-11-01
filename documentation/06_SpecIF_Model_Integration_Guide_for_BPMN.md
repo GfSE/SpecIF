@@ -8,14 +8,18 @@ For introduction to the Business Process Model and Notation (BPMN), see the [BPM
 
 | [BPMN-XML](https://www.omg.org/spec/BPMN/2.0/About-BPMN/) | [SpecIF](https://specif.de) |
 | --- | --- |
-| participant, laneSet, lane<sup>1</sup>, task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess, parallelGateway, exclusiveGateway<sup>2</sup>, inclusiveGateway<sup>2</sup>, eventBasedGateway | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) |
-| dataObjectReference<sup>3</sup>, dataStoreReference<sup>3</sup>, messageFlow<sup>4</sup> | [FMC:State](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) |
-| startEvent, intermediateThrowEvent, intermediateCatchEvent, boundaryEvent, endEvent | [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) |
-| group<sup>5</sup> | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
+| bpmn:collaboration | SpecIF:Diagram |
+| bpmn:process | *tbd* |
+| bpmn:participant<sup>1</sup>, bpmn:laneSet, bpmn:lane<sup>2</sup>, bpmn:task, bpmn:manualTask, bpmn:userTask, bpmn:scriptTask, bpmn:serviceTask, bpmn:sendTask, bpmn:receiveTask, bpmn:callActivity, bpmn:transaction, bpmn:subProcess, bpmn:businessRuleTask, forking and joining bpmn:parallelGateway, joining bpmn:exclusiveGateway<sup>3</sup>, joining bpmn:inclusiveGateway<sup>3</sup> | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) |
+| forking bpmn:exclusiveGateway<sup>3</sup>, forking bpmn:inclusiveGateway<sup>3</sup>, forking bpmn:eventBasedGateway | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) plus [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) per outgoing sequenceFlow |
+| bpmn:dataObjectReference<sup>4</sup>, bpmn:dataStoreReference<sup>4</sup>, bpmn:messageFlow<sup>5</sup> | [FMC:State](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) |
+| bpmn:startEvent, bpmn:timerStartEvent, bpmn:messageStartEvent, bpmn:intermediateEvent, bpmn:messageThrowEvent, bpmn:intermediateThrowEvent, bpmn:intermediateCatchEvent, bpmn:intermediateTimerCatchEvent, bpmn:intermediateMessageCatchEvent, bpmn:boundaryEvent, bpmn:timerBoundaryEvent, bpmn:messageBoundaryEvent, bpmn:endEvent | [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) |
+| bpmn:group<sup>6</sup> | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 
 The original model element type (BPMN-XML tag) is stored in a property named _dcterms:type_. 
 
 Comments:
+1. A participant is also called a 'pool'.
 1. A lane is considered a responsible person or role, thus an FMC:Actor.
 1. A forking exclusive or inclusive gateway is transformed to an FMC:Actor plus an FMC:Event per outgoing path.
 1. Interestingly enough, in BPMN the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_ (rather than _dataObject_ or _dataStore_). Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
@@ -25,20 +29,24 @@ Comments:
 ### Statements
 
 At present, the following statements are derived from BPMN diagrams, where the _statement terms_ (_predicates_) are highlighted in _italics_:
-- diagram _SpecIF:shows_ model-element
-- process _SpecIF:contains_ lane
-- lane _SpecIF:contains_ activity or event
-- activity _SpecIF:reads_ data ('dataInputAssociation')
-- activity _SpecIF:writes_ data ('dataOutputAssociation')
-- activity _SpecIF:precedes_ activity ('sequenceFlow')
-- event _SpecIF:precedes_ activity ('outgoing' with respect to the event)
-- activity _SpecIF:precedes_ event ('incoming' with respect to the event)
-- annotation _SpecIF:refersTo_ model-element
+
+| [BPMN-XML](https://www.omg.org/spec/BPMN/2.0/About-BPMN/) |  | [SpecIF](https://specif.de) | Comment |
+| --- | --- | --- | --- |
+| *Appearance on diagram* | diagram _SpecIF:shows_ model-element | SpecIF:shows |  |
+| *Graphical Containment* | process _SpecIF:contains_ lane | SpecIF:contains |  |
+| *Graphical Containment* | lane _SpecIF:contains_ activity or event | SpecIF:contains |  |
+| bpmn:dataInputAssociation | activity _SpecIF:reads_ data | SpecIF:reads |  |
+| bpmn:dataOutputAssociation | activity _SpecIF:writes_ data | SpecIF:writes |  |
+| bpmn:sequenceFlow | activity _SpecIF:precedes_ activity | SpecIF:precedes |  |
+| bpmn:sequenceFlow ('outgoing' with respect to the event) | event _SpecIF:precedes_ activity | SpecIF:precedes |  |
+| bpmn:sequenceFlow ('incoming' with respect to the event) | activity _SpecIF:precedes_ event | SpecIF:precedes |  |
+| bpmn:association | annotation _SpecIF:refersTo_ model-element | SpecIF:refersTo |  |
 
 Where:
 - 'model-element' is one of [ 'FMC:Actor', 'FMC:State', 'FMC:Event' ]
-- 'activity' is one of [ task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess ], thus an FMC:Actor
-- 'data' is one of [ dataObjectReference, dataStoreReference ], thus a FMC:State
+- 'activity' is one of [ bpmn:task, bpmn:manualTask, bpmn:userTask, bpmn:scriptTask, bpmn:serviceTask, bpmn:sendTask, bpmn:receiveTask, bpmn:callActivity, bpmn:transaction, bpmn:subProcess ], thus an FMC:Actor
+- 'data' is one of [ bpmn:dataObjectReference, bpmn:dataStoreReference ], thus a FMC:State
+- 'event' is one of [ bpmn:startEvent, bpmn:intermediateThrowEvent, bpmn:intermediateCatchEvent, bpmn:boundaryEvent, bpmn:endEvent ], thus a FMC:Event
  
 ### Example
 
@@ -85,55 +93,3 @@ The full example can be inspected, here:
 
 ### Transformation Code
 Here you may look at the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).
-
-## BPMN to SpecIF Mapping
-
-_{ to be consolidated with the above }_
-
-A Mapping for BPMN to SpecIF was developed in the Masterthesis of Robert Kanitz. The following Mapping Table shows the Mapping between BPMN- and SpecIF-Elements.
-The implementation of the Transformation is accessible in the GFSE-Github (https://github.com/GfSE/BPMN-SpecIF-Bridge). 
-
-### BPMN to SpecIF mapping table
-|BPMN-Element | SpecIF Resource Class |dcterms:type| Remark|
-| ------------- |:-------------|-| -----------|
-|Process| SpecIF:Diagram |OMG:BPMN:2.0:Process| SpecIF:Diagram and SpecIF:shows Statements for Elements belonging to the diagram|
-|||||
-|Start Event | FMC:Event |OMG:BPMN:2.0:StartEvent|-|
-|Intermediate Event | FMC:Event |OMG:BPMN:2.0:IntermediateEvent|-|
-|End Event | FMC:Event |OMG:BPMN:2.0:EndEvent|-|
-|TimerStartEvent| FMC:Event |OMG:BPMN:2.0:TimerStartEvent| -|
-|TimerIntermediateEvent| FMC:Event |OMG:BPMN:2.0:TimerIntermediateEvent| -|
-|MessageStartEvent| FMC:Event |OMG:BPMN:2.0:MessageStartEvent| -|
-|MessageIntermediateEvent| FMC:Event |OMG:BPMN:2.0:MessageIntermediateEvent| -|
-|MessageEndEvent| FMC:Event |OMG:BPMN:2.0:MessageEndEvent| -|
-|||||
-|Activity| FMC:Actor |OMG:BPMN:2.0:Acticity|-|
-|Task| FMC:Actor |OMG:BPMN:2.0:Task|-|
-|SendTask| FMC:Actor |OMG:BPMN:2.0:SendTask|-|
-|ReceiveTask| FMC:Actor |OMG:BPMN:2.0:ReceiveTask|-|
-|ServiceTask| FMC:Actor |OMG:BPMN:2.0:ServiceTask|-|
-|UserTask| FMC:Actor |OMG:BPMN:2.0:UserTask|-|
-|ManualTask| FMC:Actor |OMG:BPMN:2.0:ManualTask|-|
-|ScriptTask| FMC:Actor |OMG:BPMN:2.0:ScriptTask|-|
-|BusinessRuleTask| FMC:Actor |OMG:BPMN:2.0:BusinessRuleTask|-|
-|||||
-|Parallel Gateway (Separation) | Statements || Statements between incoming and outgoing Elements|
-|Parallel Gateway (Merge) | FMC:Actor || Actor with waiting function|
-|Exclusive Gateway (Separation)| FMC:Actor + FMC:Event + SpecIF:signals|| Events for different Activityflows|
-|Exclusive Gateway (Merge)| Statements || Statements between incoming and outgoing Elements|
-|||||
-|Group| SpecIF:Collection |OMG:BPMN:2.0:Group| Additional SpecIF:contains Statements for Elements that are contained by the Group |
-|||||
-|Pool| FMC:Actor |OMG:BPMN:2.0:Participant| Additional SpecIF:contains Statements for Elements that are contained by the Pool|
-|Lane| FMC:Actor |OMG:BPMN:2.0:Participant| Additional SpecIF:contains Statements for Elements that are contained by the Lane|
-|DataObject| FMC:State |OMG:BPMN:2.0:DataObject| - |
-|DataObject is Collection| FMC:State |OMG:BPMN:2.0:DataObjectCollection| - |
-|Datainput| FMC:State |OMG:BPMN:2.0:DataInput| - |
-|Dataoutput| FMC:State |OMG:BPMN:2.0:DataOutput| - |
-|DataStore| FMC:State |OMG:BPMN:2.0:DataStore| - |
-|||||
-|Annotation| SpecIF:Comment |OMG:BPMN:2.0:TextAnnotation| - |
-|||||
-|Association| SpecIF:contains/refersTo || - |
-|SequenceFlow| SpecIF:triggers/signals/precedes || - |
-|MessageFlow| FMC:State + SpecIF:reads/writes || Messageflow Object is represented by FMC:State|
