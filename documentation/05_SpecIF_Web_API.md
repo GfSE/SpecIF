@@ -1,7 +1,7 @@
 ﻿# SpecIF-WebAPI
 
 The SpecIF-WebAPI defines a set of REST endpoints for standardized access to SpecIF data available via web-services. 
-It is possible to use such a web-service as part of a Microservice software architecture.
+It is possible to use such a web-service as part of a microservice software architecture.
 
 This specification describes version 1.1 of the SpecIF-WebAPI which is the first official released version.
 
@@ -54,13 +54,17 @@ Without role assignment, a user cannot see a project.
 
 |Role name|Role description|
 |-|-|
-|Anybody|Grants permission to read all instances (i.e. resources, statements, files and hierarchies) to anybody without authentication. Makes projects publicly available. The data type definition endpoints are readable to anybody.|
+|Anybody|Grants permission to read all instances (i.e. resources, statements, files and hierarchies) to anybody without authentication. Makes projects publicly available. The data type definition endpoints are readable to anybody if no know-how protection is necessary.|
 |Reader|A user is granted read privilege for the project's instances. This is the standard role with the lowest access rights. The user role is automatically applied when a user is successfully authenticated as a SpecIF-WebAPI user.|
 |Editor|An Editor is granted create, read, update and delete privilege for the project's instances.|
 |Manager|A Manager is granted create, read, update as well as delete privilege for the project's classes and instances. In addition, projects can be created and deleted.|
 |Administrator|An Administrator has unrestricted access to all endpoints of a SpecIF-WebAPI.|
 
 The endpoint specification below describes, if an endpoint requires further rights above the User role.
+
+If a SpecIF-API provides just data- and class-type definitions with public character, these endpoints are open for Anybody. 
+If some of the data type and class type definitions have restricted usage (e.g. internal know-how protection) 
+at least the role reader should be applied.   
 
 ### Error handling
 
@@ -83,7 +87,7 @@ In addition, a server may send some further error messages (e.g. code 500 - Inte
 |401|Unauthorized|The given API key is not valid.|
 |403|Forbidden|The role of the user authenticated by the API key is not permitted to access the requested endpoint.|
 |404|Not Found|The requested data was not found in the data repository.|
-|601|Invalid id|Specified item identifier within a POST request is not unique.|
+|601|Invalid ID|Specified item identifier within a POST request is not unique. Depending on the implementation, this can be avoided if the API corrects the ID on demand and returns the data with the correct ID.|
 
 ### Data model and data format
 
@@ -105,10 +109,13 @@ The parameters for the endpoints are defined below, and it is described for each
 
 Some endpoints have a path parameter `id` to query for data. 
 The `revision` parameter is defined as an optional query parameter to specify a specific revision.
-If the revision parameter is missing, the element with the newest change date is used.
+If the revision parameter is missing, the element with the newest change date (changedAt) is used.
+
+### Revisioning for data-elements
 
 A `POST` request shall always create a new element. 
-If an element with a specified ID already exists, the API has to change the ID and return it in the result body data as first revision (no `replaces` entries).
+If an element with a specified ID already exists, 
+the API has to change the ID and return it in the result body data as first revision (no `replaces` entries).
 
 To create a new revision of an existing element a `PUT` request shall be used. 
 The data sent as body parameter in a PUT request shall have the same `id` as the still existent element.
@@ -117,9 +124,20 @@ We have to differentiate the following cases:
 * If the `id`, `revision` and `replaces` value is identical to an existing element, the API has to calculate a new revision identifier and add the data as new revision to the still existing element.
 * If the `id` and `replaces` values are set to valid values, the API shall check if the `revision` value is unique and if not, calculate a new revision and add the data as new revision to the element that are referenced by the `replaces` values.
 
+### Revisioning for meta-elements
+
+The versioning of the dataType- and class-elements (metatypes) should be handled a little bit different to the handling of data elements.
+Such meta elements are typically defined by an Administrator in a process of term and vocabulary definitions using SpecIF. 
+It is not required to track each single change on these elements. 
+So the behavior for revisioning is a little bit different to the element representing concrete PLM-data:
+
+* When a POST request is used, a new element should be created with an initial revision.
+* When a PUT request is used with `id` and `revision` set to an existing element and the `replaces` filed is equal to the existing element, the element data should be updated WITHOUT creating a new revision.
+* When a PUT request is used and the `id` and `replaces` is pointing to an existing element, a new revision shall be created. The API has to ensure the consistency and correctness of the `revision` property.
+
 ## Data definition endpoints
 
-The following sections describe the SpecIF-Web-API endpoints for the data definition endpoints.
+The following sections describe the SpecIF-Web-API endpoints for the data definition (metadata) endpoints.
 
 ### Data types
 
@@ -127,12 +145,12 @@ Endpoints for CRUD operations on SpecIF *DataType* elements.
 
 |Endpoint|Parameters|Response data|Minimum access role|Description|
 |-|-|-|-|-|
-|`GET /specif/v1.1/dataTypes`|-|DataType[]|Anybody|Returns all data types with all available revisions.|
+|`GET /specif/v1.1/dataTypes`|-|DataType[]|Anybody or Reader|Returns all data types with all available revisions.|
 |`POST /specif/v1.1/dataTypes`|DataType (body)|DataType|Administrator|Create a new DataType and returns the created DataType as response body.|
 |`PUT /specif/v1.1/dataTypes`|DataType (body)|DataType|Administrator|Update the data type; the supplied ID must exist. The updated data is returned as response body.|
-|`GET /specif/v1.1/dataTypes/{id}`|*id:string* (path): The id of the element to get.<br>*revision:string* (query): The revision of the element to get.|DataType|Anybody|Returns the data type with the given ID.|
+|`GET /specif/v1.1/dataTypes/{id}`|*id:string* (path): The id of the element to get.<br>*revision:string* (query): The revision of the element to get.|DataType|Anybody or Reader|Returns the data type with the given ID.|
 |`DELETE /specif/v1.1/dataTypes/{id}`|*id:string* (path): The id of the element to delete.<br>*revision:string* (query): The revision of the element to delete.|-|Administrator|Delete the data type; the supplied ID must exist. Return an error if there are depending model elements.|
-|`GET /specif/v1.1/dataTypes/{id}/revisions`|*id:string* (path): The id of the element to get.|DataType[]|Anybody|Returns all element revisions for the given id. These elements have the same id value, but different revisions.|
+|`GET /specif/v1.1/dataTypes/{id}/revisions`|*id:string* (path): The id of the element to get.|DataType[]|Anybody or Reader|Returns all element revisions for the given id. These elements have the same id value, but different revisions.|
 
 ### Property classes
 
@@ -140,12 +158,12 @@ Endpoints for CRUD operations on SpecIF *PropertyClass* elements.
 
 |Endpoint|Parameters|Response data|Minimum access role|Description|
 |-|-|-|-|-|
-|`GET /specif/v1.1/propertyClasses`|-|PropertyClass[]|Anybody|Returns all property classes with all available revisions.|
+|`GET /specif/v1.1/propertyClasses`|-|PropertyClass[]|Anybody or Reader|Returns all property classes with all available revisions.|
 |`POST /specif/v1.1/propertyClasses`|PropertyClass (body)|PropertyClass|Administrator|Create a new DataType and returns the created PropertyClass as response body.|
 |`PUT /specif/v1.1/propertyClasses`|PropertyClass (body)|PropertyClass|Administrator|Update the data type; the supplied ID must exist. The updated data is returned as response body.|
-|`GET /specif/v1.1/propertyClasses/{id}`|*id:string* (path): The id of the element to get.<br>*revision:string* (query): The revision of the element to get.|PropertyClass|Anybody|Returns the property class with the given ID.|
+|`GET /specif/v1.1/propertyClasses/{id}`|*id:string* (path): The id of the element to get.<br>*revision:string* (query): The revision of the element to get.|PropertyClass|Anybody or Reader|Returns the property class with the given ID.|
 |`DELETE /specif/v1.1/propertyClasses/{id}`|*id:string* (path): The id of the element to delete.<br>*revision:string* (query): The revision of the element to delete.|-|Administrator|Delete the property class; the supplied ID must exist. Return an error if there are depending model elements.|
-|`GET /specif/v1.1/propertyClasses/{id}/revisions`|*id:string* (path): The id of the element to get.|PropertyClass[]|-|Returns all element revisions for the given id. These elements have the same id value, but different revisions.|
+|`GET /specif/v1.1/propertyClasses/{id}/revisions`|*id:string* (path): The id of the element to get.|PropertyClass[]|Anybody or Reader|Returns all element revisions for the given id. These elements have the same id value, but different revisions.|
 
 ### Resource classes
 
@@ -153,12 +171,12 @@ Endpoints for CRUD operations on SpecIF *ResourceClass* elements.
 
 |Endpoint|Parameters|Response data|Minimum access role|Description|
 |-|-|-|-|-|
-|`GET /specif/v1.1/resourceClasses`|-|ResourceClass[]|Anybody|Returns all resource classes with all available revisions.|
+|`GET /specif/v1.1/resourceClasses`|-|ResourceClass[]|Anybody or Reader|Returns all resource classes with all available revisions.|
 |`POST /specif/v1.1/resourceClasses`|ResourceClass (body)|ResourceClass|Administrator|Create a new DataType and returns the created ResourceClass as response body.|
 |`PUT /specif/v1.1/resourceClasses`|ResourceClass (body)|ResourceClass|Administrator|Update the data type; the supplied ID must exist. The updated data is returned as response body.|
-|`GET /specif/v1.1/resourceClasses/{id}`|*id:string* (path): The id of the element to get.<br>*revision:string* (query): The revision of the element to get.|ResourceClass|Anybody|Returns the resource class with the given ID.|
+|`GET /specif/v1.1/resourceClasses/{id}`|*id:string* (path): The id of the element to get.<br>*revision:string* (query): The revision of the element to get.|ResourceClass|Anybody or Reader|Returns the resource class with the given ID.|
 |`DELETE /specif/v1.1/resourceClasses/{id}`|*id:string* (path): The id of the element to delete.<br>*revision:string* (query): The revision of the element to delete.|-|Administrator|Delete the resource class; the supplied ID must exist. Return an error if there are depending model elements.|
-|`GET /specif/v1.1/resourceClasses/{id}/revisions`|*id:string* (path): The id of the element to get.|ResourceClass[]|Anybody|Returns all element revisions for the given id. These elements have the same id value, but different revisions.|
+|`GET /specif/v1.1/resourceClasses/{id}/revisions`|*id:string* (path): The id of the element to get.|ResourceClass[]|Anybody or Reader|Returns all element revisions for the given id. These elements have the same id value, but different revisions.|
 
 ### Statement classes
 
@@ -166,12 +184,12 @@ Endpoints for CRUD operations on SpecIF *StatementClass* elements.
 
 |Endpoint|Parameters|Response data|Minimum access role|Description|
 |-|-|-|-|-|
-|`GET /specif/v1.1/statementClasses`|-|StatemenetClass[]|-|Returns all statement classes with all available revisions.|
+|`GET /specif/v1.1/statementClasses`|-|StatemenetClass[]|Anybody or Reader|Returns all statement classes with all available revisions.|
 |`POST /specif/v1.1/statementClasses`|StatemenetClass (body)|StatemenetClass|Administrator|Create a new StatementClass and returns the created StatementClass as response body.|
 |`PUT /specif/v1.1/statementClasses`|StatemenetClass (body)|StatemenetClass|Administrator|Update the data type; the supplied ID must exist. The updated data is returned as response body.|
-|`GET /specif/v1.1/statementClasses/{id}`|*id:string* (path): The id of the element to get.<br>*revision:string* (query): The revision of the element to get.|StatemenetClass|Anybody|Returns the resource class with the given ID.|
+|`GET /specif/v1.1/statementClasses/{id}`|*id:string* (path): The id of the element to get.<br>*revision:string* (query): The revision of the element to get.|StatemenetClass|Anybody or Reader|Returns the resource class with the given ID.|
 |`DELETE /specif/v1.1/statementClasses/{id}`|*id:string* (path): The id of the element to delete.<br>*revision:string* (query): The revision of the element to delete.|-|Administrator|Delete the statement class; the supplied ID must exist. Return an error if there are depending model elements.|
-|`GET /specif/v1.1/statementClasses/{id}/revisions`|*id:string* (path): The id of the element to get.|StatemenetClass[]|Anybody|Returns all element revisions for the given id. These elements have the same id value, but different revisions.|
+|`GET /specif/v1.1/statementClasses/{id}/revisions`|*id:string* (path): The id of the element to get.|StatemenetClass[]|Anybody or Reader|Returns all element revisions for the given id. These elements have the same id value, but different revisions.|
 
 ## Data endpoints
 
