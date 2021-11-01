@@ -244,7 +244,7 @@ The attribute *direction* defines the connector direction. Allowed values are:
 *  ```bidirectional``` - The connector is bi-directional.
 *  If the attribute is missing (not set), the connector has no direction.
 
-The attribute *layoutStyle* specifies the layout style of the connector. Allowed valuies are:
+The attribute *layoutStyle* specifies the layout style of the connector. Allowed values are:
 
 * ``bezier`` The connector is drawn as Bezier curve
 * ``rounded`` The corners of the connector in the waypoints in between start and end are connected rounded 
