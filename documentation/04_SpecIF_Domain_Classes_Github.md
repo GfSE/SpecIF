@@ -116,4 +116,4 @@
 |SpecIF:precedes|SC-precedes|1.1|<p>An FMC:Actor 'precedes' an FMC:Actor.</p>|
 |oslc_rm:satisfies|SC-satisfies|1.1|<p>Statement: Model-Element satisfies Requirement</p>|
 |SpecIF:allocates|SC-allocates|1.1|<p>Statement: Model-Element is allocated to Model-Element. The semantics is equal to the Allocation in SysML or the deployment relation in UML.</p>|
-|SpecIF:isAssociatedWith|SC-isAssociatedWith|98491e18-d28b-4f2f-b979-7a7ac57c81b8|<p>The subject is associated with the object.</p><p>Property classes:<br/><ul><li>dcterms:type [PC-Type 1.1]</li></ul></p>|
+|SpecIF:isAssociatedWith|SC-isAssociatedWith|1.1|<p>The subject is associated with the object.</p><p>Property classes:<br/><ul><li>dcterms:type [PC-Type 1.1]</li></ul></p>|
