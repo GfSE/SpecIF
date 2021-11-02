@@ -166,6 +166,7 @@ The following table shows an overview about the SpecIF file extensions:
 | .specif.json or .specif | SpecIF file with JSON content defined by the SpecIF-JSON-Schema.|
 | .specif.xml or .specifx | Reserved for future use to store SpecIF data saved as XML.|
 | .specif.zip or .specifz | SpecIF zipped archive with at least one \*.specif (or \*.specifx) file at root level and the referenced files, often in a folder *files_and_images*.|
+| .specif.html | HTML with embedded SpecIF data. |
 
 ### XML representation
 
