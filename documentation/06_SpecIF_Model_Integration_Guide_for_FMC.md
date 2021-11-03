@@ -1,6 +1,6 @@
 ﻿# SpecIF Model-Integration Guide for FMC
 
-## FMC-SpecIF Mapping
+## FMC to SpecIF Mapping
 
 For introduction to the Fundamental Modeling Concepts (FMC), see the [FMC Overview](http://f-m-c.org/). 
 The FMC Metamodel is given in [Knöpfel, Gröne, Tabeling: Fundamental Modeling Concepts - Effective Communication of IT-Systems](https://www.wiley.com/en-us/Fundamental+Modeling+Concepts%3A+Effective+Communication+of+IT+Systems-p-9780470027103).

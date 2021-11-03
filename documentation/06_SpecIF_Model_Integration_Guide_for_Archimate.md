@@ -1,12 +1,12 @@
-﻿# SpecIF Model Integration Guide for Archimate
+﻿# SpecIF Model Integration Guide for ArchiMate®
 
-## Archimate-SpecIF mapping
+## ArchiMate® to SpecIF mapping
 
 _{ToDo}_
 
 ### Resources
 
-| [Archimate Open Exchange (XML)](https://www.opengroup.org/xsd/archimate/) | [SpecIF](https://specif.de) |
+| [ArchiMate® Open Exchange (XML)](https://www.opengroup.org/xsd/archimate/) | [SpecIF](https://specif.de) |
 | --- | --- |
 | BusinessActor, BusinessRole, BusinessCollaboration, BusinessInterface, BusinessProcess, BusinessFunction, BusinessInteraction, BusinessService, ApplicationComponent, ApplicationCollaboration, ApplicationInterface, ApplicationFunction, ApplicationInteraction, ApplicationProcess, ApplicationService, Node, Equipment, Facility, DistributionNetwork, Device, SystemSoftware, TechnologyCollaboration, TechnologyInterface, Path, CommunicationNetwork, TechnologyFunction, TechnologyProcess, TechnologyInteraction, TechnologyService, OrJunction, AndJunction | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) |
 | Goal, Capability, Contract, Representation, Artefact, Product, BusinessObject, DataObject | [FMC:State](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) |
@@ -20,12 +20,12 @@ Comments:
 
 ### Statements
 
-At present, the following statements are derived from Archimate diagrams, where the _statement terms_ (_predicates_) are highlighted in _italics_:
+At present, the following statements are derived from ArchiMate® diagrams, where the _statement terms_ (_predicates_) are highlighted in _italics_:
 
-| [Archimate Open Exchange (XML)](https://www.opengroup.org/xsd/archimate/) |  | [SpecIF](https://specif.de) | Comment |
+| [ArchiMate® Open Exchange (XML)](https://www.opengroup.org/xsd/archimate/) |  | [SpecIF](https://specif.de) | Comment |
 | --- | --- | --- | --- |
 | view |  | SpecIF:shows |  |
-| Composition, Aggregation, Realization, Assignment |  | SpecIF:contains |  |
+| Composition, Aggregation, Realization, Assignment |  | SpecIF:contains | ArchiMate® calls it the 'unifying' concept |
 | Access (accessType:Write) |  | SpecIF:writes |  |
 | Access (accessType:Read) |  | SpecIF:reads |  |
 | Serving|  | SpecIF:serves |  |
@@ -36,13 +36,25 @@ At present, the following statements are derived from Archimate diagrams, where 
 
 ### Example
 
-The following clipping from BPMN-XML representing two data objects, one system service, two application components and a node:
-![Archimate Layered-View Clipping](./images/06_Archimate_clipping.png)
+ArchiMate® 3.1 defines numerous viewpoints, 25 in total. Two typical ones are chosen to demonstrate an ArchiMate® to SpecIF transformation.
+
+#### Layered Viewpoint
+
+The following clipping from ArchiMate® Layered Viewpoint representing two data objects, one system service, two application components and a node:
+![ArchiMate® Layered-View Clipping](./images/06_Archimate_clipping.png)
+
+The following SpecIF graph expresses the same:
+![SpecIF from ArchiMate® Clipping](./images/06_SpecIF_from_Archimate_clipping.png)
+
+#### Information Structure Viewpoint
+
+
+#### Full Example
 
 The full example can be inspected, here:
 - [Telephone Connection Request (Open-Exchange XML)](https://specif.de/examples/Telephone-Connection-Request.xml)
 - [Telephone Connection Request (specif)](https://specif.de/examples/Telephone-Connection-Request.specif)
-- [Telephone Connection Request (SpecIF-Viewer)](https://specif.de/apps/view#import=../examples/Telephone-Connection-Request.xml)
+- [Telephone Connection Request (SpecIF-Viewer)](https://specif.de/apps/view#import=../examples/Telephone-Connection-Request.specif.zip)
 
 ### Transformation Code
-Here you may look at the current code of the [Archimate to SpecIF transformation](https://github.com/GfSE/Archimate-SpecIF-Bridge/blob/master/source/js/archimate2SpecIF.js).
+Here you may look at the current code of the [ArchiMate® to SpecIF transformation](https://github.com/GfSE/Archimate-SpecIF-Bridge/blob/master/source/js/archimate2SpecIF.js).

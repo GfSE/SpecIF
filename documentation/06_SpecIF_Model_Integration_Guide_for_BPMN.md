@@ -1,6 +1,6 @@
 ﻿# SpecIF Model Integration Guide for BPMN
 
-## BPMN-SpecIF mapping
+## BPMN to SpecIF mapping
 
 For introduction to the Business Process Model and Notation (BPMN), see the [BPMN 2.0 Symbol Reference](https://camunda.com/de/bpmn/bpmn-2-0-symbol-reference/), for example.
 
@@ -46,54 +46,22 @@ At present, the following statements are derived from BPMN diagrams, where the _
 Where:
 - For all entities in the left column the namespace 'bpmn:' is used
 - 'model-element' is one of [ 'FMC:Actor', 'FMC:State', 'FMC:Event' ]
-- 'activity' is one of [ task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess ], thus an FMC:Actor
+- 'activity' is one of [ task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess ], thus a FMC:Actor
 - 'data' is one of [ dataObjectReference, dataStoreReference ], thus a FMC:State
 - 'event' is one of [ startEvent, intermediateThrowEvent, intermediateCatchEvent, boundaryEvent, endEvent ], thus a FMC:Event
  
 ### Example
 
-The following clipping from BPMN-XML representing an event, an activity, a sequenceFlow and a forking exclusive gateway:
-![BPMN Clipping](./images/06_BPMN_clipping.png)
+The following clipping from BPMN-XML represents an event, an activity, a sequenceFlow and a forking exclusive gateway:
+![BPMN Clipping](./images/06_BPMN_Clipping.png)
 
-```
-    <bpmn:userTask id="Activity_0spdj4v" name="Drink a beer">
-      <bpmn:incoming>Flow_0ze546v</bpmn:incoming>
-      <bpmn:outgoing>Flow_1to3p2q</bpmn:outgoing>
-    </bpmn:userTask>
-...
-    <bpmn:sequenceFlow id="Flow_1to3p2q" sourceRef="Activity_0spdj4v" targetRef="Event_0af34ci" />
-```
-
-... is transformed to a SpecIF resource and statement, as follows:
-```
-    {
-        "id":"Activity_0spdj4v",
-        "title":"Drink a beer",
-        "class":"RC-Actor",
-        "properties":[{
-            "class":"PC-Type",
-            "value":"bpmn:userTask"
-        }],
-        "changedAt":"2020-05-23T20:06:54.000Z"
-    }
-...
-    {
-        "id":"Flow_1to3p2q",
-        "class":"SC-signals",
-        "subject":"Activity_0spdj4v",
-        "object":"Event_0hukwut",
-        "properties":[{
-            "class":"PC-Type",
-            "value":"bpmn:sequenceFlow"
-        }],
-        "changedAt":"2020-05-23T20:06:54.000Z"
-    }
-```
+The following SpecIF graph expresses the same:
+![SpecIF from BPMN Clipping](./images/06_SpecIF_from_BPMN_Clipping.png)
 
 The full example can be inspected, here:
 - [Telephone Connection Request (BPMN-XML)](https://specif.de/examples/Telephone-Connection-Request.bpmn)
 - [Telephone Connection Request (specif)](https://specif.de/examples/Telephone-Connection-Request.specif)
-- [Telephone Connection Request (SpecIF-Viewer)](https://specif.de/apps/view#import=../examples/Telephone-Connection-Request.bpmn)
+- [Telephone Connection Request (SpecIF-Viewer)](https://specif.de/apps/view#import=../examples/Telephone-Connection-Request.specif.zip)
 
 ### Transformation Code
 Here you may look at the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).
