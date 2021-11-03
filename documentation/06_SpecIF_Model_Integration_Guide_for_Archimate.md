@@ -40,14 +40,19 @@ ArchiMate® 3.1 defines numerous viewpoints, 25 in total. Two typical ones are c
 
 #### Layered Viewpoint
 
-The following clipping from ArchiMate® Layered Viewpoint representing two data objects, one system service, two application components and a node:
-![ArchiMate® Layered-View Clipping](./images/06_Archimate_clipping.png)
+The following clipping from ArchiMate® Layered Viewpoint represents two data objects, one system service, two application components and a node:
+![ArchiMate® Layered Viewpoint Clipping](./images/06_Archimate_Layered_Clipping.png)
 
 The following SpecIF graph expresses the same:
-![SpecIF from ArchiMate® Clipping](./images/06_SpecIF_from_Archimate_clipping.png)
+![SpecIF from ArchiMate® Layered Viewpoint Clipping](./images/06_SpecIF_from_Archimate_Layered_Clipping.png)
 
 #### Information Structure Viewpoint
 
+The following clipping from ArchiMate® Information Structure Viewpoint represents five data objects similar to a UML Class Diagram:
+![ArchiMate® Information Structure Viewpoint Clipping](./images/06_Archimate_Information-Structure_Clipping.png)
+
+The following SpecIF graph expresses the same:
+![SpecIF from ArchiMate® Information Structure Viewpoint Clipping](./images/06_SpecIF_from_Archimate_Information-Structure_Clipping.png)
 
 #### Full Example
 
