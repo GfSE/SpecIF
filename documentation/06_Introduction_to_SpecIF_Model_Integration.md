@@ -1,7 +1,7 @@
 ﻿# Introduction to SpecIF Model Integration
 
 The usage of SpecIF for a specific purpose is called an 'application'. 
-An important application is to integrate models and other specification artefacts from different sources. 
+An important application is to integrate models and other specification artifacts from different sources. 
 Currently transformations or importers exist for BPMN, Archimate, ReqIF, Excel and UML/SysML.
 
 The integration of elements of different sources is generally done by name and type. 
@@ -12,8 +12,7 @@ using a different set of types.
 Therefore an abstraction (or mapping) to three _fundamental_ model-element types is made, before checking for equality. 
 The model-element types of the _Fundamental Modeling Concepts (FMC)_ have been selected for this purpose,
 namely _Actor_, _State_ and _Event_. 
-Model-elements used by every method or notation can be mapped to these [Ref].
-
+Model-elements used by every method or notation can be mapped to these [[Dungern2016](https://specif.de/files/resources/enso-m/documents-en/TdSE-2016_Dungern_Semantic-Model-Integration-for-System-Specification_(Text).pdf)].
 
 ## Model Integration Resources
 
@@ -39,7 +38,7 @@ because they represent a current system state by their attribute values.
 
 While all model elements are mapped to the three fundamental elements, the original model element type
 is kept by the property *dcterms:type*. 
-Storing the the original model element in the dcterms:type property is also important for bidirectional transformations. 
+Storing the original model element in the dcterms:type property is also important for bidirectional transformations. 
 
 ### Requirement and Feature
 
@@ -98,7 +97,7 @@ For better readability of the class diagrams, the aspects are shown on more than
 You have to interpret the diagrams in combination to get the complete picture of SpecIF Model Integration.
 If two diagrams show a resource class with the same name, it is the same element and all associations defined by one diagram are also valid for the second diagram.
    
-## Model Integration Statements
+## Model Integration statements
 
 The statements in SpecIF are used to express a predicate logic (subject - predicate - object) between SpecIF elements.
 Examples for such logical expressions are:
@@ -109,7 +108,7 @@ Examples for such logical expressions are:
 
 In the context of model integration we differentiate between statements to express behavioral aspects and structural aspects.
 
-### Expressing Structure
+### Expressing structure
 
 Structural aspects are expressed with the following statements:
 
@@ -125,6 +124,8 @@ This is known as the concept of separation of model and view.
 
 ![Application of the shows statement in SpecIF](./images/Shows.png)
 
+### Expressing traceability aspects
+
 * To express traceability-dependencies between requirement elements and requirements or other element types, the following statements are used:
   * A requirement *refines* a requirement
   * A requirement *dependsOn* a requirement
@@ -133,14 +134,16 @@ This is known as the concept of separation of model and view.
   * A model element (state, actor or event) *satisfies* a requirement
 * The concept of Allocation known systems engineering is mapped to SpecIF by defining the *allocates* statement
 
-### Expressing Behavior
+### Expressing behavior
 
 To express the behavioral aspects of a system or a process the following statements are available in SpecIF:
 
 * An actor *writes* a state. In a system composition a function writes a value.
 * An actor *reads* a state. In a system composition a function reads a value.
 * An actor *stores* a state. This is the combination of read and write and equates to a bi-directional data or material exchange.
-* An actor *precedes* and actor. This is used typically to express that a behavior consists of a sequence of actions and/or events. 
+* An actor *precedes* and actor. This is used to express that a behavior consists of a sequence of actions.
+* An actor *precedes* an event with dcterms:type set to *SpecIF:signals*. This is used to express that an event is created by an action.
+* An event *precedes* an actor with dcterms:type set to *SpecIF:triggers*. This is used to express that an action is triggered by an incoming event.  
 
 The following diagram shows the behavioral statements used in SpecIF model integration.
 
@@ -153,7 +156,7 @@ To express that a resource is an instance of another resource (e.g. an Object is
 This statement expresses that the subject is an instance of the statement object.
 Use this statement in all cases where a class-instance semantics shall be expressed. 
 
-### Document Outlines
+### Document outlines
 
 SpecIF defines resource class types useful for applications dealing with textual documentation. 
 Typical application scenarios are 
