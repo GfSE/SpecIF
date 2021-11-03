@@ -8,15 +8,17 @@ For introduction to the Business Process Model and Notation (BPMN), see the [BPM
 
 | [BPMN-XML](https://www.omg.org/spec/BPMN/2.0/About-BPMN/) | [SpecIF](https://specif.de) |
 | --- | --- |
-| bpmn:collaboration | SpecIF:Diagram |
-| bpmn:process | *tbd* |
-| bpmn:participant<sup>1</sup>, bpmn:laneSet, bpmn:lane<sup>2</sup>, bpmn:task, bpmn:manualTask, bpmn:userTask, bpmn:scriptTask, bpmn:serviceTask, bpmn:sendTask, bpmn:receiveTask, bpmn:callActivity, bpmn:transaction, bpmn:subProcess, bpmn:businessRuleTask, forking and joining bpmn:parallelGateway, joining bpmn:exclusiveGateway, joining bpmn:inclusiveGateway | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) |
-| forking bpmn:exclusiveGateway, forking bpmn:inclusiveGateway, forking bpmn:eventBasedGateway | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) plus [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) per outgoing sequenceFlow |
-| bpmn:dataObjectReference<sup>3</sup>, bpmn:dataStoreReference<sup>3</sup>, bpmn:messageFlow<sup>4</sup> | [FMC:State](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) |
-| bpmn:startEvent, bpmn:timerStartEvent, bpmn:messageStartEvent, bpmn:intermediateEvent, bpmn:messageThrowEvent, bpmn:intermediateThrowEvent, bpmn:intermediateCatchEvent, bpmn:intermediateTimerCatchEvent, bpmn:intermediateMessageCatchEvent, bpmn:boundaryEvent, bpmn:timerBoundaryEvent, bpmn:messageBoundaryEvent, bpmn:endEvent | [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) |
-| bpmn:group<sup>5</sup> | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
+| collaboration | SpecIF:Diagram |
+| process | *tbd* |
+| participant<sup>1</sup>, laneSet, lane<sup>2</sup>, task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess, businessRuleTask, forking and joining parallelGateway, joining exclusiveGateway, joining inclusiveGateway | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) |
+| forking exclusiveGateway, forking inclusiveGateway, forking eventBasedGateway | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) plus [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) per outgoing sequenceFlow |
+| dataObjectReference<sup>3</sup>, dataStoreReference<sup>3</sup>, messageFlow<sup>4</sup> | [FMC:State](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) |
+| startEvent, timerStartEvent, messageStartEvent, intermediateEvent, messageThrowEvent, intermediateThrowEvent, intermediateCatchEvent, intermediateTimerCatchEvent, intermediateMessageCatchEvent, boundaryEvent, timerBoundaryEvent, messageBoundaryEvent, endEvent | [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) |
+| group<sup>5</sup> | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 
-The original model element type (BPMN-XML tag) is stored in a property named _dcterms:type_. 
+Where:
+- For all entities in the left column the namespace 'bpmn:' is used
+- The original model element type is stored in a property named _dcterms:type_. 
 
 Comments:
 1. A participant is also called a 'pool'.
@@ -34,22 +36,25 @@ At present, the following statements are derived from BPMN diagrams, where the _
 | *Appearance on diagram* | diagram _SpecIF:shows_ model-element | SpecIF:shows |  |
 | *Graphical Containment* | process _SpecIF:contains_ lane | SpecIF:contains |  |
 | *Graphical Containment* | lane _SpecIF:contains_ activity or event | SpecIF:contains |  |
-| bpmn:dataInputAssociation | activity _SpecIF:reads_ data | SpecIF:reads |  |
-| bpmn:dataOutputAssociation | activity _SpecIF:writes_ data | SpecIF:writes |  |
-| bpmn:sequenceFlow | activity _SpecIF:precedes_ activity | SpecIF:precedes |  |
-| bpmn:sequenceFlow ('outgoing' with respect to the event) | event _SpecIF:precedes_ activity | SpecIF:precedes |  |
-| bpmn:sequenceFlow ('incoming' with respect to the event) | activity _SpecIF:precedes_ event | SpecIF:precedes |  |
-| bpmn:association | annotation _SpecIF:refersTo_ model-element | SpecIF:refersTo |  |
+| dataInputAssociation | activity _SpecIF:reads_ data | SpecIF:reads |  |
+| dataOutputAssociation | activity _SpecIF:writes_ data | SpecIF:writes |  |
+| sequenceFlow | activity _SpecIF:precedes_ activity | SpecIF:precedes |  |
+| sequenceFlow ('outgoing' with respect to the event) | event _SpecIF:precedes_ activity | SpecIF:precedes |  |
+| sequenceFlow ('incoming' with respect to the event) | activity _SpecIF:precedes_ event | SpecIF:precedes |  |
+| association | annotation _SpecIF:refersTo_ model-element | SpecIF:refersTo |  |
 
 Where:
+- For all entities in the left column the namespace 'bpmn:' is used
 - 'model-element' is one of [ 'FMC:Actor', 'FMC:State', 'FMC:Event' ]
-- 'activity' is one of [ bpmn:task, bpmn:manualTask, bpmn:userTask, bpmn:scriptTask, bpmn:serviceTask, bpmn:sendTask, bpmn:receiveTask, bpmn:callActivity, bpmn:transaction, bpmn:subProcess ], thus an FMC:Actor
-- 'data' is one of [ bpmn:dataObjectReference, bpmn:dataStoreReference ], thus a FMC:State
-- 'event' is one of [ bpmn:startEvent, bpmn:intermediateThrowEvent, bpmn:intermediateCatchEvent, bpmn:boundaryEvent, bpmn:endEvent ], thus a FMC:Event
+- 'activity' is one of [ task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess ], thus an FMC:Actor
+- 'data' is one of [ dataObjectReference, dataStoreReference ], thus a FMC:State
+- 'event' is one of [ startEvent, intermediateThrowEvent, intermediateCatchEvent, boundaryEvent, endEvent ], thus a FMC:Event
  
 ### Example
 
-The following excerpt from BPMN-XML representing an activity and a sequenceFlow:
+The following clipping from BPMN-XML representing an event, an activity, a sequenceFlow and a forking exclusive gateway:
+![BPMN Clipping](./images/06_BPMN_clipping.png)
+
 ```
     <bpmn:userTask id="Activity_0spdj4v" name="Drink a beer">
       <bpmn:incoming>Flow_0ze546v</bpmn:incoming>
@@ -86,9 +91,9 @@ The following excerpt from BPMN-XML representing an activity and a sequenceFlow:
 ```
 
 The full example can be inspected, here:
-- [Telephone Connection Request (BPMN-XML)](https://specif.de/examples/Tel-Connection-Req.bpmn)
-- [Telephone Connection Request (specif)](https://specif.de/examples/Tel-Connection-Req.specif)
-- [Telephone Connection Request (SpecIF-Viewer)](https://specif.de/apps/view#import=../examples/Tel-Connection-Req.bpmn)
+- [Telephone Connection Request (BPMN-XML)](https://specif.de/examples/Telephone-Connection-Request.bpmn)
+- [Telephone Connection Request (specif)](https://specif.de/examples/Telephone-Connection-Request.specif)
+- [Telephone Connection Request (SpecIF-Viewer)](https://specif.de/apps/view#import=../examples/Telephone-Connection-Request.bpmn)
 
 ### Transformation Code
 Here you may look at the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).
