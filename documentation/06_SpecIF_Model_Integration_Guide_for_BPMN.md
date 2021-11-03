@@ -53,9 +53,11 @@ Where:
 ### Example
 
 The following clipping from BPMN-XML represents an event, an activity, a sequenceFlow and a forking exclusive gateway:
+
 ![BPMN Clipping](./images/06_BPMN_Clipping.png)
 
 The following SpecIF graph expresses the same:
+
 ![SpecIF from BPMN Clipping](./images/06_SpecIF_from_BPMN_Clipping.png)
 
 The full example can be inspected, here:
