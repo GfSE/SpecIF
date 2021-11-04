@@ -2,3 +2,6 @@
 	path = classDefinitions
 	url = https://github.com/GfSE/SpecIF-Class-Definitions.git
 	branch = main
+[submodule "schema-and-checker"]
+	path = schema-and-checker
+	url = https://github.com/GfSE/SpecIF-Schema.git
