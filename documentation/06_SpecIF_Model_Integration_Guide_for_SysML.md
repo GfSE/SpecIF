@@ -135,7 +135,7 @@ but the SpecIF property *UML:Stereotype* must then be set to *myStereotype*.
 |UML-Metaclass|UML:Stereotype|SpecIF Resource Class|dcterms:type|Remark|
 |-|-|-|-|-|
 |Comment|-|SpecIF:Comment|-|A UML comment (note) element.|
-|Boundary|-|SpecIF:Collection|-|UML Boundary elements.|
+|UseCase Subject|-|SpecIF:Collection|-|UML-Boundary elements used in UML/SysML use case diagrams.|
 
 ### Statement mappings
 
