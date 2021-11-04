@@ -7,24 +7,28 @@ So SysML elements are profiled UML elements.
 
 ## UML/SysML to SpecIF Mapping
 
-The mapping from UML/SysML to SpecIF is still discussed in a working group of the GfSE. 
+The mapping from UML/SysML to SpecIF is currently still discussed in a working group of the GfSE. 
 At the moment there is a sketch for a mapping of UML and SysML to SpecIF-Elements. 
 This mapping is not covering the complete UML/SysML today and still in discussion in some parts. 
-It consists of a resource-, property- and statement-mapping and only contains elements that are often used in activity, block definition and other popular diagrams. 
+It consists of a resource-, property- and statement-mapping and only contains elements that are often used in activity, block definition and other popular diagrams
+used in Systems and Software Engineering. 
 The mapping is shown in the following tables.
 
-The general idea is to map a high number of UML/SysML elements to a small model core in SpecIF. 
-This model core consist of the fundamental modeling elements Actor, State and Event and the two elements SpecIF:Diagram and SpecIF:Collection. 
+The general idea is to map a high number of UML/SysML elements to a small number of elements from SpecIF.
+The most elements are the elements of the *SpecIF Integration Model.* 
+This model core consist of the fundamental modeling elements Actor, State and Event and the two elements SpecIF:Diagram, UML:Package and SpecIF:Collection. 
 Mapped elements in the mapping tables should have a matching semantic meaning, e.g. a SysML Action is an active element. 
 Regarding to the SpecIF class definitions, a FMC:Actor represents an active element. 
 Since these definitions match both elements can be added to the mapping table. 
 
 To define the values for the *dcterms:type* property, the UML metamodel in version 2.5.1 (OMG document number: formal/2017-12-05) is used as reference. 
 
+### Mapping of UML Profiles
+
 By defining a so called UML-Profile,
 it is possible to define new element types from existing UML elements with additional meanings or additional properties.
 The elements defined by a profile extension are marked by a special term, called a Stereotype. 
-SysML in version 1.x is a modeling language that is defined as an UML profile as well. 
+SysML in version 1.x is a modeling language that is defined as an UML-profile as well. 
 So in the mapping tables below one column is showing the Stereotype if necessary. 
 When an UML-element has no stereotype or a stereotype that is not yet covered by the mapping tables, 
 the element should be mapped in the same way as the UML element without a stereotype (UML native element type)!
@@ -35,12 +39,12 @@ but the SpecIF property *UML:Stereotype* must then be set to *myStereotype*.
 
 ### Resource mapping tables
 
-#### Collection mappings
+#### Package mappings
 
 |UML-Metaclass|UML:Stereotype|SpecIF Resource Class|dcterms:type|Remark|
 |-|-|-|-|-|
-|Model|-|SpecIF:Collection|OMG:UML:2.5.1:Model|A root model node (root package of a model repository).|
-|Package|-|SpecIF:Collection|OMG:UML:2.5.1:Package|A model package|
+|Model|-|UML:Package|OMG:UML:2.5.1:Model|A root model node (root package of a model repository).|
+|Package|-|UML:Package|OMG:UML:2.5.1:Package|A model package|
 
 #### Diagram mappings
 
@@ -107,8 +111,8 @@ but the SpecIF property *UML:Stereotype* must then be set to *myStereotype*.
 |ForkNode|-|FMC:Actor|OMG:UML:2.5.1:ForkNode||
 |JoinNode|-|FMC:Actor|OMG:UML:2.5.1:JoinNode||
 |ActivityPartition|-|FMC:Actor (+ SpecIF:contains)|OMG:UML:2.5.1:ActivityPartition||
-|SendSignalAction|-|FMC:Actor (+ SpecIF:signals)|OMG:UML:2.5.1:SendSignalAction||
-|AcceptEventAction|-|FMC:Actor (+ SpecIF:triggers)|OMG:UML:2.5.1:AcceptEventAction||
+|SendSignalAction|-|FMC:Actor (+ SpecIF:precedes with dcterms:type = SpecIF:signals )|OMG:UML:2.5.1:SendSignalAction||
+|AcceptEventAction|-|FMC:Actor (+ SpecIF:precedes with dcterms:type = SpecIF:triggers)|OMG:UML:2.5.1:AcceptEventAction||
 
 #### Event mappings
 
@@ -131,20 +135,22 @@ but the SpecIF property *UML:Stereotype* must then be set to *myStereotype*.
 |UML-Metaclass|UML:Stereotype|SpecIF Resource Class|dcterms:type|Remark|
 |-|-|-|-|-|
 |Comment|-|SpecIF:Comment|-|A UML comment (note) element.|
+|Boundary|-|SpecIF:Collection|-|UML Boundary elements.|
 
 ### Statement mappings
 
 |UML Metaclass|Stereotype|SpecIF Statement Class|dcterms:type|Remark|
 |-|-|-|-|-|
 |ObjectFlow|-|FMC:State + SpecIF:reads/writes + SpecIF:precedes|OMG:UML:2.5.1:ObjectFlow|FMC:State + SpecIF:reads/writes to transfer the Object, additionally a control flow to trigger the reading actor|
-|ControlFlow|-|SpecIF:triggers/precedes/signals|OMG:UML:2.5.1:ControlFlow|The connection type (precedes/triggers/signals) depends on the types of the connected elements|
-|Transition|-|???|OMG:UML:2.5.1:Transition|Used to interconnect states.|
+|ControlFlow|-|SpecIF:precedes|OMG:UML:2.5.1:ControlFlow|The connection type (precedes with dcterms:tzype = triggers or signals) depends on the types of the connected elements|
+|Transition|-|FMC:Event + FMC:Actor + SpecIF:precedes + SpecIF:reads/writes||Used to interconnect states. See state mapping example for details.|
 |Connector (w/o direction)|access type|SpecIF:stores|OMG:UML:2.5.1:Connector|Used in FMC4SE compositional structure modeling (---)|
 |Connector (Unidirectional)|access type|SpecIF:writes/SpecIF:reads|OMG:UML:2.5.1:Connector|Used in FMC4SE compositional structure modeling (-->)|
 |Connector (Bi-Directional)|access type|SpecIF:stores|OMG:UML:2.5.1:Connector|Used in FMC4SE compositional structure modeling (<->)|
 |Composition|-|SpecIF:contains|OMG:UML:2.5.1:CompositeAggregation|UML/SysML composition (black diamond)|
 |Aggregation|-|SpecIF:contains|OMG:UML:2.5.1:Aggregation|UML/SysML aggregation (white diamond)|
-|Association|-|SpecIF:contains (one or multiple)|OMG:UML:2.5.1:Association|UML/SysML association|
+|Association|-|SpecIF:contains (one or multiple)|OMG:UML:2.5.1:Association|UML/SysML association defining an attribute|
+|Association|-|SpecIF:isAssociatedWith|OMG:UML:2.5.1:Association|UML/SysML association expressing a logical association|
 |Dependency|-|SpecIF:dependsOn|OMG:UML:2.5.1:Dependency|UML/SysML dependency|
 |Dependency|satisfy|oslc_rm:satisfies|OMG:UML:2.5.1:Dependency|SysML satisfy connection|
 |Dependency|verify|SysML:verifies|OMG:UML:2.5.1:Dependency|SysML verify connection|
@@ -168,7 +174,7 @@ but the SpecIF property *UML:Stereotype* must then be set to *myStereotype*.
 |NamedElement.visibility|SpecIF:VisibilityKind|e.g. Public, Private, Protected, Package|
 |?|SpecIF:Status|The element status value.|
 |Stereotype|UML:Stereotype|The Stereotype of a model element|
-|typeOf(Metaclass)|dcterms:type|e.g. OMG:UML:2.5.1:Constraint. To avoid define a SpecIF Resource type for each UML element, a type attribute is used instead of metaclass inheritance. Have a look at the dterms:type vocabulary for details.|
+|typeOf(metaclass)|dcterms:type|e.g. OMG:UML:2.5.1:Constraint. To avoid define a SpecIF Resource type for each UML element, a type attribute is used instead of metaclass inheritance. Have a look at the dterms:type column in the mapping tables for details.|
 |_VALUES_ (TaggedValue.Value / Attribute.Default / Constraint.Notes)|rdf:value|An (initial) value of an attribute, tagged value, object run state etc.|
 |alias|SpecIF:Alias|An alias for a model element|
 
@@ -191,7 +197,7 @@ Information about model elements are provided by the "Document" section and rela
 ![Structure_Mapping](./images/Strucuture_Mapping_example.png)
 
 In the UML tool Sparx Enterprise Architect the model structure tree is shown similar to the Cameo containment tree in a "Project Browser" window.
-When model data is transformed to SpecIF this tree structure shall be mapped one to one to a SpecIF Hierarchy so that a data and structure exchange 
+When model data is transformed to SpecIF this tree structure shall be mapped one to one to a SpecIF-Hierarchy so that a data and structure exchange 
 is possible between different UML tools.
 
 ## Examples
@@ -215,7 +221,7 @@ SpecIF:precedes represents a ControlFlow between two FMC:Actors.
 
 ![Mapping SysML Activity Partition](./images/Mapping_SysML_ActivityPartition.PNG) 
 
-The following figure shows a example for the transformation of a DecisionNode. 
+The following figure shows an example for the transformation of a DecisionNode. 
 The DecisionNode in the context has one  incoming ControlFlow from a action and two outgoing control flows to two actions. The DecisionNode is represented by a FMC:Actor
 and two FMC:Events in the SpecIF-Notation. 
 The statements between the resources are dependent on the types of the resources.
@@ -230,4 +236,28 @@ This results in SpecIF:precedes statements for the connection from the other ele
 used for the transformation of JoinNodes and ForkNodes. 
 
 ![Mapping SysML Merge Node](./images/Mapping_SysML_MergeNode.PNG) 
+
+### Example for mapping state charts and state transitions to the SecIF Integration Model elements
+
+In UML/SysML Statechart diagrams a transition between two states can be modeled in different ways, but result in the same semantic result (same behavior). 
+To bring a statechart to live activities are assigned to states and state transitions. 
+When a state is entered, exited or when the state is active one or more action can be executed to execute some behavior (or code).
+Also an action can be executed when the state transition is done.
+A state in a statechart defines for that purpose the entry-, exit- or do-actions.
+From the semantic point of view it makes no difference if an action is executed when one state is exited as exit-action or as entry-action when the next state is entered, because per definition a state transition should consume no time.
+So for the semantic integration used by SpecIF, all these semantic equal concepts are mapped to the same schema using the SpecIF integration model elements.
+
+![Mapping of a state transition](./images/StatechartMapping.png) 
+
+The diagram above shows an small example how to map the behavior of a state transition to the concepts of FMC semantic modeling used in SpecIF.
+In the UML/SysML statechart on the left side you gave two states (S1 and S2) connected by a transition.
+No further actions are assigned in this example diagram.
+A transition between two states shall be mapped in SpecIF to the two state elements with an additional event and actor element between the two states.
+You see the equivalent SpecIF elements on the right side of the diagram using the notation of UML object diagrams.
+The FMC:Actor element between the two states has no behavior in our example, because no behavior is defined in the state chart.  
+
+So all transitions are mapped using this approach defined by FMC and Petri-Nets used to define behavior with the SpecIF integration model.
+
+If there are behavioral elements (entry-, exit- or do-actions) or events defined explicitly in the state chart, they are mapped straight forward using multiple FMC:Actor resources with SpecIF:precedes statements or further FMC:Event resources. 
+   
 
