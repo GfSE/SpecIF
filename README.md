@@ -1,8 +1,15 @@
-![SpecIF - Specification Integration Facility](./logo/SpecIF-Logo-120.png)
+![SpecIF - Specification Integration Facility](./logo/SpecIF_Logo_small.png)
 
-# Specification Integration Facility - schema, constraints, checker, documentation and examples
+# Specification Integration Facility (SpecIF)
 
 ## Purpose
+
+The Specification Integration Facility is a technology and standardization initiative, addressing the topic of data exchange and data integration in 
+the domain of *Product Lifecycle Management* (PLM).
+The project is driven by the [*Gesellschaft für Systems Engineering*](https://www.gfse.de/) (GfSE e.V.) - German Chapter of [INCOSE](https://www.incose.org/).  
+
+![GfSE logo](https://www.gfse.de/images/GfSE-Logo_web.jpg)
+
 SpecIF represents the visible, i.e. the diagrams and the text, as well as the semantics of system specifications for model integration and model exchange.
 
 Basic Assumptions:
@@ -10,116 +17,26 @@ Basic Assumptions:
 - It is unwise to require collaborators to use certain tools or even a single tool
 - There is an interest to search, navigate and audit partial results in a common context
 
-That‘s where SpecIF kicks in.
+That‘s where SpecIF kicks in. For further details see http://specif.de and [the SpecIF specification documentation](./documentation/Readme.md) in this repository.
 
+## SpecIF building blocks
 
-For details see http://specif.de and [the SpecIF specification documentation](./documentation/Readme.md) in this repository.
+SpecIF consists of multiple parts, that are covered by this repository and linked submodules:
 
-This repository details schema and constraints for 'fully-flegded' SpecIF. It is characterized by
-- A SpecIF data set (container) may have information elements of multiple revisions. The identifiers are identical and the revision tags change. 
-The combination of identifier and revision, called 'key', must be unique, however. 
-- Text content may be provided for more than one language.
-- Any property may have multiple values. Properties of data-type 'xs:string' may have multiple values of multiple languages, each.
-- A transformation to ReqIF is possible, if a certain revision level and a certain language is chosen.
-- A lossless transformation from ReqIF is always possible.
-
-Thanks to @oalt for the discussion about support for multiple revisions and multiple languages!
-
-## Schema
-
-The SpecIF schema is developed according to [JSON-schema](http://json-schema.org) using this [Github repository](./schema/). It is hosted by
-- SpecIF Home: https://specif.de/v1.0/schema.json and https://specif.de/v1.1/schema.json
-- Schemastore.org: https://json.schemastore.org/specif-1.0.json
-
-Sometimes the question is raised why there is a version v1.1 so shortly after v1.0. In fact there is no need for any additional feature. 
-SpecIF v1.0 is particularly well suited to get acquainted with SpecIF concepts, as simple tasks allow a simple representation. 
-If more advanced features such as multi-language support are needed, the SpecIF schema v1.0 would allow a more elaborate structure. 
-While the learning is facilitated, the structural variance makes system implementation including transformations more complicated. 
-Also, some development teams may decide to only implement certain structure variants, resulting in compatibility problems.
-For that reason the schema v1.1 has eliminated all structural variances. Now the data structure seems to be more complicated, because all features are always accounted for,
-but the structure is always the same: When a certain element *may* have several values, it is always a list, even if it has only one member.
-
-## Constraints
-
-In addition to the schema, the following constraints apply for SpecIF v1.1:
-- An item's *key* consisting of *id* and *revision* must be unique. By default of a revision, the id must be unique.
-- dataType 'xs:integer' or 'xs:double': If both exist, 'minInclusive' must be smaller or equal than 'maxInclusive'.
-- dataType: If present, a list of enumerated values must have at least one entry.
-- dataType except 'xs:string': If present, a list of enumerated values must have entries of type string.
-- dataType 'xs:string': If present, a list of enumerated values must have entries with a list of multi-language texts each.
-- A propertyClass's 'dataType' must reference a member of dataTypes by key.
-- propertyClass: If present, the list of default values must not have more than one value, unless 'multiple' is true.
-- propertyClass: If present, the list of default values must have valid entries according to the referenced dataType (see below).
-- resourceClass not extending another: The list of propertyClasses must reference at least one a member of propertyClasses by key.
-- resourceClass extending another: If present, the list of propertyClasses must reference members of propertyClasses by key.
-- A resourceClass's 'extends' must reference a resourceClass by key.
-- statementClass: If present, a list of propertyClasses must reference members of propertyClasses by key.
-- A statementClass's 'subjectClasses': If present, the list must reference members of resourceClasses or statementClasses by key.
-- A statementClass's 'objectClasses': If present, the list must reference members of resourceClasses or statementClasses by key.
-- A statementClass's 'extends' must reference a statementClass by key.
-- A resource's 'class' must reference a member of resourceClasses by key. 
-- A resource's 'properties' must have valid entries according to the referenced dataType (see below).
-- A statement's 'class' must reference a member of statementClasses by key.
-- A statement's 'subject' must reference a valid resource or statement.
-- A statement's 'subject' must have a class which is listed in the subjectClasses of the statement's class, if such subjectClasses are defined.
-- A statement's 'object' must reference a valid resource or statement.
-- A statement's 'object' must have a class which is listed in the objectClasses of the statement's class, if such objectClasses are defined.
-- A statement's 'properties' must have valid entries according to the referenced dataType (see below).
-- A node's 'resource' must reference a member of resources by key.
-- The list of values must not have more than one item, unless 'multiple' of the propertyClass (or by default of the dataType) is true.
-- Underlying dataType defines enumerated values: If present, the list of values must have entries defined as id in the dataType's enumeration list.
-- Underlying dataType 'xs:string' without enumerated values: If present, the list of values must have multilanguage text items.
-- Underlying dataType except 'xs:string' without enumerated values: If present, the list of values must have string items.
-- Underlying dataType 'xs:boolean' without enumerated values: Each item of the value list must be either 'true' or 'false'.
-- Underlying dataType 'xs:dateTime' without enumerated values: Each item of the value list must be a date-time according to ISO 8601.
-- Underlying dataType 'xs:anyURI' without enumerated values: Each item of the value list must be a valid URI string according to according to RFC 3986.
-- Underlying dataType 'xs:integer' without enumerated values: Each item of the value list must be a valid integer number.
-- Underlying dataType 'xs:double' without enumerated values: Each item of the value list must be a valid number.
-- Underlying dataType 'xs:integer' or 'xs:double' without enumerated values: Each item of the value list must be larger or equal to the dataTypes 'minInclusive', if defined.
-- Underlying dataType 'xs:integer' or 'xs:double'  without enumerated values: Each item of the value list must be smaller or equal to the dataTypes 'maxInclusive', if defined.
-- Underlying dataType 'xs:string' without enumerated values: Each multilanguage object of the value list must not be longer than 'maxLength', if defined.
-
-## Checking
-
-A schema and constraint checker is available as JavaScript class using this [Github repository](./check/). It is hosted by 
-- SpecIF Home: https://specif.de/v1.0/CCheck.js, https://specif.de/v1.0/CCheck.min.js, https://specif.de/v1.1/CCheck.js and https://specif.de/v1.1/CCheck.min.js
-- or https://specif.de/v1.0/check.js and https://specif.de/v1.1/check.js (DEPRECATED)
-
-Usage:
-```js
-...
-// Required: https://github.com/epoberezkin/ajv/releases/tag/4.8.0 or later 
-let checker = new CCheck(),
-    result;
-// 1. Check the schema:
-result = checker.checkSchema(<specif-data>, { schema: <specif-schema> });
-if (result.status == 0) {
-    // 2.  Further check the constraints:
-    result = checker.checkConstraints(<specif-data>, { dontCheck: ['statement.subject','subject.object','text.length'] });
-    if (result.status == 0) {
-        // all is fine, continue processing:
-        ...
-    }
-    else {
-        // constraint checking has failed:
-        ... process/show result
-    };
-}
-else {
-    // schema checking has failed:
-    ... process/show result
-};
-...
-```
-
-The checking routines return an object similar to jqXHR, namely 
-```js
-{status:900,statusText:"<string>",responseType:"text",responseText:"<string>"}.
-```
+1. The **documentation of SpecIF** is available in the [documentation](https://github.com/GfSE/SpecIF/tree/master/documentation) folder of this repository.
+2. The **SpecIF logo** is defined in the [logo](https://github.com/GfSE/SpecIF/tree/master/logo) section. 
+3. The **SpecIF JSON-schema and constraint checker** is defined in the sub-repository https://github.com/GfSE/SpecIF-Schema
+4. The **SpecIF class definitions** to define a set of standardized terms and definitions with a fixed and well-defined semantics is located in the sub-repository https://github.com/GfSE/SpecIF-Class-Definitions
+5. A **vocabulary**, defining terms used for SpecIF class definitions is located in the [vocabulary](https://github.com/GfSE/SpecIF/tree/master/vocabulary) section as SpecIF data.
+6. The **SpecIF Web API** is available in the sub-repository https://github.com/GfSE/SpecIF-OpenAPI
 
 ## Examples
 
 For examples have a look into the [tutorials](./tutorials/Readme.md).
 
-## Acknowledgements
-This work has been sponsored by [enso-managers gmbh](http://enso-managers.de) and [mdd4all](http://mdd4all.de).
+## Acknowledgments
+
+This work has been sponsored and supported by 
+* [enso-managers gmbh](http://enso-managers.de) 
+* [mdd4all](http://mdd4all.de)
+* Members of the GfSE working group *Product Lifecycle Management for Systems Engineering* (PLM4MBSE)
