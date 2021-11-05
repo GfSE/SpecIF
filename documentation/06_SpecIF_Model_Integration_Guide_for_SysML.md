@@ -8,8 +8,8 @@ So SysML elements are profiled UML elements.
 ## UML/SysML to SpecIF Mapping
 
 The mapping from UML/SysML to SpecIF is currently still discussed in a working group of the GfSE. 
-At the moment there is a sketch for a mapping of UML and SysML to SpecIF-Elements. 
-This mapping is not covering the complete UML/SysML today and still in discussion in some parts. 
+At the moment there is a sketch for a mapping of UML and SysML to SpecIF elements. 
+This mapping does not cover the complete UML/SysML today and some parts are still in discussion. 
 It consists of a resource-, property- and statement-mapping and only contains elements that are often used in activity, block definition and other popular diagrams
 used in Systems and Software Engineering. 
 The mapping is shown in the following tables.
@@ -182,27 +182,27 @@ but the SpecIF property *UML:Stereotype* must then be set to *myStereotype*.
 
 Beside the mapping of model elements and connectors from UML to resources and statements in SpecIF, UML/SysML tools provide a tree structure 
 for bringing structure to the model(-repository) itself.
-This model tree structure shall be mapped to SpecIF by using the SpecIF-Hierarchy/Node elements.
-So after the transformation to SpecIF this structure is provided by the SpecIF-Hierarchy.
+This model tree structure shall be mapped to SpecIF using SpecIF hierarchy/node elements.
+So after the transformation to SpecIF this structure is provided by SpecIF hierarchy.
  
-Different structure levels are defined by hierarchy-elements and nodes. 
-E.g an Activity can be a hierarchy-element. 
-A node list can be added to this hierarchy-element to create a structure. 
-One hierarchy-element is always linked to one model-element. 
+Different structure levels are defined by hierarchy elements and nodes. 
+E.g an activity can be a hierarchy element. 
+A node list can be added to this hierarchy element to create a structure. 
+One hierarchy element is always linked to one model element. 
 In the figure below the model structure is shown in a Cameo Systems Modeler containment tree and in a SpecIF-Viewer. 
-A SpecIF-Viewer is offering a possibility to read a SpecIF files and create a overview.
+A SpecIF-Viewer is offering the possibility to read SpecIF files and create an overview.
 The model structure is shown on the left side in the hierarchy tree. 
-Information about model elements are provided by the "Document" section and relations to other model elements are provided by the "Statements" section.  
+Information about model elements are provided in the "document" section and relations to other model elements are provided in the "statements" section.  
 
 ![Structure_Mapping](./images/Strucuture_Mapping_example.png)
 
 In the UML tool Sparx Enterprise Architect the model structure tree is shown similar to the Cameo containment tree in a "Project Browser" window.
-When model data is transformed to SpecIF this tree structure shall be mapped one to one to a SpecIF-Hierarchy so that a data and structure exchange 
+When model data is transformed to SpecIF this tree structure shall be mapped one to one to a SpecIF hierarchy so that a data and structure exchange 
 is possible between different UML tools.
 
 ## Examples
 
-### Examples for UML/SysML mapping and transformation of Activity diagrams
+### Examples for UML/SysML mapping and transformation of activity diagrams
 
 In SpecIF model elements are represented as FMC:Actor (square), FMC:State (circle) and FMC:Event (diamond). 
 Elements  in SpecIF are named resources and relations between these resources are named statements (arrows). 
@@ -212,8 +212,8 @@ the figure is also used for the following examples.
 ![Mapping SysML Representation](./images/Mapping_SysML_Representation.PNG)
 
 In the next three figures examples for the transformation of activity diagram elements are shown in a small context. 
-The example elements are a ActivityPartition, a DecisionNode and a MergeNode. 
-The first figure shows three Actions, two ControlFlows and a ActivityPartition in a SysML-diagram and in the SpecIF-notation.
+The example elements are an ActivityPartition, a DecisionNode and a MergeNode. 
+The first figure shows three Actions, two ControlFlows and a ActivityPartition in a SysML-diagram and in the SpecIF notation.
 Actions are transformed into FMC:Actor resources as well as the activity partition. 
 For the assignment that "Action 2" is contained by the ActivityPartition a statement SpecIF:contains is generated in the transformation. 
 Since the Actions are connected by two ControlFlows there are SpecIF:precedes statements between the actions. 
@@ -222,7 +222,7 @@ SpecIF:precedes represents a ControlFlow between two FMC:Actors.
 ![Mapping SysML Activity Partition](./images/Mapping_SysML_ActivityPartition.PNG) 
 
 The following figure shows an example for the transformation of a DecisionNode. 
-The DecisionNode in the context has one  incoming ControlFlow from a action and two outgoing control flows to two actions. The DecisionNode is represented by a FMC:Actor
+The DecisionNode in the context has one  incoming ControlFlow from an action and two outgoing control flows to two actions. The DecisionNode is represented by a FMC:Actor
 and two FMC:Events in the SpecIF-Notation. 
 The statements between the resources are dependent on the types of the resources.
 For statements from a FMC:Actor to a FMC:Actor a SpecIF:precedes statement, 
