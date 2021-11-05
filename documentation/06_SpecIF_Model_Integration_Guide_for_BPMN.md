@@ -17,7 +17,7 @@ For introduction to the Business Process Model and Notation (BPMN), see the [BPM
 | group<sup>5</sup> | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 
 Where:
-- For all entities in the left column the namespace 'bpmn:' is used
+- For all entities in the left column the namespace 'bpmn:' is used.
 - The original model element type is stored in a property named _dcterms:type_. 
 
 Comments:
@@ -25,7 +25,7 @@ Comments:
 1. A lane is considered a responsible person or role, thus an FMC:Actor.
 1. Interestingly enough, in BPMN the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_ (rather than _dataObject_ or _dataStore_). Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
 1. A messageFlow between different processes is transformed to a _dataObject_ with _SpecIF:writes_ and _SpecIF:reads statements_ connecting to the sending resp. receiving process steps or events.
-1. Currently a _group_ is not represented as a SpecIF model-element, because some (or even all) widely used BPMN modelers do not indicate explicitly in their BPMN-XML export, which activities or other are contained. Thus, the semantics of a group are not easily derived. The geometric coordinates of the diagram can be analyzed to identify contained elements of a group, of course: This is a development task to do.
+1. Currently a _group_ is not represented as a SpecIF model element, because some (or even all) widely used BPMN modelers do not indicate explicitly in their BPMN-XML export, which activities or other are contained. Thus, the semantics of a group are not easily derived. The geometric coordinates of the diagram can be analyzed to identify contained elements of a group, of course: This is a development task to do.
 
 ### Statements
 
@@ -44,11 +44,11 @@ At present, the following statements are derived from BPMN diagrams, where the _
 | association | annotation _SpecIF:refersTo_ model-element | SpecIF:refersTo |  |
 
 Where:
-- For all entities in the left column the namespace 'bpmn:' is used
+- For all entities in the left column the namespace 'bpmn:' is used.
 - 'model-element' is one of [ 'FMC:Actor', 'FMC:State', 'FMC:Event' ]
-- 'activity' is one of [ task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess ], thus a FMC:Actor
-- 'data' is one of [ dataObjectReference, dataStoreReference ], thus a FMC:State
-- 'event' is one of [ startEvent, intermediateThrowEvent, intermediateCatchEvent, boundaryEvent, endEvent ], thus a FMC:Event
+- 'activity' is one of [ task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess ], thus a FMC:Actor.
+- 'data' is one of [ dataObjectReference, dataStoreReference ], thus a FMC:State.
+- 'event' is one of [ startEvent, intermediateThrowEvent, intermediateCatchEvent, boundaryEvent, endEvent ], thus a FMC:Event.
  
 ### Example
 
