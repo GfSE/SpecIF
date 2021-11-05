@@ -479,7 +479,7 @@ This example shows the resource class defining the data structure to store a req
 ```
 ### Statement Classes
    
-Statement classes define the statements (links between SpecIF data elements - resources,statements and files). Statements start at a subject data element and end on an object data element. It is possible to restrict the subjects and objects where a statement can be used by defining entries in the *subjectClasses*  and *objectClasses* JSON-properties of the statement class definition. If there are no entries, any element can be used as the statement's subject or object.
+Statement classes define the statements (links between SpecIF data elements - resources, statements and files). Statements start at a subject data element and end on an object data element. It is possible to restrict the subjects and objects where a statement can be used by defining entries in the *subjectClasses*  and *objectClasses* JSON-properties of the statement class definition. If there are no entries, any element can be used as the statement's subject or object.
 
 The following example of a statement class definition defines a statement that can be used between requirement resource elements. It defines the *IREB:refines* relationship. Also known as *deriveReqt* dependency in SysML:
 ```json
