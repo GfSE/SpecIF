@@ -4,15 +4,15 @@ The usage of SpecIF for a specific purpose is called an 'application'.
 An important application is to integrate models and other specification artifacts from different sources. 
 Currently transformations or importers exist for BPMN, Archimate, ReqIF, Excel and UML/SysML.
 
-The integration of elements of different sources is generally done by name and type. 
+The integration of elements from different sources is generally done by name and type. 
 In other words, two elements in different models/notations are considered the _same_, if their names and types are equal. 
-The checking for equal names is rather simple, but checking for equal types is almost impossible, since every notation and tool is 
+Checking for equal names is rather simple, but checking for equal types is almost impossible, since every notation and tool is 
 using a different set of types. 
 
-Therefore an abstraction (or mapping) to three _fundamental_ model-element types is made, before checking for equality. 
-The model-element types of the _Fundamental Modeling Concepts (FMC)_ have been selected for this purpose,
+Therefore an abstraction (or mapping) to three _fundamental_ model-element types is performed, before checking for equality. 
+The model element types of the _Fundamental Modeling Concepts (FMC)_ have been selected for this purpose,
 namely _Actor_, _State_ and _Event_. 
-Model-elements used by every method or notation can be mapped to these [[Dungern2016](https://specif.de/files/resources/enso-m/documents-en/TdSE-2016_Dungern_Semantic-Model-Integration-for-System-Specification_(Text).pdf)].
+Model elements used by any method or notation can be mapped to these [[Dungern2016](https://specif.de/files/resources/enso-m/documents-en/TdSE-2016_Dungern_Semantic-Model-Integration-for-System-Specification_(Text).pdf)].
 
 ## Model Integration Resources
 
@@ -31,9 +31,9 @@ The idea behind using just these three elements is, that all kinds of structural
 An example taken from structural modeling are Component Diagrams in UML or Internal Block Diagrams in SysML.
 As an example of behavioral modeling, Petri-Nets consist of transitions (actors) and places (states). 
 
-Hereby the components are active elements (represented as SpecIF:Actor), because the components are active system elements, 
-able to change the state of the system.
-Passive elements (represented as SpecIF:State), may represent data, like UML-object-elements with attributes are mapped to state-elements, 
+Hereby the components are active elements (represented as SpecIF:Actor). Cecause the components are active system elements, 
+they are able to change the system state.
+Passive elements (represented as SpecIF:State) may represent data, like UML-object-elements, whose attributes are mapped to state elements, 
 because they represent a current system state by their attribute values.
 
 While all model elements are mapped to the three fundamental elements, the original model element type
@@ -47,7 +47,7 @@ As extension to the fundamental modeling elements and the collection two further
 * A ✶ *Feature* (vocabulary term SpecIF:Feature) is an intentional distinguishing characteristic of a system, often a so-called ‘Unique Selling Proposition’.
 * A ↯ *Requirement* (vocabulary term IREB:Requirement) is a singular documented physical and functional need that a particular design, product or process must be able to perform. 
 
-These elements are widely used in Systems Engineering of all kind of systems and are in fact highly important in practice.
+These elements are widely used in Systems Engineering of all kinds of systems and are in fact highly important in practice.
 So these elements complement the set of fundamental elements used to express contents required for system modeling in the Product Lifecycle Management.
 
 ### View
@@ -60,11 +60,11 @@ All diagrams of all kinds of graphical notations can be visualized applying this
 ### Package
 
 Models can contain many elements and diagrams. 
-To navigate through and structure the elements used in a model the concept of Folders or Packages is often used 
-to bring a structure in a model.
-This structure is normally used independent from the semantics, that is expressed by the diagrams using model elements
+To structure and navigate through the elements used in a model the concept of folders or packages is often used 
+to bring structure to a model.
+This structure is normally used independently from semantics, which are expressed by the diagrams using model elements
 and connectors.
-The model structure is used for navigation and model data organization to sort elements or group them by some aspects.  
+The model structure is used for navigation and model data organization to sort elements or group them.  
 
 In SpecIF the concept of packages is taken from UML and provided by the resource class 🖿 *Package* (vocabulary term UML:Package).
 Applications for package resources are packages in UML/SysML or folders/directories in a file system etc. 
@@ -77,21 +77,21 @@ Models can express a logical or conceptual structure of modeled aspects or the m
 This aspect is covered by the resource class ⬚ *Collection* (vocabulary term SpecIF:Collection).
 Examples for collections are groups in BPMN or boundary elements on UML diagrams.
 
-The difference between package and collection is, that a package is used to bring structure into a model without expressing some
+A package is used to bring structure into a model without expressing some
 semantic aspects. 
 It is just for sorting elements and helps the users of the model to find things fast and easy.
 
 In comparison to a package a collection is typically defined as a graphical element on a diagram to express that the 
 element surrounded by the collection element are grouped together or have a similar meaning or responsibility. 
 
-### First glimpse on the elements of SpecIF Model Integration
+### A glimpse on the elements of SpecIF Model Integration
 
 ![Model Integration resources](./images/ModelIntegrationResources.png)
 
-The (class-)diagram above gives an overview of the most important element types, defined in SpecIF used for semantic model integration.
-This is called the *SpecIF Integration-Model*.
+The (class-)diagram above gives an overview of the most important element types, defined in SpecIF and used for semantic model integration.
+This is called the *SpecIF Integration Model*.
 
-Beside the class elements, representing the resource classes, association connections between the classes shows the available statements, defined
+Beside the class elements, representing the resource classes, association connections between the classes show the available statements, defined
 by SpecIF statement classes. 
 For better readability of the class diagrams, the aspects are shown on more than one diagram. 
 You have to interpret the diagrams in combination to get the complete picture of SpecIF Model Integration.
@@ -103,8 +103,8 @@ The statements in SpecIF are used to express a predicate logic (subject - predic
 Examples for such logical expressions are:
 
 * A *collection* *contains* a *diagram*.
-* An *event* *triggers* an *actor*
-* A *diagram* *shows* a *state*
+* An *event* *triggers* an *actor*.
+* A *diagram* *shows* a *state*.
 
 In the context of model integration we differentiate between statements to express behavioral aspects and structural aspects.
 
@@ -117,9 +117,9 @@ Typical application scenarios are to express for example that a collection *cont
 
 ![Application of the contains statement in SpecIF](./images/Contains.png)
  
-* The *shows* statement expresses that a model-element is depicted on a diagram.  
-This semantic relation is obvious for a human observer of a diagram, but it gets easily queried by the machine, if there is the explicit statement.
-Not only all resources and statements (nodes and edges) of the diagram is easily listed, but also the diagrams showing a given resource or statement.
+* The *shows* statement expresses that a model element is depicted on a diagram.  
+This semantic relation is obvious for a human observer of a diagram. If there is the explicit statement it is easily understood by a machine too.
+Not only are all resources and statements (nodes and edges) of the diagram easily listed, but also the diagrams showing a given resource or statement.
 This is known as the concept of separation of model and view.
 
 ![Application of the shows statement in SpecIF](./images/Shows.png)
@@ -127,12 +127,12 @@ This is known as the concept of separation of model and view.
 ### Expressing traceability aspects
 
 * To express traceability-dependencies between requirement elements and requirements or other element types, the following statements are used:
-  * A requirement *refines* a requirement
-  * A requirement *dependsOn* a requirement
-  * A requirement *duplicates* a requirement
-  * A requirement *contradicts* a requirement 
-  * A model element (state, actor or event) *satisfies* a requirement
-* The concept of Allocation known systems engineering is mapped to SpecIF by defining the *allocates* statement
+  * A requirement *refines* a requirement,
+  * A requirement *dependsOn* a requirement,
+  * A requirement *duplicates* a requirement,
+  * A requirement *contradicts* a requirement,
+  * A model element (state, actor or event) *satisfies* a requirement.
+* The concept of allocation known from systems engineering is mapped to SpecIF by defining the *allocates* statement.
 
 ### Expressing behavior
 
@@ -141,7 +141,7 @@ To express the behavioral aspects of a system or a process the following stateme
 * An actor *writes* a state. In a system composition a function writes a value.
 * An actor *reads* a state. In a system composition a function reads a value.
 * An actor *stores* a state. This is the combination of read and write and equates to a bi-directional data or material exchange.
-* An actor *precedes* and actor. This is used to express that a behavior consists of a sequence of actions.
+* An actor *precedes* an actor. This is used to express that a behavior consists of a sequence of actions.
 * An actor *precedes* an event with dcterms:type set to *SpecIF:signals*. This is used to express that an event is created by an action.
 * An event *precedes* an actor with dcterms:type set to *SpecIF:triggers*. This is used to express that an action is triggered by an incoming event.  
 
@@ -151,26 +151,26 @@ The following diagram shows the behavioral statements used in SpecIF model integ
 
 ### Instantiation
 
-To express that a resource is an instance of another resource (e.g. an Object is an instance of a Class, a Method return type is an instance of a type definition etc.) the statement 
+To express that a resource is an instance of another resource (e.g. an object is an instance of a class, a method return type is an instance of a type definition etc.) the statement 
 *rdf:type* is used. 
 This statement expresses that the subject is an instance of the statement object.
-Use this statement in all cases where a class-instance semantics shall be expressed. 
+Use this statement in all cases where class-instance semantics shall be expressed. 
 
 ### Document outlines
 
 SpecIF defines resource class types useful for applications dealing with textual documentation. 
 Typical application scenarios are 
-* Document-based requirement specifications
-* User manuals
-* Any other kind of textual specifications or text documents
+* Document-based requirement specifications,
+* User manuals,
+* Any other kind of textual specifications or text documents.
 
 The following class diagram shows the SpecIF application for document structures.
 
 ![Resource and statement usage for document structures](./images/RequirementDocuments.png)
 
-* The 🖹	*Hierarchy* element is the root for a document
-* A H *Heading* is used to define a heading text and to bring structure into a document
-* A P *Paragraph* can be used to include some text paragraphs with no special semantics (e.g. prose text) in the document
+* The 🖹	*Hierarchy* element is the root for a document,
+* A 'H' *Heading* is used to define a heading text and to bring structure into a document,
+* A 'P' *Paragraph* can be used to include some text paragraphs with no special semantics (e.g. prose text) into the document,
 * A ✶ *Feature* and
 * a ↯ *Requirement* are, as explained above, important to describe benefits and needs of a system to develop.
 
@@ -192,11 +192,11 @@ When generating a document, the comments can be included or omitted, similarly t
 As discussed, the SpecIF schema is generic and allows various applications such as model integration. 
 Each application is characterized by a set of agreed-upon data types and classes. 
 The class definitions described above for integration of models from different tools and notations have been 
-developed over many years through projects and case studies in the arena of enterprise Architecture 
+developed over many years through projects and case studies in the arena of Enterprise Architecture 
 (notations FMC, BPMN and Archimate) and in the arena of Mechatronic Systems Engineering (notations FMC and SysML).
 
-With the set of elements defined and released with version 1.1 of SpecIF it is possible to map nearly all elements,
-existing and used in graphical 2D models and in textual specification and documentation content over the lifecycle 
+With the set of elements defined and released with version 1.1 of SpecIF it is possible to map nearly all elements -
+existing and used in graphical 2D models and in textual specification and documentation content - over the lifecycle 
 of a system.
 
 With this first release of SpecIF there are surely some gaps for some specialized application scenarios and domains,
@@ -207,7 +207,7 @@ use.
 ### Mapping of different modeling environments to SpecIF
  
 Transformations are in fact a mapping from element types of different modeling environments resp. data models to SpecIF. 
-In case of the SysML, the mapping relates SysML model-element types to SpecIF model-element types. 
+In case of SysML, the mapping relates SysML model element types to SpecIF model element types. 
 The same applies to various other applications such as BPMN and Archimate.
 
 ![Principle of semantic model integration](./images/Semantic_Integration-678.png)
