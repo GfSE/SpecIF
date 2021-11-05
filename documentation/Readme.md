@@ -21,4 +21,5 @@ This document describes the release version 1.1 of the *Specification Integratio
 1. [Model Integration Guide for UML/SysML](./06_SpecIF_Model_Integration_Guide_for_SysML.md)
 1. [SpecIF to ReqIF-mapping](./08_SpecIF_ReqIF.md)
 1. [Non-normative SpecIF Class Definitions](./09_SpecIF_Domain_Classes_Github_Non_Normative.md) 
+1. [References](./20_References.md)
 1. [License](./07_License.md)

@@ -281,7 +281,8 @@ model elements in system specifications, the following abstract model element ty
 - An ⬧ *Event* is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.
 - A ✶ *Feature* is an intentional distinguishing characteristic of a system, often a so-called ‘Unique Selling Proposition’.
 - A ↯ *Requirement* is a singular documented physical and functional need that a particular design, product or process must be able to perform. 
-- A 🖿 *Collection* is a logical (often conceptual) group of elements or other collections. Examples for collections are folders in a file system, groups in BPMN or packages in UML/SysML.
+- A ⬚ *Collection* is a logical (often conceptual) group of elements or other collections. Examples for collections are groups in BPMN or boundaries on use case diagrams in UML/SysML.
+- A 🖿 *Package* is used to organize elements hierarchically to achieve an easy navigation in big models or element collections. Examples for packages are the packages in UML/SysML models or folders in a file system etc.
 
 With these few fundamental elements, model integration can be done with SpecIF.
 Each individual element of a specific tool or specific modeling language is mapped to these fundamental element types.
@@ -317,5 +318,5 @@ This release of *SpecIF 1.1* consists of the following parts, described in the f
 | Title | Revision |
 |-|-|
 |SpecIF Metamodel and SpecIF JSON-schema|1.1|
-|SpecIF class definitions|1.1|
+|SpecIF class definitions and SpecIF Vocabulary|1.1|
 |SpecIF Web API|1.1| 
