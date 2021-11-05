@@ -32,7 +32,7 @@ At present, the following statements are derived from ArchiMate® diagrams, wher
 | Influence |  | SpecIF:influences |  |
 | Flow, Triggering |  | SpecIF:precedes |  |
 | Specialization |  | SpecIF:isSpecializationOf |  |
-| Association | SpecIF:isAssociatedWith |  |  |
+| Association |  | SpecIF:isAssociatedWith |  |
 
 ### Example
 
