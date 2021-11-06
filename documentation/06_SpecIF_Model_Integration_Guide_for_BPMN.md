@@ -17,7 +17,7 @@ For introduction to the Business Process Model and Notation (BPMN), see the [BPM
 | group<sup>6</sup> | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 
 Where:
-- For all entities in the left column the namespace 'bpmn:' is used.
+- For all entities in the left column the namespace 'bpmn:' is used; the XML header defines ```targetNamespace="http://bpmn.io/schema/bpmn"```.
 - The original model element type is stored in a property named _dcterms:type_. 
 
 Comments:
