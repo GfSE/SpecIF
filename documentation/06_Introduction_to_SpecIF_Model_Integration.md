@@ -210,7 +210,7 @@ Transformations are in fact a mapping from element types of different modeling e
 In case of SysML, the mapping relates SysML model element types to SpecIF model element types. 
 The same applies to various other applications such as BPMN and Archimate.
 
-![Principle of semantic model integration](./images/Semantic_Integration-678.png)
+![Principle of semantic model integration](./images/06_Semantic_Integration-618.png)
 
 The following chapters describe semantic mappings and examples for transformations from different modeling environments 
 to SpecIF.

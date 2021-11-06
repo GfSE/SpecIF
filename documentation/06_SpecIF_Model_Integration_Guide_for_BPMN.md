@@ -9,18 +9,22 @@ For introduction to the Business Process Model and Notation (BPMN), see the [BPM
 | [BPMN-XML](https://www.omg.org/spec/BPMN/2.0/About-BPMN/) | [SpecIF](https://specif.de) |
 | --- | --- |
 | collaboration | SpecIF:Diagram |
-| process | *tbd* |
-| participant<sup>1</sup>, laneSet, lane<sup>2</sup>, task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess, businessRuleTask, forking and joining parallelGateway, joining exclusiveGateway, joining inclusiveGateway | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) |
+| process<sup>1</sup> | *tbd* |
+| participant<sup>2</sup>, laneSet, lane<sup>3</sup>, task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess, businessRuleTask, forking and joining parallelGateway, joining exclusiveGateway, joining inclusiveGateway | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) |
 | forking exclusiveGateway, forking inclusiveGateway, forking eventBasedGateway | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) plus [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) per outgoing sequenceFlow |
-| dataObjectReference<sup>3</sup>, dataStoreReference<sup>3</sup>, messageFlow<sup>4</sup> | [FMC:State](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) |
+| dataObjectReference<sup>4</sup>, dataStoreReference<sup>4</sup>, messageFlow<sup>5</sup> | [FMC:State](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) |
 | startEvent, timerStartEvent, messageStartEvent, intermediateEvent, messageThrowEvent, intermediateThrowEvent, intermediateCatchEvent, intermediateTimerCatchEvent, intermediateMessageCatchEvent, boundaryEvent, timerBoundaryEvent, messageBoundaryEvent, endEvent | [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) |
-| group<sup>5</sup> | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
+| group<sup>6</sup> | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 
 Where:
 - For all entities in the left column the namespace 'bpmn:' is used.
 - The original model element type is stored in a property named _dcterms:type_. 
 
 Comments:
+1. The participants are transformed, but not the processes, for the following reasons:
+    - To our experience with different tools, there is no process without participant, but there can be participants without a process.
+	- Participants are source or target of messageFlows, but not the referenced processes.
+	- Thus, the role and need of a process in BPMN as implemented by the tools we know is unclear.
 1. A participant is also called a 'pool'.
 1. A lane is considered a responsible person or role, thus an FMC:Actor.
 1. Interestingly enough, in BPMN the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_ (rather than _dataObject_ or _dataStore_). Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
