@@ -15,7 +15,7 @@ _{ToDo}_
 | Location, Grouping | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 
 Comments:
-- For all entities in the left column the namespace 'archimate:' is used
+- For all entities in the left column the namespace 'archimate:' is used; the XML header defines ```xsi:schemaLocation="http://www.opengroup.org/xsd/archimate/3.0/ http://www.opengroup.org/xsd/archimate/3.1/archimate3_Diagram.xsd"```.
 - The original model element type is stored in a property named _dcterms:type_. 
 
 ### Statements
