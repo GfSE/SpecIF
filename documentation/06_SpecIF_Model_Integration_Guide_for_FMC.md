@@ -28,7 +28,9 @@ We will show in the following the mapping of the entities and relationships real
 | Event, Point in time | [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) |
 |  | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 
-The original model element type is stored in a property named _dcterms:type_. 
+Where:
+- All resource class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-YpyUlWVLwxYblBgWOr154btbA9u).
+- The original model element type is stored in a property named _dcterms:type_. 
 
 ### Statements
 
@@ -39,8 +41,8 @@ The original model element type is stored in a property named _dcterms:type_.
 | Reading | An actor reads a state | SpecIF:reads |  |
 | Writing | An actor writes a state | SpecIF:writes |  |
 | Modification | An actor writes and reads a state | SpecIF:stores |  |
-| Influence | A state influences a state (via an unnamed function=actor) | *tbd* | Rarely used |
-| Relation | A state influences and is reversely influenced by a state (via an unnamed function=actor) | *tbd* | Rarely used |
+| Influence | A state influences a state (via an unnamed function=actor) | *tbd* | Rarely used, if ever |
+| Relation | A state influences and is reversely influenced by a state (via an unnamed function=actor) | *tbd* | Rarely used, if ever |
 | Receiving | An actor receives messages from an actor (through an unnamed channel=state) | SpecIF:receivesFrom |  |
 | Sending | An actor sends messages to an actor (through an unnamed channel=state) | SpecIF:sendsTo |  |
 | Communication | An actor sends to and receives messages from an actor (through an unnamed channel=state) | SpecIF:communicates |  |
@@ -50,6 +52,7 @@ The original model element type is stored in a property named _dcterms:type_.
 Where:
 - 'model-element' is one of [ 'FMC:Actor', 'FMC:State', 'FMC:Event' ].
 - All statement class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-blM4lfyHM55YlbfBZ3NWj4SYwa3).
+- The original model element type is stored in a property named _dcterms:type_. 
 
 ### Example
 
