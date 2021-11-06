@@ -39,8 +39,8 @@ The original model element type is stored in a property named _dcterms:type_.
 | Reading | An actor reads a state | SpecIF:reads |  |
 | Writing | An actor writes a state | SpecIF:writes |  |
 | Modification | An actor writes and reads a state | SpecIF:stores |  |
-| Influence | A state influences a state (via an unnamed function=actor) | *tbd<sup>1</sup>* |  |
-| Relation | A state influences and is reversely influenced by a state (via an unnamed function=actor) | *tbd<sup>1</sup>* |  |
+| Influence | A state influences a state (via an unnamed function=actor) | *tbd* | Rarely used |
+| Relation | A state influences and is reversely influenced by a state (via an unnamed function=actor) | *tbd* | Rarely used |
 | Receiving | An actor receives messages from an actor (through an unnamed channel=state) | SpecIF:receivesFrom |  |
 | Sending | An actor sends messages to an actor (through an unnamed channel=state) | SpecIF:sendsTo |  |
 | Communication | An actor sends to and receives messages from an actor (through an unnamed channel=state) | SpecIF:communicates |  |
@@ -50,9 +50,6 @@ The original model element type is stored in a property named _dcterms:type_.
 Where:
 - 'model-element' is one of [ 'FMC:Actor', 'FMC:State', 'FMC:Event' ].
 - All statement class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-blM4lfyHM55YlbfBZ3NWj4SYwa3).
-
-Comments:
-1. The statement is rarely used.
 
 ### Example
 
