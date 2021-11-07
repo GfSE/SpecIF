@@ -10,10 +10,9 @@ The FMC Metamodel is given in [Knöpfel, Gröne, Tabeling: Fundamental Modeling 
 However, this Metamodel seems to be rather theoretic and it is perhaps not complete for practical purposes. 
 When analyzing, among others we have the following questions:
 - Why are some relations named as nouns, others as verbs (e.g. *"Observability"* vs. *"triggers"*).
-- Why is *Write access* directed and *Read access* is not?
-- Is the relation between *Location* and *Value* named *has* and should it be directed?
+- Why is *Write access* an unambiguous mapping in one direction (as denoted by the arrow) and why not *Read access*?
+- Should the relation between *Location* and *Value* be named *has*?
 - Can *Agent*, *Operation*, *Storage* and perhaps other entities be hierarchically nested?
-- Is the relation *performs* shown in the correct direction?
 
 There is no standard serialization defined for FMC. As to our knowledge there is only one modeling tool for FMC, namely [ARCWAY Ccokpit](https://arcway.com).
 We will show in the following the mapping of the entities and relationships realized in this tool.

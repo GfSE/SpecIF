@@ -57,7 +57,7 @@ The list below shows the available primitive data types based on the data types 
 * *xs:integer* - a number value,
 * *xs:double* - a floating point number,
 * *xs:dateTime* - a date value,
-* *xs:anyURL* - a uniform resource locator (URL),
+* *xs:anyURI* - a uniform resource identifier (URI) including a uniform resource locator (URL),
 * *xs:duration* - a duration value.
 
 Based on these primitive data types, a SpecIF user can define *DataType* elements. 
@@ -241,12 +241,15 @@ The JOSN-snippet below shows some data type definitions for non-enumeration type
 }
 ```
 
-### Enumeration definitions
+### Enumerations
 
-An enumeration data type is defined using the attribute *enumeration* to define a list of available/allowed values for the data type.
+Any data type exept *'xs:boolean'* may define a set of enumerated values using the attribute *enumeration*.
+If defined, only those discrete values are eligible. For example,
+- a data type to be used for priority can be defined as *'xs:string'* with the enumerated values *['high', 'medium', 'low']*.
+- a data type to be used for an effort in planning poker can be defined as *'xs:integer'* with the enumerated values *[0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]*.
+
 SpecIF supports enumeration with multiple selection, so more than one value of an enumeration can be selected in a SpecIF property. 
-This is expressed by setting the JOSN-attribute *multiple*. 
-If it is set to *true*, multiple selection is allowed.
+If the JSON-attribute *multiple* is set to *true*, multiple selection is allowed.
 
 The following data type definitions show an example for an enumeration data type definition with SpecIF using the *xs:string* data type:
 
