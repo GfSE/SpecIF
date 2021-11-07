@@ -55,10 +55,16 @@ Where:
 
 ### Example
 
-An explanation in detail is given in a tutorial [Very simple model using FMC](https://github.com/GfSE/SpecIF/blob/master/tutorials/v1.0/06_Very-Simple-Model-FMC.md).
+#### FMC Block Diagram
+
+The following example of a FMC block diagram represents three application components and a data object:
+
+![FMC Block Diagram](./images/06_FMC_Block_Example.png)
+
+The following SpecIF graph expresses the same:
+
+![SpecIF from FMC Block Diagram](./images/06_SpecIF_from_FMC_Block_Example.png)
 
 ### Transformation Code
 
 Here you may take a look at the current code of the [FMC Export from ARCWAY Cockpit to SpecIF](https://github.com/GfSE/ARCWAY-to-SpecIF-Exporter/blob/master/source/SpecIF-Export.rpttpl).
-
-
