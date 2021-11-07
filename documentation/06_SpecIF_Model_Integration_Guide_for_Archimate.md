@@ -2,8 +2,6 @@
 
 ## ArchiMate® to SpecIF mapping
 
-_{ToDo}_
-
 ### Resources
 
 | [ArchiMate® Open Exchange (XML)](https://www.opengroup.org/xsd/archimate/) | [SpecIF](https://specif.de) |
