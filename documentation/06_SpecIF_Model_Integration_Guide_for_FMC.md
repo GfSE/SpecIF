@@ -59,7 +59,7 @@ Where:
 
 The following example of a FMC block diagram represents three application components and a data object:
 
-![FMC Block Diagram](./images/06_FMC_Block_Example.png)
+![FMC Block Diagram](./images/06_FMC_Block_Example-380.png)
 
 The following SpecIF graph expresses the same:
 
