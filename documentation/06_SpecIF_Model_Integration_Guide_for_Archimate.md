@@ -13,6 +13,7 @@
 | Location, Grouping | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 
 Where:
+- The [ArchiMate® 3.1 Specification](https://pubs.opengroup.org/architecture/archimate3-doc/chap04.html).
 - All resource class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-YpyUlWVLwxYblBgWOr154btbA9u).
 - For all entities in the left column the namespace 'archimate:' is used; the XML header defines ```xsi:schemaLocation="http://www.opengroup.org/xsd/archimate/3.0/ http://www.opengroup.org/xsd/archimate/3.1/archimate3_Diagram.xsd"```.
 - The original model element type is stored in a property named _dcterms:type_. 
@@ -24,16 +25,17 @@ At present, the following statements are derived from ArchiMate® diagrams, wher
 | [ArchiMate® Open Exchange (XML)](https://www.opengroup.org/xsd/archimate/) |  | [SpecIF](https://specif.de) | Comment |
 | --- | --- | --- | --- |
 | view |  | SpecIF:shows |  |
-| Composition, Aggregation, Realization, Assignment |  | SpecIF:contains | ArchiMate® calls it the 'unifying' concept |
-| Access (accessType:Write) |  | SpecIF:writes |  |
-| Access (accessType:Read) |  | SpecIF:reads |  |
-| Serving|  | SpecIF:serves |  |
-| Influence |  | SpecIF:influences |  |
-| Flow, Triggering |  | SpecIF:precedes |  |
+| Composition, Aggregation, Realization, Assignment |  | SpecIF:contains | ArchiMate® Structural (or 'unifying') Relationship |
+| Access (accessType:Write) |  | SpecIF:writes | ArchiMate® Dependency Relationship |
+| Access (accessType:Read) |  | SpecIF:reads | ArchiMate® Dependency Relationship |
+| Association |  | SpecIF:isAssociatedWith | ArchiMate® Dependency Relationship |
+| Influence |  | SpecIF:influences | ArchiMate® Dependency Relationship |
+| Serving |  | SpecIF:serves | ArchiMate® Dependency Relationship |
+| Flow, Triggering |  | SpecIF:precedes | ArchiMate® Dynamic Relationship |
 | Specialization |  | SpecIF:isSpecializationOf |  |
-| Association |  | SpecIF:isAssociatedWith |  |
 
 Where:
+- The [ArchiMate® 3.1 Specification](https://pubs.opengroup.org/architecture/archimate3-doc/chap05.html).
 - All statement class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-blM4lfyHM55YlbfBZ3NWj4SYwa3).
 - For all entities in the left column the namespace 'archimate:' is used; the XML header defines ```xsi:schemaLocation="http://www.opengroup.org/xsd/archimate/3.0/ http://www.opengroup.org/xsd/archimate/3.1/archimate3_Diagram.xsd"```.
 - The original model element type is stored in a property named _dcterms:type_. 

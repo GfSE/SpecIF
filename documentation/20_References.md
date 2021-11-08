@@ -2,7 +2,7 @@
 
 ## SpecIF publications
 
-* [KP15] Kaufmann, U., Pfenning, M.: *10 Theses about MBSE and PLM*. PLM4MBSE Working Group Position Paper, GfSE, 2015. https://gfse.de/Dokumente_Mitglieder/ag_ergebnisse/PLM4MBSE/PLM4MBSE_Position_paper_V_1_1.pdf
+* [KP15] Kaufmann, U., Pfenning, M. et al.: *10 Theses about MBSE and PLM*. PLM4MBSE Working Group Position Paper, GfSE, 2015. https://gfse.de/Dokumente_Mitglieder/ag_ergebnisse/PLM4MBSE/PLM4MBSE_Position_paper_V_1_1.pdf
 * [Dungern14a] Dungern, O.v.: *Semantic Model-Integration for System Specification – Meaningful, Consistent and Viable*, 7. Grazer Symposium Virtuelles Fahrzeug, Graz, May 2014.
 * [Dungern14b]	Dungern, O.v.: *Übergreifende Konzeption von Geräten für die Gebäudeautomation – Methodik und Management*. TdSE - Tag des Systems Engineering der GfSE, Bremen, November 2014.
 * [Dungern15]	Dungern, O.v.: *Integration von Systemmodellen mit fünf fundamentalen Elementtypen*. TdSE - Tag des Systems Engineering der GfSE, Ulm, November 2015.
@@ -14,7 +14,8 @@
 * [Alt18] Alt, O.: *SpecIF - Die kommende vielschichtige Datenquelle für Spezifikationsdaten*. Fachgruppentreffen GI-RE, Nürnberg, November 2018.
 * [Dungern19] 	Dungern, O.v.: *Model-Integration with SpecIF*. ProSTEP ivip e.V. SysML-Workflow-Forum November 2019.
 * [DA20] Dungern, O.v.; Alt, O.: *Specification Integration Facility - Wozu braucht man SpecIF neben SysML?*. TdSE - Tag des Systems Engineering der GfSE, online, November 2020.
-* [SpecIF21] GfSE: *SpecIF - Homepage*. https://specif.de/en/
+* [Dungern21]  Dungern, O.v.: *Integrate BPMN and Archimate Models using SpecIF*. TdSE - Tag des Systems Engineering der GfSE, online, November 2021.
+* [SpecIF21] GfSE: *SpecIF - Homepage*. https://specif.de/en/ with https://specif.de/en/#literature
 
 ## Standards
 
