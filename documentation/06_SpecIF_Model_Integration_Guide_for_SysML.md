@@ -220,7 +220,8 @@ For the assignment that "Action 2" is contained by the ActivityPartition a state
 Since the Actions are connected by two ControlFlows there are SpecIF:precedes statements between the actions. 
 SpecIF:precedes represents a ControlFlow between two FMC:Actors.
 
-![Mapping SysML Activity Partition](./images/06_SpecIF_from_UML_ActivityPartition.png) 
+![SysML Activity Partition](./images/06_SpecIF_from_UML_ActivityPartition.png) 
+![SpecIF from SysML Activity Partition](./images/06_SpecIF_from_UML_ActivityPartition.png) 
 
 The following figure shows an example for the transformation of a DecisionNode. 
 The DecisionNode in the context has one  incoming ControlFlow from an action and two outgoing control flows to two actions. The DecisionNode is represented by a FMC:Actor
@@ -229,14 +230,16 @@ The statements between the resources are dependent on the types of the resources
 For statements from a FMC:Actor to a FMC:Actor a SpecIF:precedes statement, 
 from a FMC:Actor to a FMC:Event a SpecIF:signals statement and from a FMC:Event to a FMC:Actor a SpecIF:triggers statement is used. 
 
-![Mapping SysML DecisionNode](./images/06_SpecIF_from_UML_DecisionNode.png) 
+![SysML DecisionNode](./images/06_SpecIF_from_UML_DecisionNode.png) 
+![SpecIF from SysML DecisionNode](./images/06_SpecIF_from_UML_DecisionNode.png) 
 
 In a MergeNode two incoming activity flows are merged into one outgoing activity flow. 
 The DecisionNode is transformed into a FMC:Actor. Incoming and outgoing ControlFlows in the example are from FMC:Actor to FMC:Actor. 
 This results in SpecIF:precedes statements for the connection from the other elements to the FMC:Actor of the MergeNode. The same SpecIF representation is
 used for the transformation of JoinNodes and ForkNodes. 
 
-![Mapping SysML Merge Node](./images/06_SpecIF_from_UML_MergeNode.png) 
+![SysML Merge Node](./images/06_SpecIF_from_UML_MergeNode.png) 
+![SpecIF from SysML Merge Node](./images/06_SpecIF_from_UML_MergeNode.png) 
 
 ### Example for mapping state charts and state transitions to the SecIF Integration Model elements
 
