@@ -18,7 +18,7 @@ For introduction to the Business Process Model and Notation (BPMN), see the [BPM
 
 Where:
 - For all entities in the left column the namespace 'bpmn:' is used; the XML header defines ```targetNamespace="http://bpmn.io/schema/bpmn"```.
-- All resource class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-YpyUlWVLwxYblBgWOr154btbA9u).
+- All SpecIF resource class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-YpyUlWVLwxYblBgWOr154btbA9u).
 - The original model element type is stored in a property named _dcterms:type_. 
 
 Comments:
@@ -54,7 +54,7 @@ Where:
 - 'activity' is one of [ task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess ], thus a FMC:Actor.
 - 'data' is one of [ dataObjectReference, dataStoreReference ], thus a FMC:State.
 - 'event' is one of [ startEvent, intermediateThrowEvent, intermediateCatchEvent, boundaryEvent, endEvent ], thus a FMC:Event.
-- All statement class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-blM4lfyHM55YlbfBZ3NWj4SYwa3).
+- All SpecIF statement class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-blM4lfyHM55YlbfBZ3NWj4SYwa3).
 - The original model element type is stored in a property named _dcterms:type_. 
  
 ### Example

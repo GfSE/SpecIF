@@ -13,8 +13,8 @@
 | Location, Grouping | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;project=P-SpecIF-Vocabulary;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 
 Where:
-- The [ArchiMate® 3.1 Specification](https://pubs.opengroup.org/architecture/archimate3-doc/chap04.html).
-- All resource class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-YpyUlWVLwxYblBgWOr154btbA9u).
+- The listed elements are described in the [ArchiMate® 3.1 Specification](https://pubs.opengroup.org/architecture/archimate3-doc/chap04.html).
+- All SpecIF resource class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-YpyUlWVLwxYblBgWOr154btbA9u).
 - For all entities in the left column the namespace 'archimate:' is used; the XML header defines ```xsi:schemaLocation="http://www.opengroup.org/xsd/archimate/3.0/ http://www.opengroup.org/xsd/archimate/3.1/archimate3_Diagram.xsd"```.
 - The original model element type is stored in a property named _dcterms:type_. 
 
@@ -35,8 +35,8 @@ At present, the following statements are derived from ArchiMate® diagrams, wher
 | Specialization |  | SpecIF:isSpecializationOf |  |
 
 Where:
-- The [ArchiMate® 3.1 Specification](https://pubs.opengroup.org/architecture/archimate3-doc/chap05.html).
-- All statement class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-blM4lfyHM55YlbfBZ3NWj4SYwa3).
+- The listed elements are described in the [ArchiMate® 3.1 Specification](https://pubs.opengroup.org/architecture/archimate3-doc/chap05.html).
+- All SpecIF statement class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-blM4lfyHM55YlbfBZ3NWj4SYwa3).
 - For all entities in the left column the namespace 'archimate:' is used; the XML header defines ```xsi:schemaLocation="http://www.opengroup.org/xsd/archimate/3.0/ http://www.opengroup.org/xsd/archimate/3.1/archimate3_Diagram.xsd"```.
 - The original model element type is stored in a property named _dcterms:type_. 
 
