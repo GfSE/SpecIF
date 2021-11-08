@@ -20,7 +20,7 @@
 |-|-|-|-|
 |VDA:Diagram|RC-VDA_Diagram|1.1|<p>A 'VDA:Diagram' is a Diagram with automotive-process-specific properties.</p><p>Property classes:<br/><ul><li>VDA:SupplierStatus [PC-SupplierStatus 1.1]</li><li>VDA:SupplierComment [PC-SupplierComment 1.1]</li><li>VDA:OemStatus [PC-OemStatus 1.1]</li><li>VDA:OemComment [PC-OemComment 1.1]</li></ul></p>|
 |VDA:Requirement|RC-VDA_Requirement|1.1|<p>A VDA:Requirement is a Requirement with additional automotive-process-specific properties.</p><p>Property classes:<br/><ul><li>VDA:SupplierStatus [PC-SupplierStatus 1.1]</li><li>VDA:SupplierComment [PC-SupplierComment 1.1]</li><li>VDA:OemStatus [PC-OemStatus 1.1]</li><li>VDA:OemComment [PC-OemComment 1.1]</li></ul></p>|
-|VDA:Feature|RC-VDA_Feature|1.1|<p>A 'VDA:Feature' is a Feature with automotiev specific properties.</p><p>Property classes:<br/><ul><li>VDA:SupplierStatus [PC-SupplierStatus 1.1]</li><li>VDA:SupplierComment [PC-SupplierComment 1.1]</li><li>VDA:OemStatus [PC-OemStatus 1.1]</li><li>VDA:OemComment [PC-OemComment 1.1]</li></ul></p>|
+|VDA:Feature|RC-VDA_Feature|1.1|<p>A 'VDA:Feature' is a Feature with automotive specific properties.</p><p>Property classes:<br/><ul><li>VDA:SupplierStatus [PC-SupplierStatus 1.1]</li><li>VDA:SupplierComment [PC-SupplierComment 1.1]</li><li>VDA:OemStatus [PC-OemStatus 1.1]</li><li>VDA:OemComment [PC-OemComment 1.1]</li></ul></p>|
 ## Domain 05: Agile Requirements Engineering
 
 ### Resource classes of domain 05: Agile Requirements Engineering
@@ -81,10 +81,10 @@
 
 |title|id|revision|description|
 |-|-|-|-|
-|SpecIF:ResourceTerm|RC-ResourceTerm|1.1|<p>A term for resources (objects, entities) belonging to the SpecIF vocabulary</p><p>Property classes:<br/><ul><li>dcterms:title [PC-Name 1.1]</li><li>dcterms:description [PC-Description 1.1]</li><li>SpecIF:Origin [PC-Origin 1.1]</li><li>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</li></ul></p>|
-|SpecIF:PredicateTerm|RC-PredicateTerm|1.1|<p>A term for statements (relations) belonging to the SpecIF vocabulary</p><p>Property classes:<br/><ul><li>dcterms:title [PC-Name 1.1]</li><li>dcterms:description [PC-Description 1.1]</li><li>SpecIF:Origin [PC-Origin 1.1]</li><li>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</li></ul></p>|
-|SpecIF:PropertyTerm|RC-PropertyTerm|1.1|<p>A term for user-defined properties (attributes) belonging to the SpecIF vocabulary</p><p>Property classes:<br/><ul><li>dcterms:title [PC-Name 1.1]</li><li>dcterms:description [PC-Description 1.1]</li><li>SpecIF:Origin [PC-Origin 1.1]</li><li>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</li></ul></p>|
-|SpecIF:ValueTerm|RC-ValueTerm|1.1|<p>A term for property values belonging to the SpecIF vocabulary</p><p>Property classes:<br/><ul><li>dcterms:title [PC-Name 1.1]</li><li>dcterms:description [PC-Description 1.1]</li><li>SpecIF:Origin [PC-Origin 1.1]</li><li>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</li></ul></p>|
+|SpecIF:TermResourceClass|RC-ResourceTerm|1.1|<p>A term for resources (objects, entities) belonging to the SpecIF vocabulary</p><p>Property classes:<br/><ul><li>dcterms:title [PC-Name 1.1]</li><li>dcterms:description [PC-Description 1.1]</li><li>SpecIF:Origin [PC-Origin 1.1]</li><li>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</li></ul></p>|
+|SpecIF:TermStatementClass|RC-PredicateTerm|1.1|<p>A term for statements (relations) belonging to the SpecIF vocabulary</p><p>Property classes:<br/><ul><li>dcterms:title [PC-Name 1.1]</li><li>dcterms:description [PC-Description 1.1]</li><li>SpecIF:Origin [PC-Origin 1.1]</li><li>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</li></ul></p>|
+|SpecIF:PropertyTerm|RC-TermProperty|1.1|<p>A term for user-defined properties (attributes) belonging to the SpecIF vocabulary</p><p>Property classes:<br/><ul><li>dcterms:title [PC-Name 1.1]</li><li>dcterms:description [PC-Description 1.1]</li><li>SpecIF:Origin [PC-Origin 1.1]</li><li>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</li></ul></p>|
+|SpecIF:TermPropertyValue|RC-ValueTerm|1.1|<p>A term for property values belonging to the SpecIF vocabulary</p><p>Property classes:<br/><ul><li>dcterms:title [PC-Name 1.1]</li><li>dcterms:description [PC-Description 1.1]</li><li>SpecIF:Origin [PC-Origin 1.1]</li><li>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</li></ul></p>|
 ### Statement classes of domain 10: Vocabulary Definition
 
 |title|id|revision|description|
@@ -94,7 +94,6 @@
 |SpecIF:isSynonymOf|SC-isSynonymousProperty|1.0|<p>Synonymous property-term</p>|
 |SpecIF:isSynonymOf|SC-isSynonymousValue|1.0|<p>Synonymous value-term</p>|
 |SpecIF:isInverseOf|SC-isInverseOf|1.0|<p>Two terms are the inverse of each other, such as 'contains' and 'isContainedBy'.</p>|
-|SpecIF:isSpecialisationOf|SC-isSpecialisationOf|1.0|<p>A term is a specialization of another, such as 'Passenger Car' and 'Vehicle'.</p>|
 ## Domain 11: Testing
 
 ### Data types of domain 11: Testing

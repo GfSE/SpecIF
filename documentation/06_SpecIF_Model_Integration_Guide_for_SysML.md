@@ -151,6 +151,7 @@ but the SpecIF property *UML:Stereotype* must then be set to *myStereotype*.
 |Aggregation|-|SpecIF:contains|OMG:UML:2.5.1:Aggregation|UML/SysML aggregation (white diamond)|
 |Association|-|SpecIF:contains (one or multiple)|OMG:UML:2.5.1:Association|UML/SysML association defining an attribute|
 |Association|-|SpecIF:isAssociatedWith|OMG:UML:2.5.1:Association|UML/SysML association expressing a logical association|
+|Generalization|-|SpecIF:isSpecializationOf|OMG:UML:2.5.1:Generalization|UML/SysML generalization ('inheritance relation')|
 |Dependency|-|SpecIF:dependsOn|OMG:UML:2.5.1:Dependency|UML/SysML dependency|
 |Dependency|satisfy|oslc_rm:satisfies|OMG:UML:2.5.1:Dependency|SysML satisfy connection|
 |Dependency|verify|SysML:verifies|OMG:UML:2.5.1:Dependency|SysML verify connection|

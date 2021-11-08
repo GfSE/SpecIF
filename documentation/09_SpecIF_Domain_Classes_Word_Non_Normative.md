@@ -49,7 +49,7 @@
 |                 |                    |          | <p>VDA:OemStatus [PC-OemStatus 1.1]</p>                                                    |
 |                 |                    |          | <p>VDA:OemComment [PC-OemComment 1.1]</p>                                                  |
 +-----------------+--------------------+----------+--------------------------------------------------------------------------------------------+
-| VDA:Feature     | RC-VDA_Feature     | 1.1      | A 'VDA:Feature' is a Feature with automotiev specific properties.                          |
+| VDA:Feature     | RC-VDA_Feature     | 1.1      | A 'VDA:Feature' is a Feature with automotive specific properties.                          |
 |                 |                    |          | <p>Property classes:</p>                                                                   |
 |                 |                    |          | <p>VDA:SupplierStatus [PC-SupplierStatus 1.1]</p>                                          |
 |                 |                    |          | <p>VDA:SupplierComment [PC-SupplierComment 1.1]</p>                                        |
@@ -173,54 +173,52 @@
 ## Domain 10: Vocabulary Definition
 
 ### Resource classes of domain 10: Vocabulary Definition
-+----------------------+------------------+----------+------------------------------------------------------------------------------------+
-| title                | id               | revision | description                                                                        |
-+======================+==================+==========+====================================================================================+
-| SpecIF:ResourceTerm  | RC-ResourceTerm  | 1.1      | A term for resources (objects, entities) belonging to the SpecIF vocabulary        |
-|                      |                  |          | <p>Property classes:</p>                                                           |
-|                      |                  |          | <p>dcterms:title [PC-Name 1.1]</p>                                                 |
-|                      |                  |          | <p>dcterms:description [PC-Description 1.1]</p>                                    |
-|                      |                  |          | <p>SpecIF:Origin [PC-Origin 1.1]</p>                                               |
-|                      |                  |          | <p>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</p>                             |
-+----------------------+------------------+----------+------------------------------------------------------------------------------------+
-| SpecIF:PredicateTerm | RC-PredicateTerm | 1.1      | A term for statements (relations) belonging to the SpecIF vocabulary               |
-|                      |                  |          | <p>Property classes:</p>                                                           |
-|                      |                  |          | <p>dcterms:title [PC-Name 1.1]</p>                                                 |
-|                      |                  |          | <p>dcterms:description [PC-Description 1.1]</p>                                    |
-|                      |                  |          | <p>SpecIF:Origin [PC-Origin 1.1]</p>                                               |
-|                      |                  |          | <p>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</p>                             |
-+----------------------+------------------+----------+------------------------------------------------------------------------------------+
-| SpecIF:PropertyTerm  | RC-PropertyTerm  | 1.1      | A term for user-defined properties (attributes) belonging to the SpecIF vocabulary |
-|                      |                  |          | <p>Property classes:</p>                                                           |
-|                      |                  |          | <p>dcterms:title [PC-Name 1.1]</p>                                                 |
-|                      |                  |          | <p>dcterms:description [PC-Description 1.1]</p>                                    |
-|                      |                  |          | <p>SpecIF:Origin [PC-Origin 1.1]</p>                                               |
-|                      |                  |          | <p>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</p>                             |
-+----------------------+------------------+----------+------------------------------------------------------------------------------------+
-| SpecIF:ValueTerm     | RC-ValueTerm     | 1.1      | A term for property values belonging to the SpecIF vocabulary                      |
-|                      |                  |          | <p>Property classes:</p>                                                           |
-|                      |                  |          | <p>dcterms:title [PC-Name 1.1]</p>                                                 |
-|                      |                  |          | <p>dcterms:description [PC-Description 1.1]</p>                                    |
-|                      |                  |          | <p>SpecIF:Origin [PC-Origin 1.1]</p>                                               |
-|                      |                  |          | <p>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</p>                             |
-+----------------------+------------------+----------+------------------------------------------------------------------------------------+
++---------------------------+------------------+----------+------------------------------------------------------------------------------------+
+| title                     | id               | revision | description                                                                        |
++===========================+==================+==========+====================================================================================+
+| SpecIF:TermResourceClass  | RC-ResourceTerm  | 1.1      | A term for resources (objects, entities) belonging to the SpecIF vocabulary        |
+|                           |                  |          | <p>Property classes:</p>                                                           |
+|                           |                  |          | <p>dcterms:title [PC-Name 1.1]</p>                                                 |
+|                           |                  |          | <p>dcterms:description [PC-Description 1.1]</p>                                    |
+|                           |                  |          | <p>SpecIF:Origin [PC-Origin 1.1]</p>                                               |
+|                           |                  |          | <p>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</p>                             |
++---------------------------+------------------+----------+------------------------------------------------------------------------------------+
+| SpecIF:TermStatementClass | RC-PredicateTerm | 1.1      | A term for statements (relations) belonging to the SpecIF vocabulary               |
+|                           |                  |          | <p>Property classes:</p>                                                           |
+|                           |                  |          | <p>dcterms:title [PC-Name 1.1]</p>                                                 |
+|                           |                  |          | <p>dcterms:description [PC-Description 1.1]</p>                                    |
+|                           |                  |          | <p>SpecIF:Origin [PC-Origin 1.1]</p>                                               |
+|                           |                  |          | <p>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</p>                             |
++---------------------------+------------------+----------+------------------------------------------------------------------------------------+
+| SpecIF:PropertyTerm       | RC-TermProperty  | 1.1      | A term for user-defined properties (attributes) belonging to the SpecIF vocabulary |
+|                           |                  |          | <p>Property classes:</p>                                                           |
+|                           |                  |          | <p>dcterms:title [PC-Name 1.1]</p>                                                 |
+|                           |                  |          | <p>dcterms:description [PC-Description 1.1]</p>                                    |
+|                           |                  |          | <p>SpecIF:Origin [PC-Origin 1.1]</p>                                               |
+|                           |                  |          | <p>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</p>                             |
++---------------------------+------------------+----------+------------------------------------------------------------------------------------+
+| SpecIF:TermPropertyValue  | RC-ValueTerm     | 1.1      | A term for property values belonging to the SpecIF vocabulary                      |
+|                           |                  |          | <p>Property classes:</p>                                                           |
+|                           |                  |          | <p>dcterms:title [PC-Name 1.1]</p>                                                 |
+|                           |                  |          | <p>dcterms:description [PC-Description 1.1]</p>                                    |
+|                           |                  |          | <p>SpecIF:Origin [PC-Origin 1.1]</p>                                               |
+|                           |                  |          | <p>SpecIF:LifeCycleStatus [PC-LifeCycleStatus 1.1]</p>                             |
++---------------------------+------------------+----------+------------------------------------------------------------------------------------+
 
 ### Statement classes of domain 10: Vocabulary Definition
-+---------------------------+--------------------------+----------+----------------------------------------------------------------------------------+
-| title                     | id                       | revision | description                                                                      |
-+===========================+==========================+==========+==================================================================================+
-| SpecIF:isSynonymOf        | SC-isSynonymousResource  | 1.0      | Synonymous resource-term                                                         |
-+---------------------------+--------------------------+----------+----------------------------------------------------------------------------------+
-| SpecIF:isSynonymOf        | SC-isSynonymousPredicate | 1.0      | Synonymous predicate-term                                                        |
-+---------------------------+--------------------------+----------+----------------------------------------------------------------------------------+
-| SpecIF:isSynonymOf        | SC-isSynonymousProperty  | 1.0      | Synonymous property-term                                                         |
-+---------------------------+--------------------------+----------+----------------------------------------------------------------------------------+
-| SpecIF:isSynonymOf        | SC-isSynonymousValue     | 1.0      | Synonymous value-term                                                            |
-+---------------------------+--------------------------+----------+----------------------------------------------------------------------------------+
-| SpecIF:isInverseOf        | SC-isInverseOf           | 1.0      | Two terms are the inverse of each other, such as 'contains' and 'isContainedBy'. |
-+---------------------------+--------------------------+----------+----------------------------------------------------------------------------------+
-| SpecIF:isSpecialisationOf | SC-isSpecialisationOf    | 1.0      | A term is a specialization of another, such as 'Passenger Car' and 'Vehicle'.    |
-+---------------------------+--------------------------+----------+----------------------------------------------------------------------------------+
++--------------------+--------------------------+----------+----------------------------------------------------------------------------------+
+| title              | id                       | revision | description                                                                      |
++====================+==========================+==========+==================================================================================+
+| SpecIF:isSynonymOf | SC-isSynonymousResource  | 1.0      | Synonymous resource-term                                                         |
++--------------------+--------------------------+----------+----------------------------------------------------------------------------------+
+| SpecIF:isSynonymOf | SC-isSynonymousPredicate | 1.0      | Synonymous predicate-term                                                        |
++--------------------+--------------------------+----------+----------------------------------------------------------------------------------+
+| SpecIF:isSynonymOf | SC-isSynonymousProperty  | 1.0      | Synonymous property-term                                                         |
++--------------------+--------------------------+----------+----------------------------------------------------------------------------------+
+| SpecIF:isSynonymOf | SC-isSynonymousValue     | 1.0      | Synonymous value-term                                                            |
++--------------------+--------------------------+----------+----------------------------------------------------------------------------------+
+| SpecIF:isInverseOf | SC-isInverseOf           | 1.0      | Two terms are the inverse of each other, such as 'contains' and 'isContainedBy'. |
++--------------------+--------------------------+----------+----------------------------------------------------------------------------------+
 
 ## Domain 11: Testing
 
