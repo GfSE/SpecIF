@@ -214,29 +214,24 @@ the figure is also used for the following examples.
 
 In the next three figures examples for the transformation of activity diagram elements are shown in a small context. 
 The example elements are an ActivityPartition, a DecisionNode and a MergeNode. 
-The first figure shows three Actions, two ControlFlows and a ActivityPartition in a SysML-diagram and in the SpecIF notation.
+The first figure shows three Actions, two ControlFlows and a ActivityPartition in a UML or SysML diagram and in the SpecIF notation.
 Actions are transformed into FMC:Actor resources as well as the activity partition. 
-For the assignment that "Action 2" is contained by the ActivityPartition a statement SpecIF:contains is generated in the transformation. 
-Since the Actions are connected by two ControlFlows there are SpecIF:precedes statements between the actions. 
+The graphical containment of *Action 2* in the ActivityPartition is transformed to a statement SpecIF:contains. 
 SpecIF:precedes represents a ControlFlow between two FMC:Actors.
 
 ![SysML Activity Partition](./images/06_UML_ActivityPartition.png) 
 ![SpecIF from SysML Activity Partition](./images/06_SpecIF_from_UML_ActivityPartition.png) 
 
 The following figure shows an example for the transformation of a DecisionNode. 
-The DecisionNode in the context has one  incoming ControlFlow from an action and two outgoing control flows to two actions. The DecisionNode is represented by a FMC:Actor
-and two FMC:Events in the SpecIF-Notation. 
-The statements between the resources are dependent on the types of the resources.
-For statements from a FMC:Actor to a FMC:Actor a SpecIF:precedes statement, 
-from a FMC:Actor to a FMC:Event a SpecIF:signals statement and from a FMC:Event to a FMC:Actor a SpecIF:triggers statement is used. 
+In the example, the DecisionNode has one incoming Control flow from *Action 1* and two outgoing control flows to *Action 2* and *Action 3*. 
+In SpecIF-Notation, the DecisionNode is represented by a *FMC:Actor* and a *FMC:Event* per decision case. 
+The control flows are again transformed to *SpecIF:precedes*.
 
 ![SysML DecisionNode](./images/06_UML_DecisionNode.png) 
 ![SpecIF from SysML DecisionNode](./images/06_SpecIF_from_UML_DecisionNode.png) 
 
-In a MergeNode two incoming activity flows are merged into one outgoing activity flow. 
-The DecisionNode is transformed into a FMC:Actor. Incoming and outgoing ControlFlows in the example are from FMC:Actor to FMC:Actor. 
-This results in SpecIF:precedes statements for the connection from the other elements to the FMC:Actor of the MergeNode. The same SpecIF representation is
-used for the transformation of JoinNodes and ForkNodes. 
+In a MergeNode two incoming activity flows are merged into one outgoing control flow. 
+The JoiningNode is transformed into a FMC:Actor and the control flows to *SpecIF:precedes*. 
 
 ![SysML Merge Node](./images/06_UML_MergeNode.png) 
 ![SpecIF from SysML Merge Node](./images/06_SpecIF_from_UML_MergeNode.png) 
