@@ -17,20 +17,22 @@ For introduction to the Business Process Model and Notation (BPMN), see the [BPM
 | group<sup>6</sup> | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 
 Where:
-- For all entities in the left column the namespace 'bpmn:' is used; the XML header defines ```targetNamespace="http://bpmn.io/schema/bpmn"```.
-- All SpecIF resource class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-YpyUlWVLwxYblBgWOr154btbA9u).
-- The original model element type is stored in a property named _dcterms:type_. 
+
+* For all entities in the left column the namespace 'bpmn:' is used; the XML header defines ```targetNamespace="http://bpmn.io/schema/bpmn"```.
+* All SpecIF resource class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-YpyUlWVLwxYblBgWOr154btbA9u).
+* The original model element type is stored in a property named _dcterms:type_. 
 
 Comments:
+
 1. The participants are transformed, but not the processes, for the following reasons:
-    - To our experience with different tools, there is no process without participant, but there can be participants without a process.
-	- Participants are source or target of messageFlows, but not the referenced processes.
-	- Thus, the role and need of a process in BPMN as implemented by the tools we know is unclear.
-1. A participant is also called a 'pool'.
-1. A lane is considered a responsible person or role, thus an FMC:Actor.
-1. Interestingly enough, in BPMN the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_ (rather than _dataObject_ or _dataStore_). Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
-1. A messageFlow between different processes is transformed to a _dataObject_ with _SpecIF:writes_ and _SpecIF:reads statements_ connecting to the sending resp. receiving process steps or events.
-1. Currently a _group_ is not represented as a SpecIF model element, because some (or even all) widely used BPMN modelers do not indicate explicitly in their BPMN-XML export, which activities or other are contained. Thus, the semantics of a group are not easily derived. The geometric coordinates of the diagram can be analyzed to identify contained elements of a group, of course: This is a development task to do.
+    * To our experience with different tools, there is no process without participant, but there can be participants without a process.
+	* Participants are source or target of messageFlows, but not the referenced processes.
+	* Thus, the role and need of a process in BPMN as implemented by the tools we know is unclear.
+2. A participant is also called a 'pool'.
+3. A lane is considered a responsible person or role, thus an FMC:Actor.
+4. Interestingly enough, in BPMN the name and other information are properties of _dataObjectReference_ resp. _dataStoreReference_ (rather than _dataObject_ or _dataStore_). Also the associations point to the references. Therefore, the references are transformed and the dcterms:type is anyways set to _dataObject_ resp. _dataStore_.
+5. A messageFlow between different processes is transformed to a _dataObject_ with _SpecIF:writes_ and _SpecIF:reads statements_ connecting to the sending resp. receiving process steps or events.
+6. Currently a _group_ is not represented as a SpecIF model element, because some (or even all) widely used BPMN modelers do not indicate explicitly in their BPMN-XML export, which activities or other are contained. Thus, the semantics of a group are not easily derived. The geometric coordinates of the diagram can be analyzed to identify contained elements of a group, of course: This is a development task to do.
 
 ### Statements
 
@@ -49,13 +51,14 @@ At present, the following statements are derived from BPMN diagrams, where the _
 | association | annotation _SpecIF:refersTo_ model-element | SpecIF:refersTo |  |
 
 Where:
-- For all entities in the left column the namespace 'bpmn:' is used; the XML header defines ```targetNamespace="http://bpmn.io/schema/bpmn"```.
-- 'model-element' is one of [ 'FMC:Actor', 'FMC:State', 'FMC:Event' ]
-- 'activity' is one of [ task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess ], thus a FMC:Actor.
-- 'data' is one of [ dataObjectReference, dataStoreReference ], thus a FMC:State.
-- 'event' is one of [ startEvent, intermediateThrowEvent, intermediateCatchEvent, boundaryEvent, endEvent ], thus a FMC:Event.
-- All SpecIF statement class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-blM4lfyHM55YlbfBZ3NWj4SYwa3).
-- The original model element type is stored in a property named _dcterms:type_. 
+
+* For all entities in the left column the namespace 'bpmn:' is used; the XML header defines ```targetNamespace="http://bpmn.io/schema/bpmn"```.
+* 'model-element' is one of [ 'FMC:Actor', 'FMC:State', 'FMC:Event' ]
+* 'activity' is one of [ task, manualTask, userTask, scriptTask, serviceTask, sendTask, receiveTask, callActivity, transaction, subProcess ], thus a FMC:Actor.
+* 'data' is one of [ dataObjectReference, dataStoreReference ], thus a FMC:State.
+* 'event' is one of [ startEvent, intermediateThrowEvent, intermediateCatchEvent, boundaryEvent, endEvent ], thus a FMC:Event.
+* All SpecIF statement class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-blM4lfyHM55YlbfBZ3NWj4SYwa3).
+* The original model element type is stored in a property named _dcterms:type_. 
  
 ### Example
 
@@ -68,9 +71,11 @@ The following SpecIF graph expresses the same:
 ![SpecIF from BPMN Clipping](./images/06_SpecIF_from_BPMN_Clipping.png)
 
 The full example can be inspected, here:
-- [Telephone Connection Request (BPMN-XML)](https://specif.de/examples/Telephone-Connection-Request.bpmn)
-- [Telephone Connection Request (specif)](https://specif.de/examples/Telephone-Connection-Request.specif)
-- [Telephone Connection Request (SpecIF-Viewer)](https://specif.de/apps/view#import=../examples/Telephone-Connection-Request.specif.zip)
+
+* [Telephone Connection Request (BPMN-XML)](https://specif.de/examples/Telephone-Connection-Request.bpmn)
+* [Telephone Connection Request (specif)](https://specif.de/examples/Telephone-Connection-Request.specif)
+* [Telephone Connection Request (SpecIF-Viewer)](https://specif.de/apps/view#import=../examples/Telephone-Connection-Request.specif.zip)
 
 ### Transformation Code
+
 Here you may look at the current code of the [BPMN to SpecIF transformation](https://github.com/GfSE/BPMN-SpecIF-Bridge/blob/master/source/js/BPMN2SpecIF.js).

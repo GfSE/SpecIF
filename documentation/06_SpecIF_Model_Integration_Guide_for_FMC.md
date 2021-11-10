@@ -9,6 +9,7 @@ The FMC Metamodel is given in [Knöpfel, Gröne, Tabeling: Fundamental Modeling 
 
 However, this Metamodel seems to be rather theoretic and it is perhaps not complete for practical purposes. 
 When analyzing, among others we have the following questions:
+
 - Why are some relations named as nouns, others as verbs (e.g. *"Observability"* vs. *"triggers"*).
 - Why is *Write access* an unambiguous mapping in one direction (as denoted by the arrow) and why not *Read access*?
 - Should the relation between *Location* and *Value* be named *has*?
@@ -28,6 +29,7 @@ We will show in the following the mapping of the entities and relationships real
 |  | [SpecIF:Collection](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-MCUw5EHwNYxa9wqMtctM4J2A2G8) |
 
 Where:
+
 - All resource class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-YpyUlWVLwxYblBgWOr154btbA9u).
 - The original model element type is stored in a property named _dcterms:type_. 
 
@@ -49,6 +51,7 @@ Where:
 | Precedence | A model-element precedes a model-element | SpecIF:precedes |  |
 
 Where:
+
 - 'model-element' is one of [ 'FMC:Actor', 'FMC:State', 'FMC:Event' ].
 - All statement class terms are defined in the [Vocabulary](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-blM4lfyHM55YlbfBZ3NWj4SYwa3).
 - The original model element type is stored in a property named _dcterms:type_. 
