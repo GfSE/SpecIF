@@ -31,7 +31,7 @@ The idea behind using just these three elements is, that all kinds of structural
 An example taken from structural modeling are Component Diagrams in UML or Internal Block Diagrams in SysML.
 As an example of behavioral modeling, Petri-Nets consist of transitions (actors) and places (states). 
 
-Hereby the components are active elements (represented as SpecIF:Actor). Cecause the components are active system elements, 
+Hereby the components are active elements (represented as SpecIF:Actor). Because the components are active system elements, 
 they are able to change the system state.
 Passive elements (represented as SpecIF:State) may represent data, like UML-object-elements, whose attributes are mapped to state elements, 
 because they represent a current system state by their attribute values.
