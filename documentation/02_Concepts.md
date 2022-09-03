@@ -215,24 +215,35 @@ definition supersedes a more general one. If no preferred language is specified,
 
 ## Versioning
 
-SpecIF supports versioning for all kinds of SpecIF data like data types and class definitions as well as resource and statement data. It is not required to store SpecIF files in a separate version control system (e.g. Git or SVN), because SpecIF includes versioning concepts and each element has revision information.
+SpecIF supports versioning for all kinds of SpecIF elements like data types and class definitions as well as resources and statements. 
+It is not required to store SpecIF files in a separate version control system (e.g. Git or SVN), because SpecIF has a native versioning concept 
+and each element may have revision information.
 
-If a change for a SpecIF element is initiated and the used tool supports the versioning concept of SpecIF, the chosen element is not changed. Instead a copy of the chosen element is created and then the change is applied to this copy. The copy element is saved as a revision with the same element ID, but a different revision ID. The new element revision must include a reference to the revision ID of the original element.
+If the used tool supports the SpecIF versioning concept and a SpecIF element is updated, the existing data element persists. 
+A new revision of the chosen element is created and change information is applied: The new data element is saved with the 
+same element ID, but a different revision ID. The new revision shall also include a reference to the previous revision and a current time stamp in attribute 'changedAt'.
 
-This leads to the following SpecIF-versioning rules:
+The following rules apply to SpecIF revisions:
 
-* Multiple revisions of a SpecIF element have the same element ID, but each revision must have a different unique *revision ID*.
-* Each SpecIF element shall have zero, one or two entries with a revision ID in the JSON-property *replaces*.
-* If an element has no replaces entry, it is the first revision.
-* If an element has one replaces entry, it is the successor of the revision given in the replaces entry.
-* If an element has two replaces entries, it is the merge result of the two elements given in the replaces entry.
+* Multiple revisions of a given SpecIF element have the same element ID, but each revision must have a different *revision* identifier (of type string). 
+The combination of *id* and *revision*, called *key*, must be unique. The same revision identifier may be used for elements having a different *id*.
+* Each SpecIF element shall have zero, one or two entries with a revision identifier in the native attribute *replaces*.
+* If an element has no entry in the replaces list, it is the first revision.
+* If an element has one entry in the replaces list, it is the successor of the revision given in the entry.
+* If an element has two entries in the replaces list, it is the merge result of the two elements given in the replaces list.
+* Of course, any entry in the replaces list must point to a revision of an element with the same *id*.
+* An partial export from a complete SpecIF repository must conform to the SpecIF schema, but it is not necessary that all past revisions be present. 
+In other words, an entry in the replaces list of an element may point to a revision which is not present in the partial export. 
+(Special rules will be developed for handling partial exports and for re-importing as well as merging them with the complete repository.)
 
 ![Versioning in SpecIF](./images/SpecIfVersioning.png)
 
-The figure above shows an example of the different versioning and revision scenarios in SpecIF using an example of a resource element. The resource element has the ID "ABC". Each revision of this resource has the same ID but different revision IDs and replaces references. 
+The figure above shows an example of the different versioning scenarios in SpecIF using an example of a resource element. 
+The resource element has the *id* "ABC". Each revision of this resource has the same *id* but different revision IDs and replaces references. 
 
 With this concept is it is possible to support the concepts of linear revisioning, branching, and merging. 
-A typical application scenario is a data export of PLM data from a source data provider, parallel changes from multiple stakeholders and the reintegration of the data into the source data provider.
+A typical application scenario is a data export of PLM data from a source data provider, parallel changes from multiple stakeholders 
+and the reintegration of the data into the source data provider.
 
 ## Semantics
 
