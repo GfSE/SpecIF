@@ -241,14 +241,14 @@ The *PropertyClass* has the following attributes:
 
 A *ResourceClass* is used to define the type of a SpecIF resource instance. 
 SpecIF resource classes can inherit properties from othe resource classes. 
-Inheritance is indicated by an attribute *extends*, where it can extend other existent resource class elements. 
+Inheritance is indicated by an attribute *extends* pointing to other existent resource class elements. 
 Properties of the inherited class apply plus the properties defined by the given class itself - just like inheritance concepts in object oriented data modeling and programming.
 
 The *ResourceClass* has the following attributes:
 
 * *title: string* - A unique name for the defined ResourceClass (e.g. 'IREB:Requirement').
 * *description: MultilanguageText[]* - A human readable description of the data type for documentation purposes.
-* *icon: string* - An icon definition usable by authoring tools for resources. This can be a character, an UTF-8 code of a symbol or an image encoded as Base64 data URL.
+* *icon: string* - An icon definition usable by authoring tools for resources. This can be a (short) character string, a UTF-8 code of a symbol or an image encoded as Base64 data URL.
 * *isHeading: bool* - Indicates that the defined resource is a heading.
 * *instantiation: InstantiationTypes* - Values: 'user' and/or 'system'. Indicates whether an instance of the class is created automatically, manually or both. All is allowed by default. The class is abstract and cannot be instantiated, if the value is set to 'none'.
 * *extends* - Reference to a parent resource class element when inheritance is used in the data definition. 
@@ -260,8 +260,8 @@ The *ResourceClass* has the following attributes:
 
 A *StatementClass* defines the type of a SpecIF statement instance. Inheritance from other statement classes using the *extends* attribute is possible, as well.
 Statements are the edges in a SpecIF graph and are in fact semantic relations between resources.
-A statement has two ends called *subject* and *object*. An example is "system-component IJK *satisfies* requirement 345".
-A StatementClass allows the definition of eligible resource classes for the subject an object of the statement instances. 
+A statement has two ends called *subject* and *object*. An example is "system-component-IJK *satisfies* requirement-345".
+A StatementClass may define eligible resource classes for the subject an object of the statement instances. 
 This is done by referencing the allowed subject ResourceClass elements and object ResourceClass elements. 
 Restricting the eligible resource classes forboth subject and object of a statement can effectively exclude meaningless, misleading or even false statements.
 
