@@ -239,10 +239,10 @@ The *PropertyClass* has the following attributes:
 
 ![The metaclass *ResourceClass*](./images/Metaclass_ResourceClass.png)
 
-A *ResourceClass* is used to define the type of a resource element. 
-In SpecIF the concept of inheritance is supported for data type definition. 
-The resource class has an attribute *extends*, where it can extend other existent resource class elements. 
-New properties are added to the existing ones from the extended class - as known from inheritance concepts in object oriented data modeling and programming.
+A *ResourceClass* is used to define the type of a SpecIF resource instance. 
+SpecIF resource classes can inherit properties from othe resource classes. 
+Inheritance is indicated by an attribute *extends*, where it can extend other existent resource class elements. 
+Properties of the inherited class apply plus the properties defined by the given class itself - just like inheritance concepts in object oriented data modeling and programming.
 
 The *ResourceClass* has the following attributes:
 
@@ -258,7 +258,7 @@ The *ResourceClass* has the following attributes:
 
 ![The metaclass *StatementClass*](./images/Metaclass_StatementClass.png)
 
-A *StatementClass* defines the data type definition of a SpecIF statement.  
+A *StatementClass* defines the type of a SpecIF statement instance. Inheritance from other statement classes using the *extends* attribute is possible, as well.
 Statements are the edges in a SpecIF graph and are in fact semantic relations between resources.
 A statement has two ends called *subject* and *object*. An example is "system-component IJK *satisfies* requirement 345".
 A StatementClass allows the definition of eligible resource classes for the subject an object of the statement instances. 
