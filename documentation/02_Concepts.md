@@ -227,19 +227,19 @@ The following rules apply to SpecIF revisions:
 
 * Multiple revisions of a given SpecIF element have the same element ID, but each revision must have a different *revision* identifier (of type string). 
 The combination of *id* and *revision*, called *key*, must be unique. The same revision identifier may be used for elements having a different *id*.
-* Each SpecIF element shall have zero, one or two entries with a revision identifier in the native attribute *replaces*.
-* If an element has no entry in the replaces list, it is the first revision.
-* If an element has one entry in the replaces list, it is the successor of the revision given in the entry.
-* If an element has two entries in the replaces list, it is the merge result of the two elements given in the replaces list.
+* Each SpecIF element has a native attribute *replaces* with zero, one or two entries; these are revision identifiers of the previous element revision(s).
+* If an element has no entry in the *replaces* list, it is the first revision.
+* If an element has one entry in the *replaces* list, it is the successor of the revision given in the entry.
+* If an element has two entries in the *replaces' list, it is the merge result of the two elements given.
 * Of course, any entry in the replaces list must point to a revision of an element with the same *id*.
-* An partial export from a complete SpecIF repository must conform to the SpecIF schema, but it is not necessary that all past revisions be present. 
+* A partial export from a complete SpecIF repository must conform to the SpecIF schema, but it is not necessary that all past revisions be present. 
 In other words, an entry in the replaces list of an element may point to a revision which is not present in the partial export. 
 (Special rules will be developed for handling partial exports and for re-importing as well as merging them with the complete repository.)
 
 ![Versioning in SpecIF](./images/SpecIfVersioning.png)
 
 The figure above shows an example of the different versioning scenarios in SpecIF using an example of a resource element. 
-The resource element has the *id* "ABC". Each revision of this resource has the same *id* but different revision IDs and replaces references. 
+The resource element has the *id* "ABC". Each revision of this resource has the same *id* but different revision identifiers and references in the *replaces* list. 
 
 With this concept is it is possible to support the concepts of linear revisioning, branching, and merging. 
 A typical application scenario is a data export of PLM data from a source data provider, parallel changes from multiple stakeholders 
