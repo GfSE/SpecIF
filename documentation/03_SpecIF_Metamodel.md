@@ -215,8 +215,11 @@ It is possible to restrict the possible values for a data type.
 Enumerated data types can be defined and used in this manner.
 The allowed values are defined by the attribute *enumeration* using a list of *EnumeratedValue* elements.
 
-Because of the fact, that different data types are allowed for an enumeration definition, it is possible to define for example a set of strings as enumeration or a set of numbers etc.
+Enumerations may be defined for all data types (except for *boolean* which is an enumeration itself), so it is possible to define 
+a set of strings as enumeration, a set of numbers or a set of any other base type.
 This might be helpful for example to define a data type for story points used in agile project management, often defined as Fibonacci numbers.
+
+Note that in a SpecIF data set the values of all data types are represented as strings, even the numbers. So, a SpecIF *value* is always a string, no matter which dataType it has.
 
 
 ### PropertyClass
@@ -238,34 +241,39 @@ The *PropertyClass* has the following attributes:
 
 A *ResourceClass* is used to define the type of a resource element. 
 In SpecIF the concept of inheritance is supported for data type definition. 
-The resource class has an attribute *extends*, where it can extend other existant resource class elements. 
-It is possible to add new properties and reuse the existing ones from the base elements - as known from inheritance concepts in object oriented data modeling and programming.
+The resource class has an attribute *extends*, where it can extend other existent resource class elements. 
+New properties are added to the existing ones from the extended class - as known from inheritance concepts in object oriented data modeling and programming.
 
 The *ResourceClass* has the following attributes:
 
 * *title: string* - A unique name for the defined ResourceClass (e.g. 'IREB:Requirement').
 * *description: MultilanguageText[]* - A human readable description of the data type for documentation purposes.
-* *icon: string* - An icon definition usable by authoring tools for resources. This can be a language code of a unicode symbol or a base64 encoded image.
+* *icon: string* - An icon definition usable by authoring tools for resources. This can be a character, an UTF-8 code of a symbol or an image encoded as Base64 data URL.
 * *isHeading: bool* - Indicates that the defined resource is a heading.
 * *instantiation: InstantiationTypes* - Values: 'user' and/or 'system'. Indicates whether an instance of the class is created automatically, manually or both. All is allowed by default. The class is abstract and cannot be instantiated, if the value is set to 'none'.
 * *extends* - Reference to a parent resource class element when inheritance is used in the data definition. 
-* *propertyClasses* - A list of property class references to define which properties shall be used for the defined resource type. 
+* *propertyClasses* - A list of property class references to define which properties shall be used for the given resource class. 
  
 ### StatementClass
 
 ![The metaclass *StatementClass*](./images/Metaclass_StatementClass.png)
 
-A *StatementClass* inherits the ResourceClass and defines the data type definition of a SpecIF statement. 
-Statements are the edges in a SpecIF graph data structure. 
-A statement has two ends called *subject* and *object*.  
-The StatementClass allows the definition of possible resource types for the subject an object elements of the statement. 
-This is done by referencing the allowed subject ResourceClass elements and object ResourceClass elements.
+A *StatementClass* defines the data type definition of a SpecIF statement.  
+Statements are the edges in a SpecIF graph and are in fact semantic relations between resources.
+A statement has two ends called *subject* and *object*. An example is "system-component IJK *satisfies* requirement 345".
+A StatementClass allows the definition of eligible resource classes for the subject an object of the statement instances. 
+This is done by referencing the allowed subject ResourceClass elements and object ResourceClass elements. 
+Restricting the eligible resource classes forboth subject and object of a statement can effectively exclude meaningless, misleading or even false statements.
 
-The StatementClass has the following attributes:
+The StatementClass has the same attributes as a ResourceClass and in addition:
 
-* *isUndirected: bool* - This flag indicates that a statement defined by this statement class has no direction. It can be used and navigated in both directions.
-* *subjectClasses* - A collection of references to ResourceClass elements to define the allowed types for the statement subject.
-* *objectClasses* - A collection of references to ResourceClass elements to define the allowed types for the statement object. 
+* *isUndirected: bool* - This flag indicates that a statement defined by this statement class has no direction. 
+The 'subject' and 'object' of the statement are interchangeable without changing the meaning. 
+For example, if two terms represented as a resource are synonyms, a statement indicating that fact is undirected.
+* *subjectClasses* - A collection of references to ResourceClass elements to define the allowed classes for the statement's subject. 
+If the *subjectClasses* list is missing, subjects of all resource classes are eligible. If it is present, it may not be empty.
+* *objectClasses* - A collection of references to ResourceClass elements to define the allowed classes for the statement's object.
+If the *objectClasses* list is missing, subjects of all resource classes are eligible. If it is present, it may not be empty. 
 
 ### Property
 
