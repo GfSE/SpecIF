@@ -225,8 +225,8 @@ same element ID, but a different revision ID. The new revision shall also includ
 
 The following rules apply to SpecIF revisions:
 
-* Multiple revisions of a given SpecIF element have the same element ID, but each revision must have a different *revision* identifier (of type string). 
-The combination of *id* and *revision*, called *key*, must be unique. The same revision identifier may be used for elements having a different *id*.
+* Multiple revisions of a given SpecIF element have the same element *id*, but each revision must have a different *revision* identifier (of type string). 
+The combination of *id* and *revision*, called *key*, must be unique. Hence, the same revision identifier may be used for elements having a different *id*.
 * Each SpecIF element has a native attribute *replaces* with zero, one or two entries; these are revision identifiers of the previous element revision(s).
 * If an element has no entry in the *replaces* list, it is the first revision.
 * If an element has one entry in the *replaces* list, it is the successor of the revision given in the entry.
