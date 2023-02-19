@@ -1,4 +1,4 @@
-﻿# SpecIF Metamodel
+# SpecIF Metamodel
 
 This section describes the SpecIF metamodel used to define the SpecIF syntax.
 
