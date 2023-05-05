@@ -1,224 +1,501 @@
 {
-  "$schema": "https://specif.de/v1.0/schema.json",
-  "id": "_6C2F780D-108C-4CFF-8AC6-E098CB4C8986",
-  "title": "SpecIF statement class definitions for domain 03-Model Integration",
-  "isExtension": true,
-  "createdAt": "2020-02-16T19:54:35.2134487+01:00",
-  "dataTypes": [],
-  "propertyClasses": [],
-  "resourceClasses": [],
-  "statementClasses": [
-    {
-      "id": "SC-shows",
-      "title": "SpecIF:shows",
-      "description": "Statement: Plan resp. diagram shows Model-Element",
-      "revision": "1",
-      "replaces": [],
-      "instantiation": [
-        "auto"
-      ],
-      "subjectClasses": [
+    "$schema": "https://specif.de/v1.1/schema.json",
+    "id": "_6C2F780D-108C-4CFF-8AC6-E098CB4C8986",
+    "title": [
         {
-          "id": "RC-Diagram",
-          "revision": "1"
+            "text": "SpecIF statement class definitions for domain 03-Model Integration"
         }
-      ],
-      "objectClasses": [
+    ],
+    "isExtension": true,
+    "createdAt": "2020-02-16T19:54:35.2134487+01:00",
+    "dataTypes": [],
+    "propertyClasses": [],
+    "resourceClasses": [],
+    "statementClasses": [
         {
-          "id": "RC-Actor",
-          "revision": "1"
+            "id": "SC-shows",
+            "title": "SpecIF:shows",
+            "description": [
+                {
+                    "text": "Statement: Plan resp. diagram shows model element."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Diagram",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "RC-State",
-          "revision": "1"
+            "id": "SC-contains",
+            "title": "SpecIF:contains",
+            "description": [
+                {
+                    "text": "Statement: Model element contains model element."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "RC-Event",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "SC-contains",
-      "title": "SpecIF:contains",
-      "description": "Statement: Model-Element contains Model-Element",
-      "revision": "1",
-      "replaces": [],
-      "instantiation": [
-        "auto",
-        "user"
-      ],
-      "subjectClasses": [
-        {
-          "id": "RC-Actor",
-          "revision": "1"
+            "id": "SC-contains",
+            "title": "SpecIF:contains",
+            "description": [
+                {
+                    "text": "Statement: Subject contains object."
+                }
+            ],
+            "revision": "1.2",
+            "replaces": [ "1.1" ],
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "changedAt": "2023-02-09T09:42:00+02:00"
         },
         {
-          "id": "RC-State",
-          "revision": "1"
+            "id": "SC-orderedContains",
+            "title": "SpecIF:orderedContains",
+            "description": [
+                {
+                    "text": "Statement: Model element contains model element in a specific order, defined by the index property."
+                }
+            ],
+            "revision": "1.2",
+            "replaces": [],
+            "extends": {
+                "id": "SC-contains",
+                "revision": "1.1"
+            },
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Index",
+                    "revision": "1.2"
+                }
+            ],
+            "changedAt": "2021-11-22T08:59:00+02:00"
         },
         {
-          "id": "RC-Event",
-          "revision": "1"
-        }
-      ],
-      "objectClasses": [
-        {
-          "id": "RC-Actor",
-          "revision": "1"
+            "id": "SC-serves",
+            "title": "SpecIF:serves",
+            "description": [
+                {
+                    "text": "Statement: An actor serves an actor."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-11-07T19:59:00+02:00"
         },
         {
-          "id": "RC-State",
-          "revision": "1"
+            "id": "SC-stores",
+            "title": "SpecIF:stores",
+            "description": [
+                {
+                    "text": "Statement: Actor (role, function) writes and reads state (information)."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
         },
         {
-          "id": "RC-Event",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "SC-stores",
-      "title": "SpecIF:stores",
-      "description": "Statement: Actor (Role, Function) writes and reads State (Information)",
-      "revision": "1",
-      "replaces": [],
-      "instantiation": [
-        "auto"
-      ],
-      "subjectClasses": [
+            "id": "SC-writes",
+            "title": "SpecIF:writes",
+            "description": [
+                {
+                    "text": "Statement: Actor (role, function) writes state (information)."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
         {
-          "id": "RC-Actor",
-          "revision": "1"
-        }
-      ],
-      "objectClasses": [
+            "id": "SC-reads",
+            "title": "SpecIF:reads",
+            "description": [
+                {
+                    "text": "Statement: Actor (role, function) reads state (information)."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
         {
-          "id": "RC-State",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "SC-writes",
-      "title": "SpecIF:writes",
-      "description": "Statement: Actor (Role, Function) writes State (Information)",
-      "revision": "1",
-      "replaces": [],
-      "instantiation": [
-        "auto"
-      ],
-      "subjectClasses": [
+            "id": "SC-influences",
+            "title": "SpecIF:influences",
+            "description": [
+                {
+                    "text": "Statement: A state (information) influences a state (information)."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-11-07T19:59:00+02:00"
+        },
         {
-          "id": "RC-Actor",
-          "revision": "1"
-        }
-      ],
-      "objectClasses": [
+            "id": "SC-precedes",
+            "title": "SpecIF:precedes",
+            "description": [
+                {
+                    "text": "An FMC:Actor 'precedes' an FMC:Actor or an FMC:Actor 'precedes' an FMC:Event or an FMC:Event 'precedes' an FMC:Actor. The rdf:type property specifies if it is a simple precedes, a SpecIF:signals or a SpecIF:triggers."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "auto",
+                "user"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Type",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2020-02-17T20:32:25+02:00"
+        },
         {
-          "id": "RC-State",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "SC-reads",
-      "title": "SpecIF:reads",
-      "description": "Statement: Actor (Role, Function) reads State (Information)",
-      "revision": "1",
-      "replaces": [],
-      "instantiation": [
-        "auto"
-      ],
-      "subjectClasses": [
+            "id": "SC-satisfies",
+            "title": "oslc_rm:satisfies",
+            "description": [
+                {
+                    "text": "Statement: Model element satisfies requirement."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "user"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-Requirement",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2016-05-26T08:59:00+02:00"
+        },
         {
-          "id": "RC-Actor",
-          "revision": "1"
-        }
-      ],
-      "objectClasses": [
+            "id": "SC-allocates",
+            "title": "SpecIF:allocates",
+            "description": [
+                {
+                    "text": "Statement: Model element is allocated to model element. The semantics are equal to allocation in SysML or deployment relation in UML."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "user"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-03-30T08:59:00+02:00"
+        },
         {
-          "id": "RC-State",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2016-05-26T08:59:00+02:00"
-    },
-    {
-      "id": "SC-signals",
-      "title": "SpecIF:signals",
-      "description": "A FMC:Actor 'signals' a FMC:Event.",
-      "revision": "1",
-      "replaces": [],
-      "instantiation": [
-        "auto"
-      ],
-      "subjectClasses": [
+            "id": "SC-implements",
+            "title": "SpecIF:implements",
+            "description": [
+                {
+                    "text": "A FMC:Actor or FMC:State 'implements' a SpecIF:Feature."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [
+                "user"
+            ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-Feature",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-11-03T08:59:00+02:00"
+        },
         {
-          "id": "RC-Actor",
-          "revision": "1"
-        }
-      ],
-      "objectClasses": [
+            "id": "SC-isAssociatedWith",
+            "title": "SpecIF:isAssociatedWith",
+            "description": [
+                {
+                    "text": "The subject is associated with the object."
+                }
+            ],
+            "revision": "1.1",
+            "replaces": [],
+            "instantiation": [ "auto", "user" ],
+            "subjectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-Actor",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-State",
+                    "revision": "1.1"
+                },
+                {
+                    "id": "RC-Event",
+                    "revision": "1.1"
+                }
+            ],
+            "propertyClasses": [
+                {
+                    "id": "PC-Type",
+                    "revision": "1.1"
+                }
+            ],
+            "changedAt": "2021-11-01T08:59:00+02:00"
+        },
         {
-          "id": "RC-Event",
-          "revision": "1"
+            "id": "SC-isSpecializationOf",
+            "title": "SpecIF:isSpecializationOf",
+            "description": [
+                {
+                    "text": "A term is a specialization of another, such as 'Passenger Car' and 'Vehicle'."
+                }
+            ],
+            "instantiation": [ "user" ],
+            "revision": "1.0",
+            "replaces": [],
+            "changedAt": "2018-03-21T18:06:20+01:00",
+            "changedBy": "od",
+            "subjectClasses": [
+                {
+                    "id": "RC-ResourceTerm",
+                    "revision": "1.1"
+                }
+            ],
+            "objectClasses": [
+                {
+                    "id": "RC-ResourceTerm",
+                    "revision": "1.1"
+                }
+            ]
         }
-      ],
-      "changedAt": "2019-08-20T20:32:25+02:00"
-    },
-    {
-      "id": "SC-triggers",
-      "title": "SpecIF:triggers",
-      "description": "A FMC:Event 'trigers' an FMC:Actor.",
-      "revision": "1",
-      "replaces": [],
-      "instantiation": [
-        "auto"
-      ],
-      "subjectClasses": [
-        {
-          "id": "RC-Event",
-          "revision": "1"
-        }
-      ],
-      "objectClasses": [
-        {
-          "id": "RC-Actor",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2020-02-17T20:32:25+02:00"
-    },
-    {
-      "id": "SC-preceeds",
-      "title": "SpecIF:preceeds",
-      "description": "An FMC:Actor 'preceeds' an FMC:Actor.",
-      "revision": "1",
-      "replaces": [],
-      "instantiation": [
-        "auto"
-      ],
-      "subjectClasses": [
-        {
-          "id": "RC-Actor",
-          "revision": "1"
-        }
-      ],
-      "objectClasses": [
-        {
-          "id": "RC-Actor",
-          "revision": "1"
-        }
-      ],
-      "changedAt": "2020-02-17T20:32:25+02:00"
-    }
-  ],
-  "resources": [],
-  "statements": [],
-  "hierarchies": []
+    ],
+    "resources": [],
+    "statements": [],
+    "hierarchies": []
 }

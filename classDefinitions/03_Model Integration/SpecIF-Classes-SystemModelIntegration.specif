@@ -1,0 +1,1674 @@
+{
+  "@Context": "http://purl.org/dc/terms/",
+  "id": "P-SpecifClasses-Base-RequirementEngineering-SystemModelIntegration",
+  "$schema": "https://specif.de/v1.1/schema.json",
+  "title": [
+    {
+      "text": "SpecIF Classes for Base,Requirement Engineering,System Model Integration",
+      "format": "plain",
+      "language": "en"
+    }
+  ],
+  "description": [
+    {
+      "text": "A set of SpecIF Classes derived from a SpecIF Ontology for the domains Base,Requirement Engineering,System Model Integration.",
+      "format": "plain",
+      "language": "en"
+    }
+  ],
+  "generator": "SpecIF Modellintegrator und Editor",
+  "generatorVersion": "1.1.l",
+  "createdAt": "2023-04-11T08:33:48.657Z",
+  "rights": {
+    "title": "Creative Commons 4.0 CC BY-SA",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "dataTypes": [
+    {
+      "id": "DT-ShortString",
+      "changedAt": "2016-05-26T08:59:00+02:00",
+      "title": "String[256]",
+      "description": [
+        {
+          "text": "String with length <=256",
+          "format": "plain",
+          "language": "en"
+        }
+      ],
+      "revision": "1.1",
+      "type": "xs:string",
+      "maxLength": 256
+    },
+    {
+      "id": "DT-Text",
+      "changedAt": "2021-02-23T08:59:00+02:00",
+      "title": "Plain or formatted Text",
+      "description": [
+        {
+          "text": "A text string, plain or formatted with XHTML or markdown.",
+          "format": "plain",
+          "language": "en"
+        }
+      ],
+      "revision": "1.1",
+      "type": "xs:string"
+    },
+    {
+      "id": "DT-String-LE32",
+      "changedAt": "2023-02-11T08:59:00+02:00",
+      "title": "String[32]",
+      "description": [
+        {
+          "text": "String with length <=32"
+        }
+      ],
+      "revision": "1.3",
+      "type": "xs:string",
+      "maxLength": 32
+    },
+    {
+      "id": "DT-LifeCycleStatus",
+      "title": "SpecIF:LifecycleStatus",
+      "description": [
+        {
+          "text": "Text string with enumerated values for SpecIF:LifecycleStatus"
+        }
+      ],
+      "maxLength": 32,
+      "type": "xs:string",
+      "enumeration": [
+        {
+          "id": "V-LifeCycleStatus-0",
+          "value": [
+            {
+              "text": "SpecIF:LifecycleStatusInitial"
+            }
+          ]
+        },
+        {
+          "id": "V-LifeCycleStatus-1",
+          "value": [
+            {
+              "text": "SpecIF:LifecycleStatusDrafted"
+            }
+          ]
+        },
+        {
+          "id": "V-LifeCycleStatus-2",
+          "value": [
+            {
+              "text": "SpecIF:LifecycleStatusSubmitted"
+            }
+          ]
+        },
+        {
+          "id": "V-LifeCycleStatus-3",
+          "value": [
+            {
+              "text": "SpecIF:LifecycleStatusApproved"
+            }
+          ]
+        },
+        {
+          "id": "V-LifeCycleStatus-4",
+          "value": [
+            {
+              "text": "SpecIF:LifecycleStatusReady"
+            }
+          ]
+        },
+        {
+          "id": "V-LifeCycleStatus-5",
+          "value": [
+            {
+              "text": "SpecIF:LifecycleStatusDone"
+            }
+          ]
+        },
+        {
+          "id": "V-LifeCycleStatus-6",
+          "value": [
+            {
+              "text": "SpecIF:LifecycleStatusValidated"
+            }
+          ]
+        },
+        {
+          "id": "V-LifeCycleStatus-7",
+          "value": [
+            {
+              "text": "SpecIF:LifecycleStatusReleased"
+            }
+          ]
+        },
+        {
+          "id": "V-LifeCycleStatus-8",
+          "value": [
+            {
+              "text": "SpecIF:LifecycleStatusDeprecated"
+            }
+          ]
+        },
+        {
+          "id": "V-LifeCycleStatus-9",
+          "value": [
+            {
+              "text": "SpecIF:LifecycleStatusWithdrawn"
+            }
+          ]
+        },
+        {
+          "id": "V-LifeCycleStatus-10",
+          "value": [
+            {
+              "text": "SpecIF:LifecycleStatusPostponed"
+            }
+          ]
+        },
+        {
+          "id": "V-LifeCycleStatus-11",
+          "value": [
+            {
+              "text": "SpecIF:LifecycleStatusRejected"
+            }
+          ]
+        }
+      ],
+      "revision": "1.3",
+      "changedAt": "2023-02-26T14:43:10.458Z"
+    },
+    {
+      "id": "DT-Priority",
+      "title": "SpecIF:Priority",
+      "description": [
+        {
+          "text": "Text string with enumerated values for SpecIF:Priority"
+        }
+      ],
+      "maxLength": 32,
+      "type": "xs:string",
+      "enumeration": [
+        {
+          "id": "V-Priority-0",
+          "value": [
+            {
+              "text": "SpecIF:priorityHigh"
+            }
+          ]
+        },
+        {
+          "id": "V-Priority-1",
+          "value": [
+            {
+              "text": "SpecIF:priorityRatherHigh"
+            }
+          ]
+        },
+        {
+          "id": "V-Priority-2",
+          "value": [
+            {
+              "text": "SpecIF:priorityMedium"
+            }
+          ]
+        },
+        {
+          "id": "V-Priority-3",
+          "value": [
+            {
+              "text": "SpecIF:priorityRatherLow"
+            }
+          ]
+        },
+        {
+          "id": "V-Priority-4",
+          "value": [
+            {
+              "text": "SpecIF:priorityLow"
+            }
+          ]
+        }
+      ],
+      "revision": "1.3",
+      "changedAt": "2023-03-06T08:27:49.256Z"
+    },
+    {
+      "id": "DT-Discipline",
+      "title": "SpecIF:EngineeringDiscipline",
+      "description": [
+        {
+          "text": "Text string with enumerated values for SpecIF:EngineeringDiscipline"
+        }
+      ],
+      "maxLength": 32,
+      "type": "xs:string",
+      "enumeration": [
+        {
+          "id": "V-Discipline-0",
+          "value": [
+            {
+              "text": "SpecIF:EngineeringDisciplineMechanics"
+            }
+          ]
+        },
+        {
+          "id": "V-Discipline-1",
+          "value": [
+            {
+              "text": "SpecIF:EngineeringDisciplineElectronics"
+            }
+          ]
+        },
+        {
+          "id": "V-Discipline-2",
+          "value": [
+            {
+              "text": "SpecIF:EngineeringDisciplineSoftware"
+            }
+          ]
+        },
+        {
+          "id": "V-Discipline-3",
+          "value": [
+            {
+              "text": "SpecIF:EngineeringDisciplineSafety"
+            }
+          ]
+        },
+        {
+          "id": "V-Discipline-4",
+          "value": [
+            {
+              "text": "SpecIF:EngineeringDisciplineSecurity"
+            }
+          ]
+        }
+      ],
+      "revision": "1.3",
+      "changedAt": "2023-03-06T08:27:59.451Z"
+    },
+    {
+      "id": "DT-SpecifStakeholdergroup",
+      "title": "SpecIF:StakeholderGroup",
+      "description": [
+        {
+          "text": "Text string with enumerated values for SpecIF:StakeholderGroup"
+        }
+      ],
+      "maxLength": 32,
+      "type": "xs:string",
+      "enumeration": [
+        {
+          "id": "V-SpecifStakeholdergroup-0",
+          "value": [
+            {
+              "text": "SpecIF:StakeholderGroupRegulation"
+            }
+          ]
+        },
+        {
+          "id": "V-SpecifStakeholdergroup-1",
+          "value": [
+            {
+              "text": "SpecIF:StakeholderGroupBusiness"
+            }
+          ]
+        },
+        {
+          "id": "V-SpecifStakeholdergroup-2",
+          "value": [
+            {
+              "text": "SpecIF:StakeholderGroupUser"
+            }
+          ]
+        },
+        {
+          "id": "V-SpecifStakeholdergroup-3",
+          "value": [
+            {
+              "text": "SpecIF:StakeholderGroupOperation"
+            }
+          ]
+        }
+      ],
+      "revision": "1.3",
+      "changedAt": "2023-03-10T07:48:02.442Z"
+    },
+    {
+      "id": "DT-RequirementType",
+      "title": "IREB:RequirementType",
+      "description": [
+        {
+          "text": "Text string with enumerated values for IREB:RequirementType"
+        }
+      ],
+      "maxLength": 32,
+      "type": "xs:string",
+      "enumeration": [
+        {
+          "id": "V-RequirementType-0",
+          "value": [
+            {
+              "text": "SpecIF:Feature"
+            }
+          ]
+        },
+        {
+          "id": "V-RequirementType-1",
+          "value": [
+            {
+              "text": "SpecIF:UserStory"
+            }
+          ]
+        },
+        {
+          "id": "V-RequirementType-2",
+          "value": [
+            {
+              "text": "IREB:FunctionalRequirement"
+            }
+          ]
+        },
+        {
+          "id": "V-RequirementType-3",
+          "value": [
+            {
+              "text": "IREB:QualityRequirement"
+            }
+          ]
+        },
+        {
+          "id": "V-RequirementType-4",
+          "value": [
+            {
+              "text": "IREB:Constraint"
+            }
+          ]
+        }
+      ],
+      "revision": "1.3",
+      "changedAt": "2023-04-01T14:11:23.173Z"
+    }
+  ],
+  "propertyClasses": [
+    {
+      "id": "PC-Name",
+      "revision": "1.1",
+      "title": "dcterms:title",
+      "description": [
+        {
+          "text": "<p>A name given to the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/title\">DCMI</a></i>)</small></p><p>Title (reference: Dublin Core) of the resource represented as rich text in XHTML content. SHOULD include only content that is valid inside an XHTML 'span' element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>"
+        }
+      ],
+      "changedAt": "2023-02-26T14:32:21.640Z",
+      "dataType": {
+        "id": "DT-ShortString",
+        "revision": "1.1"
+      },
+      "format": "plain"
+    },
+    {
+      "id": "PC-Description",
+      "revision": "1.1",
+      "title": "dcterms:description",
+      "description": [
+        {
+          "text": "<p>An account of the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/description\">DCMI</a></i>)</small></p><p>Descriptive text (reference: Dublin Core) about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML 'div' element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>"
+        }
+      ],
+      "changedAt": "2023-02-26T14:37:25.217Z",
+      "dataType": {
+        "id": "DT-Text",
+        "revision": "1.1"
+      },
+      "format": "xhtml"
+    },
+    {
+      "id": "PC-Type",
+      "revision": "1.1",
+      "title": "dcterms:type",
+      "description": [
+        {
+          "text": "<p>The nature or genre of the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/type\">DCMI</a></i>)</small></p><p>Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</p><p>For example, a [[FMC:Actor]] may represent a <i>System Function</i>, a <i>System Component</i> or a <i>User Role</i>. Similarly, in the context of process modelling, a FMC:Actor may represent a <i>Process Step</i> or again a <i>User Role</i>. So, all of these are meaningful values for a FMC:Actor's property named dcterms:type.</p>"
+        }
+      ],
+      "changedAt": "2023-02-26T20:18:04.451Z",
+      "dataType": {
+        "id": "DT-ShortString",
+        "revision": "1.1"
+      },
+      "format": "plain"
+    },
+    {
+      "id": "PC-Diagram",
+      "revision": "1.1",
+      "title": "SpecIF:Diagram",
+      "description": [
+        {
+          "text": "One or more diagrams illustrating the resource."
+        }
+      ],
+      "changedAt": "2023-02-26T14:40:17.601Z",
+      "dataType": {
+        "id": "DT-Text",
+        "revision": "1.1"
+      },
+      "format": "xhtml",
+      "multiple": true
+    },
+    {
+      "id": "PC-Notation",
+      "revision": "1.3",
+      "title": "SpecIF:Notation",
+      "description": [
+        {
+          "text": "The notation used by a model diagram, e.g. 'BPMN 2.0', 'SysML Activity Diagram' or 'FMC Block Diagram'."
+        }
+      ],
+      "changedAt": "2023-02-26T21:06:48.930Z",
+      "dataType": {
+        "id": "DT-String-LE32",
+        "revision": "1.3"
+      },
+      "format": "plain"
+    },
+    {
+      "id": "PC-LifeCycleStatus",
+      "revision": "1.3",
+      "title": "SpecIF:LifecycleStatus",
+      "description": [
+        {
+          "text": "The 'Lifecycle Status' of the resource."
+        }
+      ],
+      "changedAt": "2023-02-26T14:43:10.458Z",
+      "dataType": {
+        "id": "DT-LifeCycleStatus",
+        "revision": "1.3"
+      },
+      "format": "plain"
+    },
+    {
+      "id": "PC-Priority",
+      "revision": "1.3",
+      "title": "SpecIF:Priority",
+      "description": [
+        {
+          "text": "Enumerated values for the 'Priority' of the resource."
+        }
+      ],
+      "changedAt": "2023-03-06T08:27:49.256Z",
+      "dataType": {
+        "id": "DT-Priority",
+        "revision": "1.3"
+      },
+      "format": "plain"
+    },
+    {
+      "id": "PC-Discipline",
+      "revision": "1.3",
+      "title": "SpecIF:EngineeringDiscipline",
+      "description": [
+        {
+          "text": "Enumerated values for the 'Engineering Discipline' addressed by the term."
+        }
+      ],
+      "changedAt": "2023-03-06T08:27:59.451Z",
+      "dataType": {
+        "id": "DT-Discipline",
+        "revision": "1.3"
+      },
+      "format": "plain",
+      "multiple": true
+    },
+    {
+      "id": "PC-SpecifStakeholdergroup",
+      "revision": "1.3",
+      "title": "SpecIF:StakeholderGroup",
+      "description": [
+        {
+          "text": "Enumerated values for the 'Stakehoder Group' addressed by the term."
+        }
+      ],
+      "changedAt": "2023-03-10T07:48:02.442Z",
+      "dataType": {
+        "id": "DT-SpecifStakeholdergroup",
+        "revision": "1.3"
+      },
+      "format": "plain"
+    },
+    {
+      "id": "PC-RequirementType",
+      "revision": "1.3",
+      "title": "IREB:RequirementType",
+      "description": [
+        {
+          "text": "Requirements are typically sub-classified into functional requirements ([[IREB:FunctionalRequirement]]), quality requirements ([[IREB:QualityRequirement]]) and constraints ([[IREB:Constraint]]). The latter two are also called non-functional requirements."
+        }
+      ],
+      "changedAt": "2023-04-01T14:11:23.173Z",
+      "dataType": {
+        "id": "DT-RequirementType",
+        "revision": "1.3"
+      },
+      "format": "plain"
+    }
+  ],
+  "resourceClasses": [
+    {
+      "id": "RC-Paragraph",
+      "revision": "1.1",
+      "title": "SpecIF:Paragraph",
+      "description": [
+        {
+          "text": "<p>A 'Paragraph' is an unspecified information in a document at any level.</p>"
+        }
+      ],
+      "changedAt": "2023-03-06T07:26:03.008Z",
+      "instantiation": [
+        "auto",
+        "user"
+      ],
+      "propertyClasses": [
+        {
+          "id": "PC-Name"
+        },
+        {
+          "id": "PC-Description"
+        },
+        {
+          "id": "PC-Diagram"
+        },
+        {
+          "id": "PC-Type"
+        }
+      ]
+    },
+    {
+      "id": "RC-SpecifModelelement",
+      "revision": "1.3",
+      "title": "SpecIF:ModelElement",
+      "changedAt": "2023-02-26T23:06:37.397Z",
+      "instantiation": [],
+      "propertyClasses": [
+        {
+          "id": "PC-Name"
+        },
+        {
+          "id": "PC-Description"
+        },
+        {
+          "id": "PC-Type"
+        }
+      ]
+    },
+    {
+      "id": "RC-SpecifOutline",
+      "revision": "1.3",
+      "extends": {
+        "id": "RC-Paragraph"
+      },
+      "title": "SpecIF:Outline",
+      "description": [
+        {
+          "text": "<p>A root of a document structure with references to resources.</p>"
+        }
+      ],
+      "changedAt": "2023-03-27T07:58:46.583Z",
+      "instantiation": [
+        "user"
+      ],
+      "isHeading": true,
+      "propertyClasses": [
+        {
+          "id": "PC-LifeCycleStatus"
+        }
+      ]
+    },
+    {
+      "id": "RC-Folder",
+      "revision": "1.1",
+      "extends": {
+        "id": "RC-Paragraph"
+      },
+      "title": "SpecIF:Heading",
+      "description": [
+        {
+          "text": "<p>A 'Heading' is a chapter title at any level.</p>"
+        }
+      ],
+      "changedAt": "2023-03-06T07:26:13.687Z",
+      "instantiation": [
+        "auto",
+        "user"
+      ],
+      "isHeading": true,
+      "propertyClasses": []
+    },
+    {
+      "id": "RC-SpecifView",
+      "revision": "1.3",
+      "extends": {
+        "id": "RC-Paragraph"
+      },
+      "title": "SpecIF:View",
+      "description": [
+        {
+          "text": "<p>A 'View' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.</p>"
+        }
+      ],
+      "changedAt": "2023-02-26T21:17:34.803Z",
+      "instantiation": [
+        "auto"
+      ],
+      "icon": "&#9635;",
+      "propertyClasses": [
+        {
+          "id": "PC-Notation"
+        }
+      ]
+    },
+    {
+      "id": "RC-Requirement",
+      "revision": "1.3",
+      "extends": {
+        "id": "RC-Paragraph"
+      },
+      "title": "IREB:Requirement",
+      "description": [
+        {
+          "text": "<p>A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.  <small>(<i>source: <a href=\"https://en.wikipedia.org/wiki/Requirement\">Wikipedia</a></i>)</small></p><p>Definition:</p><ol><li>A condition or capability needed by a user to solve a problem or achieve an objective.</li><li>A condition or capability that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed documents.</li><li>A documented representation of a condition or capability as in (1) or (2).</li></ol><p>Note: The definition above is the classic one from IEEE Std 610.12 of 1990. Alternatively, we also give a more modern definition:</p><ol><li>A need perceived by a stakeholder.</li><li>A capability or property that a system shall have.</li><li>A documented representation of a need, capability or property.</li></ol>"
+        }
+      ],
+      "changedAt": "2023-04-01T14:10:11.167Z",
+      "instantiation": [
+        "user"
+      ],
+      "icon": "❢",
+      "propertyClasses": [
+        {
+          "id": "PC-Priority"
+        },
+        {
+          "id": "PC-RequirementType"
+        },
+        {
+          "id": "PC-SpecifStakeholdergroup"
+        }
+      ]
+    },
+    {
+      "id": "RC-Actor",
+      "revision": "1.3",
+      "extends": {
+        "id": "RC-SpecifModelelement"
+      },
+      "title": "FMC:Actor",
+      "description": [
+        {
+          "text": "<p>An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.</p><p>It is advised to specify the particular use of FMC:Actor with a [[dcterms:type]] property. The values of that property can be defined terms, such as [[bpmn:timer]].</p>"
+        }
+      ],
+      "changedAt": "2023-02-26T21:19:26.072Z",
+      "instantiation": [
+        "auto"
+      ],
+      "icon": "&#9632;",
+      "propertyClasses": []
+    },
+    {
+      "id": "RC-State",
+      "revision": "1.3",
+      "extends": {
+        "id": "RC-SpecifModelelement"
+      },
+      "title": "FMC:State",
+      "description": [
+        {
+          "text": "<p>A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape.</p>"
+        }
+      ],
+      "changedAt": "2023-02-26T21:20:24.438Z",
+      "instantiation": [
+        "auto"
+      ],
+      "icon": "&#9679;",
+      "propertyClasses": []
+    },
+    {
+      "id": "RC-Event",
+      "revision": "1.3",
+      "extends": {
+        "id": "RC-SpecifModelelement"
+      },
+      "title": "FMC:Event",
+      "description": [
+        {
+          "text": "<p>An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.</p>"
+        }
+      ],
+      "changedAt": "2023-02-26T21:21:17.752Z",
+      "instantiation": [
+        "auto"
+      ],
+      "icon": "&#11047;",
+      "propertyClasses": []
+    },
+    {
+      "id": "RC-Collection",
+      "revision": "1.3",
+      "extends": {
+        "id": "RC-SpecifModelelement"
+      },
+      "title": "SpecIF:Collection",
+      "description": [
+        {
+          "text": "<p>A 'Collection' is a logic (often conceptual) group of resources linked with a [[SpecIF:contains]] statement. It corresponds to a <a href=\"https://camunda.com/bpmn/reference/\">'Group'</a> in BPMN Diagrams.</p><p>BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. <small>(<i>source: <a href=\"http://www.bpmn-tool.com/en/tutorial/\">BPMN Tool</a></i>)</small></p>"
+        }
+      ],
+      "changedAt": "2023-02-26T21:25:04.042Z",
+      "instantiation": [
+        "auto"
+      ],
+      "icon": "⬚",
+      "propertyClasses": []
+    },
+    {
+      "id": "RC-Comment",
+      "revision": "1.1",
+      "title": "SpecIF:Comment",
+      "description": [
+        {
+          "text": "A 'Comment' is reader feedback referring to a model element ('resource' or 'statement' in general)."
+        }
+      ],
+      "changedAt": "2023-02-26T23:04:11.542Z",
+      "instantiation": [
+        "auto"
+      ],
+      "icon": "🗅",
+      "propertyClasses": [
+        {
+          "id": "PC-Description"
+        }
+      ]
+    },
+    {
+      "id": "RC-SpecifBillofmaterials",
+      "revision": "1.3",
+      "extends": {
+        "id": "RC-SpecifOutline"
+      },
+      "title": "SpecIF:BillOfMaterials",
+      "description": [
+        {
+          "text": "<p>A bill of materials or product structure (sometimes bill of material, BOM or associated list) is a list of the raw materials, sub-assemblies, intermediate assemblies, sub-components, parts and the quantities of each needed to manufacture an end product. A BOM may be used for communication between manufacturing partners, or confined to a single manufacturing plant. <small>(<i>source: <a href=\"https://en.wikipedia.org/wiki/Bill_of_materials\">Wikipedia</a></i>)</small></p>"
+        }
+      ],
+      "changedAt": "2023-03-15T17:00:14.160Z",
+      "instantiation": [
+        "user"
+      ],
+      "isHeading": true,
+      "propertyClasses": []
+    }
+  ],
+  "statementClasses": [
+    {
+      "id": "SC-SpecifContains",
+      "revision": "1.3",
+      "title": "SpecIF:contains",
+      "description": [
+        {
+          "text": "General containment, such as:\n- Component-A contains Component-B\n- DataObject-1 contains Attribute-1.1"
+        }
+      ],
+      "changedAt": "2023-03-16T12:58:29.632Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        },
+        {
+          "id": "RC-State"
+        },
+        {
+          "id": "RC-Collection"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        },
+        {
+          "id": "RC-State"
+        },
+        {
+          "id": "RC-Event"
+        },
+        {
+          "id": "RC-Collection"
+        }
+      ],
+      "propertyClasses": [
+        {
+          "id": "PC-Type"
+        }
+      ]
+    },
+    {
+      "id": "SC-SpecifAccesses",
+      "revision": "1.3",
+      "title": "SpecIF:accesses",
+      "description": [
+        {
+          "text": "A [[FMC:Actor]] 'accesses' (writes or reads) a [[FMC:State]]."
+        }
+      ],
+      "changedAt": "2023-03-15T07:47:24.362Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-State"
+        }
+      ]
+    },
+    {
+      "id": "SC-SpecifCommunicateswith",
+      "revision": "1.3",
+      "title": "SpecIF:communicatesWith",
+      "description": [
+        {
+          "text": "A [[FMC:Actor]] 'communicates' with a [[FMC:Actor]]."
+        }
+      ],
+      "changedAt": "2023-03-15T09:13:54.786Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ]
+    },
+    {
+      "id": "SC-refersTo",
+      "revision": "1.3",
+      "title": "SpecIF:refersTo",
+      "description": [
+        {
+          "text": "<p>A resource 'refers to' any other resource.</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T09:19:52.173Z",
+      "instantiation": []
+    },
+    {
+      "id": "SC-shows",
+      "revision": "1.1",
+      "title": "SpecIF:shows",
+      "description": [
+        {
+          "text": "<p>A [[SpecIF:Diagram]] 'shows' a model element, e.g, a [[FMC:Actor]], [[FMC:State]], [[FMC:Event]] or [[SpecIF:Collection]].</p>"
+        }
+      ],
+      "changedAt": "2023-02-26T21:30:23.975Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-SpecifView"
+        },
+        {
+          "id": "RC-FmcPlan"
+        },
+        {
+          "id": "RC-ArchimateViewpoint"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        },
+        {
+          "id": "RC-State"
+        },
+        {
+          "id": "RC-Event"
+        },
+        {
+          "id": "RC-Collection"
+        }
+      ]
+    },
+    {
+      "id": "SC-ArchimateUnites",
+      "revision": "1.3",
+      "extends": {
+        "id": "SC-SpecifContains"
+      },
+      "title": "ArchiMate:unites",
+      "description": [
+        {
+          "text": "General containment. In ArchiMate, the uniting concept includes:\n- The *composition* relationship represents that an element consists of one or more other concepts.\n- The *aggregation* relationship represents that an element combines one or more other concepts.\n- The *assignment* relationship represents the allocation of responsibility, performance of behavior, storage, or execution.\n- The *realization* relationship represents that an entity plays a critical role in the creation, achievement, sustenance, or operation of a more abstract entity.\n\nThe kind of uniting is specified in a property with title [[dcterms:type]]."
+        }
+      ],
+      "changedAt": "2023-03-16T11:29:57.025Z",
+      "instantiation": [
+        "auto"
+      ]
+    },
+    {
+      "id": "SC-FmcContains",
+      "revision": "1.3",
+      "extends": {
+        "id": "SC-SpecifContains"
+      },
+      "title": "FMC:contains",
+      "description": [
+        {
+          "text": "A [[FMC:Actor]] or [[FMC:State]] 'contains' a [[FMC:Actor]], [[FMC:State]] or [[FMC:Event]]. More concretely, Component-A contains Component-B."
+        }
+      ],
+      "changedAt": "2023-03-16T11:15:01.707Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        },
+        {
+          "id": "RC-State"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        },
+        {
+          "id": "RC-State"
+        },
+        {
+          "id": "RC-Event"
+        }
+      ]
+    },
+    {
+      "id": "SC-RdfType",
+      "title": "rdf:type",
+      "description": [
+        {
+          "text": "<p>A triple of the form: <em>R rdf:type C</em> states that C is an instance of <a href=\"https://www.w3.org/TR/rdf-schema/#ch_class\">rdfs:Class</a> and R is an instance of C.</p><p>The <a href=\"https://www.w3.org/TR/rdf-schema/#ch_domain\">rdfs:domain</a> of rdf:type is <a href=\"https://www.w3.org/TR/rdf-schema/#ch_resource\">rdfs:Resource</a>. The <a href=\"https://www.w3.org/TR/rdf-schema/#ch_range\">rdfs:range</a> of rdf:type is <a href=\"https://www.w3.org/TR/rdf-schema/#ch_class\">rdfs:Class</a>.</p>\n<p>This term is also used as a SpecIF propertyClass.</p>"
+        }
+      ],
+      "changedAt": "2023-02-21T08:51:40.300Z",
+      "instantiation": []
+    },
+    {
+      "id": "SC-OslcrmSatisfiedby",
+      "revision": "1.3",
+      "title": "oslc_rm:satisfiedBy",
+      "description": [
+        {
+          "text": "<p>The subject is satisfied by the object. For example, a user requirement is satisfied by a system requirement. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>"
+        }
+      ],
+      "changedAt": "2023-03-08T16:57:09.440Z",
+      "instantiation": [
+        "user"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        },
+        {
+          "id": "RC-State"
+        },
+        {
+          "id": "RC-Event"
+        },
+        {
+          "id": "RC-Collection"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Requirement"
+        },
+        {
+          "id": "RC-ReqifwfRequirement"
+        }
+      ]
+    },
+    {
+      "id": "SC-SpecifServes",
+      "revision": "1.3",
+      "title": "SpecIF:serves",
+      "description": [
+        {
+          "text": "<p>A [[FMC:Actor]] 'serves' a FMC:Actor.</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T09:08:25.609Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ]
+    },
+    {
+      "id": "SC-SpecifReads",
+      "revision": "1.3",
+      "extends": {
+        "id": "SC-SpecifAccesses"
+      },
+      "title": "SpecIF:reads",
+      "description": [
+        {
+          "text": "<p>A [[FMC:Actor]] 'reads' a [[FMC:State]].</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T09:08:53.827Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-State"
+        }
+      ]
+    },
+    {
+      "id": "SC-SpecifWrites",
+      "revision": "1.3",
+      "extends": {
+        "id": "SC-SpecifAccesses"
+      },
+      "title": "SpecIF:writes",
+      "description": [
+        {
+          "text": "<p>A [[FMC:Actor]] 'writes' (changes) a [[FMC:State]].</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T09:09:08.696Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-State"
+        }
+      ]
+    },
+    {
+      "id": "SC-SpecifSendsto",
+      "revision": "1.3",
+      "extends": {
+        "id": "SC-SpecifCommunicateswith"
+      },
+      "title": "SpecIF:sendsTo",
+      "description": [
+        {
+          "text": "A [[FMC:Actor]] 'sends' a message to a [[FMC:Actor]]."
+        }
+      ],
+      "changedAt": "2023-03-15T09:14:09.263Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ]
+    },
+    {
+      "id": "SC-SpecifReceivesfrom",
+      "revision": "1.3",
+      "extends": {
+        "id": "SC-SpecifCommunicateswith"
+      },
+      "title": "SpecIF:receivesFrom",
+      "description": [
+        {
+          "text": "A [[FMC:Actor]] 'receives' a message from a [[FMC:Actor]]."
+        }
+      ],
+      "changedAt": "2023-03-15T09:14:22.685Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ]
+    },
+    {
+      "id": "SC-SpecifFollows",
+      "revision": "1.3",
+      "title": "SpecIF:follows",
+      "description": [
+        {
+          "text": "A [[FMC:Actor]] 'follows' a [[FMC:Actor]]; e.g. in a business process or activity flow."
+        }
+      ],
+      "changedAt": "2023-03-15T09:14:35.868Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ]
+    },
+    {
+      "id": "SC-SpecifPrecedes",
+      "revision": "1.3",
+      "title": "SpecIF:precedes",
+      "description": [
+        {
+          "text": "A [[FMC:Actor]] 'precedes' a [[FMC:Actor]]; e.g. in a business process or activity flow."
+        }
+      ],
+      "changedAt": "2023-03-15T09:14:48.094Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ]
+    },
+    {
+      "id": "SC-SpecifDependson",
+      "revision": "1.3",
+      "title": "SpecIF:dependsOn",
+      "description": [
+        {
+          "text": "<p>A [[IREB:Requirement]] 'depends on' another [[IREB:Requirement]].</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T09:15:13.305Z",
+      "instantiation": [
+        "user"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Requirement"
+        },
+        {
+          "id": "RC-ReqifwfRequirement"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Requirement"
+        },
+        {
+          "id": "RC-ReqifwfRequirement"
+        }
+      ]
+    },
+    {
+      "id": "SC-SysmlTraces",
+      "revision": "1.3",
+      "title": "SysML:traces",
+      "description": [
+        {
+          "text": "<p>A [[IREB:Requirement]] <i>traces</i> another [[IREB:Requirement]].</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T09:15:34.061Z",
+      "instantiation": [
+        "user"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Requirement"
+        },
+        {
+          "id": "RC-ReqifwfRequirement"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Requirement"
+        },
+        {
+          "id": "RC-ReqifwfRequirement"
+        }
+      ]
+    },
+    {
+      "id": "SC-SysmlIsderivedfrom",
+      "revision": "1.3",
+      "title": "SysML:isDerivedFrom",
+      "description": [
+        {
+          "text": "<p>A [[IREB:Requirement]] <i>isDerivedFrom</i> another [[IREB:Requirement]].</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T09:16:06.463Z",
+      "instantiation": [
+        "user"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Requirement"
+        },
+        {
+          "id": "RC-ReqifwfRequirement"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Requirement"
+        },
+        {
+          "id": "RC-ReqifwfRequirement"
+        }
+      ]
+    },
+    {
+      "id": "SC-IrebRefines",
+      "revision": "1.3",
+      "title": "IREB:refines",
+      "description": [
+        {
+          "text": "<p>A [[IREB:Requirement]] <i>refines</i> another [[IREB:Requirement]].</p>"
+        }
+      ],
+      "changedAt": "2023-04-01T14:10:58.430Z",
+      "instantiation": [
+        "user"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Requirement"
+        },
+        {
+          "id": "RC-ReqifwfRequirement"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Requirement"
+        },
+        {
+          "id": "RC-ReqifwfRequirement"
+        }
+      ]
+    },
+    {
+      "id": "SC-SpecifDuplicates",
+      "revision": "1.3",
+      "title": "SpecIF:duplicates",
+      "description": [
+        {
+          "text": "<p>A [[IREB:Requirement]] 'duplicates' another [[IREB:Requirement]].</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T07:40:19.818Z",
+      "instantiation": [
+        "user"
+      ],
+      "isUndirected": true,
+      "subjectClasses": [
+        {
+          "id": "RC-Requirement"
+        },
+        {
+          "id": "RC-ReqifwfRequirement"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Requirement"
+        },
+        {
+          "id": "RC-ReqifwfRequirement"
+        }
+      ]
+    },
+    {
+      "id": "SC-SpecifContradicts",
+      "revision": "1.3",
+      "title": "SpecIF:contradicts",
+      "description": [
+        {
+          "text": "<p>A [[IREB:Requirement]] 'contradicts' another [[IREB:Requirement]].</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T07:40:09.100Z",
+      "instantiation": [
+        "user"
+      ],
+      "isUndirected": true,
+      "subjectClasses": [
+        {
+          "id": "RC-Requirement"
+        },
+        {
+          "id": "RC-ReqifwfRequirement"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Requirement"
+        },
+        {
+          "id": "RC-ReqifwfRequirement"
+        }
+      ]
+    },
+    {
+      "id": "SC-SysmlIsallocatedto",
+      "revision": "1.3",
+      "title": "SysML:isAllocatedTo",
+      "description": [
+        {
+          "text": "<p>An [[FMC:Actor]] is allocated to another [[FMC:Actor]] (e.g. a logical function is allocated to a physical component.</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T09:16:44.677Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ]
+    },
+    {
+      "id": "SC-SysmlIsassociatedwith",
+      "revision": "1.3",
+      "title": "SysML:isAssociatedWith",
+      "description": [
+        {
+          "text": "<p>A [[FMC:State]] is associated with another [[FMC:State]] (e.g. a class is associated with another class, as shown in a UML Class Diagram).</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T09:16:57.354Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-State"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-State"
+        }
+      ]
+    },
+    {
+      "id": "SC-SysmlComposes",
+      "revision": "1.3",
+      "title": "SysML:composes",
+      "description": [
+        {
+          "text": "<p>An [[FMC:Actor]] is composed of another [[FMC:Actor]].</p>"
+        }
+      ],
+      "changedAt": "2023-03-16T14:50:14.330Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ]
+    },
+    {
+      "id": "SC-SysmlAggregates",
+      "revision": "1.3",
+      "title": "SysML:aggregates",
+      "description": [
+        {
+          "text": "<p>An [[FMC:Actor]] aggregates another [[FMC:Actor]].</p>"
+        }
+      ],
+      "changedAt": "2023-03-16T14:49:40.585Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ]
+    },
+    {
+      "id": "SC-SysmlUses",
+      "revision": "1.3",
+      "title": "SysML:uses",
+      "changedAt": "2023-03-15T09:17:40.986Z",
+      "instantiation": [
+        "auto"
+      ]
+    },
+    {
+      "id": "SC-SysmlExtends",
+      "revision": "1.3",
+      "title": "SysML:extends",
+      "description": [
+        {
+          "text": "<p>An [[FMC:Actor]] «UseCase» extends another [[FMC:Actor]] «UseCase».</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T09:18:04.117Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ]
+    },
+    {
+      "id": "SC-SysmlIncludes",
+      "revision": "1.3",
+      "title": "SysML:includes",
+      "description": [
+        {
+          "text": "<p>An [[FMC:Actor]] «UseCase» includes another [[FMC:Actor]] «UseCase».</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T09:18:26.019Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        }
+      ]
+    },
+    {
+      "id": "SC-SysmlIsspecializationof",
+      "revision": "1.3",
+      "title": "SysML:isSpecializationOf",
+      "description": [
+        {
+          "text": "<p>An [[FMC:Actor]] is a specialization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T09:18:51.104Z",
+      "instantiation": [
+        "auto"
+      ]
+    },
+    {
+      "id": "SC-SysmlIsgeneralizationof",
+      "revision": "1.3",
+      "title": "SysML:isGeneralizationOf",
+      "description": [
+        {
+          "text": "<p>An [[FMC:Actor]] is a generalization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>"
+        }
+      ],
+      "changedAt": "2023-03-15T09:19:05.027Z",
+      "instantiation": [
+        "auto"
+      ]
+    },
+    {
+      "id": "SC-SpecifCommentrefersto",
+      "revision": "1.3",
+      "extends": {
+        "id": "SC-refersTo"
+      },
+      "title": "SpecIF:commentRefersTo",
+      "description": [
+        {
+          "text": "<p>A [[SpecIF:Comment]] 'refers to' any other resource.</p>"
+        }
+      ],
+      "changedAt": "2023-02-26T23:18:50.990Z",
+      "instantiation": [
+        "auto"
+      ],
+      "subjectClasses": [
+        {
+          "id": "RC-Comment"
+        }
+      ],
+      "objectClasses": [
+        {
+          "id": "RC-Actor"
+        },
+        {
+          "id": "RC-State"
+        },
+        {
+          "id": "RC-Event"
+        },
+        {
+          "id": "RC-Paragraph"
+        },
+        {
+          "id": "RC-Folder"
+        },
+        {
+          "id": "RC-SpecifView"
+        },
+        {
+          "id": "RC-Collection"
+        },
+        {
+          "id": "RC-FmcPlan"
+        },
+        {
+          "id": "RC-ArchimateViewpoint"
+        }
+      ]
+    },
+    {
+      "id": "SC-OwlSameas",
+      "revision": "1.3",
+      "title": "owl:sameAs",
+      "description": [
+        {
+          "text": "<p>An <i>owl:sameAs</i> statement indicates that two URI references actually refer to the same thing: the individuals have the same \"identity\". <small>(<i>source: <a href=\"https://www.w3.org/TR/owl-ref/#sameAs-def\">OWL</a></i>)</small></p>"
+        }
+      ],
+      "changedAt": "2023-03-15T09:21:45.801Z",
+      "instantiation": [
+        "user"
+      ],
+      "isUndirected": true
+    }
+  ],
+  "resources": [],
+  "statements": [],
+  "files": [],
+  "hierarchies": []
+}
