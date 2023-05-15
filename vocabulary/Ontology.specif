@@ -201,7 +201,7 @@
       "title": "SpecIF:LifecycleStatus",
       "description": [
         {
-          "text": "The status of the term.",
+          "text": "The lifecycle status of the term.",
           "format": "plain",
           "language": "en"
         }
@@ -221,7 +221,7 @@
           "id": "V-TermStatus-5",
           "value": [
             {
-              "text": "equivalent"
+              "text": "SpecIF:LifecycleStatusEquivalent"
             }
           ]
         },
@@ -237,7 +237,7 @@
           "id": "V-TermStatus-1",
           "value": [
             {
-              "text": "experimental"
+              "text": "SpecIF:LifecycleStatusExperimental"
             }
           ]
         },
@@ -11569,7 +11569,7 @@
           "values": [
             [
               {
-                "text": "PC-LifecycleStatusTerm"
+                "text": "PC-LifecycleStatus"
               }
             ]
           ]
