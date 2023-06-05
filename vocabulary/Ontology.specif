@@ -8,8 +8,8 @@
   ],
   "$schema": "https://specif.de/v1.1/schema.json",
   "generator": "SpecIF Modellintegrator und Editor",
-  "generatorVersion": "1.1.l",
-  "createdAt": "2023-04-01T14:14:51.539Z",
+  "generatorVersion": "1.1.q",
+  "createdAt": "2023-05-30T06:07:01.923Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -417,66 +417,107 @@
   "propertyClasses": [
     {
       "id": "PC-Name",
-      "revision": "1.1",
+      "changedAt": "2023-05-17T12:00:00.000Z",
       "title": "dcterms:title",
       "description": [
         {
-          "text": "<p>A name given to the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/title\">DCMI</a></i>)</small></p><p>Title (reference: Dublin Core) of the resource represented as rich text in XHTML content. SHOULD include only content that is valid inside an XHTML 'span' element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>"
+          "text": "<p>A name given to the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/title\">DCMI</a></i>)</small></p><p>Title (reference: Dublin Core) of the resource represented as rich text in XHTML content. SHOULD include only content that is valid inside an XHTML 'span' element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small>.</p><p>Usually has a namespace such as 'dcterms:', 'IREB:', 'SpecIF:' or 'ReqIF.'.</p>"
         }
       ],
-      "changedAt": "2023-02-26T14:32:21.640Z",
+      "revision": "1.1",
       "dataType": {
-        "id": "DT-ShortString",
-        "revision": "1.1"
+        "id": "DT-ShortString"
+      },
+      "format": "plain"
+    },
+    {
+      "id": "PC-Term",
+      "changedAt": "2023-05-17T12:00:00.000Z",
+      "title": "SpecIF:Term",
+      "description": [
+        {
+          "text": "<p>An ontology/vocabulary term given to the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/title\">DCMI</a></i>)</small></p><p>Title (reference: Dublin Core) of the resource represented as rich text in XHTML content. SHOULD include only content that is valid inside an XHTML 'span' element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small>.</p><p>Usually has a namespace such as 'dcterms:', 'IREB:', 'SpecIF:' or 'ReqIF.'.</p>"
+        }
+      ],
+      "revision": "1.2",
+      "dataType": {
+        "id": "DT-ShortString"
+      },
+      "format": "plain"
+    },
+    {
+      "id": "PC-LocalTerm",
+      "changedAt": "2023-02-26T14:32:21.640Z",
+      "title": "SpecIF:LocalTerm",
+      "description": [
+        {
+          "text": "<p>A name of the resource used in one or more national languages.</p>"
+        }
+      ],
+      "revision": "1.2",
+      "dataType": {
+        "id": "DT-ShortString"
+      },
+      "format": "plain"
+    },
+    {
+      "id": "PC-LocalTermPlural",
+      "changedAt": "2023-02-26T14:32:21.640Z",
+      "title": "SpecIF:LocalTermPlural",
+      "description": [
+        {
+          "text": "<p>A name of the resource in plural form used in one or more national languages.</p>"
+        }
+      ],
+      "revision": "1.2",
+      "dataType": {
+        "id": "DT-ShortString"
       },
       "format": "plain"
     },
     {
       "id": "PC-Description",
-      "revision": "1.1",
+      "changedAt": "2023-02-26T14:37:25.217Z",
       "title": "dcterms:description",
       "description": [
         {
           "text": "<p>An account of the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/description\">DCMI</a></i>)</small></p><p>Descriptive text (reference: Dublin Core) about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML 'div' element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>"
         }
       ],
-      "changedAt": "2023-02-26T14:37:25.217Z",
+      "revision": "1.1",
       "dataType": {
-        "id": "DT-Text",
-        "revision": "1.1"
+        "id": "DT-Text"
       },
       "format": "xhtml"
     },
     {
       "id": "PC-Diagram",
-      "revision": "1.1",
+      "changedAt": "2023-02-26T14:40:17.601Z",
       "title": "SpecIF:Diagram",
       "description": [
         {
           "text": "One or more diagrams illustrating the resource."
         }
       ],
-      "changedAt": "2023-02-26T14:40:17.601Z",
+      "revision": "1.1",
       "dataType": {
-        "id": "DT-Text",
-        "revision": "1.1"
+        "id": "DT-Text"
       },
-      "format": "xhtml",
-      "multiple": true
+      "multiple": true,
+      "format": "xhtml"
     },
     {
       "id": "PC-Type",
-      "revision": "1.1",
+      "changedAt": "2023-02-26T20:18:04.451Z",
       "title": "dcterms:type",
       "description": [
         {
           "text": "<p>The nature or genre of the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/type\">DCMI</a></i>)</small></p><p>Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</p><p>For example, a [[FMC:Actor]] may represent a <i>System Function</i>, a <i>System Component</i> or a <i>User Role</i>. Similarly, in the context of process modelling, a FMC:Actor may represent a <i>Process Step</i> or again a <i>User Role</i>. So, all of these are meaningful values for a FMC:Actor's property named dcterms:type.</p>"
         }
       ],
-      "changedAt": "2023-02-26T20:18:04.451Z",
+      "revision": "1.1",
       "dataType": {
-        "id": "DT-ShortString",
-        "revision": "1.1"
+        "id": "DT-ShortString"
       },
       "format": "plain"
     },
@@ -629,6 +670,20 @@
         }
       ],
       "revision": "1.1",
+      "dataType": {
+        "id": "DT-Boolean"
+      }
+    },
+    {
+      "id": "PC-multiLanguage",
+      "changedAt": "2023-05-22T18:30:52+02:00",
+      "title": "SpecIF:multiLanguage",
+      "description": [
+        {
+          "text": "Indicates whether a Property can have multiple languages."
+        }
+      ],
+      "revision": "1.2",
       "dataType": {
         "id": "DT-Boolean"
       }
@@ -819,14 +874,14 @@
   "resourceClasses": [
     {
       "id": "RC-Paragraph",
-      "revision": "1.1",
+      "changedAt": "2023-03-06T07:26:03.008Z",
       "title": "SpecIF:Paragraph",
       "description": [
         {
           "text": "<p>A 'Paragraph' is an unspecified information in a document at any level.</p>"
         }
       ],
-      "changedAt": "2023-03-06T07:26:03.008Z",
+      "revision": "1.1",
       "instantiation": [
         "auto",
         "user"
@@ -848,23 +903,22 @@
     },
     {
       "id": "RC-Folder",
-      "revision": "1.1",
-      "extends": {
-        "id": "RC-Paragraph"
-      },
+      "changedAt": "2023-03-06T07:26:13.687Z",
       "title": "SpecIF:Heading",
       "description": [
         {
           "text": "<p>A 'Heading' is a chapter title at any level.</p>"
         }
       ],
-      "changedAt": "2023-03-06T07:26:13.687Z",
+      "revision": "1.1",
       "instantiation": [
         "auto",
         "user"
       ],
-      "isHeading": true,
-      "propertyClasses": []
+      "extends": {
+        "id": "RC-Paragraph"
+      },
+      "isHeading": true
     },
     {
       "id": "RC-OntologyTerm",
@@ -885,7 +939,7 @@
           "id": "PC-SpecifRevision"
         },
         {
-          "id": "PC-Name"
+          "id": "PC-Term"
         },
         {
           "id": "PC-Description"
@@ -898,6 +952,9 @@
         },
         {
           "id": "PC-LifecycleStatusTerm"
+        },
+        {
+          "id": "PC-LocalTerm"
         }
       ]
     },
@@ -918,6 +975,9 @@
         "id": "RC-OntologyTerm"
       },
       "propertyClasses": [
+        {
+          "id": "PC-LocalTermPlural"
+        },
         {
           "id": "PC-Icon"
         },
@@ -994,6 +1054,9 @@
         "id": "RC-TermPropertyClass"
       },
       "propertyClasses": [
+        {
+          "id": "PC-multiLanguage"
+        },
         {
           "id": "PC-TextFormat"
         },
@@ -1760,7 +1823,7 @@
     },
     {
       "id": "R-155140542",
-      "changedAt": "2023-03-06T07:26:03.008Z",
+      "changedAt": "2023-05-25T16:58:27.347Z",
       "revision": "6",
       "class": {
         "id": "RC-TermResourceClass"
@@ -1792,7 +1855,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -1804,12 +1867,34 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "paragraph",
+                "language": "en"
+              },
+              {
+                "text": "Paragraph",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-Description"
           },
           "values": [
             [
               {
-                "text": "<p>A 'Paragraph' is an unspecified information in a document at any level.</p>"
+                "text": "<p>A 'Paragraph' is an unspecified information in a document at any level.</p>",
+                "language": "en"
+              },
+              {
+                "text": "<p>Ein 'Paragraph' ist eine Textabschnitt (Information) in einem Dokument auf beliebiger Ebene.</p>",
+                "language": "de"
               }
             ]
           ]
@@ -1866,7 +1951,7 @@
     },
     {
       "id": "R-Heading",
-      "changedAt": "2023-03-06T07:26:13.687Z",
+      "changedAt": "2023-05-25T16:59:02.240Z",
       "revision": "5",
       "class": {
         "id": "RC-TermResourceClass"
@@ -1898,7 +1983,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -1910,12 +1995,34 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "heading",
+                "language": "en"
+              },
+              {
+                "text": "Kapitelüberschrift",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-Description"
           },
           "values": [
             [
               {
-                "text": "<p>A 'Heading' is a chapter title at any level.</p>"
+                "text": "<p>A 'Heading' is a chapter title at any level.</p>",
+                "language": "en"
+              },
+              {
+                "text": "<p>Eine 'Kapitelüberschrift' ist in einem Dokument der Titel eines Kapitels.</p>",
+                "language": "de"
               }
             ]
           ]
@@ -1972,7 +2079,7 @@
     },
     {
       "id": "R-155140544",
-      "changedAt": "2023-02-26T21:17:34.803Z",
+      "changedAt": "2023-05-25T17:00:36.902Z",
       "revision": "8",
       "class": {
         "id": "RC-TermResourceClass"
@@ -1992,12 +2099,54 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
                 "text": "SpecIF:View"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "model diagram",
+                "language": "en"
+              },
+              {
+                "text": "Modelldiagramm",
+                "language": "de"
+              },
+              {
+                "text": "diagramme de modèle",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "model diagrams",
+                "language": "en"
+              },
+              {
+                "text": "Modelldiagramme",
+                "language": "de"
+              },
+              {
+                "text": "diagrammes de modèle",
+                "language": "fr"
               }
             ]
           ]
@@ -2010,6 +2159,10 @@
             [
               {
                 "text": "<p>A 'View' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.</p>"
+              },
+              {
+                "text": "<p>A 'View' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.</p>",
+                "language": "de"
               }
             ]
           ]
@@ -2049,7 +2202,7 @@
           "values": [
             [
               {
-                "text": "&#9635;"
+                "text": "▣"
               }
             ]
           ]
@@ -2074,7 +2227,7 @@
     },
     {
       "id": "R-hiUbPiNKZHTq5p5w8GtGQQ440tg",
-      "changedAt": "2023-03-18T08:33:59.280Z",
+      "changedAt": "2023-05-25T17:01:03.918Z",
       "revision": "8",
       "class": {
         "id": "RC-TermResourceClass"
@@ -2094,7 +2247,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -2106,12 +2259,59 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "model diagram",
+                "language": "en"
+              },
+              {
+                "text": "Modelldiagramm",
+                "language": "de"
+              },
+              {
+                "text": "diagramme de modèle",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "model diagrams",
+                "language": "en"
+              },
+              {
+                "text": "Modelldiagramme",
+                "language": "de"
+              },
+              {
+                "text": "diagrammes de modèle",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-Description"
           },
           "values": [
             [
               {
-                "text": "A viewpoint in the ArchiMate language is a selection of a relevant subset of the ArchiMate elements and their relationships. This is the representation of that part of an architecture that is expressed in different diagrams."
+                "text": "A viewpoint in the ArchiMate language is a selection of a relevant subset of the ArchiMate elements and their relationships. This is the representation of that part of an architecture that is expressed in different diagrams.",
+                "language": "en"
+              },
+              {
+                "text": "A viewpoint in the ArchiMate language is a selection of a relevant subset of the ArchiMate elements and their relationships. This is the representation of that part of an architecture that is expressed in different diagrams.",
+                "language": "de"
               }
             ]
           ]
@@ -2176,7 +2376,7 @@
     },
     {
       "id": "R-155140543",
-      "changedAt": "2023-02-26T20:29:37.192Z",
+      "changedAt": "2023-05-25T17:01:13.611Z",
       "revision": "7",
       "class": {
         "id": "RC-TermResourceClass"
@@ -2184,7 +2384,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -2196,12 +2396,59 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "model diagram",
+                "language": "en"
+              },
+              {
+                "text": "Modelldiagramm",
+                "language": "de"
+              },
+              {
+                "text": "diagramme de modèle",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "model diagrams",
+                "language": "en"
+              },
+              {
+                "text": "Modelldiagramme",
+                "language": "de"
+              },
+              {
+                "text": "diagrammes de modèle",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-Description"
           },
           "values": [
             [
               {
-                "text": "<p>A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.</p>"
+                "text": "<p>A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.</p>",
+                "language": "en"
+              },
+              {
+                "text": "<p>A 'Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.</p>",
+                "language": "de"
               }
             ]
           ]
@@ -2246,7 +2493,7 @@
     },
     {
       "id": "R-514389523",
-      "changedAt": "2023-03-15T07:25:25.006Z",
+      "changedAt": "2023-05-21T15:59:03.110Z",
       "revision": "14",
       "class": {
         "id": "RC-TermResourceClass"
@@ -2266,7 +2513,24 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "feature",
+                "language": "en"
+              },
+              {
+                "text": "Merkmal",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -2283,7 +2547,12 @@
           "values": [
             [
               {
-                "text": "<p>A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition.</p>"
+                "text": "<p>A 'Feature' is an intentional distinguishing characteristic of a system, often a unique selling proposition.</p>",
+                "language": "en"
+              },
+              {
+                "text": "Ein \"Merkmal\" ist eine geplante Eigenschaft oder Funktion eines Systems, oft zur Stärkung der Wettbewerbsposition --> Alleinstellungsmerkmal.",
+                "language": "de"
               }
             ]
           ]
@@ -2382,7 +2651,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -2399,7 +2668,29 @@
           "values": [
             [
               {
-                "text": "<p>A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.  <small>(<i>source: <a href=\"https://en.wikipedia.org/wiki/Requirement\">Wikipedia</a></i>)</small></p><p>Definition:</p><ol><li>A condition or capability needed by a user to solve a problem or achieve an objective.</li><li>A condition or capability that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed documents.</li><li>A documented representation of a condition or capability as in (1) or (2).</li></ol><p>Note: The definition above is the classic one from IEEE Std 610.12 of 1990. Alternatively, we also give a more modern definition:</p><ol><li>A need perceived by a stakeholder.</li><li>A capability or property that a system shall have.</li><li>A documented representation of a need, capability or property.</li></ol>"
+                "text": "<p>A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.  <small>(<i>source: <a href=\"https://en.wikipedia.org/wiki/Requirement\">Wikipedia</a></i>)</small></p><p>Definition:</p><ol><li>A condition or capability needed by a user to solve a problem or achieve an objective.</li><li>A condition or capability that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed documents.</li><li>A documented representation of a condition or capability as in (1) or (2).</li></ol><p>Note: The definition above is the classic one from IEEE Std 610.12 of 1990. Alternatively, we also give a more modern definition:</p><ol><li>A need perceived by a stakeholder.</li><li>A capability or property that a system shall have.</li><li>A documented representation of a need, capability or property.</li></ol>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "requirement",
+                "language": "en"
+              },
+              {
+                "text": "Anforderung",
+                "language": "de"
+              },
+              {
+                "text": "exigence",
+                "language": "fr"
               }
             ]
           ]
@@ -2484,7 +2775,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -2585,7 +2876,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -2644,7 +2935,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -2722,12 +3013,54 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
                 "text": "FMC:Actor"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Actor",
+                "language": "en"
+              },
+              {
+                "text": "Akteur",
+                "language": "de"
+              },
+              {
+                "text": "Acteur",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Actors",
+                "language": "en"
+              },
+              {
+                "text": "Akteure",
+                "language": "de"
+              },
+              {
+                "text": "Acteurs",
+                "language": "fr"
               }
             ]
           ]
@@ -2836,12 +3169,54 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
                 "text": "FMC:State"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "State",
+                "language": "en"
+              },
+              {
+                "text": "Zustand",
+                "language": "de"
+              },
+              {
+                "text": "État",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "States",
+                "language": "en"
+              },
+              {
+                "text": "Zustände",
+                "language": "de"
+              },
+              {
+                "text": "États",
+                "language": "fr"
               }
             ]
           ]
@@ -2950,12 +3325,54 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
                 "text": "FMC:Event"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Event",
+                "language": "en"
+              },
+              {
+                "text": "Ereignis",
+                "language": "de"
+              },
+              {
+                "text": "Évenement",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Events",
+                "language": "en"
+              },
+              {
+                "text": "Ereignisse",
+                "language": "de"
+              },
+              {
+                "text": "Évenements",
+                "language": "fr"
               }
             ]
           ]
@@ -3064,7 +3481,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -3154,7 +3571,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -3232,7 +3649,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -3346,7 +3763,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -3416,7 +3833,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -3489,7 +3906,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -3558,7 +3975,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -3635,7 +4052,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -3712,7 +4129,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -3789,7 +4206,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -3855,7 +4272,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -3918,7 +4335,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -3972,7 +4389,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -4046,7 +4463,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -4139,7 +4556,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -4208,7 +4625,7 @@
       ]
     },
     {
-      "id": "R-fEwQ5Qxl1chc03Rpg6zXiMqdzDn",
+      "id": "R-W3cVocabulary",
       "changedAt": "2022-12-08T00:15:20.916Z",
       "revision": "43",
       "class": {
@@ -4217,12 +4634,45 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
           },
           "values": [
             [
               {
                 "text": "W3C:Vocabulary"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Vocabulary",
+                "language": "en"
+              },
+              {
+                "text": "Vokabular",
+                "language": "de"
+              },
+              {
+                "text": "Vocabulaire",
+                "language": "fr"
               }
             ]
           ]
@@ -4266,11 +4716,27 @@
           "values": [
             "V-TermStatus-5"
           ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "true"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
+          ]
         }
       ]
     },
     {
-      "id": "R-BNiJW3vY9adntcvMsMLVJjMa4Vg",
+      "id": "R-W3cOntology",
       "changedAt": "2023-03-15T17:00:51.751Z",
       "revision": "43",
       "class": {
@@ -4291,7 +4757,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -4303,12 +4769,33 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Ontology",
+                "language": "en"
+              },
+              {
+                "text": "Ontologie",
+                "language": "de"
+              },
+              {
+                "text": "Ontologie",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-Description"
           },
           "values": [
             [
               {
-                "text": "A vocabulary according to the SpecIF class definitions for the domain 'Ontology'.\n\nThere is no clear division between what is referred to as “vocabularies” and “ontologies”. The trend is to use the word “ontology” for more complex, and possibly quite formal collection of terms, whereas “vocabulary” is used when such strict formalism is not necessarily used or only in a very loose sense. Vocabularies are the basic building blocks for inference techniques on the Semantic Web."
+                "text": "An ontology according to the SpecIF class definitions for the domain 'Ontology'.\n\nThere is no clear division between what is referred to as “vocabularies” and “ontologies”. The trend is to use the word “ontology” for more complex, and possibly quite formal collection of terms, whereas “vocabulary” is used when such strict formalism is not necessarily used or only in a very loose sense. Vocabularies are the basic building blocks for inference techniques on the Semantic Web."
               }
             ]
           ]
@@ -4321,6 +4808,116 @@
             [
               {
                 "text": "https://www.w3.org/standards/semanticweb/ontology"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "true"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-SpecifGlossary",
+      "changedAt": "2023-06-04T00:15:10.225Z",
+      "class": {
+        "id": "RC-TermResourceClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:Glossary"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Model Elements (Glossary)",
+                "language": "en"
+              },
+              {
+                "text": "Modellelemente (Glossar)",
+                "language": "de"
+              },
+              {
+                "text": "Élements de modèle (Glossaire)",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "tbd"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Origin"
+          },
+          "values": [
+            [
+              {
+                "text": "https://specif.de"
               }
             ]
           ]
@@ -4427,7 +5024,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -4445,6 +5042,27 @@
             [
               {
                 "text": "<p>A [[SpecIF:Diagram]] 'shows' a model element, e.g, a [[FMC:Actor]], [[FMC:State]], [[FMC:Event]] or [[SpecIF:Collection]].</p>"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "shows",
+                "language": "en"
+              },
+              {
+                "text": "zeigt",
+                "language": "de"
+              },
+              {
+                "text": "montre",
+                "language": "fr"
               }
             ]
           ]
@@ -4517,7 +5135,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -4535,6 +5153,27 @@
             [
               {
                 "text": "General containment, such as:\n- Component-A contains Component-B\n- DataObject-1 contains Attribute-1.1"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "contains",
+                "language": "en"
+              },
+              {
+                "text": "enthält",
+                "language": "de"
+              },
+              {
+                "text": "contient",
+                "language": "fr"
               }
             ]
           ]
@@ -4607,7 +5246,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -4625,6 +5264,27 @@
             [
               {
                 "text": "General containment. In ArchiMate, the uniting concept includes:\n- The *composition* relationship represents that an element consists of one or more other concepts.\n- The *aggregation* relationship represents that an element combines one or more other concepts.\n- The *assignment* relationship represents the allocation of responsibility, performance of behavior, storage, or execution.\n- The *realization* relationship represents that an entity plays a critical role in the creation, achievement, sustenance, or operation of a more abstract entity.\n\nThe kind of uniting is specified in a property with title [[dcterms:type]]."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "unites",
+                "language": "en"
+              },
+              {
+                "text": "vereint",
+                "language": "de"
+              },
+              {
+                "text": "réunit",
+                "language": "fr"
               }
             ]
           ]
@@ -4697,7 +5357,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -4776,7 +5436,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -4794,6 +5454,27 @@
             [
               {
                 "text": "<p>A [[FMC:Actor]] or [[FMC:State]] 'satisfies' a [[IREB:Requirement]].</p>"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "satisfies",
+                "language": "en"
+              },
+              {
+                "text": "erfüllt",
+                "language": "de"
+              },
+              {
+                "text": "satisfait",
+                "language": "fr"
               }
             ]
           ]
@@ -4831,7 +5512,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -4849,6 +5530,27 @@
             [
               {
                 "text": "<p>A [[FMC:Actor]] or [[FMC:State]] 'implements' a [[SpecIF:Feature]].</p>"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "implements",
+                "language": "en"
+              },
+              {
+                "text": "implementiert",
+                "language": "de"
+              },
+              {
+                "text": "mets en œuvre",
+                "language": "fr"
               }
             ]
           ]
@@ -4884,7 +5586,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -4902,6 +5604,27 @@
             [
               {
                 "text": "The influence relationship represents that an element affects the implementation or achievement of some motivation element."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "influences",
+                "language": "en"
+              },
+              {
+                "text": "beeinflusst",
+                "language": "de"
+              },
+              {
+                "text": "influence",
+                "language": "fr"
               }
             ]
           ]
@@ -4945,7 +5668,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5015,7 +5738,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5033,6 +5756,27 @@
             [
               {
                 "text": "<p>The object is satisfied by the subject. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p><p>SpecIF suggests that the subject is confined to a model element, e.g, a [[FMC:Actor]] or [[FMC:State]], and the object is confined to a [[IREB:Requirement]]. More concretely, an example for this type of statement is 'Component-X <em>satisfies</em> 'Requirement-4711'.</p>"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "satisfies",
+                "language": "en"
+              },
+              {
+                "text": "erfüllt",
+                "language": "de"
+              },
+              {
+                "text": "satisfait",
+                "language": "fr"
               }
             ]
           ]
@@ -5097,7 +5841,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5115,6 +5859,27 @@
             [
               {
                 "text": "<p>The subject is satisfied by the object. For example, a user requirement is satisfied by a system requirement. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "is satisfied by",
+                "language": "en"
+              },
+              {
+                "text": "wird erfüllt von",
+                "language": "de"
+              },
+              {
+                "text": "est satisfait par",
+                "language": "fr"
               }
             ]
           ]
@@ -5176,7 +5941,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5239,7 +6004,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5286,7 +6051,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5333,7 +6098,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5380,7 +6145,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5427,7 +6192,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5474,7 +6239,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5521,7 +6286,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5568,7 +6333,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5615,7 +6380,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5662,7 +6427,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5709,7 +6474,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5767,7 +6532,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5857,7 +6622,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5875,6 +6640,27 @@
             [
               {
                 "text": "<p>A [[FMC:Actor]] 'reads' a [[FMC:State]].</p>"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "reads",
+                "language": "en"
+              },
+              {
+                "text": "liest",
+                "language": "de"
+              },
+              {
+                "text": "lit",
+                "language": "fr"
               }
             ]
           ]
@@ -5947,7 +6733,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -5965,6 +6751,27 @@
             [
               {
                 "text": "<p>A [[FMC:Actor]] 'writes' (changes) a [[FMC:State]].</p>"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "writes",
+                "language": "en"
+              },
+              {
+                "text": "schreibt",
+                "language": "de"
+              },
+              {
+                "text": "écrit",
+                "language": "fr"
               }
             ]
           ]
@@ -6037,7 +6844,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -6127,7 +6934,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -6145,6 +6952,27 @@
             [
               {
                 "text": "A [[FMC:Actor]] 'accesses' (writes or reads) a [[FMC:State]]."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "accesses",
+                "language": "en"
+              },
+              {
+                "text": "greift zu auf",
+                "language": "de"
+              },
+              {
+                "text": "accède",
+                "language": "fr"
               }
             ]
           ]
@@ -6205,7 +7033,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -6223,6 +7051,27 @@
             [
               {
                 "text": "A [[FMC:Actor]] writes _and_ reads a [[FMC:State]]."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "modifies",
+                "language": "en"
+              },
+              {
+                "text": "ändert",
+                "language": "de"
+              },
+              {
+                "text": "modifie",
+                "language": "fr"
               }
             ]
           ]
@@ -6278,7 +7127,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -6296,6 +7145,27 @@
             [
               {
                 "text": "A [[FMC:Actor]] 'communicates' with a [[FMC:Actor]]."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "communicates with",
+                "language": "en"
+              },
+              {
+                "text": "kommuniziert mit",
+                "language": "de"
+              },
+              {
+                "text": "communique avec",
+                "language": "fr"
               }
             ]
           ]
@@ -6367,7 +7237,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -6385,6 +7255,27 @@
             [
               {
                 "text": "A [[FMC:Actor]] 'sends' a message to a [[FMC:Actor]]."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "sends to",
+                "language": "en"
+              },
+              {
+                "text": "sendet an",
+                "language": "de"
+              },
+              {
+                "text": "envoie à",
+                "language": "fr"
               }
             ]
           ]
@@ -6456,7 +7347,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -6474,6 +7365,27 @@
             [
               {
                 "text": "A [[FMC:Actor]] 'receives' a message from a [[FMC:Actor]]."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "receives from",
+                "language": "en"
+              },
+              {
+                "text": "empfängt von",
+                "language": "de"
+              },
+              {
+                "text": "reçoit de",
+                "language": "fr"
               }
             ]
           ]
@@ -6546,7 +7458,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -6636,7 +7548,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -6714,7 +7626,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -6776,7 +7688,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -6850,7 +7762,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -6942,7 +7854,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -7034,7 +7946,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -7126,7 +8038,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -7216,7 +8128,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -7306,7 +8218,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -7396,7 +8308,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -7486,7 +8398,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -7576,7 +8488,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -7666,7 +8578,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -7756,7 +8668,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -7846,7 +8758,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -7936,7 +8848,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -8014,7 +8926,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -8104,7 +9016,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -8194,7 +9106,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -8272,7 +9184,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -8346,7 +9258,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -8424,7 +9336,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -8486,7 +9398,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -8540,7 +9452,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -8602,7 +9514,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -8664,7 +9576,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -8750,7 +9662,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -8824,7 +9736,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -8903,7 +9815,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -8969,7 +9881,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -9047,7 +9959,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -9113,7 +10025,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -9203,7 +10115,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -9281,7 +10193,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -9401,7 +10313,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -9483,7 +10395,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -9541,7 +10453,7 @@
     },
     {
       "id": "R-Title",
-      "changedAt": "2023-02-26T14:32:21.640Z",
+      "changedAt": "2023-05-22T22:51:56.698Z",
       "revision": "44",
       "class": {
         "id": "RC-TermPropertyClassString"
@@ -9573,7 +10485,20 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Name",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -9591,6 +10516,10 @@
             [
               {
                 "text": "<p>A name given to the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/title\">DCMI</a></i>)</small></p><p>Title (reference: Dublin Core) of the resource represented as rich text in XHTML content. SHOULD include only content that is valid inside an XHTML 'span' element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>"
+              },
+              {
+                "text": "<p>A name given to the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/title\">DCMI</a></i>)</small></p><p>Title (reference: Dublin Core) of the resource represented as rich text in XHTML content. SHOULD include only content that is valid inside an XHTML 'span' element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
+                "language": "de"
               }
             ]
           ]
@@ -9633,6 +10562,14 @@
         },
         {
           "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "true"
+          ]
+        },
+        {
+          "class": {
             "id": "PC-TextFormat"
           },
           "values": [
@@ -9651,7 +10588,7 @@
     },
     {
       "id": "R-NuswNkd1PUci1FLeLkiI0uhXjMD",
-      "changedAt": "2023-03-17T20:38:40.006Z",
+      "changedAt": "2023-05-22T22:53:51.064Z",
       "revision": "44",
       "class": {
         "id": "RC-TermPropertyClassString"
@@ -9671,7 +10608,20 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Name",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -9720,6 +10670,14 @@
         },
         {
           "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "true"
+          ]
+        },
+        {
+          "class": {
             "id": "PC-TextFormat"
           },
           "values": [
@@ -9738,7 +10696,7 @@
     },
     {
       "id": "R-Description",
-      "changedAt": "2023-02-26T14:37:25.217Z",
+      "changedAt": "2023-05-22T22:54:51.783Z",
       "revision": "45",
       "class": {
         "id": "RC-TermPropertyClassString"
@@ -9770,7 +10728,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -9788,6 +10746,23 @@
             [
               {
                 "text": "<p>An account of the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/description\">DCMI</a></i>)</small></p><p>Descriptive text (reference: Dublin Core) about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML 'div' element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>"
+              },
+              {
+                "text": "<p>An account of the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/description\">DCMI</a></i>)</small></p><p>Descriptive text (reference: Dublin Core) about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML 'div' element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Beschreibung",
+                "language": "de"
               }
             ]
           ]
@@ -9830,6 +10805,14 @@
         },
         {
           "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "true"
+          ]
+        },
+        {
+          "class": {
             "id": "PC-TextFormat"
           },
           "values": [
@@ -9840,7 +10823,7 @@
     },
     {
       "id": "R-Sa34Wm7yucoQad9jyYOFMMisSQM",
-      "changedAt": "2023-03-17T20:40:18.026Z",
+      "changedAt": "2023-05-22T22:54:39.550Z",
       "revision": "45",
       "class": {
         "id": "RC-TermPropertyClassString"
@@ -9860,12 +10843,25 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
                 "text": "ReqIF.Text"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Beschreibung",
+                "language": "de"
               }
             ]
           ]
@@ -9904,6 +10900,14 @@
           },
           "values": [
             "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "true"
           ]
         },
         {
@@ -9950,7 +10954,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -9968,6 +10972,27 @@
             [
               {
                 "text": "<p>The nature or genre of the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/type\">DCMI</a></i>)</small></p><p>Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</p><p>For example, a [[FMC:Actor]] may represent a <i>System Function</i>, a <i>System Component</i> or a <i>User Role</i>. Similarly, in the context of process modelling, a FMC:Actor may represent a <i>Process Step</i> or again a <i>User Role</i>. So, all of these are meaningful values for a FMC:Actor's property named dcterms:type.</p>"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Element Type",
+                "language": "en"
+              },
+              {
+                "text": "Element-Typ",
+                "language": "de"
+              },
+              {
+                "text": "Type d'élément",
+                "language": "fr"
               }
             ]
           ]
@@ -10048,7 +11073,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10146,7 +11171,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10251,7 +11276,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10338,7 +11363,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10393,7 +11418,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10435,7 +11460,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10498,7 +11523,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10553,7 +11578,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10608,7 +11633,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10663,7 +11688,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10718,7 +11743,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10773,7 +11798,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10828,7 +11853,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10883,7 +11908,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10938,7 +11963,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -10993,7 +12018,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -11048,7 +12073,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -11103,7 +12128,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -11158,7 +12183,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -11205,7 +12230,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -11252,7 +12277,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -11299,7 +12324,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -11354,7 +12379,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -11431,7 +12456,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -11510,7 +12535,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -11588,7 +12613,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -11690,7 +12715,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -11767,6 +12792,120 @@
       ]
     },
     {
+      "id": "R-GTYKnMz8eqwd65NHb8sKhbbq60n",
+      "changedAt": "2023-05-30T06:06:45.673Z",
+      "class": {
+        "id": "RC-TermPropertyClassString"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:LocalTerm"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "local term",
+                "language": "en"
+              },
+              {
+                "text": "Lokaler Begriff",
+                "language": "de"
+              },
+              {
+                "text": "terme local",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Origin"
+          },
+          "values": [
+            [
+              {
+                "text": "https://specif.de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "true"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-10"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "32"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-852227556",
       "changedAt": "2023-02-10T09:14:46.117Z",
       "revision": "77",
@@ -11776,7 +12915,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -11874,7 +13013,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -11986,7 +13125,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12086,7 +13225,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12198,7 +13337,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12287,7 +13426,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12342,7 +13481,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12397,7 +13536,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12452,7 +13591,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12495,7 +13634,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12538,7 +13677,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12593,7 +13732,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12636,7 +13775,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12691,7 +13830,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12746,7 +13885,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12801,7 +13940,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12856,7 +13995,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12911,7 +14050,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -12966,7 +14105,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13021,7 +14160,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13064,7 +14203,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13144,7 +14283,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13242,7 +14381,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13332,7 +14471,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13430,7 +14569,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13496,7 +14635,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13554,7 +14693,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13604,7 +14743,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13662,7 +14801,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13754,7 +14893,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13772,6 +14911,27 @@
             [
               {
                 "text": "A value for property [[SpecIF:Priority]]."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "high",
+                "language": "en"
+              },
+              {
+                "text": "hoch",
+                "language": "de"
+              },
+              {
+                "text": "haut",
+                "language": "de"
               }
             ]
           ]
@@ -13818,7 +14978,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13836,6 +14996,27 @@
             [
               {
                 "text": "A value for property [[SpecIF:Priority]]."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "rather high",
+                "language": "en"
+              },
+              {
+                "text": "eher hoch",
+                "language": "de"
+              },
+              {
+                "text": "plutôt haut",
+                "language": "de"
               }
             ]
           ]
@@ -13882,7 +15063,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13900,6 +15081,27 @@
             [
               {
                 "text": "A value for property [[SpecIF:Priority]]."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "medium",
+                "language": "en"
+              },
+              {
+                "text": "mittel",
+                "language": "de"
+              },
+              {
+                "text": "moyen",
+                "language": "de"
               }
             ]
           ]
@@ -13946,7 +15148,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -13964,6 +15166,27 @@
             [
               {
                 "text": "A value for property [[SpecIF:Priority]]."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "rather low",
+                "language": "en"
+              },
+              {
+                "text": "eher niedrig",
+                "language": "de"
+              },
+              {
+                "text": "plutôt bas",
+                "language": "de"
               }
             ]
           ]
@@ -14010,7 +15233,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14028,6 +15251,27 @@
             [
               {
                 "text": "A value for property [[SpecIF:Priority]]."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "low",
+                "language": "en"
+              },
+              {
+                "text": "niedrig",
+                "language": "de"
+              },
+              {
+                "text": "bas",
+                "language": "de"
               }
             ]
           ]
@@ -14075,7 +15319,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14130,7 +15374,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14185,7 +15429,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14240,7 +15484,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14295,7 +15539,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14348,7 +15592,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14389,7 +15633,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14430,7 +15674,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14471,7 +15715,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14512,7 +15756,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14553,7 +15797,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14594,7 +15838,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14635,7 +15879,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14676,7 +15920,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14717,7 +15961,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14758,7 +16002,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14799,7 +16043,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14852,7 +16096,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -14927,7 +16171,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15002,7 +16246,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15077,7 +16321,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15152,7 +16396,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15227,7 +16471,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15302,7 +16546,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15377,7 +16621,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15452,7 +16696,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15527,7 +16771,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15603,7 +16847,7 @@
         },
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15667,7 +16911,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15720,7 +16964,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15773,7 +17017,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15826,7 +17070,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15879,7 +17123,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15932,7 +17176,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -15986,7 +17230,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16039,7 +17283,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16100,7 +17344,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16161,7 +17405,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16222,7 +17466,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16283,7 +17527,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16344,7 +17588,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16405,7 +17649,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16466,7 +17710,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16527,7 +17771,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16588,7 +17832,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16649,7 +17893,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16710,7 +17954,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16773,7 +18017,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16816,7 +18060,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16871,7 +18115,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16926,7 +18170,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -16981,7 +18225,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -17024,7 +18268,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -17067,7 +18311,7 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
@@ -17744,10 +18988,10 @@
         "id": "SC-isSynonymOfResource"
       },
       "subject": {
-        "id": "R-fEwQ5Qxl1chc03Rpg6zXiMqdzDn"
+        "id": "R-W3cVocabulary"
       },
       "object": {
-        "id": "R-BNiJW3vY9adntcvMsMLVJjMa4Vg"
+        "id": "R-W3cOntology"
       }
     },
     {
@@ -20646,16 +21890,23 @@
               "revision": "114"
             },
             {
-              "id": "N-u1cObnIyvSV19AJpCyWdAEXnAWs",
+              "id": "N-SpecifGlossary",
               "resource": {
-                "id": "R-fEwQ5Qxl1chc03Rpg6zXiMqdzDn"
+                "id": "R-SpecifGlossary"
+              },
+              "changedAt": "2023-06-04T00:15:10.225Z"
+            },
+            {
+              "id": "N-W3cVocabulary",
+              "resource": {
+                "id": "R-W3cVocabulary"
               },
               "changedAt": "2022-12-08T00:14:47.285Z"
             },
             {
-              "id": "N-Af4lykl5aznWeOyybXgSs9TYDWF",
+              "id": "N-W3cOntology",
               "resource": {
-                "id": "R-BNiJW3vY9adntcvMsMLVJjMa4Vg"
+                "id": "R-W3cOntology"
               },
               "changedAt": "2022-12-08T00:15:10.225Z"
             }
@@ -21445,6 +22696,13 @@
                 "id": "R-PvIGJ6Vwj4tkS6D5IgBKOtN2DEB"
               },
               "changedAt": "2023-03-17T20:52:21.573Z"
+            },
+            {
+              "id": "N-c62JGH4rSPxMHoWyiVfeCFqLgQp",
+              "resource": {
+                "id": "R-GTYKnMz8eqwd65NHb8sKhbbq60n"
+              },
+              "changedAt": "2023-05-30T06:06:52.411Z"
             },
             {
               "id": "N-BocglJooTcOC1rBpeOyX8pgC1oy",
