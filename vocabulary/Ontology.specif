@@ -946,7 +946,7 @@
       ],
       "propertyClasses": [
         {
-          "id": "PC-Name"
+          "id": "PC-Term"
         },
         {
           "id": "PC-Description"
@@ -1917,13 +1917,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "W3C:",
-                "language": "de"
+                "text": "W3C:"
               }
             ]
           ]
@@ -1936,7 +1935,7 @@
             [
               {
                 "text": "The World Wide Web Consortium (W3C) is the main international standards organization for the World Wide Web. Founded in 1994 and led by Tim Berners-Lee, the consortium is made up of member organizations that maintain full-time staff working together in the development of standards for the World Wide Web. W3C also engages in education and outreach, develops software and serves as an open forum for discussion about the Web. *(Source: [Wikipedia](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium))*",
-                "language": "de"
+                "language": "en"
               }
             ]
           ]
@@ -1964,13 +1963,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "xs:",
-                "language": "de"
+                "text": "xs:"
               }
             ]
           ]
@@ -1998,13 +1996,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "xsd:",
-                "language": "de"
+                "text": "xsd:"
               }
             ]
           ]
@@ -2032,13 +2029,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "owl:",
-                "language": "de"
+                "text": "owl:"
               }
             ]
           ]
@@ -2066,13 +2062,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "dcterms:",
-                "language": "de"
+                "text": "dcterms:"
               }
             ]
           ]
@@ -2100,13 +2095,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "rdf:",
-                "language": "de"
+                "text": "rdf:"
               }
             ]
           ]
@@ -2134,13 +2128,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "rdfs:",
-                "language": "de"
+                "text": "rdfs:"
               }
             ]
           ]
@@ -2168,13 +2161,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "foaf:",
-                "language": "de"
+                "text": "foaf:"
               }
             ]
           ]
@@ -2202,13 +2194,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "FMC:",
-                "language": "de"
+                "text": "FMC:"
               }
             ]
           ]
@@ -2221,7 +2212,7 @@
             [
               {
                 "text": "FMC is the acronym for \"Fundamental Modeling Concepts\", primarily a consistent and coherent way to think and talk about dynamic systems. It enables people to communicate the concepts and structures of complex informational systems in an efficient way among the different types of stakeholders. *(Source: [What is FMC?](http://www.fmc-modeling.org/quick-intro))*",
-                "language": "de"
+                "language": "en"
               }
             ]
           ]
@@ -2249,13 +2240,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "IREB:",
-                "language": "de"
+                "text": "IREB:"
               }
             ]
           ]
@@ -2283,13 +2273,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "ReqIF.",
-                "language": "de"
+                "text": "ReqIF."
               }
             ]
           ]
@@ -2317,13 +2306,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "ReqIF-WF.",
-                "language": "de"
+                "text": "ReqIF-WF."
               }
             ]
           ]
@@ -2351,13 +2339,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "HIS:",
-                "language": "de"
+                "text": "HIS:"
               }
             ]
           ]
@@ -2385,13 +2372,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "oslc:",
-                "language": "de"
+                "text": "oslc:"
               }
             ]
           ]
@@ -2419,13 +2405,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "oslc_rm:",
-                "language": "de"
+                "text": "oslc_rm:"
               }
             ]
           ]
@@ -2453,13 +2438,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "ArchiMate:",
-                "language": "de"
+                "text": "ArchiMate:"
               }
             ]
           ]
@@ -2472,7 +2456,7 @@
             [
               {
                 "text": "ArchiMate is an open and independent enterprise architecture modeling language to support the description, analysis and visualization of architecture within and across business domains[1] in an unambiguous way.  ArchiMate is a technical standard from The Open Group and is based on concepts from the now superseded IEEE 1471 standard. It is supported by various tool vendors and consulting firms. ArchiMate is also a registered trademark of The Open Group. The Open Group has a certification program for ArchiMate users, software tools and courses.  *(Source: [Wikipedia](https://en.wikipedia.org/wiki/ArchiMate))*",
-                "language": "de"
+                "language": "en"
               }
             ]
           ]
@@ -2500,13 +2484,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "bpmn:",
-                "language": "de"
+                "text": "bpmn:"
               }
             ]
           ]
@@ -2534,13 +2517,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "UML:",
-                "language": "de"
+                "text": "UML:"
               }
             ]
           ]
@@ -2568,13 +2550,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "SysML:",
-                "language": "de"
+                "text": "SysML:"
               }
             ]
           ]
@@ -2602,13 +2583,12 @@
       "properties": [
         {
           "class": {
-            "id": "PC-Name"
+            "id": "PC-Term"
           },
           "values": [
             [
               {
-                "text": "SpecIF:",
-                "language": "de"
+                "text": "SpecIF:"
               }
             ]
           ]
