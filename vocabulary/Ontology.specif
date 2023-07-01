@@ -9,7 +9,7 @@
   "$schema": "https://specif.de/v1.1/schema.json",
   "generator": "SpecIF Modellintegrator und Editor",
   "generatorVersion": "1.1.q",
-  "createdAt": "2023-06-21T16:43:47.102Z",
+  "createdAt": "2023-06-24T12:46:56.381Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -6685,7 +6685,7 @@
           "values": [
             [
               {
-                "text": "<p>A triple of the form: <em>R rdf:type C</em> states that C is an instance of <a href=\"https://www.w3.org/TR/rdf-schema/#ch_class\">rdfs:Class</a> and R is an instance of C.</p><p>The <a href=\"https://www.w3.org/TR/rdf-schema/#ch_domain\">rdfs:domain</a> of rdf:type is <a href=\"https://www.w3.org/TR/rdf-schema/#ch_resource\">rdfs:Resource</a>. The <a href=\"https://www.w3.org/TR/rdf-schema/#ch_range\">rdfs:range</a> of rdf:type is <a href=\"https://www.w3.org/TR/rdf-schema/#ch_class\">rdfs:Class</a>.</p>\n<p>This term is also used as a SpecIF propertyClass.</p>"
+                "text": "<p>A triple of the form: <em>R rdf:type C</em> states that C is an instance of <a href=\"https://www.w3.org/TR/rdf-schema/#ch_class\">rdfs:Class</a> and R is an instance of C.</p><p>The <a href=\"https://www.w3.org/TR/rdf-schema/#ch_domain\">rdfs:domain</a> of rdf:type is <a href=\"https://www.w3.org/TR/rdf-schema/#ch_resource\">rdfs:Resource</a>. The <a href=\"https://www.w3.org/TR/rdf-schema/#ch_range\">rdfs:range</a> of rdf:type is <a href=\"https://www.w3.org/TR/rdf-schema/#ch_class\">rdfs:Class</a>.</p>"
               }
             ]
           ]
@@ -11640,56 +11640,6 @@
           },
           "values": [
             "V-TermStatus-6"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-852227620",
-      "changedAt": "2023-02-21T08:52:12.405Z",
-      "revision": "58",
-      "class": {
-        "id": "RC-TermPropertyClassString"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-Term"
-          },
-          "values": [
-            [
-              {
-                "text": "rdf:type"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "<p><a href=\"https://www.w3.org/TR/rdf-schema/#ch_type\">rdf:type</a> is an instance of <a href=\"https://www.w3.org/TR/rdf-schema/#ch_property\">rdf:Property</a> that is used to state that a resource is an instance of a class.</p><p>The <a href=\"https://www.w3.org/TR/rdf-schema/#ch_domain\">rdfs:domain</a> of rdf:type is <a href=\"https://www.w3.org/TR/rdf-schema/#ch_resource\">rdfs:Resource</a>. The <a href=\"https://www.w3.org/TR/rdf-schema/#ch_range\">rdfs:range</a> of rdf:type is <a href=\"https://www.w3.org/TR/rdf-schema/#ch_class\">rdfs:Class</a>.</p>\n\n<p>This term is also used as a SpecIF statementClass.</p>"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-LifecycleStatusTerm"
-          },
-          "values": [
-            "V-TermStatus-6"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-multiple"
-          },
-          "values": [
-            "false"
           ]
         }
       ]
@@ -21993,6 +21943,201 @@
       "object": {
         "id": "R-Heading"
       }
+    },
+    {
+      "id": "S-1LpeHwYrmvuOfbXe5xnngzuqY7H",
+      "changedAt": "2023-06-24T12:30:02.323Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-Wr33ZehXaMAYluDIJIYkSnE6aAK"
+      },
+      "object": {
+        "id": "R-W3cOntology"
+      }
+    },
+    {
+      "id": "S-IsPj5qZYcQV6gSnJ22S9Clgu0aP",
+      "changedAt": "2023-06-24T12:30:10.688Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-Wr33ZehXaMAYluDIJIYkSnE6aAK"
+      },
+      "object": {
+        "id": "R-W3cVocabulary"
+      }
+    },
+    {
+      "id": "S-LCnWJVuRcMuBEvG5qhSx7OyMF2g",
+      "changedAt": "2023-06-24T12:30:26.583Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-NsUkW3BuNrBf6MgUn7czN9ER311"
+      },
+      "object": {
+        "id": "R-xcniBEOFjE4wE1UmSDGWaz1dyR2"
+      }
+    },
+    {
+      "id": "S-JtKnBy5mqpCoaEFg4H4qEpxFd3F",
+      "changedAt": "2023-06-24T12:31:04.920Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+      },
+      "object": {
+        "id": "R-Title"
+      }
+    },
+    {
+      "id": "S-4OH3PoJcufya6J4yCrKgGi17YRz",
+      "changedAt": "2023-06-24T12:31:21.929Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+      },
+      "object": {
+        "id": "R-Description"
+      }
+    },
+    {
+      "id": "S-Ou23ABHE3YnCtCO9IzAKwByooHU",
+      "changedAt": "2023-06-24T12:31:35.630Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+      },
+      "object": {
+        "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
+      }
+    },
+    {
+      "id": "S-TZJHtUHmZWsFmLeyxgUWz2yGHQs",
+      "changedAt": "2023-06-24T12:31:41.990Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+      },
+      "object": {
+        "id": "R-1357982109"
+      }
+    },
+    {
+      "id": "S-XGbrlDR5bf6U5uyki1cNmsgQ2PU",
+      "changedAt": "2023-06-24T12:31:53.348Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+      },
+      "object": {
+        "id": "R-1357982112"
+      }
+    },
+    {
+      "id": "S-t3fFo6X6d3C1fzVJHT2gI5nGqQt",
+      "changedAt": "2023-06-24T12:32:00.362Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+      },
+      "object": {
+        "id": "R-1357982114"
+      }
+    },
+    {
+      "id": "S-gS2xQG6hl3qFYhF74slJ1ReJnWM",
+      "changedAt": "2023-06-24T12:32:07.169Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+      },
+      "object": {
+        "id": "R-852227624"
+      }
+    },
+    {
+      "id": "S-r6PBhSi5CfKXlDj5xjDuxE8yDj2",
+      "changedAt": "2023-06-24T12:32:16.742Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+      },
+      "object": {
+        "id": "R-852227623"
+      }
+    },
+    {
+      "id": "S-GmatYqEK0BSOuUXF0aQqT8fQ4xa",
+      "changedAt": "2023-06-24T12:32:23.908Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+      },
+      "object": {
+        "id": "R-852227622"
+      }
+    },
+    {
+      "id": "S-S4l6ZoQdxcyvxL3qCHeSjp9nnEC",
+      "changedAt": "2023-06-24T12:32:30.398Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+      },
+      "object": {
+        "id": "R-852227621"
+      }
+    },
+    {
+      "id": "S-MjuEquFuHrkUYBl5TKLkjTBMwak",
+      "changedAt": "2023-06-24T12:32:37.695Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+      },
+      "object": {
+        "id": "R-1357982110"
+      }
+    },
+    {
+      "id": "S-dwtzkl9HNlsS77TBeLsnVFJWNb2",
+      "changedAt": "2023-06-24T12:37:46.764Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-EdkKEf7r7xDTpsQZWIlM3g6xFbq"
+      },
+      "object": {
+        "id": "R-K17xlb3lgp5mnjirIRnvgK3KVRE"
+      }
     }
   ],
   "hierarchies": [
@@ -23045,13 +23190,6 @@
                 "id": "R-852227559"
               },
               "changedAt": "2023-02-15T22:46:48.423Z"
-            },
-            {
-              "id": "N-2GuGsKiURU1DIbIwbEWa8RQ0CAN",
-              "resource": {
-                "id": "R-852227620"
-              },
-              "changedAt": "2023-02-15T22:46:28.357Z"
             },
             {
               "id": "N-qVBdscNpFTvcONx3957GKvtvyDD",
