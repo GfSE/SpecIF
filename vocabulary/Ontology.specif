@@ -9,7 +9,7 @@
   "$schema": "https://specif.de/v1.1/schema.json",
   "generator": "SpecIF Modellintegrator und Editor",
   "generatorVersion": "1.1.q",
-  "createdAt": "2023-06-24T12:46:56.381Z",
+  "createdAt": "2023-07-10T11:41:21.838Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -2087,6 +2087,52 @@
       ]
     },
     {
+      "id": "R-NTiyXXD7T6xOlOQ482krk1DEGGt",
+      "changedAt": "2023-07-10T11:36:08.241Z",
+      "class": {
+        "id": "RC-Namespace"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "schema:"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Origin"
+          },
+          "values": [
+            [
+              {
+                "text": "https://schema.org/"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-EdkKEf7r7xDTpsQZWIlM3g6xFbq",
       "changedAt": "2023-06-15T14:48:41.300Z",
       "class": {
@@ -2803,11 +2849,11 @@
           "values": [
             [
               {
-                "text": "<p>A 'Heading' is a chapter title at any level.</p>",
+                "text": "A 'Heading' is a chapter title at any level.",
                 "language": "en"
               },
               {
-                "text": "<p>Eine 'Kapitelüberschrift' ist in einem Dokument der Titel eines Kapitels.</p>",
+                "text": "Eine 'Kapitelüberschrift' in einem Dokument ist der Titel eines Kapitels.",
                 "language": "de"
               }
             ]
@@ -2839,7 +2885,12 @@
           "values": [
             [
               {
-                "text": "Kapitelüberschrift"
+                "text": "Chapter Title",
+                "language": "en"
+              },
+              {
+                "text": "Kapitelüberschrift",
+                "language": "de"
               }
             ]
           ]
@@ -5199,8 +5250,112 @@
       ]
     },
     {
+      "id": "R-jU4fIF3b0fhTHutLjz72ks09ctt",
+      "changedAt": "2023-07-10T11:38:45.772Z",
+      "revision": "20",
+      "changedBy": "od",
+      "class": {
+        "id": "RC-TermResourceClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "schema:Person"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A person (alive, dead, undead, or fictional).",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-2"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Person"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Personen"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-RdL9JuGuFrBzNRNCP3l9Byk4jJ3",
-      "changedAt": "2023-06-14T14:18:22.665Z",
+      "changedAt": "2023-07-10T11:39:04.175Z",
       "revision": "20",
       "changedBy": "od",
       "class": {
@@ -5226,7 +5381,8 @@
           "values": [
             [
               {
-                "text": "<p>The Person class represents people. Something is a Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. <small>(<i>source: <a href=\"http://xmlns.com/foaf/spec/\">FOAF</a></i>)</small></p>"
+                "text": "<p>The Person class represents people. Something is a Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. <small>(<i>source: <a href=\"http://xmlns.com/foaf/spec/\">FOAF</a></i>)</small></p>",
+                "language": "en"
               },
               {
                 "text": "<p>The Person class represents people. Something is a Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. <small>(<i>source: <a href=\"http://xmlns.com/foaf/spec/\">FOAF</a></i>)</small></p>",
@@ -5237,10 +5393,18 @@
         },
         {
           "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-2"
+          ]
+        },
+        {
+          "class": {
             "id": "PC-LifecycleStatusTerm"
           },
           "values": [
-            "V-TermStatus-6"
+            "V-TermStatus-5"
           ]
         },
         {
@@ -7376,6 +7540,27 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "serves",
+                "language": "en"
+              },
+              {
+                "text": "wird aufgerufen von",
+                "language": "de"
+              },
+              {
+                "text": "rends service à",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-Domain"
           },
           "values": [
@@ -8924,6 +9109,27 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "is allocated to",
+                "language": "en"
+              },
+              {
+                "text": "wird ausgeführt von",
+                "language": "de"
+              },
+              {
+                "text": "est éxecuté par",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-Domain"
           },
           "values": [
@@ -9074,6 +9280,27 @@
             [
               {
                 "text": "<p>An [[FMC:Actor]] is composed of another [[FMC:Actor]].</p>"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "is composed of",
+                "language": "en"
+              },
+              {
+                "text": "besteht aus",
+                "language": "de"
+              },
+              {
+                "text": "est composé de",
+                "language": "fr"
               }
             ]
           ]
@@ -12771,6 +12998,334 @@
       ]
     },
     {
+      "id": "R-gykQkCrFppSRiXK6ZhaHciNzXah",
+      "changedAt": "2023-07-04T06:42:34.942Z",
+      "revision": "76",
+      "class": {
+        "id": "RC-TermPropertyClassString"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "ReqIF.ForeignCreatedOn"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-10"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "32"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-Cd7SqmWcQQIRL2fD9FgciTM5FoP",
+      "changedAt": "2023-07-04T06:42:02.478Z",
+      "revision": "76",
+      "class": {
+        "id": "RC-TermPropertyClassString"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "ReqIF.ForeignCreatedThru"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-10"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "32"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-gEB1L2zgFEUFBqSdm3mDtNygvOu",
+      "changedAt": "2023-07-04T06:44:18.843Z",
+      "revision": "76",
+      "class": {
+        "id": "RC-TermPropertyClassString"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "ReqIF.ForeignModifiedBy"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-10"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "32"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-peoWlUxkzexUfWvhCTWU5m56HkX",
+      "changedAt": "2023-07-04T06:43:56.488Z",
+      "revision": "76",
+      "class": {
+        "id": "RC-TermPropertyClassString"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "ReqIF.ForeignModifiedOn"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-10"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "32"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-CLDzVI5qIzIyL23R5NECjzPdnfi",
       "changedAt": "2023-06-20T14:30:27.777Z",
       "revision": "76",
@@ -12853,6 +13408,80 @@
       ]
     },
     {
+      "id": "R-MYNNHM0PLpczSgww7ZKEUiRmsbw",
+      "changedAt": "2023-07-04T06:57:08.963Z",
+      "revision": "76",
+      "class": {
+        "id": "RC-TermPropertyClassString"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "ReqIF.Description"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-20"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-1LvyswixJKmrXt3OP5BbkU7lGft",
       "changedAt": "2023-06-20T14:31:22.597Z",
       "revision": "76",
@@ -12891,6 +13520,27 @@
           "values": [
             "V-Domain-3",
             "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Revision",
+                "language": "en"
+              },
+              {
+                "text": "Revision",
+                "language": "de"
+              },
+              {
+                "text": "Revision",
+                "language": "fr"
+              }
+            ]
           ]
         },
         {
@@ -22138,6 +22788,32 @@
       "object": {
         "id": "R-K17xlb3lgp5mnjirIRnvgK3KVRE"
       }
+    },
+    {
+      "id": "S-BJMETzgeLla3qxrcr07qp61La9f",
+      "changedAt": "2023-07-10T11:39:53.098Z",
+      "class": {
+        "id": "SC-isSynonymOfResource"
+      },
+      "subject": {
+        "id": "R-RdL9JuGuFrBzNRNCP3l9Byk4jJ3"
+      },
+      "object": {
+        "id": "R-jU4fIF3b0fhTHutLjz72ks09ctt"
+      }
+    },
+    {
+      "id": "S-Jes76JZPJe51fE6XzchJPpB8PUF",
+      "changedAt": "2023-07-10T11:40:11.223Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-NTiyXXD7T6xOlOQ482krk1DEGGt"
+      },
+      "object": {
+        "id": "R-jU4fIF3b0fhTHutLjz72ks09ctt"
+      }
     }
   ],
   "hierarchies": [
@@ -22197,6 +22873,13 @@
                 "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
               },
               "changedAt": "2023-06-15T14:48:10.630Z"
+            },
+            {
+              "id": "N-sQApoQ0r1Ar2WHNHsjHmxBZujVs",
+              "resource": {
+                "id": "R-NTiyXXD7T6xOlOQ482krk1DEGGt"
+              },
+              "changedAt": "2023-07-10T11:36:08.241Z"
             },
             {
               "id": "N-3bt4kHPtP1mPJj8p8mMzA8k2jLT",
@@ -22503,12 +23186,19 @@
               "revision": "114"
             },
             {
+              "id": "N-ORnglP2WdHXqgvWPHiPqZWcdlSk",
+              "resource": {
+                "id": "R-jU4fIF3b0fhTHutLjz72ks09ctt",
+                "revision": "20"
+              },
+              "changedAt": "2023-07-10T11:38:45.772Z"
+            },
+            {
               "id": "N-2ACxqwuJw0kO1Y9s4eLWIhnv5zr",
               "resource": {
                 "id": "R-RdL9JuGuFrBzNRNCP3l9Byk4jJ3"
               },
-              "changedAt": "2018-02-17T14:52:28+01:00",
-              "revision": "114"
+              "changedAt": "2023-07-10T11:38:52.568Z"
             },
             {
               "id": "N-WUSHigeiOdbxJtKX74NzxxRxpi5",
@@ -23364,11 +24054,46 @@
               "changedAt": "2023-06-20T14:37:26.402Z"
             },
             {
+              "id": "N-99foieBguG3ZGrEt3qwhEn5b6gU",
+              "resource": {
+                "id": "R-gykQkCrFppSRiXK6ZhaHciNzXah"
+              },
+              "changedAt": "2023-07-04T06:41:52.364Z"
+            },
+            {
+              "id": "N-95XBSBJVDIet1HoRqu0mgBC9Vvl",
+              "resource": {
+                "id": "R-Cd7SqmWcQQIRL2fD9FgciTM5FoP"
+              },
+              "changedAt": "2023-07-04T06:42:02.478Z"
+            },
+            {
+              "id": "N-wiFgMXkXRKOK6CWSz3poUfF6hHY",
+              "resource": {
+                "id": "R-gEB1L2zgFEUFBqSdm3mDtNygvOu"
+              },
+              "changedAt": "2023-07-04T06:44:22.255Z"
+            },
+            {
+              "id": "N-OqrReCvVMgTYj3f2O81PV4aGeSY",
+              "resource": {
+                "id": "R-peoWlUxkzexUfWvhCTWU5m56HkX"
+              },
+              "changedAt": "2023-07-04T06:44:02.544Z"
+            },
+            {
               "id": "N-FYz8tolYO9rTJJQimpbDqojRk9F",
               "resource": {
                 "id": "R-CLDzVI5qIzIyL23R5NECjzPdnfi"
               },
               "changedAt": "2023-06-20T14:30:27.777Z"
+            },
+            {
+              "id": "N-DUmcPyD6DinkycYiRhcFMF1k5pX",
+              "resource": {
+                "id": "R-MYNNHM0PLpczSgww7ZKEUiRmsbw"
+              },
+              "changedAt": "2023-07-04T06:57:08.963Z"
             },
             {
               "id": "N-wTcEzM30mRpAPp8x4k3OpLdbiPu",
