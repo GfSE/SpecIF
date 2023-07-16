@@ -9,7 +9,7 @@
   "$schema": "https://specif.de/v1.1/schema.json",
   "generator": "SpecIF Modellintegrator und Editor",
   "generatorVersion": "1.1.q",
-  "createdAt": "2023-07-16T16:09:44.928Z",
+  "createdAt": "2023-07-16T21:19:07.034Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -12814,7 +12814,7 @@
       ]
     },
     {
-      "id": "S-AFRDjW5KgLsmjsqS7vSeHKFdAqD",
+      "id": "R-AFRDjW5KgLsmjsqS7vSeHKFdAqD",
       "changedAt": "2020-11-09T12:22:55.254Z",
       "revision": "193",
       "class": {
@@ -19006,7 +19006,7 @@
       ]
     },
     {
-      "id": "S-KfuNty0y1UnJlW1JYcd1pY5aohX",
+      "id": "R-KfuNty0y1UnJlW1JYcd1pY5aohX",
       "changedAt": "2018-02-27T16:34:34+01:00",
       "revision": "148",
       "changedBy": "od",
@@ -20323,90 +20323,6 @@
       ]
     },
     {
-      "id": "R-vzI581EFCyFm4VCpsAJAY6gNrUv",
-      "changedAt": "2022-11-30T16:25:37.456Z",
-      "class": {
-        "id": "RC-TermPropertyValue"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-Term"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:LifecycleStatusRejected"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-LifecycleStatusTerm"
-          },
-          "values": [
-            "V-TermStatus-3"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-LocalTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "rejected",
-                "language": "en"
-              }
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-j2bRQ5SwnA9NXWdWOIo7K2hhStD",
-      "changedAt": "2022-11-30T16:29:20.474Z",
-      "class": {
-        "id": "RC-TermPropertyValue"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-Term"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:LifecycleStatusPostponed"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-LifecycleStatusTerm"
-          },
-          "values": [
-            "V-TermStatus-3"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-LocalTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "postponed",
-                "language": "en"
-              }
-            ]
-          ]
-        }
-      ]
-    },
-    {
       "id": "R-n28XW0rtcgNmL4u1s1xnRBWKEeF",
       "changedAt": "2022-11-30T16:29:37.316Z",
       "class": {
@@ -20843,6 +20759,190 @@
             [
               {
                 "text": "withdrawn",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-j2bRQ5SwnA9NXWdWOIo7K2hhStD",
+      "changedAt": "2022-11-30T16:29:20.474Z",
+      "class": {
+        "id": "RC-TermPropertyValue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:LifecycleStatusPostponed"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "postponed",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-vzI581EFCyFm4VCpsAJAY6gNrUv",
+      "changedAt": "2022-11-30T16:25:37.456Z",
+      "class": {
+        "id": "RC-TermPropertyValue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:LifecycleStatusRejected"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "rejected",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-GJv07EUQm2ekP4aPyczD3YLitkO",
+      "changedAt": "2023-07-16T21:17:57.459Z",
+      "class": {
+        "id": "RC-TermPropertyValue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:LifecycleStatusExperimental"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "experimental",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-xdbjhesPSstgNdi9sraxVopuvL2",
+      "changedAt": "2023-07-16T21:03:48.080Z",
+      "class": {
+        "id": "RC-TermPropertyValue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:LifecycleStatusEquivalent"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "equivalent",
                 "language": "en"
               }
             ]
@@ -22090,7 +22190,7 @@
     },
     {
       "id": "R-Bw7GKkSQtk6cTboeGMlNf5ymHgl",
-      "changedAt": "2023-07-16T10:31:37.471Z",
+      "changedAt": "2023-07-16T21:08:51.690Z",
       "class": {
         "id": "RC-TermPropertyValue"
       },
@@ -22114,7 +22214,7 @@
           "values": [
             [
               {
-                "text": "IREB:PerspectiveBusiness"
+                "text": "SpecIF:PerspectiveBusiness"
               }
             ]
           ]
@@ -22143,8 +22243,7 @@
           "values": [
             [
               {
-                "text": "Business",
-                "language": "en"
+                "text": "Business"
               }
             ]
           ]
@@ -22153,7 +22252,7 @@
     },
     {
       "id": "R-d4eqF4gMBxKkHKqoocsGmBHt5TN",
-      "changedAt": "2023-07-16T10:32:08.024Z",
+      "changedAt": "2023-07-16T21:09:02.549Z",
       "class": {
         "id": "RC-TermPropertyValue"
       },
@@ -22177,7 +22276,7 @@
           "values": [
             [
               {
-                "text": "IREB:PerspectiveStakeholder"
+                "text": "SpecIF:PerspectiveStakeholder"
               }
             ]
           ]
@@ -22206,8 +22305,7 @@
           "values": [
             [
               {
-                "text": "Stakeholder",
-                "language": "en"
+                "text": "Stakeholder"
               }
             ]
           ]
@@ -22216,7 +22314,7 @@
     },
     {
       "id": "R-rzxARP8YMKWuTfPpbNYEE8K2Olc",
-      "changedAt": "2023-07-16T10:32:23.068Z",
+      "changedAt": "2023-07-16T21:09:15.936Z",
       "class": {
         "id": "RC-TermPropertyValue"
       },
@@ -22240,7 +22338,7 @@
           "values": [
             [
               {
-                "text": "IREB:PerspectiveUser"
+                "text": "SpecIF:PerspectiveUser"
               }
             ]
           ]
@@ -22269,12 +22367,7 @@
           "values": [
             [
               {
-                "text": "User",
-                "language": "en"
-              },
-              {
-                "text": "Anwender",
-                "language": "de"
+                "text": "Anwender"
               }
             ]
           ]
@@ -22283,7 +22376,7 @@
     },
     {
       "id": "R-R5YTxPTHbKKEOgZ6Di0udzxkp68",
-      "changedAt": "2023-07-16T10:32:53.375Z",
+      "changedAt": "2023-07-16T21:09:28.662Z",
       "class": {
         "id": "RC-TermPropertyValue"
       },
@@ -22307,7 +22400,7 @@
           "values": [
             [
               {
-                "text": "IREB:PerspectiveOperator"
+                "text": "SpecIF:PerspectiveOperator"
               }
             ]
           ]
@@ -22336,8 +22429,7 @@
           "values": [
             [
               {
-                "text": "Operator",
-                "language": "en"
+                "text": "Operator"
               }
             ]
           ]
@@ -24251,7 +24343,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "S-AFRDjW5KgLsmjsqS7vSeHKFdAqD"
+        "id": "R-AFRDjW5KgLsmjsqS7vSeHKFdAqD"
       },
       "object": {
         "id": "R-fX8L25Labq7NOQMfmfudzpsntyb"
@@ -30229,7 +30321,7 @@
             {
               "id": "N-619Vx52xDjbSf6UzxYWViNTglQb",
               "resource": {
-                "id": "S-AFRDjW5KgLsmjsqS7vSeHKFdAqD"
+                "id": "R-AFRDjW5KgLsmjsqS7vSeHKFdAqD"
               },
               "changedAt": "2018-03-21T18:12:11+01:00",
               "revision": "193"
@@ -30832,7 +30924,7 @@
             {
               "id": "N-aRJak5MMJE0ztirhTNrhCUsi1cB",
               "resource": {
-                "id": "S-KfuNty0y1UnJlW1JYcd1pY5aohX"
+                "id": "R-KfuNty0y1UnJlW1JYcd1pY5aohX"
               },
               "changedAt": "2018-02-26T13:37:55+01:00",
               "revision": "119"
@@ -30987,20 +31079,6 @@
               "revision": "114"
             },
             {
-              "id": "N-birnjccl1WTnidaByMTaW0OA4Hm",
-              "resource": {
-                "id": "R-vzI581EFCyFm4VCpsAJAY6gNrUv"
-              },
-              "changedAt": "2020-11-08T15:54:08.391Z"
-            },
-            {
-              "id": "N-GFj2xLNwwcaYAXy1BAvkDcSubGH",
-              "resource": {
-                "id": "R-j2bRQ5SwnA9NXWdWOIo7K2hhStD"
-              },
-              "changedAt": "2022-11-30T12:55:41.052Z"
-            },
-            {
               "id": "N-GHzvecggVQqDvO12hxlRJhckZ7r",
               "resource": {
                 "id": "R-n28XW0rtcgNmL4u1s1xnRBWKEeF"
@@ -31069,6 +31147,34 @@
                 "id": "R-A7JHwmw3atxcrgTFIZ7xuuGHr4k"
               },
               "changedAt": "2020-11-08T16:00:30.036Z"
+            },
+            {
+              "id": "N-GFj2xLNwwcaYAXy1BAvkDcSubGH",
+              "resource": {
+                "id": "R-j2bRQ5SwnA9NXWdWOIo7K2hhStD"
+              },
+              "changedAt": "2023-07-16T21:02:44.128Z"
+            },
+            {
+              "id": "N-birnjccl1WTnidaByMTaW0OA4Hm",
+              "resource": {
+                "id": "R-vzI581EFCyFm4VCpsAJAY6gNrUv"
+              },
+              "changedAt": "2023-07-16T21:02:38.673Z"
+            },
+            {
+              "id": "N-ly8oNuYrIhTEVQfCRKIVWefAUfY",
+              "resource": {
+                "id": "R-GJv07EUQm2ekP4aPyczD3YLitkO"
+              },
+              "changedAt": "2023-07-16T21:18:16.054Z"
+            },
+            {
+              "id": "N-9Iy37QXEQftL64v5IsN7NdEFLG8",
+              "resource": {
+                "id": "R-xdbjhesPSstgNdi9sraxVopuvL2"
+              },
+              "changedAt": "2023-07-16T21:03:54.508Z"
             },
             {
               "id": "N-LzxuAyFxOdDSFvQXKPO624A9h45",
