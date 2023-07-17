@@ -9,7 +9,7 @@
   "$schema": "https://specif.de/v1.1/schema.json",
   "generator": "SpecIF Modellintegrator und Editor",
   "generatorVersion": "1.1.q.1",
-  "createdAt": "2023-07-17T08:25:35.239Z",
+  "createdAt": "2023-07-17T09:25:39.015Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -1848,11 +1848,8 @@
           "values": [
             [
               {
-                "text": "Introduction"
-              },
-              {
                 "text": "Introduction",
-                "language": "de"
+                "language": "en"
               }
             ]
           ]
@@ -1886,7 +1883,7 @@
             [
               {
                 "text": "Namespaces",
-                "language": "de"
+                "language": "en"
               }
             ]
           ]
@@ -2110,7 +2107,7 @@
             [
               {
                 "text": "Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.",
-                "language": "de"
+                "language": "en"
               }
             ]
           ]
@@ -3195,10 +3192,6 @@
               {
                 "text": "A viewpoint in the ArchiMate language is a selection of a relevant subset of the ArchiMate elements and their relationships. This is the representation of that part of an architecture that is expressed in different diagrams.",
                 "language": "en"
-              },
-              {
-                "text": "A viewpoint in the ArchiMate language is a selection of a relevant subset of the ArchiMate elements and their relationships. This is the representation of that part of an architecture that is expressed in different diagrams.",
-                "language": "de"
               }
             ]
           ]
@@ -6538,7 +6531,7 @@
             [
               {
                 "text": "Model Elements (Glossary)",
-                "language": "de"
+                "language": "en"
               },
               {
                 "text": "Modellelemente (Glossar)",
@@ -13337,19 +13330,6 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "Name",
-                "language": "de"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
             "id": "PC-Term"
           },
           "values": [
@@ -13368,6 +13348,19 @@
             [
               {
                 "text": "<p>A name given to the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/title\">DCMI</a></i>)</small></p><p>Title (reference: Dublin Core) of the resource represented as rich text in XHTML content. SHOULD include only content that is valid inside an XHTML 'span' element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Name",
                 "language": "en"
               }
             ]
@@ -17684,8 +17677,7 @@
           "values": [
             [
               {
-                "text": "Size",
-                "language": "en"
+                "text": "Size"
               }
             ]
           ]
@@ -19161,6 +19153,279 @@
                 "language": "en"
               }
             ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-kjoKfseo7PM8KoBIisHrkpPSGLX",
+      "changedAt": "2023-07-17T09:01:37.224Z",
+      "class": {
+        "id": "RC-TermPropertyClassBoolean"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:multiple"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "The property may have multiple values.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "multiple values",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-DefaultValueBoolean"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-hUwiIq98gsPYfYiJKkFIlrD2Adu",
+      "changedAt": "2023-07-17T09:02:33.088Z",
+      "class": {
+        "id": "RC-TermPropertyClassBoolean"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:multiLanguage"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Property values may have multiple languages.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "multiple languages",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-DefaultValueBoolean"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-O3Dxwts5uxXVgKgNbmPaKc2QGFt",
+      "changedAt": "2023-07-17T09:25:29.482Z",
+      "class": {
+        "id": "RC-TermPropertyClassBoolean"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:isHeading"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Indicates whether the resource is a heading, e.g. for adding automatic numbering or influencing the display size.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "is heading",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-DefaultValueBoolean"
+          },
+          "values": [
+            "false"
           ]
         }
       ]
@@ -22644,8 +22909,7 @@
           "values": [
             [
               {
-                "text": "System Engineering",
-                "language": "en"
+                "text": "System Engineering"
               }
             ]
           ]
@@ -22695,8 +22959,7 @@
           "values": [
             [
               {
-                "text": "System Engineering",
-                "language": "en"
+                "text": "System Engineering"
               }
             ]
           ]
@@ -22746,8 +23009,7 @@
           "values": [
             [
               {
-                "text": "Mechanics",
-                "language": "en"
+                "text": "Mechanik"
               }
             ]
           ]
@@ -22797,8 +23059,7 @@
           "values": [
             [
               {
-                "text": "Elektronics",
-                "language": "en"
+                "text": "Elektronik"
               }
             ]
           ]
@@ -22848,8 +23109,7 @@
           "values": [
             [
               {
-                "text": "Software",
-                "language": "en"
+                "text": "Software"
               }
             ]
           ]
@@ -22899,8 +23159,7 @@
           "values": [
             [
               {
-                "text": "Safety",
-                "language": "en"
+                "text": "Sicherheit"
               }
             ]
           ]
@@ -31096,6 +31355,27 @@
               },
               "changedAt": "2018-02-26T13:37:55+01:00",
               "revision": "119"
+            },
+            {
+              "id": "N-jLUUBcBoyMPFWFNXA12mvKywyS0",
+              "resource": {
+                "id": "R-kjoKfseo7PM8KoBIisHrkpPSGLX"
+              },
+              "changedAt": "2023-07-17T09:01:37.224Z"
+            },
+            {
+              "id": "N-nAUe3yByQiItg47RcWKKd5yzIbo",
+              "resource": {
+                "id": "R-hUwiIq98gsPYfYiJKkFIlrD2Adu"
+              },
+              "changedAt": "2023-07-17T09:02:33.088Z"
+            },
+            {
+              "id": "N-4NNJ5LAGvM0FxkVd3sjPgPstCNx",
+              "resource": {
+                "id": "R-O3Dxwts5uxXVgKgNbmPaKc2QGFt"
+              },
+              "changedAt": "2023-07-17T09:04:24.609Z"
             },
             {
               "id": "N-uuswmqvvgfejmz7DnfaQ5SokKXx",
