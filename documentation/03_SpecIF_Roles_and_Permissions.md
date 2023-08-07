@@ -74,41 +74,41 @@ example: TypeScript
 
 ```typescript
 class CItemPermissions implements SpecifItemPermissions {
-	item: SpecifId;  // the item reference
-	permissions: SpecifPermissions;
-	constructor(iId: SpecifId, prm: string) {
-		this.item = iId;
-		this.permissions = {
+    item: SpecifId;  // the item reference
+    permissions: SpecifPermissions;
+    constructor(iId: SpecifId, prm: string) {
+        this.item = iId;
+        this.permissions = {
         //  A: prm.includes('A'),
-			C: prm.includes('C'),
-			R: prm.includes('R'),
-			U: prm.includes('U'),
-			D: prm.includes('D')
-		}
-	}
+            C: prm.includes('C'),
+            R: prm.includes('R'),
+            U: prm.includes('U'),
+            D: prm.includes('D')
+        }
+    }
 }
 class CRole implements SpecifRole {
-	id: SpecifId;
-	title: string;
-	description?: SpecifMultiLanguageText;
-	itemPermissions: SpecifItemPermissions[] = [];
-	constructor(roleName: string) {
-		this.id = roleName.toSpecifId();
-		this.title = roleName;
-	}
-	setItemPermissions(iId: SpecifId, prm: string) {
-		let idx = LIB.indexBy(this.itemPermissions, 'item', iId);
-		if (idx > -1)
-			this.itemPermissions[idx] = new CItemPermissions(iId, prm)
-		else
-			this.itemPermissions.push(new CItemPermissions(iId, prm));
-		return this  // make it chainable
-	}
-	removeItemPermissions(iId: SpecifId) {
-		let idx = LIB.indexBy(this.itemPermissions, 'item', iId);
-		if (idx > -1)
-			this.itemPermissions.splice(idx, 1)
-		return this  // make it chainable
-	}
+    id: SpecifId;
+    title: string;
+    description?: SpecifMultiLanguageText;
+    itemPermissions: SpecifItemPermissions[] = [];
+    constructor(roleName: string) {
+        this.id = roleName.toSpecifId();
+        this.title = roleName;
+    }
+    setItemPermissions(iId: SpecifId, prm: string) {
+        let idx = LIB.indexBy(this.itemPermissions, 'item', iId);
+        if (idx > -1)
+            this.itemPermissions[idx] = new CItemPermissions(iId, prm)
+        else
+            this.itemPermissions.push(new CItemPermissions(iId, prm));
+        return this  // make it chainable
+    }
+    removeItemPermissions(iId: SpecifId) {
+        let idx = LIB.indexBy(this.itemPermissions, 'item', iId);
+        if (idx > -1)
+            this.itemPermissions.splice(idx, 1)
+        return this  // make it chainable
+    }
 }
 ```
