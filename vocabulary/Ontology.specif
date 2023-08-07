@@ -9,7 +9,7 @@
   "$schema": "https://specif.de/v1.1/schema.json",
   "generator": "SpecIF Modellintegrator und Editor",
   "generatorVersion": "1.1.q.1",
-  "createdAt": "2023-07-17T09:25:39.015Z",
+  "createdAt": "2023-07-17T13:40:13.389Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -1861,7 +1861,7 @@
           "values": [
             [
               {
-                "text": "<p>The SpecIF Vocabulary (or Glossary) collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically. SpecIF adopts terms and their definitions from other initiatives, for example from the <a href=\"http://dublincore.org/\">Dublin Core Metadata Initiative (DCMI)</a>, the <a href=\"http://open-services.net/\">Open Services for Lifecycle Collaboration (OSLC)</a> and the <a href=\"http://ireb.org/\">International Requirements Engineering Board (IREB)</a>. The <a href=\"http://www.prostep.org/projekte/reqif-implementor-forum/\">ProSTEP iViP association</a> has also defined a set of attribute names to be used in ReqIF data, but those are not freely available and cannot be referenced here.</p><p>All terms carry a namespace, which is the first part separated with ':' or '.' ― they are thus easily recognized in text and data fields. For display, systems may choose to replace SpecIF terms by domain or language specific words. This collection itself is structured according to SpecIF using it's vocabulary. Hence, the titles are recognized as such, because they are tagged with '[[dcterms:title]]', whereas paragraphs like this one are tagged with '[[dcterms:description]]'.</p><p>The terms have a lifecycle status as follows:</p><ul><li><i>experimental:</i> The term is being used in first projects, but has not yet any normative maturity.</li><li><i>submitted:</i> The term has been submitted for adoption.</li><li><i>released:</i> The term has been adopted for use with SpecIF and is preferred among equivalent terms.</li><li><i>equivalent:</i> The term has been adopted for use with SpecIF, but the released term is preferred.</li><li><i>deprecated:</i> The term shall not any more be used with SpecIF; use the released term.</li></ul><p>The <a href=\"http://specif.de/\">Specification Interchange Facility (SpecIF)</a> is the result of an initiative by the <a href=\"http://gfse.de\">Gesellschaft für Systems Engineering (GfSE)</a>, the German chapter of <a href=\"http://www.incose.org/\">The International Council on Systems Engineering (INCOSE)</a>.</p><p>All information provided here is made available according to <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons 4.0 CC BY-SA</a> or the license chosen by the respective publishers. We appreciate any contribution or proposal; please contact <a href=\"mailto:od@enso-managers.de\" >Dr. Oskar von Dungern</a>.</p><img src=\"https://upload.wikimedia.org/wikipedia/commons/c/c9/CC_BY-SA_3_icon_88x31.png\" alt=\"Creative Commons BY-SA Icon\" />"
+                "text": "<p>The SpecIF Ontology (Vocabulary) collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically. SpecIF adopts terms and their definitions from other initiatives, for example from the <a href=\"http://dublincore.org/\">Dublin Core Metadata Initiative (DCMI)</a>, the <a href=\"http://open-services.net/\">Open Services for Lifecycle Collaboration (OSLC)</a> and the <a href=\"http://ireb.org/\">International Requirements Engineering Board (IREB)</a>. The <a href=\"http://www.prostep.org/projekte/reqif-implementor-forum/\">ProSTEP iViP association</a> has also defined a set of attribute names to be used in ReqIF data, but those are not freely available and cannot be referenced here.</p><p>All terms carry a namespace, which is the first part separated with ':' or '.' ― they are thus easily recognized in text and data fields. For display, systems may choose to replace SpecIF terms by domain or language specific words. This collection itself is structured according to SpecIF using it's vocabulary. Hence, the titles are recognized as such, because they are tagged with '[[dcterms:title]]', whereas paragraphs like this one are tagged with '[[dcterms:description]]'.</p><p>The terms have a lifecycle status as follows:</p><ul><li><i>experimental:</i> The term is being used in first projects, but has not yet any normative maturity.</li><li><i>submitted:</i> The term has been submitted for adoption.</li><li><i>released:</i> The term has been adopted for use with SpecIF and is preferred among equivalent terms.</li><li><i>equivalent:</i> The term has been adopted for use with SpecIF, but the released term is preferred.</li><li><i>deprecated:</i> The term shall not any more be used with SpecIF; use the released term.</li></ul><p>The <a href=\"http://specif.de/\">Specification Interchange Facility (SpecIF)</a> is the result of an initiative by the <a href=\"http://gfse.de\">Gesellschaft für Systems Engineering (GfSE)</a>, the German chapter of <a href=\"http://www.incose.org/\">The International Council on Systems Engineering (INCOSE)</a>.</p><p>All information provided here is made available according to <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons 4.0 CC BY-SA</a> or the license chosen by the respective publishers. We appreciate any contribution or proposal; please contact <a href=\"mailto:od@enso-managers.de\" >Dr. Oskar von Dungern</a>.</p><img src=\"https://upload.wikimedia.org/wikipedia/commons/c/c9/CC_BY-SA_3_icon_88x31.png\" alt=\"Creative Commons BY-SA Icon\" />"
               }
             ]
           ]
@@ -19443,6 +19443,543 @@
       ]
     },
     {
+      "id": "R-Drg6PdGi3JnAah7JpzaulSd2kRA",
+      "changedAt": "2023-07-17T11:40:15.113Z",
+      "class": {
+        "id": "RC-TermPropertyClassString"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:TextFormat"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "The type of formatting, plain or XHTML.",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Textformat"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-10"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "32"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-GJMC6iwXgs1qFumNfvd4sYgrwcg",
+      "changedAt": "2023-07-17T11:46:11.828Z",
+      "class": {
+        "id": "RC-TermPropertyClassInteger"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:StringMaxLength"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Maximum length of a string value.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "max. Length",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-b5FIonaTgCQgxM5ZDiL1IucTQhR",
+      "changedAt": "2023-07-17T11:57:22.253Z",
+      "class": {
+        "id": "RC-TermPropertyClassInteger"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:IntegerMinInclusive"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Inclusive minimum of an integer value.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "min. Value",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-IntegerMinInclusive"
+          },
+          "values": [
+            "-2147483648"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-IntegerMaxInclusive"
+          },
+          "values": [
+            "2147483647"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-nEScE4KsmMstunZgUP8TzJeislM",
+      "changedAt": "2023-07-17T11:49:31.533Z",
+      "class": {
+        "id": "RC-TermPropertyClassInteger"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:IntegerMaxInclusive"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Inclusive maximum of an integer value.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "max. Value",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-IntegerMinInclusive"
+          },
+          "values": [
+            "-2147483648"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-IntegerMaxInclusive"
+          },
+          "values": [
+            "2147483647"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-bvpThxmSxIyRVe4m7y7bIWrI7Fw",
+      "changedAt": "2023-07-17T11:57:38.282Z",
+      "class": {
+        "id": "RC-TermPropertyClassReal"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:RealMinInclusive"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Inclusive minimum of a real value.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "min. Value",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-cq8S6uAA7C9n5bUWxTruAmJmuA4",
+      "changedAt": "2023-07-17T11:57:04.627Z",
+      "class": {
+        "id": "RC-TermPropertyClassReal"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:RealMaxInclusive"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Inclusive maximum of a real value.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "max. Value",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-LHcReZ7Pfd4aln2oaQnTRVLQjvY",
       "changedAt": "2023-07-16T11:06:10.422Z",
       "revision": "95",
@@ -31388,6 +31925,48 @@
                 "id": "R-O3Dxwts5uxXVgKgNbmPaKc2QGFt"
               },
               "changedAt": "2023-07-17T09:04:24.609Z"
+            },
+            {
+              "id": "N-gNWPzq8S2Km20UKQoigSfyaGPtQ",
+              "resource": {
+                "id": "R-Drg6PdGi3JnAah7JpzaulSd2kRA"
+              },
+              "changedAt": "2023-07-17T11:40:15.113Z"
+            },
+            {
+              "id": "N-4gFxRKvo1G5rTUF8WAI2eIsQzAI",
+              "resource": {
+                "id": "R-GJMC6iwXgs1qFumNfvd4sYgrwcg"
+              },
+              "changedAt": "2023-07-17T11:46:11.828Z"
+            },
+            {
+              "id": "N-M6zm8MnYkGEYiGuq8a3m9s7gxqd",
+              "resource": {
+                "id": "R-b5FIonaTgCQgxM5ZDiL1IucTQhR"
+              },
+              "changedAt": "2023-07-17T11:50:07.010Z"
+            },
+            {
+              "id": "N-zYE7KgeuB8G4cAL4Vy4FfMQ54Dw",
+              "resource": {
+                "id": "R-nEScE4KsmMstunZgUP8TzJeislM"
+              },
+              "changedAt": "2023-07-17T11:49:31.533Z"
+            },
+            {
+              "id": "N-bBeti9KDAaEjWrAhbwzwrj1r6XS",
+              "resource": {
+                "id": "R-bvpThxmSxIyRVe4m7y7bIWrI7Fw"
+              },
+              "changedAt": "2023-07-17T11:56:07.399Z"
+            },
+            {
+              "id": "N-46Ge7dJyUF7jHofwBHq1ytdjCMx",
+              "resource": {
+                "id": "R-cq8S6uAA7C9n5bUWxTruAmJmuA4"
+              },
+              "changedAt": "2023-07-17T11:57:04.627Z"
             },
             {
               "id": "N-uuswmqvvgfejmz7DnfaQ5SokKXx",

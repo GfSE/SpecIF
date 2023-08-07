@@ -15,14 +15,14 @@ When analyzing, among others we have the following questions:
 - Should the relation between *Location* and *Value* be named *has*?
 - Can *Agent*, *Operation*, *Storage* and perhaps other entities be hierarchically nested?
 
-There is no standard serialization defined for FMC. As to our knowledge there is only one modeling tool for FMC, namely [ARCWAY Ccokpit](https://arcway.com).
+There is no standard serialization defined for FMC. As to our knowledge there is only one modeling tool for FMC, namely [ARCWAY Cockpit](https://arcway.com).
 We will show in the following the mapping of the entities and relationships realized in this tool.
 
 ### Resources
 
 | [ARCWAY Cockpit](https://arcway.com) | [SpecIF](https://specif.de) |
 | --- | --- |
-| Plan | [SpecIF:Diagram](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-vocjQYmvtlIzcGsieVchOGhCUmb) |
+| Plan | [SpecIF:View](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-vocjQYmvtlIzcGsieVchOGhCUmb) |
 | Function, Agent, Operation | [FMC:Actor](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-4NoXVcSzSs07Htg4959SJnDEm0D) |
 | Information, Channel, Location, Storage, Value | [FMC:State](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-yeUw4dc3iTxk7PHLdQo7efxLvBc) |
 | Event, Point in time | [FMC:Event](https://specif.de/apps/view#import=../examples/Vocabulary.specifz;view=doc;node=N-8HwdIxFap0pTQ5JiE31I1BQJ15z) |
