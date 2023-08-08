@@ -7,9 +7,9 @@
     }
   ],
   "$schema": "https://specif.de/v1.1/schema.json",
-  "generator": "SpecIF Modellintegrator und Editor",
+  "generator": "SpecIF Model-Integrator and Editor",
   "generatorVersion": "1.1.q.1",
-  "createdAt": "2023-07-17T13:40:13.389Z",
+  "createdAt": "2023-08-08T16:19:48.193Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -2814,7 +2814,12 @@
           "values": [
             [
               {
-                "text": "Textabschnitt"
+                "text": "Paragraph",
+                "language": "en"
+              },
+              {
+                "text": "Textabschnitt",
+                "language": "de"
               }
             ]
           ]
@@ -2937,7 +2942,12 @@
           "values": [
             [
               {
-                "text": "Kapitelüberschrift"
+                "text": "Heading",
+                "language": "en"
+              },
+              {
+                "text": "Kapitelüberschrift",
+                "language": "de"
               }
             ]
           ]
@@ -3012,7 +3022,8 @@
           "values": [
             [
               {
-                "text": "<p>A 'View' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.</p>"
+                "text": "<p>A 'View' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.</p>",
+                "language": "en"
               },
               {
                 "text": "<p>Ein Diagramm ist eine graphische Modellsicht zur Vermittlung eines bestimmten Sachverhalts, z.B. ein Geschäftsprozess oder Systemaufbau.</p>",
@@ -3302,7 +3313,12 @@
           "values": [
             [
               {
-                "text": "Modelldiagramm"
+                "text": "Model Diagram",
+                "language": "en"
+              },
+              {
+                "text": "Modelldiagramm",
+                "language": "de"
               }
             ]
           ]
@@ -3314,7 +3330,12 @@
           "values": [
             [
               {
-                "text": "Modelldiagramme"
+                "text": "Model Diagrams",
+                "language": "en"
+              },
+              {
+                "text": "Modelldiagramme",
+                "language": "de"
               }
             ]
           ]
@@ -3403,7 +3424,16 @@
           "values": [
             [
               {
-                "text": "Merkmal"
+                "text": "Feature",
+                "language": "en"
+              },
+              {
+                "text": "Merkmal",
+                "language": "de"
+              },
+              {
+                "text": "Caractéristique",
+                "language": "fr"
               }
             ]
           ]
@@ -3415,7 +3445,16 @@
           "values": [
             [
               {
-                "text": "Merkmale"
+                "text": "Features",
+                "language": "en"
+              },
+              {
+                "text": "Merkmale",
+                "language": "de"
+              },
+              {
+                "text": "Caractéristiques",
+                "language": "fr"
               }
             ]
           ]
@@ -3667,7 +3706,12 @@
           "values": [
             [
               {
-                "text": "Anforderung"
+                "text": "Requirement",
+                "language": "en"
+              },
+              {
+                "text": "Anforderung",
+                "language": "de"
               }
             ]
           ]
@@ -3679,7 +3723,12 @@
           "values": [
             [
               {
-                "text": "Anforderungen"
+                "text": "Requirements",
+                "language": "en"
+              },
+              {
+                "text": "Anforderungen",
+                "language": "de"
               }
             ]
           ]
@@ -3883,7 +3932,12 @@
           "values": [
             [
               {
-                "text": "Modellelement"
+                "text": "Model Element",
+                "language": "en"
+              },
+              {
+                "text": "Modellelement",
+                "language": "de"
               }
             ]
           ]
@@ -3895,7 +3949,12 @@
           "values": [
             [
               {
-                "text": "Modellelemente"
+                "text": "Model Elements",
+                "language": "en"
+              },
+              {
+                "text": "Modellelemente",
+                "language": "de"
               }
             ]
           ]
@@ -3960,7 +4019,12 @@
           "values": [
             [
               {
-                "text": "Ressource"
+                "text": "Resource",
+                "language": "en"
+              },
+              {
+                "text": "Ressource",
+                "language": "de"
               }
             ]
           ]
@@ -3972,7 +4036,12 @@
           "values": [
             [
               {
-                "text": "Ressourcen"
+                "text": "Resources",
+                "language": "en"
+              },
+              {
+                "text": "Ressourcen",
+                "language": "de"
               }
             ]
           ]
@@ -4037,7 +4106,12 @@
           "values": [
             [
               {
-                "text": "Aussage"
+                "text": "Statement",
+                "language": "en"
+              },
+              {
+                "text": "Aussage",
+                "language": "de"
               }
             ]
           ]
@@ -4049,7 +4123,12 @@
           "values": [
             [
               {
-                "text": "Aussagen"
+                "text": "Statements",
+                "language": "en"
+              },
+              {
+                "text": "Aussagen",
+                "language": "de"
               }
             ]
           ]
@@ -4114,7 +4193,12 @@
           "values": [
             [
               {
-                "text": "Attribut"
+                "text": "Property",
+                "language": "en"
+              },
+              {
+                "text": "Attribut",
+                "language": "de"
               }
             ]
           ]
@@ -4126,7 +4210,12 @@
           "values": [
             [
               {
-                "text": "Attribute"
+                "text": "Properties",
+                "language": "en"
+              },
+              {
+                "text": "Attribute",
+                "language": "de"
               }
             ]
           ]
@@ -4239,6 +4328,43 @@
         },
         {
           "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.</p><p>The particular use of FMC:Actor is specified with a [[dcterms:type]] property. The values of that property can be ontology-terms, such as [[bpmn:timer]].</p>",
+                "language": "en"
+              },
+              {
+                "text": "<p>Ein 'Akteur' ist ein fundamentaler Modellelementtyp, der eine aktive Entität darstellt, sei es eine Aktivität, ein Prozessschritt, eine Funktion, eine Systemkomponente oder eine Rolle.</p><p>Die spezielle Verwendung von FMC:Actor wird mit einer [[dcterms:type]] Eigenschaft spezifiziert. Die Werte dieser Eigenschaft können Ontologiebegriffe sein, wie z.B. [[bpmn:timer]].</p>",
+                "language": "de"
+              },
+              {
+                "text": "<p>Un 'acteur' est un type d'élément de modèle fondamental représentant une entité active, qu'il s'agisse d'une activité, d'une étape de processus, d'une fonction, d'un composant de système ou d'un rôle.</p><p>L'utilisation particulière de FMC:Actor est spécifié avec une propriété [[dcterms:type]]. Les valeurs de cette propriété peuvent être des termes d'ontologie, tels que [[bpmn:timer]].</p>",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
             "id": "PC-LocalTerm"
           },
           "values": [
@@ -4277,43 +4403,6 @@
                 "language": "fr"
               }
             ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "<p>An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.</p><p>The particular use of FMC:Actor is specified with a [[dcterms:type]] property. The values of that property can be ontology-terms, such as [[bpmn:timer]].</p>",
-                "language": "en"
-              },
-              {
-                "text": "<p>Ein 'Akteur' ist ein fundamentaler Modellelementtyp, der eine aktive Entität darstellt, sei es eine Aktivität, ein Prozessschritt, eine Funktion, eine Systemkomponente oder eine Rolle.</p><p>Die spezielle Verwendung von FMC:Actor wird mit einer [[dcterms:type]] Eigenschaft spezifiziert. Die Werte dieser Eigenschaft können Ontologiebegriffe sein, wie z.B. [[bpmn:timer]].</p>",
-                "language": "de"
-              },
-              {
-                "text": "<p>Un 'acteur' est un type d'élément de modèle fondamental représentant une entité active, qu'il s'agisse d'une activité, d'une étape de processus, d'une fonction, d'un composant de système ou d'un rôle.</p><p>L'utilisation particulière de FMC:Actor est spécifié avec une propriété [[dcterms:type]]. Les valeurs de cette propriété peuvent être des termes d'ontologie, tels que [[bpmn:timer]].</p>",
-                "language": "fr"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-4"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-LifecycleStatusTerm"
-          },
-          "values": [
-            "V-TermStatus-6"
           ]
         },
         {
@@ -4434,7 +4523,16 @@
           "values": [
             [
               {
-                "text": "Zustand"
+                "text": "State",
+                "language": "en"
+              },
+              {
+                "text": "Zustand",
+                "language": "de"
+              },
+              {
+                "text": "État",
+                "language": "fr"
               }
             ]
           ]
@@ -4446,7 +4544,16 @@
           "values": [
             [
               {
-                "text": "Zustände"
+                "text": "States",
+                "language": "en"
+              },
+              {
+                "text": "Zustände",
+                "language": "de"
+              },
+              {
+                "text": "États",
+                "language": "fr"
               }
             ]
           ]
@@ -4906,7 +5013,16 @@
           "values": [
             [
               {
-                "text": "Kommentar"
+                "text": "Comment",
+                "language": "en"
+              },
+              {
+                "text": "Kommentar",
+                "language": "de"
+              },
+              {
+                "text": "Commentaire",
+                "language": "fr"
               }
             ]
           ]
@@ -4918,7 +5034,16 @@
           "values": [
             [
               {
-                "text": "Kommentare"
+                "text": "Comments",
+                "language": "en"
+              },
+              {
+                "text": "Kommentare",
+                "language": "de"
+              },
+              {
+                "text": "Commentaires",
+                "language": "fr"
               }
             ]
           ]
@@ -5025,7 +5150,12 @@
           "values": [
             [
               {
-                "text": "Anmerkung"
+                "text": "Note",
+                "language": "en"
+              },
+              {
+                "text": "Notiz",
+                "language": "de"
               }
             ]
           ]
@@ -5037,7 +5167,12 @@
           "values": [
             [
               {
-                "text": "Anmerkungen"
+                "text": "Notes",
+                "language": "en"
+              },
+              {
+                "text": "Notizen",
+                "language": "de"
               }
             ]
           ]
@@ -5095,7 +5230,12 @@
           "values": [
             [
               {
-                "text": "Annotation"
+                "text": "Annotation",
+                "language": "en"
+              },
+              {
+                "text": "Annotation",
+                "language": "de"
               }
             ]
           ]
@@ -5107,7 +5247,12 @@
           "values": [
             [
               {
-                "text": "Annotationen"
+                "text": "Annotations",
+                "language": "en"
+              },
+              {
+                "text": "Annotationen",
+                "language": "de"
               }
             ]
           ]
@@ -5388,6 +5533,40 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Term",
+                "language": "en"
+              },
+              {
+                "text": "Begriff",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Terms",
+                "language": "en"
+              },
+              {
+                "text": "Begriffe",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-isHeading"
           },
           "values": [
@@ -5453,6 +5632,48 @@
           },
           "values": [
             "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Noun",
+                "language": "en"
+              },
+              {
+                "text": "Substantiv",
+                "language": "de"
+              },
+              {
+                "text": "Nom",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Nouns",
+                "language": "en"
+              },
+              {
+                "text": "Substantive",
+                "language": "de"
+              },
+              {
+                "text": "Noms",
+                "language": "fr"
+              }
+            ]
           ]
         },
         {
@@ -5534,6 +5755,48 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Predicate",
+                "language": "en"
+              },
+              {
+                "text": "Prädikat",
+                "language": "de"
+              },
+              {
+                "text": "Prédicat",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Predicates",
+                "language": "en"
+              },
+              {
+                "text": "Prädikate",
+                "language": "de"
+              },
+              {
+                "text": "Prédicats",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-isHeading"
           },
           "values": [
@@ -5611,6 +5874,48 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Property",
+                "language": "en"
+              },
+              {
+                "text": "Attribut",
+                "language": "de"
+              },
+              {
+                "text": "Attribut",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Properties",
+                "language": "en"
+              },
+              {
+                "text": "Attribute",
+                "language": "de"
+              },
+              {
+                "text": "Attributs",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-isHeading"
           },
           "values": [
@@ -5684,6 +5989,48 @@
           },
           "values": [
             "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Value",
+                "language": "en"
+              },
+              {
+                "text": "Wert",
+                "language": "de"
+              },
+              {
+                "text": "Valeur",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Values",
+                "language": "en"
+              },
+              {
+                "text": "Werte",
+                "language": "de"
+              },
+              {
+                "text": "Valeurs",
+                "language": "fr"
+              }
+            ]
           ]
         },
         {
@@ -7227,6 +7574,27 @@
           },
           "values": [
             "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "contains",
+                "language": "en"
+              },
+              {
+                "text": "enthält",
+                "language": "de"
+              },
+              {
+                "text": "contient",
+                "language": "fr"
+              }
+            ]
           ]
         },
         {
@@ -13182,7 +13550,12 @@
           "values": [
             [
               {
-                "text": "Identifikator"
+                "text": "Identifier",
+                "language": "en"
+              },
+              {
+                "text": "Identifikator",
+                "language": "en"
               }
             ]
           ]
@@ -13362,6 +13735,10 @@
               {
                 "text": "Name",
                 "language": "en"
+              },
+              {
+                "text": "Name",
+                "language": "de"
               }
             ]
           ]
@@ -14496,7 +14873,12 @@
           "values": [
             [
               {
-                "text": "Thema"
+                "text": "Subject",
+                "language": "en"
+              },
+              {
+                "text": "Thema",
+                "language": "de"
               }
             ]
           ]
@@ -14568,7 +14950,12 @@
           "values": [
             [
               {
-                "text": "Quelle"
+                "text": "Source",
+                "language": "en"
+              },
+              {
+                "text": "Quelle",
+                "language": "de"
               }
             ]
           ]
@@ -14656,7 +15043,12 @@
           "values": [
             [
               {
-                "text": "Autor"
+                "text": "Author",
+                "language": "en"
+              },
+              {
+                "text": "Autor",
+                "language": "de"
               }
             ]
           ]
@@ -14772,7 +15164,12 @@
           "values": [
             [
               {
-                "text": "erstellt am"
+                "text": "created at",
+                "language": "en"
+              },
+              {
+                "text": "erstellt am",
+                "language": "de"
               }
             ]
           ]
@@ -14836,7 +15233,12 @@
           "values": [
             [
               {
-                "text": "erstellt am"
+                "text": "created at",
+                "language": "en"
+              },
+              {
+                "text": "erstellt am",
+                "language": "de"
               }
             ]
           ]
@@ -14944,7 +15346,12 @@
           "values": [
             [
               {
-                "text": "geändert am"
+                "text": "changed at",
+                "language": "en"
+              },
+              {
+                "text": "geändert am",
+                "language": "de"
               }
             ]
           ]
@@ -15072,7 +15479,12 @@
           "values": [
             [
               {
-                "text": "Mitwirkende(r)"
+                "text": "Contributor",
+                "language": "en"
+              },
+              {
+                "text": "Mitwirkende(r)",
+                "language": "de"
               }
             ]
           ]
@@ -15136,6 +15548,23 @@
           "values": [
             "V-TermStatus-6"
           ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Rights Holder",
+                "language": "en"
+              },
+              {
+                "text": "Rechte-Inhaber(in)",
+                "language": "de"
+              }
+            ]
+          ]
         }
       ]
     },
@@ -15179,6 +15608,23 @@
           },
           "values": [
             "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Rights",
+                "language": "en"
+              },
+              {
+                "text": "Rechte",
+                "language": "de"
+              }
+            ]
           ]
         }
       ]
@@ -16416,7 +16862,16 @@
           "values": [
             [
               {
-                "text": "Präfix"
+                "text": "Prefix",
+                "language": "en"
+              },
+              {
+                "text": "Präfix",
+                "language": "de"
+              },
+              {
+                "text": "Prefix",
+                "language": "fr"
               }
             ]
           ]
@@ -18557,13 +19012,25 @@
     },
     {
       "id": "R-852227527",
-      "changedAt": "2018-02-17T14:52:02+01:00",
+      "changedAt": "2023-08-08T16:16:39.158Z",
       "revision": "84",
       "changedBy": "od",
       "class": {
         "id": "RC-TermPropertyClassString"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-Term"
@@ -18584,7 +19051,7 @@
             [
               {
                 "text": "An icon associated with the resource class.",
-                "language": "en"
+                "language": "en-US"
               }
             ]
           ]
@@ -18606,12 +19073,132 @@
               {
                 "text": "Icon",
                 "language": "en"
-              },
-              {
-                "text": "Symbol",
-                "language": "de"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-UoBycNy1uGsVSARqygBsxx7Hlsd",
+      "changedAt": "2023-08-08T16:13:39.420Z",
+      "revision": "84",
+      "changedBy": "od",
+      "class": {
+        "id": "RC-TermPropertyClassString"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:Unit"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "The unit of a property's numeric value; preferably an SI unit symbol such as 'm^3/kg' (Système international (d'unités)) or a currency symbol.",
+                "language": "en-US"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Unit"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-10"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "32"
           ]
         }
       ]
@@ -18649,7 +19236,7 @@
     },
     {
       "id": "R-Instantiation",
-      "changedAt": "2018-02-17T14:52:02+01:00",
+      "changedAt": "2023-08-08T16:18:03.548Z",
       "revision": "86",
       "changedBy": "od",
       "class": {
@@ -18675,8 +19262,8 @@
           "values": [
             [
               {
-                "text": "\"user\": a user creates, updates and deletes a resource's instance manually.\n\"auto\": a resource's instance is created, updated or deleted by an algorithm.",
-                "language": "en"
+                "text": "'user': a user creates, updates and deletes a resource's instance manually.\n'auto': a resource's instance is created, updated or deleted by an algorithm.",
+                "language": "en-US"
               }
             ]
           ]
@@ -18705,12 +19292,28 @@
               }
             ]
           ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "false"
+          ]
         }
       ]
     },
     {
       "id": "R-Creation",
-      "changedAt": "2018-02-17T14:52:03+01:00",
+      "changedAt": "2023-08-08T16:18:35.958Z",
       "revision": "87",
       "changedBy": "od",
       "class": {
@@ -18737,6 +19340,10 @@
             [
               {
                 "text": "\"manual\": user interface supports creation, update and deletion of the resource.\r\n\"auto\": the resource is created, updated or deleted by an algorithm."
+              },
+              {
+                "text": "'manual': user interface supports creation, update and deletion of the resource.\n'auto': the resource is created, updated or deleted by an algorithm.",
+                "language": "en-US"
               }
             ]
           ]
@@ -18747,6 +19354,22 @@
           },
           "values": [
             "V-TermStatus-9"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "false"
           ]
         }
       ]
@@ -19442,6 +20065,176 @@
           },
           "values": [
             "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-fcIVlPmp9FLvgpte85s2a3xUJTW",
+      "changedAt": "2023-08-08T12:00:09.863Z",
+      "class": {
+        "id": "RC-TermPropertyClassString"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DefaultValue"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Default Value"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "true"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-Yl3N8FsuL9aO8yncJfnxMAQXP1w",
+      "changedAt": "2023-08-08T11:59:51.149Z",
+      "class": {
+        "id": "RC-TermPropertyClassString"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DefaultValueString"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Default Value"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "true"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "true"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-20"
           ]
         }
       ]
@@ -22565,6 +23358,14 @@
               {
                 "text": "Feature",
                 "language": "en"
+              },
+              {
+                "text": "Merkmal",
+                "language": "de"
+              },
+              {
+                "text": "Caractéristique",
+                "language": "fr"
               }
             ]
           ]
@@ -31830,6 +32631,14 @@
               "revision": "114"
             },
             {
+              "id": "N-6E8yjTm33PRir3854I74FUBJcrm",
+              "resource": {
+                "id": "R-UoBycNy1uGsVSARqygBsxx7Hlsd",
+                "revision": "84"
+              },
+              "changedAt": "2023-08-08T16:13:39.420Z"
+            },
+            {
               "id": "N-ebrdGYUINTLQi3HqgVfz5TSqIlg",
               "resource": {
                 "id": "R-852227526"
@@ -31929,6 +32738,20 @@
                 "id": "R-O3Dxwts5uxXVgKgNbmPaKc2QGFt"
               },
               "changedAt": "2023-07-17T09:04:24.609Z"
+            },
+            {
+              "id": "N-IqbM5qUahQVuwuaDydXjwISkcu1",
+              "resource": {
+                "id": "R-fcIVlPmp9FLvgpte85s2a3xUJTW"
+              },
+              "changedAt": "2023-08-08T11:57:55.586Z"
+            },
+            {
+              "id": "N-C8BRWBpzXPizVv6UcgavcxK2Lr4",
+              "resource": {
+                "id": "R-Yl3N8FsuL9aO8yncJfnxMAQXP1w"
+              },
+              "changedAt": "2023-08-08T11:59:51.149Z"
             },
             {
               "id": "N-gNWPzq8S2Km20UKQoigSfyaGPtQ",
