@@ -19290,7 +19290,7 @@
           "values": [
             [
               {
-                "text": "Property values may have multiple languages.",
+                "text": "A property value may have multiple languages.",
                 "language": "en"
               }
             ]
@@ -19319,12 +19319,16 @@
           "values": [
             [
               {
-                "text": "multiple languages",
+                "text": "multi-language",
                 "language": "en"
               },
               {
                 "text": "mehrsprachig",
                 "language": "de"
+              },
+              {
+                "text": "multilingue",
+                "language": "fr"
               }
             ]
           ]
