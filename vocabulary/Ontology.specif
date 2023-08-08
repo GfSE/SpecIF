@@ -9,7 +9,7 @@
   "$schema": "https://specif.de/v1.1/schema.json",
   "generator": "SpecIF Model-Integrator and Editor",
   "generatorVersion": "1.1.q.1",
-  "createdAt": "2023-08-08T16:19:48.193Z",
+  "createdAt": "2023-08-08T21:08:40.711Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -4240,7 +4240,7 @@
     },
     {
       "id": "R-155140545",
-      "changedAt": "2018-02-17T14:51:41+01:00",
+      "changedAt": "2023-08-08T20:46:52.943Z",
       "revision": "9",
       "changedBy": "od",
       "class": {
@@ -4267,7 +4267,7 @@
             [
               {
                 "text": "<p>A 'Plan' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.</p>",
-                "language": "en"
+                "language": "en-US"
               }
             ]
           ]
@@ -4278,6 +4278,38 @@
           },
           "values": [
             "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Schematic"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Schematics"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
           ]
         }
       ]
@@ -10596,7 +10628,7 @@
     },
     {
       "id": "R-refines",
-      "changedAt": "2023-07-16T15:00:53.179Z",
+      "changedAt": "2023-08-08T21:08:32.367Z",
       "revision": "33",
       "class": {
         "id": "RC-TermStatementClass"
@@ -10634,7 +10666,7 @@
             [
               {
                 "text": "<p>A [[IREB:Requirement]] 'refines' another [[IREB:Requirement]].</p>",
-                "language": "en"
+                "language": "en-US"
               }
             ]
           ]
@@ -10662,7 +10694,12 @@
           "values": [
             [
               {
-                "text": "verfeinert"
+                "text": "refines",
+                "language": "en-US"
+              },
+              {
+                "text": "verfeinert",
+                "language": "de"
               }
             ]
           ]
@@ -15876,7 +15913,7 @@
     },
     {
       "id": "R-A8FDfIonVwNiywJ6pafbpIt3hqU",
-      "changedAt": "2023-04-01T14:11:23.173Z",
+      "changedAt": "2023-08-08T20:52:31.633Z",
       "class": {
         "id": "RC-TermPropertyClassString"
       },
@@ -15925,9 +15962,17 @@
             [
               {
                 "text": "Requirements are typically sub-classified into functional requirements ([[IREB:FunctionalRequirement]]), quality requirements ([[IREB:QualityRequirement]]) and constraints ([[IREB:Constraint]]). The latter two are also called non-functional requirements.",
-                "language": "en"
+                "language": "en-US"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-2"
           ]
         },
         {
@@ -15940,7 +15985,27 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Type"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
           },
           "values": [
             "false"
@@ -16212,6 +16277,116 @@
         {
           "class": {
             "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-10"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "32"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-Ayn8qoHEenYwKadS4akuD5hKHck",
+      "changedAt": "2023-08-08T20:40:29.117Z",
+      "revision": "76",
+      "class": {
+        "id": "RC-TermPropertyClassString"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "ReqIF.ForeignID"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "The 'Lifecycle Status' of the resource."
+              },
+              {
+                "text": "The 'Lifecycle Status' of the resource.",
+                "language": "en-US"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Original ID"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
           },
           "values": [
             "false"
@@ -23507,7 +23682,7 @@
     },
     {
       "id": "R-bVp4rdjBqmM6cY3kCMcFUABMcHk",
-      "changedAt": "2023-07-16T10:28:17.587Z",
+      "changedAt": "2023-08-08T20:53:53.977Z",
       "class": {
         "id": "RC-TermPropertyValue"
       },
@@ -23532,7 +23707,7 @@
             [
               {
                 "text": "A requirement concerning a result of behavior that shall be provided by a function of a system (or of a component or service).",
-                "language": "en"
+                "language": "en-US"
               }
             ]
           ]
@@ -23552,7 +23727,7 @@
           "values": [
             [
               {
-                "text": "Function",
+                "text": "Function or User Story",
                 "language": "en"
               }
             ]
@@ -31008,6 +31183,32 @@
       "object": {
         "id": "R-JPHg6k3k7BSUd5VYUzztPKQWrch"
       }
+    },
+    {
+      "id": "S-JUtyJKf05ZZT65wbOVOJFXCOB8y",
+      "changedAt": "2023-08-08T20:40:42.386Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-SDJ68yzYCQB0cJ74tjNypSIwxoS"
+      },
+      "object": {
+        "id": "R-Ayn8qoHEenYwKadS4akuD5hKHck"
+      }
+    },
+    {
+      "id": "S-81Dp4uvdpJjN3JjEm6QaXIelaFg",
+      "changedAt": "2023-08-08T20:41:02.199Z",
+      "class": {
+        "id": "SC-isSynonymOfProperty"
+      },
+      "subject": {
+        "id": "R-Ayn8qoHEenYwKadS4akuD5hKHck"
+      },
+      "object": {
+        "id": "R-1357982109"
+      }
     }
   ],
   "hierarchies": [
@@ -32406,6 +32607,14 @@
               "changedAt": "2023-03-17T20:52:21.573Z"
             },
             {
+              "id": "N-n5JPZmHu9KWrtnUHyR1lU9138Fd",
+              "resource": {
+                "id": "R-Ayn8qoHEenYwKadS4akuD5hKHck",
+                "revision": "76"
+              },
+              "changedAt": "2023-08-08T20:40:29.117Z"
+            },
+            {
               "id": "N-Pz9eAIxhaKuhOiTpuAYJe4GZXWL",
               "resource": {
                 "id": "R-yrEmw0Vxmxa05PkfR5UOvFQV7yE"
@@ -32633,8 +32842,7 @@
             {
               "id": "N-6E8yjTm33PRir3854I74FUBJcrm",
               "resource": {
-                "id": "R-UoBycNy1uGsVSARqygBsxx7Hlsd",
-                "revision": "84"
+                "id": "R-UoBycNy1uGsVSARqygBsxx7Hlsd"
               },
               "changedAt": "2023-08-08T16:13:39.420Z"
             },
