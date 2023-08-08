@@ -11,6 +11,7 @@ This document describes the release version 1.1 of the *Specification Integratio
 1. [SpecIF-Metamodel](./03_SpecIF_Metamodel.md)
 1. [SpecIF JSON-Schema](./03_SpecIF_JSON-Schema.md)
 1. [SpecIF Diagram Exchange with SVG](./03_SpecIF_Diagram_Exchange.md)
+1. [SpecIF Roles and Permissions](./03_SpecIF_Roles_and_Permissions.md)
 1. [SpecIF Web API](./05_SpecIF_Web_API.md)
 1. [SpecIF Class Definitions](./04_SpecIF_Class_Definitions.md)
    * [Released domain classes](./04_SpecIF_Domain_Classes_Github.md)
