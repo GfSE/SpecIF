@@ -9,7 +9,7 @@
   "$schema": "https://specif.de/v1.1/schema.json",
   "generator": "SpecIF Model-Integrator and Editor",
   "generatorVersion": "1.1.q.1",
-  "createdAt": "2023-08-09T22:34:26.445Z",
+  "createdAt": "2023-08-09T23:28:20.617Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -1499,7 +1499,7 @@
     {
       "id": "SC-isSpecializationOfResource",
       "changedAt": "2018-03-21T18:06:20+01:00",
-      "title": "SpecIF:isSpecializationOf",
+      "title": "UML:isSpecializationOf",
       "description": [
         {
           "text": "A term is a specialization of another, such as 'Passenger Car' and 'Vehicle'."
@@ -1524,7 +1524,7 @@
     {
       "id": "SC-isSpecializationOfPredicate",
       "changedAt": "2018-03-21T18:06:20+01:00",
-      "title": "SpecIF:isSpecializationOf",
+      "title": "UML:isSpecializationOf",
       "description": [
         {
           "text": "A predicate term is a specialization of another, such as 'is aggregated by' and 'contains'."
@@ -13480,158 +13480,6 @@
       ]
     },
     {
-      "id": "R-YqUDDv1FI4mP53VtkzocYIucCAK",
-      "changedAt": "2021-03-26T07:15:19.690Z",
-      "revision": "37",
-      "class": {
-        "id": "RC-TermStatementClass"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-Term"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:hasEnumValue"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "A property has an enumerated value."
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-39"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-LifecycleStatusTerm"
-          },
-          "values": [
-            "V-TermStatus-3"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-coAMwFr2SvRIwqTDtubeeNxyYth",
-      "changedAt": "2022-12-03T14:37:06.413Z",
-      "revision": "37",
-      "class": {
-        "id": "RC-TermStatementClass"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-Term"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:isEligibleAsSubject"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "A resource-term or statement-term is eligible as a subject of a predicate-term.\n\nOr concretely: A resource or statement of this class is eligible as the predicate's subject.",
-                "language": "en"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-39"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-LifecycleStatusTerm"
-          },
-          "values": [
-            "V-TermStatus-3"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-3QXBndTVBZuLfjsC7nYJ46EdRCC",
-      "changedAt": "2022-12-03T14:37:35.051Z",
-      "revision": "37",
-      "class": {
-        "id": "RC-TermStatementClass"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-Term"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:isEligibleAsObject"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "A resource-term or statement-term is eligible as an object of a predicate-term.\n\nOr concretely: A resource or statement of this class is eligible as the predicate's object.",
-                "language": "en"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-39"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-LifecycleStatusTerm"
-          },
-          "values": [
-            "V-TermStatus-3"
-          ]
-        }
-      ]
-    },
-    {
       "id": "R-refersTo",
       "changedAt": "2023-07-16T15:40:57.453Z",
       "revision": "38",
@@ -14604,6 +14452,395 @@
           },
           "values": [
             "true"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-MLrNWkTjsAXAjhx37p6UkvxKzEQ",
+      "changedAt": "2023-08-09T23:15:21.033Z",
+      "class": {
+        "id": "RC-TermStatementClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:isNamespace"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "is namespace for",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-MxwBcoVecPlYMGyCifQQvOCFECy",
+      "changedAt": "2023-08-09T23:16:01.660Z",
+      "class": {
+        "id": "RC-TermStatementClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:hasProperty"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "has Property",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-XFituq3uLki95FFEzETyCs0bcUs",
+      "changedAt": "2023-08-09T23:28:07.907Z",
+      "class": {
+        "id": "RC-TermStatementClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:hasEnumValue"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A property has a datatype with enumerated value.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "has enumerated Value",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-WW3yv7CRHPVmWakosK26dVEHd93",
+      "changedAt": "2023-08-09T23:20:57.952Z",
+      "class": {
+        "id": "RC-TermStatementClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:isEligibleAsSubject"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A resource-term or statement-term is eligible as a subject of a predicate-term.\n\nOr concretely: A resource or statement of this class is eligible as the predicate's subject.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "is eligible as Subject",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-1jWAMC9CR5NHDJwGy3Tk2YWH67m",
+      "changedAt": "2023-08-09T23:21:35.118Z",
+      "class": {
+        "id": "RC-TermStatementClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:isEligibleAsObject",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A resource-term or statement-term is eligible as an object of a predicate-term.\n\nOr concretely: A resource or statement of this class is eligible as the predicate's object.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "is eligible as Object"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
           ]
         }
       ]
@@ -34127,8 +34364,7 @@
             {
               "id": "N-QijKzik1pHh7b3hDLKKfrpV3WlW",
               "resource": {
-                "id": "R-pmhnenzzKxnS1WTY8vvaygmEOnd",
-                "revision": "28"
+                "id": "R-pmhnenzzKxnS1WTY8vvaygmEOnd"
               },
               "changedAt": "2023-08-09T21:48:09.529Z"
             },
@@ -34435,31 +34671,9 @@
             {
               "id": "N-RvEo9ukpRVDqkuDYUlyWub6v550",
               "resource": {
-                "id": "R-1LfStrmrwjEUbKCnOkVvQDEVY8t",
-                "revision": "37"
+                "id": "R-1LfStrmrwjEUbKCnOkVvQDEVY8t"
               },
               "changedAt": "2023-08-09T21:42:35.339Z"
-            },
-            {
-              "id": "N-YSP8wDiTKXVNyVLHQd3e3AxeXBM",
-              "resource": {
-                "id": "R-YqUDDv1FI4mP53VtkzocYIucCAK"
-              },
-              "changedAt": "2021-03-26T07:15:19.690Z"
-            },
-            {
-              "id": "N-aWmPiwE1JxC7SoKPblSR318oc35",
-              "resource": {
-                "id": "R-coAMwFr2SvRIwqTDtubeeNxyYth"
-              },
-              "changedAt": "2021-03-26T07:17:08.232Z"
-            },
-            {
-              "id": "N-8RI1qkGLNuID5RjVpRXZtL0vu48",
-              "resource": {
-                "id": "R-3QXBndTVBZuLfjsC7nYJ46EdRCC"
-              },
-              "changedAt": "2021-03-26T07:17:20.930Z"
             },
             {
               "id": "N-nBJ6HWgL8at84MLchAGeg5cp1S6",
@@ -34472,8 +34686,7 @@
             {
               "id": "N-4olks1Kd5Gb9I77I8e4HSq4uDWj",
               "resource": {
-                "id": "R-MJ7v3BNtIjxFp1fbObmOgxceDnI",
-                "revision": "38"
+                "id": "R-MJ7v3BNtIjxFp1fbObmOgxceDnI"
               },
               "changedAt": "2023-08-09T15:51:37.108Z"
             },
@@ -34552,6 +34765,41 @@
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
+            },
+            {
+              "id": "N-LVLykMnrsinq5wRxhZsX8XkEC5n",
+              "resource": {
+                "id": "R-MLrNWkTjsAXAjhx37p6UkvxKzEQ"
+              },
+              "changedAt": "2023-08-09T23:15:21.033Z"
+            },
+            {
+              "id": "N-cfqoqGdvaV70qIgDt5seXKzAWcY",
+              "resource": {
+                "id": "R-MxwBcoVecPlYMGyCifQQvOCFECy"
+              },
+              "changedAt": "2023-08-09T23:16:01.660Z"
+            },
+            {
+              "id": "N-AEGUXfUrbWc21EPekbUEGhyvHCo",
+              "resource": {
+                "id": "R-XFituq3uLki95FFEzETyCs0bcUs"
+              },
+              "changedAt": "2023-08-09T23:16:55.531Z"
+            },
+            {
+              "id": "N-AQ7YuYXWpR5P8YsBYu8DAHFaLbs",
+              "resource": {
+                "id": "R-WW3yv7CRHPVmWakosK26dVEHd93"
+              },
+              "changedAt": "2023-08-09T23:17:40.236Z"
+            },
+            {
+              "id": "N-lTvZz1EopJcVh7vR6aJQYfcH5ry",
+              "resource": {
+                "id": "R-1jWAMC9CR5NHDJwGy3Tk2YWH67m"
+              },
+              "changedAt": "2023-08-09T23:17:55.085Z"
             }
           ],
           "revision": "114"
@@ -35030,8 +35278,7 @@
             {
               "id": "N-5q7LeTaVz4Eno1i6J31PGK8a7C7",
               "resource": {
-                "id": "R-pNAGqmFEwuFLkJApF0qXO8xyM5H",
-                "revision": "79"
+                "id": "R-pNAGqmFEwuFLkJApF0qXO8xyM5H"
               },
               "changedAt": "2023-08-09T22:26:30.803Z"
             },
