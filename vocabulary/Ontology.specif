@@ -9,7 +9,7 @@
   "$schema": "https://specif.de/v1.1/schema.json",
   "generator": "SpecIF Model-Integrator and Editor",
   "generatorVersion": "1.1.q.1",
-  "createdAt": "2023-08-08T21:50:37.738Z",
+  "createdAt": "2023-08-09T13:09:44.802Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -2856,6 +2856,108 @@
       ]
     },
     {
+      "id": "R-YRV2V6tSsoVCV9dDZofBhezVGGD",
+      "changedAt": "2023-08-09T10:45:58.457Z",
+      "revision": "6",
+      "class": {
+        "id": "RC-TermResourceClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:Information"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>A 'Paragraph' is an unspecified information in a document at any level.</p>",
+                "language": "en"
+              },
+              {
+                "text": "<p>Ein 'Textabschnitt' in einem Dokument auf beliebiger Ebene.</p>",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Information",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Informations",
+                "language": "en"
+              },
+              {
+                "text": "Informationen",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10",
+            "V-Instantiation-20"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-Heading",
       "changedAt": "2023-07-16T09:27:26.048Z",
       "revision": "5",
@@ -3016,7 +3118,7 @@
             [
               {
                 "text": "A 'Folder' is a chapter title at any level with optional description.",
-                "language": "en-US"
+                "language": "en"
               },
               {
                 "text": "Eine 'Kapitelüberschrift' in einem Dokument ist der Titel eines Kapitels.Sie kann eine Beschreibung haben, die als Einleitung oder Zusammenfassung des Kapitels genutzt werden kann.",
@@ -3048,7 +3150,8 @@
           "values": [
             [
               {
-                "text": "Folder"
+                "text": "Folder",
+                "language": "en"
               }
             ]
           ]
@@ -3920,7 +4023,12 @@
           "values": [
             [
               {
-                "text": "Anforderung"
+                "text": "Requirement",
+                "language": "en"
+              },
+              {
+                "text": "Anforderung",
+                "language": "de"
               }
             ]
           ]
@@ -3932,7 +4040,12 @@
           "values": [
             [
               {
-                "text": "Anforderungen"
+                "text": "Requirements",
+                "language": "en"
+              },
+              {
+                "text": "Anforderungen",
+                "language": "de"
               }
             ]
           ]
@@ -4356,7 +4469,7 @@
             [
               {
                 "text": "<p>A 'Plan' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.</p>",
-                "language": "en-US"
+                "language": "en"
               }
             ]
           ]
@@ -4376,7 +4489,8 @@
           "values": [
             [
               {
-                "text": "Schematic"
+                "text": "Schematic",
+                "language": "en"
               }
             ]
           ]
@@ -4388,7 +4502,8 @@
           "values": [
             [
               {
-                "text": "Schematics"
+                "text": "Schematics",
+                "language": "en"
               }
             ]
           ]
@@ -5317,6 +5432,115 @@
       ]
     },
     {
+      "id": "R-6wIpW7L1U56CExt13zu84sKaK8b",
+      "changedAt": "2023-08-09T10:58:39.900Z",
+      "revision": "16",
+      "class": {
+        "id": "RC-TermResourceClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "RC-Vote"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:Vote"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>A 'Vote' is an opinion referring to any resource or statement.</p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Vote",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Votes",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-p5ldPEGMw3rUUeMsFVchORqg0Kv",
       "changedAt": "2023-07-16T10:50:34.318Z",
       "revision": "16",
@@ -5332,6 +5556,19 @@
             [
               {
                 "text": "IR:Annotation"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "An Interaction-Room 'Annotation' indicates a point of special interest. Examples are customer or user value, product features with prominent benefit,effort or challenges during development.",
+                "language": "en"
               }
             ]
           ]
@@ -6291,7 +6528,16 @@
           "values": [
             [
               {
-                "text": "Person"
+                "text": "Person",
+                "language": "en"
+              },
+              {
+                "text": "Person",
+                "language": "de"
+              },
+              {
+                "text": "Personne",
+                "language": "fr"
               }
             ]
           ]
@@ -6303,7 +6549,16 @@
           "values": [
             [
               {
-                "text": "Personen"
+                "text": "Persons",
+                "language": "en"
+              },
+              {
+                "text": "Personen",
+                "language": "de"
+              },
+              {
+                "text": "Personnes",
+                "language": "fr"
               }
             ]
           ]
@@ -6395,7 +6650,16 @@
           "values": [
             [
               {
-                "text": "Rolle"
+                "text": "Role",
+                "language": "en"
+              },
+              {
+                "text": "Rolle",
+                "language": "de"
+              },
+              {
+                "text": "Rôle",
+                "language": "fr"
               }
             ]
           ]
@@ -6407,7 +6671,16 @@
           "values": [
             [
               {
-                "text": "Rollen"
+                "text": "Roles",
+                "language": "en"
+              },
+              {
+                "text": "Rollen",
+                "language": "de"
+              },
+              {
+                "text": "Rôles",
+                "language": "fr"
               }
             ]
           ]
@@ -6604,7 +6877,7 @@
     },
     {
       "id": "R-1021959454",
-      "changedAt": "2023-02-21T22:18:56.475Z",
+      "changedAt": "2023-08-09T10:50:09.415Z",
       "revision": "41",
       "class": {
         "id": "RC-TermResourceClass"
@@ -6630,6 +6903,10 @@
             [
               {
                 "text": "<p>A root of a document structure with references to resources.</p>"
+              },
+              {
+                "text": "<p>A root of a document structure with references to resources.</p>",
+                "language": "en"
               }
             ]
           ]
@@ -6647,7 +6924,7 @@
             "id": "PC-isHeading"
           },
           "values": [
-            "false"
+            "true"
           ]
         }
       ]
@@ -6723,7 +7000,12 @@
           "values": [
             [
               {
-                "text": "Gliederung"
+                "text": "Outline",
+                "language": "en"
+              },
+              {
+                "text": "Gliederung",
+                "language": "de"
               }
             ]
           ]
@@ -6735,7 +7017,12 @@
           "values": [
             [
               {
-                "text": "Gliederungen"
+                "text": "Outlines",
+                "language": "en"
+              },
+              {
+                "text": "Gliederungen",
+                "language": "de"
               }
             ]
           ]
@@ -10755,7 +11042,7 @@
             [
               {
                 "text": "<p>A [[IREB:Requirement]] 'refines' another [[IREB:Requirement]].</p>",
-                "language": "en-US"
+                "language": "en"
               }
             ]
           ]
@@ -10784,7 +11071,7 @@
             [
               {
                 "text": "refines",
-                "language": "en-US"
+                "language": "en"
               },
               {
                 "text": "verfeinert",
@@ -10851,7 +11138,7 @@
             [
               {
                 "text": "<p>A [[IREB:Requirement]] 'is refined by' another [[IREB:Requirement]].</p>",
-                "language": "en-US"
+                "language": "en"
               }
             ]
           ]
@@ -12448,7 +12735,7 @@
     },
     {
       "id": "R-isSpecializationOf",
-      "changedAt": "2023-07-16T15:31:32.267Z",
+      "changedAt": "2023-08-09T12:26:39.092Z",
       "revision": "36",
       "class": {
         "id": "RC-TermStatementClass"
@@ -12473,7 +12760,7 @@
           "values": [
             [
               {
-                "text": "SysML:isSpecializationOf"
+                "text": "UML:isSpecializationOf"
               }
             ]
           ]
@@ -12485,7 +12772,7 @@
           "values": [
             [
               {
-                "text": "<p>An [[FMC:Actor]] is a specialization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>",
+                "text": "<p>A [[FMC:Actor]] is a specialization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>",
                 "language": "en"
               }
             ]
@@ -12514,7 +12801,12 @@
           "values": [
             [
               {
-                "text": "spezialisiert"
+                "text": "specializes",
+                "language": "en"
+              },
+              {
+                "text": "spezialisiert",
+                "language": "de"
               }
             ]
           ]
@@ -12539,7 +12831,7 @@
     },
     {
       "id": "R-OZvSiGmgwEIwM8pxT3wwzWHtjRf",
-      "changedAt": "2022-12-03T15:40:15.490Z",
+      "changedAt": "2023-08-09T12:27:30.006Z",
       "revision": "36",
       "class": {
         "id": "RC-TermStatementClass"
@@ -12552,7 +12844,7 @@
           "values": [
             [
               {
-                "text": "SysML:isSpecialisationOf"
+                "text": "UML:isSpecialisationOf"
               }
             ]
           ]
@@ -12564,7 +12856,8 @@
           "values": [
             [
               {
-                "text": "An FMC:Actor is a specialization of another FMC:Actor; similarly for FMC:State and FMC:Event."
+                "text": "A FMC:Actor is a specialization of another FMC:Actor; similarly for FMC:State and FMC:Event.",
+                "language": "en"
               }
             ]
           ]
@@ -12584,12 +12877,37 @@
           "values": [
             "V-TermStatus-9"
           ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "specializes",
+                "language": "en"
+              },
+              {
+                "text": "spezialisiert",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
         }
       ]
     },
     {
       "id": "R-isGeneralizationOf",
-      "changedAt": "2023-07-16T15:31:20.351Z",
+      "changedAt": "2023-08-09T12:27:41.538Z",
       "revision": "36",
       "class": {
         "id": "RC-TermStatementClass"
@@ -12614,7 +12932,7 @@
           "values": [
             [
               {
-                "text": "SysML:isGeneralizationOf"
+                "text": "UML:isGeneralizationOf"
               }
             ]
           ]
@@ -12626,7 +12944,7 @@
           "values": [
             [
               {
-                "text": "<p>An [[FMC:Actor]] is a generalization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>",
+                "text": "<p>A [[FMC:Actor]] is a generalization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>",
                 "language": "en"
               }
             ]
@@ -12655,7 +12973,12 @@
           "values": [
             [
               {
-                "text": "generalisiert"
+                "text": "generalizes",
+                "language": "en"
+              },
+              {
+                "text": "generalisiert",
+                "language": "de"
               }
             ]
           ]
@@ -12680,7 +13003,7 @@
     },
     {
       "id": "R-3YVqYkzhtVVysNFh8YWH9yl99HL",
-      "changedAt": "2022-12-03T15:40:40.393Z",
+      "changedAt": "2023-08-09T12:28:14.575Z",
       "revision": "36",
       "class": {
         "id": "RC-TermStatementClass"
@@ -12693,7 +13016,7 @@
           "values": [
             [
               {
-                "text": "SysML:isGeneralisationOf"
+                "text": "UML:isGeneralisationOf"
               }
             ]
           ]
@@ -12705,7 +13028,7 @@
           "values": [
             [
               {
-                "text": "An FMC:Actor is a generalization of another FMC:Actor; similarly for FMC:State and FMC:Event.",
+                "text": "A FMC:Actor is a generalization of another FMC:Actor; similarly for FMC:State and FMC:Event.",
                 "language": "en"
               }
             ]
@@ -12725,6 +13048,124 @@
           },
           "values": [
             "V-TermStatus-9"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-fGfgwdJlarnkXVz9p1ctjQWckAS",
+      "changedAt": "2023-08-09T12:29:17.946Z",
+      "revision": "36",
+      "class": {
+        "id": "RC-TermStatementClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:isSpecializationOf"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>A FMC:Actor is a specialization of another FMC:Actor; similarly for FMC:State and FMC:Event.</p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-SXlt4EbTFdv3O2la3qGE6PtcB70",
+      "changedAt": "2023-08-09T12:30:28.654Z",
+      "revision": "36",
+      "class": {
+        "id": "RC-TermStatementClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:isGeneralizationOf"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>A FMC:Actor is a generalization of another FMC:Actor; similarly for FMC:State and FMC:Event.</p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
           ]
         }
       ]
@@ -13249,7 +13690,7 @@
           "values": [
             [
               {
-                "text": "<p>A resource's text refers to another resorce (e.g. by hyperlink).</p>",
+                "text": "<p>A resource's text refers to another resource (e.g. by hyperlink).</p>",
                 "language": "en"
               }
             ]
@@ -13278,7 +13719,12 @@
           "values": [
             [
               {
-                "text": "erwähnt"
+                "text": "mentions",
+                "language": "en"
+              },
+              {
+                "text": "erwähnt",
+                "language": "de"
               }
             ]
           ]
@@ -13295,7 +13741,7 @@
     },
     {
       "id": "R-g4yCxQAgNQtEUffXpPaZOgWrtkQ",
-      "changedAt": "2023-07-16T15:37:08.512Z",
+      "changedAt": "2023-08-09T11:52:55.749Z",
       "revision": "39",
       "class": {
         "id": "RC-TermStatementClass"
@@ -13361,7 +13807,12 @@
           "values": [
             [
               {
-                "text": "ist Synonym von"
+                "text": "is Synonym of",
+                "language": "en"
+              },
+              {
+                "text": "ist Synonym von",
+                "language": "de"
               }
             ]
           ]
@@ -13371,7 +13822,7 @@
             "id": "PC-isUndirected"
           },
           "values": [
-            "false"
+            "true"
           ]
         },
         {
@@ -13386,7 +13837,7 @@
     },
     {
       "id": "R-AFRDjW5KgLsmjsqS7vSeHKFdAqD",
-      "changedAt": "2020-11-09T12:22:55.254Z",
+      "changedAt": "2023-08-09T11:53:31.991Z",
       "revision": "193",
       "class": {
         "id": "RC-TermStatementClass"
@@ -13424,12 +13875,20 @@
           "values": [
             "V-TermStatus-9"
           ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "true"
+          ]
         }
       ]
     },
     {
       "id": "R-fX8L25Labq7NOQMfmfudzpsntyb",
-      "changedAt": "2023-07-16T15:38:30.319Z",
+      "changedAt": "2023-08-09T11:53:20.756Z",
       "revision": "193",
       "class": {
         "id": "RC-TermStatementClass"
@@ -13495,7 +13954,12 @@
           "values": [
             [
               {
-                "text": "ist Antonym von"
+                "text": "is Antonym of",
+                "language": "en"
+              },
+              {
+                "text": "ist Antonym von",
+                "language": "de"
               }
             ]
           ]
@@ -13505,7 +13969,7 @@
             "id": "PC-isUndirected"
           },
           "values": [
-            "false"
+            "true"
           ]
         },
         {
@@ -13586,7 +14050,12 @@
           "values": [
             [
               {
-                "text": "ist identisch mit"
+                "text": "is identical with",
+                "language": "en"
+              },
+              {
+                "text": "ist identisch mit",
+                "language": "de"
               }
             ]
           ]
@@ -16142,7 +16611,7 @@
             [
               {
                 "text": "Requirements are typically sub-classified into functional requirements ([[IREB:FunctionalRequirement]]), quality requirements ([[IREB:QualityRequirement]]) and constraints ([[IREB:Constraint]]). The latter two are also called non-functional requirements.",
-                "language": "en-US"
+                "language": "en"
               }
             ]
           ]
@@ -16523,7 +16992,7 @@
               },
               {
                 "text": "The 'Lifecycle Status' of the resource.",
-                "language": "en-US"
+                "language": "en"
               }
             ]
           ]
@@ -19406,7 +19875,7 @@
             [
               {
                 "text": "An icon associated with the resource class.",
-                "language": "en-US"
+                "language": "en"
               }
             ]
           ]
@@ -19491,7 +19960,7 @@
             [
               {
                 "text": "The unit of a property's numeric value; preferably an SI unit symbol such as 'm^3/kg' (Système international (d'unités)) or a currency symbol.",
-                "language": "en-US"
+                "language": "en"
               }
             ]
           ]
@@ -19618,7 +20087,7 @@
             [
               {
                 "text": "'user': a user creates, updates and deletes a resource's instance manually.\n'auto': a resource's instance is created, updated or deleted by an algorithm.",
-                "language": "en-US"
+                "language": "en"
               }
             ]
           ]
@@ -19698,7 +20167,7 @@
               },
               {
                 "text": "'manual': user interface supports creation, update and deletion of the resource.\n'auto': the resource is created, updated or deleted by an algorithm.",
-                "language": "en-US"
+                "language": "en"
               }
             ]
           ]
@@ -20331,7 +20800,7 @@
     },
     {
       "id": "R-O3Dxwts5uxXVgKgNbmPaKc2QGFt",
-      "changedAt": "2023-07-17T09:25:29.482Z",
+      "changedAt": "2023-08-09T12:34:07.769Z",
       "class": {
         "id": "RC-TermPropertyClassBoolean"
       },
@@ -20396,11 +20865,106 @@
           "values": [
             [
               {
-                "text": "is heading",
+                "text": "Heading",
                 "language": "en"
               },
               {
-                "text": "ist Überschrift",
+                "text": "Überschrift",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-DefaultValueBoolean"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-VtP7roQN93axNoMG6MIuKkEFKeA",
+      "changedAt": "2023-08-09T12:34:19.011Z",
+      "class": {
+        "id": "RC-TermPropertyClassBoolean"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:isUndirected"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Indicates whether the statement is undirected, i.e. whether is can be reversed without change in meaning. A typical example is [[SpecIF:isSynonymOf]].",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LifecycleStatusTerm"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "undirected",
+                "language": "en"
+              },
+              {
+                "text": "ungerichtet",
                 "language": "de"
               }
             ]
@@ -20478,7 +21042,16 @@
           "values": [
             [
               {
-                "text": "Default Value"
+                "text": "Default Value",
+                "language": "en"
+              },
+              {
+                "text": "Standardwert",
+                "language": "de"
+              },
+              {
+                "text": "Valeur par défaut",
+                "language": "fr"
               }
             ]
           ]
@@ -20563,7 +21136,16 @@
           "values": [
             [
               {
-                "text": "Default Value"
+                "text": "Default Value",
+                "language": "en"
+              },
+              {
+                "text": "Standardwert",
+                "language": "de"
+              },
+              {
+                "text": "Valeur par défaut",
+                "language": "fr"
               }
             ]
           ]
@@ -20661,7 +21243,12 @@
           "values": [
             [
               {
-                "text": "Textformat"
+                "text": "Text format",
+                "language": "en"
+              },
+              {
+                "text": "Textformat",
+                "language": "de"
               }
             ]
           ]
@@ -20769,6 +21356,10 @@
               {
                 "text": "max. Length",
                 "language": "en"
+              },
+              {
+                "text": "max. Länge",
+                "language": "de"
               }
             ]
           ]
@@ -20852,6 +21443,10 @@
               {
                 "text": "min. Value",
                 "language": "en"
+              },
+              {
+                "text": "min. Wert",
+                "language": "de"
               }
             ]
           ]
@@ -20951,6 +21546,10 @@
               {
                 "text": "max. Value",
                 "language": "en"
+              },
+              {
+                "text": "max. Wert",
+                "language": "de"
               }
             ]
           ]
@@ -21042,6 +21641,10 @@
               {
                 "text": "min. Value",
                 "language": "en"
+              },
+              {
+                "text": "min. Wert",
+                "language": "de"
               }
             ]
           ]
@@ -21117,6 +21720,10 @@
               {
                 "text": "max. Value",
                 "language": "en"
+              },
+              {
+                "text": "max. Wert",
+                "language": "de"
               }
             ]
           ]
@@ -21127,6 +21734,101 @@
           },
           "values": [
             "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-KDJBBVs21UqTfSDCFpRfV4NQcr9",
+      "changedAt": "2023-08-09T11:04:58.228Z",
+      "class": {
+        "id": "RC-TermPropertyClassInteger"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Term"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:RealFractionDigits"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Max. count of decimals of a real number.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Decimals",
+                "language": "en"
+              },
+              {
+                "text": "Dezimalstellen",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-DefaultValueInteger"
+          },
+          "values": [
+            "2"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-IntegerMinInclusive"
+          },
+          "values": [
+            "0"
           ]
         }
       ]
@@ -23887,7 +24589,7 @@
             [
               {
                 "text": "A requirement concerning a result of behavior that shall be provided by a function of a system (or of a component or service).",
-                "language": "en-US"
+                "language": "en"
               }
             ]
           ]
@@ -24319,7 +25021,8 @@
           "values": [
             [
               {
-                "text": "Business"
+                "text": "Business",
+                "language": "en"
               }
             ]
           ]
@@ -24381,7 +25084,8 @@
           "values": [
             [
               {
-                "text": "Stakeholder"
+                "text": "Stakeholder",
+                "language": "en"
               }
             ]
           ]
@@ -24443,7 +25147,12 @@
           "values": [
             [
               {
-                "text": "Anwender"
+                "text": "User",
+                "language": "en"
+              },
+              {
+                "text": "Anwender",
+                "language": "de"
               }
             ]
           ]
@@ -24505,7 +25214,8 @@
           "values": [
             [
               {
-                "text": "Operator"
+                "text": "Operator",
+                "language": "en"
               }
             ]
           ]
@@ -24618,7 +25328,8 @@
           "values": [
             [
               {
-                "text": "System Engineering"
+                "text": "System Engineering",
+                "language": "en"
               }
             ]
           ]
@@ -24668,7 +25379,8 @@
           "values": [
             [
               {
-                "text": "System Engineering"
+                "text": "System Engineering",
+                "language": "en"
               }
             ]
           ]
@@ -24718,7 +25430,12 @@
           "values": [
             [
               {
-                "text": "Mechanik"
+                "text": "Mechanics",
+                "language": "en"
+              },
+              {
+                "text": "Mechanik",
+                "language": "de"
               }
             ]
           ]
@@ -24768,7 +25485,12 @@
           "values": [
             [
               {
-                "text": "Elektronik"
+                "text": "Elektronics",
+                "language": "en"
+              },
+              {
+                "text": "Elektronik",
+                "language": "de"
               }
             ]
           ]
@@ -24818,7 +25540,8 @@
           "values": [
             [
               {
-                "text": "Software"
+                "text": "Software",
+                "language": "en"
               }
             ]
           ]
@@ -24868,7 +25591,12 @@
           "values": [
             [
               {
-                "text": "Sicherheit"
+                "text": "Safety",
+                "language": "en"
+              },
+              {
+                "text": "Sicherheit",
+                "language": "de"
               }
             ]
           ]
@@ -31441,6 +32169,110 @@
       "object": {
         "id": "R-refines"
       }
+    },
+    {
+      "id": "S-KW1c1cUlry566b8XbXL41u7OJAO",
+      "changedAt": "2023-08-09T10:46:19.582Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-YRV2V6tSsoVCV9dDZofBhezVGGD"
+      }
+    },
+    {
+      "id": "S-ofVEzte4B7w7ShpvPlVaEAb6WoT",
+      "changedAt": "2023-08-09T10:46:32.828Z",
+      "class": {
+        "id": "SC-isSynonymOfResource"
+      },
+      "subject": {
+        "id": "R-YRV2V6tSsoVCV9dDZofBhezVGGD"
+      },
+      "object": {
+        "id": "R-155140542"
+      }
+    },
+    {
+      "id": "S-XpoDPX7YTSacqWIRqI2vrRtbN4c",
+      "changedAt": "2023-08-09T12:27:10.136Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks"
+      },
+      "object": {
+        "id": "R-isSpecializationOf"
+      }
+    },
+    {
+      "id": "S-RYFwYQpwxwFcLAg5zI5OVEXgY6i",
+      "changedAt": "2023-08-09T12:27:57.536Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks"
+      },
+      "object": {
+        "id": "R-isGeneralizationOf"
+      }
+    },
+    {
+      "id": "S-UIVCjgyoBsdduseCnSnazARnSHS",
+      "changedAt": "2023-08-09T12:29:32.005Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-fGfgwdJlarnkXVz9p1ctjQWckAS"
+      }
+    },
+    {
+      "id": "S-ws8LL4t18aqt5U2UeYcPyaCk4z7",
+      "changedAt": "2023-08-09T12:29:49.808Z",
+      "class": {
+        "id": "SC-isSynonymOfPredicate"
+      },
+      "subject": {
+        "id": "R-fGfgwdJlarnkXVz9p1ctjQWckAS"
+      },
+      "object": {
+        "id": "R-isSpecializationOf"
+      }
+    },
+    {
+      "id": "S-C3cbXvK7Jdakrj4uR6KaQfjVRnb",
+      "changedAt": "2023-08-09T12:30:39.288Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-SXlt4EbTFdv3O2la3qGE6PtcB70"
+      }
+    },
+    {
+      "id": "S-FGnQwd7qC5TxivpjUWUzfk5IRDC",
+      "changedAt": "2023-08-09T12:30:48.503Z",
+      "class": {
+        "id": "SC-isSynonymOfPredicate"
+      },
+      "subject": {
+        "id": "R-SXlt4EbTFdv3O2la3qGE6PtcB70"
+      },
+      "object": {
+        "id": "R-isGeneralizationOf"
+      }
     }
   ],
   "hierarchies": [
@@ -31637,6 +32469,13 @@
               "changedAt": "2023-02-26T20:15:02.642Z"
             },
             {
+              "id": "N-vDEoBbEU7xAvbOgffySiXqmO2LJ",
+              "resource": {
+                "id": "R-YRV2V6tSsoVCV9dDZofBhezVGGD"
+              },
+              "changedAt": "2023-08-09T10:45:43.729Z"
+            },
+            {
               "id": "N-KjJlzrW8mJrFGZ1q7t3mLBg02CX",
               "resource": {
                 "id": "R-Heading"
@@ -31647,8 +32486,7 @@
             {
               "id": "N-TOo98wAT3pVPKNyRiLryLs3fQup",
               "resource": {
-                "id": "R-dv38GNTWcvnuuf1POJiNEMfVCAc",
-                "revision": "5"
+                "id": "R-dv38GNTWcvnuuf1POJiNEMfVCAc"
               },
               "changedAt": "2023-08-08T21:36:33.206Z"
             },
@@ -31790,6 +32628,14 @@
                 "id": "R-514389525"
               },
               "changedAt": "2023-03-06T09:38:17.716Z"
+            },
+            {
+              "id": "N-WazGSX6E3a3S7Y4wSsun8cKBlWL",
+              "resource": {
+                "id": "R-6wIpW7L1U56CExt13zu84sKaK8b",
+                "revision": "16"
+              },
+              "changedAt": "2023-08-09T10:58:39.900Z"
             },
             {
               "id": "N-hsHaQhC5GXci8aCvmVO082nd7UF",
@@ -32303,8 +33149,7 @@
             {
               "id": "N-9Rjmmwo9Oy3r3Viuo5KLQMpRcmY",
               "resource": {
-                "id": "R-n8aTdqXh68VMx7IQTZOIvYnua9b",
-                "revision": "33"
+                "id": "R-n8aTdqXh68VMx7IQTZOIvYnua9b"
               },
               "changedAt": "2023-08-08T21:49:51.165Z"
             },
@@ -32472,6 +33317,22 @@
                 "id": "R-3YVqYkzhtVVysNFh8YWH9yl99HL"
               },
               "changedAt": "2021-11-07T19:25:45.483Z"
+            },
+            {
+              "id": "N-8pUc6Vjp86KYxpBFwvbnduOoHKp",
+              "resource": {
+                "id": "R-fGfgwdJlarnkXVz9p1ctjQWckAS",
+                "revision": "36"
+              },
+              "changedAt": "2023-08-09T12:31:26.366Z"
+            },
+            {
+              "id": "N-3miTcOJNvaSYSlgTy0mIRj4Wyqo",
+              "resource": {
+                "id": "R-SXlt4EbTFdv3O2la3qGE6PtcB70",
+                "revision": "36"
+              },
+              "changedAt": "2023-08-09T12:31:18.347Z"
             },
             {
               "id": "N-BSQa9h5AoCUdhDRQ0QCodbesRwM",
@@ -33195,6 +34056,13 @@
               "changedAt": "2023-07-17T09:04:24.609Z"
             },
             {
+              "id": "N-u44S7TgNy5G9Pq1KWQ4lwnc4CQc",
+              "resource": {
+                "id": "R-VtP7roQN93axNoMG6MIuKkEFKeA"
+              },
+              "changedAt": "2023-08-09T11:52:11.779Z"
+            },
+            {
               "id": "N-IqbM5qUahQVuwuaDydXjwISkcu1",
               "resource": {
                 "id": "R-fcIVlPmp9FLvgpte85s2a3xUJTW"
@@ -33249,6 +34117,13 @@
                 "id": "R-cq8S6uAA7C9n5bUWxTruAmJmuA4"
               },
               "changedAt": "2023-07-17T11:57:04.627Z"
+            },
+            {
+              "id": "N-8u4HMtChfqgkOaqjGUAaIyQ244z",
+              "resource": {
+                "id": "R-KDJBBVs21UqTfSDCFpRfV4NQcr9"
+              },
+              "changedAt": "2023-08-09T11:03:33.561Z"
             },
             {
               "id": "N-uuswmqvvgfejmz7DnfaQ5SokKXx",
