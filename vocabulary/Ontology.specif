@@ -196,7 +196,7 @@
       "type": "xs:anyURI"
     },
     {
-      "id": "DT-LifecycleStatusTerm",
+      "id": "DT-TermStatus",
       "changedAt": "2017-06-10T17:30:52+02:00",
       "title": "SpecIF:LifecycleStatus",
       "description": [
@@ -436,7 +436,7 @@
     {
       "id": "PC-Term",
       "changedAt": "2023-05-17T12:00:00.000Z",
-      "title": "SpecIF:Term",
+      "title": "SpecIF:OntologyTerm",
       "description": [
         {
           "text": "<p>An ontology/vocabulary term given to the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/title\">DCMI</a></i>)</small></p><p>Title (reference: Dublin Core) of the resource represented as rich text in XHTML content. SHOULD include only content that is valid inside an XHTML 'span' element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small>.</p><p>Usually has a namespace such as 'dcterms:', 'IREB:', 'SpecIF:' or 'ReqIF.'.</p>"
@@ -585,12 +585,12 @@
       }
     },
     {
-      "id": "PC-LifecycleStatusTerm",
+      "id": "PC-TermStatus",
       "changedAt": "2017-06-10T17:32:53+02:00",
       "title": "SpecIF:LifecycleStatus",
       "revision": "1.1",
       "dataType": {
-        "id": "DT-LifecycleStatusTerm"
+        "id": "DT-TermStatus"
       }
     },
     {
@@ -977,7 +977,7 @@
           "id": "PC-Domain"
         },
         {
-          "id": "PC-LifecycleStatusTerm"
+          "id": "PC-TermStatus"
         },
         {
           "id": "PC-LocalTerm"
@@ -2801,7 +2801,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -2902,7 +2902,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -3031,7 +3031,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -3137,7 +3137,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -3234,7 +3234,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -3409,7 +3409,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -3446,7 +3446,7 @@
       ]
     },
     {
-      "id": "R-155140543",
+      "id": "R-SpecifDiagram",
       "changedAt": "2023-07-16T09:32:25.353Z",
       "revision": "7",
       "class": {
@@ -3492,7 +3492,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -3543,7 +3543,7 @@
       ]
     },
     {
-      "id": "R-514389523",
+      "id": "R-SpecifFeature",
       "changedAt": "2023-07-16T09:48:41.722Z",
       "revision": "14",
       "class": {
@@ -3603,7 +3603,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -3682,7 +3682,7 @@
       ]
     },
     {
-      "id": "R-Requirement",
+      "id": "R-IrebRequirement",
       "changedAt": "2023-04-01T14:10:11.167Z",
       "revision": "13",
       "class": {
@@ -3790,7 +3790,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -3827,7 +3827,7 @@
       ]
     },
     {
-      "id": "R-wWSYgLOXpfABxVh491lL1O1lJBq",
+      "id": "R-SpecifRequirement",
       "changedAt": "2023-07-16T09:55:57.118Z",
       "revision": "13",
       "class": {
@@ -3885,7 +3885,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -4010,7 +4010,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -4081,7 +4081,7 @@
       ]
     },
     {
-      "id": "R-1rrMV4tmFxp7MhDvY2cRHiSTTmn",
+      "id": "R-SpecifModelelement",
       "changedAt": "2023-06-21T15:09:19.547Z",
       "class": {
         "id": "RC-TermResourceClass"
@@ -4121,7 +4121,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -4208,7 +4208,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -4295,7 +4295,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -4382,7 +4382,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -4476,7 +4476,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -4593,7 +4593,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -4746,7 +4746,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -4941,7 +4941,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -5090,7 +5090,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -5161,7 +5161,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -5236,7 +5236,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -5373,7 +5373,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -5490,7 +5490,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -5575,7 +5575,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -5680,7 +5680,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -5784,7 +5784,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -5883,7 +5883,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -5986,7 +5986,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -6105,7 +6105,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -6224,7 +6224,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -6343,7 +6343,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -6443,7 +6443,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -6515,7 +6515,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -6637,7 +6637,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -6759,7 +6759,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -6859,7 +6859,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -6913,7 +6913,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -6987,7 +6987,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -7099,7 +7099,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -7165,7 +7165,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -7272,7 +7272,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -7354,7 +7354,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -7474,7 +7474,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -7573,7 +7573,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -7718,7 +7718,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -7797,7 +7797,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -7888,7 +7888,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -7978,7 +7978,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -8079,7 +8079,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -8123,7 +8123,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -8213,7 +8213,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -8262,7 +8262,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -8333,7 +8333,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -8433,7 +8433,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -8491,7 +8491,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -8726,7 +8726,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -8798,7 +8798,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -8827,7 +8827,7 @@
       ]
     },
     {
-      "id": "R-852227588",
+      "id": "R-oslcrmValidatedby",
       "changedAt": "2023-07-15T16:30:47.921Z",
       "revision": "68",
       "changedBy": "od",
@@ -8870,7 +8870,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -9006,7 +9006,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -9233,7 +9233,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -9324,7 +9324,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -9435,7 +9435,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -9534,7 +9534,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -9613,7 +9613,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -9650,7 +9650,7 @@
       ]
     },
     {
-      "id": "R-Pog9cRkWxwNOUxxxr6jhtWheQhF",
+      "id": "R-SpecifAccesses",
       "changedAt": "2023-07-16T13:05:31.823Z",
       "revision": "28",
       "class": {
@@ -9704,7 +9704,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -9741,7 +9741,7 @@
       ]
     },
     {
-      "id": "R-V6wFjOZMJpsNYjSAr7akG82XLmf",
+      "id": "R-ArchimateAccesses",
       "changedAt": "2023-07-16T13:06:00.048Z",
       "revision": "28",
       "class": {
@@ -9783,7 +9783,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -9862,7 +9862,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -9946,7 +9946,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -10025,7 +10025,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -10104,7 +10104,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -10203,7 +10203,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -10285,7 +10285,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -10383,7 +10383,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -10481,7 +10481,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -10560,7 +10560,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -10651,7 +10651,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -10730,7 +10730,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -10801,7 +10801,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -10886,7 +10886,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -10979,7 +10979,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -11060,7 +11060,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -11156,7 +11156,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -11252,7 +11252,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -11343,7 +11343,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -11439,7 +11439,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -11530,7 +11530,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -11626,7 +11626,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -11705,7 +11705,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -11784,7 +11784,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -11868,7 +11868,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -11964,7 +11964,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -12060,7 +12060,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -12156,7 +12156,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -12251,7 +12251,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -12347,7 +12347,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -12431,7 +12431,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -12527,7 +12527,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -12610,7 +12610,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -12693,7 +12693,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -12789,7 +12789,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -12880,7 +12880,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -12971,7 +12971,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -13055,7 +13055,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -13143,7 +13143,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -13227,7 +13227,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -13278,7 +13278,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -13337,7 +13337,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -13388,7 +13388,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -13451,7 +13451,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -13546,7 +13546,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -13617,7 +13617,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -13694,7 +13694,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -13771,7 +13771,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -13862,7 +13862,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -13953,7 +13953,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -14033,7 +14033,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -14121,7 +14121,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -14197,7 +14197,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -14268,7 +14268,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -14364,7 +14364,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -14440,7 +14440,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -14497,7 +14497,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -14567,7 +14567,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -14650,7 +14650,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -14733,7 +14733,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -14817,7 +14817,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -14939,7 +14939,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -15047,7 +15047,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -15155,7 +15155,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -15255,7 +15255,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -15337,7 +15337,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -15436,7 +15436,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -15577,7 +15577,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -15668,7 +15668,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -15788,7 +15788,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -15843,7 +15843,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -15930,7 +15930,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -16032,7 +16032,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -16123,7 +16123,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -16212,7 +16212,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -16276,7 +16276,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -16320,7 +16320,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -16397,7 +16397,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -16490,7 +16490,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -16567,7 +16567,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -16611,7 +16611,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -16680,7 +16680,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -16749,7 +16749,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -16793,7 +16793,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -16862,7 +16862,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -16926,7 +16926,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -17003,7 +17003,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -17064,7 +17064,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -17169,7 +17169,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -17282,7 +17282,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -17326,7 +17326,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -17400,7 +17400,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -17488,7 +17488,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -17588,7 +17588,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -17691,7 +17691,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -17781,7 +17781,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -17875,7 +17875,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -17974,7 +17974,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -18073,7 +18073,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -18155,7 +18155,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -18254,7 +18254,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -18353,7 +18353,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -18447,7 +18447,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -18550,7 +18550,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -18641,7 +18641,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -18732,7 +18732,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -18823,7 +18823,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -18914,7 +18914,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -19027,7 +19027,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -19068,7 +19068,7 @@
       ]
     },
     {
-      "id": "R-irGczMK1F13knsq19WtzyIKylGz",
+      "id": "R-SpecifDomain",
       "changedAt": "2023-07-15T13:08:12.687Z",
       "revision": "76",
       "class": {
@@ -19109,7 +19109,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -19167,7 +19167,7 @@
       ]
     },
     {
-      "id": "R-GTYKnMz8eqwd65NHb8sKhbbq60n",
+      "id": "R-SpecifLocalTerm",
       "changedAt": "2023-05-30T06:06:45.673Z",
       "class": {
         "id": "RC-TermPropertyClassString"
@@ -19228,7 +19228,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -19309,7 +19309,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -19392,7 +19392,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -19479,7 +19479,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -19629,7 +19629,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -19717,7 +19717,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -19801,7 +19801,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -19890,7 +19890,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -20004,7 +20004,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -20111,7 +20111,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -20225,7 +20225,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -20318,7 +20318,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -20379,7 +20379,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -20451,7 +20451,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -20511,7 +20511,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -20559,7 +20559,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -20631,7 +20631,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -20728,7 +20728,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -20821,7 +20821,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -20896,7 +20896,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -20984,7 +20984,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -21064,7 +21064,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -21123,7 +21123,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -21183,7 +21183,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -21243,7 +21243,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -21303,7 +21303,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -21363,7 +21363,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -21411,7 +21411,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -21473,7 +21473,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -21548,7 +21548,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -21643,7 +21643,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -21742,7 +21742,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -21837,7 +21837,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -21919,7 +21919,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -22013,7 +22013,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -22120,7 +22120,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -22231,7 +22231,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -22318,7 +22318,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -22421,7 +22421,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -22777,7 +22777,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -22888,7 +22888,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -22991,7 +22991,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -23102,7 +23102,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -23181,7 +23181,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -23219,7 +23219,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -23257,7 +23257,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -23295,7 +23295,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -23402,7 +23402,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -23475,7 +23475,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -23548,7 +23548,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -23621,7 +23621,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -23694,7 +23694,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -23737,7 +23737,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -23793,7 +23793,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -23849,7 +23849,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -23905,7 +23905,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -23961,7 +23961,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -24003,7 +24003,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -24045,7 +24045,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -24087,7 +24087,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -24129,7 +24129,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -24183,7 +24183,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -24237,7 +24237,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -24279,7 +24279,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -24321,7 +24321,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -24363,7 +24363,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -24405,7 +24405,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -24447,7 +24447,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -24489,7 +24489,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -24539,7 +24539,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -24589,7 +24589,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-3"
@@ -24653,7 +24653,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -24717,7 +24717,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -24781,7 +24781,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -24845,7 +24845,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -24909,7 +24909,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -24985,7 +24985,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -25061,7 +25061,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -25137,7 +25137,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -25213,7 +25213,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -25294,7 +25294,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -25380,7 +25380,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -25435,7 +25435,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -25490,7 +25490,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -25544,7 +25544,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -25599,7 +25599,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-5"
@@ -25675,7 +25675,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -25755,7 +25755,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -25835,7 +25835,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -25902,7 +25902,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -25965,7 +25965,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -26028,7 +26028,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -26095,7 +26095,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -26158,7 +26158,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -26209,7 +26209,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -26260,7 +26260,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -26311,7 +26311,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -26366,7 +26366,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -26421,7 +26421,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -26472,7 +26472,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-9"
@@ -26538,7 +26538,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -26599,7 +26599,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -26660,7 +26660,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -26722,7 +26722,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -26784,7 +26784,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -26846,7 +26846,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -26908,7 +26908,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -26970,7 +26970,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -27032,7 +27032,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -27094,7 +27094,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -27156,7 +27156,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -27218,7 +27218,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -27280,7 +27280,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -27342,7 +27342,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -27398,7 +27398,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -27454,7 +27454,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -27510,7 +27510,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -27566,7 +27566,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -27622,7 +27622,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -27678,7 +27678,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -27734,7 +27734,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-1"
@@ -27796,7 +27796,7 @@
         },
         {
           "class": {
-            "id": "PC-LifecycleStatusTerm"
+            "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-6"
@@ -28715,7 +28715,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-refines"
@@ -28728,7 +28728,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-refines"
@@ -28923,7 +28923,7 @@
         "id": "SC-isSynonymOfResource"
       },
       "subject": {
-        "id": "R-155140543"
+        "id": "R-SpecifDiagram"
       },
       "object": {
         "id": "R-155140544"
@@ -29001,7 +29001,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-1rrMV4tmFxp7MhDvY2cRHiSTTmn"
+        "id": "R-SpecifModelelement"
       },
       "object": {
         "id": "R-Title"
@@ -29014,7 +29014,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-1rrMV4tmFxp7MhDvY2cRHiSTTmn"
+        "id": "R-SpecifModelelement"
       },
       "object": {
         "id": "R-Description"
@@ -29027,7 +29027,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-1rrMV4tmFxp7MhDvY2cRHiSTTmn"
+        "id": "R-SpecifModelelement"
       },
       "object": {
         "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
@@ -29043,7 +29043,7 @@
         "id": "R-155140546"
       },
       "object": {
-        "id": "R-1rrMV4tmFxp7MhDvY2cRHiSTTmn"
+        "id": "R-SpecifModelelement"
       }
     },
     {
@@ -29056,7 +29056,7 @@
         "id": "R-155140547"
       },
       "object": {
-        "id": "R-1rrMV4tmFxp7MhDvY2cRHiSTTmn"
+        "id": "R-SpecifModelelement"
       }
     },
     {
@@ -29069,7 +29069,7 @@
         "id": "R-155140548"
       },
       "object": {
-        "id": "R-1rrMV4tmFxp7MhDvY2cRHiSTTmn"
+        "id": "R-SpecifModelelement"
       }
     },
     {
@@ -29082,7 +29082,7 @@
         "id": "R-g1Ghq3cGM7c3By1DQKNLFynTHBX"
       },
       "object": {
-        "id": "R-1rrMV4tmFxp7MhDvY2cRHiSTTmn"
+        "id": "R-SpecifModelelement"
       }
     },
     {
@@ -29183,7 +29183,7 @@
         "id": "SC-isSpecializationOfResource"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-155140542"
@@ -29196,7 +29196,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-852227555"
@@ -29209,7 +29209,7 @@
         "id": "SC-isSpecializationOfResource"
       },
       "subject": {
-        "id": "R-514389523"
+        "id": "R-SpecifFeature"
       },
       "object": {
         "id": "R-155140542"
@@ -29222,7 +29222,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-514389523"
+        "id": "R-SpecifFeature"
       },
       "object": {
         "id": "R-852227555"
@@ -29238,7 +29238,7 @@
         "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
       },
       "object": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       }
     },
     {
@@ -29599,7 +29599,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-A8FDfIonVwNiywJ6pafbpIt3hqU"
@@ -29638,7 +29638,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-duplicates"
@@ -29664,7 +29664,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-duplicates"
@@ -29690,7 +29690,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-1388621256"
@@ -29716,7 +29716,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-1388621256"
@@ -29755,7 +29755,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-vWRT8rFyXKd4QqiPtDWtVyJVz8G"
@@ -29820,10 +29820,10 @@
         "id": "SC-isSynonymOfResource"
       },
       "subject": {
-        "id": "R-514389523"
+        "id": "R-SpecifFeature"
       },
       "object": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       }
     },
     {
@@ -29901,7 +29901,7 @@
         "id": "R-LfS1sqHpaj2SBAGEG1MX8yIJTwV"
       },
       "object": {
-        "id": "R-Pog9cRkWxwNOUxxxr6jhtWheQhF"
+        "id": "R-SpecifAccesses"
       }
     },
     {
@@ -29914,7 +29914,7 @@
         "id": "R-1756321086"
       },
       "object": {
-        "id": "R-Pog9cRkWxwNOUxxxr6jhtWheQhF"
+        "id": "R-SpecifAccesses"
       }
     },
     {
@@ -29927,7 +29927,7 @@
         "id": "R-1756321087"
       },
       "object": {
-        "id": "R-Pog9cRkWxwNOUxxxr6jhtWheQhF"
+        "id": "R-SpecifAccesses"
       }
     },
     {
@@ -29940,7 +29940,7 @@
         "id": "R-7OVcJnKlDm3zOHoIZUoprtHmeoJ"
       },
       "object": {
-        "id": "R-Pog9cRkWxwNOUxxxr6jhtWheQhF"
+        "id": "R-SpecifAccesses"
       }
     },
     {
@@ -30083,7 +30083,7 @@
         "id": "R-155140546"
       },
       "object": {
-        "id": "R-Pog9cRkWxwNOUxxxr6jhtWheQhF"
+        "id": "R-SpecifAccesses"
       }
     },
     {
@@ -30096,7 +30096,7 @@
         "id": "R-155140547"
       },
       "object": {
-        "id": "R-Pog9cRkWxwNOUxxxr6jhtWheQhF"
+        "id": "R-SpecifAccesses"
       }
     },
     {
@@ -30106,7 +30106,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-1756321090"
@@ -30132,7 +30132,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-1756321090"
@@ -30158,7 +30158,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-traces"
@@ -30184,7 +30184,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-traces"
@@ -30210,7 +30210,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-isDerivedFrom"
@@ -30236,7 +30236,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-isDerivedFrom"
@@ -30993,7 +30993,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-155140543"
+        "id": "R-SpecifDiagram"
       }
     },
     {
@@ -31006,7 +31006,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-514389523"
+        "id": "R-SpecifFeature"
       }
     },
     {
@@ -31019,7 +31019,7 @@
         "id": "R-NmS1wOWAGTpqlRhTi85i0C7iXkL"
       },
       "object": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       }
     },
     {
@@ -31045,7 +31045,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-1rrMV4tmFxp7MhDvY2cRHiSTTmn"
+        "id": "R-SpecifModelelement"
       }
     },
     {
@@ -32199,7 +32199,7 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-852227588"
+        "id": "R-oslcrmValidatedby"
       },
       "object": {
         "id": "R-GPKxTMr3LxWEg8gTvygoY2vJRwL"
@@ -32215,7 +32215,7 @@
         "id": "R-w19PoaxZiKLSP1lAV4u9SGx9IPs"
       },
       "object": {
-        "id": "R-852227588"
+        "id": "R-oslcrmValidatedby"
       }
     },
     {
@@ -32368,10 +32368,10 @@
         "id": "SC-isSynonymOfResource"
       },
       "subject": {
-        "id": "R-wWSYgLOXpfABxVh491lL1O1lJBq"
+        "id": "R-SpecifRequirement"
       },
       "object": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       }
     },
     {
@@ -32384,7 +32384,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-wWSYgLOXpfABxVh491lL1O1lJBq"
+        "id": "R-SpecifRequirement"
       }
     },
     {
@@ -32563,7 +32563,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-852227586"
@@ -32641,7 +32641,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-Requirement"
+        "id": "R-IrebRequirement"
       },
       "object": {
         "id": "R-852227587"
@@ -32719,10 +32719,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-V6wFjOZMJpsNYjSAr7akG82XLmf"
+        "id": "R-ArchimateAccesses"
       },
       "object": {
-        "id": "R-Pog9cRkWxwNOUxxxr6jhtWheQhF"
+        "id": "R-SpecifAccesses"
       }
     },
     {
@@ -33829,7 +33829,7 @@
             {
               "id": "N-vocjQYmvtlIzcGsieVchOGhCUmb",
               "resource": {
-                "id": "R-155140543"
+                "id": "R-SpecifDiagram"
               },
               "changedAt": "2018-02-17T14:52:28+01:00",
               "revision": "114"
@@ -33837,21 +33837,21 @@
             {
               "id": "N-v8YxQqDKzXEnykcbfS7D6f5CB1c",
               "resource": {
-                "id": "R-514389523"
+                "id": "R-SpecifFeature"
               },
               "changedAt": "2023-03-06T08:30:14.464Z"
             },
             {
               "id": "N-JissrCtZ51CD04LeneSqolLFJpA",
               "resource": {
-                "id": "R-Requirement"
+                "id": "R-IrebRequirement"
               },
               "changedAt": "2023-03-06T07:26:38.265Z"
             },
             {
               "id": "N-lpnbdUKCAUhaFmrTSe6iJW7kGBi",
               "resource": {
-                "id": "R-wWSYgLOXpfABxVh491lL1O1lJBq"
+                "id": "R-SpecifRequirement"
               },
               "changedAt": "2023-07-16T09:52:40.687Z"
             },
@@ -33865,7 +33865,7 @@
             {
               "id": "N-DC9wVTLyGWOOBEpHdGRXwrkGNWt",
               "resource": {
-                "id": "R-1rrMV4tmFxp7MhDvY2cRHiSTTmn"
+                "id": "R-SpecifModelelement"
               },
               "changedAt": "2023-02-26T20:55:26.572Z"
             },
@@ -34258,7 +34258,7 @@
             {
               "id": "N-CQvy6KRvxlf6RyEthyIVQjWfDAy",
               "resource": {
-                "id": "R-852227588"
+                "id": "R-oslcrmValidatedby"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -34343,14 +34343,14 @@
             {
               "id": "N-7tIMaM29RmM3irsPunjtHbWrKzj",
               "resource": {
-                "id": "R-Pog9cRkWxwNOUxxxr6jhtWheQhF"
+                "id": "R-SpecifAccesses"
               },
               "changedAt": "2023-03-15T07:46:21.218Z"
             },
             {
               "id": "N-rI4bB8VOcvOxwFZPTBb9ANrVsbT",
               "resource": {
-                "id": "R-V6wFjOZMJpsNYjSAr7akG82XLmf"
+                "id": "R-ArchimateAccesses"
               },
               "changedAt": "2023-07-16T13:06:00.048Z"
             },
@@ -35184,14 +35184,14 @@
             {
               "id": "N-WuPerdPkOYoMtlQbfNS3tdtW9Na",
               "resource": {
-                "id": "R-irGczMK1F13knsq19WtzyIKylGz"
+                "id": "R-SpecifDomain"
               },
               "changedAt": "2023-07-15T13:08:12.687Z"
             },
             {
               "id": "N-c62JGH4rSPxMHoWyiVfeCFqLgQp",
               "resource": {
-                "id": "R-GTYKnMz8eqwd65NHb8sKhbbq60n"
+                "id": "R-SpecifLocalTerm"
               },
               "changedAt": "2023-05-30T06:06:52.411Z"
             },
