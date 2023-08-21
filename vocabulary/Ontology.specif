@@ -9,7 +9,7 @@
   "$schema": "https://specif.de/v1.1/schema.json",
   "generator": "SpecIF Modellintegrator und Editor",
   "generatorVersion": "1.1.q.1",
-  "createdAt": "2023-08-15T08:58:16.646Z",
+  "createdAt": "2023-08-18T11:37:45.858Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -453,13 +453,14 @@
       "title": "SpecIF:LocalTerm",
       "description": [
         {
-          "text": "<p>A name of the resource used in one or more national languages.</p>"
+          "text": "<p>A name of the resource used in one or more national languages. Multiple values can be defined so that different local terms can be transformed ('globalized') to the ontology term.</p>"
         }
       ],
       "revision": "1.2",
       "dataType": {
         "id": "DT-ShortString"
-      }
+      },
+	  "multiple": true
     },
     {
       "id": "PC-LocalTermPlural",
@@ -467,13 +468,14 @@
       "title": "SpecIF:LocalTermPlural",
       "description": [
         {
-          "text": "<p>A name of the resource in plural form used in one or more national languages.</p>"
+          "text": "<p>A name of the resource in plural form used in one or more national languages. Multiple values can be defined so that different local terms can be transformed ('globalized') to the ontology term.</p>"
         }
       ],
       "revision": "1.2",
       "dataType": {
         "id": "DT-ShortString"
-      }
+      },
+	  "multiple": true
     },
     {
       "id": "PC-Description",
@@ -2958,7 +2960,7 @@
       ]
     },
     {
-      "id": "R-Heading",
+      "id": "R-SpecifHeading",
       "changedAt": "2023-07-16T09:27:26.048Z",
       "revision": "5",
       "class": {
@@ -3012,7 +3014,7 @@
                 "language": "en"
               },
               {
-                "text": "Eine 'Kapitelüberschrift' in einem Dokument ist der Titel eines Kapitels. Sie kann eine Beschreibung haben, die als Einleitung oder Zusammenfassung des Kapitels genutzt werden kann.",
+                "text": "Eine 'Überschrift' in einem Dokument ist der Titel eines Kapitels. Sie kann eine Beschreibung haben, die als Einleitung oder Zusammenfassung des Kapitels genutzt werden kann.",
                 "language": "de"
               }
             ]
@@ -3048,6 +3050,16 @@
                 "language": "en"
               },
               {
+                "text": "Überschrift",
+                "language": "de"
+              }
+            ],
+            [
+              {
+                "text": "Chapter Title",
+                "language": "en"
+              },
+              {
                 "text": "Kapitelüberschrift",
                 "language": "de"
               }
@@ -3065,7 +3077,7 @@
                 "language": "en"
               },
               {
-                "text": "Kapitelüberschriften",
+                "text": "Überschriften",
                 "language": "de"
               }
             ]
@@ -3121,7 +3133,7 @@
                 "language": "en"
               },
               {
-                "text": "Eine 'Kapitelüberschrift' in einem Dokument ist der Titel eines Kapitels.Sie kann eine Beschreibung haben, die als Einleitung oder Zusammenfassung des Kapitels genutzt werden kann.",
+                "text": "Eine 'Überschrift' in einem Dokument ist der Titel eines Kapitels. Sie kann eine Beschreibung haben, die als Einleitung oder Zusammenfassung des Kapitels genutzt werden kann.",
                 "language": "de"
               }
             ]
@@ -4436,6 +4448,106 @@
           },
           "values": [
             "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-65wfexL7KsWS3reDKYzWd85BR28",
+      "changedAt": "2023-08-18T11:30:09.501Z",
+      "class": {
+        "id": "RC-TermResourceClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:Namespace",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Namespace",
+                "language": "en"
+              },
+              {
+                "text": "Namensraum",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Namespaces",
+                "language": "en"
+              },
+              {
+                "text": "Namensräume",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
           ]
         }
       ]
@@ -6173,7 +6285,7 @@
     },
     {
       "id": "R-YPwAhIW6f096yiO75K3t31UsGao",
-      "changedAt": "2023-03-06T09:01:28.053Z",
+      "changedAt": "2023-08-18T11:23:41.602Z",
       "class": {
         "id": "RC-TermResourceClass"
       },
@@ -6246,6 +6358,839 @@
               },
               {
                 "text": "Attribut",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Properties",
+                "language": "en"
+              },
+              {
+                "text": "Attribute",
+                "language": "de"
+              },
+              {
+                "text": "Attributs",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-fM1FB6zCrqNmKuQlN7ZUYpKrLlC",
+      "changedAt": "2023-08-18T11:23:09.113Z",
+      "class": {
+        "id": "RC-TermResourceClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:TermPropertyClassString"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A term for SpecIF properties with data type 'xs:string', often used as title of a propertyClass to denote the class type."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Property (Text)",
+                "language": "en"
+              },
+              {
+                "text": "Attribut (Text)",
+                "language": "de"
+              },
+              {
+                "text": "Attribut (Texte)",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Properties",
+                "language": "en"
+              },
+              {
+                "text": "Attribute",
+                "language": "de"
+              },
+              {
+                "text": "Attributs",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-Pb72Q7cOmnjpwUEQaCEcdjbzOA9",
+      "changedAt": "2023-08-18T11:21:20.750Z",
+      "class": {
+        "id": "RC-TermResourceClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:TermPropertyClassBoolean"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A term for SpecIF properties with data type 'xs:boolean', often used as title of a propertyClass to denote the class type."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Property (Boolean)",
+                "language": "en"
+              },
+              {
+                "text": "Attribut (Boolean)",
+                "language": "de"
+              },
+              {
+                "text": "Attribut (Bouléen)",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Properties",
+                "language": "en"
+              },
+              {
+                "text": "Attribute",
+                "language": "de"
+              },
+              {
+                "text": "Attributs",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-CXDNs39QN7YM8Mv2vco7metJ7Ol",
+      "changedAt": "2023-08-18T11:18:16.952Z",
+      "class": {
+        "id": "RC-TermResourceClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:TermPropertyClassInteger"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A term for SpecIF properties with data type 'xs:integer', often used as title of a propertyClass to denote the class type."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Property (Integer)",
+                "language": "en"
+              },
+              {
+                "text": "Attribut (Ganzzahl)",
+                "language": "de"
+              },
+              {
+                "text": "Attribut (Entier)",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Properties",
+                "language": "en"
+              },
+              {
+                "text": "Attribute",
+                "language": "de"
+              },
+              {
+                "text": "Attributs",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-ZtbBpIxObvqnDuD8dfo8EN8WrMP",
+      "changedAt": "2023-08-18T11:17:03.746Z",
+      "class": {
+        "id": "RC-TermResourceClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:TermPropertyClassReal"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A term for SpecIF properties with data type 'xs:double', often used as title of a propertyClass to denote the class type."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Property (Real)",
+                "language": "en"
+              },
+              {
+                "text": "Attribut (Realzahl)",
+                "language": "de"
+              },
+              {
+                "text": "Attribut (Réel)",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Properties",
+                "language": "en"
+              },
+              {
+                "text": "Attribute",
+                "language": "de"
+              },
+              {
+                "text": "Attributs",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-eYBzcDOCiTBTHiPYjh9qaYuumec",
+      "changedAt": "2023-08-18T11:15:40.385Z",
+      "class": {
+        "id": "RC-TermResourceClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:TermPropertyClassTimestamp"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A term for SpecIF properties with data type 'xs:dateTime', often used as title of a propertyClass to denote the class type."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Property (Timestamp)",
+                "language": "en"
+              },
+              {
+                "text": "Attribut (Zeitpunkt)",
+                "language": "de"
+              },
+              {
+                "text": "Attribut (Horodatage)",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Properties",
+                "language": "en"
+              },
+              {
+                "text": "Attribute",
+                "language": "de"
+              },
+              {
+                "text": "Attributs",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-vMChALmmnhnd9biNu5iCqrYA8XN",
+      "changedAt": "2023-08-18T10:26:50.181Z",
+      "class": {
+        "id": "RC-TermResourceClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:TermPropertyClassDuration"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A term for SpecIF properties with data type 'xs:duration', often used as title of a propertyClass to denote the class type."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Property (Duration)",
+                "language": "en"
+              },
+              {
+                "text": "Attribut (Zeitdauer)",
+                "language": "de"
+              },
+              {
+                "text": "Attribut (Durée)",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Properties",
+                "language": "en"
+              },
+              {
+                "text": "Attribute",
+                "language": "de"
+              },
+              {
+                "text": "Attributs",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-iIjwsbO5i3IQgOlijFJ3SXVlJHt",
+      "changedAt": "2023-08-18T10:26:04.295Z",
+      "class": {
+        "id": "RC-TermResourceClass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:TermPropertyClassURI"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A term for SpecIF properties with data type 'xs:anyURI', often used as title of a propertyClass to denote the class type."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Property (URI",
+                "language": "en"
+              },
+              {
+                "text": "Attribut (URI)",
+                "language": "de"
+              },
+              {
+                "text": "Attribut (URI)",
                 "language": "fr"
               }
             ]
@@ -14528,7 +15473,7 @@
     },
     {
       "id": "R-MxwBcoVecPlYMGyCifQQvOCFECy",
-      "changedAt": "2023-08-09T23:16:01.660Z",
+      "changedAt": "2023-08-18T10:13:22.702Z",
       "class": {
         "id": "RC-TermStatementClass"
       },
@@ -14582,6 +15527,10 @@
               {
                 "text": "has Property",
                 "language": "en"
+              },
+              {
+                "text": "hat Attribut",
+                "language": "de"
               }
             ]
           ]
@@ -15072,7 +16021,7 @@
       ]
     },
     {
-      "id": "R-Title",
+      "id": "R-DctermsTitle",
       "changedAt": "2023-05-22T22:51:56.698Z",
       "revision": "44",
       "class": {
@@ -15142,6 +16091,16 @@
                 "text": "Name",
                 "language": "de"
               }
+            ],
+            [
+              {
+                "text": "Title",
+                "language": "en"
+              },
+              {
+                "text": "Titel",
+                "language": "de"
+              }
             ]
           ]
         },
@@ -15196,7 +16155,7 @@
       ]
     },
     {
-      "id": "R-074HR6VL73xMGSWZoYzOqKPnYlQ",
+      "id": "R-SpecifTerm",
       "changedAt": "2023-08-15T08:56:06.068Z",
       "revision": "44",
       "class": {
@@ -15277,6 +16236,10 @@
               {
                 "text": "Term",
                 "language": "en"
+              },
+              {
+                "text": "Begriff",
+                "language": "de"
               }
             ]
           ]
@@ -15294,7 +16257,7 @@
             "id": "PC-multiLanguage"
           },
           "values": [
-            "true"
+            "false"
           ]
         },
         {
@@ -15474,7 +16437,7 @@
                 "language": "en"
               },
               {
-                "text": "Kapitelüberschrift",
+                "text": "Überschrift",
                 "language": "de"
               }
             ]
@@ -17672,7 +18635,7 @@
               },
               {
                 "text": "The 'Lifecycle Status' of the resource.",
-                "language": "de-DE"
+                "language": "de"
               }
             ]
           ]
@@ -17708,7 +18671,7 @@
               },
               {
                 "text": "Lebenszyklus",
-                "language": "de-DE"
+                "language": "de"
               },
               {
                 "text": "Cycle de vie",
@@ -17807,7 +18770,7 @@
               },
               {
                 "text": "The 'status' of the ontology term.",
-                "language": "de-DE"
+                "language": "de"
               }
             ]
           ]
@@ -17840,7 +18803,7 @@
               },
               {
                 "text": "Status",
-                "language": "de-DE"
+                "language": "de"
               },
               {
                 "text": "Cycle de vie",
@@ -19462,6 +20425,18 @@
         },
         {
           "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+				"text": "<p>A name of the resource used in one or more national languages. Multiple values can be defined so that different local terms can be transformed ('globalized') to the ontology term.</p>"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-LocalTerm"
           },
           "values": [
@@ -19502,7 +20477,7 @@
             "id": "PC-multiple"
           },
           "values": [
-            "false"
+            "true"
           ]
         },
         {
@@ -19564,6 +20539,18 @@
         },
         {
           "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+				"text": "<p>A name of the resource in plural form used in one or more national languages. Multiple values can be defined so that different local terms can be transformed ('globalized') to the ontology term.</p>"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-Domain"
           },
           "values": [
@@ -19604,7 +20591,7 @@
             "id": "PC-multiple"
           },
           "values": [
-            "false"
+            "true"
           ]
         },
         {
@@ -29007,7 +29994,7 @@
         "id": "R-155140542"
       },
       "object": {
-        "id": "R-Title"
+        "id": "R-DctermsTitle"
       }
     },
     {
@@ -29098,7 +30085,7 @@
         "id": "R-1021959454"
       },
       "object": {
-        "id": "R-Title"
+        "id": "R-DctermsTitle"
       }
     },
     {
@@ -29212,7 +30199,7 @@
         "id": "SC-isSpecializationOfResource"
       },
       "subject": {
-        "id": "R-Heading"
+        "id": "R-SpecifHeading"
       },
       "object": {
         "id": "R-155140542"
@@ -29238,7 +30225,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-Heading"
+        "id": "R-SpecifHeading"
       },
       "object": {
         "id": "R-commentRefersTo"
@@ -29267,7 +30254,7 @@
         "id": "R-SpecifModelelement"
       },
       "object": {
-        "id": "R-Title"
+        "id": "R-DctermsTitle"
       }
     },
     {
@@ -31009,7 +31996,7 @@
         "id": "R-NuswNkd1PUci1FLeLkiI0uhXjMD"
       },
       "object": {
-        "id": "R-Title"
+        "id": "R-DctermsTitle"
       }
     },
     {
@@ -31217,7 +32204,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-Heading"
+        "id": "R-SpecifHeading"
       }
     },
     {
@@ -32075,7 +33062,7 @@
         "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
       },
       "object": {
-        "id": "R-Title"
+        "id": "R-DctermsTitle"
       }
     },
     {
@@ -33466,7 +34453,7 @@
         "id": "R-dv38GNTWcvnuuf1POJiNEMfVCAc"
       },
       "object": {
-        "id": "R-Heading"
+        "id": "R-SpecifHeading"
       }
     },
     {
@@ -33986,7 +34973,7 @@
         "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ"
       },
       "object": {
-        "id": "R-074HR6VL73xMGSWZoYzOqKPnYlQ"
+        "id": "R-SpecifTerm"
       }
     },
     {
@@ -34039,6 +35026,188 @@
       },
       "object": {
         "id": "R-SpecifLocalTerm"
+      }
+    },
+    {
+      "id": "S-tRIWlzhH78dp5qJVmC7CM1sFIlm",
+      "changedAt": "2023-08-18T10:11:21.994Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-iIjwsbO5i3IQgOlijFJ3SXVlJHt"
+      }
+    },
+    {
+      "id": "S-sZ8QUz8MEMyeQvqLXb5wTM2hLie",
+      "changedAt": "2023-08-18T10:11:34.050Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-iIjwsbO5i3IQgOlijFJ3SXVlJHt"
+      },
+      "object": {
+        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+      }
+    },
+    {
+      "id": "S-tzYo4uocrSpdPpYDHR0ILMsjGNT",
+      "changedAt": "2023-08-18T11:25:34.325Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-vMChALmmnhnd9biNu5iCqrYA8XN"
+      },
+      "object": {
+        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+      }
+    },
+    {
+      "id": "S-nLdJr6wKS72hNTFjEGN5f9qy43E",
+      "changedAt": "2023-08-18T11:25:45.858Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-eYBzcDOCiTBTHiPYjh9qaYuumec"
+      },
+      "object": {
+        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+      }
+    },
+    {
+      "id": "S-DcVmPoUErsx22Zt1ejfF54JtzY6",
+      "changedAt": "2023-08-18T11:25:58.944Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-ZtbBpIxObvqnDuD8dfo8EN8WrMP"
+      },
+      "object": {
+        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+      }
+    },
+    {
+      "id": "S-U9gk57zru47dS1OU4sj8tEWfmvU",
+      "changedAt": "2023-08-18T11:26:07.434Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-CXDNs39QN7YM8Mv2vco7metJ7Ol"
+      },
+      "object": {
+        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+      }
+    },
+    {
+      "id": "S-dzql0lcxhOGc1Nz74s1hr6u7yqB",
+      "changedAt": "2023-08-18T11:26:17.082Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-Pb72Q7cOmnjpwUEQaCEcdjbzOA9"
+      },
+      "object": {
+        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+      }
+    },
+    {
+      "id": "S-ij2gF14dLZborilGT9AK9zFMIXr",
+      "changedAt": "2023-08-18T11:26:25.487Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-fM1FB6zCrqNmKuQlN7ZUYpKrLlC"
+      },
+      "object": {
+        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+      }
+    },
+    {
+      "id": "S-l9JwAcDuj6OlrDu225XU68VnDBL",
+      "changedAt": "2023-08-18T11:26:53.108Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-fM1FB6zCrqNmKuQlN7ZUYpKrLlC"
+      }
+    },
+    {
+      "id": "S-SAV9iICkw19ldJHPjNvK34OMsJn",
+      "changedAt": "2023-08-18T11:27:02.871Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-Pb72Q7cOmnjpwUEQaCEcdjbzOA9"
+      }
+    },
+    {
+      "id": "S-3NiLo2ICavkpKhE6L0mRJ3qSzRU",
+      "changedAt": "2023-08-18T11:27:32.795Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-CXDNs39QN7YM8Mv2vco7metJ7Ol"
+      }
+    },
+    {
+      "id": "S-oZG7x4S65ktpwgyNgdReeHtUnDH",
+      "changedAt": "2023-08-18T11:27:42.078Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-ZtbBpIxObvqnDuD8dfo8EN8WrMP"
+      }
+    },
+    {
+      "id": "S-8dF4YeeP0Kl0JDwZDTQ1fyIyxyY",
+      "changedAt": "2023-08-18T11:27:52.492Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-eYBzcDOCiTBTHiPYjh9qaYuumec"
+      }
+    },
+    {
+      "id": "S-uysA9uj7138uDLJ1Drn8pEIMikb",
+      "changedAt": "2023-08-18T11:32:56.542Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-65wfexL7KsWS3reDKYzWd85BR28"
       }
     }
   ],
@@ -34245,7 +35414,7 @@
             {
               "id": "N-KjJlzrW8mJrFGZ1q7t3mLBg02CX",
               "resource": {
-                "id": "R-Heading"
+                "id": "R-SpecifHeading"
               },
               "changedAt": "2018-02-17T14:52:28+01:00",
               "revision": "114"
@@ -34334,6 +35503,13 @@
                 "id": "R-SlR5NobT1LRA7VXvgSLfEV9Lhuu"
               },
               "changedAt": "2023-07-16T09:40:59.529Z"
+            },
+            {
+              "id": "N-pnlkuqBkq0qR1VvPhOCAQuSMIWJ",
+              "resource": {
+                "id": "R-65wfexL7KsWS3reDKYzWd85BR28"
+              },
+              "changedAt": "2023-08-18T11:30:09.501Z"
             },
             {
               "id": "N-aDipkrcGQWqRCsDTfGKKfnKMr9M",
@@ -34451,6 +35627,55 @@
                 "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
               },
               "changedAt": "2023-03-06T08:58:32.874Z"
+            },
+            {
+              "id": "N-OjJyN4xQpe8AgkBa6NRHNnrhteB",
+              "resource": {
+                "id": "R-fM1FB6zCrqNmKuQlN7ZUYpKrLlC"
+              },
+              "changedAt": "2023-08-18T11:23:09.113Z"
+            },
+            {
+              "id": "N-jzps1A7bZ9vylg0pcytn2FezFjL",
+              "resource": {
+                "id": "R-Pb72Q7cOmnjpwUEQaCEcdjbzOA9"
+              },
+              "changedAt": "2023-08-18T11:21:20.750Z"
+            },
+            {
+              "id": "N-DnuoItiegWidQ5Rd4u7WSrrjPTH",
+              "resource": {
+                "id": "R-CXDNs39QN7YM8Mv2vco7metJ7Ol"
+              },
+              "changedAt": "2023-08-18T11:18:16.952Z"
+            },
+            {
+              "id": "N-tga81uYN67pBfXSnn23fSBoA4Mc",
+              "resource": {
+                "id": "R-ZtbBpIxObvqnDuD8dfo8EN8WrMP"
+              },
+              "changedAt": "2023-08-18T11:17:03.746Z"
+            },
+            {
+              "id": "N-Js8M6UVPw8LdbvivbtpoEazQpqW",
+              "resource": {
+                "id": "R-eYBzcDOCiTBTHiPYjh9qaYuumec"
+              },
+              "changedAt": "2023-08-18T11:15:40.385Z"
+            },
+            {
+              "id": "N-by3yUoaNpV6oKEkfNoXuBXpBbWO",
+              "resource": {
+                "id": "R-vMChALmmnhnd9biNu5iCqrYA8XN"
+              },
+              "changedAt": "2023-08-18T10:14:37.260Z"
+            },
+            {
+              "id": "N-Hvc3v12ohgSyCg5Akk1a6AKAxNF",
+              "resource": {
+                "id": "R-iIjwsbO5i3IQgOlijFJ3SXVlJHt"
+              },
+              "changedAt": "2023-08-18T10:10:49.459Z"
             },
             {
               "id": "N-3mYAxUtocEA5kU5aByjU6U7VN8z",
@@ -35273,7 +36498,7 @@
             {
               "id": "N-Q2iEU7IWLqAhfuUeV2djjKkuxYV",
               "resource": {
-                "id": "R-Title"
+                "id": "R-DctermsTitle"
               },
               "changedAt": "2018-02-17T14:52:17+01:00",
               "revision": "114"
@@ -35281,8 +36506,7 @@
             {
               "id": "N-Rhr4JnDv6rqEy58lsszW1L2jUHL",
               "resource": {
-                "id": "R-074HR6VL73xMGSWZoYzOqKPnYlQ",
-                "revision": "44"
+                "id": "R-SpecifTerm"
               },
               "changedAt": "2023-08-15T08:56:06.068Z"
             },
@@ -35532,8 +36756,7 @@
             {
               "id": "N-A75RpAYmxuoqs8XGmHfDl8XF6pl",
               "resource": {
-                "id": "R-hhKaZoMtu3D75vvGXU8JshsHAs9",
-                "revision": "76"
+                "id": "R-hhKaZoMtu3D75vvGXU8JshsHAs9"
               },
               "changedAt": "2023-08-15T07:44:22.466Z"
             },
