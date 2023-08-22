@@ -184,7 +184,7 @@
     {
       "id": "DT-AnyURI",
       "changedAt": "2023-02-14T00:47:24+02:00",
-      "title": "AnyURI",
+      "title": "Any URI",
       "description": [
         {
           "text": "A universal resource identifier (URI), according to RFC3986.",
@@ -1230,7 +1230,7 @@
     {
       "id": "RC-TermPropertyClassAnyUri",
       "changedAt": "2023-02-02T09:30:52+02:00",
-      "title": "SpecIF:TermPropertyClassAnyUri",
+      "title": "SpecIF:TermPropertyClassURI",
       "description": [
         {
           "text": "A term for properties belonging to the SpecIF Ontology - of type 'xs:anyUri'."
@@ -6489,15 +6489,15 @@
           "values": [
             [
               {
-                "text": "Properties",
+                "text": "Properties (Text)",
                 "language": "en"
               },
               {
-                "text": "Attribute",
+                "text": "Attribute (Text)",
                 "language": "de"
               },
               {
-                "text": "Attributs",
+                "text": "Attributs (Texte)",
                 "language": "fr"
               }
             ]
@@ -6608,15 +6608,15 @@
           "values": [
             [
               {
-                "text": "Properties",
+                "text": "Properties (Boolean)",
                 "language": "en"
               },
               {
-                "text": "Attribute",
+                "text": "Attribute (Boolean)",
                 "language": "de"
               },
               {
-                "text": "Attributs",
+                "text": "Attributs (Bouléen)",
                 "language": "fr"
               }
             ]
@@ -6727,15 +6727,15 @@
           "values": [
             [
               {
-                "text": "Properties",
+                "text": "Properties (Integer)",
                 "language": "en"
               },
               {
-                "text": "Attribute",
+                "text": "Attribute (Ganzzahl)",
                 "language": "de"
               },
               {
-                "text": "Attributs",
+                "text": "Attributs (Entier)",
                 "language": "fr"
               }
             ]
@@ -6846,15 +6846,15 @@
           "values": [
             [
               {
-                "text": "Properties",
+                "text": "Properties (Real)",
                 "language": "en"
               },
               {
-                "text": "Attribute",
+                "text": "Attribute (Realzahl)",
                 "language": "de"
               },
               {
-                "text": "Attributs",
+                "text": "Attributs (Réel)",
                 "language": "fr"
               }
             ]
@@ -6965,15 +6965,15 @@
           "values": [
             [
               {
-                "text": "Properties",
+                "text": "Properties (Timestamp)",
                 "language": "en"
               },
               {
-                "text": "Attribute",
+                "text": "Attribute (Zeitpunkt)",
                 "language": "de"
               },
               {
-                "text": "Attributs",
+                "text": "Attributs (Horodatage)",
                 "language": "fr"
               }
             ]
@@ -7084,15 +7084,15 @@
           "values": [
             [
               {
-                "text": "Properties",
+                "text": "Properties (Duration)",
                 "language": "en"
               },
               {
-                "text": "Attribute",
+                "text": "Attribute (Zeitdauer)",
                 "language": "de"
               },
               {
-                "text": "Attributs",
+                "text": "Attributs (Durée)",
                 "language": "fr"
               }
             ]
@@ -7182,7 +7182,7 @@
           "values": [
             [
               {
-                "text": "Property (URI",
+                "text": "Property (URI)",
                 "language": "en"
               },
               {
@@ -7203,15 +7203,15 @@
           "values": [
             [
               {
-                "text": "Properties",
+                "text": "Properties (URI)",
                 "language": "en"
               },
               {
-                "text": "Attribute",
+                "text": "Attribute (URI)",
                 "language": "de"
               },
               {
-                "text": "Attributs",
+                "text": "Attributs (URI)",
                 "language": "fr"
               }
             ]
@@ -15457,6 +15457,10 @@
               {
                 "text": "is namespace for",
                 "language": "en"
+              },
+              {
+                "text": "ist Namensraum von",
+                "language": "de"
               }
             ]
           ]
@@ -15614,6 +15618,14 @@
               {
                 "text": "has enumerated Value",
                 "language": "en"
+              },
+              {
+                "text": "hat Aufzählungswert",
+                "language": "de"
+              },
+              {
+                "text": "a la valeur énumérée",
+                "language": "fr"
               }
             ]
           ]
@@ -15697,6 +15709,14 @@
               {
                 "text": "is eligible as Subject",
                 "language": "en"
+              },
+              {
+                "text": "ist zulässig als Subjekt",
+                "language": "de"
+              },
+              {
+                "text": "est éligible comme sujet",
+                "language": "fr"
               }
             ]
           ]
@@ -15779,7 +15799,16 @@
           "values": [
             [
               {
-                "text": "is eligible as Object"
+                "text": "is eligible as Object",
+                "language": "en"
+              },
+              {
+                "text": "ist zulässig als Objekt",
+                "language": "de"
+              },
+              {
+                "text": "est éligible comme objet",
+                "language": "fr"
               }
             ]
           ]
