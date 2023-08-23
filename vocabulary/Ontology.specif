@@ -9,7 +9,7 @@
   "$schema": "https://specif.de/v1.1/schema.json",
   "generator": "SpecIF Modellintegrator und Editor",
   "generatorVersion": "1.1.q.1",
-  "createdAt": "2023-08-21T21:48:52.973Z",
+  "createdAt": "2023-08-22T08:03:06.077Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -927,7 +927,7 @@
       "isHeading": true
     },
     {
-      "id": "RC-Namespace",
+      "id": "RC-SpecifNamespace",
       "changedAt": "2023-03-06T07:26:13.687Z",
       "title": "SpecIF:Namespace",
       "description": [
@@ -952,7 +952,7 @@
       ]
     },
     {
-      "id": "RC-OntologyTerm",
+      "id": "RC-SpecifOntologyterm",
       "changedAt": "2023-02-04T15:47:24+02:00",
       "title": "SpecIF:OntologyTerm",
       "description": [
@@ -987,7 +987,7 @@
       ]
     },
     {
-      "id": "RC-TermResourceClass",
+      "id": "RC-SpecifTermresourceclass",
       "changedAt": "2023-02-04T15:47:24+02:00",
       "title": "SpecIF:TermResourceClass",
       "description": [
@@ -1000,7 +1000,7 @@
         "user"
       ],
       "extends": {
-        "id": "RC-OntologyTerm"
+        "id": "RC-SpecifOntologyterm"
       },
       "propertyClasses": [
         {
@@ -1018,7 +1018,7 @@
       ]
     },
     {
-      "id": "RC-TermStatementClass",
+      "id": "RC-SpecifTermstatementclass",
       "changedAt": "2023-02-04T15:47:24+02:00",
       "title": "SpecIF:TermStatementClass",
       "description": [
@@ -1031,7 +1031,7 @@
         "user"
       ],
       "extends": {
-        "id": "RC-OntologyTerm"
+        "id": "RC-SpecifOntologyterm"
       },
       "propertyClasses": [
         {
@@ -1046,7 +1046,7 @@
       ]
     },
     {
-      "id": "RC-TermPropertyClass",
+      "id": "RC-SpecifTermpropertyclass",
       "changedAt": "2023-02-04T15:47:24+02:00",
       "title": "SpecIF:TermPropertyClass",
       "description": [
@@ -1057,7 +1057,7 @@
       "revision": "1.1",
       "instantiation": [],
       "extends": {
-        "id": "RC-OntologyTerm"
+        "id": "RC-SpecifOntologyterm"
       },
       "propertyClasses": [
         {
@@ -1066,7 +1066,7 @@
       ]
     },
     {
-      "id": "RC-TermPropertyClassString",
+      "id": "RC-SpecifTermpropertyclassstring",
       "changedAt": "2023-02-02T09:30:52+02:00",
       "title": "SpecIF:TermPropertyClassString",
       "description": [
@@ -1079,7 +1079,7 @@
         "user"
       ],
       "extends": {
-        "id": "RC-TermPropertyClass"
+        "id": "RC-SpecifTermpropertyclass"
       },
       "propertyClasses": [
         {
@@ -1097,7 +1097,7 @@
       ]
     },
     {
-      "id": "RC-TermPropertyClassBoolean",
+      "id": "RC-SpecifTermpropertyclassboolean",
       "changedAt": "2023-02-02T09:30:52+02:00",
       "title": "SpecIF:TermPropertyClassBoolean",
       "description": [
@@ -1110,7 +1110,7 @@
         "user"
       ],
       "extends": {
-        "id": "RC-TermPropertyClass"
+        "id": "RC-SpecifTermpropertyclass"
       },
       "propertyClasses": [
         {
@@ -1119,7 +1119,7 @@
       ]
     },
     {
-      "id": "RC-TermPropertyClassInteger",
+      "id": "RC-SpecifTermpropertyclassinteger",
       "changedAt": "2023-02-02T09:30:52+02:00",
       "title": "SpecIF:TermPropertyClassInteger",
       "description": [
@@ -1132,7 +1132,7 @@
         "user"
       ],
       "extends": {
-        "id": "RC-TermPropertyClass"
+        "id": "RC-SpecifTermpropertyclass"
       },
       "propertyClasses": [
         {
@@ -1150,7 +1150,7 @@
       ]
     },
     {
-      "id": "RC-TermPropertyClassReal",
+      "id": "RC-SpecifTermpropertyclassreal",
       "changedAt": "2023-02-02T09:30:52+02:00",
       "title": "SpecIF:TermPropertyClassReal",
       "description": [
@@ -1163,7 +1163,7 @@
         "user"
       ],
       "extends": {
-        "id": "RC-TermPropertyClass"
+        "id": "RC-SpecifTermpropertyclass"
       },
       "propertyClasses": [
         {
@@ -1184,7 +1184,7 @@
       ]
     },
     {
-      "id": "RC-TermPropertyClassTimestamp",
+      "id": "RC-SpecifTermpropertyclasstimestamp",
       "changedAt": "2023-02-02T09:30:52+02:00",
       "title": "SpecIF:TermPropertyClassTimestamp",
       "description": [
@@ -1197,7 +1197,7 @@
         "user"
       ],
       "extends": {
-        "id": "RC-TermPropertyClass"
+        "id": "RC-SpecifTermpropertyclass"
       },
       "propertyClasses": [
         {
@@ -1206,7 +1206,7 @@
       ]
     },
     {
-      "id": "RC-TermPropertyClassDuration",
+      "id": "RC-SpecifTermpropertyclassduration",
       "changedAt": "2023-02-02T09:30:52+02:00",
       "title": "SpecIF:TermPropertyClassDuration",
       "description": [
@@ -1219,7 +1219,7 @@
         "user"
       ],
       "extends": {
-        "id": "RC-TermPropertyClass"
+        "id": "RC-SpecifTermpropertyclass"
       },
       "propertyClasses": [
         {
@@ -1228,7 +1228,7 @@
       ]
     },
     {
-      "id": "RC-TermPropertyClassAnyUri",
+      "id": "RC-SpecifTermpropertyclassuri",
       "changedAt": "2023-02-02T09:30:52+02:00",
       "title": "SpecIF:TermPropertyClassURI",
       "description": [
@@ -1241,7 +1241,7 @@
         "user"
       ],
       "extends": {
-        "id": "RC-TermPropertyClass"
+        "id": "RC-SpecifTermpropertyclass"
       },
       "propertyClasses": [
         {
@@ -1263,7 +1263,7 @@
         "user"
       ],
       "extends": {
-        "id": "RC-OntologyTerm"
+        "id": "RC-SpecifOntologyterm"
       }
     },
     {
@@ -1303,12 +1303,12 @@
       "isUndirected": true,
       "subjectClasses": [
         {
-          "id": "RC-TermResourceClass"
+          "id": "RC-SpecifTermresourceclass"
         }
       ],
       "objectClasses": [
         {
-          "id": "RC-TermResourceClass"
+          "id": "RC-SpecifTermresourceclass"
         }
       ]
     },
@@ -1328,12 +1328,12 @@
       "isUndirected": true,
       "subjectClasses": [
         {
-          "id": "RC-TermStatementClass"
+          "id": "RC-SpecifTermstatementclass"
         }
       ],
       "objectClasses": [
         {
-          "id": "RC-TermStatementClass"
+          "id": "RC-SpecifTermstatementclass"
         }
       ]
     },
@@ -1353,48 +1353,48 @@
       "isUndirected": true,
       "subjectClasses": [
         {
-          "id": "RC-TermPropertyClassString"
+          "id": "RC-SpecifTermpropertyclassstring"
         },
         {
-          "id": "RC-TermPropertyClassBoolean"
+          "id": "RC-SpecifTermpropertyclassboolean"
         },
         {
-          "id": "RC-TermPropertyClassInteger"
+          "id": "RC-SpecifTermpropertyclassinteger"
         },
         {
-          "id": "RC-TermPropertyClassReal"
+          "id": "RC-SpecifTermpropertyclassreal"
         },
         {
-          "id": "RC-TermPropertyClassTimestamp"
+          "id": "RC-SpecifTermpropertyclasstimestamp"
         },
         {
-          "id": "RC-TermPropertyClassDuration"
+          "id": "RC-SpecifTermpropertyclassduration"
         },
         {
-          "id": "RC-TermPropertyClassAnyUri"
+          "id": "RC-SpecifTermpropertyclassuri"
         }
       ],
       "objectClasses": [
         {
-          "id": "RC-TermPropertyClassString"
+          "id": "RC-SpecifTermpropertyclassstring"
         },
         {
-          "id": "RC-TermPropertyClassBoolean"
+          "id": "RC-SpecifTermpropertyclassboolean"
         },
         {
-          "id": "RC-TermPropertyClassInteger"
+          "id": "RC-SpecifTermpropertyclassinteger"
         },
         {
-          "id": "RC-TermPropertyClassReal"
+          "id": "RC-SpecifTermpropertyclassreal"
         },
         {
-          "id": "RC-TermPropertyClassTimestamp"
+          "id": "RC-SpecifTermpropertyclasstimestamp"
         },
         {
-          "id": "RC-TermPropertyClassDuration"
+          "id": "RC-SpecifTermpropertyclassduration"
         },
         {
-          "id": "RC-TermPropertyClassAnyUri"
+          "id": "RC-SpecifTermpropertyclassuri"
         }
       ]
     },
@@ -1440,12 +1440,12 @@
       "isUndirected": true,
       "subjectClasses": [
         {
-          "id": "RC-TermStatementClass"
+          "id": "RC-SpecifTermstatementclass"
         }
       ],
       "objectClasses": [
         {
-          "id": "RC-TermStatementClass"
+          "id": "RC-SpecifTermstatementclass"
         }
       ]
     },
@@ -1489,12 +1489,12 @@
       ],
       "subjectClasses": [
         {
-          "id": "RC-TermResourceClass"
+          "id": "RC-SpecifTermresourceclass"
         }
       ],
       "objectClasses": [
         {
-          "id": "RC-TermResourceClass"
+          "id": "RC-SpecifTermresourceclass"
         }
       ]
     },
@@ -1514,12 +1514,12 @@
       ],
       "subjectClasses": [
         {
-          "id": "RC-TermResourceClass"
+          "id": "RC-SpecifTermresourceclass"
         }
       ],
       "objectClasses": [
         {
-          "id": "RC-TermResourceClass"
+          "id": "RC-SpecifTermresourceclass"
         }
       ]
     },
@@ -1539,12 +1539,12 @@
       ],
       "subjectClasses": [
         {
-          "id": "RC-TermStatementClass"
+          "id": "RC-SpecifTermstatementclass"
         }
       ],
       "objectClasses": [
         {
-          "id": "RC-TermStatementClass"
+          "id": "RC-SpecifTermstatementclass"
         }
       ]
     },
@@ -1568,15 +1568,15 @@
       ],
       "subjectClasses": [
         {
-          "id": "RC-TermResourceClass"
+          "id": "RC-SpecifTermresourceclass"
         },
         {
-          "id": "RC-TermStatementClass"
+          "id": "RC-SpecifTermstatementclass"
         }
       ],
       "objectClasses": [
         {
-          "id": "RC-TermStatementClass"
+          "id": "RC-SpecifTermstatementclass"
         }
       ]
     },
@@ -1600,15 +1600,15 @@
       ],
       "subjectClasses": [
         {
-          "id": "RC-TermResourceClass"
+          "id": "RC-SpecifTermresourceclass"
         },
         {
-          "id": "RC-TermStatementClass"
+          "id": "RC-SpecifTermstatementclass"
         }
       ],
       "objectClasses": [
         {
-          "id": "RC-TermStatementClass"
+          "id": "RC-SpecifTermstatementclass"
         }
       ]
     },
@@ -1647,33 +1647,33 @@
       ],
       "subjectClasses": [
         {
-          "id": "RC-TermResourceClass"
+          "id": "RC-SpecifTermresourceclass"
         },
         {
-          "id": "RC-TermStatementClass"
+          "id": "RC-SpecifTermstatementclass"
         }
       ],
       "objectClasses": [
         {
-          "id": "RC-TermPropertyClassString"
+          "id": "RC-SpecifTermpropertyclassstring"
         },
         {
-          "id": "RC-TermPropertyClassBoolean"
+          "id": "RC-SpecifTermpropertyclassboolean"
         },
         {
-          "id": "RC-TermPropertyClassInteger"
+          "id": "RC-SpecifTermpropertyclassinteger"
         },
         {
-          "id": "RC-TermPropertyClassReal"
+          "id": "RC-SpecifTermpropertyclassreal"
         },
         {
-          "id": "RC-TermPropertyClassTimestamp"
+          "id": "RC-SpecifTermpropertyclasstimestamp"
         },
         {
-          "id": "RC-TermPropertyClassDuration"
+          "id": "RC-SpecifTermpropertyclassduration"
         },
         {
-          "id": "RC-TermPropertyClassAnyUri"
+          "id": "RC-SpecifTermpropertyclassuri"
         }
       ]
     },
@@ -1700,22 +1700,22 @@
       ],
       "subjectClasses": [
         {
-          "id": "RC-TermPropertyClassString"
+          "id": "RC-SpecifTermpropertyclassstring"
         },
         {
-          "id": "RC-TermPropertyClassInteger"
+          "id": "RC-SpecifTermpropertyclassinteger"
         },
         {
-          "id": "RC-TermPropertyClassReal"
+          "id": "RC-SpecifTermpropertyclassreal"
         },
         {
-          "id": "RC-TermPropertyClassTimestamp"
+          "id": "RC-SpecifTermpropertyclasstimestamp"
         },
         {
-          "id": "RC-TermPropertyClassDuration"
+          "id": "RC-SpecifTermpropertyclassduration"
         },
         {
-          "id": "RC-TermPropertyClassAnyUri"
+          "id": "RC-SpecifTermpropertyclassuri"
         }
       ],
       "objectClasses": [
@@ -1742,36 +1742,36 @@
       },
       "subjectClasses": [
         {
-          "id": "RC-Namespace"
+          "id": "RC-SpecifNamespace"
         }
       ],
       "objectClasses": [
         {
-          "id": "RC-TermResourceClass"
+          "id": "RC-SpecifTermresourceclass"
         },
         {
-          "id": "RC-TermStatementClass"
+          "id": "RC-SpecifTermstatementclass"
         },
         {
-          "id": "RC-TermPropertyClassString"
+          "id": "RC-SpecifTermpropertyclassstring"
         },
         {
-          "id": "RC-TermPropertyClassBoolean"
+          "id": "RC-SpecifTermpropertyclassboolean"
         },
         {
-          "id": "RC-TermPropertyClassInteger"
+          "id": "RC-SpecifTermpropertyclassinteger"
         },
         {
-          "id": "RC-TermPropertyClassReal"
+          "id": "RC-SpecifTermpropertyclassreal"
         },
         {
-          "id": "RC-TermPropertyClassTimestamp"
+          "id": "RC-SpecifTermpropertyclasstimestamp"
         },
         {
-          "id": "RC-TermPropertyClassDuration"
+          "id": "RC-SpecifTermpropertyclassduration"
         },
         {
-          "id": "RC-TermPropertyClassAnyUri"
+          "id": "RC-SpecifTermpropertyclassuri"
         },
         {
           "id": "RC-TermPropertyValue"
@@ -1908,7 +1908,7 @@
       "id": "R-Wr33ZehXaMAYluDIJIYkSnE6aAK",
       "changedAt": "2023-06-21T15:01:58.075Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -1954,7 +1954,7 @@
       "id": "R-B1kBh6u4wXOiHErs9C4xpTqk6tt",
       "changedAt": "2023-06-15T14:51:49.087Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -1987,7 +1987,7 @@
       "id": "R-x3EEEveyEvMjenBTAn8QDO871u7",
       "changedAt": "2023-06-15T14:52:06.008Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2020,7 +2020,7 @@
       "id": "R-NsUkW3BuNrBf6MgUn7czN9ER311",
       "changedAt": "2023-06-15T14:52:50.073Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2053,7 +2053,7 @@
       "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X",
       "changedAt": "2023-06-15T14:48:06.040Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2086,7 +2086,7 @@
       "id": "R-NTiyXXD7T6xOlOQ482krk1DEGGt",
       "changedAt": "2023-07-10T11:36:08.241Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2132,7 +2132,7 @@
       "id": "R-EdkKEf7r7xDTpsQZWIlM3g6xFbq",
       "changedAt": "2023-06-15T14:48:41.300Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2165,7 +2165,7 @@
       "id": "R-U0uzkt2R9IZHw6hH7uvLOFrtAoB",
       "changedAt": "2023-06-15T14:49:11.589Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2198,7 +2198,7 @@
       "id": "R-B4X83WiHP7luv60WfX3G1WjnWYU",
       "changedAt": "2023-06-15T14:50:03.243Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2231,7 +2231,7 @@
       "id": "R-RmZDcwhH5iTqRxkjTW1YiYAe9Nf",
       "changedAt": "2023-06-21T15:05:20.856Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2277,7 +2277,7 @@
       "id": "R-dkrGwyqj77hck1EJsfzohypCi5T",
       "changedAt": "2023-07-16T11:02:29.535Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2323,7 +2323,7 @@
       "id": "R-NmS1wOWAGTpqlRhTi85i0C7iXkL",
       "changedAt": "2023-06-14T09:47:35.840Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2356,7 +2356,7 @@
       "id": "R-SDJ68yzYCQB0cJ74tjNypSIwxoS",
       "changedAt": "2023-07-15T13:19:14.791Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2389,7 +2389,7 @@
       "id": "R-gBOeQmrke1vcIDJuHXjkvdLO3R5",
       "changedAt": "2023-06-14T11:20:11.748Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2422,7 +2422,7 @@
       "id": "R-MlnhHQI7PYo2HnMOIb2LmApd5Qw",
       "changedAt": "2023-06-15T15:39:44.791Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2455,7 +2455,7 @@
       "id": "R-Qx82YGZAN2iGc3NpYmOt4fJfTnS",
       "changedAt": "2023-06-15T14:42:12.077Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2488,7 +2488,7 @@
       "id": "R-w19PoaxZiKLSP1lAV4u9SGx9IPs",
       "changedAt": "2023-06-15T14:41:32.329Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2521,7 +2521,7 @@
       "id": "R-mVJnjob2n6ezD1lEwgr1p2hx1gD",
       "changedAt": "2023-06-21T16:19:13.289Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2567,7 +2567,7 @@
       "id": "R-6FEseuENWxSryixYZkDotaveOLS",
       "changedAt": "2023-06-14T14:15:09.309Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2600,7 +2600,7 @@
       "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks",
       "changedAt": "2023-06-15T15:44:43.207Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2633,7 +2633,7 @@
       "id": "R-AdyDfiNvv4ouaepgtffkr4r0BDN",
       "changedAt": "2023-06-15T15:44:57.456Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2666,7 +2666,7 @@
       "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd",
       "changedAt": "2023-06-14T09:46:50.976Z",
       "class": {
-        "id": "RC-Namespace"
+        "id": "RC-SpecifNamespace"
       },
       "properties": [
         {
@@ -2734,7 +2734,7 @@
       "changedAt": "2023-07-16T09:30:25.850Z",
       "revision": "6",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -2862,7 +2862,7 @@
       "changedAt": "2023-08-09T10:45:58.457Z",
       "revision": "6",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -2964,7 +2964,7 @@
       "changedAt": "2023-07-16T09:27:26.048Z",
       "revision": "5",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -3107,7 +3107,7 @@
       "changedAt": "2023-08-08T21:36:49.031Z",
       "revision": "5",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -3164,6 +3164,27 @@
               {
                 "text": "Folder",
                 "language": "en"
+              },
+              {
+                "text": "Ordner",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Folders",
+                "language": "en"
+              },
+              {
+                "text": "Ordner",
+                "language": "de"
               }
             ]
           ]
@@ -3192,7 +3213,7 @@
       "changedAt": "2023-07-16T09:36:41.903Z",
       "revision": "8",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -3270,6 +3291,34 @@
                 "text": "Diagramme de Modèle",
                 "language": "fr"
               }
+            ],
+            [
+              {
+                "text": "Diagram",
+                "language": "en"
+              },
+              {
+                "text": "Diagramm",
+                "language": "de"
+              },
+              {
+                "text": "Diagramme",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "Plan",
+                "language": "en"
+              },
+              {
+                "text": "Plan",
+                "language": "de"
+              },
+              {
+                "text": "Plan",
+                "language": "fr"
+              }
             ]
           ]
         },
@@ -3289,6 +3338,34 @@
               },
               {
                 "text": "Diagrammes de Modèle",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "Diagrams",
+                "language": "en"
+              },
+              {
+                "text": "Diagramme",
+                "language": "de"
+              },
+              {
+                "text": "Diagrammes",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "Plans",
+                "language": "en"
+              },
+              {
+                "text": "Pläne",
+                "language": "de"
+              },
+              {
+                "text": "Plans",
                 "language": "fr"
               }
             ]
@@ -3329,7 +3406,7 @@
       "changedAt": "2023-05-25T17:01:03.918Z",
       "revision": "8",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -3462,7 +3539,7 @@
       "changedAt": "2023-07-16T09:32:25.353Z",
       "revision": "7",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -3559,7 +3636,7 @@
       "changedAt": "2023-07-16T09:48:41.722Z",
       "revision": "14",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -3698,7 +3775,7 @@
       "changedAt": "2023-04-01T14:10:11.167Z",
       "revision": "13",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -3843,7 +3920,7 @@
       "changedAt": "2023-07-16T09:55:57.118Z",
       "revision": "13",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -3972,7 +4049,7 @@
       "changedAt": "2023-06-14T11:20:41.117Z",
       "revision": "13",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -4096,7 +4173,7 @@
       "id": "R-SpecifModelelement",
       "changedAt": "2023-06-21T15:09:19.547Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -4195,7 +4272,7 @@
       "id": "R-Lwwg19IZnR5aeR4TSrlaLP7JBHI",
       "changedAt": "2023-07-16T09:39:26.051Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -4282,7 +4359,7 @@
       "id": "R-8SC4vohmkNrn9ABg2hpVzmxSzsW",
       "changedAt": "2023-07-16T09:40:30.423Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -4369,7 +4446,7 @@
       "id": "R-SlR5NobT1LRA7VXvgSLfEV9Lhuu",
       "changedAt": "2023-07-16T09:40:59.529Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -4456,7 +4533,7 @@
       "id": "R-65wfexL7KsWS3reDKYzWd85BR28",
       "changedAt": "2023-08-18T11:30:09.501Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -4558,7 +4635,7 @@
       "revision": "9",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -4635,7 +4712,7 @@
       "changedAt": "2023-02-26T21:19:26.072Z",
       "revision": "158",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -4788,7 +4865,7 @@
       "changedAt": "2023-07-16T09:43:44.696Z",
       "revision": "11",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -4941,7 +5018,7 @@
       "changedAt": "2023-02-26T21:21:17.752Z",
       "revision": "12",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -5094,7 +5171,7 @@
       "changedAt": "2023-02-26T21:25:04.042Z",
       "revision": "143",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -5243,7 +5320,7 @@
       "changedAt": "2020-11-12T11:23:35.693Z",
       "revision": "196",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -5286,7 +5363,7 @@
       "changedAt": "2023-07-16T11:08:22.640Z",
       "revision": "15",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -5431,7 +5508,7 @@
       "changedAt": "2023-07-16T10:49:01.713Z",
       "revision": "16",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -5548,7 +5625,7 @@
       "changedAt": "2023-08-09T10:58:39.900Z",
       "revision": "16",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -5657,7 +5734,7 @@
       "changedAt": "2023-07-16T10:50:34.318Z",
       "revision": "16",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -5750,7 +5827,7 @@
       "changedAt": "2023-07-16T12:28:24.084Z",
       "revision": "17",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -5846,7 +5923,7 @@
       "id": "R-yee2bq1kToBmFv1DG64gQFjdNhF",
       "changedAt": "2023-06-21T16:43:27.513Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -5958,7 +6035,7 @@
       "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ",
       "changedAt": "2023-03-06T08:58:09.415Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -6049,7 +6126,7 @@
       "id": "R-yKfhxAKRG2FaL2kPZcbWNF9XoXn",
       "changedAt": "2023-03-06T09:01:46.037Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -6168,7 +6245,7 @@
       "id": "R-J3BnNy5yyXhh8QTJ5HGRh5Bn8CH",
       "changedAt": "2023-03-06T09:01:36.293Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -6287,7 +6364,7 @@
       "id": "R-YPwAhIW6f096yiO75K3t31UsGao",
       "changedAt": "2023-08-18T11:23:41.602Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -6391,14 +6468,6 @@
           "values": [
             "false"
           ]
-        },
-        {
-          "class": {
-            "id": "PC-Instantiation"
-          },
-          "values": [
-            "V-Instantiation-20"
-          ]
         }
       ]
     },
@@ -6406,7 +6475,7 @@
       "id": "R-fM1FB6zCrqNmKuQlN7ZUYpKrLlC",
       "changedAt": "2023-08-18T11:23:09.113Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -6525,7 +6594,7 @@
       "id": "R-Pb72Q7cOmnjpwUEQaCEcdjbzOA9",
       "changedAt": "2023-08-18T11:21:20.750Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -6644,7 +6713,7 @@
       "id": "R-CXDNs39QN7YM8Mv2vco7metJ7Ol",
       "changedAt": "2023-08-18T11:18:16.952Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -6763,7 +6832,7 @@
       "id": "R-ZtbBpIxObvqnDuD8dfo8EN8WrMP",
       "changedAt": "2023-08-18T11:17:03.746Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -6882,7 +6951,7 @@
       "id": "R-eYBzcDOCiTBTHiPYjh9qaYuumec",
       "changedAt": "2023-08-18T11:15:40.385Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -7001,7 +7070,7 @@
       "id": "R-vMChALmmnhnd9biNu5iCqrYA8XN",
       "changedAt": "2023-08-18T10:26:50.181Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -7120,7 +7189,7 @@
       "id": "R-iIjwsbO5i3IQgOlijFJ3SXVlJHt",
       "changedAt": "2023-08-18T10:26:04.295Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -7239,7 +7308,7 @@
       "id": "R-Iuppijx5HlioCzt9Bruqm69Ocqc",
       "changedAt": "2023-03-06T09:01:18.856Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -7359,7 +7428,7 @@
       "changedAt": "2023-04-01T14:10:25.549Z",
       "revision": "18",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -7410,7 +7479,7 @@
       "revision": "20",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -7532,7 +7601,7 @@
       "revision": "20",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -7654,7 +7723,7 @@
       "revision": "20",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -7758,7 +7827,7 @@
       "revision": "20",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -7825,7 +7894,7 @@
       "changedAt": "2023-08-09T10:50:09.415Z",
       "revision": "41",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -7879,7 +7948,7 @@
       "changedAt": "2023-07-16T12:29:09.201Z",
       "revision": "42",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -7995,7 +8064,7 @@
       "changedAt": "2023-03-15T17:00:14.160Z",
       "revision": "43",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -8073,7 +8142,7 @@
       "changedAt": "2023-06-08T13:54:54.772Z",
       "revision": "43",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -8180,7 +8249,7 @@
       "id": "R-SpecifGlossary",
       "changedAt": "2023-07-16T12:31:07.290Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -8262,7 +8331,7 @@
       "id": "R-Bf9tXTTOSyA9EIpXQCQDPXJnxAJ",
       "changedAt": "2023-06-08T14:47:36.276Z",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -8349,7 +8418,7 @@
       "changedAt": "2022-12-08T00:15:20.916Z",
       "revision": "43",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -8448,7 +8517,7 @@
       "changedAt": "2023-03-15T17:00:51.751Z",
       "revision": "43",
       "class": {
-        "id": "RC-TermResourceClass"
+        "id": "RC-SpecifTermresourceclass"
       },
       "properties": [
         {
@@ -8581,7 +8650,7 @@
       "changedAt": "2023-02-26T21:30:23.975Z",
       "revision": "21",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -8692,7 +8761,7 @@
       "changedAt": "2023-07-16T12:50:50.469Z",
       "revision": "163",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -8783,7 +8852,7 @@
       "changedAt": "2023-07-16T12:53:15.596Z",
       "revision": "163",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -8874,7 +8943,7 @@
       "changedAt": "2023-03-16T11:15:01.707Z",
       "revision": "163",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -8974,7 +9043,7 @@
       "revision": "25",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9038,7 +9107,7 @@
       "revision": "26",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9100,7 +9169,7 @@
       "id": "R-6FTOPvcMAO1yPYW4BfJNyTvnQcm",
       "changedAt": "2021-11-07T19:11:04.490Z",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9170,7 +9239,7 @@
       "id": "R-K17xlb3lgp5mnjirIRnvgK3KVRE",
       "changedAt": "2023-02-21T08:51:40.300Z",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9228,7 +9297,7 @@
       "changedAt": "2023-03-06T08:36:54.308Z",
       "revision": "164",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9307,7 +9376,7 @@
       "changedAt": "2023-03-08T16:57:09.440Z",
       "revision": "24",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9407,7 +9476,7 @@
       "changedAt": "2023-03-06T11:05:00.481Z",
       "revision": "63",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9458,7 +9527,7 @@
       "revision": "62",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9493,7 +9562,7 @@
       "revision": "64",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9528,7 +9597,7 @@
       "revision": "63",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9563,7 +9632,7 @@
       "revision": "65",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9598,7 +9667,7 @@
       "revision": "66",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9633,7 +9702,7 @@
       "revision": "67",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9705,7 +9774,7 @@
       "revision": "67",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9777,7 +9846,7 @@
       "revision": "68",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9849,7 +9918,7 @@
       "revision": "68",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9913,7 +9982,7 @@
       "revision": "70",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -9990,7 +10059,7 @@
       "revision": "69",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -10059,7 +10128,7 @@
       "revision": "72",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -10094,7 +10163,7 @@
       "revision": "71",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -10128,7 +10197,7 @@
       "changedAt": "2023-07-16T14:54:25.495Z",
       "revision": "26",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -10219,7 +10288,7 @@
       "changedAt": "2023-07-16T14:58:25.455Z",
       "revision": "26",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -10310,7 +10379,7 @@
       "changedAt": "2023-03-15T09:08:53.827Z",
       "revision": "26",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -10409,7 +10478,7 @@
       "changedAt": "2023-03-15T09:09:08.696Z",
       "revision": "27",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -10508,7 +10577,7 @@
       "changedAt": "2023-07-16T13:07:47.863Z",
       "revision": "28",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -10599,7 +10668,7 @@
       "changedAt": "2023-07-16T13:05:31.823Z",
       "revision": "28",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -10690,7 +10759,7 @@
       "changedAt": "2023-07-16T13:06:00.048Z",
       "revision": "28",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -10769,7 +10838,7 @@
       "changedAt": "2023-07-16T13:26:36.369Z",
       "revision": "28",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -10853,7 +10922,7 @@
       "changedAt": "2023-08-09T21:48:09.529Z",
       "revision": "28",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -10932,7 +11001,7 @@
       "changedAt": "2023-07-16T15:05:49.284Z",
       "revision": "28",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -11011,7 +11080,7 @@
       "changedAt": "2023-07-16T13:30:10.527Z",
       "revision": "28",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -11090,7 +11159,7 @@
       "changedAt": "2022-12-03T15:48:24.363Z",
       "revision": "28",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -11160,7 +11229,7 @@
       "id": "R-wHJdaUoL1OblRkwOFfDvjeJuEI5",
       "changedAt": "2023-03-15T09:13:54.786Z",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -11258,7 +11327,7 @@
       "id": "R-JqmEMlXGMp7bGuaLdQoJ6EcOhqc",
       "changedAt": "2023-03-15T09:14:09.263Z",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -11356,7 +11425,7 @@
       "id": "R-epP6KdUsc1J7HHuq4ChWGvd3TVk",
       "changedAt": "2023-03-15T09:14:22.685Z",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -11455,7 +11524,7 @@
       "changedAt": "2023-07-16T13:09:55.680Z",
       "revision": "29",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -11546,7 +11615,7 @@
       "changedAt": "2023-07-16T13:14:41.553Z",
       "revision": "190",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -11637,7 +11706,7 @@
       "changedAt": "2023-07-16T13:13:25.156Z",
       "revision": "30",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -11708,7 +11777,7 @@
       "changedAt": "2023-07-16T13:13:56.439Z",
       "revision": "31",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -11779,7 +11848,7 @@
       "changedAt": "2023-07-16T13:15:43.014Z",
       "revision": "32",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -11872,7 +11941,7 @@
       "changedAt": "2023-07-16T13:19:21.205Z",
       "revision": "33",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -11953,7 +12022,7 @@
       "changedAt": "2023-07-16T15:25:39.149Z",
       "revision": "33",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -12051,7 +12120,7 @@
       "changedAt": "2023-08-08T21:08:32.367Z",
       "revision": "33",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -12147,7 +12216,7 @@
       "changedAt": "2023-08-08T21:49:51.165Z",
       "revision": "33",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -12238,7 +12307,7 @@
       "changedAt": "2023-07-16T15:01:40.623Z",
       "revision": "34",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -12334,7 +12403,7 @@
       "changedAt": "2023-07-16T15:02:23.500Z",
       "revision": "35",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -12425,7 +12494,7 @@
       "changedAt": "2023-07-16T15:03:25.597Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -12521,7 +12590,7 @@
       "changedAt": "2023-07-16T15:12:15.874Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -12612,7 +12681,7 @@
       "changedAt": "2023-07-16T15:11:53.234Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -12679,7 +12748,7 @@
       "changedAt": "2023-08-09T21:55:55.119Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -12775,7 +12844,7 @@
       "changedAt": "2023-07-16T15:28:16.989Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -12859,7 +12928,7 @@
       "changedAt": "2023-07-16T15:06:50.059Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -12955,7 +13024,7 @@
       "changedAt": "2023-07-16T09:07:59.795Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -13051,7 +13120,7 @@
       "changedAt": "2023-07-16T09:08:16.606Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -13147,7 +13216,7 @@
       "changedAt": "2023-03-16T14:50:39.241Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -13242,7 +13311,7 @@
       "changedAt": "2023-07-16T15:18:33.748Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -13338,7 +13407,7 @@
       "changedAt": "2023-07-16T15:18:56.227Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -13422,7 +13491,7 @@
       "changedAt": "2023-07-16T09:13:26.686Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -13518,7 +13587,7 @@
       "changedAt": "2023-07-16T15:33:08.040Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -13601,7 +13670,7 @@
       "changedAt": "2023-07-16T15:34:20.616Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -13684,7 +13753,7 @@
       "changedAt": "2023-07-16T15:23:43.133Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -13775,7 +13844,7 @@
       "changedAt": "2023-07-16T15:20:39.094Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -13866,7 +13935,7 @@
       "changedAt": "2023-08-09T12:26:39.092Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -13962,7 +14031,7 @@
       "changedAt": "2023-08-09T12:27:30.006Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -14038,7 +14107,7 @@
       "changedAt": "2023-08-09T12:27:41.538Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -14134,7 +14203,7 @@
       "changedAt": "2023-08-09T12:28:14.575Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -14185,7 +14254,7 @@
       "changedAt": "2023-08-09T12:29:17.946Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -14244,7 +14313,7 @@
       "changedAt": "2023-08-09T12:30:28.654Z",
       "revision": "36",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -14303,7 +14372,7 @@
       "changedAt": "2023-08-09T21:42:49.108Z",
       "revision": "37",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -14366,7 +14435,7 @@
       "changedAt": "2023-08-09T21:42:35.339Z",
       "revision": "37",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -14429,7 +14498,7 @@
       "changedAt": "2023-07-16T15:40:57.453Z",
       "revision": "38",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -14524,7 +14593,7 @@
       "changedAt": "2023-08-09T15:51:37.108Z",
       "revision": "38",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -14602,7 +14671,7 @@
       "id": "R-2J3aKb6Es6jZtYaTCtMEbox5gMD",
       "changedAt": "2023-08-09T21:40:04.757Z",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -14679,7 +14748,7 @@
       "id": "R-RHKxprYhYO6rmqjjckneFHcPZzD",
       "changedAt": "2023-08-09T21:40:29.719Z",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -14757,7 +14826,7 @@
       "changedAt": "2023-07-16T15:43:23.947Z",
       "revision": "38",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -14848,7 +14917,7 @@
       "changedAt": "2023-07-16T15:43:33.028Z",
       "revision": "38",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -14940,7 +15009,7 @@
       "revision": "38",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -15016,7 +15085,7 @@
       "changedAt": "2023-08-09T11:52:55.749Z",
       "revision": "39",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -15112,7 +15181,7 @@
       "changedAt": "2023-08-09T11:53:31.991Z",
       "revision": "193",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -15163,7 +15232,7 @@
       "changedAt": "2023-08-09T11:53:20.756Z",
       "revision": "193",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -15255,11 +15324,98 @@
       ]
     },
     {
+      "id": "R-YTOSDlz3Xir8PPxpeTxUJiYqlJp",
+      "changedAt": "2023-08-22T08:02:34.792Z",
+      "revision": "193",
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:isPluralOf"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "is Plural of",
+                "language": "en"
+              },
+              {
+                "text": "ist Plural von",
+                "language": "de"
+              },
+              {
+                "text": "est le pluriel de",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-xcniBEOFjE4wE1UmSDGWaz1dyR2",
       "changedAt": "2023-07-16T15:45:34.533Z",
       "revision": "40",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -15355,7 +15511,7 @@
       "changedAt": "2023-03-15T07:43:14.250Z",
       "revision": "41",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -15405,7 +15561,7 @@
       "id": "R-MLrNWkTjsAXAjhx37p6UkvxKzEQ",
       "changedAt": "2023-08-09T23:15:21.033Z",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -15479,7 +15635,7 @@
       "id": "R-MxwBcoVecPlYMGyCifQQvOCFECy",
       "changedAt": "2023-08-18T10:13:22.702Z",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -15553,7 +15709,7 @@
       "id": "R-XFituq3uLki95FFEzETyCs0bcUs",
       "changedAt": "2023-08-09T23:28:07.907Z",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -15644,7 +15800,7 @@
       "id": "R-WW3yv7CRHPVmWakosK26dVEHd93",
       "changedAt": "2023-08-09T23:20:57.952Z",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -15735,7 +15891,7 @@
       "id": "R-1jWAMC9CR5NHDJwGy3Tk2YWH67m",
       "changedAt": "2023-08-09T23:21:35.118Z",
       "class": {
-        "id": "RC-TermStatementClass"
+        "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
         {
@@ -15863,7 +16019,7 @@
       "changedAt": "2023-07-15T14:53:21.248Z",
       "revision": "46",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -15971,7 +16127,7 @@
       "changedAt": "2023-03-17T20:43:14.428Z",
       "revision": "46",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -16054,7 +16210,7 @@
       "changedAt": "2023-05-22T22:51:56.698Z",
       "revision": "44",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -16188,7 +16344,7 @@
       "changedAt": "2023-08-15T08:56:06.068Z",
       "revision": "44",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -16312,7 +16468,7 @@
       "changedAt": "2023-05-22T22:53:51.064Z",
       "revision": "44",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -16412,7 +16568,7 @@
       "changedAt": "2023-07-11T12:57:23.835Z",
       "revision": "5",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -16511,7 +16667,7 @@
       "changedAt": "2023-07-15T13:20:06.081Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -16610,7 +16766,7 @@
       "changedAt": "2023-05-22T22:54:51.783Z",
       "revision": "45",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -16726,7 +16882,7 @@
       "changedAt": "2023-05-22T22:54:39.550Z",
       "revision": "45",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -16829,7 +16985,7 @@
       "changedAt": "2023-02-26T20:18:04.451Z",
       "revision": "152",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -16950,7 +17106,7 @@
       "revision": "73",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -16996,7 +17152,7 @@
       "changedAt": "2023-03-17T20:54:35.878Z",
       "revision": "152",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -17091,7 +17247,7 @@
       "changedAt": "2023-02-26T14:40:17.601Z",
       "revision": "75",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -17145,6 +17301,55 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Model Diagram",
+                "language": "en"
+              },
+              {
+                "text": "Modelldiagramm",
+                "language": "de"
+              },
+              {
+                "text": "Diagramme de Modèle",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "Diagram",
+                "language": "en"
+              },
+              {
+                "text": "Diagramm",
+                "language": "de"
+              },
+              {
+                "text": "Diagramme",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "Plan",
+                "language": "en"
+              },
+              {
+                "text": "Plan",
+                "language": "de"
+              },
+              {
+                "text": "Plan",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-Domain"
           },
           "values": [
@@ -17185,7 +17390,7 @@
       "changedAt": "2023-02-26T21:06:48.930Z",
       "revision": "75",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -17306,7 +17511,7 @@
       "revision": "189",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -17371,7 +17576,7 @@
       "revision": "47",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -17414,7 +17619,7 @@
       "revision": "48",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -17491,7 +17696,7 @@
       "revision": "48",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -17584,7 +17789,7 @@
       "revision": "115",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -17661,7 +17866,7 @@
       "revision": "50",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -17705,7 +17910,7 @@
       "revision": "51",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassTimestamp"
+        "id": "RC-SpecifTermpropertyclasstimestamp"
       },
       "properties": [
         {
@@ -17774,7 +17979,7 @@
       "revision": "52",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassTimestamp"
+        "id": "RC-SpecifTermpropertyclasstimestamp"
       },
       "properties": [
         {
@@ -17843,7 +18048,7 @@
       "revision": "53",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -17887,7 +18092,7 @@
       "revision": "53",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassTimestamp"
+        "id": "RC-SpecifTermpropertyclasstimestamp"
       },
       "properties": [
         {
@@ -17956,7 +18161,7 @@
       "revision": "54",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassTimestamp"
+        "id": "RC-SpecifTermpropertyclasstimestamp"
       },
       "properties": [
         {
@@ -18020,7 +18225,7 @@
       "revision": "55",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -18097,7 +18302,7 @@
       "revision": "56",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -18158,7 +18363,7 @@
       "revision": "57",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -18219,7 +18424,7 @@
       "revision": "59",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -18255,7 +18460,7 @@
       "revision": "60",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -18340,7 +18545,7 @@
       "revision": "61",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -18376,7 +18581,7 @@
       "revision": "152",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -18420,7 +18625,7 @@
       "revision": "152",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -18462,7 +18667,7 @@
       "id": "R-A8FDfIonVwNiywJ6pafbpIt3hqU",
       "changedAt": "2023-08-08T20:52:31.633Z",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -18582,7 +18787,7 @@
       "revision": "152",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -18625,7 +18830,7 @@
       "changedAt": "2023-08-15T07:44:45.541Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -18760,7 +18965,7 @@
       "changedAt": "2023-08-15T07:44:22.466Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -18892,7 +19097,7 @@
       "changedAt": "2023-03-17T20:52:21.573Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -18995,7 +19200,7 @@
       "changedAt": "2023-08-08T20:40:29.117Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -19105,7 +19310,7 @@
       "changedAt": "2023-07-15T14:57:30.391Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -19204,7 +19409,7 @@
       "changedAt": "2023-07-15T14:57:43.236Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -19303,7 +19508,7 @@
       "changedAt": "2023-07-04T06:42:02.478Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -19385,7 +19590,7 @@
       "changedAt": "2023-07-15T14:58:28.757Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -19484,7 +19689,7 @@
       "changedAt": "2023-07-15T14:58:41.096Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -19583,7 +19788,7 @@
       "changedAt": "2023-07-11T06:55:07.052Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -19677,7 +19882,7 @@
       "changedAt": "2023-07-11T06:46:44.795Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -19780,7 +19985,7 @@
       "changedAt": "2023-08-21T21:14:14.219Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -19884,7 +20089,7 @@
       "changedAt": "2023-07-11T06:49:30.060Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -19975,7 +20180,7 @@
       "changedAt": "2023-07-11T06:44:51.044Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -20066,7 +20271,7 @@
       "changedAt": "2023-07-11T06:45:28.788Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -20157,7 +20362,7 @@
       "changedAt": "2023-07-11T06:50:33.461Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -20248,7 +20453,7 @@
       "changedAt": "2023-06-20T14:31:22.597Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -20352,7 +20557,7 @@
       "changedAt": "2023-07-15T13:08:12.687Z",
       "revision": "76",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -20450,7 +20655,7 @@
       "id": "R-SpecifLocalTerm",
       "changedAt": "2023-05-30T06:06:45.673Z",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -20564,7 +20769,7 @@
       "id": "R-S1SfAEubLjEYOj6v75Srfkj5E19",
       "changedAt": "2023-06-08T14:59:00.821Z",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -20679,7 +20884,7 @@
       "changedAt": "2023-07-16T12:49:13.545Z",
       "revision": "77",
       "class": {
-        "id": "RC-TermPropertyClassReal"
+        "id": "RC-SpecifTermpropertyclassreal"
       },
       "properties": [
         {
@@ -20758,7 +20963,7 @@
       "changedAt": "2023-07-16T12:45:04.963Z",
       "revision": "77",
       "class": {
-        "id": "RC-TermPropertyClassReal"
+        "id": "RC-SpecifTermpropertyclassreal"
       },
       "properties": [
         {
@@ -20849,7 +21054,7 @@
       "changedAt": "2023-03-06T08:27:49.256Z",
       "revision": "78",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -20970,7 +21175,7 @@
       "changedAt": "2023-07-17T06:29:46.144Z",
       "revision": "78",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -21078,7 +21283,7 @@
       "changedAt": "2023-07-16T12:39:52.299Z",
       "revision": "78",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -21167,7 +21372,7 @@
       "changedAt": "2023-07-16T10:47:51.299Z",
       "revision": "78",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -21244,7 +21449,7 @@
       "changedAt": "2023-03-06T08:27:59.451Z",
       "revision": "78",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -21362,7 +21567,7 @@
       "changedAt": "2023-03-10T07:48:02.442Z",
       "revision": "78",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -21465,7 +21670,7 @@
       "changedAt": "2023-07-16T12:33:46.378Z",
       "revision": "78",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -21592,7 +21797,7 @@
       "revision": "79",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -21653,7 +21858,7 @@
       "revision": "79",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -21725,7 +21930,7 @@
       "revision": "80",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassTimestamp"
+        "id": "RC-SpecifTermpropertyclasstimestamp"
       },
       "properties": [
         {
@@ -21786,7 +21991,7 @@
       "revision": "81",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassTimestamp"
+        "id": "RC-SpecifTermpropertyclasstimestamp"
       },
       "properties": [
         {
@@ -21846,7 +22051,7 @@
       "revision": "82",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -21918,7 +22123,7 @@
       "revision": "83",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -21990,7 +22195,7 @@
       "revision": "84",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -22075,7 +22280,7 @@
       "revision": "84",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -22183,7 +22388,7 @@
       "revision": "85",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -22258,7 +22463,7 @@
       "revision": "86",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -22335,7 +22540,7 @@
       "revision": "87",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -22398,7 +22603,7 @@
       "revision": "88",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -22458,7 +22663,7 @@
       "revision": "89",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -22518,7 +22723,7 @@
       "revision": "90",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -22578,7 +22783,7 @@
       "revision": "91",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -22638,7 +22843,7 @@
       "revision": "92",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -22698,7 +22903,7 @@
       "revision": "93",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -22746,7 +22951,7 @@
       "revision": "148",
       "changedBy": "od",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -22802,7 +23007,7 @@
       "id": "R-kjoKfseo7PM8KoBIisHrkpPSGLX",
       "changedAt": "2023-07-17T09:01:37.224Z",
       "class": {
-        "id": "RC-TermPropertyClassBoolean"
+        "id": "RC-SpecifTermpropertyclassboolean"
       },
       "properties": [
         {
@@ -22897,7 +23102,7 @@
       "id": "R-hUwiIq98gsPYfYiJKkFIlrD2Adu",
       "changedAt": "2023-07-17T09:02:33.088Z",
       "class": {
-        "id": "RC-TermPropertyClassBoolean"
+        "id": "RC-SpecifTermpropertyclassboolean"
       },
       "properties": [
         {
@@ -22996,7 +23201,7 @@
       "id": "R-O3Dxwts5uxXVgKgNbmPaKc2QGFt",
       "changedAt": "2023-08-09T12:34:07.769Z",
       "class": {
-        "id": "RC-TermPropertyClassBoolean"
+        "id": "RC-SpecifTermpropertyclassboolean"
       },
       "properties": [
         {
@@ -23091,7 +23296,7 @@
       "id": "R-VtP7roQN93axNoMG6MIuKkEFKeA",
       "changedAt": "2023-08-09T12:34:19.011Z",
       "class": {
-        "id": "RC-TermPropertyClassBoolean"
+        "id": "RC-SpecifTermpropertyclassboolean"
       },
       "properties": [
         {
@@ -23186,7 +23391,7 @@
       "id": "R-fcIVlPmp9FLvgpte85s2a3xUJTW",
       "changedAt": "2023-08-08T12:00:09.863Z",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -23280,7 +23485,7 @@
       "id": "R-Yl3N8FsuL9aO8yncJfnxMAQXP1w",
       "changedAt": "2023-08-08T11:59:51.149Z",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -23374,7 +23579,7 @@
       "id": "R-Drg6PdGi3JnAah7JpzaulSd2kRA",
       "changedAt": "2023-07-17T11:40:15.113Z",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -23485,7 +23690,7 @@
       "id": "R-GJMC6iwXgs1qFumNfvd4sYgrwcg",
       "changedAt": "2023-07-17T11:46:11.828Z",
       "class": {
-        "id": "RC-TermPropertyClassInteger"
+        "id": "RC-SpecifTermpropertyclassinteger"
       },
       "properties": [
         {
@@ -23572,7 +23777,7 @@
       "id": "R-b5FIonaTgCQgxM5ZDiL1IucTQhR",
       "changedAt": "2023-07-17T11:57:22.253Z",
       "class": {
-        "id": "RC-TermPropertyClassInteger"
+        "id": "RC-SpecifTermpropertyclassinteger"
       },
       "properties": [
         {
@@ -23675,7 +23880,7 @@
       "id": "R-nEScE4KsmMstunZgUP8TzJeislM",
       "changedAt": "2023-07-17T11:49:31.533Z",
       "class": {
-        "id": "RC-TermPropertyClassInteger"
+        "id": "RC-SpecifTermpropertyclassinteger"
       },
       "properties": [
         {
@@ -23778,7 +23983,7 @@
       "id": "R-bvpThxmSxIyRVe4m7y7bIWrI7Fw",
       "changedAt": "2023-07-17T11:57:38.282Z",
       "class": {
-        "id": "RC-TermPropertyClassReal"
+        "id": "RC-SpecifTermpropertyclassreal"
       },
       "properties": [
         {
@@ -23857,7 +24062,7 @@
       "id": "R-cq8S6uAA7C9n5bUWxTruAmJmuA4",
       "changedAt": "2023-07-17T11:57:04.627Z",
       "class": {
-        "id": "RC-TermPropertyClassReal"
+        "id": "RC-SpecifTermpropertyclassreal"
       },
       "properties": [
         {
@@ -23936,7 +24141,7 @@
       "id": "R-KDJBBVs21UqTfSDCFpRfV4NQcr9",
       "changedAt": "2023-08-09T11:04:58.228Z",
       "class": {
-        "id": "RC-TermPropertyClassInteger"
+        "id": "RC-SpecifTermpropertyclassinteger"
       },
       "properties": [
         {
@@ -24032,7 +24237,7 @@
       "changedAt": "2023-07-16T11:06:10.422Z",
       "revision": "95",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -24143,7 +24348,7 @@
       "changedAt": "2023-07-16T11:06:27.850Z",
       "revision": "94",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -24246,7 +24451,7 @@
       "changedAt": "2023-07-16T11:06:47.817Z",
       "revision": "95",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -24357,7 +24562,7 @@
       "changedAt": "2023-07-16T11:07:03.325Z",
       "revision": "94",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -24460,7 +24665,7 @@
       "changedAt": "2023-03-27T16:27:19.576Z",
       "revision": "95",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -24498,7 +24703,7 @@
       "changedAt": "2022-12-03T15:38:06.205Z",
       "revision": "94",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -24536,7 +24741,7 @@
       "changedAt": "2023-03-27T16:27:34.021Z",
       "revision": "96",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -24574,7 +24779,7 @@
       "changedAt": "2023-03-27T16:23:52.010Z",
       "revision": "97",
       "class": {
-        "id": "RC-TermPropertyClassString"
+        "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
         {
@@ -35380,6 +35585,19 @@
       "object": {
         "id": "R-SpecifPainpoint"
       }
+    },
+    {
+      "id": "S-JbEgZKqyr8mcUS7m6NtUQIBxRna",
+      "changedAt": "2023-08-22T08:02:49.664Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-YTOSDlz3Xir8PPxpeTxUJiYqlJp"
+      }
     }
   ],
   "hierarchies": [
@@ -36590,6 +36808,13 @@
                 "id": "R-fX8L25Labq7NOQMfmfudzpsntyb"
               },
               "changedAt": "2020-11-09T12:22:29.178Z"
+            },
+            {
+              "id": "N-7cvVrx4Lm3OkI84KnaN5SPA5vel",
+              "resource": {
+                "id": "R-YTOSDlz3Xir8PPxpeTxUJiYqlJp"
+              },
+              "changedAt": "2023-08-22T08:02:34.792Z"
             },
             {
               "id": "N-qdmsJfeShpKnhQiJ92lGxjPV7M2",
