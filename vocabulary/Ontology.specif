@@ -8535,7 +8535,7 @@
             [
               {
                 "text": "Business Process",
-                "language": "de-DE"
+                "language": "de"
               }
             ]
           ]
@@ -8548,7 +8548,7 @@
             [
               {
                 "text": "Business Processes",
-                "language": "de-DE"
+                "language": "de"
               }
             ]
           ]
@@ -8618,7 +8618,7 @@
             [
               {
                 "text": "Participant",
-                "language": "de-DE"
+                "language": "de"
               }
             ]
           ]
@@ -8631,7 +8631,7 @@
             [
               {
                 "text": "Participants",
-                "language": "de-DE"
+                "language": "de"
               }
             ]
           ]
@@ -16815,12 +16815,8 @@
           "values": [
             [
               {
-                "text": "A property has a datatype with enumerated value.",
-                "language": "en"
-              },
-              {
                 "text": "<p>A property has a data-type 'xs:string' with enumerated value. The value may be an ontology term of a resourcClass, a statementClass or a propertyValue.</p><p><i>Please note: This holds, if an enumerated value is defined by the ontology. In general, the SpecIF schema allows enumerated values of any data-type. In case of 'xs:string', not only ontology terms, but any string is allowed as value.</i></p>",
-                "language": "de-DE"
+                "language": "en"
               }
             ]
           ]
@@ -16853,7 +16849,7 @@
               },
               {
                 "text": "hat Aufzählungswert",
-                "language": "de-DE"
+                "language": "de"
               },
               {
                 "text": "a la valeur énumérée",
