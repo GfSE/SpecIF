@@ -9,7 +9,7 @@
   "$schema": "https://specif.de/v1.1/schema.json",
   "generator": "SpecIF Modellintegrator und Editor",
   "generatorVersion": "1.1.q.1",
-  "createdAt": "2023-08-25T08:24:03.891Z",
+  "createdAt": "2023-08-29T12:47:52.729Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -1276,6 +1276,7 @@
         }
       ],
       "revision": "1.1",
+      "icon": "🗅",
       "instantiation": [
         "auto"
       ],
@@ -20033,6 +20034,117 @@
       ]
     },
     {
+      "id": "R-b2vrilNkrUls1EXhU4rJMCve4lQ",
+      "changedAt": "2023-08-29T12:46:13.313Z",
+      "revision": "76",
+      "class": {
+        "id": "RC-SpecifTermpropertyclassstring"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:Status"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "The 'Lifecycle Status' of the resource.",
+                "language": "en"
+              },
+              {
+                "text": "The 'Lifecycle Status' of the resource.",
+                "language": "de-DE"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1",
+            "V-Domain-2",
+            "V-Domain-3",
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-9"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Lifecycle",
+                "language": "en"
+              },
+              {
+                "text": "Lebenszyklus",
+                "language": "de-DE"
+              },
+              {
+                "text": "Cycle de vie",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "true"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-10"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "32"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-hhKaZoMtu3D75vvGXU8JshsHAs9",
       "changedAt": "2023-08-15T07:44:22.466Z",
       "revision": "76",
@@ -22614,6 +22726,112 @@
           },
           "values": [
             "true"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-10"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "32"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-OMjsliPyaYhxvwFpOk6EECQLBsG",
+      "changedAt": "2023-08-29T12:44:26.520Z",
+      "revision": "78",
+      "class": {
+        "id": "RC-SpecifTermpropertyclassstring"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:Discipline"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "The engineering discipline involved by a development artefact.",
+                "language": "en"
+              },
+              {
+                "text": "The engineering discipline involved by a development artefact.",
+                "language": "de-DE"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-2",
+            "V-Domain-3",
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-9"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Engineering Discipline",
+                "language": "en"
+              },
+              {
+                "text": "Ingenieurdisziplin",
+                "language": "de-DE"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "true"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -26600,6 +26818,12 @@
                 "text": "initial",
                 "language": "en"
               }
+            ],
+            [
+              {
+                "text": "10_initial",
+                "language": "en"
+              }
             ]
           ]
         }
@@ -26640,6 +26864,12 @@
             [
               {
                 "text": "drafted",
+                "language": "en"
+              }
+            ],
+            [
+              {
+                "text": "20_drafted",
                 "language": "en"
               }
             ]
@@ -26684,6 +26914,12 @@
                 "text": "submitted",
                 "language": "en"
               }
+            ],
+            [
+              {
+                "text": "30_submitted",
+                "language": "en"
+              }
             ]
           ]
         }
@@ -26724,6 +26960,12 @@
             [
               {
                 "text": "approved",
+                "language": "en"
+              }
+            ],
+            [
+              {
+                "text": "40_approved",
                 "language": "en"
               }
             ]
@@ -26834,6 +27076,12 @@
                 "text": "done",
                 "language": "en"
               }
+            ],
+            [
+              {
+                "text": "60_completed",
+                "language": "en"
+              }
             ]
           ]
         }
@@ -26874,6 +27122,18 @@
             [
               {
                 "text": "validated",
+                "language": "en"
+              }
+            ],
+            [
+              {
+                "text": "70_validated",
+                "language": "en"
+              }
+            ],
+            [
+              {
+                "text": "70_tested",
                 "language": "en"
               }
             ]
@@ -26918,6 +27178,12 @@
                 "text": "released",
                 "language": "en"
               }
+            ],
+            [
+              {
+                "text": "80_released",
+                "language": "en"
+              }
             ]
           ]
         }
@@ -26958,6 +27224,12 @@
             [
               {
                 "text": "deprecated",
+                "language": "en"
+              }
+            ],
+            [
+              {
+                "text": "00_deprecated",
                 "language": "en"
               }
             ]
@@ -27002,6 +27274,12 @@
                 "text": "withdrawn",
                 "language": "en"
               }
+            ],
+            [
+              {
+                "text": "90_withdrawn",
+                "language": "en"
+              }
             ]
           ]
         }
@@ -27044,6 +27322,12 @@
                 "text": "postponed",
                 "language": "en"
               }
+            ],
+            [
+              {
+                "text": "00_postponed",
+                "language": "en"
+              }
             ]
           ]
         }
@@ -27084,6 +27368,12 @@
             [
               {
                 "text": "rejected",
+                "language": "en"
+              }
+            ],
+            [
+              {
+                "text": "00_rejected",
                 "language": "en"
               }
             ]
@@ -28913,6 +29203,12 @@
                 "text": "not to evaluate",
                 "language": "en"
               }
+            ],
+            [
+              {
+                "text": "not-to-evaluate",
+                "language": "en"
+              }
             ]
           ]
         }
@@ -28973,6 +29269,12 @@
             [
               {
                 "text": "to evaluate",
+                "language": "en"
+              }
+            ],
+            [
+              {
+                "text": "to-evaluate",
                 "language": "en"
               }
             ]
@@ -29097,6 +29399,12 @@
             [
               {
                 "text": "not accepted",
+                "language": "en"
+              }
+            ],
+            [
+              {
+                "text": "not-accepted",
                 "language": "en"
               }
             ]
@@ -29409,6 +29717,12 @@
                 "text": "not agreed",
                 "language": "en"
               }
+            ],
+            [
+              {
+                "text": "not-agreed",
+                "language": "en"
+              }
             ]
           ]
         }
@@ -29471,6 +29785,12 @@
                 "text": "agreed with comment",
                 "language": "en"
               }
+            ],
+            [
+              {
+                "text": "partly-agreed",
+                "language": "en"
+              }
             ]
           ]
         }
@@ -29531,6 +29851,12 @@
             [
               {
                 "text": "to be clarified",
+                "language": "en"
+              }
+            ],
+            [
+              {
+                "text": "to-clarify",
                 "language": "en"
               }
             ]
@@ -35925,6 +36251,32 @@
       "object": {
         "id": "R-XFituq3uLki95FFEzETyCs0bcUs"
       }
+    },
+    {
+      "id": "S-82KhWIthDliouQQjmS7UGsugTth",
+      "changedAt": "2023-08-29T12:44:47.854Z",
+      "class": {
+        "id": "SC-isSynonymOfProperty"
+      },
+      "subject": {
+        "id": "R-OMjsliPyaYhxvwFpOk6EECQLBsG"
+      },
+      "object": {
+        "id": "R-rqGCa3SYXVRUr3LsyYVOAYv6Jwy"
+      }
+    },
+    {
+      "id": "S-nWv4Yy23KIQr2kLBFymEjEUX9AY",
+      "changedAt": "2023-08-29T12:46:25.068Z",
+      "class": {
+        "id": "SC-isSynonymOfProperty"
+      },
+      "subject": {
+        "id": "R-b2vrilNkrUls1EXhU4rJMCve4lQ"
+      },
+      "object": {
+        "id": "R-852227557"
+      }
     }
   ],
   "hierarchies": [
@@ -37589,6 +37941,13 @@
               "revision": "114"
             },
             {
+              "id": "N-r6bCBpJZX1wKBhlgLCaIRhqbzK0",
+              "resource": {
+                "id": "R-b2vrilNkrUls1EXhU4rJMCve4lQ"
+              },
+              "changedAt": "2023-08-29T12:46:13.313Z"
+            },
+            {
               "id": "N-A75RpAYmxuoqs8XGmHfDl8XF6pl",
               "resource": {
                 "id": "R-hhKaZoMtu3D75vvGXU8JshsHAs9"
@@ -37771,6 +38130,13 @@
                 "id": "R-rqGCa3SYXVRUr3LsyYVOAYv6Jwy"
               },
               "changedAt": "2023-03-06T08:22:23.869Z"
+            },
+            {
+              "id": "N-rcszOQi7NGkxSempETzqDzHpf6v",
+              "resource": {
+                "id": "R-OMjsliPyaYhxvwFpOk6EECQLBsG"
+              },
+              "changedAt": "2023-08-29T12:44:26.520Z"
             },
             {
               "id": "N-Nv7AqTbhevdJt9zIVmKWq3YetRx",
