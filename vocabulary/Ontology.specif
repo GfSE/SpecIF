@@ -2722,7 +2722,7 @@
       ]
     },
     {
-      "id": "R-155140542",
+      "id": "R-SpecifParagraph",
       "changedAt": "2023-07-16T09:30:25.850Z",
       "revision": "6",
       "class": {
@@ -3201,7 +3201,7 @@
       ]
     },
     {
-      "id": "R-155140544",
+      "id": "R-SpecifView",
       "changedAt": "2023-07-16T09:36:41.903Z",
       "revision": "8",
       "class": {
@@ -3394,7 +3394,7 @@
       ]
     },
     {
-      "id": "R-hiUbPiNKZHTq5p5w8GtGQQ440tg",
+      "id": "R-SpecifRevision",
       "changedAt": "2023-05-25T17:01:03.918Z",
       "revision": "8",
       "class": {
@@ -3745,7 +3745,7 @@
           "values": [
             [
               {
-                "text": "❢"
+                "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-exclamation-diamond\" viewBox=\"0 0 16 16\"><path d=\"M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z\"/><path d=\"M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z\"/></svg>"
               }
             ]
           ]
@@ -3898,7 +3898,7 @@
       ]
     },
     {
-      "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY",
+      "id": "R-ReqifwfRequirement",
       "changedAt": "2023-06-14T11:20:41.117Z",
       "revision": "13",
       "class": {
@@ -5491,7 +5491,7 @@
       ]
     },
     {
-      "id": "R-6wIpW7L1U56CExt13zu84sKaK8b",
+      "id": "R-SpecifVote",
       "changedAt": "2023-08-09T10:58:39.900Z",
       "revision": "16",
       "class": {
@@ -5902,7 +5902,7 @@
       ]
     },
     {
-      "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ",
+      "id": "R-SpecifOntologyterm",
       "changedAt": "2023-03-06T08:58:09.415Z",
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -5993,7 +5993,7 @@
       ]
     },
     {
-      "id": "R-yKfhxAKRG2FaL2kPZcbWNF9XoXn",
+      "id": "R-SpecifTermresourceclass",
       "changedAt": "2023-03-06T09:01:46.037Z",
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -6112,7 +6112,7 @@
       ]
     },
     {
-      "id": "R-J3BnNy5yyXhh8QTJ5HGRh5Bn8CH",
+      "id": "R-SpecifTermstatementclass",
       "changedAt": "2023-03-06T09:01:36.293Z",
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -6231,7 +6231,7 @@
       ]
     },
     {
-      "id": "R-YPwAhIW6f096yiO75K3t31UsGao",
+      "id": "R-SpecifTermpropertyclass",
       "changedAt": "2023-08-18T11:23:41.602Z",
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -7175,7 +7175,7 @@
       ]
     },
     {
-      "id": "R-Iuppijx5HlioCzt9Bruqm69Ocqc",
+      "id": "R-SpecifTermpropertyvalue",
       "changedAt": "2023-03-06T09:01:18.856Z",
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -7294,7 +7294,7 @@
       ]
     },
     {
-      "id": "R-514389527",
+      "id": "R-IrebRisk",
       "changedAt": "2023-04-01T14:10:25.549Z",
       "revision": "18",
       "class": {
@@ -7344,7 +7344,7 @@
       ]
     },
     {
-      "id": "R-RdL9JuGuFrBzNRNCP3l9Byk4jJ3",
+      "id": "R-FoafPerson",
       "changedAt": "2023-07-10T12:06:23.412Z",
       "revision": "20",
       "changedBy": "od",
@@ -7412,7 +7412,7 @@
       ]
     },
     {
-      "id": "R-jU4fIF3b0fhTHutLjz72ks09ctt",
+      "id": "R-SchemaPerson",
       "changedAt": "2023-07-10T11:38:45.772Z",
       "revision": "20",
       "changedBy": "od",
@@ -7534,7 +7534,7 @@
       ]
     },
     {
-      "id": "R-lScDxPXVDeY7fFlq1dOn5npf2hB",
+      "id": "R-SchemaRole",
       "changedAt": "2023-07-11T06:36:04.641Z",
       "revision": "20",
       "changedBy": "od",
@@ -7656,7 +7656,7 @@
       ]
     },
     {
-      "id": "R-OUcsl4Uw7bBp1cPNRzhids7FkQ8",
+      "id": "R-SchemaOrganization",
       "changedAt": "2023-07-11T06:37:11.024Z",
       "revision": "20",
       "changedBy": "od",
@@ -7760,7 +7760,7 @@
       ]
     },
     {
-      "id": "R-1021959454",
+      "id": "R-SpecifHierarchy",
       "changedAt": "2023-08-09T10:50:09.415Z",
       "revision": "41",
       "class": {
@@ -7814,7 +7814,7 @@
       ]
     },
     {
-      "id": "R-1021959455",
+      "id": "R-SpecifOutline",
       "changedAt": "2023-07-16T12:29:09.201Z",
       "revision": "42",
       "class": {
@@ -7930,7 +7930,7 @@
       ]
     },
     {
-      "id": "R-65Rp2clJpdHWUbqNgbpxgKkccjt",
+      "id": "R-SpecifBillofmaterials",
       "changedAt": "2023-03-15T17:00:14.160Z",
       "revision": "43",
       "class": {
@@ -8482,7 +8482,7 @@
       ]
     },
     {
-      "id": "R-A6tks2dFkF5eW4Vfktv2ldWKy8O",
+      "id": "R-BpmnProcess",
       "changedAt": "2023-08-25T08:07:05.181Z",
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -8565,7 +8565,7 @@
       ]
     },
     {
-      "id": "R-SSNHwX8847zVEqVaAQYoCDpD7v6",
+      "id": "R-BpmnParticipant",
       "changedAt": "2023-08-25T08:23:53.997Z",
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -8648,7 +8648,7 @@
       ]
     },
     {
-      "id": "R-QPZO4xEKocjeIfTodAx8zq5k5I3",
+      "id": "R-BpmnProcessstep",
       "changedAt": "2018-03-10T09:39:08+01:00",
       "revision": "175",
       "changedBy": "od",
@@ -15004,7 +15004,7 @@
       ]
     },
     {
-      "id": "R-isSpecializationOf",
+      "id": "R-UmlIsspecializationof",
       "changedAt": "2023-08-09T12:26:39.092Z",
       "revision": "36",
       "class": {
@@ -15323,7 +15323,7 @@
       ]
     },
     {
-      "id": "R-fGfgwdJlarnkXVz9p1ctjQWckAS",
+      "id": "R-SpecifIsspecializationof",
       "changedAt": "2023-08-09T12:29:17.946Z",
       "revision": "36",
       "class": {
@@ -15551,7 +15551,12 @@
           "values": [
             [
               {
-                "text": "erbt von"
+                "text": "inherits from",
+				"language": "en"
+              },
+              {
+                "text": "erbt von",
+				"language": "de"
               }
             ]
           ]
@@ -15567,7 +15572,7 @@
       ]
     },
     {
-      "id": "R-refersTo",
+      "id": "R-SpecifRefersto",
       "changedAt": "2023-07-16T15:40:57.453Z",
       "revision": "38",
       "class": {
@@ -15646,7 +15651,12 @@
           "values": [
             [
               {
-                "text": "bezieht sich auf"
+                "text": "refers to",
+				"language": "en"
+              },
+              {
+                "text": "bezieht sich auf",
+				"language": "de"
               }
             ]
           ]
@@ -16870,7 +16880,7 @@
       ]
     },
     {
-      "id": "R-WW3yv7CRHPVmWakosK26dVEHd93",
+      "id": "R-SpecifIseligibleassubject",
       "changedAt": "2023-08-09T23:20:57.952Z",
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -16961,7 +16971,7 @@
       ]
     },
     {
-      "id": "R-1jWAMC9CR5NHDJwGy3Tk2YWH67m",
+      "id": "R-SpecifIseligibleasobject",
       "changedAt": "2023-08-09T23:21:35.118Z",
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -16986,8 +16996,7 @@
           "values": [
             [
               {
-                "text": "SpecIF:isEligibleAsObject",
-                "language": "en"
+                "text": "SpecIF:isEligibleAsObject"
               }
             ]
           ]
@@ -17088,7 +17097,7 @@
       ]
     },
     {
-      "id": "R-1357982109",
+      "id": "R-DctermsIdentifier",
       "changedAt": "2023-07-15T14:53:21.248Z",
       "revision": "46",
       "class": {
@@ -17835,7 +17844,7 @@
       ]
     },
     {
-      "id": "R-Description",
+      "id": "R-DctermsDescription",
       "changedAt": "2023-05-22T22:54:51.783Z",
       "revision": "45",
       "class": {
@@ -30060,7 +30069,7 @@
         "id": "R-isGeneralizationOf"
       },
       "object": {
-        "id": "R-isSpecializationOf"
+        "id": "R-UmlIsspecializationof"
       }
     },
     {
@@ -30090,7 +30099,7 @@
         "id": "R-SpecifId"
       },
       "object": {
-        "id": "R-1357982109"
+        "id": "R-DctermsIdentifier"
       }
     },
     {
@@ -30453,7 +30462,7 @@
         "id": "R-OZvSiGmgwEIwM8pxT3wwzWHtjRf"
       },
       "object": {
-        "id": "R-isSpecializationOf"
+        "id": "R-UmlIsspecializationof"
       }
     },
     {
@@ -30851,7 +30860,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-155140542"
+        "id": "R-SpecifParagraph"
       },
       "object": {
         "id": "R-DctermsTitle"
@@ -30864,10 +30873,10 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-155140542"
+        "id": "R-SpecifParagraph"
       },
       "object": {
-        "id": "R-Description"
+        "id": "R-DctermsDescription"
       }
     },
     {
@@ -30880,7 +30889,7 @@
         "id": "R-commentRefersTo"
       },
       "object": {
-        "id": "R-refersTo"
+        "id": "R-SpecifRefersto"
       }
     },
     {
@@ -30942,7 +30951,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-1021959454"
+        "id": "R-SpecifHierarchy"
       },
       "object": {
         "id": "R-DctermsTitle"
@@ -30955,10 +30964,10 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-1021959454"
+        "id": "R-SpecifHierarchy"
       },
       "object": {
-        "id": "R-Description"
+        "id": "R-DctermsDescription"
       }
     },
     {
@@ -30968,7 +30977,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-1021959454"
+        "id": "R-SpecifHierarchy"
       },
       "object": {
         "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
@@ -30981,7 +30990,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-155140542"
+        "id": "R-SpecifParagraph"
       },
       "object": {
         "id": "R-lxDmfU8OuUNHNuO9gRqc0NcnQaQ"
@@ -30994,7 +31003,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-155140542"
+        "id": "R-SpecifParagraph"
       },
       "object": {
         "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
@@ -31007,10 +31016,10 @@
         "id": "SC-isSpecializationOfResource"
       },
       "subject": {
-        "id": "R-155140544"
+        "id": "R-SpecifView"
       },
       "object": {
-        "id": "R-155140542"
+        "id": "R-SpecifParagraph"
       }
     },
     {
@@ -31023,7 +31032,7 @@
         "id": "R-FmcPlan"
       },
       "object": {
-        "id": "R-155140544"
+        "id": "R-SpecifView"
       }
     },
     {
@@ -31036,7 +31045,7 @@
         "id": "R-SpecifDiagram"
       },
       "object": {
-        "id": "R-155140544"
+        "id": "R-SpecifView"
       }
     },
     {
@@ -31046,7 +31055,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-155140544"
+        "id": "R-SpecifView"
       },
       "object": {
         "id": "R-852227558"
@@ -31062,7 +31071,7 @@
         "id": "R-SpecifHeading"
       },
       "object": {
-        "id": "R-155140542"
+        "id": "R-SpecifParagraph"
       }
     },
     {
@@ -31072,7 +31081,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-155140542"
+        "id": "R-SpecifParagraph"
       },
       "object": {
         "id": "R-commentRefersTo"
@@ -31098,7 +31107,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-155140544"
+        "id": "R-SpecifView"
       },
       "object": {
         "id": "R-commentRefersTo"
@@ -31127,7 +31136,7 @@
         "id": "R-SpecifModelelement"
       },
       "object": {
-        "id": "R-Description"
+        "id": "R-DctermsDescription"
       }
     },
     {
@@ -31202,7 +31211,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-155140544"
+        "id": "R-SpecifView"
       },
       "object": {
         "id": "R-1756321082"
@@ -31283,7 +31292,7 @@
         "id": "R-SpecifComment"
       },
       "object": {
-        "id": "R-Description"
+        "id": "R-DctermsDescription"
       }
     },
     {
@@ -31296,7 +31305,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-155140542"
+        "id": "R-SpecifParagraph"
       }
     },
     {
@@ -31322,7 +31331,7 @@
         "id": "R-SpecifFeature"
       },
       "object": {
-        "id": "R-155140542"
+        "id": "R-SpecifParagraph"
       }
     },
     {
@@ -31345,7 +31354,7 @@
         "id": "SC-isSpecializationOfResource"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-IrebRequirement"
@@ -31358,7 +31367,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-7aslisE3S2RGOaKDbm3khuarr6G"
@@ -31371,7 +31380,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-u5Cm49QMK2jpejUwO2hLMt8Rvrr"
@@ -31384,7 +31393,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-LHcReZ7Pfd4aln2oaQnTRVLQjvY"
@@ -31397,7 +31406,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-4iDzZU76ShuxVFHzpSzJf9hOwbn"
@@ -31631,10 +31640,10 @@
         "id": "SC-isSpecializationOfResource"
       },
       "subject": {
-        "id": "R-yKfhxAKRG2FaL2kPZcbWNF9XoXn"
+        "id": "R-SpecifTermresourceclass"
       },
       "object": {
-        "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ"
+        "id": "R-SpecifOntologyterm"
       }
     },
     {
@@ -31644,10 +31653,10 @@
         "id": "SC-isSpecializationOfResource"
       },
       "subject": {
-        "id": "R-J3BnNy5yyXhh8QTJ5HGRh5Bn8CH"
+        "id": "R-SpecifTermstatementclass"
       },
       "object": {
-        "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ"
+        "id": "R-SpecifOntologyterm"
       }
     },
     {
@@ -31657,10 +31666,10 @@
         "id": "SC-isSpecializationOfResource"
       },
       "subject": {
-        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+        "id": "R-SpecifTermpropertyclass"
       },
       "object": {
-        "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ"
+        "id": "R-SpecifOntologyterm"
       }
     },
     {
@@ -31670,10 +31679,10 @@
         "id": "SC-isSpecializationOfResource"
       },
       "subject": {
-        "id": "R-Iuppijx5HlioCzt9Bruqm69Ocqc"
+        "id": "R-SpecifTermpropertyvalue"
       },
       "object": {
-        "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ"
+        "id": "R-SpecifOntologyterm"
       }
     },
     {
@@ -31722,7 +31731,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-refines"
@@ -31735,7 +31744,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-refines"
@@ -31761,7 +31770,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-duplicates"
@@ -31787,7 +31796,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-duplicates"
@@ -31813,7 +31822,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-1388621256"
@@ -31839,7 +31848,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-1388621256"
@@ -32229,7 +32238,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-1756321090"
@@ -32255,7 +32264,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-1756321090"
@@ -32281,7 +32290,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-traces"
@@ -32307,7 +32316,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-traces"
@@ -32333,7 +32342,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-isDerivedFrom"
@@ -32359,7 +32368,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-isDerivedFrom"
@@ -32804,7 +32813,7 @@
         "id": "R-FmcPlan"
       },
       "object": {
-        "id": "R-155140542"
+        "id": "R-SpecifParagraph"
       }
     },
     {
@@ -32843,7 +32852,7 @@
         "id": "R-Sa34Wm7yucoQad9jyYOFMMisSQM"
       },
       "object": {
-        "id": "R-Description"
+        "id": "R-DctermsDescription"
       }
     },
     {
@@ -32869,7 +32878,7 @@
         "id": "R-cPSsAeEC72vAzzqvEK6DM1HdhLU"
       },
       "object": {
-        "id": "R-1357982109"
+        "id": "R-DctermsIdentifier"
       }
     },
     {
@@ -32905,10 +32914,10 @@
         "id": "SC-isSpecializationOfResource"
       },
       "subject": {
-        "id": "R-hiUbPiNKZHTq5p5w8GtGQQ440tg"
+        "id": "R-SpecifRevision"
       },
       "object": {
-        "id": "R-155140542"
+        "id": "R-SpecifParagraph"
       }
     },
     {
@@ -32918,7 +32927,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-hiUbPiNKZHTq5p5w8GtGQQ440tg"
+        "id": "R-SpecifRevision"
       },
       "object": {
         "id": "R-852227558"
@@ -32931,7 +32940,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-hiUbPiNKZHTq5p5w8GtGQQ440tg"
+        "id": "R-SpecifRevision"
       },
       "object": {
         "id": "R-commentRefersTo"
@@ -32944,7 +32953,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-hiUbPiNKZHTq5p5w8GtGQQ440tg"
+        "id": "R-SpecifRevision"
       },
       "object": {
         "id": "R-1756321082"
@@ -32957,10 +32966,10 @@
         "id": "SC-isSynonymOfResource"
       },
       "subject": {
-        "id": "R-hiUbPiNKZHTq5p5w8GtGQQ440tg"
+        "id": "R-SpecifRevision"
       },
       "object": {
-        "id": "R-155140544"
+        "id": "R-SpecifView"
       }
     },
     {
@@ -32983,7 +32992,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-1021959455"
+        "id": "R-SpecifOutline"
       },
       "object": {
         "id": "R-852227557"
@@ -32996,7 +33005,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-1021959454"
+        "id": "R-SpecifHierarchy"
       },
       "object": {
         "id": "R-852227557"
@@ -33009,10 +33018,10 @@
         "id": "SC-isSpecializationOfResource"
       },
       "subject": {
-        "id": "R-1021959455"
+        "id": "R-SpecifOutline"
       },
       "object": {
-        "id": "R-155140542"
+        "id": "R-SpecifParagraph"
       }
     },
     {
@@ -33022,10 +33031,10 @@
         "id": "SC-isSpecializationOfResource"
       },
       "subject": {
-        "id": "R-65Rp2clJpdHWUbqNgbpxgKkccjt"
+        "id": "R-SpecifBillofmaterials"
       },
       "object": {
-        "id": "R-1021959455"
+        "id": "R-SpecifOutline"
       }
     },
     {
@@ -33038,7 +33047,7 @@
         "id": "R-orvawW5lq3b0HUvbP4Lu3Xyp6jW"
       },
       "object": {
-        "id": "R-155140544"
+        "id": "R-SpecifView"
       }
     },
     {
@@ -33051,7 +33060,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-155140542"
+        "id": "R-SpecifParagraph"
       }
     },
     {
@@ -33077,7 +33086,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-155140544"
+        "id": "R-SpecifView"
       }
     },
     {
@@ -33090,7 +33099,7 @@
         "id": "R-mVJnjob2n6ezD1lEwgr1p2hx1gD"
       },
       "object": {
-        "id": "R-hiUbPiNKZHTq5p5w8GtGQQ440tg"
+        "id": "R-SpecifRevision"
       }
     },
     {
@@ -33142,7 +33151,7 @@
         "id": "R-gBOeQmrke1vcIDJuHXjkvdLO3R5"
       },
       "object": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       }
     },
     {
@@ -33402,7 +33411,7 @@
         "id": "R-NmS1wOWAGTpqlRhTi85i0C7iXkL"
       },
       "object": {
-        "id": "R-514389527"
+        "id": "R-IrebRisk"
       }
     },
     {
@@ -33519,7 +33528,7 @@
         "id": "R-6FEseuENWxSryixYZkDotaveOLS"
       },
       "object": {
-        "id": "R-QPZO4xEKocjeIfTodAx8zq5k5I3"
+        "id": "R-BpmnProcessstep"
       }
     },
     {
@@ -33610,7 +33619,7 @@
         "id": "R-B4X83WiHP7luv60WfX3G1WjnWYU"
       },
       "object": {
-        "id": "R-RdL9JuGuFrBzNRNCP3l9Byk4jJ3"
+        "id": "R-FoafPerson"
       }
     },
     {
@@ -33636,7 +33645,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-1021959454"
+        "id": "R-SpecifHierarchy"
       }
     },
     {
@@ -33688,7 +33697,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-65Rp2clJpdHWUbqNgbpxgKkccjt"
+        "id": "R-SpecifBillofmaterials"
       }
     },
     {
@@ -33922,7 +33931,7 @@
         "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
       },
       "object": {
-        "id": "R-Description"
+        "id": "R-DctermsDescription"
       }
     },
     {
@@ -33948,7 +33957,7 @@
         "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
       },
       "object": {
-        "id": "R-1357982109"
+        "id": "R-DctermsIdentifier"
       }
     },
     {
@@ -34062,10 +34071,10 @@
         "id": "SC-isSynonymOfResource"
       },
       "subject": {
-        "id": "R-RdL9JuGuFrBzNRNCP3l9Byk4jJ3"
+        "id": "R-FoafPerson"
       },
       "object": {
-        "id": "R-jU4fIF3b0fhTHutLjz72ks09ctt"
+        "id": "R-SchemaPerson"
       }
     },
     {
@@ -34078,7 +34087,7 @@
         "id": "R-NTiyXXD7T6xOlOQ482krk1DEGGt"
       },
       "object": {
-        "id": "R-jU4fIF3b0fhTHutLjz72ks09ctt"
+        "id": "R-SchemaPerson"
       }
     },
     {
@@ -34091,7 +34100,7 @@
         "id": "R-NTiyXXD7T6xOlOQ482krk1DEGGt"
       },
       "object": {
-        "id": "R-OUcsl4Uw7bBp1cPNRzhids7FkQ8"
+        "id": "R-SchemaOrganization"
       }
     },
     {
@@ -34104,7 +34113,7 @@
         "id": "R-NTiyXXD7T6xOlOQ482krk1DEGGt"
       },
       "object": {
-        "id": "R-lScDxPXVDeY7fFlq1dOn5npf2hB"
+        "id": "R-SchemaRole"
       }
     },
     {
@@ -34208,7 +34217,7 @@
         "id": "R-MYNNHM0PLpczSgww7ZKEUiRmsbw"
       },
       "object": {
-        "id": "R-Description"
+        "id": "R-DctermsDescription"
       }
     },
     {
@@ -34491,10 +34500,10 @@
         "id": "SC-isSynonymOfResource"
       },
       "subject": {
-        "id": "R-1021959454"
+        "id": "R-SpecifHierarchy"
       },
       "object": {
-        "id": "R-1021959455"
+        "id": "R-SpecifOutline"
       }
     },
     {
@@ -34608,7 +34617,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-514389527"
+        "id": "R-IrebRisk"
       },
       "object": {
         "id": "R-852227556"
@@ -34621,7 +34630,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-514389527"
+        "id": "R-IrebRisk"
       },
       "object": {
         "id": "R-rt4q9P1xsiRQjxagKsp9SkSEu8J"
@@ -34673,7 +34682,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-852227586"
@@ -34751,7 +34760,7 @@
         "id": "SC-isEligibleAsSubject"
       },
       "subject": {
-        "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+        "id": "R-ReqifwfRequirement"
       },
       "object": {
         "id": "R-852227587"
@@ -35092,7 +35101,7 @@
         "id": "R-n5TinwmcGKVLAzriFYzkbsxwTcM"
       },
       "object": {
-        "id": "R-refersTo"
+        "id": "R-SpecifRefersto"
       }
     },
     {
@@ -35274,7 +35283,7 @@
         "id": "R-Ayn8qoHEenYwKadS4akuD5hKHck"
       },
       "object": {
-        "id": "R-1357982109"
+        "id": "R-DctermsIdentifier"
       }
     },
     {
@@ -35352,7 +35361,7 @@
         "id": "R-YRV2V6tSsoVCV9dDZofBhezVGGD"
       },
       "object": {
-        "id": "R-155140542"
+        "id": "R-SpecifParagraph"
       }
     },
     {
@@ -35365,7 +35374,7 @@
         "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks"
       },
       "object": {
-        "id": "R-isSpecializationOf"
+        "id": "R-UmlIsspecializationof"
       }
     },
     {
@@ -35391,7 +35400,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-fGfgwdJlarnkXVz9p1ctjQWckAS"
+        "id": "R-SpecifIsspecializationof"
       }
     },
     {
@@ -35401,10 +35410,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-fGfgwdJlarnkXVz9p1ctjQWckAS"
+        "id": "R-SpecifIsspecializationof"
       },
       "object": {
-        "id": "R-isSpecializationOf"
+        "id": "R-UmlIsspecializationof"
       }
     },
     {
@@ -35456,7 +35465,7 @@
         "id": "R-MJ7v3BNtIjxFp1fbObmOgxceDnI"
       },
       "object": {
-        "id": "R-refersTo"
+        "id": "R-SpecifRefersto"
       }
     },
     {
@@ -35560,7 +35569,7 @@
         "id": "R-1LfStrmrwjEUbKCnOkVvQDEVY8t"
       },
       "object": {
-        "id": "R-isSpecializationOf"
+        "id": "R-UmlIsspecializationof"
       }
     },
     {
@@ -35586,7 +35595,7 @@
         "id": "R-inheritsFrom"
       },
       "object": {
-        "id": "R-isSpecializationOf"
+        "id": "R-UmlIsspecializationof"
       }
     },
     {
@@ -35781,7 +35790,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ"
+        "id": "R-SpecifOntologyterm"
       }
     },
     {
@@ -35791,10 +35800,10 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ"
+        "id": "R-SpecifOntologyterm"
       },
       "object": {
-        "id": "R-1357982109"
+        "id": "R-DctermsIdentifier"
       }
     },
     {
@@ -35804,7 +35813,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ"
+        "id": "R-SpecifOntologyterm"
       },
       "object": {
         "id": "R-1LvyswixJKmrXt3OP5BbkU7lGft"
@@ -35817,7 +35826,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ"
+        "id": "R-SpecifOntologyterm"
       },
       "object": {
         "id": "R-SpecifTerm"
@@ -35830,10 +35839,10 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ"
+        "id": "R-SpecifOntologyterm"
       },
       "object": {
-        "id": "R-Description"
+        "id": "R-DctermsDescription"
       }
     },
     {
@@ -35843,7 +35852,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ"
+        "id": "R-SpecifOntologyterm"
       },
       "object": {
         "id": "R-SpecifDomain"
@@ -35856,7 +35865,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ"
+        "id": "R-SpecifOntologyterm"
       },
       "object": {
         "id": "R-hhKaZoMtu3D75vvGXU8JshsHAs9"
@@ -35869,7 +35878,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ"
+        "id": "R-SpecifOntologyterm"
       },
       "object": {
         "id": "R-SpecifLocalTerm"
@@ -35898,7 +35907,7 @@
         "id": "R-iIjwsbO5i3IQgOlijFJ3SXVlJHt"
       },
       "object": {
-        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+        "id": "R-SpecifTermpropertyclass"
       }
     },
     {
@@ -35911,7 +35920,7 @@
         "id": "R-vMChALmmnhnd9biNu5iCqrYA8XN"
       },
       "object": {
-        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+        "id": "R-SpecifTermpropertyclass"
       }
     },
     {
@@ -35924,7 +35933,7 @@
         "id": "R-eYBzcDOCiTBTHiPYjh9qaYuumec"
       },
       "object": {
-        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+        "id": "R-SpecifTermpropertyclass"
       }
     },
     {
@@ -35937,7 +35946,7 @@
         "id": "R-ZtbBpIxObvqnDuD8dfo8EN8WrMP"
       },
       "object": {
-        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+        "id": "R-SpecifTermpropertyclass"
       }
     },
     {
@@ -35950,7 +35959,7 @@
         "id": "R-CXDNs39QN7YM8Mv2vco7metJ7Ol"
       },
       "object": {
-        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+        "id": "R-SpecifTermpropertyclass"
       }
     },
     {
@@ -35963,7 +35972,7 @@
         "id": "R-Pb72Q7cOmnjpwUEQaCEcdjbzOA9"
       },
       "object": {
-        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+        "id": "R-SpecifTermpropertyclass"
       }
     },
     {
@@ -35976,7 +35985,7 @@
         "id": "R-fM1FB6zCrqNmKuQlN7ZUYpKrLlC"
       },
       "object": {
-        "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+        "id": "R-SpecifTermpropertyclass"
       }
     },
     {
@@ -36220,7 +36229,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-yKfhxAKRG2FaL2kPZcbWNF9XoXn"
+        "id": "R-SpecifTermresourceclass"
       },
       "object": {
         "id": "R-XFituq3uLki95FFEzETyCs0bcUs"
@@ -36233,7 +36242,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-J3BnNy5yyXhh8QTJ5HGRh5Bn8CH"
+        "id": "R-SpecifTermstatementclass"
       },
       "object": {
         "id": "R-XFituq3uLki95FFEzETyCs0bcUs"
@@ -36246,7 +36255,7 @@
         "id": "SC-isEligibleAsObject"
       },
       "subject": {
-        "id": "R-Iuppijx5HlioCzt9Bruqm69Ocqc"
+        "id": "R-SpecifTermpropertyvalue"
       },
       "object": {
         "id": "R-XFituq3uLki95FFEzETyCs0bcUs"
@@ -36468,7 +36477,7 @@
             {
               "id": "N-HqQoqmbVrKv9reTLYcGGweeVUC4",
               "resource": {
-                "id": "R-155140542"
+                "id": "R-SpecifParagraph"
               },
               "changedAt": "2023-02-26T20:15:02.642Z"
             },
@@ -36497,14 +36506,14 @@
             {
               "id": "N-rtsxeVw90JsJmIPM9LSO7Z9cE1D",
               "resource": {
-                "id": "R-155140544"
+                "id": "R-SpecifView"
               },
               "changedAt": "2023-02-26T20:21:41.620Z"
             },
             {
               "id": "N-zqHHSAZiGKKcA8BtkbEBfpHQgkV",
               "resource": {
-                "id": "R-hiUbPiNKZHTq5p5w8GtGQQ440tg"
+                "id": "R-SpecifRevision"
               },
               "changedAt": "2023-03-18T08:33:59.280Z"
             },
@@ -36533,7 +36542,7 @@
             {
               "id": "N-2hbKT5vQWlDsWaoS33Dj4B7WoWl",
               "resource": {
-                "id": "R-7Ytms6Y6CK8G7uh3MDz9WtSSwUY"
+                "id": "R-ReqifwfRequirement"
               },
               "changedAt": "2023-03-06T07:39:02.684Z"
             },
@@ -36636,7 +36645,7 @@
             {
               "id": "N-WazGSX6E3a3S7Y4wSsun8cKBlWL",
               "resource": {
-                "id": "R-6wIpW7L1U56CExt13zu84sKaK8b"
+                "id": "R-SpecifVote"
               },
               "changedAt": "2023-08-09T10:58:39.900Z"
             },
@@ -36664,28 +36673,28 @@
             {
               "id": "N-rl3WDdhkl8JSc2G20Mn6m2bLvq1",
               "resource": {
-                "id": "R-XwJ2gaGNrnExVl2Q5cJ9N9QCDoZ"
+                "id": "R-SpecifOntologyterm"
               },
               "changedAt": "2023-03-06T08:58:17.134Z"
             },
             {
               "id": "N-qhpOb7nQMcb5rZin9FkotjvVELC",
               "resource": {
-                "id": "R-yKfhxAKRG2FaL2kPZcbWNF9XoXn"
+                "id": "R-SpecifTermresourceclass"
               },
               "changedAt": "2023-03-06T08:58:22.302Z"
             },
             {
               "id": "N-urWzlcDwaiNocWai8vZ40V0G7Jh",
               "resource": {
-                "id": "R-J3BnNy5yyXhh8QTJ5HGRh5Bn8CH"
+                "id": "R-SpecifTermstatementclass"
               },
               "changedAt": "2023-03-06T08:58:27.639Z"
             },
             {
               "id": "N-qb9p6ZAuIPiMBcuSaWVIAkyOJG4",
               "resource": {
-                "id": "R-YPwAhIW6f096yiO75K3t31UsGao"
+                "id": "R-SpecifTermpropertyclass"
               },
               "changedAt": "2023-03-06T08:58:32.874Z"
             },
@@ -36741,14 +36750,14 @@
             {
               "id": "N-3mYAxUtocEA5kU5aByjU6U7VN8z",
               "resource": {
-                "id": "R-Iuppijx5HlioCzt9Bruqm69Ocqc"
+                "id": "R-SpecifTermpropertyvalue"
               },
               "changedAt": "2023-03-06T08:58:38.877Z"
             },
             {
               "id": "N-F2XR1vBsAk5fI9gRQTKQadvtc7n",
               "resource": {
-                "id": "R-514389527"
+                "id": "R-IrebRisk"
               },
               "changedAt": "2018-02-17T14:52:28+01:00",
               "revision": "114"
@@ -36756,35 +36765,35 @@
             {
               "id": "N-2ACxqwuJw0kO1Y9s4eLWIhnv5zr",
               "resource": {
-                "id": "R-RdL9JuGuFrBzNRNCP3l9Byk4jJ3"
+                "id": "R-FoafPerson"
               },
               "changedAt": "2023-08-25T08:22:15.988Z"
             },
             {
               "id": "N-ORnglP2WdHXqgvWPHiPqZWcdlSk",
               "resource": {
-                "id": "R-jU4fIF3b0fhTHutLjz72ks09ctt"
+                "id": "R-SchemaPerson"
               },
               "changedAt": "2023-07-10T11:38:45.772Z"
             },
             {
               "id": "N-LUf6PbSImHxR7FPGnFzSFA7hTKX",
               "resource": {
-                "id": "R-lScDxPXVDeY7fFlq1dOn5npf2hB"
+                "id": "R-SchemaRole"
               },
               "changedAt": "2023-07-11T06:36:04.641Z"
             },
             {
               "id": "N-nm8OL1rIVAqqrrw7YuaMT7zYn35",
               "resource": {
-                "id": "R-OUcsl4Uw7bBp1cPNRzhids7FkQ8"
+                "id": "R-SchemaOrganization"
               },
               "changedAt": "2023-07-11T06:37:11.024Z"
             },
             {
               "id": "N-WUSHigeiOdbxJtKX74NzxxRxpi5",
               "resource": {
-                "id": "R-1021959454"
+                "id": "R-SpecifHierarchy"
               },
               "changedAt": "2018-02-17T14:52:24+01:00",
               "revision": "114"
@@ -36792,7 +36801,7 @@
             {
               "id": "N-GC56rw2qe8DKtrWSBMEyTJM610r",
               "resource": {
-                "id": "R-1021959455"
+                "id": "R-SpecifOutline"
               },
               "changedAt": "2018-02-17T14:52:24+01:00",
               "revision": "114"
@@ -36800,7 +36809,7 @@
             {
               "id": "N-U1w8mlecYF8EuKkouuiiFhTZsJc",
               "resource": {
-                "id": "R-65Rp2clJpdHWUbqNgbpxgKkccjt"
+                "id": "R-SpecifBillofmaterials"
               },
               "changedAt": "2018-02-17T14:52:24+01:00",
               "revision": "114"
@@ -36843,21 +36852,21 @@
             {
               "id": "N-18A7yaHCXOmac8bXabfAkI7SPri",
               "resource": {
-                "id": "R-A6tks2dFkF5eW4Vfktv2ldWKy8O"
+                "id": "R-BpmnProcess"
               },
               "changedAt": "2023-08-25T08:09:20.822Z"
             },
             {
               "id": "N-0WSuUDwKIF5VT0I3HwxDLzzR1Ex",
               "resource": {
-                "id": "R-SSNHwX8847zVEqVaAQYoCDpD7v6"
+                "id": "R-BpmnParticipant"
               },
               "changedAt": "2023-08-25T08:23:53.997Z"
             },
             {
               "id": "N-BhqDR4BJm94qz1V8THF3EdAnePQ",
               "resource": {
-                "id": "R-QPZO4xEKocjeIfTodAx8zq5k5I3"
+                "id": "R-BpmnProcessstep"
               },
               "changedAt": "2023-08-25T08:11:45.268Z"
             },
@@ -37469,7 +37478,7 @@
             {
               "id": "N-rFgSojoH8KY2IPsmY49TGtgVWnd",
               "resource": {
-                "id": "R-isSpecializationOf"
+                "id": "R-UmlIsspecializationof"
               },
               "changedAt": "2019-05-30T14:52:25+01:00",
               "revision": "114"
@@ -37499,7 +37508,7 @@
             {
               "id": "N-8pUc6Vjp86KYxpBFwvbnduOoHKp",
               "resource": {
-                "id": "R-fGfgwdJlarnkXVz9p1ctjQWckAS"
+                "id": "R-SpecifIsspecializationof"
               },
               "changedAt": "2023-08-09T12:31:26.366Z"
             },
@@ -37528,7 +37537,7 @@
             {
               "id": "N-nBJ6HWgL8at84MLchAGeg5cp1S6",
               "resource": {
-                "id": "R-refersTo"
+                "id": "R-SpecifRefersto"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -37647,14 +37656,14 @@
             {
               "id": "N-AQ7YuYXWpR5P8YsBYu8DAHFaLbs",
               "resource": {
-                "id": "R-WW3yv7CRHPVmWakosK26dVEHd93"
+                "id": "R-SpecifIseligibleassubject"
               },
               "changedAt": "2023-08-09T23:17:40.236Z"
             },
             {
               "id": "N-lTvZz1EopJcVh7vR6aJQYfcH5ry",
               "resource": {
-                "id": "R-1jWAMC9CR5NHDJwGy3Tk2YWH67m"
+                "id": "R-SpecifIseligibleasobject"
               },
               "changedAt": "2023-08-09T23:17:55.085Z"
             }
@@ -37671,7 +37680,7 @@
             {
               "id": "N-vFFGM9zVUGiyZbRs5ddeGjyMktS",
               "resource": {
-                "id": "R-1357982109"
+                "id": "R-DctermsIdentifier"
               },
               "changedAt": "2023-02-26T14:37:53.524Z"
             },
@@ -37721,7 +37730,7 @@
             {
               "id": "N-Cq5BTag28vYhDh9aoVU3WDCEtUN",
               "resource": {
-                "id": "R-Description"
+                "id": "R-DctermsDescription"
               },
               "changedAt": "2018-02-17T14:52:17+01:00",
               "revision": "114"
