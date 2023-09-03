@@ -7,9 +7,9 @@
     }
   ],
   "$schema": "https://specif.de/v1.1/schema.json",
-  "generator": "SpecIF Modellintegrator und Editor",
-  "generatorVersion": "1.1.q.1",
-  "createdAt": "2023-08-29T12:47:52.729Z",
+  "generator": "SpecIF Model-Integrator and Editor",
+  "generatorVersion": "1.1.q.2",
+  "createdAt": "2023-09-03T08:52:59.722Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -9092,7 +9092,32 @@
           "values": [
             [
               {
-                "text": "Customer"
+                "text": "Customer",
+                "language": "en"
+              },
+              {
+                "text": "Auftraggeber",
+                "language": "de"
+              }
+            ],
+            [
+              {
+                "text": "Client",
+                "language": "en"
+              },
+              {
+                "text": "Kunde",
+                "language": "de"
+              }
+            ],
+            [
+              {
+                "text": "Purchaser",
+                "language": "en"
+              },
+              {
+                "text": "Käufer",
+                "language": "de"
               }
             ]
           ]
@@ -9153,9 +9178,216 @@
           "values": [
             [
               {
-                "text": "Supplier"
+                "text": "Supplier",
+                "language": "en"
+              },
+              {
+                "text": "Auftragnehmer",
+                "language": "de"
+              }
+            ],
+            [
+              {
+                "text": "Vendor",
+                "language": "en"
+              },
+              {
+                "text": "Dienstleister",
+                "language": "de"
+              }
+            ],
+            [
+              {
+                "text": "Seller",
+                "language": "en"
+              },
+              {
+                "text": "Verkäufer",
+                "language": "de"
               }
             ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-SpecifReader",
+      "changedAt": "2023-09-03T08:48:17.871Z",
+      "class": {
+        "id": "RC-SpecifTermresourceclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:Reader"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-2",
+            "V-Domain-3",
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Reader",
+                "language": "en"
+              },
+              {
+                "text": "Leser",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Readers",
+                "language": "en"
+              },
+              {
+                "text": "Leser",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-SpecifEditor",
+      "changedAt": "2023-09-03T08:48:43.446Z",
+      "class": {
+        "id": "RC-SpecifTermresourceclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:Editor"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-2",
+            "V-Domain-3",
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Editor",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Editors",
+                "language": "en"
+              },
+              {
+                "text": "Editoren",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
           ]
         }
       ]
@@ -15382,6 +15614,65 @@
       ]
     },
     {
+      "id": "R-ueykXi2K5CIfgRsrsgTGBBRxNKX",
+      "changedAt": "2023-09-03T08:50:30.953Z",
+      "revision": "36",
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SysML:isSpecializationOf"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>A FMC:Actor is a specialization of another FMC:Actor; similarly for FMC:State and FMC:Event.</p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-SXlt4EbTFdv3O2la3qGE6PtcB70",
       "changedAt": "2023-08-09T12:30:28.654Z",
       "revision": "36",
@@ -15436,6 +15727,65 @@
           },
           "values": [
             "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-d9Y8KpLqOavXiKMm8UuzmkgemXt",
+      "changedAt": "2023-09-03T08:51:33.793Z",
+      "revision": "36",
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SysML:isGeneralizationOf"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>A FMC:Actor is a generalization of another FMC:Actor; similarly for FMC:State and FMC:Event.</p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
           ]
         }
       ]
@@ -15552,11 +15902,11 @@
             [
               {
                 "text": "inherits from",
-				"language": "en"
+                "language": "en"
               },
               {
                 "text": "erbt von",
-				"language": "de"
+                "language": "de"
               }
             ]
           ]
@@ -15652,11 +16002,11 @@
             [
               {
                 "text": "refers to",
-				"language": "en"
+                "language": "en"
               },
               {
                 "text": "bezieht sich auf",
-				"language": "de"
+                "language": "de"
               }
             ]
           ]
@@ -36286,6 +36636,84 @@
       "object": {
         "id": "R-852227557"
       }
+    },
+    {
+      "id": "S-i8fcNGOwMHr2Qk4sBZjkUyMovvb",
+      "changedAt": "2023-09-03T08:48:59.852Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-AdyDfiNvv4ouaepgtffkr4r0BDN"
+      },
+      "object": {
+        "id": "R-SpecifReader"
+      }
+    },
+    {
+      "id": "S-Q7VoicuAiuA6HqjyqEFLz3OqXKV",
+      "changedAt": "2023-09-03T08:49:10.654Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-SpecifEditor"
+      }
+    },
+    {
+      "id": "S-GlUf9kiUkwMwu7O3kz5Q9GX15bF",
+      "changedAt": "2023-09-03T08:50:45.768Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-AdyDfiNvv4ouaepgtffkr4r0BDN"
+      },
+      "object": {
+        "id": "R-ueykXi2K5CIfgRsrsgTGBBRxNKX"
+      }
+    },
+    {
+      "id": "S-Pl8MqMY6cdEgX4FQyJK94lxtvd5",
+      "changedAt": "2023-09-03T08:51:05.415Z",
+      "class": {
+        "id": "SC-isSynonymOfPredicate"
+      },
+      "subject": {
+        "id": "R-ueykXi2K5CIfgRsrsgTGBBRxNKX"
+      },
+      "object": {
+        "id": "R-UmlIsspecializationof"
+      }
+    },
+    {
+      "id": "S-rbZhUJ4M11AX5CRu6zEydUS2aG9",
+      "changedAt": "2023-09-03T08:51:46.811Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-AdyDfiNvv4ouaepgtffkr4r0BDN"
+      },
+      "object": {
+        "id": "R-d9Y8KpLqOavXiKMm8UuzmkgemXt"
+      }
+    },
+    {
+      "id": "S-1tKcFA5x9gmnBsZENtBPg1D50v2",
+      "changedAt": "2023-09-03T08:52:37.590Z",
+      "class": {
+        "id": "SC-isSynonymOfPredicate"
+      },
+      "subject": {
+        "id": "R-d9Y8KpLqOavXiKMm8UuzmkgemXt"
+      },
+      "object": {
+        "id": "R-isGeneralizationOf"
+      }
     }
   ],
   "hierarchies": [
@@ -36927,6 +37355,20 @@
               "changedAt": "2023-08-25T08:12:20.684Z"
             },
             {
+              "id": "N-sCSJAESJMWfW7WzdGxLoH3knoJ6",
+              "resource": {
+                "id": "R-SpecifReader"
+              },
+              "changedAt": "2023-09-03T08:48:17.871Z"
+            },
+            {
+              "id": "N-vprXvWiXpwF2JNXqewrhTcqpE3W",
+              "resource": {
+                "id": "R-SpecifEditor"
+              },
+              "changedAt": "2023-09-03T08:48:43.446Z"
+            },
+            {
               "id": "N-TXS7cXjDk45KW8FRLwe4fz3bL5x",
               "resource": {
                 "id": "R-VXtiAplKLoeYA4innkDjQwRbsBC"
@@ -37513,11 +37955,25 @@
               "changedAt": "2023-08-09T12:31:26.366Z"
             },
             {
+              "id": "N-EwNBfFH5cH81fq51LKCBUXjXkwm",
+              "resource": {
+                "id": "R-ueykXi2K5CIfgRsrsgTGBBRxNKX"
+              },
+              "changedAt": "2023-09-03T08:50:30.953Z"
+            },
+            {
               "id": "N-3miTcOJNvaSYSlgTy0mIRj4Wyqo",
               "resource": {
                 "id": "R-SXlt4EbTFdv3O2la3qGE6PtcB70"
               },
               "changedAt": "2023-08-09T12:31:18.347Z"
+            },
+            {
+              "id": "N-DTPhI8GE0xPZeU4WS6GPKVyvtSM",
+              "resource": {
+                "id": "R-d9Y8KpLqOavXiKMm8UuzmkgemXt"
+              },
+              "changedAt": "2023-09-03T08:51:33.793Z"
             },
             {
               "id": "N-BSQa9h5AoCUdhDRQ0QCodbesRwM",
