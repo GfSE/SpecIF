@@ -5,7 +5,8 @@
 
 ## Introduction
 
-A permission controls whether a user can create, read, update or delete a resource or a statement and its properties.
+A permission controls whether a user can create, read, update or delete a resource or a statement and its properties. 
+A project role combines a set of permissions to simplify the assignment of permissions to users.
 
 Very basically, SpecIF defines two types of permissions:
 - By *Class*: An instance of resource or statement can be accessed, if the most specialized class has a corresponding permission.
@@ -51,10 +52,11 @@ Next, let us have a look at the resources.
 - The assignment of permissions to resource instances with their properties works similarly to the statements.
 - However, there is another permissionTarget, namely a node in a hierarchy pointing to a resource.
 - In case of resources, permissions must be granted not only by class, but also by node.
-- A node has the same permission as the resource pointed at: If you can delete a resource, you can alse delete the node and vice versa.
-- By denying a permission to read for one branch and granting it to another, the user may see the recources only in that branch 
+- A node has the same permission as the resource pointed at: If you can delete a resource, you can alse delete the node.
+- By denying a permission to read for one branch in a hierachy and granting it to another, 
+the user may see the recources only in that branch 
 ... provided that the resource is allowed to be read by its classes. So it is possible to limit the access rights to
-a resource depending on the position of its referencing node in the hierarchy branch.
+a resource depending on the position of its referencing node in the hierarchy.
 - To simplify the permission management, the default permission by hierarchy tree is 'true', so a permission must be
 explitly denied.
 - The permissions by hierarchy are also inherited from higher levels: A denial to update applied to a node also apply to all
@@ -68,6 +70,15 @@ A permission has a vector of binary attributes for basic access modes:
 - U: Update
 - D: Delete
 
+Some examples
+
+| Target | C | R | U | D |
+| --- |:---:|:---:|:---:|:---:|
+| project | undefined | undefined | undefined | undefined |
+| statementClass | undefined | undefined | undefined | undefined |
+| propertyClass | undefined | undefined | undefined | undefined |
+Effect: All instances of that class including their properties cannot be accessed by the user.
+
 Some cases:
 - Permissions per resource instance are defined both by class and by hierarchy: Access is allowed, if it is 
 explicitly granted by class *and* not explicitly prohibited by hierarchy.
@@ -75,6 +86,7 @@ explicitly granted by class *and* not explicitly prohibited by hierarchy.
 - No read permission is given to the instances of a statementClass, but update permission is given to one of its properties. 
 Then, the latter is useless, because the statements are never visible and consequently none of the properties 
 can ever be selected for update.
+
 
 ## Data Types
 
@@ -110,20 +122,20 @@ interface SpecifRoleAssignment {
 }
 
 /**
- * A role defined for a project has a collection of item permissions.
+ * A role defined for a project has a collection of permissions.
  */
 interface SpecifProjectRole {
     id: SpecifId;
     title: SpecifText;
     description?: SpecifMultiLanguageText;
-    permissions: Array<SpecifPermissions>;
+    permissions: Array<SpecifPermission>;
 }
 
 /**
- * A permission defines a permission vector for an item, being either a project, a class or a node.
+ * A permission defines a permission vector for a target, being either a project, a class or a node.
  */
 interface SpecifPermission {
-    item: SpecifId;  // a reference to any project, propertyClass, resourceClass, statementClass or node
+    target: SpecifId;  // a reference to any project, propertyClass, resourceClass, statementClass or node
     permissionVector: SpecifPermissionVector;
 }
 
