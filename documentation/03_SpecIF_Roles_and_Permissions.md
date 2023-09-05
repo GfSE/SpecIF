@@ -5,21 +5,13 @@
 
 ## Introduction
 
+A permission controls whether a user can create, read, update or delete a resource or a statement and its properties.
+
 Very basically, SpecIF defines two types of permissions:
 - By *Class*: An instance of resource or statement can be accessed, if the most specialized class has a corresponding permission.
 If no permission by class is granted at all, access is *prohibited*.
 - By *Hierarchy*: An instance of resource can be accessed, if the closest node in the hierarchy has a corresponding permission.
 If no permission by hierarchy is defined at all, access is *allowed* (in fact it is rather a prohibition in this case).  
-
-The permissions of an individual resource are derived from both the class tree and the hierarchy tree with its nodes.
-- In this context an *Item* is a project, class or node, but never a dataType or an instance. 
-- A *PermissionVector* defines the permissions per Item in terms of create, read, update and delete (CRUD). The permissions apply to all instances of the class resp. the resource referenced by the node.
-- An *ItemPermission* is a *PermissionVector* per *Item*. Due to inheritance it is not necessary to systematically assign an *ItemPermission* to every *Item*.
-- One or more *Role*s are defined per project and have a collection of *ItemPermissions* each
-- A *ProjectRole* is the assignment of a user to a role
-- A *User* may have one *Role* per Project
-
-The permissions of an individual statement are just derived from the class tree.
 
 Permissions are inherited:
 - By Class: project → resourceClass → propertyClass or project → statementClass → propertyClass. 
@@ -27,33 +19,26 @@ A permission granted at project level is inherited by all instances; where permi
 - By Hierarchy: A node inherits all permissions of the parent node, unless permissions of its own are defined.
 A permission granted at project level is inherited by all instances; where permissions at a lower level override a permission at a higher level.
 
-A permission set per item consists of the following dimensions:
-- C: Create
-- R: Read
-- U: Update
-- D: Delete
-
-Explanations:
-- Permissions per instance are defined both by class and by hierarchy: Access is allowed, if it is explicitly granted by class *and* not explicitly prohibited by hierarchy.
-- Example: If a  a permission is granted to a resourceClass, it is extended to all of its properties, unless overridden.
+Thus, the permissions of an individual resource are derived from both the class tree and the hierarchy tree with its nodes.
+However, the permissions of an individual statement are just derived from the class tree.
 
 ## Permission Concept
 
 First, let's discuss how permissions work with statements, as it is somewhat simpler when compared with resources.
 The class diagram shows at the top:
-- One to many permissions define a projectRole. Thus, a projectRole defines a set of permissions for a given project.
+- None to many permissions define a projectRole. Thus, a projectRole defines a set of permissions for a given project.
 - A roleAssignment connects a user to a projectRole. Upon login, none or one roleAssignment is created per project. 
 In many cases this assignment is based on the user's group membership (or user role) in a user directory or it is manually administered.
-- For example, a user having a projectRole named SpecIF:Reader, may see the statements (relations), wheras
-a projectRole named SpecIF:Editor allows to create, read, update and delete statements. 
+- For example, a user having a projectRole named *SpecIF:Reader* may see the statements (relations), wheras
+a projectRole named *SpecIF:Editor* allows to create, read, update and delete statements. 
 Finer grained permissions can be granted, as we will see below.
 
 In its lower part, the class diagram shows a permission target, which is an abstraction for project, statementClass and propertyClass.
 It means that there is none or one permission for each of the permission targets. If a target does not have a permission, the 
 parent's permission applies.
 - A role's permission pointing to a propertyClass defines the access rights for all instances of that class, no matter which
-statementClass (also resourceClass) makes use of it. Thus, multiple propertyClasses must be defined, if different permission vectors are needed
-depending on the statementClass (or resourceClass).
+statementClass (also resourceClass) makes use of it. Thus, multiple propertyClasses must be defined, if different permission vectors 
+are needed depending on the statementClass (or resourceClass).
 - A role's permission pointing to a statementClass defines the access rights for all instances of that class. The same access rights apply
 to all of the instance's properties, unless overridden by a permission pointing at a propertyClass.
 - A role's permission pointing to a project applies to the whole project, unless overridden at a lower level.
@@ -65,10 +50,10 @@ Next, let us have a look at the resources.
 - At the top, the assignment of permissions to projectRoles and users is the same as discussed before.
 - The assignment of permissions to resource instances with their properties works similarly to the statements.
 - However, there is another permissionTarget, namely a node in a hierarchy pointing to a resource.
-- In case of resources, a permissions must be granted not only by class, but also by node.
+- In case of resources, permissions must be granted not only by class, but also by node.
 - A node has the same permission as the resource pointed at: If you can delete a resource, you can alse delete the node and vice versa.
-- By denying a permission to read for one hierarchy and granting it to another, the user may see the recources in one of the branches, 
-but not the other ... provided that the resource is allowed to read by the classes. So it is possible to limit the access rights to
+- By denying a permission to read for one branch and granting it to another, the user may see the recources only in that branch 
+... provided that the resource is allowed to be read by its classes. So it is possible to limit the access rights to
 a resource depending on the position of its referencing node in the hierarchy branch.
 - To simplify the permission management, the default permission by hierarchy tree is 'true', so a permission must be
 explitly denied.
@@ -76,6 +61,20 @@ explitly denied.
 subordinated child nodes, unless overridden.
 
 ![SpecIF Project Metamodel](./images/ResourcePermissions-M1.png)
+
+A permission has a vector of binary attributes for basic access modes:
+- C: Create
+- R: Read
+- U: Update
+- D: Delete
+
+Some cases:
+- Permissions per resource instance are defined both by class and by hierarchy: Access is allowed, if it is 
+explicitly granted by class *and* not explicitly prohibited by hierarchy.
+- If a permission is granted to a resourceClass, it is extended to all of its properties, unless overridden.
+- No read permission is given to the instances of a statementClass, but update permission is given to one of its properties. 
+Then, the latter is useless, because the statements are never visible and consequently none of the properties 
+can ever be selected for update.
 
 ## Data Types
 
@@ -107,7 +106,7 @@ interface SpecifUser extends Person {
  */
 interface SpecifRoleAssignment {
     project: SpecifId;  // the project reference, use 'any' as default value to cover all remaining projects
-    role: SpecifText;  // the title of the role, ideally an ontology term
+    projectRole: SpecifText;  // the title of the role, ideally an ontology term
 }
 
 /**
@@ -123,7 +122,7 @@ interface SpecifProjectRole {
 /**
  * A permission defines a permission vector for an item, being either a project, a class or a node.
  */
-interface SpecifPermissions {
+interface SpecifPermission {
     item: SpecifId;  // a reference to any project, propertyClass, resourceClass, statementClass or node
     permissionVector: SpecifPermissionVector;
 }
@@ -134,10 +133,10 @@ interface SpecifPermissions {
  * in the context of the application code.
  */
 interface SpecifPermissionVector {
-    C: boolean; // create item
-    R: boolean; // read item
-    U: boolean; // update item
-    D: boolean; // delete item
+    C: boolean; // create instance
+    R: boolean; // read instance
+    U: boolean; // update instance
+    D: boolean; // delete instance
 }
 ```
 
@@ -147,11 +146,11 @@ interface SpecifPermissionVector {
 example: TypeScript
 
 ```typescript
-class CItemPermissions implements SpecifItemPermissions {
-    item: SpecifId;  // the item reference
+class CPermission implements SpecifPermission {
+    target: SpecifId;  // the item reference
     permissionVector: SpecifPermissionVector;
     constructor(iId: SpecifId, prmS: string) {
-        this.item = iId;
+        this.target = iId;
         this.permissionVector = {
             C: prmS.includes('C'),
             R: prmS.includes('R'),
@@ -160,27 +159,27 @@ class CItemPermissions implements SpecifItemPermissions {
         }
     }
 }
-class CRole implements SpecifRole {
-    id: SpecifId;
+class CProjectRole implements SpecifProjectRole {
+    id: SpecifId;  // so far not necessarily needed
     title: string;
     description?: SpecifMultiLanguageText;
-    itemPermissions: SpecifItemPermissions[] = [];
-    constructor(roleName: string) {
-        this.id = roleName.toSpecifId();
-        this.title = roleName;
+    permissions: SpecifPermissions[] = [];
+    constructor(roleTitle: string) {
+        this.id = roleTitle.toSpecifId();
+        this.title = roleTitle;
     }
-    setItemPermissions(iId: SpecifId, prm: string) {
-        let idx = LIB.indexBy(this.itemPermissions, 'item', iId);
+    setPermission(iId: SpecifId, prm: string) {
+        let idx = LIB.indexBy(this.permissions, 'target', iId);
         if (idx > -1)
-            this.itemPermissions[idx] = new CItemPermissions(iId, prm)
+            this.permissions[idx] = new CPermission(iId, prm)
         else
-            this.itemPermissions.push(new CItemPermissions(iId, prm));
+            this.permissions.push(new CPermission(iId, prm));
         return this  // make it chainable
     }
-    removeItemPermissions(iId: SpecifId) {
-        let idx = LIB.indexBy(this.itemPermissions, 'item', iId);
+    removePermission(iId: SpecifId) {
+        let idx = LIB.indexBy(this.permissions, 'target', iId);
         if (idx > -1)
-            this.itemPermissions.splice(idx, 1)
+            this.permissions.splice(idx, 1)
         return this  // make it chainable
     }
 }
