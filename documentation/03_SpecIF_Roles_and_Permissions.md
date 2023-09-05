@@ -70,16 +70,34 @@ A permission has a vector of binary attributes for basic access modes:
 - U: Update
 - D: Delete
 
-Some examples
+### Some Examples
 
 | Target | C | R | U | D |
 | --- |:---:|:---:|:---:|:---:|
 | project | undefined | undefined | undefined | undefined |
 | statementClass | undefined | undefined | undefined | undefined |
 | propertyClass | undefined | undefined | undefined | undefined |
+
 Effect: All instances of that class including their properties cannot be accessed by the user.
 
-Some cases:
+| Target | C | R | U | D |
+| --- |:---:|:---:|:---:|:---:|
+| project | undefined | **true** | undefined | undefined |
+| statementClass | undefined | undefined | undefined | undefined |
+| propertyClass | undefined | undefined | undefined | undefined |
+
+Effect: All instances of that class including their properties can just be seen by the user.
+
+| Target | C | R | U | D |
+| --- |:---:|:---:|:---:|:---:|
+| project | undefined | **true** | undefined | undefined |
+| statementClass | undefined | undefined | undefined | undefined |
+| propertyClass | **true** | **true** | **true** | undefined |
+
+Effect: All instances of that class including their properties can be seen by the user. 
+The particular property can be created, read and updated, but not be deleted (to be discussed, whether this makes senses in practice ...
+
+### Some Cases:
 - Permissions per resource instance are defined both by class and by hierarchy: Access is allowed, if it is 
 explicitly granted by class *and* not explicitly prohibited by hierarchy.
 - If a permission is granted to a resourceClass, it is extended to all of its properties, unless overridden.
