@@ -73,7 +73,7 @@ A permission has a vector of binary attributes for basic access modes:
 ### Some Examples
 
 | Target | C | R | U | D |
-| --- |:---:|:---:|:---:|:---:|
+|:--- |:---:|:---:|:---:|:---:|
 | project | undefined | undefined | undefined | undefined |
 | statementClass | undefined | undefined | undefined | undefined |
 | propertyClass | undefined | undefined | undefined | undefined |
@@ -81,7 +81,7 @@ A permission has a vector of binary attributes for basic access modes:
 Effect: All instances of that class including their properties cannot be accessed by the user.
 
 | Target | C | R | U | D |
-| --- |:---:|:---:|:---:|:---:|
+|:--- |:---:|:---:|:---:|:---:|
 | project | undefined | **true** | undefined | undefined |
 | statementClass | undefined | undefined | undefined | undefined |
 | propertyClass | undefined | undefined | undefined | undefined |
@@ -89,13 +89,13 @@ Effect: All instances of that class including their properties cannot be accesse
 Effect: All instances of that class including their properties can just be seen by the user.
 
 | Target | C | R | U | D |
-| --- |:---:|:---:|:---:|:---:|
+|:--- |:---:|:---:|:---:|:---:|
 | project | undefined | **true** | undefined | undefined |
 | statementClass | undefined | undefined | undefined | undefined |
 | propertyClass | **true** | **true** | **true** | undefined |
 
 Effect: All instances of that class including their properties can be seen by the user. 
-The particular property can be created, read and updated, but not be deleted (to be discussed, whether this makes senses in practice ...
+The particular property can be created, read and updated, but not be deleted (to be discussed, whether this makes senses in practice ...)
 
 ### Some Cases:
 - Permissions per resource instance are defined both by class and by hierarchy: Access is allowed, if it is 
