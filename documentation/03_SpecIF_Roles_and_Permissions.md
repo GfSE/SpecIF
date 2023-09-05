@@ -2,10 +2,6 @@
 
 .. to be completed
 
-![SpecIF Project Metamodel](./images/StatementPermissions-M1.png)
-
-![SpecIF Project Metamodel](./images/ResourcePermissions-M1.png)
-
 
 ## Introduction
 
@@ -40,6 +36,46 @@ A permission set per item consists of the following dimensions:
 Explanations:
 - Permissions per instance are defined both by class and by hierarchy: Access is allowed, if it is explicitly granted by class *and* not explicitly prohibited by hierarchy.
 - Example: If a  a permission is granted to a resourceClass, it is extended to all of its properties, unless overridden.
+
+## Permission Concept
+
+First, let's discuss how permissions work with statements, as it is somewhat simpler when compared with resources.
+The class diagram shows at the top:
+- One to many permissions define a projectRole. Thus, a projectRole defines a set of permissions for a given project.
+- A roleAssignment connects a user to a projectRole. Upon login, none or one roleAssignment is created per project. 
+In many cases this assignment is based on the user's group membership (or user role) in a user directory or it is manually administered.
+- For example, a user having a projectRole named SpecIF:Reader, may see the statements (relations), wheras
+a projectRole named SpecIF:Editor allows to create, read, update and delete statements. 
+Finer grained permissions can be granted, as we will see below.
+
+In its lower part, the class diagram shows a permission target, which is an abstraction for project, statementClass and propertyClass.
+It means that there is none or one permission for each of the permission targets. If a target does not have a permission, the 
+parent's permission applies.
+- A role's permission pointing to a propertyClass defines the access rights for all instances of that class, no matter which
+statementClass (also resourceClass) makes use of it. Thus, multiple propertyClasses must be defined, if different permission vectors are needed
+depending on the statementClass (or resourceClass).
+- A role's permission pointing to a statementClass defines the access rights for all instances of that class. The same access rights apply
+to all of the instance's properties, unless overridden by a permission pointing at a propertyClass.
+- A role's permission pointing to a project applies to the whole project, unless overridden at a lower level.
+- For all permissions pointing at classes, the default is 'false'. If undefined at all levels, the permission is negative.
+
+![SpecIF Project Metamodel](./images/StatementPermissions-M1.png)
+
+Next, let us have a look at the resources. 
+- At the top, the assignment of permissions to projectRoles and users is the same as discussed before.
+- The assignment of permissions to resource instances with their properties works similarly to the statements.
+- However, there is another permissionTarget, namely a node in a hierarchy pointing to a resource.
+- In case of resources, a permissions must be granted not only by class, but also by node.
+- A node has the same permission as the resource pointed at: If you can delete a resource, you can alse delete the node and vice versa.
+- By denying a permission to read for one hierarchy and granting it to another, the user may see the recources in one of the branches, 
+but not the other ... provided that the resource is allowed to read by the classes. So it is possible to limit the access rights to
+a resource depending on the position of its referencing node in the hierarchy branch.
+- To simplify the permission management, the default permission by hierarchy tree is 'true', so a permission must be
+explitly denied.
+- The permissions by hierarchy are also inherited from higher levels: A denial to update applied to a node also apply to all
+subordinated child nodes, unless overridden.
+
+![SpecIF Project Metamodel](./images/ResourcePermissions-M1.png)
 
 ## Data Types
 
