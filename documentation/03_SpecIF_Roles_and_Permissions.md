@@ -15,7 +15,7 @@ If no permission by class is granted at all, access is *prohibited*.
 If no permission by hierarchy is defined at all, access is *allowed* (in fact it is rather a prohibition in this case).  
 
 Permissions are inherited:
-- By Class: project → resourceClass → propertyClass or project → statementClass → propertyClass. 
+- By Class: project ← resourceClass ← propertyClass or project ← statementClass ← propertyClass. 
 A permission granted at project level is inherited by all instances; where permissions at a lower level override a permission at a higher level.
 - By Hierarchy: A node inherits all permissions of the parent node, unless permissions of its own are defined.
 A permission granted at project level is inherited by all instances; where permissions at a lower level override a permission at a higher level.
@@ -74,30 +74,30 @@ A permission has a vector of binary attributes for basic access modes:
 
 | Target | C | R | U | D |
 |:--- |:---:|:---:|:---:|:---:|
-| project | undefined | undefined | undefined | undefined |
-| statementClass | undefined | undefined | undefined | undefined |
-| propertyClass | undefined | undefined | undefined | undefined |
+| a project | undefined | undefined | undefined | undefined |
+| a statementClass | undefined | undefined | undefined | undefined |
+| a propertyClass | undefined | undefined | undefined | undefined |
 
 Effect: All instances of that class including their properties cannot be accessed by the user.
 
 | Target | C | R | U | D |
 |:--- |:---:|:---:|:---:|:---:|
-| project | undefined | **true** | undefined | undefined |
-| statementClass | undefined | undefined | undefined | undefined |
-| propertyClass | undefined | undefined | undefined | undefined |
+| a project | undefined | **true** | undefined | undefined |
+| a statementClass | undefined | undefined | undefined | undefined |
+| a propertyClass | undefined | undefined | undefined | undefined |
 
 Effect: All instances of that class including their properties can just be seen by the user.
 
 | Target | C | R | U | D |
 |:--- |:---:|:---:|:---:|:---:|
-| project | undefined | **true** | undefined | undefined |
-| statementClass | undefined | undefined | undefined | undefined |
-| propertyClass | **true** | **true** | **true** | undefined |
+| a project | undefined | **true** | undefined | undefined |
+| a statementClass | undefined | undefined | undefined | undefined |
+| a propertyClass | **true** | **true** | **true** | undefined |
 
 Effect: All instances of that class including their properties can be seen by the user. 
-The particular property can be created, read and updated, but not be deleted (to be discussed, whether this makes senses in practice ...)
+The particular property can be created, read and updated, but not be deleted (to be discussed, whether this makes sense in practice ...)
 
-### Some Cases:
+### Some Cases
 - Permissions per resource instance are defined both by class and by hierarchy: Access is allowed, if it is 
 explicitly granted by class *and* not explicitly prohibited by hierarchy.
 - If a permission is granted to a resourceClass, it is extended to all of its properties, unless overridden.

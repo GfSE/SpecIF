@@ -5676,6 +5676,18 @@
         },
         {
           "class": {
+            "id": "PC-Icon"
+          },
+          "values": [
+            [
+              {
+                "text": "&#x25BA;"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-isHeading"
           },
           "values": [
@@ -9668,6 +9680,18 @@
               }
             ]
           ]
+        },
+        {
+          "class": {
+            "id": "PC-Icon"
+          },
+          "values": [
+            [
+              {
+                "text": "&#x263A;"
+              }
+            ]
+          ]
         }
       ]
     },
@@ -9753,6 +9777,18 @@
               }
             ]
           ]
+        },
+        {
+          "class": {
+            "id": "PC-Icon"
+          },
+          "values": [
+            [
+              {
+                "text": "&#x2702;"
+              }
+            ]
+          ]
         }
       ]
     },
@@ -9810,7 +9846,29 @@
           "values": [
             [
               {
-                "text": "Data Object"
+                "text": "Data Object",
+                "language": "en"
+              },
+              {
+                "text": "Datenobjekt",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Data Objects",
+                "language": "en"
+              },
+              {
+                "text": "Datenobjekte",
+                "language": "de"
               }
             ]
           ]
