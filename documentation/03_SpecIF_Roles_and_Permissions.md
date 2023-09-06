@@ -47,7 +47,7 @@ to all of the instance's properties, unless overridden by a permission pointing 
 
 ![SpecIF Project Metamodel](./images/StatementPermissions-M1.png)
 
-Next, let us have a look at the resources. 
+Next, let us have a look at the resources: 
 - At the top, the assignment of permissions to projectRoles and users is the same as discussed before.
 - The assignment of permissions to resource instances with their properties works similarly to the statements.
 - However, there is another permissionTarget, namely a node in a hierarchy pointing to a resource.

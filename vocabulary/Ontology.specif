@@ -3674,8 +3674,16 @@
           "values": [
             [
               {
-                "text": "<p>A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform.  <small>(<i>source: <a href=\"https://en.wikipedia.org/wiki/Requirement\">Wikipedia</a></i>)</small></p><p>Definition:</p><ol><li>A condition or capability needed by a user to solve a problem or achieve an objective.</li><li>A condition or capability that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed documents.</li><li>A documented representation of a condition or capability as in (1) or (2).</li></ol><p>Note: The definition above is the classic one from IEEE Std 610.12 of 1990. Alternatively, we also give a more modern definition:</p><ol><li>A need perceived by a stakeholder.</li><li>A capability or property that a system shall have.</li><li>A documented representation of a need, capability or property.</li></ol>",
+                "text": "<p>A 'Requirement' is a singular documented physical and functional need that a particular design, product or process must be able to perform. <small>(<i>source: <a href=\"https://en.wikipedia.org/wiki/Requirement\">Wikipedia</a></i>)</small></p><p>Definition:</p><ol><li>A condition or capability needed by a user to solve a problem or achieve an objective.</li><li>A condition or capability that must be met or possessed by a system or system component to satisfy a contract, standard, specification, or other formally imposed documents.</li><li>A documented representation of a condition or capability as in (1) or (2).</li></ol><p>Note: The definition above is the classic one from IEEE Std 610.12 of 1990. Alternatively, we also give a more modern definition:</p><ol><li>A need perceived by a stakeholder.</li><li>A capability or property that a system shall have.</li><li>A documented representation of a need, capability or property.</li></ol>",
                 "language": "en"
+              },
+              {
+                "text": "<p>Eine 'Anforderung' ist ein einzelnes dokumentiertes physisches und funktionales Bedürfnis, das ein bestimmter Entwurf, ein Produkt oder ein Prozess erfüllen muss. <small>(<i>source: <a href=\"https://en.wikipedia.org/wiki/Requirement\">Wikipedia</a></i>)</small></p><p>Definition:</p><ol><li>Eine Bedingung oder Fähigkeit, die ein Benutzer benötigt, um ein Problem zu lösen oder ein Ziel zu erreichen.</li><li>Eine Bedingung oder Fähigkeit, die ein System oder eine Systemkomponente erfüllen oder besitzen muss, um einen Vertrag, eine Norm, eine Spezifikation oder ein anderes formal vorgeschriebenes Dokument zu erfüllen.</li><li>Eine dokumentierte Darstellung einer Bedingung oder Fähigkeit wie in (1) oder (2).</li></ol><p>Anmerkung: Die obige Definition ist die klassische Definition aus IEEE Std 610.12 von 1990. Alternativ geben wir auch eine modernere Definition an:</p><ol><li>Ein von einem Stakeholder wahrgenommener Bedarf.</li><li>Eine Fähigkeit oder Eigenschaft, die ein System haben soll.</li><li>Eine dokumentierte Darstellung eines Bedarfs, einer Fähigkeit oder Eigenschaft.</li></ol>",
+                "language": "de"
+              },
+              {
+                "text": "<p>Une 'Exigence' est un besoin physique et fonctionnel unique et documenté qu'une conception, un produit ou un processus particulier doit pouvoir satisfaire. <small>(<i>source: <a href=\"https://en.wikipedia.org/wiki/Requirement\">Wikipedia</a></i>)</small></p><p>Définition:</p><ol><li>Condition ou capacité dont un utilisateur a besoin pour résoudre un problème ou atteindre un objectif.</li><li>Condition ou capacité qui doit être remplie ou possédée par un système ou un composant de système pour satisfaire à un contrat, à une norme, à une spécification ou à d'autres documents imposés officiellement.</li><li>Une représentation documentée d'une condition ou d'une capacité comme dans (1) ou (2).</li></ol><p>Remarque: La définition ci-dessus est la définition classique de la norme IEEE 610.12 de 1990. Nous donnons également une définition plus moderne:</p><ol><li>Un besoin perçu par une partie prenante;</li><li>Une capacité ou une propriété qu'un système doit avoir.</li><li>Une représentation documentée d'un besoin, d'une capacité ou d'une propriété.</li></ol>",
+                "language": "fr"
               }
             ]
           ]
@@ -4636,7 +4644,7 @@
                 "language": "de"
               },
               {
-                "text": "<p>Un 'acteur' est un type d'élément de modèle fondamental représentant une entité active, qu'il s'agisse d'une activité, d'une étape de processus, d'une fonction, d'un composant de système ou d'un rôle.</p><p>L'utilisation particulière de FMC:Actor est spécifié avec une propriété [[dcterms:type]]. Les valeurs de cette propriété peuvent être des termes d'ontologie, tels que [[bpmn:timer]].</p>",
+                "text": "<p>Un 'Acteur' est un type d'élément de modèle fondamental représentant une entité active, qu'il s'agisse d'une activité, d'une étape de processus, d'une fonction, d'un composant de système ou d'un rôle.</p><p>L'utilisation particulière de FMC:Actor est spécifié avec une propriété [[dcterms:type]]. Les valeurs de cette propriété peuvent être des termes d'ontologie, tels que [[bpmn:timer]].</p>",
                 "language": "fr"
               }
             ]
@@ -4942,7 +4950,7 @@
                 "language": "de"
               },
               {
-                "text": "<p>Un 'événement' est un type d'élément de modèle fondamental représentant une référence temporelle, un changement de condition/valeur ou plus généralement une primitive de synchronisation.</p>",
+                "text": "<p>Un 'Événement' est un type d'élément de modèle fondamental représentant une référence temporelle, un changement de condition/valeur ou plus généralement une primitive de synchronisation.</p>",
                 "language": "fr"
               }
             ]
@@ -9503,8 +9511,12 @@
                 "language": "en"
               },
               {
-                "text": "Ein 'Merkmal' ist eine geplante Eigenschaft oder Funktion eines Systems, oft zur Stärkung der Wettbewerbsposition --> Alleinstellungsmerkmal.",
+                "text": "Ein 'Merkmal' ist eine geplante Eigenschaft oder Funktion eines Systems, oft ein Alleinstellungsmerkmal zur Stärkung der Wettbewerbsposition.",
                 "language": "de"
+              },
+              {
+                "text": "Une 'Caractéristique' est un trait distinctif intentionnel d'un système, souvent une proposition de vente unique.",
+                "language": "fr"
               }
             ]
           ]
@@ -10599,7 +10611,7 @@
       ]
     },
     {
-      "id": "R-K17xlb3lgp5mnjirIRnvgK3KVRE",
+      "id": "R-RdfType",
       "changedAt": "2023-02-21T08:51:40.300Z",
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -10625,6 +10637,27 @@
             [
               {
                 "text": "<p>A triple of the form: <em>R rdf:type C</em> states that C is an instance of <a href=\"https://www.w3.org/TR/rdf-schema/#ch_class\">rdfs:Class</a> and R is an instance of C.</p><p>The <a href=\"https://www.w3.org/TR/rdf-schema/#ch_domain\">rdfs:domain</a> of rdf:type is <a href=\"https://www.w3.org/TR/rdf-schema/#ch_resource\">rdfs:Resource</a>. The <a href=\"https://www.w3.org/TR/rdf-schema/#ch_range\">rdfs:range</a> of rdf:type is <a href=\"https://www.w3.org/TR/rdf-schema/#ch_class\">rdfs:Class</a>.</p>"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Type",
+                "language": "en"
+              },
+              {
+                "text": "Typ",
+                "language": "de"
+              },
+              {
+                "text": "Type",
+                "language": "fr"
               }
             ]
           ]
@@ -17582,6 +17615,10 @@
               {
                 "text": "Identifikator",
                 "language": "en"
+              },
+              {
+                "text": "Identifiant",
+                "language": "fr"
               }
             ]
           ]
@@ -18321,6 +18358,10 @@
               {
                 "text": "Beschreibung",
                 "language": "de"
+              },
+              {
+                "text": "Description",
+                "language": "fr"
               }
             ]
           ]
@@ -19158,6 +19199,10 @@
               {
                 "text": "Thema",
                 "language": "de"
+              },
+              {
+                "text": "Sujet",
+                "language": "fr"
               }
             ]
           ]
@@ -19181,7 +19226,7 @@
       ]
     },
     {
-      "id": "R-b3DL9XB52PQgr55iAD3eVaoBRvi",
+      "id": "R-DctermsSource",
       "changedAt": "2023-07-15T13:33:18.275Z",
       "revision": "48",
       "changedBy": "od",
@@ -19235,6 +19280,10 @@
               {
                 "text": "Quelle",
                 "language": "de"
+              },
+              {
+                "text": "Source",
+                "language": "fr"
               }
             ]
           ]
@@ -19274,7 +19323,7 @@
       ]
     },
     {
-      "id": "R-1357982112",
+      "id": "R-DctermsCreator",
       "changedAt": "2023-07-15T14:55:17.331Z",
       "revision": "115",
       "changedBy": "od",
@@ -19312,7 +19361,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-5"
+            "V-TermStatus-6"
           ]
         },
         {
@@ -19322,12 +19371,30 @@
           "values": [
             [
               {
+                "text": "created by",
+                "language": "en"
+              },
+              {
+                "text": "erstellt von",
+                "language": "de"
+              },
+              {
+                "text": "créé par",
+                "language": "fr"
+              }
+            ],
+            [
+              {
                 "text": "Author",
                 "language": "en"
               },
               {
                 "text": "Autor",
                 "language": "de"
+              },
+              {
+                "text": "Auteur",
+                "language": "fr"
               }
             ]
           ]
@@ -19389,7 +19456,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-6"
+            "V-TermStatus-5"
           ]
         }
       ]
@@ -19449,6 +19516,10 @@
               {
                 "text": "erstellt am",
                 "language": "de"
+              },
+              {
+                "text": "créé le",
+                "language": "fr"
               }
             ]
           ]
@@ -19518,6 +19589,10 @@
               {
                 "text": "erstellt am",
                 "language": "de"
+              },
+              {
+                "text": "créé le",
+                "language": "fr"
               }
             ]
           ]
@@ -19533,7 +19608,7 @@
       ]
     },
     {
-      "id": "R-852227626",
+      "id": "R-SpecifChangedby",
       "changedAt": "2018-02-17T14:51:53+01:00",
       "revision": "53",
       "changedBy": "od",
@@ -19568,6 +19643,27 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "changed by",
+                "language": "en"
+              },
+              {
+                "text": "geändert von",
+                "language": "de"
+              },
+              {
+                "text": "modifié par",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -19577,7 +19673,7 @@
       ]
     },
     {
-      "id": "R-852227624",
+      "id": "R-DctermsModifiedBy",
       "changedAt": "2023-07-15T14:46:26.835Z",
       "revision": "53",
       "changedBy": "od",
@@ -19631,6 +19727,10 @@
               {
                 "text": "geändert am",
                 "language": "de"
+              },
+              {
+                "text": "modifié le",
+                "language": "fr"
               }
             ]
           ]
@@ -20203,8 +20303,16 @@
           "values": [
             [
               {
-                "text": "Requirements are typically sub-classified into functional requirements ([[IREB:FunctionalRequirement]]), quality requirements ([[IREB:QualityRequirement]]) and constraints ([[IREB:Constraint]]). The latter two are also called non-functional requirements.",
+                "text": "According to the IREB, requirements are typically classified into functional requirements ([[IREB:FunctionalRequirement]]), quality requirements ([[IREB:QualityRequirement]]) and constraints ([[IREB:Constraint]]). The latter two are also called non-functional requirements.",
                 "language": "en"
+              },
+              {
+                "text": "Nach dem IREB werden Anforderungen üblicherweise in funktionale Anforderungen ([[IREB:FunctionalRequirement]]), Qualitätsanforderungen ([[IREB:QualityRequirement]]) und Einschränkungen ([[IREB:Constraint]]) unterteilt. Die beiden letzteren werden auch nicht-funktionale Anforderungen genannt.",
+                "language": "de"
+              },
+              {
+                "text": "Selon l'IREB, les exigences sont généralement classées en exigences fonctionnelles ([[IREB:FunctionalRequirement]]), en exigences de qualité ([[IREB:QualityRequirement]]) et en contraintes ([[IREB:Constraint]]). Ces deux dernières sont également appelées exigences non fonctionnelles.",
+                "language": "fr"
               }
             ]
           ]
@@ -21105,7 +21213,7 @@
       ]
     },
     {
-      "id": "R-Cd7SqmWcQQIRL2fD9FgciTM5FoP",
+      "id": "R-ReqifForeigncreatedthru",
       "changedAt": "2023-07-04T06:42:02.478Z",
       "revision": "76",
       "class": {
@@ -21132,6 +21240,27 @@
             [
               {
                 "text": "ReqIF.ForeignCreatedThru"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "created through",
+                "language": "en"
+              },
+              {
+                "text": "erstellt durch",
+                "language": "de"
+              },
+              {
+                "text": "créé par",
+                "language": "fr"
               }
             ]
           ]
@@ -21837,6 +21966,10 @@
               {
                 "text": "Änderungs-Beschreibung",
                 "language": "de"
+              },
+              {
+                "text": "Description de la modification",
+                "language": "fr"
               }
             ]
           ]
@@ -22105,7 +22238,7 @@
                 "language": "de"
               },
               {
-                "text": "Revision",
+                "text": "Révision",
                 "language": "fr"
               }
             ]
@@ -30522,7 +30655,7 @@
         "id": "R-1357982111"
       },
       "object": {
-        "id": "R-1357982112"
+        "id": "R-DctermsCreator"
       }
     },
     {
@@ -30552,7 +30685,7 @@
         "id": "R-852227625"
       },
       "object": {
-        "id": "R-852227624"
+        "id": "R-DctermsModifiedBy"
       }
     },
     {
@@ -34261,7 +34394,7 @@
         "id": "R-yrEmw0Vxmxa05PkfR5UOvFQV7yE"
       },
       "object": {
-        "id": "R-1357982112"
+        "id": "R-DctermsCreator"
       }
     },
     {
@@ -34378,7 +34511,7 @@
         "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
       },
       "object": {
-        "id": "R-1357982112"
+        "id": "R-DctermsCreator"
       }
     },
     {
@@ -34404,7 +34537,7 @@
         "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
       },
       "object": {
-        "id": "R-852227624"
+        "id": "R-DctermsModifiedBy"
       }
     },
     {
@@ -34469,7 +34602,7 @@
         "id": "R-EdkKEf7r7xDTpsQZWIlM3g6xFbq"
       },
       "object": {
-        "id": "R-K17xlb3lgp5mnjirIRnvgK3KVRE"
+        "id": "R-RdfType"
       }
     },
     {
@@ -37531,7 +37664,7 @@
             {
               "id": "N-IrK27RR5IpobOhnHM7OvKFV6828",
               "resource": {
-                "id": "R-K17xlb3lgp5mnjirIRnvgK3KVRE"
+                "id": "R-RdfType"
               },
               "changedAt": "2023-02-21T07:41:06.371Z"
             },
@@ -38317,14 +38450,14 @@
             {
               "id": "N-XpIIU2vOuJNhDKFVjm6IeQ3G88C",
               "resource": {
-                "id": "R-b3DL9XB52PQgr55iAD3eVaoBRvi"
+                "id": "R-DctermsSource"
               },
               "changedAt": "2023-07-15T13:24:09.349Z"
             },
             {
               "id": "N-7nRT3nl3NrfATb6sGTPCiaByEVy",
               "resource": {
-                "id": "R-1357982112"
+                "id": "R-DctermsCreator"
               },
               "changedAt": "2018-02-17T14:52:17+01:00",
               "revision": "114"
@@ -38356,7 +38489,7 @@
             {
               "id": "N-p1zm6hV2SkV3gbIxBakZIUACGs8",
               "resource": {
-                "id": "R-852227626"
+                "id": "R-SpecifChangedby"
               },
               "changedAt": "2018-02-17T14:52:17+01:00",
               "revision": "114"
@@ -38364,7 +38497,7 @@
             {
               "id": "N-nwjIiUBlXEfQVLKSelVCWhIoD58",
               "resource": {
-                "id": "R-852227624"
+                "id": "R-DctermsModifiedBy"
               },
               "changedAt": "2018-02-17T14:52:17+01:00",
               "revision": "114"
@@ -38508,7 +38641,7 @@
             {
               "id": "N-95XBSBJVDIet1HoRqu0mgBC9Vvl",
               "resource": {
-                "id": "R-Cd7SqmWcQQIRL2fD9FgciTM5FoP"
+                "id": "R-ReqifForeigncreatedthru"
               },
               "changedAt": "2023-07-04T06:42:02.478Z"
             },
