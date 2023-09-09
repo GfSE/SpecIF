@@ -7,9 +7,9 @@
     }
   ],
   "$schema": "https://specif.de/v1.1/schema.json",
-  "generator": "SpecIF Model-Integrator and Editor",
+  "generator": "SpecIF Modellintegrator und Editor",
   "generatorVersion": "1.1.q.2",
-  "createdAt": "2023-09-03T08:52:59.722Z",
+  "createdAt": "2023-09-06T22:22:42.272Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -3239,12 +3239,16 @@
           "values": [
             [
               {
-                "text": "<p>A 'View' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.</p>",
+                "text": "<p>A 'Model Diagram' is a graphical model view with a specific communication purpose, e.g. a business process or system composition.</p>",
                 "language": "en"
               },
               {
-                "text": "<p>Ein Diagramm ist eine graphische Modellsicht zur Vermittlung eines bestimmten Sachverhalts, z.B. ein Geschäftsprozess oder Systemaufbau.</p>",
+                "text": "<p>Ein Modelldiagramm ist eine graphische Modellsicht zur Vermittlung eines bestimmten Sachverhalts, z.B. ein Geschäftsprozess oder Systemaufbau.</p>",
                 "language": "de"
+              },
+              {
+                "text": "<p>Un 'diagramme de modèle' est une vue de modèle graphique ayant un objectif de communication spécifique, par exemple un processus d'entreprise ou la composition d'un système.</p>",
+                "language": "fr"
               }
             ]
           ]
@@ -5143,6 +5147,10 @@
               {
                 "text": "<p>Eine 'Kollektion' ist eine logische Gruppierung bestimmter Modellelemente, die per [[SpecIF:contains]] Relation zusammen gefasst sind. Sie entspricht einer <a href=\"https://camunda.com/bpmn/reference/\">'Gruppe'</a> in BPMN Diagrammen. <small>(<i>source: <a href=\"http://www.bpmn-tool.com/en/tutorial/\">BPMN Tutorial</a></i>)</small></p>",
                 "language": "de"
+              },
+              {
+                "text": "<p>Une 'collection' est un groupe logique (souvent conceptuel) de ressources liées par une déclaration [[SpecIF:contains]]. Elle correspond à un <a href=\"https://camunda.com/bpmn/reference/\">'groupe'</a> dans les diagrammes BPMN. <small>(<i>source: <a href=\"http://www.bpmn-tool.com/en/tutorial/\">BPMN Tutoriel</a></i>)</small></p>",
+                "language": "fr"
               }
             ]
           ]
@@ -5636,6 +5644,14 @@
               {
                 "text": "An Interaction-Room 'Annotation' indicates a point of special interest. Examples are customer or user value, product features with prominent benefit,effort or challenges during development.",
                 "language": "en"
+              },
+              {
+                "text": "Eine Interaction-Room 'Annotation' weist auf einen Punkt besonderen Interesses hin. Hierzu gehören Werte, die Kundenbedürfnisse widerspiegeln oder positiven Effekt auf die Ziele der Organisation haben, Produkteigenschaften, deren Umsetzung Nutzen/Aufwand verursacht, und Herausforderungen, die während der Entwicklung zu berücksichtigen sind.",
+                "language": "de"
+              },
+              {
+                "text": "Dans la méthode 'Interaction Room', une 'annotation' indique un point d'intérêt particulier. Il s'agit notamment des valeurs qui reflètent les besoins des clients ou qui ont un effet positif sur les objectifs de l'organisation, des caractéristiques du produit dont la mise en œuvre entraîne des avantages/efforts et des défis à prendre en compte pendant le développement.",
+                "language": "fr"
               }
             ]
           ]
@@ -5661,6 +5677,31 @@
               {
                 "text": "Annotation",
                 "language": "de"
+              },
+              {
+                "text": "Annotation",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Annotations",
+                "language": "en"
+              },
+              {
+                "text": "Annotationen",
+                "language": "de"
+              },
+              {
+                "text": "Annotations",
+                "language": "fr"
               }
             ]
           ]
@@ -5739,12 +5780,16 @@
           "values": [
             [
               {
-                "text": "<p>An 'Issue' is a question to answer or decision to take which is worth tracking.</p>",
+                "text": "An 'Issue' is a question to answer or decision to take which is worth tracking.",
                 "language": "en"
               },
               {
-                "text": "<p>Ein 'Offener Punkt ist eine zu beantwortende Frage oder eine zu treffende Entscheidung.</p>",
+                "text": "Ein 'Offener Punkt ist eine zu beantwortende Frage oder eine zu treffende Entscheidung.",
                 "language": "de"
+              },
+              {
+                "text": "Un 'problème' est une question à laquelle il faut répondre ou une décision à prendre qui mérite d'être suivie.",
+                "language": "fr"
               }
             ]
           ]
@@ -5778,6 +5823,10 @@
               {
                 "text": "Offener Punkt",
                 "language": "de"
+              },
+              {
+                "text": "Problème",
+                "language": "fr"
               }
             ]
           ]
@@ -5795,6 +5844,10 @@
               {
                 "text": "Offene Punkte",
                 "language": "de"
+              },
+              {
+                "text": "Problèmes",
+                "language": "fr"
               }
             ]
           ]
@@ -7806,10 +7859,7 @@
           "values": [
             [
               {
-                "text": "<p>A root of a document structure with references to resources.</p>"
-              },
-              {
-                "text": "<p>A root of a document structure with references to resources.</p>",
+                "text": "A root of a document structure with references to resources.",
                 "language": "en"
               }
             ]
@@ -7910,6 +7960,10 @@
               {
                 "text": "Gliederung",
                 "language": "de"
+              },
+              {
+                "text": "Arborescence",
+                "language": "fr"
               }
             ]
           ]
@@ -7927,6 +7981,10 @@
               {
                 "text": "Gliederungen",
                 "language": "de"
+              },
+              {
+                "text": "Arborescences",
+                "language": "fr"
               }
             ]
           ]
@@ -8195,6 +8253,10 @@
               {
                 "text": "Modellelemente (Glossar)",
                 "language": "de"
+              },
+              {
+                "text": "Élements de modèle (Glossaire)",
+                "language": "fr"
               }
             ]
           ]
@@ -8218,7 +8280,7 @@
       ]
     },
     {
-      "id": "R-Bf9tXTTOSyA9EIpXQCQDPXJnxAJ",
+      "id": "R-SpecifUnreferencedresources",
       "changedAt": "2023-06-08T14:47:36.276Z",
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -9030,7 +9092,8 @@
           "values": [
             [
               {
-                "text": "<p>A person or organization that has a (direct or indirect) influence on a system’s requirements. Indirect influence also includes situations where a person or organization is impacted by the system.</p><p>This is a subclass of [[FMC:Actor]], more precisely a value of it's property [[dcterms:type]].</p>"
+                "text": "<p>A person or organization that has a (direct or indirect) influence on a system’s requirements. Indirect influence also includes situations where a person or organization is impacted by the system.</p><p>This is a subclass of [[FMC:Actor]], more precisely a value of it's property [[dcterms:type]].</p>",
+                "language": "en"
               }
             ]
           ]
@@ -9116,8 +9179,12 @@
                 "language": "en"
               },
               {
-                "text": "Auftraggeber",
+                "text": "Kunde",
                 "language": "de"
+              },
+              {
+                "text": "Client",
+                "language": "fr"
               }
             ],
             [
@@ -9126,8 +9193,12 @@
                 "language": "en"
               },
               {
-                "text": "Kunde",
+                "text": "Auftraggeber",
                 "language": "de"
+              },
+              {
+                "text": "Client",
+                "language": "fr"
               }
             ],
             [
@@ -9138,6 +9209,10 @@
               {
                 "text": "Käufer",
                 "language": "de"
+              },
+              {
+                "text": "Acheteur",
+                "language": "fr"
               }
             ]
           ]
@@ -9202,8 +9277,12 @@
                 "language": "en"
               },
               {
-                "text": "Auftragnehmer",
+                "text": "Lieferant",
                 "language": "de"
+              },
+              {
+                "text": "Fournisseur",
+                "language": "fr"
               }
             ],
             [
@@ -9212,8 +9291,40 @@
                 "language": "en"
               },
               {
+                "text": "Anbieter",
+                "language": "de"
+              },
+              {
+                "text": "Vendeur",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "Service Provider",
+                "language": "en"
+              },
+              {
                 "text": "Dienstleister",
                 "language": "de"
+              },
+              {
+                "text": "Prestataire de Services",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "Contractor",
+                "language": "en"
+              },
+              {
+                "text": "Auftragnehmer",
+                "language": "de"
+              },
+              {
+                "text": "Contractant",
+                "language": "fr"
               }
             ],
             [
@@ -9224,6 +9335,10 @@
               {
                 "text": "Verkäufer",
                 "language": "de"
+              },
+              {
+                "text": "Vendeur",
+                "language": "fr"
               }
             ]
           ]
@@ -9413,7 +9528,7 @@
       ]
     },
     {
-      "id": "R-VXtiAplKLoeYA4innkDjQwRbsBC",
+      "id": "R-SpecifUserrole",
       "changedAt": "2018-03-10T05:35:15+01:00",
       "revision": "174",
       "changedBy": "od",
@@ -9440,7 +9555,8 @@
           "values": [
             [
               {
-                "text": "<p>This is a subclass of [[FMC:Actor]]; more precisely a value of it's property [[dcterms:type]].</p>"
+                "text": "<p>This is a subclass of [[FMC:Actor]]; more precisely a value of it's property [[dcterms:type]].</p>",
+                "language": "en"
               }
             ]
           ]
@@ -9462,6 +9578,14 @@
               {
                 "text": "User Role",
                 "language": "en"
+              },
+              {
+                "text": "Nutzerrolle",
+                "language": "de"
+              },
+              {
+                "text": "Rôle d'utilisateur",
+                "language": "fr"
               }
             ]
           ]
@@ -9864,6 +9988,10 @@
               {
                 "text": "Datenobjekt",
                 "language": "de"
+              },
+              {
+                "text": "Objet de données",
+                "language": "fr"
               }
             ]
           ]
@@ -10199,7 +10327,16 @@
           "values": [
             [
               {
-                "text": "enthält"
+                "text": "contains",
+                "language": "en"
+              },
+              {
+                "text": "enthält",
+                "language": "de"
+              },
+              {
+                "text": "contient",
+                "language": "fr"
               }
             ]
           ]
@@ -10290,7 +10427,16 @@
           "values": [
             [
               {
-                "text": "vereint"
+                "text": "unites",
+                "language": "en"
+              },
+              {
+                "text": "vereint",
+                "language": "de"
+              },
+              {
+                "text": "unit",
+                "language": "fr"
               }
             ]
           ]
@@ -10525,7 +10671,8 @@
           "values": [
             [
               {
-                "text": "implementiert"
+                "text": "implements",
+                "language": "en"
               }
             ]
           ]
@@ -11139,7 +11286,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-3"
+            "V-TermStatus-6"
           ]
         },
         {
@@ -11149,7 +11296,16 @@
           "values": [
             [
               {
-                "text": "ist implementiert von"
+                "text": "implemented by",
+                "language": "en"
+              },
+              {
+                "text": "implementiert durch",
+                "language": "de"
+              },
+              {
+                "text": "mis en œuvre par",
+                "language": "fr"
               }
             ]
           ]
@@ -11221,7 +11377,16 @@
           "values": [
             [
               {
-                "text": "implementiert"
+                "text": "implements",
+                "language": "en"
+              },
+              {
+                "text": "implementiert",
+                "language": "de"
+              },
+              {
+                "text": "met en œuvre",
+                "language": "fr"
               }
             ]
           ]
@@ -12127,7 +12292,30 @@
           "values": [
             [
               {
-                "text": "schreibt und liest"
+                "text": "accesses",
+                "language": "en"
+              },
+              {
+                "text": "schreibt und liest",
+                "language": "de"
+              },
+              {
+                "text": "écrit et lit",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "stores",
+                "language": "en"
+              },
+              {
+                "text": "speichert",
+                "language": "de"
+              },
+              {
+                "text": "enregistre",
+                "language": "fr"
               }
             ]
           ]
@@ -12206,7 +12394,30 @@
           "values": [
             [
               {
-                "text": "greift zu auf"
+                "text": "accesses",
+                "language": "en"
+              },
+              {
+                "text": "schreibt und liest",
+                "language": "de"
+              },
+              {
+                "text": "écrit et lit",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "stores",
+                "language": "en"
+              },
+              {
+                "text": "speichert",
+                "language": "de"
+              },
+              {
+                "text": "enregistre",
+                "language": "fr"
               }
             ]
           ]
@@ -15929,7 +16140,16 @@
           "values": [
             [
               {
-                "text": "erbt von"
+                "text": "inherits from",
+                "language": "en"
+              },
+              {
+                "text": "erbt von",
+                "language": "de"
+              },
+              {
+                "text": "hérite de",
+                "language": "fr"
               }
             ]
           ]
@@ -15998,6 +16218,10 @@
               {
                 "text": "erbt von",
                 "language": "de"
+              },
+              {
+                "text": "hérite de",
+                "language": "fr"
               }
             ]
           ]
@@ -16098,6 +16322,10 @@
               {
                 "text": "bezieht sich auf",
                 "language": "de"
+              },
+              {
+                "text": "concerne",
+                "language": "fr"
               }
             ]
           ]
@@ -16113,7 +16341,7 @@
       ]
     },
     {
-      "id": "R-MJ7v3BNtIjxFp1fbObmOgxceDnI",
+      "id": "R-IrRefersto",
       "changedAt": "2023-08-09T15:51:37.108Z",
       "revision": "38",
       "class": {
@@ -16139,8 +16367,16 @@
           "values": [
             [
               {
-                "text": "An Interaction Room annotation 'refers to' any other model element.",
+                "text": "An Interaction-Room annotation 'refers to' any other model element.",
                 "language": "en"
+              },
+              {
+                "text": "An Interaction-Room Annotation 'verweist' auf ein beliebiges anderes Modellelement.",
+                "language": "de"
+              },
+              {
+                "text": "Une annotation dans la méthode Interaction-Room 'fait référence' à tout autre élément de modèle.",
+                "language": "fr"
               }
             ]
           ]
@@ -16168,7 +16404,16 @@
           "values": [
             [
               {
-                "text": "bezieht sich auf"
+                "text": "refers to",
+                "language": "en"
+              },
+              {
+                "text": "bezieht sich auf",
+                "language": "de"
+              },
+              {
+                "text": "concerne",
+                "language": "fr"
               }
             ]
           ]
@@ -16245,7 +16490,16 @@
           "values": [
             [
               {
-                "text": "approves"
+                "text": "supports",
+                "language": "en"
+              },
+              {
+                "text": "unterstützt",
+                "language": "de"
+              },
+              {
+                "text": "soutient",
+                "language": "fr"
               }
             ]
           ]
@@ -16322,7 +16576,16 @@
           "values": [
             [
               {
-                "text": "opposes"
+                "text": "opposes",
+                "language": "en"
+              },
+              {
+                "text": "hemmt",
+                "language": "de"
+              },
+              {
+                "text": "s'oppose à",
+                "language": "fr"
               }
             ]
           ]
@@ -16346,7 +16609,7 @@
       ]
     },
     {
-      "id": "R-commentRefersTo",
+      "id": "R-SpecifCommentrefersto",
       "changedAt": "2023-07-16T15:43:23.947Z",
       "revision": "38",
       "class": {
@@ -16413,7 +16676,16 @@
           "values": [
             [
               {
-                "text": "bezieht sich auf"
+                "text": "refers to",
+                "language": "en"
+              },
+              {
+                "text": "bezieht sich auf",
+                "language": "de"
+              },
+              {
+                "text": "concerne",
+                "language": "fr"
               }
             ]
           ]
@@ -16437,7 +16709,7 @@
       ]
     },
     {
-      "id": "R-n5TinwmcGKVLAzriFYzkbsxwTcM",
+      "id": "R-SpecifIssuerefersto",
       "changedAt": "2023-07-16T15:43:33.028Z",
       "revision": "38",
       "class": {
@@ -16504,7 +16776,16 @@
           "values": [
             [
               {
-                "text": "bezieht sich auf"
+                "text": "refers to",
+                "language": "en"
+              },
+              {
+                "text": "bezieht sich auf",
+                "language": "de"
+              },
+              {
+                "text": "concerne",
+                "language": "fr"
               }
             ]
           ]
@@ -20478,8 +20759,12 @@
                 "language": "en"
               },
               {
-                "text": "The 'Lifecycle Status' of the resource.",
+                "text": "Der 'Lebenszyklusstatus' der Ressource.",
                 "language": "de"
+              },
+              {
+                "text": "L'état du cycle de vie de la ressource.",
+                "language": "fr"
               }
             ]
           ]
@@ -21114,7 +21399,7 @@
       ]
     },
     {
-      "id": "R-gykQkCrFppSRiXK6ZhaHciNzXah",
+      "id": "R-ReqifForeigncreatedon",
       "changedAt": "2023-07-15T14:57:43.236Z",
       "revision": "76",
       "class": {
@@ -21316,7 +21601,7 @@
       ]
     },
     {
-      "id": "R-gEB1L2zgFEUFBqSdm3mDtNygvOu",
+      "id": "R-ReqifForeignmodifiedby",
       "changedAt": "2023-07-15T14:58:28.757Z",
       "revision": "76",
       "class": {
@@ -22943,7 +23228,8 @@
           "values": [
             [
               {
-                "text": "Enumerated values for the 'Priority' of the resource."
+                "text": "Enumerated values for the 'Priority' of the resource.",
+                "language": "en"
               }
             ]
           ]
@@ -22973,7 +23259,16 @@
           "values": [
             [
               {
-                "text": "Size"
+                "text": "Size",
+                "language": "en"
+              },
+              {
+                "text": "Größe",
+                "language": "en"
+              },
+              {
+                "text": "Taille",
+                "language": "fr"
               }
             ]
           ]
@@ -23179,7 +23474,7 @@
       ]
     },
     {
-      "id": "R-rqGCa3SYXVRUr3LsyYVOAYv6Jwy",
+      "id": "R-SpecifEngineeringdiscipline",
       "changedAt": "2023-03-06T08:27:59.451Z",
       "revision": "78",
       "class": {
@@ -23297,7 +23592,7 @@
       ]
     },
     {
-      "id": "R-OMjsliPyaYhxvwFpOk6EECQLBsG",
+      "id": "R-SpecifDiscipline",
       "changedAt": "2023-08-29T12:44:26.520Z",
       "revision": "78",
       "class": {
@@ -23327,8 +23622,12 @@
                 "language": "en"
               },
               {
-                "text": "The engineering discipline involved by a development artefact.",
-                "language": "de-DE"
+                "text": "Die für ein Entwicklungsartefakt benötigte technische Disziplin.",
+                "language": "de"
+              },
+              {
+                "text": "La discipline d'ingénierie impliquée par un artefact de développement.",
+                "language": "fr"
               }
             ]
           ]
@@ -23363,7 +23662,11 @@
               },
               {
                 "text": "Ingenieurdisziplin",
-                "language": "de-DE"
+                "language": "de"
+              },
+              {
+                "text": "Discipline d'ingénierie",
+                "language": "fr"
               }
             ]
           ]
@@ -23403,7 +23706,7 @@
       ]
     },
     {
-      "id": "R-vWRT8rFyXKd4QqiPtDWtVyJVz8G",
+      "id": "R-SpecifStakeholdergroup",
       "changedAt": "2023-03-10T07:48:02.442Z",
       "revision": "78",
       "class": {
@@ -23506,7 +23809,7 @@
       ]
     },
     {
-      "id": "R-LJLB8HGelRBC3LNPsHCcllKXB9C",
+      "id": "R-SpecifPerspective",
       "changedAt": "2023-07-16T12:33:46.378Z",
       "revision": "78",
       "class": {
@@ -23593,6 +23896,10 @@
               {
                 "text": "Perspektive",
                 "language": "de"
+              },
+              {
+                "text": "Perspektive",
+                "language": "fr"
               }
             ]
           ]
@@ -23632,7 +23939,7 @@
       ]
     },
     {
-      "id": "R-852227533",
+      "id": "R-SpecifResponsible",
       "changedAt": "2018-02-17T14:52:01+01:00",
       "revision": "79",
       "changedBy": "od",
@@ -23686,6 +23993,10 @@
               {
                 "text": "Verantwortliche(r)",
                 "language": "de"
+              },
+              {
+                "text": "Responsable",
+                "language": "fr"
               }
             ]
           ]
@@ -23693,7 +24004,7 @@
       ]
     },
     {
-      "id": "R-pNAGqmFEwuFLkJApF0qXO8xyM5H",
+      "id": "R-SpecifAccountable",
       "changedAt": "2023-08-09T22:26:30.803Z",
       "revision": "79",
       "changedBy": "od",
@@ -23741,7 +24052,16 @@
           "values": [
             [
               {
-                "text": "Accountable"
+                "text": "Accountable",
+                "language": "en"
+              },
+              {
+                "text": "Rechenschaftspflichtige(r)",
+                "language": "de"
+              },
+              {
+                "text": "Responsable de la gestion",
+                "language": "fr"
               }
             ]
           ]
@@ -23765,7 +24085,7 @@
       ]
     },
     {
-      "id": "R-852227532",
+      "id": "R-SpecifMilestone",
       "changedAt": "2018-02-17T14:52:01+01:00",
       "revision": "80",
       "changedBy": "od",
@@ -23819,6 +24139,10 @@
               {
                 "text": "Meilenstein",
                 "language": "de"
+              },
+              {
+                "text": "Jalon",
+                "language": "fr"
               }
             ]
           ]
@@ -23826,7 +24150,7 @@
       ]
     },
     {
-      "id": "R-852227531",
+      "id": "R-SpecifDuedate",
       "changedAt": "2018-02-17T14:52:01+01:00",
       "revision": "81",
       "changedBy": "od",
@@ -23853,7 +24177,8 @@
           "values": [
             [
               {
-                "text": "A 'Due Date' for the resource."
+                "text": "A 'Due Date' for the resource.",
+                "language": "en"
               }
             ]
           ]
@@ -23879,6 +24204,10 @@
               {
                 "text": "Termin",
                 "language": "de"
+              },
+              {
+                "text": "Date limite",
+                "language": "fr"
               }
             ]
           ]
@@ -24030,7 +24359,7 @@
       ]
     },
     {
-      "id": "R-852227527",
+      "id": "R-SpecifIcon",
       "changedAt": "2023-08-08T16:16:39.158Z",
       "revision": "84",
       "changedBy": "od",
@@ -24092,6 +24421,14 @@
               {
                 "text": "Icon",
                 "language": "en"
+              },
+              {
+                "text": "Symbol",
+                "language": "de"
+              },
+              {
+                "text": "Symbole",
+                "language": "fr"
               }
             ]
           ]
@@ -24223,7 +24560,7 @@
       ]
     },
     {
-      "id": "R-852227526",
+      "id": "R-SpecifTag",
       "changedAt": "2023-08-09T22:16:38.670Z",
       "revision": "85",
       "changedBy": "od",
@@ -24258,7 +24595,16 @@
           "values": [
             [
               {
-                "text": "Tag"
+                "text": "Tag",
+                "language": "en"
+              },
+              {
+                "text": "Schlagwort",
+                "language": "de"
+              },
+              {
+                "text": "Mot-clé",
+                "language": "fr"
               }
             ]
           ]
@@ -24298,7 +24644,7 @@
       ]
     },
     {
-      "id": "R-Instantiation",
+      "id": "R-SpecifInstantiation",
       "changedAt": "2023-08-08T16:18:03.548Z",
       "revision": "86",
       "changedBy": "od",
@@ -24352,6 +24698,10 @@
               {
                 "text": "Instantiierung",
                 "language": "de"
+              },
+              {
+                "text": "Instanciation",
+                "language": "fr"
               }
             ]
           ]
@@ -24402,9 +24752,6 @@
           "values": [
             [
               {
-                "text": "\"manual\": user interface supports creation, update and deletion of the resource.\r\n\"auto\": the resource is created, updated or deleted by an algorithm."
-              },
-              {
                 "text": "'manual': user interface supports creation, update and deletion of the resource.\n'auto': the resource is created, updated or deleted by an algorithm.",
                 "language": "en"
               }
@@ -24438,7 +24785,7 @@
       ]
     },
     {
-      "id": "R-Origin",
+      "id": "R-SpecifOrigin",
       "changedAt": "2018-02-17T14:52:03+01:00",
       "revision": "88",
       "changedBy": "od",
@@ -24465,7 +24812,8 @@
           "values": [
             [
               {
-                "text": "The origin (source, reference) of an information or requirement"
+                "text": "The origin (source, reference) of an information or requirement",
+                "language": "en"
               }
             ]
           ]
@@ -24489,8 +24837,12 @@
                 "language": "en"
               },
               {
-                "text": "Ursprung",
+                "text": "Herkunft",
                 "language": "de"
+              },
+              {
+                "text": "Origine",
+                "language": "fr"
               }
             ]
           ]
@@ -24558,7 +24910,7 @@
       ]
     },
     {
-      "id": "R-852227502",
+      "id": "R-SpecifSource",
       "changedAt": "2018-02-17T14:52:03+01:00",
       "revision": "90",
       "changedBy": "od",
@@ -24585,7 +24937,8 @@
           "values": [
             [
               {
-                "text": "The subject of a subject-predicate-object statement."
+                "text": "The subject of a subject-predicate-object statement.",
+                "language": "en"
               }
             ]
           ]
@@ -24611,6 +24964,10 @@
               {
                 "text": "Quelle",
                 "language": "de"
+              },
+              {
+                "text": "Source",
+                "language": "fr"
               }
             ]
           ]
@@ -24678,7 +25035,7 @@
       ]
     },
     {
-      "id": "R-852227501",
+      "id": "R-SpecifTarget",
       "changedAt": "2018-02-17T14:52:04+01:00",
       "revision": "92",
       "changedBy": "od",
@@ -24705,7 +25062,8 @@
           "values": [
             [
               {
-                "text": "The object of a subject-predicate-object statement."
+                "text": "The object of a subject-predicate-object statement.",
+                "language": "en"
               }
             ]
           ]
@@ -24731,6 +25089,10 @@
               {
                 "text": "Ziel",
                 "language": "de"
+              },
+              {
+                "text": "Cible",
+                "language": "fr"
               }
             ]
           ]
@@ -26145,6 +26507,10 @@
               {
                 "text": "Zustand Kunde",
                 "language": "de"
+              },
+              {
+                "text": "Statut coté Client",
+                "language": "fr"
               }
             ]
           ]
@@ -26256,6 +26622,10 @@
               {
                 "text": "Kommentar Kunde",
                 "language": "de"
+              },
+              {
+                "text": "Commentaire du Client",
+                "language": "fr"
               }
             ]
           ]
@@ -26359,6 +26729,10 @@
               {
                 "text": "Zustand Lieferant",
                 "language": "de"
+              },
+              {
+                "text": "Statut coté Fournisseur",
+                "language": "fr"
               }
             ]
           ]
@@ -26470,6 +26844,10 @@
               {
                 "text": "Kommentar Lieferant",
                 "language": "de"
+              },
+              {
+                "text": "Commentaire du Client",
+                "language": "fr"
               }
             ]
           ]
@@ -27101,6 +27479,28 @@
               {
                 "text": "XL",
                 "language": "en"
+              },
+              {
+                "text": "XL",
+                "language": "de"
+              },
+              {
+                "text": "XL",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "very big",
+                "language": "en"
+              },
+              {
+                "text": "sehr groß",
+                "language": "de"
+              },
+              {
+                "text": "très grand",
+                "language": "fr"
               }
             ]
           ]
@@ -27135,7 +27535,8 @@
           "values": [
             [
               {
-                "text": "T-shirt sizes have become popular to classify [[IREB:Risk]], [[SpecIF:Damage]] or similar. Translates to 'large' in English."
+                "text": "T-shirt sizes have become popular to classify [[IREB:Risk]], [[SpecIF:Damage]] or similar. Translates to 'large' in English.",
+                "language": "en"
               }
             ]
           ]
@@ -27157,6 +27558,28 @@
               {
                 "text": "L",
                 "language": "en"
+              },
+              {
+                "text": "L",
+                "language": "de"
+              },
+              {
+                "text": "L",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "big",
+                "language": "en"
+              },
+              {
+                "text": "groß",
+                "language": "de"
+              },
+              {
+                "text": "grand",
+                "language": "fr"
               }
             ]
           ]
@@ -27191,7 +27614,8 @@
           "values": [
             [
               {
-                "text": "T-shirt sizes have become popular to classify [[IREB:Risk]], [[SpecIF:Damage]] or similar. Translates to 'medium' in English."
+                "text": "T-shirt sizes have become popular to classify [[IREB:Risk]], [[SpecIF:Damage]] or similar. Translates to 'medium' in English.",
+                "language": "en"
               }
             ]
           ]
@@ -27213,6 +27637,28 @@
               {
                 "text": "M",
                 "language": "en"
+              },
+              {
+                "text": "M",
+                "language": "de"
+              },
+              {
+                "text": "M",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "medium",
+                "language": "en"
+              },
+              {
+                "text": "mittel",
+                "language": "de"
+              },
+              {
+                "text": "moyen",
+                "language": "fr"
               }
             ]
           ]
@@ -27247,7 +27693,8 @@
           "values": [
             [
               {
-                "text": "T-shirt sizes have become popular to classify [[IREB:Risk]], [[SpecIF:Damage]] or similar. Translates to 'small' in English."
+                "text": "T-shirt sizes have become popular to classify [[IREB:Risk]], [[SpecIF:Damage]] or similar. Translates to 'small' in English.",
+                "language": "en"
               }
             ]
           ]
@@ -27269,6 +27716,28 @@
               {
                 "text": "S",
                 "language": "en"
+              },
+              {
+                "text": "S",
+                "language": "de"
+              },
+              {
+                "text": "S",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "small",
+                "language": "en"
+              },
+              {
+                "text": "klein",
+                "language": "de"
+              },
+              {
+                "text": "petit",
+                "language": "fr"
               }
             ]
           ]
@@ -27325,6 +27794,28 @@
               {
                 "text": "XS",
                 "language": "en"
+              },
+              {
+                "text": "XS",
+                "language": "de"
+              },
+              {
+                "text": "XS",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "very small",
+                "language": "en"
+              },
+              {
+                "text": "sehr klein",
+                "language": "de"
+              },
+              {
+                "text": "très petit",
+                "language": "fr"
               }
             ]
           ]
@@ -27415,6 +27906,14 @@
               {
                 "text": "drafted",
                 "language": "en"
+              },
+              {
+                "text": "entworfen",
+                "language": "de"
+              },
+              {
+                "text": "rédigé",
+                "language": "fr"
               }
             ],
             [
@@ -27463,6 +27962,14 @@
               {
                 "text": "submitted",
                 "language": "en"
+              },
+              {
+                "text": "vorgelegt",
+                "language": "de"
+              },
+              {
+                "text": "soumis",
+                "language": "fr"
               }
             ],
             [
@@ -27511,6 +28018,14 @@
               {
                 "text": "approved",
                 "language": "en"
+              },
+              {
+                "text": "genehmigt",
+                "language": "de"
+              },
+              {
+                "text": "approuvé",
+                "language": "fr"
               }
             ],
             [
@@ -27549,7 +28064,8 @@
           "values": [
             [
               {
-                "text": "Meets the requirements of the 'Definition of Ready' of the agile development method."
+                "text": "Meets the requirements of the 'Definition of Ready' of the agile development method.",
+                "language": "en"
               }
             ]
           ]
@@ -27603,7 +28119,8 @@
           "values": [
             [
               {
-                "text": "Meets the requirements of the 'Definition of Done' of the agile development method."
+                "text": "Meets the requirements of the 'Definition of Done' of the agile development method.",
+                "language": "en"
               }
             ]
           ]
@@ -27673,6 +28190,14 @@
               {
                 "text": "validated",
                 "language": "en"
+              },
+              {
+                "text": "validiert",
+                "language": "de"
+              },
+              {
+                "text": "validé",
+                "language": "fr"
               }
             ],
             [
@@ -27727,12 +28252,34 @@
               {
                 "text": "released",
                 "language": "en"
+              },
+              {
+                "text": "freigegeben",
+                "language": "de"
+              },
+              {
+                "text": "publié",
+                "language": "fr"
               }
             ],
             [
               {
                 "text": "80_released",
                 "language": "en"
+              }
+            ],
+            [
+              {
+                "text": "published",
+                "language": "en"
+              },
+              {
+                "text": "publiziert",
+                "language": "de"
+              },
+              {
+                "text": "publié",
+                "language": "fr"
               }
             ]
           ]
@@ -27775,6 +28322,14 @@
               {
                 "text": "deprecated",
                 "language": "en"
+              },
+              {
+                "text": "veraltet",
+                "language": "de"
+              },
+              {
+                "text": "dépassé",
+                "language": "fr"
               }
             ],
             [
@@ -27823,6 +28378,14 @@
               {
                 "text": "withdrawn",
                 "language": "en"
+              },
+              {
+                "text": "zurückgezogen",
+                "language": "de"
+              },
+              {
+                "text": "retiré",
+                "language": "fr"
               }
             ],
             [
@@ -27871,6 +28434,14 @@
               {
                 "text": "postponed",
                 "language": "en"
+              },
+              {
+                "text": "aufgeschoben",
+                "language": "de"
+              },
+              {
+                "text": "repoussé",
+                "language": "fr"
               }
             ],
             [
@@ -27919,6 +28490,14 @@
               {
                 "text": "rejected",
                 "language": "en"
+              },
+              {
+                "text": "abgelehnt",
+                "language": "de"
+              },
+              {
+                "text": "rejeté",
+                "language": "fr"
               }
             ],
             [
@@ -27975,6 +28554,14 @@
               {
                 "text": "experimental",
                 "language": "en"
+              },
+              {
+                "text": "experimentell",
+                "language": "de"
+              },
+              {
+                "text": "expérimental",
+                "language": "fr"
               }
             ]
           ]
@@ -28025,6 +28612,14 @@
               {
                 "text": "equivalent",
                 "language": "en"
+              },
+              {
+                "text": "äquivalent",
+                "language": "de"
+              },
+              {
+                "text": "équivalent",
+                "language": "fr"
               }
             ]
           ]
@@ -28980,7 +29575,7 @@
       ]
     },
     {
-      "id": "R-41aJpZ2KDSaFwondG5l1IF3j7j0",
+      "id": "R-IrebConstraint",
       "changedAt": "2023-07-16T10:27:09.611Z",
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -29053,6 +29648,10 @@
               {
                 "text": "Randbedingung",
                 "language": "de"
+              },
+              {
+                "text": "Contrainte",
+                "language": "fr"
               }
             ]
           ]
@@ -29246,6 +29845,10 @@
               {
                 "text": "Anwender",
                 "language": "de"
+              },
+              {
+                "text": "Utilisateur",
+                "language": "fr"
               }
             ]
           ]
@@ -29309,6 +29912,14 @@
               {
                 "text": "Operator",
                 "language": "en"
+              },
+              {
+                "text": "Operator",
+                "language": "de"
+              },
+              {
+                "text": "Opérateur",
+                "language": "fr"
               }
             ]
           ]
@@ -29372,6 +29983,14 @@
               {
                 "text": "System",
                 "language": "en"
+              },
+              {
+                "text": "System",
+                "language": "de"
+              },
+              {
+                "text": "Système",
+                "language": "fr"
               }
             ]
           ]
@@ -29421,7 +30040,7 @@
           "values": [
             [
               {
-                "text": "System Engineering",
+                "text": "System",
                 "language": "en"
               }
             ]
@@ -29472,8 +30091,16 @@
           "values": [
             [
               {
-                "text": "System Engineering",
+                "text": "System",
                 "language": "en"
+              },
+              {
+                "text": "System",
+                "language": "de"
+              },
+              {
+                "text": "Système",
+                "language": "fr"
               }
             ]
           ]
@@ -29529,6 +30156,10 @@
               {
                 "text": "Mechanik",
                 "language": "de"
+              },
+              {
+                "text": "Mécanique",
+                "language": "fr"
               }
             ]
           ]
@@ -29584,6 +30215,10 @@
               {
                 "text": "Elektronik",
                 "language": "de"
+              },
+              {
+                "text": "Électronique",
+                "language": "fr"
               }
             ]
           ]
@@ -29635,6 +30270,14 @@
               {
                 "text": "Software",
                 "language": "en"
+              },
+              {
+                "text": "Software",
+                "language": "de"
+              },
+              {
+                "text": "Logiciel",
+                "language": "fr"
               }
             ]
           ]
@@ -29690,6 +30333,10 @@
               {
                 "text": "Sicherheit",
                 "language": "de"
+              },
+              {
+                "text": "Sécurité",
+                "language": "fr"
               }
             ]
           ]
@@ -29722,7 +30369,8 @@
           "values": [
             [
               {
-                "text": "The requirement is relevant, but no evaluation is expected.\n- Attribute can be set to this value during the first transmission\n- Attribute can be changed to this value during the assessment process to indicate that a requirement must no longer be evaluated\n- Supplier can react with [[ReqIF-WF.SupplierStatus.ToBeClarified]] if he has objections to the non-evaluation. Otherwise, the SupplierStatus remains empty and the workflow ends."
+                "text": "The requirement is relevant, but no evaluation is expected.\n- Attribute can be set to this value during the first transmission\n- Attribute can be changed to this value during the assessment process to indicate that a requirement must no longer be evaluated\n- Supplier can react with [[ReqIF-WF.SupplierStatus.ToBeClarified]] if he has objections to the non-evaluation. Otherwise, the SupplierStatus remains empty and the workflow ends.",
+                "language": "en"
               }
             ]
           ]
@@ -29752,6 +30400,14 @@
               {
                 "text": "not to evaluate",
                 "language": "en"
+              },
+              {
+                "text": "nicht zu evaluieren",
+                "language": "de"
+              },
+              {
+                "text": "ne pas évaluer",
+                "language": "fr"
               }
             ],
             [
@@ -29790,7 +30446,8 @@
           "values": [
             [
               {
-                "text": "For the corresponding object an evaluation is expected by the supplier.\n- Attribute can be set to this value during the first transmission\n- Attribute can be changed to this value during the assessment process to indicate that a requirement has been modified and must be re-evaluated"
+                "text": "For the corresponding object an evaluation is expected by the supplier.\n- Attribute can be set to this value during the first transmission\n- Attribute can be changed to this value during the assessment process to indicate that a requirement has been modified and must be re-evaluated",
+                "language": "en"
               }
             ]
           ]
@@ -29820,6 +30477,14 @@
               {
                 "text": "to evaluate",
                 "language": "en"
+              },
+              {
+                "text": "zu evaluieren",
+                "language": "de"
+              },
+              {
+                "text": "pour évaluer",
+                "language": "fr"
               }
             ],
             [
@@ -29858,7 +30523,8 @@
           "values": [
             [
               {
-                "text": "The supplier evaluation is accepted by the customer."
+                "text": "The supplier evaluation is accepted by the customer.",
+                "language": "en"
               }
             ]
           ]
@@ -29888,6 +30554,14 @@
               {
                 "text": "accepted",
                 "language": "en"
+              },
+              {
+                "text": "akzeptiert",
+                "language": "de"
+              },
+              {
+                "text": "accepté",
+                "language": "fr"
               }
             ]
           ]
@@ -29920,7 +30594,8 @@
           "values": [
             [
               {
-                "text": "The supplier evaluation is not accepted by the customer.\n- Setting this status terminates the evaluation for this object. The conflict must be solved in the further project course outside of this workflow."
+                "text": "The supplier evaluation is not accepted by the customer.\n- Setting this status terminates the evaluation for this object. The conflict must be solved in the further project course outside of this workflow.",
+                "language": "en"
               }
             ]
           ]
@@ -29950,6 +30625,14 @@
               {
                 "text": "not accepted",
                 "language": "en"
+              },
+              {
+                "text": "nicht akzeptiert",
+                "language": "de"
+              },
+              {
+                "text": "non accepté",
+                "language": "fr"
               }
             ],
             [
@@ -29988,7 +30671,8 @@
           "values": [
             [
               {
-                "text": "The requirement has to be clarified with the supplier. Details in [[ReqIF-WF.CustomerComment]]."
+                "text": "The requirement has to be clarified with the supplier. Details in [[ReqIF-WF.CustomerComment]].",
+                "language": "en"
               }
             ]
           ]
@@ -30017,6 +30701,20 @@
             [
               {
                 "text": "to be clarified",
+                "language": "en"
+              },
+              {
+                "text": "zu klären",
+                "language": "de"
+              },
+              {
+                "text": "à préciser",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "to-clarify",
                 "language": "en"
               }
             ]
@@ -30050,7 +30748,8 @@
           "values": [
             [
               {
-                "text": "The requirement is marked as invalid and has to be discarded.\n\nNOTE: This value is OPTIONAL until the new ReqIF-WF process is well-established in industry."
+                "text": "The requirement is marked as invalid and has to be discarded.\n\nNOTE: This value is OPTIONAL until the new ReqIF-WF process is well-established in industry.",
+                "language": "en"
               }
             ]
           ]
@@ -30080,6 +30779,14 @@
               {
                 "text": "proposed to discard",
                 "language": "en"
+              },
+              {
+                "text": "vorgesehen zu löschen",
+                "language": "de"
+              },
+              {
+                "text": "proposé d'écarter",
+                "language": "fr"
               }
             ]
           ]
@@ -30112,7 +30819,8 @@
           "values": [
             [
               {
-                "text": "The requirement has been marked explicitly as discarded by the customer."
+                "text": "The requirement has been marked explicitly as discarded by the customer.",
+                "language": "en"
               }
             ]
           ]
@@ -30142,6 +30850,14 @@
               {
                 "text": "discarded",
                 "language": "en"
+              },
+              {
+                "text": "gelöscht",
+                "language": "de"
+              },
+              {
+                "text": "écarté",
+                "language": "fr"
               }
             ]
           ]
@@ -30174,7 +30890,8 @@
           "values": [
             [
               {
-                "text": "The supplier accepts the requirement."
+                "text": "The supplier accepts the requirement.",
+                "language": "en"
               }
             ]
           ]
@@ -30204,6 +30921,14 @@
               {
                 "text": "agreed",
                 "language": "en"
+              },
+              {
+                "text": "akzeptiert",
+                "language": "de"
+              },
+              {
+                "text": "accepté",
+                "language": "fr"
               }
             ]
           ]
@@ -30236,7 +30961,8 @@
           "values": [
             [
               {
-                "text": "The supplier does not accept the requirement. Details must be declared in [[ReqIF-WF.SupplierComment]]."
+                "text": "The supplier does not accept the requirement. Details must be declared in [[ReqIF-WF.SupplierComment]].",
+                "language": "en"
               }
             ]
           ]
@@ -30266,6 +30992,14 @@
               {
                 "text": "not agreed",
                 "language": "en"
+              },
+              {
+                "text": "nicht akzeptiert",
+                "language": "de"
+              },
+              {
+                "text": "non accepté",
+                "language": "fr"
               }
             ],
             [
@@ -30304,7 +31038,8 @@
           "values": [
             [
               {
-                "text": "The supplier accepts the requirement with restrictions. The restrictions are explained by the supplier in the comment attribute [[ReqIF-WF.SupplierComment]]."
+                "text": "The supplier accepts the requirement with restrictions. The restrictions are explained by the supplier in the comment attribute [[ReqIF-WF.SupplierComment]].",
+                "language": "en"
               }
             ]
           ]
@@ -30334,6 +31069,14 @@
               {
                 "text": "agreed with comment",
                 "language": "en"
+              },
+              {
+                "text": "akzeptiert mit Kommentar",
+                "language": "de"
+              },
+              {
+                "text": "accepté avec commentaire",
+                "language": "fr"
               }
             ],
             [
@@ -30372,7 +31115,8 @@
           "values": [
             [
               {
-                "text": "The supplier requires clarification. The supplier must actively clarify the matter with the customer. Details must be declared in [[ReqIF-WF.SupplierComment]]."
+                "text": "The supplier requires clarification. The supplier must actively clarify the matter with the customer. Details must be declared in [[ReqIF-WF.SupplierComment]].",
+                "language": "en"
               }
             ]
           ]
@@ -30402,6 +31146,14 @@
               {
                 "text": "to be clarified",
                 "language": "en"
+              },
+              {
+                "text": "zu klären",
+                "language": "de"
+              },
+              {
+                "text": "à préciser",
+                "language": "fr"
               }
             ],
             [
@@ -30440,7 +31192,8 @@
           "values": [
             [
               {
-                "text": "The supplier confirms that he will not implement the discarded requirement."
+                "text": "The supplier confirms that he will not implement the discarded requirement.",
+                "language": "en"
               }
             ]
           ]
@@ -30468,8 +31221,16 @@
           "values": [
             [
               {
-                "text": "discarded deployed",
+                "text": "discarded",
                 "language": "en"
+              },
+              {
+                "text": "gelöscht",
+                "language": "de"
+              },
+              {
+                "text": "écarté",
+                "language": "fr"
               }
             ]
           ]
@@ -30700,7 +31461,7 @@
         "id": "R-Creation"
       },
       "object": {
-        "id": "R-Instantiation"
+        "id": "R-SpecifInstantiation"
       }
     },
     {
@@ -30712,7 +31473,7 @@
         "id": "SC-isSynonymOfProperty"
       },
       "subject": {
-        "id": "R-852227502"
+        "id": "R-SpecifSource"
       },
       "object": {
         "id": "R-P1rwoI2N0vrJtJRTsdbTiSI6TWC"
@@ -30727,7 +31488,7 @@
         "id": "SC-isSynonymOfProperty"
       },
       "subject": {
-        "id": "R-852227501"
+        "id": "R-SpecifTarget"
       },
       "object": {
         "id": "R-BUqnNuFYckxT4WBUDNGstLBqEFI"
@@ -30769,7 +31530,7 @@
         "id": "R-cgOlaz2WHoymGVaXfhU5Qej5rUv"
       },
       "object": {
-        "id": "R-41aJpZ2KDSaFwondG5l1IF3j7j0"
+        "id": "R-IrebConstraint"
       }
     },
     {
@@ -31427,7 +32188,7 @@
         "id": "SC-isSpecializationOfPredicate"
       },
       "subject": {
-        "id": "R-commentRefersTo"
+        "id": "R-SpecifCommentrefersto"
       },
       "object": {
         "id": "R-SpecifRefersto"
@@ -31443,7 +32204,7 @@
         "id": "R-SpecifComment"
       },
       "object": {
-        "id": "R-commentRefersTo"
+        "id": "R-SpecifCommentrefersto"
       }
     },
     {
@@ -31456,7 +32217,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-commentRefersTo"
+        "id": "R-SpecifCommentrefersto"
       }
     },
     {
@@ -31469,7 +32230,7 @@
         "id": "R-FmcState"
       },
       "object": {
-        "id": "R-commentRefersTo"
+        "id": "R-SpecifCommentrefersto"
       }
     },
     {
@@ -31482,7 +32243,7 @@
         "id": "R-FmcEvent"
       },
       "object": {
-        "id": "R-commentRefersTo"
+        "id": "R-SpecifCommentrefersto"
       }
     },
     {
@@ -31625,7 +32386,7 @@
         "id": "R-SpecifParagraph"
       },
       "object": {
-        "id": "R-commentRefersTo"
+        "id": "R-SpecifCommentrefersto"
       }
     },
     {
@@ -31638,7 +32399,7 @@
         "id": "R-SpecifHeading"
       },
       "object": {
-        "id": "R-commentRefersTo"
+        "id": "R-SpecifCommentrefersto"
       }
     },
     {
@@ -31651,7 +32412,7 @@
         "id": "R-SpecifView"
       },
       "object": {
-        "id": "R-commentRefersTo"
+        "id": "R-SpecifCommentrefersto"
       }
     },
     {
@@ -31820,7 +32581,7 @@
         "id": "R-SpecifCollection"
       },
       "object": {
-        "id": "R-commentRefersTo"
+        "id": "R-SpecifCommentrefersto"
       }
     },
     {
@@ -32116,7 +32877,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-rqGCa3SYXVRUr3LsyYVOAYv6Jwy"
+        "id": "R-SpecifEngineeringdiscipline"
       },
       "object": {
         "id": "R-13hy7ukftnXpIJlbj9NYhFWWpcK"
@@ -32129,7 +32890,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-rqGCa3SYXVRUr3LsyYVOAYv6Jwy"
+        "id": "R-SpecifEngineeringdiscipline"
       },
       "object": {
         "id": "R-y7gjxoAqrIH9pLpX2cfjv2WBwFd"
@@ -32142,7 +32903,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-rqGCa3SYXVRUr3LsyYVOAYv6Jwy"
+        "id": "R-SpecifEngineeringdiscipline"
       },
       "object": {
         "id": "R-JHl6yAxw8aqYe5ML1n2JaOe8iYy"
@@ -32155,7 +32916,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-rqGCa3SYXVRUr3LsyYVOAYv6Jwy"
+        "id": "R-SpecifEngineeringdiscipline"
       },
       "object": {
         "id": "R-JPHg6k3k7BSUd5VYUzztPKQWrch"
@@ -32168,7 +32929,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-rqGCa3SYXVRUr3LsyYVOAYv6Jwy"
+        "id": "R-SpecifEngineeringdiscipline"
       },
       "object": {
         "id": "R-VNgkwEqTTnyAa2p9OAfLR4QuIko"
@@ -32402,10 +33163,10 @@
         "id": "SC-isSynonymOfProperty"
       },
       "subject": {
-        "id": "R-LJLB8HGelRBC3LNPsHCcllKXB9C"
+        "id": "R-SpecifPerspective"
       },
       "object": {
-        "id": "R-vWRT8rFyXKd4QqiPtDWtVyJVz8G"
+        "id": "R-SpecifStakeholdergroup"
       }
     },
     {
@@ -32418,7 +33179,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-vWRT8rFyXKd4QqiPtDWtVyJVz8G"
+        "id": "R-SpecifStakeholdergroup"
       }
     },
     {
@@ -32428,7 +33189,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-vWRT8rFyXKd4QqiPtDWtVyJVz8G"
+        "id": "R-SpecifStakeholdergroup"
       },
       "object": {
         "id": "R-vR9Pj5lYZkLiDunX49GVny7ecYr"
@@ -32441,7 +33202,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-vWRT8rFyXKd4QqiPtDWtVyJVz8G"
+        "id": "R-SpecifStakeholdergroup"
       },
       "object": {
         "id": "R-lMq64pJfCrK9rClxxibePbKDUK9"
@@ -32454,7 +33215,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-vWRT8rFyXKd4QqiPtDWtVyJVz8G"
+        "id": "R-SpecifStakeholdergroup"
       },
       "object": {
         "id": "R-4TtVilJwc6tIHX9bAaVJKFqg5ie"
@@ -32467,7 +33228,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-vWRT8rFyXKd4QqiPtDWtVyJVz8G"
+        "id": "R-SpecifStakeholdergroup"
       },
       "object": {
         "id": "R-zdqNwkUNjuvN4A2hfAoX3lPr5Ub"
@@ -32548,7 +33309,7 @@
         "id": "R-A8FDfIonVwNiywJ6pafbpIt3hqU"
       },
       "object": {
-        "id": "R-41aJpZ2KDSaFwondG5l1IF3j7j0"
+        "id": "R-IrebConstraint"
       }
     },
     {
@@ -33367,7 +34128,7 @@
         "id": "R-FmcPlan"
       },
       "object": {
-        "id": "R-commentRefersTo"
+        "id": "R-SpecifCommentrefersto"
       }
     },
     {
@@ -33484,7 +34245,7 @@
         "id": "R-SpecifRevision"
       },
       "object": {
-        "id": "R-commentRefersTo"
+        "id": "R-SpecifCommentrefersto"
       }
     },
     {
@@ -33926,7 +34687,7 @@
         "id": "R-NmS1wOWAGTpqlRhTi85i0C7iXkL"
       },
       "object": {
-        "id": "R-41aJpZ2KDSaFwondG5l1IF3j7j0"
+        "id": "R-IrebConstraint"
       }
     },
     {
@@ -34290,7 +35051,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-852227531"
+        "id": "R-SpecifDuedate"
       }
     },
     {
@@ -35054,7 +35815,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-LJLB8HGelRBC3LNPsHCcllKXB9C"
+        "id": "R-SpecifPerspective"
       },
       "object": {
         "id": "R-Bw7GKkSQtk6cTboeGMlNf5ymHgl"
@@ -35067,7 +35828,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-LJLB8HGelRBC3LNPsHCcllKXB9C"
+        "id": "R-SpecifPerspective"
       },
       "object": {
         "id": "R-d4eqF4gMBxKkHKqoocsGmBHt5TN"
@@ -35080,7 +35841,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-LJLB8HGelRBC3LNPsHCcllKXB9C"
+        "id": "R-SpecifPerspective"
       },
       "object": {
         "id": "R-rzxARP8YMKWuTfPpbNYEE8K2Olc"
@@ -35093,7 +35854,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-LJLB8HGelRBC3LNPsHCcllKXB9C"
+        "id": "R-SpecifPerspective"
       },
       "object": {
         "id": "R-R5YTxPTHbKKEOgZ6Di0udzxkp68"
@@ -35106,7 +35867,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-LJLB8HGelRBC3LNPsHCcllKXB9C"
+        "id": "R-SpecifPerspective"
       },
       "object": {
         "id": "R-1vbPKshYcsUWJd0IzM9WO9t2Dzf"
@@ -35639,7 +36400,7 @@
         "id": "SC-isSpecializationOfPredicate"
       },
       "subject": {
-        "id": "R-n5TinwmcGKVLAzriFYzkbsxwTcM"
+        "id": "R-SpecifIssuerefersto"
       },
       "object": {
         "id": "R-SpecifRefersto"
@@ -35993,7 +36754,7 @@
         "id": "R-dkrGwyqj77hck1EJsfzohypCi5T"
       },
       "object": {
-        "id": "R-MJ7v3BNtIjxFp1fbObmOgxceDnI"
+        "id": "R-IrRefersto"
       }
     },
     {
@@ -36003,7 +36764,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-MJ7v3BNtIjxFp1fbObmOgxceDnI"
+        "id": "R-IrRefersto"
       },
       "object": {
         "id": "R-SpecifRefersto"
@@ -36214,7 +36975,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-Instantiation"
+        "id": "R-SpecifInstantiation"
       }
     },
     {
@@ -36809,10 +37570,10 @@
         "id": "SC-isSynonymOfProperty"
       },
       "subject": {
-        "id": "R-OMjsliPyaYhxvwFpOk6EECQLBsG"
+        "id": "R-SpecifDiscipline"
       },
       "object": {
-        "id": "R-rqGCa3SYXVRUr3LsyYVOAYv6Jwy"
+        "id": "R-SpecifEngineeringdiscipline"
       }
     },
     {
@@ -36904,6 +37665,84 @@
       },
       "object": {
         "id": "R-isGeneralizationOf"
+      }
+    },
+    {
+      "id": "S-C2HwaHLELAievbt4BFstAjbRYYz",
+      "changedAt": "2023-09-06T21:13:03.053Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-SDJ68yzYCQB0cJ74tjNypSIwxoS"
+      },
+      "object": {
+        "id": "R-peoWlUxkzexUfWvhCTWU5m56HkX"
+      }
+    },
+    {
+      "id": "S-SamrvO8FkQVV8IWKfMan6GBuU8k",
+      "changedAt": "2023-09-06T21:13:28.465Z",
+      "class": {
+        "id": "SC-isSynonymOfProperty"
+      },
+      "subject": {
+        "id": "R-peoWlUxkzexUfWvhCTWU5m56HkX"
+      },
+      "object": {
+        "id": "R-DctermsModifiedBy"
+      }
+    },
+    {
+      "id": "S-3KDp6Jh9WYUIFJsrQepNE7Ic2KA",
+      "changedAt": "2023-09-06T21:14:37.904Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-SDJ68yzYCQB0cJ74tjNypSIwxoS"
+      },
+      "object": {
+        "id": "R-ReqifForeignmodifiedby"
+      }
+    },
+    {
+      "id": "S-hX3qHqPYjbw2kcdzc6GMaNID2U1",
+      "changedAt": "2023-09-06T21:14:50.496Z",
+      "class": {
+        "id": "SC-isSynonymOfProperty"
+      },
+      "subject": {
+        "id": "R-ReqifForeignmodifiedby"
+      },
+      "object": {
+        "id": "R-SpecifChangedby"
+      }
+    },
+    {
+      "id": "S-tgTTpSVtDqfFHQv9aYXBMYhzFHF",
+      "changedAt": "2023-09-06T22:22:18.550Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-SDJ68yzYCQB0cJ74tjNypSIwxoS"
+      },
+      "object": {
+        "id": "R-ReqifForeigncreatedon"
+      }
+    },
+    {
+      "id": "S-WybEByvFW3h6TUbwFEEDlpbcOKz",
+      "changedAt": "2023-09-06T22:22:31.521Z",
+      "class": {
+        "id": "SC-isSynonymOfProperty"
+      },
+      "subject": {
+        "id": "R-ReqifForeigncreatedon"
+      },
+      "object": {
+        "id": "R-1357982114"
       }
     }
   ],
@@ -37450,7 +38289,7 @@
             {
               "id": "N-hIibImmrtKX8ExkfHcRUVyIVHqX",
               "resource": {
-                "id": "R-Bf9tXTTOSyA9EIpXQCQDPXJnxAJ"
+                "id": "R-SpecifUnreferencedresources"
               },
               "changedAt": "2023-06-08T14:47:36.276Z"
             },
@@ -37562,7 +38401,7 @@
             {
               "id": "N-TXS7cXjDk45KW8FRLwe4fz3bL5x",
               "resource": {
-                "id": "R-VXtiAplKLoeYA4innkDjQwRbsBC"
+                "id": "R-SpecifUserrole"
               },
               "changedAt": "2023-08-25T08:10:14.414Z"
             },
@@ -38192,7 +39031,7 @@
             {
               "id": "N-4olks1Kd5Gb9I77I8e4HSq4uDWj",
               "resource": {
-                "id": "R-MJ7v3BNtIjxFp1fbObmOgxceDnI"
+                "id": "R-IrRefersto"
               },
               "changedAt": "2023-08-09T15:51:37.108Z"
             },
@@ -38213,7 +39052,7 @@
             {
               "id": "N-nBJ6HWgL8at84MLchAGeg5cp1S7",
               "resource": {
-                "id": "R-commentRefersTo"
+                "id": "R-SpecifCommentrefersto"
               },
               "changedAt": "2019-05-30T14:52:25+01:00",
               "revision": "114"
@@ -38221,7 +39060,7 @@
             {
               "id": "N-WAPtlcSRh7a5WMLoU45izmtagVn",
               "resource": {
-                "id": "R-n5TinwmcGKVLAzriFYzkbsxwTcM"
+                "id": "R-SpecifIssuerefersto"
               },
               "changedAt": "2023-07-16T15:42:34.742Z"
             },
@@ -38634,7 +39473,7 @@
             {
               "id": "N-99foieBguG3ZGrEt3qwhEn5b6gU",
               "resource": {
-                "id": "R-gykQkCrFppSRiXK6ZhaHciNzXah"
+                "id": "R-ReqifForeigncreatedon"
               },
               "changedAt": "2023-07-04T06:41:52.364Z"
             },
@@ -38648,7 +39487,7 @@
             {
               "id": "N-wiFgMXkXRKOK6CWSz3poUfF6hHY",
               "resource": {
-                "id": "R-gEB1L2zgFEUFBqSdm3mDtNygvOu"
+                "id": "R-ReqifForeignmodifiedby"
               },
               "changedAt": "2023-07-04T06:44:22.255Z"
             },
@@ -38783,35 +39622,35 @@
             {
               "id": "N-iXCWOjbOCFBXlLFMWNhKOmAzS32",
               "resource": {
-                "id": "R-rqGCa3SYXVRUr3LsyYVOAYv6Jwy"
+                "id": "R-SpecifEngineeringdiscipline"
               },
               "changedAt": "2023-03-06T08:22:23.869Z"
             },
             {
               "id": "N-rcszOQi7NGkxSempETzqDzHpf6v",
               "resource": {
-                "id": "R-OMjsliPyaYhxvwFpOk6EECQLBsG"
+                "id": "R-SpecifDiscipline"
               },
               "changedAt": "2023-08-29T12:44:26.520Z"
             },
             {
               "id": "N-Nv7AqTbhevdJt9zIVmKWq3YetRx",
               "resource": {
-                "id": "R-vWRT8rFyXKd4QqiPtDWtVyJVz8G"
+                "id": "R-SpecifStakeholdergroup"
               },
               "changedAt": "2023-03-10T07:48:02.442Z"
             },
             {
               "id": "N-REumue9tVx6XX3X5i8Ks8dpCYW5",
               "resource": {
-                "id": "R-LJLB8HGelRBC3LNPsHCcllKXB9C"
+                "id": "R-SpecifPerspective"
               },
               "changedAt": "2023-03-10T07:49:01.588Z"
             },
             {
               "id": "N-LnwIXgxRaAoVKJb4OdcMJWD8Dun",
               "resource": {
-                "id": "R-852227533"
+                "id": "R-SpecifResponsible"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38819,14 +39658,14 @@
             {
               "id": "N-5q7LeTaVz4Eno1i6J31PGK8a7C7",
               "resource": {
-                "id": "R-pNAGqmFEwuFLkJApF0qXO8xyM5H"
+                "id": "R-SpecifAccountable"
               },
               "changedAt": "2023-08-09T22:26:30.803Z"
             },
             {
               "id": "N-fyPWqD0PE5CgcQ7aGJhCnF7DQgh",
               "resource": {
-                "id": "R-852227532"
+                "id": "R-SpecifMilestone"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38834,7 +39673,7 @@
             {
               "id": "N-FyHFdDQvm4nvX2eLYiUc577f3By",
               "resource": {
-                "id": "R-852227531"
+                "id": "R-SpecifDuedate"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38858,7 +39697,7 @@
             {
               "id": "N-zJocp9JjHG2elHEEdSxJnWJEACU",
               "resource": {
-                "id": "R-852227527"
+                "id": "R-SpecifIcon"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38873,7 +39712,7 @@
             {
               "id": "N-ebrdGYUINTLQi3HqgVfz5TSqIlg",
               "resource": {
-                "id": "R-852227526"
+                "id": "R-SpecifTag"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38881,7 +39720,7 @@
             {
               "id": "N-EU6Gnj2cDIpkaAVSU9ETdcqxanL",
               "resource": {
-                "id": "R-Instantiation"
+                "id": "R-SpecifInstantiation"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38897,7 +39736,7 @@
             {
               "id": "N-PIwgZ5wmwLe2JPqrTin805c1oPC",
               "resource": {
-                "id": "R-Origin"
+                "id": "R-SpecifOrigin"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38913,7 +39752,7 @@
             {
               "id": "N-YPiexPDJ9UynFi78wIiG8OMMm1A",
               "resource": {
-                "id": "R-852227502"
+                "id": "R-SpecifSource"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38929,7 +39768,7 @@
             {
               "id": "N-vrhNq111NEtgB8PKy83TKafuYrE",
               "resource": {
-                "id": "R-852227501"
+                "id": "R-SpecifTarget"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -39389,7 +40228,7 @@
             {
               "id": "N-gbKKDh4RXPyIX8rl57ktNu53Rsh",
               "resource": {
-                "id": "R-41aJpZ2KDSaFwondG5l1IF3j7j0"
+                "id": "R-IrebConstraint"
               },
               "changedAt": "2020-11-08T16:03:21.815Z"
             },
