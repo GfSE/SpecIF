@@ -1,8 +1,5 @@
 # SpecIF Roles and Permissions
 
-.. to be completed
-
-
 ## Introduction
 
 A permission controls whether a user can create, read, update or delete a resource or a statement and its properties. 
@@ -20,8 +17,8 @@ A permission granted at project level is inherited by all instances; where permi
 - By Hierarchy: A node inherits all permissions of the parent node, unless permissions of its own are defined.
 A permission granted at project level is inherited by all instances; where permissions at a lower level override a permission at a higher level.
 
-Thus, the permissions of an individual resource are derived from both the class tree and the hierarchy tree with its nodes.
-However, the permissions of an individual statement are just derived from the class tree.
+Thus, the permissions of an individual *resource* are derived from both its class tree and the hierarchy tree with its nodes.
+The permissions of an individual *statement* are just derived from its class tree.
 
 ## Permission Concept
 
@@ -64,7 +61,7 @@ subordinated child nodes, unless overridden.
 
 ![SpecIF Project Metamodel](./images/ResourcePermissions-M1.png)
 
-A permission has a vector of binary attributes for basic access modes:
+A permission has a vector of a binary attribute per basic access mode:
 - C: Create
 - R: Read
 - U: Update
@@ -95,7 +92,29 @@ Effect: All instances of that class including their properties can just be seen 
 | a propertyClass | **true** | **true** | **true** | undefined |
 
 Effect: All instances of that class including their properties can be seen by the user. 
-The particular property can be created, read and updated, but not be deleted (to be discussed, whether this makes sense in practice ...)
+The particular property can be created, read and updated, but not be deleted (to be discussed, whether this makes sense in practice ...).
+
+| Target | C | R | U | D |
+|:--- |:---:|:---:|:---:|:---:|
+| a project | undefined | **true** | undefined | undefined |
+| a resourceClass | undefined | undefined | undefined | undefined |
+| a propertyClass | **true** | **true** | **true** | **true** |
+| a hierarchy root | undefined | undefined | undefined | undefined |
+| a node | undefined | undefined | undefined | undefined |
+
+Effect: The resource of that class and referenced by that node can be seen by the user including their properties. 
+The particular property can be created, read, updated and deleted.
+
+| Target | C | R | U | D |
+|:--- |:---:|:---:|:---:|:---:|
+| a project | **true** | **true** | **true** | **true** |
+| a resourceClass | undefined | undefined | undefined | undefined |
+| a propertyClass | undefined | undefined | undefined | undefined |
+| a hierarchy root | **false** | undefined | **false** | **false** |
+| a node | undefined | undefined | undefined | undefined |
+
+Effect: By class, all resource instances can be created, read, updated and deleted.
+However all resources referenced by nodes in that hierarchy can only be seen by the particular user. 
 
 ### Some Cases
 - Permissions per resource instance are defined both by class and by hierarchy: Access is allowed, if it is 
