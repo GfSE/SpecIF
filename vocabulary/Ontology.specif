@@ -18251,7 +18251,7 @@
               },
               {
                 "text": "Identifikator",
-                "language": "en"
+                "language": "de"
               },
               {
                 "text": "Identifiant",
@@ -18622,6 +18622,10 @@
               {
                 "text": "Begriff",
                 "language": "de"
+              },
+              {
+                "text": "Terme",
+                "language": "fr"
               }
             ]
           ]
@@ -20469,7 +20473,8 @@
           "values": [
             [
               {
-                "text": "geändert am"
+                "text": "changed at"
+                "language": "en"
               }
             ]
           ]
@@ -20539,6 +20544,10 @@
               {
                 "text": "Mitwirkende(r)",
                 "language": "de"
+              },
+              {
+                "text": "Contributeur",
+                "language": "fr"
               }
             ]
           ]
@@ -20677,6 +20686,10 @@
               {
                 "text": "Rechte",
                 "language": "de"
+              },
+              {
+                "text": "Droits",
+                "language": "fr"
               }
             ]
           ]
@@ -21331,7 +21344,7 @@
               },
               {
                 "text": "Lebenszyklus",
-                "language": "de-DE"
+                "language": "de"
               },
               {
                 "text": "Cycle de vie",
@@ -22147,7 +22160,8 @@
           "values": [
             [
               {
-                "text": "Revision"
+                "text": "Revision",
+                "language": "en"
               }
             ]
           ]
@@ -22450,14 +22464,6 @@
               {
                 "text": "Fit Criteria",
                 "language": "en"
-              },
-              {
-                "text": "Abnahme-Kriterien",
-                "language": "de"
-              },
-              {
-                "text": "Critères d'acceptation",
-                "language": "fr"
               }
             ]
           ]
@@ -22938,6 +22944,10 @@
               {
                 "text": "Domäne",
                 "language": "de"
+              },
+              {
+                "text": "Domaine",
+                "language": "fr"
               }
             ]
           ]
@@ -23574,7 +23584,7 @@
               },
               {
                 "text": "Größe",
-                "language": "en"
+                "language": "de"
               },
               {
                 "text": "Taille",
@@ -23883,6 +23893,10 @@
               {
                 "text": "Ingenieurdisziplin",
                 "language": "de"
+              },
+              {
+                "text": "Discipline d'ingénierie",
+                "language": "fr"
               }
             ]
           ]
@@ -23981,14 +23995,6 @@
               {
                 "text": "Engineering Discipline",
                 "language": "en"
-              },
-              {
-                "text": "Ingenieurdisziplin",
-                "language": "de"
-              },
-              {
-                "text": "Discipline d'ingénierie",
-                "language": "fr"
               }
             ]
           ]
@@ -24850,7 +24856,16 @@
           "values": [
             [
               {
-                "text": "Unit"
+                "text": "Unit",
+                "language": "en"
+              },
+              {
+                "text": "Einheit",
+                "language": "de"
+              },
+              {
+                "text": "Unité",
+                "language": "fr"
               }
             ]
           ]
@@ -25233,6 +25248,10 @@
               {
                 "text": "Subjekt",
                 "language": "de"
+              },
+              {
+                "text": "Sujet",
+                "language": "fr"
               }
             ]
           ]
@@ -25294,10 +25313,6 @@
               {
                 "text": "Quelle",
                 "language": "de"
-              },
-              {
-                "text": "Source",
-                "language": "fr"
               }
             ]
           ]
@@ -25358,6 +25373,10 @@
               {
                 "text": "Objekt",
                 "language": "de"
+              },
+              {
+                "text": "Objet",
+                "language": "fr"
               }
             ]
           ]
@@ -25471,6 +25490,10 @@
               {
                 "text": "Abnahme-Kriterien",
                 "language": "de"
+              },
+              {
+                "text": "Critères d'acceptation",
+                "language": "fr"
               }
             ]
           ]
@@ -25730,7 +25753,7 @@
       ]
     },
     {
-      "id": "R-O3Dxwts5uxXVgKgNbmPaKc2QGFt",
+      "id": "R-SpecifIsheading",
       "changedAt": "2023-08-09T12:34:07.769Z",
       "class": {
         "id": "RC-SpecifTermpropertyclassboolean"
@@ -25802,6 +25825,10 @@
               {
                 "text": "Überschrift",
                 "language": "de"
+              },
+              {
+                "text": "Intitulé",
+                "language": "fr"
               }
             ]
           ]
@@ -25897,6 +25924,10 @@
               {
                 "text": "ungerichtet",
                 "language": "de"
+              },
+              {
+                "text": "non orienté",
+                "language": "fr"
               }
             ]
           ]
@@ -26180,6 +26211,10 @@
               {
                 "text": "Textformat",
                 "language": "de"
+              },
+              {
+                "text": "Format de texte",
+                "language": "fr"
               }
             ]
           ]
@@ -26291,6 +26326,10 @@
               {
                 "text": "max. Länge",
                 "language": "de"
+              },
+              {
+                "text": "Longueur max.",
+                "language": "fr"
               }
             ]
           ]
@@ -26378,6 +26417,10 @@
               {
                 "text": "min. Wert",
                 "language": "de"
+              },
+              {
+                "text": "Valeur min.",
+                "language": "fr"
               }
             ]
           ]
@@ -26481,6 +26524,10 @@
               {
                 "text": "max. Wert",
                 "language": "de"
+              },
+              {
+                "text": "Valeur max.",
+                "language": "fr"
               }
             ]
           ]
@@ -26576,6 +26623,10 @@
               {
                 "text": "min. Wert",
                 "language": "de"
+              },
+              {
+                "text": "Valeur min.",
+                "language": "fr"
               }
             ]
           ]
@@ -26655,6 +26706,10 @@
               {
                 "text": "max. Wert",
                 "language": "de"
+              },
+              {
+                "text": "Valeur max.",
+                "language": "fr"
               }
             ]
           ]
@@ -26734,6 +26789,10 @@
               {
                 "text": "Dezimalstellen",
                 "language": "de"
+              },
+              {
+                "text": "Décimales",
+                "language": "fr"
               }
             ]
           ]
@@ -29014,6 +29073,14 @@
               {
                 "text": "Mechanics",
                 "language": "en"
+              },
+              {
+                "text": "Mechanik",
+                "language": "de"
+              },
+              {
+                "text": "Mecanique",
+                "language": "fr"
               }
             ]
           ]
@@ -29078,6 +29145,14 @@
               {
                 "text": "Electronics",
                 "language": "en"
+              },
+              {
+                "text": "Elektronik",
+                "language": "de"
+              },
+              {
+                "text": "Électronique",
+                "language": "fr"
               }
             ]
           ]
@@ -29142,6 +29217,10 @@
               {
                 "text": "Software",
                 "language": "en"
+              },
+              {
+                "text": "Logiciel",
+                "language": "fr"
               }
             ]
           ]
@@ -29206,6 +29285,14 @@
               {
                 "text": "Safety",
                 "language": "en"
+              },
+              {
+                "text": "Sicherheit",
+                "language": "de"
+              },
+              {
+                "text": "Sécurité",
+                "language": "fr"
               }
             ]
           ]
@@ -29629,14 +29716,6 @@
               {
                 "text": "Function or User Story",
                 "language": "en"
-              },
-              {
-                "text": "Funktion or User Story",
-                "language": "de"
-              },
-              {
-                "text": "Function ou récit d'utilisateur",
-                "language": "fr"
               }
             ]
           ]
@@ -29843,6 +29922,10 @@
               {
                 "text": "Funktionsanforderung oder 'User Story'",
                 "language": "de"
+              },
+              {
+                "text": "Exigence de function ou récit d'utilisateur",
+                "language": "fr"
               }
             ]
           ]
@@ -29923,6 +30006,10 @@
               {
                 "text": "Qualitätsanforderung",
                 "language": "de"
+              },
+              {
+                "text": "Exigence de qualité",
+                "language": "fr"
               }
             ]
           ]
@@ -30448,14 +30535,6 @@
               {
                 "text": "System",
                 "language": "en"
-              },
-              {
-                "text": "System",
-                "language": "de"
-              },
-              {
-                "text": "Système",
-                "language": "fr"
               }
             ]
           ]
@@ -30507,14 +30586,6 @@
               {
                 "text": "Mechanics",
                 "language": "en"
-              },
-              {
-                "text": "Mechanik",
-                "language": "de"
-              },
-              {
-                "text": "Mécanique",
-                "language": "fr"
               }
             ]
           ]
@@ -30564,7 +30635,7 @@
           "values": [
             [
               {
-                "text": "Elektronics",
+                "text": "Electronics",
                 "language": "en"
               },
               {
@@ -30625,14 +30696,6 @@
               {
                 "text": "Software",
                 "language": "en"
-              },
-              {
-                "text": "Software",
-                "language": "de"
-              },
-              {
-                "text": "Logiciel",
-                "language": "fr"
               }
             ]
           ]
@@ -30684,14 +30747,6 @@
               {
                 "text": "Safety",
                 "language": "en"
-              },
-              {
-                "text": "Sicherheit",
-                "language": "de"
-              },
-              {
-                "text": "Sécurité",
-                "language": "fr"
               }
             ]
           ]
@@ -40128,7 +40183,7 @@
             {
               "id": "N-4NNJ5LAGvM0FxkVd3sjPgPstCNx",
               "resource": {
-                "id": "R-O3Dxwts5uxXVgKgNbmPaKc2QGFt"
+                "id": "R-SpecifIsheading"
               },
               "changedAt": "2023-07-17T09:04:24.609Z"
             },
