@@ -2812,8 +2812,12 @@
                 "language": "en"
               },
               {
-                "text": "Textabschnitt",
+                "text": "Textabsatz",
                 "language": "de"
+              },
+              {
+                "text": "Paragraphe",
+                "language": "fr"
               }
             ]
           ]
@@ -2825,7 +2829,16 @@
           "values": [
             [
               {
-                "text": "Textabschnitte"
+                "text": "Paragraphs",
+                "language": "en"
+              },
+              {
+                "text": "Textabsätze",
+                "language": "de"
+              },
+              {
+                "text": "Paragraphes",
+                "language": "fr"
               }
             ]
           ]
@@ -3044,6 +3057,10 @@
               {
                 "text": "Überschrift",
                 "language": "de"
+              },
+              {
+                "text": "Intitulé",
+                "language": "fr"
               }
             ],
             [
@@ -3054,6 +3071,10 @@
               {
                 "text": "Kapitelüberschrift",
                 "language": "de"
+              },
+              {
+                "text": "Rubrique",
+                "language": "fr"
               }
             ]
           ]
@@ -3095,7 +3116,7 @@
       ]
     },
     {
-      "id": "R-dv38GNTWcvnuuf1POJiNEMfVCAc",
+      "id": "R-SpecifFolder",
       "changedAt": "2023-08-08T21:36:49.031Z",
       "revision": "5",
       "class": {
@@ -3121,7 +3142,7 @@
           "values": [
             [
               {
-                "text": "A 'Folder' is a chapter title at any level with optional description.",
+                "text": "A 'Folder' may appear at any level with optional description.",
                 "language": "en"
               },
               {
@@ -3160,6 +3181,10 @@
               {
                 "text": "Ordner",
                 "language": "de"
+              },
+              {
+                "text": "Dossier",
+                "language": "fr"
               }
             ]
           ]
@@ -3177,6 +3202,10 @@
               {
                 "text": "Ordner",
                 "language": "de"
+              },
+              {
+                "text": "Dossiers",
+                "language": "fr"
               }
             ]
           ]
@@ -3757,7 +3786,7 @@
           "values": [
             [
               {
-                "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-exclamation-diamond\" viewBox=\"0 0 16 16\"><path d=\"M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z\"/><path d=\"M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z\"/></svg>"
+                "text": "&#8623;"
               }
             ]
           ]
@@ -10017,7 +10046,7 @@
       ]
     },
     {
-      "id": "R-iJx5dgsdqxgoddiQ2v1AnqieTFE",
+      "id": "R-ArchimateDataobject",
       "changedAt": "2023-08-09T22:24:02.850Z",
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -10237,7 +10266,7 @@
       ]
     },
     {
-      "id": "R-1756321082",
+      "id": "R-SpecifShows",
       "changedAt": "2023-02-26T21:30:23.975Z",
       "revision": "21",
       "class": {
@@ -10448,7 +10477,7 @@
       ]
     },
     {
-      "id": "R-avfLHb1MY1BCYBAI4bCCin5iSuU",
+      "id": "R-ArchimateUnites",
       "changedAt": "2023-07-16T12:53:15.596Z",
       "revision": "163",
       "class": {
@@ -10548,7 +10577,7 @@
       ]
     },
     {
-      "id": "R-3Xs1RjozTkqzXwdRzl7SEEW2ATW",
+      "id": "R-FmcContains",
       "changedAt": "2023-03-16T11:15:01.707Z",
       "revision": "163",
       "class": {
@@ -10647,7 +10676,7 @@
       ]
     },
     {
-      "id": "R-1756321084",
+      "id": "R-SpecifSatisfies",
       "changedAt": "2018-02-17T14:51:46+01:00",
       "revision": "25",
       "changedBy": "od",
@@ -10711,7 +10740,7 @@
       ]
     },
     {
-      "id": "R-1756321085",
+      "id": "R-SpecifImplements",
       "changedAt": "2023-07-15T16:27:31.710Z",
       "revision": "26",
       "changedBy": "od",
@@ -10924,7 +10953,7 @@
       ]
     },
     {
-      "id": "R-852227586",
+      "id": "R-OslcrmSatisfies",
       "changedAt": "2023-03-06T08:36:54.308Z",
       "revision": "164",
       "class": {
@@ -11003,7 +11032,7 @@
       ]
     },
     {
-      "id": "R-852227587",
+      "id": "R-OslcrmSatisfiedby",
       "changedAt": "2023-03-08T16:57:09.440Z",
       "revision": "24",
       "class": {
@@ -11053,15 +11082,15 @@
           "values": [
             [
               {
-                "text": "is satisfied by",
+                "text": "satisfied by",
                 "language": "en"
               },
               {
-                "text": "wird erfüllt von",
+                "text": "erfüllt von",
                 "language": "de"
               },
               {
-                "text": "est satisfait par",
+                "text": "satisfait par",
                 "language": "fr"
               }
             ]
@@ -11103,7 +11132,7 @@
       ]
     },
     {
-      "id": "R-852227594",
+      "id": "R-OslcrmElaborates",
       "changedAt": "2023-03-06T11:05:00.481Z",
       "revision": "63",
       "class": {
@@ -11129,7 +11158,8 @@
           "values": [
             [
               {
-                "text": "The object is elaborated by the subject. For example, a use case elaborates a requirement."
+                "text": "The object is elaborated by the subject. For example, a use case elaborates a requirement.",
+                "language": "en"
               }
             ]
           ]
@@ -11153,7 +11183,7 @@
       ]
     },
     {
-      "id": "R-852227595",
+      "id": "R-OslcrmElaboratedby",
       "changedAt": "2018-02-17T14:51:56+01:00",
       "revision": "62",
       "changedBy": "od",
@@ -11180,7 +11210,8 @@
           "values": [
             [
               {
-                "text": "The subject is elaborated by the object."
+                "text": "The subject is elaborated by the object.",
+                "language": "en"
               }
             ]
           ]
@@ -11188,7 +11219,7 @@
       ]
     },
     {
-      "id": "R-852227592",
+      "id": "R-OslcrmSpecifies",
       "changedAt": "2018-02-17T14:51:57+01:00",
       "revision": "64",
       "changedBy": "od",
@@ -11215,7 +11246,8 @@
           "values": [
             [
               {
-                "text": "The object is specified by the subject. For example, a requirement specifies a model element."
+                "text": "The object is specified by the subject. For example, a requirement specifies a model element.",
+                "language": "en"
               }
             ]
           ]
@@ -11223,7 +11255,7 @@
       ]
     },
     {
-      "id": "R-852227593",
+      "id": "R-OslcrmSpecifiedby",
       "changedAt": "2018-02-17T14:51:57+01:00",
       "revision": "63",
       "changedBy": "od",
@@ -11250,7 +11282,8 @@
           "values": [
             [
               {
-                "text": "The subject is specified by the object."
+                "text": "The subject is specified by the object.",
+                "language": "en"
               }
             ]
           ]
@@ -11258,7 +11291,7 @@
       ]
     },
     {
-      "id": "R-852227591",
+      "id": "R-OslcrmAffectedby",
       "changedAt": "2018-02-17T14:51:57+01:00",
       "revision": "65",
       "changedBy": "od",
@@ -11285,7 +11318,8 @@
           "values": [
             [
               {
-                "text": "Requirement is affected by a resource, such as a defect or issue."
+                "text": "Requirement is affected by a resource, such as a defect or issue.",
+                "language": "en"
               }
             ]
           ]
@@ -11320,7 +11354,8 @@
           "values": [
             [
               {
-                "text": "Resource, such as a change request, which tracks this requirement."
+                "text": "Resource, such as a change request, which tracks this requirement.",
+                "language": "en"
               }
             ]
           ]
@@ -11328,7 +11363,7 @@
       ]
     },
     {
-      "id": "R-852227589",
+      "id": "R-OslcrmImplementedby",
       "changedAt": "2023-07-15T16:23:56.407Z",
       "revision": "67",
       "changedBy": "od",
@@ -11409,7 +11444,7 @@
       ]
     },
     {
-      "id": "R-BVr6wrRMtNWMXswofg8B1u6jj9M",
+      "id": "R-OslcrmImplements",
       "changedAt": "2023-07-15T16:28:08.155Z",
       "revision": "67",
       "changedBy": "od",
@@ -11863,7 +11898,7 @@
       ]
     },
     {
-      "id": "R-852227562",
+      "id": "R-OslcrmConstrainedby",
       "changedAt": "2018-02-17T14:51:58+01:00",
       "revision": "71",
       "changedBy": "od",
@@ -12876,7 +12911,7 @@
       ]
     },
     {
-      "id": "R-4mbIWkda6HAw9UURbKcwjduPLFl",
+      "id": "R-ArchimateIsrealizedby",
       "changedAt": "2023-07-16T13:30:10.527Z",
       "revision": "28",
       "class": {
@@ -13027,7 +13062,7 @@
       ]
     },
     {
-      "id": "R-wHJdaUoL1OblRkwOFfDvjeJuEI5",
+      "id": "R-FmcCommunicateswith",
       "changedAt": "2023-03-15T09:13:54.786Z",
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -13052,7 +13087,7 @@
           "values": [
             [
               {
-                "text": "SpecIF:communicatesWith"
+                "text": "FMC:communicatesWith"
               }
             ]
           ]
@@ -13785,7 +13820,7 @@
       ]
     },
     {
-      "id": "R-traces",
+      "id": "R-SysmlTraces",
       "changedAt": "2023-07-16T13:19:21.205Z",
       "revision": "33",
       "class": {
@@ -13866,7 +13901,7 @@
       ]
     },
     {
-      "id": "R-isDerivedFrom",
+      "id": "R-SysmlIsderivedfrom",
       "changedAt": "2023-07-16T15:25:39.149Z",
       "revision": "33",
       "class": {
@@ -13935,12 +13970,16 @@
           "values": [
             [
               {
-                "text": "is derived from",
+                "text": "derived from",
                 "language": "en"
               },
               {
-                "text": "ist abgeleitet von",
+                "text": "abgeleitet von",
                 "language": "de"
+              },
+              {
+                "text": "dérivé de",
+                "language": "fr"
               }
             ]
           ]
@@ -14131,15 +14170,15 @@
           "values": [
             [
               {
-                "text": "is refined by",
+                "text": "refined by",
                 "language": "en"
               },
               {
-                "text": "wird verfeinert durch",
+                "text": "verfeinert durch",
                 "language": "de"
               },
               {
-                "text": "est affiné de",
+                "text": "affiné de",
                 "language": "fr"
               }
             ]
@@ -14631,7 +14670,7 @@
       ]
     },
     {
-      "id": "R-1388621277",
+      "id": "R-UmlIscomposedof",
       "changedAt": "2023-08-09T21:55:55.119Z",
       "revision": "36",
       "class": {
@@ -14698,12 +14737,16 @@
           "values": [
             [
               {
-                "text": "composes",
+                "text": "composed of",
                 "language": "en"
               },
               {
                 "text": "besteht zwingend aus",
                 "language": "de"
+              },
+              {
+                "text": "est composé de",
+                "language": "fr"
               }
             ]
           ]
@@ -14727,7 +14770,7 @@
       ]
     },
     {
-      "id": "R-QjkuXWU4PENz5YbdXsAbVbexXlm",
+      "id": "R-SysmlIscomposedof",
       "changedAt": "2023-07-16T15:28:16.989Z",
       "revision": "36",
       "class": {
@@ -14782,12 +14825,8 @@
           "values": [
             [
               {
-                "text": "composes",
+                "text": "composed of",
                 "language": "en"
-              },
-              {
-                "text": "besteht zwingend aus",
-                "language": "de"
               }
             ]
           ]
@@ -14811,7 +14850,7 @@
       ]
     },
     {
-      "id": "R-uGhJflKYTw1ajCBpFGIksjcQLT1",
+      "id": "R-ArchimateIscomposedof",
       "changedAt": "2023-07-16T15:06:50.059Z",
       "revision": "36",
       "class": {
@@ -14907,7 +14946,7 @@
       ]
     },
     {
-      "id": "R-7FyVxfhNhHrjpuLXubWfLAiDCTz",
+      "id": "R-ArchimateComposes",
       "changedAt": "2023-07-16T09:07:59.795Z",
       "revision": "36",
       "class": {
@@ -14980,6 +15019,10 @@
               {
                 "text": "besteht zwingend aus",
                 "language": "de"
+              },
+              {
+                "text": "compose",
+                "language": "fr"
               }
             ]
           ]
@@ -15003,7 +15046,7 @@
       ]
     },
     {
-      "id": "R-YgTiYTzOi3BDJhLi3iXMFu6OiUb",
+      "id": "R-UmlComposes",
       "changedAt": "2023-07-16T09:08:16.606Z",
       "revision": "36",
       "class": {
@@ -15029,7 +15072,7 @@
           "values": [
             [
               {
-                "text": "SysML:composes"
+                "text": "UML:composes"
               }
             ]
           ]
@@ -15076,6 +15119,10 @@
               {
                 "text": "besteht zwingend aus",
                 "language": "de"
+              },
+              {
+                "text": "compose",
+                "language": "fr"
               }
             ]
           ]
@@ -15099,7 +15146,7 @@
       ]
     },
     {
-      "id": "R-isAggregatedBy",
+      "id": "R-UmlIsaggregatedby",
       "changedAt": "2023-03-16T14:50:39.241Z",
       "revision": "36",
       "class": {
@@ -15125,7 +15172,7 @@
           "values": [
             [
               {
-                "text": "SysML:isAggregatedBy"
+                "text": "UML:isAggregatedBy"
               }
             ]
           ]
@@ -15137,7 +15184,8 @@
           "values": [
             [
               {
-                "text": "<p>An [[FMC:Actor]] is aggregated by another [[FMC:Actor]].</p>"
+                "text": "An [[FMC:Actor]] is aggregated by another [[FMC:Actor]].",
+                "language": "en"
               }
             ]
           ]
@@ -15169,8 +15217,12 @@
                 "language": "en"
               },
               {
-                "text": "aggregiert von",
+                "text": "besteht aus",
                 "language": "de"
+              },
+              {
+                "text": "aggregé de",
+                "language": "fr"
               }
             ]
           ]
@@ -15194,7 +15246,7 @@
       ]
     },
     {
-      "id": "R-7XW7mYAVcLXuAsoHZH8MEJrViSd",
+      "id": "R-UmlAggregates",
       "changedAt": "2023-07-16T15:18:33.748Z",
       "revision": "36",
       "class": {
@@ -15267,6 +15319,10 @@
               {
                 "text": "aggregiert",
                 "language": "de"
+              },
+              {
+                "text": "agrégat",
+                "language": "fr"
               }
             ]
           ]
@@ -15290,7 +15346,7 @@
       ]
     },
     {
-      "id": "R-pMtxnz4mXgf9RTnPjWcF3dSlCFV",
+      "id": "R-SysmlAggegates",
       "changedAt": "2023-07-16T15:18:56.227Z",
       "revision": "36",
       "class": {
@@ -15374,7 +15430,7 @@
       ]
     },
     {
-      "id": "R-Yc7HI3d6yOMd6xnl37Vcht6lfzw",
+      "id": "R-ArchimateAggregates",
       "changedAt": "2023-07-16T09:13:26.686Z",
       "revision": "36",
       "class": {
@@ -15911,12 +15967,16 @@
           "values": [
             [
               {
-                "text": "specializes",
+                "text": "specialized of",
                 "language": "en"
               },
               {
-                "text": "spezialisiert",
+                "text": "spezialisiert von",
                 "language": "de"
+              },
+              {
+                "text": "spécialisée de",
+                "language": "fr"
               }
             ]
           ]
@@ -15940,7 +16000,7 @@
       ]
     },
     {
-      "id": "R-OZvSiGmgwEIwM8pxT3wwzWHtjRf",
+      "id": "R-UmlIsspecialisationof",
       "changedAt": "2023-08-09T12:27:30.006Z",
       "revision": "36",
       "class": {
@@ -15955,19 +16015,6 @@
             [
               {
                 "text": "UML:isSpecialisationOf"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "A FMC:Actor is a specialization of another FMC:Actor; similarly for FMC:State and FMC:Event.",
-                "language": "en"
               }
             ]
           ]
@@ -15997,10 +16044,6 @@
               {
                 "text": "specializes",
                 "language": "en"
-              },
-              {
-                "text": "spezialisiert",
-                "language": "de"
               }
             ]
           ]
@@ -16016,7 +16059,7 @@
       ]
     },
     {
-      "id": "R-isGeneralizationOf",
+      "id": "R-UmlIsgeneralizationof",
       "changedAt": "2023-08-09T12:27:41.538Z",
       "revision": "36",
       "class": {
@@ -16083,12 +16126,16 @@
           "values": [
             [
               {
-                "text": "generalizes",
+                "text": "generalized of",
                 "language": "en"
               },
               {
-                "text": "generalisiert",
+                "text": "generalisiert von",
                 "language": "de"
+              },
+              {
+                "text": "generalisé de",
+                "language": "fr"
               }
             ]
           ]
@@ -16112,7 +16159,7 @@
       ]
     },
     {
-      "id": "R-3YVqYkzhtVVysNFh8YWH9yl99HL",
+      "id": "R-UmlIsgeneralisationof",
       "changedAt": "2023-08-09T12:28:14.575Z",
       "revision": "36",
       "class": {
@@ -16127,19 +16174,6 @@
             [
               {
                 "text": "UML:isGeneralisationOf"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "A FMC:Actor is a generalization of another FMC:Actor; similarly for FMC:State and FMC:Event.",
-                "language": "en"
               }
             ]
           ]
@@ -16222,7 +16256,7 @@
       ]
     },
     {
-      "id": "R-ueykXi2K5CIfgRsrsgTGBBRxNKX",
+      "id": "R-SysmlIsspecialisationof",
       "changedAt": "2023-09-03T08:50:30.953Z",
       "revision": "36",
       "class": {
@@ -16281,7 +16315,7 @@
       ]
     },
     {
-      "id": "R-SXlt4EbTFdv3O2la3qGE6PtcB70",
+      "id": "R-SpecifIsgeneralizationof",
       "changedAt": "2023-08-09T12:30:28.654Z",
       "revision": "36",
       "class": {
@@ -16340,7 +16374,7 @@
       ]
     },
     {
-      "id": "R-d9Y8KpLqOavXiKMm8UuzmkgemXt",
+      "id": "R-SysmlIsgeneralizationof",
       "changedAt": "2023-09-03T08:51:33.793Z",
       "revision": "36",
       "class": {
@@ -16399,7 +16433,7 @@
       ]
     },
     {
-      "id": "R-inheritsFrom",
+      "id": "R-SpecifInheritsFrom",
       "changedAt": "2023-08-09T21:42:49.108Z",
       "revision": "37",
       "class": {
@@ -16471,7 +16505,7 @@
       ]
     },
     {
-      "id": "R-1LfStrmrwjEUbKCnOkVvQDEVY8t",
+      "id": "R-IrInheritsFrom",
       "changedAt": "2023-08-09T21:42:35.339Z",
       "revision": "37",
       "class": {
@@ -16743,7 +16777,7 @@
       ]
     },
     {
-      "id": "R-2J3aKb6Es6jZtYaTCtMEbox5gMD",
+      "id": "R-IrApproves",
       "changedAt": "2023-08-09T21:40:04.757Z",
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -16829,7 +16863,7 @@
       ]
     },
     {
-      "id": "R-RHKxprYhYO6rmqjjckneFHcPZzD",
+      "id": "R-IrOpposes",
       "changedAt": "2023-08-09T21:40:29.719Z",
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -17196,7 +17230,7 @@
       ]
     },
     {
-      "id": "R-g4yCxQAgNQtEUffXpPaZOgWrtkQ",
+      "id": "R-SpecifIssynonymof",
       "changedAt": "2023-08-09T11:52:55.749Z",
       "revision": "39",
       "class": {
@@ -17263,12 +17297,16 @@
           "values": [
             [
               {
-                "text": "is Synonym of",
+                "text": "Synonym of",
                 "language": "en"
               },
               {
-                "text": "ist Synonym von",
+                "text": "Synonym von",
                 "language": "de"
+              },
+              {
+                "text": "Synonyme de",
+                "language": "fr"
               }
             ]
           ]
@@ -17292,7 +17330,7 @@
       ]
     },
     {
-      "id": "R-AFRDjW5KgLsmjsqS7vSeHKFdAqD",
+      "id": "R-SpecifIsinverseof",
       "changedAt": "2023-08-09T11:53:31.991Z",
       "revision": "193",
       "class": {
@@ -17343,7 +17381,7 @@
       ]
     },
     {
-      "id": "R-fX8L25Labq7NOQMfmfudzpsntyb",
+      "id": "R-SpecifIsantnonymof",
       "changedAt": "2023-08-09T11:53:20.756Z",
       "revision": "193",
       "class": {
@@ -17410,12 +17448,16 @@
           "values": [
             [
               {
-                "text": "is Antonym of",
+                "text": "Antonym of",
                 "language": "en"
               },
               {
-                "text": "ist Antonym von",
+                "text": "Antonym von",
                 "language": "de"
+              },
+              {
+                "text": "Antonyme de",
+                "language": "fr"
               }
             ]
           ]
@@ -17439,7 +17481,7 @@
       ]
     },
     {
-      "id": "R-YTOSDlz3Xir8PPxpeTxUJiYqlJp",
+      "id": "R-SpecifIspluralof",
       "changedAt": "2023-08-22T08:02:34.792Z",
       "revision": "193",
       "class": {
@@ -17493,15 +17535,15 @@
           "values": [
             [
               {
-                "text": "is Plural of",
+                "text": "Plural of",
                 "language": "en"
               },
               {
-                "text": "ist Plural von",
+                "text": "Plural von",
                 "language": "de"
               },
               {
-                "text": "est le pluriel de",
+                "text": "Pluriel de",
                 "language": "fr"
               }
             ]
@@ -17593,15 +17635,15 @@
           "values": [
             [
               {
-                "text": "is identical with",
+                "text": "identical with",
                 "language": "en"
               },
               {
-                "text": "ist identisch mit",
+                "text": "identisch mit",
                 "language": "de"
               },
               {
-                "text": "est identique à",
+                "text": "identique à",
                 "language": "fr"
               }
             ]
@@ -17626,7 +17668,7 @@
       ]
     },
     {
-      "id": "R-1388621251",
+      "id": "R-SpecifSameas",
       "changedAt": "2023-03-15T07:43:14.250Z",
       "revision": "41",
       "class": {
@@ -17677,7 +17719,7 @@
       ]
     },
     {
-      "id": "R-MLrNWkTjsAXAjhx37p6UkvxKzEQ",
+      "id": "R-SpecifIsnamespace",
       "changedAt": "2023-08-09T23:15:21.033Z",
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -17730,11 +17772,11 @@
           "values": [
             [
               {
-                "text": "is namespace for",
+                "text": "namespace for",
                 "language": "en"
               },
               {
-                "text": "ist Namensraum von",
+                "text": "Namensraum von",
                 "language": "de"
               }
             ]
@@ -17751,7 +17793,7 @@
       ]
     },
     {
-      "id": "R-MxwBcoVecPlYMGyCifQQvOCFECy",
+      "id": "R-SpecifHasproperty",
       "changedAt": "2023-08-18T10:13:22.702Z",
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -17825,7 +17867,7 @@
       ]
     },
     {
-      "id": "R-XFituq3uLki95FFEzETyCs0bcUs",
+      "id": "R-SpecifHasenumvalue",
       "changedAt": "2023-08-25T07:58:15.565Z",
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -17982,15 +18024,15 @@
           "values": [
             [
               {
-                "text": "is eligible as Subject",
+                "text": "eligible as Subject",
                 "language": "en"
               },
               {
-                "text": "ist zulässig als Subjekt",
+                "text": "zulässig als Subjekt",
                 "language": "de"
               },
               {
-                "text": "est éligible comme sujet",
+                "text": "éligible comme sujet",
                 "language": "fr"
               }
             ]
@@ -18073,15 +18115,15 @@
           "values": [
             [
               {
-                "text": "is eligible as Object",
+                "text": "eligible as Object",
                 "language": "en"
               },
               {
-                "text": "ist zulässig als Objekt",
+                "text": "zulässig als Objekt",
                 "language": "de"
               },
               {
-                "text": "est éligible comme objet",
+                "text": "éligible comme objet",
                 "language": "fr"
               }
             ]
@@ -18278,6 +18320,19 @@
         },
         {
           "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "The original identifier of the resource ('object' in terms of ReqIF).",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-LocalTerm"
           },
           "values": [
@@ -18289,6 +18344,10 @@
               {
                 "text": "Originalbezeichner",
                 "language": "de"
+              },
+              {
+                "text": "Identifiant d'origine",
+                "language": "fr"
               }
             ]
           ]
@@ -18323,6 +18382,14 @@
           },
           "values": [
             "V-TextFormat-10"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "32"
           ]
         }
       ]
@@ -18397,6 +18464,10 @@
               {
                 "text": "Name",
                 "language": "de"
+              },
+              {
+                "text": "Nom",
+                "language": "fr"
               }
             ],
             [
@@ -18407,6 +18478,10 @@
               {
                 "text": "Titel",
                 "language": "de"
+              },
+              {
+                "text": "Titre",
+                "language": "fr"
               }
             ]
           ]
@@ -18630,6 +18705,10 @@
               {
                 "text": "Name",
                 "language": "de"
+              },
+              {
+                "text": "Nom",
+                "language": "fr"
               }
             ]
           ]
@@ -18744,8 +18823,12 @@
                 "language": "en"
               },
               {
-                "text": "Überschrift",
+                "text": "Kapitelüberschrift",
                 "language": "de"
+              },
+              {
+                "text": "Titre du chapitre",
+                "language": "fr"
               }
             ]
           ]
@@ -18845,6 +18928,10 @@
               {
                 "text": "Kapitelnummer",
                 "language": "de"
+              },
+              {
+                "text": "Numéro de chapitre",
+                "language": "fr"
               }
             ]
           ]
@@ -21338,12 +21425,8 @@
           "values": [
             [
               {
-                "text": "The 'Lifecycle Status' of the resource.",
-                "language": "en"
-              },
-              {
                 "text": "The 'status' of the ontology term.",
-                "language": "de"
+                "language": "en"
               }
             ]
           ]
@@ -21464,108 +21547,22 @@
               {
                 "text": "Originalstatus",
                 "language": "de"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "The 'Lifecycle Status' of the resource."
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-3"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-5"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-multiple"
-          },
-          "values": [
-            "false"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TextFormat"
-          },
-          "values": [
-            "V-TextFormat-10"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-StringMaxLength"
-          },
-          "values": [
-            "32"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-Ayn8qoHEenYwKadS4akuD5hKHck",
-      "changedAt": "2023-08-08T20:40:29.117Z",
-      "revision": "76",
-      "class": {
-        "id": "RC-SpecifTermpropertyclassstring"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifRevision"
-          },
-          "values": [
-            [
-              {
-                "text": "1.2"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "ReqIF.ForeignID"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "The 'Lifecycle Status' of the resource."
               },
               {
-                "text": "The 'Lifecycle Status' of the resource.",
-                "language": "en"
+                "text": "Statut d'origine",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "The 'Lifecycle Status' of the resource."
               }
             ]
           ]
@@ -21588,27 +21585,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "Original ID"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
             "id": "PC-multiple"
-          },
-          "values": [
-            "false"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-multiLanguage"
           },
           "values": [
             "false"
@@ -21689,10 +21666,6 @@
               {
                 "text": "Author",
                 "language": "en"
-              },
-              {
-                "text": "Autor",
-                "language": "de"
               }
             ]
           ]
@@ -21788,10 +21761,6 @@
               {
                 "text": "created on",
                 "language": "en"
-              },
-              {
-                "text": "erstellt am",
-                "language": "de"
               }
             ]
           ]
@@ -21896,7 +21865,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-5"
+            "V-TermStatus-1"
           ]
         },
         {
@@ -21990,10 +21959,6 @@
               {
                 "text": "modified by",
                 "language": "en"
-              },
-              {
-                "text": "geändert von",
-                "language": "de"
               }
             ]
           ]
@@ -22089,10 +22054,6 @@
               {
                 "text": "modified on",
                 "language": "en"
-              },
-              {
-                "text": "geändert am",
-                "language": "de"
               }
             ]
           ]
@@ -22493,6 +22454,10 @@
               {
                 "text": "Abnahme-Kriterien",
                 "language": "de"
+              },
+              {
+                "text": "Critères d'acceptation",
+                "language": "fr"
               }
             ]
           ]
@@ -22679,6 +22644,10 @@
               {
                 "text": "Projekt",
                 "language": "de"
+              },
+              {
+                "text": "Projet",
+                "language": "fr"
               }
             ]
           ]
@@ -22770,6 +22739,10 @@
               {
                 "text": "Anhänge",
                 "language": "de"
+              },
+              {
+                "text": "Pièces jointes",
+                "language": "fr"
               }
             ]
           ]
@@ -31630,10 +31603,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-1756321084"
+        "id": "R-SpecifSatisfies"
       },
       "object": {
-        "id": "R-852227586"
+        "id": "R-OslcrmSatisfies"
       }
     },
     {
@@ -31660,10 +31633,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-852227587"
+        "id": "R-OslcrmSatisfiedby"
       },
       "object": {
-        "id": "R-852227586"
+        "id": "R-OslcrmSatisfies"
       }
     },
     {
@@ -31675,10 +31648,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-852227595"
+        "id": "R-OslcrmElaboratedby"
       },
       "object": {
-        "id": "R-852227594"
+        "id": "R-OslcrmElaborates"
       }
     },
     {
@@ -31690,10 +31663,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-852227593"
+        "id": "R-OslcrmSpecifiedby"
       },
       "object": {
-        "id": "R-852227592"
+        "id": "R-OslcrmSpecifies"
       }
     },
     {
@@ -31720,7 +31693,7 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-852227562"
+        "id": "R-OslcrmConstrainedby"
       },
       "object": {
         "id": "R-OslcrmConstrains"
@@ -31750,7 +31723,7 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-isGeneralizationOf"
+        "id": "R-UmlIsgeneralizationof"
       },
       "object": {
         "id": "R-UmlIsspecializationof"
@@ -31765,7 +31738,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-1388621251"
+        "id": "R-SpecifSameas"
       },
       "object": {
         "id": "R-OwlSameas"
@@ -31922,10 +31895,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-AFRDjW5KgLsmjsqS7vSeHKFdAqD"
+        "id": "R-SpecifIsinverseof"
       },
       "object": {
-        "id": "R-fX8L25Labq7NOQMfmfudzpsntyb"
+        "id": "R-SpecifIsantnonymof"
       }
     },
     {
@@ -32094,7 +32067,7 @@
         "id": "R-FmcSendsto"
       },
       "object": {
-        "id": "R-wHJdaUoL1OblRkwOFfDvjeJuEI5"
+        "id": "R-FmcCommunicateswith"
       }
     },
     {
@@ -32107,7 +32080,7 @@
         "id": "R-FmcReceivesfrom"
       },
       "object": {
-        "id": "R-wHJdaUoL1OblRkwOFfDvjeJuEI5"
+        "id": "R-FmcCommunicateswith"
       }
     },
     {
@@ -32143,7 +32116,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-OZvSiGmgwEIwM8pxT3wwzWHtjRf"
+        "id": "R-UmlIsspecialisationof"
       },
       "object": {
         "id": "R-UmlIsspecializationof"
@@ -32156,10 +32129,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-3YVqYkzhtVVysNFh8YWH9yl99HL"
+        "id": "R-UmlIsgeneralisationof"
       },
       "object": {
-        "id": "R-isGeneralizationOf"
+        "id": "R-UmlIsgeneralizationof"
       }
     },
     {
@@ -32221,10 +32194,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-3YVqYkzhtVVysNFh8YWH9yl99HL"
+        "id": "R-UmlIsgeneralisationof"
       },
       "object": {
-        "id": "R-OZvSiGmgwEIwM8pxT3wwzWHtjRf"
+        "id": "R-UmlIsspecialisationof"
       }
     },
     {
@@ -32898,7 +32871,7 @@
         "id": "R-SpecifView"
       },
       "object": {
-        "id": "R-1756321082"
+        "id": "R-SpecifShows"
       }
     },
     {
@@ -32911,7 +32884,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-1756321082"
+        "id": "R-SpecifShows"
       }
     },
     {
@@ -32924,7 +32897,7 @@
         "id": "R-FmcState"
       },
       "object": {
-        "id": "R-1756321082"
+        "id": "R-SpecifShows"
       }
     },
     {
@@ -32937,7 +32910,7 @@
         "id": "R-FmcEvent"
       },
       "object": {
-        "id": "R-1756321082"
+        "id": "R-SpecifShows"
       }
     },
     {
@@ -32950,7 +32923,7 @@
         "id": "R-SpecifCollection"
       },
       "object": {
-        "id": "R-1756321082"
+        "id": "R-SpecifShows"
       }
     },
     {
@@ -33389,7 +33362,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-852227594"
+        "id": "R-OslcrmElaborates"
       },
       "object": {
         "id": "R-IrebRefines"
@@ -33808,7 +33781,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-wHJdaUoL1OblRkwOFfDvjeJuEI5"
+        "id": "R-FmcCommunicateswith"
       }
     },
     {
@@ -33821,7 +33794,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-wHJdaUoL1OblRkwOFfDvjeJuEI5"
+        "id": "R-FmcCommunicateswith"
       }
     },
     {
@@ -33964,7 +33937,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-traces"
+        "id": "R-SysmlTraces"
       }
     },
     {
@@ -33977,7 +33950,7 @@
         "id": "R-ReqifwfRequirement"
       },
       "object": {
-        "id": "R-traces"
+        "id": "R-SysmlTraces"
       }
     },
     {
@@ -33990,7 +33963,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-traces"
+        "id": "R-SysmlTraces"
       }
     },
     {
@@ -34003,7 +33976,7 @@
         "id": "R-ReqifwfRequirement"
       },
       "object": {
-        "id": "R-traces"
+        "id": "R-SysmlTraces"
       }
     },
     {
@@ -34016,7 +33989,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-isDerivedFrom"
+        "id": "R-SysmlIsderivedfrom"
       }
     },
     {
@@ -34029,7 +34002,7 @@
         "id": "R-ReqifwfRequirement"
       },
       "object": {
-        "id": "R-isDerivedFrom"
+        "id": "R-SysmlIsderivedfrom"
       }
     },
     {
@@ -34042,7 +34015,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-isDerivedFrom"
+        "id": "R-SysmlIsderivedfrom"
       }
     },
     {
@@ -34055,7 +34028,7 @@
         "id": "R-ReqifwfRequirement"
       },
       "object": {
-        "id": "R-isDerivedFrom"
+        "id": "R-SysmlIsderivedfrom"
       }
     },
     {
@@ -34068,7 +34041,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-1388621277"
+        "id": "R-UmlIscomposedof"
       }
     },
     {
@@ -34081,7 +34054,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-1388621277"
+        "id": "R-UmlIscomposedof"
       }
     },
     {
@@ -34094,7 +34067,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-isAggregatedBy"
+        "id": "R-UmlIsaggregatedby"
       }
     },
     {
@@ -34107,7 +34080,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-isAggregatedBy"
+        "id": "R-UmlIsaggregatedby"
       }
     },
     {
@@ -34302,7 +34275,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-3Xs1RjozTkqzXwdRzl7SEEW2ATW"
+        "id": "R-FmcContains"
       }
     },
     {
@@ -34315,7 +34288,7 @@
         "id": "R-FmcState"
       },
       "object": {
-        "id": "R-3Xs1RjozTkqzXwdRzl7SEEW2ATW"
+        "id": "R-FmcContains"
       }
     },
     {
@@ -34328,7 +34301,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-3Xs1RjozTkqzXwdRzl7SEEW2ATW"
+        "id": "R-FmcContains"
       }
     },
     {
@@ -34341,7 +34314,7 @@
         "id": "R-FmcState"
       },
       "object": {
-        "id": "R-3Xs1RjozTkqzXwdRzl7SEEW2ATW"
+        "id": "R-FmcContains"
       }
     },
     {
@@ -34354,7 +34327,7 @@
         "id": "R-FmcEvent"
       },
       "object": {
-        "id": "R-3Xs1RjozTkqzXwdRzl7SEEW2ATW"
+        "id": "R-FmcContains"
       }
     },
     {
@@ -34380,7 +34353,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-YgTiYTzOi3BDJhLi3iXMFu6OiUb"
+        "id": "R-UmlComposes"
       }
     },
     {
@@ -34393,7 +34366,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-YgTiYTzOi3BDJhLi3iXMFu6OiUb"
+        "id": "R-UmlComposes"
       }
     },
     {
@@ -34403,10 +34376,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-1388621277"
+        "id": "R-UmlIscomposedof"
       },
       "object": {
-        "id": "R-YgTiYTzOi3BDJhLi3iXMFu6OiUb"
+        "id": "R-UmlComposes"
       }
     },
     {
@@ -34416,10 +34389,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-isAggregatedBy"
+        "id": "R-UmlIsaggregatedby"
       },
       "object": {
-        "id": "R-7XW7mYAVcLXuAsoHZH8MEJrViSd"
+        "id": "R-UmlAggregates"
       }
     },
     {
@@ -34432,7 +34405,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-7XW7mYAVcLXuAsoHZH8MEJrViSd"
+        "id": "R-UmlAggregates"
       }
     },
     {
@@ -34445,7 +34418,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-7XW7mYAVcLXuAsoHZH8MEJrViSd"
+        "id": "R-UmlAggregates"
       }
     },
     {
@@ -34458,7 +34431,7 @@
         "id": "R-OslcrmDecomposes"
       },
       "object": {
-        "id": "R-1388621277"
+        "id": "R-UmlIscomposedof"
       }
     },
     {
@@ -34471,7 +34444,7 @@
         "id": "R-OslcrmDecomposedby"
       },
       "object": {
-        "id": "R-YgTiYTzOi3BDJhLi3iXMFu6OiUb"
+        "id": "R-UmlComposes"
       }
     },
     {
@@ -34523,7 +34496,7 @@
         "id": "R-FmcPlan"
       },
       "object": {
-        "id": "R-1756321082"
+        "id": "R-SpecifShows"
       }
     },
     {
@@ -34640,7 +34613,7 @@
         "id": "R-SpecifRevision"
       },
       "object": {
-        "id": "R-1756321082"
+        "id": "R-SpecifShows"
       }
     },
     {
@@ -35043,7 +35016,7 @@
         "id": "R-RmZDcwhH5iTqRxkjTW1YiYAe9Nf"
       },
       "object": {
-        "id": "R-3Xs1RjozTkqzXwdRzl7SEEW2ATW"
+        "id": "R-FmcContains"
       }
     },
     {
@@ -35290,7 +35263,7 @@
         "id": "R-mVJnjob2n6ezD1lEwgr1p2hx1gD"
       },
       "object": {
-        "id": "R-avfLHb1MY1BCYBAI4bCCin5iSuU"
+        "id": "R-ArchimateUnites"
       }
     },
     {
@@ -35940,7 +35913,7 @@
         "id": "R-w19PoaxZiKLSP1lAV4u9SGx9IPs"
       },
       "object": {
-        "id": "R-852227589"
+        "id": "R-OslcrmImplementedby"
       }
     },
     {
@@ -35950,10 +35923,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-852227589"
+        "id": "R-OslcrmImplementedby"
       },
       "object": {
-        "id": "R-BVr6wrRMtNWMXswofg8B1u6jj9M"
+        "id": "R-OslcrmImplements"
       }
     },
     {
@@ -35966,7 +35939,7 @@
         "id": "R-w19PoaxZiKLSP1lAV4u9SGx9IPs"
       },
       "object": {
-        "id": "R-BVr6wrRMtNWMXswofg8B1u6jj9M"
+        "id": "R-OslcrmImplements"
       }
     },
     {
@@ -35976,10 +35949,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-1756321085"
+        "id": "R-SpecifImplements"
       },
       "object": {
-        "id": "R-BVr6wrRMtNWMXswofg8B1u6jj9M"
+        "id": "R-OslcrmImplements"
       }
     },
     {
@@ -36054,10 +36027,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-uGhJflKYTw1ajCBpFGIksjcQLT1"
+        "id": "R-ArchimateIscomposedof"
       },
       "object": {
-        "id": "R-1388621277"
+        "id": "R-UmlIscomposedof"
       }
     },
     {
@@ -36067,7 +36040,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-uGhJflKYTw1ajCBpFGIksjcQLT1"
+        "id": "R-ArchimateIscomposedof"
       },
       "object": {
         "id": "R-OslcrmDecomposedby"
@@ -36080,10 +36053,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-7FyVxfhNhHrjpuLXubWfLAiDCTz"
+        "id": "R-ArchimateComposes"
       },
       "object": {
-        "id": "R-YgTiYTzOi3BDJhLi3iXMFu6OiUb"
+        "id": "R-UmlComposes"
       }
     },
     {
@@ -36093,10 +36066,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-7FyVxfhNhHrjpuLXubWfLAiDCTz"
+        "id": "R-ArchimateComposes"
       },
       "object": {
-        "id": "R-uGhJflKYTw1ajCBpFGIksjcQLT1"
+        "id": "R-ArchimateIscomposedof"
       }
     },
     {
@@ -36106,10 +36079,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-Yc7HI3d6yOMd6xnl37Vcht6lfzw"
+        "id": "R-ArchimateAggregates"
       },
       "object": {
-        "id": "R-7XW7mYAVcLXuAsoHZH8MEJrViSd"
+        "id": "R-UmlAggregates"
       }
     },
     {
@@ -36119,10 +36092,10 @@
         "id": "SC-isSpecializationOfPredicate"
       },
       "subject": {
-        "id": "R-Yc7HI3d6yOMd6xnl37Vcht6lfzw"
+        "id": "R-ArchimateAggregates"
       },
       "object": {
-        "id": "R-avfLHb1MY1BCYBAI4bCCin5iSuU"
+        "id": "R-ArchimateUnites"
       }
     },
     {
@@ -36132,10 +36105,10 @@
         "id": "SC-isSpecializationOfPredicate"
       },
       "subject": {
-        "id": "R-uGhJflKYTw1ajCBpFGIksjcQLT1"
+        "id": "R-ArchimateIscomposedof"
       },
       "object": {
-        "id": "R-avfLHb1MY1BCYBAI4bCCin5iSuU"
+        "id": "R-ArchimateUnites"
       }
     },
     {
@@ -36145,10 +36118,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-Yc7HI3d6yOMd6xnl37Vcht6lfzw"
+        "id": "R-ArchimateAggregates"
       },
       "object": {
-        "id": "R-isAggregatedBy"
+        "id": "R-UmlIsaggregatedby"
       }
     },
     {
@@ -36327,7 +36300,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-3Xs1RjozTkqzXwdRzl7SEEW2ATW"
+        "id": "R-FmcContains"
       },
       "object": {
         "id": "R-SpecifContains"
@@ -36340,7 +36313,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-avfLHb1MY1BCYBAI4bCCin5iSuU"
+        "id": "R-ArchimateUnites"
       },
       "object": {
         "id": "R-SpecifContains"
@@ -36356,7 +36329,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-852227586"
+        "id": "R-OslcrmSatisfies"
       }
     },
     {
@@ -36369,7 +36342,7 @@
         "id": "R-ReqifwfRequirement"
       },
       "object": {
-        "id": "R-852227586"
+        "id": "R-OslcrmSatisfies"
       }
     },
     {
@@ -36382,7 +36355,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-852227586"
+        "id": "R-OslcrmSatisfies"
       }
     },
     {
@@ -36395,7 +36368,7 @@
         "id": "R-FmcState"
       },
       "object": {
-        "id": "R-852227586"
+        "id": "R-OslcrmSatisfies"
       }
     },
     {
@@ -36408,7 +36381,7 @@
         "id": "R-FmcEvent"
       },
       "object": {
-        "id": "R-852227586"
+        "id": "R-OslcrmSatisfies"
       }
     },
     {
@@ -36421,7 +36394,7 @@
         "id": "R-SpecifCollection"
       },
       "object": {
-        "id": "R-852227586"
+        "id": "R-OslcrmSatisfies"
       }
     },
     {
@@ -36434,7 +36407,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-852227587"
+        "id": "R-OslcrmSatisfiedby"
       }
     },
     {
@@ -36447,7 +36420,7 @@
         "id": "R-ReqifwfRequirement"
       },
       "object": {
-        "id": "R-852227587"
+        "id": "R-OslcrmSatisfiedby"
       }
     },
     {
@@ -36460,7 +36433,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-852227587"
+        "id": "R-OslcrmSatisfiedby"
       }
     },
     {
@@ -36473,7 +36446,7 @@
         "id": "R-FmcState"
       },
       "object": {
-        "id": "R-852227587"
+        "id": "R-OslcrmSatisfiedby"
       }
     },
     {
@@ -36486,7 +36459,7 @@
         "id": "R-FmcEvent"
       },
       "object": {
-        "id": "R-852227587"
+        "id": "R-OslcrmSatisfiedby"
       }
     },
     {
@@ -36499,7 +36472,7 @@
         "id": "R-SpecifCollection"
       },
       "object": {
-        "id": "R-852227587"
+        "id": "R-OslcrmSatisfiedby"
       }
     },
     {
@@ -36535,7 +36508,7 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-4mbIWkda6HAw9UURbKcwjduPLFl"
+        "id": "R-ArchimateIsrealizedby"
       },
       "object": {
         "id": "R-ArchimateRealizes"
@@ -36551,7 +36524,7 @@
         "id": "R-SysmlIsallocatedto"
       },
       "object": {
-        "id": "R-4mbIWkda6HAw9UURbKcwjduPLFl"
+        "id": "R-ArchimateIsrealizedby"
       }
     },
     {
@@ -36564,7 +36537,7 @@
         "id": "R-ArchimateRealizes"
       },
       "object": {
-        "id": "R-avfLHb1MY1BCYBAI4bCCin5iSuU"
+        "id": "R-ArchimateUnites"
       }
     },
     {
@@ -36642,7 +36615,7 @@
         "id": "R-ArchimateIsassignedto"
       },
       "object": {
-        "id": "R-avfLHb1MY1BCYBAI4bCCin5iSuU"
+        "id": "R-ArchimateUnites"
       }
     },
     {
@@ -36681,7 +36654,7 @@
         "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks"
       },
       "object": {
-        "id": "R-1388621277"
+        "id": "R-UmlIscomposedof"
       }
     },
     {
@@ -36691,10 +36664,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-QjkuXWU4PENz5YbdXsAbVbexXlm"
+        "id": "R-SysmlIscomposedof"
       },
       "object": {
-        "id": "R-1388621277"
+        "id": "R-UmlIscomposedof"
       }
     },
     {
@@ -36704,10 +36677,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-QjkuXWU4PENz5YbdXsAbVbexXlm"
+        "id": "R-SysmlIscomposedof"
       },
       "object": {
-        "id": "R-YgTiYTzOi3BDJhLi3iXMFu6OiUb"
+        "id": "R-UmlComposes"
       }
     },
     {
@@ -36720,7 +36693,7 @@
         "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks"
       },
       "object": {
-        "id": "R-7XW7mYAVcLXuAsoHZH8MEJrViSd"
+        "id": "R-UmlAggregates"
       }
     },
     {
@@ -36730,10 +36703,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-isAggregatedBy"
+        "id": "R-UmlIsaggregatedby"
       },
       "object": {
-        "id": "R-pMtxnz4mXgf9RTnPjWcF3dSlCFV"
+        "id": "R-SysmlAggegates"
       }
     },
     {
@@ -36743,10 +36716,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-pMtxnz4mXgf9RTnPjWcF3dSlCFV"
+        "id": "R-SysmlAggegates"
       },
       "object": {
-        "id": "R-7XW7mYAVcLXuAsoHZH8MEJrViSd"
+        "id": "R-UmlAggregates"
       }
     },
     {
@@ -36945,32 +36918,6 @@
       }
     },
     {
-      "id": "S-JUtyJKf05ZZT65wbOVOJFXCOB8y",
-      "changedAt": "2023-08-08T20:40:42.386Z",
-      "class": {
-        "id": "SC-isNamespace"
-      },
-      "subject": {
-        "id": "R-SDJ68yzYCQB0cJ74tjNypSIwxoS"
-      },
-      "object": {
-        "id": "R-Ayn8qoHEenYwKadS4akuD5hKHck"
-      }
-    },
-    {
-      "id": "S-81Dp4uvdpJjN3JjEm6QaXIelaFg",
-      "changedAt": "2023-08-08T20:41:02.199Z",
-      "class": {
-        "id": "SC-isSynonymOfProperty"
-      },
-      "subject": {
-        "id": "R-Ayn8qoHEenYwKadS4akuD5hKHck"
-      },
-      "object": {
-        "id": "R-DctermsIdentifier"
-      }
-    },
-    {
       "id": "S-eKGXAS2ndwFnePFy2v6dt2EcfR9",
       "changedAt": "2023-08-08T21:36:59.342Z",
       "class": {
@@ -36980,7 +36927,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-dv38GNTWcvnuuf1POJiNEMfVCAc"
+        "id": "R-SpecifFolder"
       }
     },
     {
@@ -36990,7 +36937,7 @@
         "id": "SC-isSynonymOfResource"
       },
       "subject": {
-        "id": "R-dv38GNTWcvnuuf1POJiNEMfVCAc"
+        "id": "R-SpecifFolder"
       },
       "object": {
         "id": "R-SpecifHeading"
@@ -37071,7 +37018,7 @@
         "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks"
       },
       "object": {
-        "id": "R-isGeneralizationOf"
+        "id": "R-UmlIsgeneralizationof"
       }
     },
     {
@@ -37110,7 +37057,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-SXlt4EbTFdv3O2la3qGE6PtcB70"
+        "id": "R-SpecifIsgeneralizationof"
       }
     },
     {
@@ -37120,10 +37067,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-SXlt4EbTFdv3O2la3qGE6PtcB70"
+        "id": "R-SpecifIsgeneralizationof"
       },
       "object": {
-        "id": "R-isGeneralizationOf"
+        "id": "R-UmlIsgeneralizationof"
       }
     },
     {
@@ -37162,7 +37109,7 @@
         "id": "R-IrAnnotation"
       },
       "object": {
-        "id": "R-2J3aKb6Es6jZtYaTCtMEbox5gMD"
+        "id": "R-IrApproves"
       }
     },
     {
@@ -37175,7 +37122,7 @@
         "id": "R-IrAnnotation"
       },
       "object": {
-        "id": "R-RHKxprYhYO6rmqjjckneFHcPZzD"
+        "id": "R-IrOpposes"
       }
     },
     {
@@ -37188,7 +37135,7 @@
         "id": "R-dkrGwyqj77hck1EJsfzohypCi5T"
       },
       "object": {
-        "id": "R-1LfStrmrwjEUbKCnOkVvQDEVY8t"
+        "id": "R-IrInheritsFrom"
       }
     },
     {
@@ -37201,7 +37148,7 @@
         "id": "R-dkrGwyqj77hck1EJsfzohypCi5T"
       },
       "object": {
-        "id": "R-2J3aKb6Es6jZtYaTCtMEbox5gMD"
+        "id": "R-IrApproves"
       }
     },
     {
@@ -37214,7 +37161,7 @@
         "id": "R-dkrGwyqj77hck1EJsfzohypCi5T"
       },
       "object": {
-        "id": "R-RHKxprYhYO6rmqjjckneFHcPZzD"
+        "id": "R-IrOpposes"
       }
     },
     {
@@ -37250,7 +37197,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-1LfStrmrwjEUbKCnOkVvQDEVY8t"
+        "id": "R-IrInheritsFrom"
       },
       "object": {
         "id": "R-UmlIsspecializationof"
@@ -37266,7 +37213,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-inheritsFrom"
+        "id": "R-SpecifInheritsFrom"
       }
     },
     {
@@ -37276,7 +37223,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-inheritsFrom"
+        "id": "R-SpecifInheritsFrom"
       },
       "object": {
         "id": "R-UmlIsspecializationof"
@@ -37786,7 +37733,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-YTOSDlz3Xir8PPxpeTxUJiYqlJp"
+        "id": "R-SpecifIspluralof"
       }
     },
     {
@@ -37890,7 +37837,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-XFituq3uLki95FFEzETyCs0bcUs"
+        "id": "R-SpecifHasenumvalue"
       }
     },
     {
@@ -37903,7 +37850,7 @@
         "id": "R-fM1FB6zCrqNmKuQlN7ZUYpKrLlC"
       },
       "object": {
-        "id": "R-XFituq3uLki95FFEzETyCs0bcUs"
+        "id": "R-SpecifHasenumvalue"
       }
     },
     {
@@ -37916,7 +37863,7 @@
         "id": "R-SpecifTermresourceclass"
       },
       "object": {
-        "id": "R-XFituq3uLki95FFEzETyCs0bcUs"
+        "id": "R-SpecifHasenumvalue"
       }
     },
     {
@@ -37929,7 +37876,7 @@
         "id": "R-SpecifTermstatementclass"
       },
       "object": {
-        "id": "R-XFituq3uLki95FFEzETyCs0bcUs"
+        "id": "R-SpecifHasenumvalue"
       }
     },
     {
@@ -37942,7 +37889,7 @@
         "id": "R-SpecifTermpropertyvalue"
       },
       "object": {
-        "id": "R-XFituq3uLki95FFEzETyCs0bcUs"
+        "id": "R-SpecifHasenumvalue"
       }
     },
     {
@@ -38007,7 +37954,7 @@
         "id": "R-AdyDfiNvv4ouaepgtffkr4r0BDN"
       },
       "object": {
-        "id": "R-ueykXi2K5CIfgRsrsgTGBBRxNKX"
+        "id": "R-SysmlIsspecialisationof"
       }
     },
     {
@@ -38017,7 +37964,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-ueykXi2K5CIfgRsrsgTGBBRxNKX"
+        "id": "R-SysmlIsspecialisationof"
       },
       "object": {
         "id": "R-UmlIsspecializationof"
@@ -38033,7 +37980,7 @@
         "id": "R-AdyDfiNvv4ouaepgtffkr4r0BDN"
       },
       "object": {
-        "id": "R-d9Y8KpLqOavXiKMm8UuzmkgemXt"
+        "id": "R-SysmlIsgeneralizationof"
       }
     },
     {
@@ -38043,10 +37990,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-d9Y8KpLqOavXiKMm8UuzmkgemXt"
+        "id": "R-SysmlIsgeneralizationof"
       },
       "object": {
-        "id": "R-isGeneralizationOf"
+        "id": "R-UmlIsgeneralizationof"
       }
     },
     {
@@ -38339,7 +38286,7 @@
             {
               "id": "N-TOo98wAT3pVPKNyRiLryLs3fQup",
               "resource": {
-                "id": "R-dv38GNTWcvnuuf1POJiNEMfVCAc"
+                "id": "R-SpecifFolder"
               },
               "changedAt": "2023-08-08T21:36:33.206Z"
             },
@@ -38811,7 +38758,7 @@
             {
               "id": "N-gxiMep1ajmr9aUCj5SMadcbBHXb",
               "resource": {
-                "id": "R-iJx5dgsdqxgoddiQ2v1AnqieTFE"
+                "id": "R-ArchimateDataobject"
               },
               "changedAt": "2023-08-25T08:12:40.489Z"
             }
@@ -38834,7 +38781,7 @@
             {
               "id": "N-KySdnxpGEFIs3FWCaOlzbpLVEq4",
               "resource": {
-                "id": "R-1756321082"
+                "id": "R-SpecifShows"
               },
               "changedAt": "2018-02-17T14:52:25+01:00"
             },
@@ -38848,21 +38795,21 @@
             {
               "id": "N-UjV4kQJo7FQq5YMVJH2O5J7GLc5",
               "resource": {
-                "id": "R-avfLHb1MY1BCYBAI4bCCin5iSuU"
+                "id": "R-ArchimateUnites"
               },
               "changedAt": "2023-03-16T11:15:11.988Z"
             },
             {
               "id": "N-51vmR4dd5rXbPoFlJroicnwKl9A",
               "resource": {
-                "id": "R-3Xs1RjozTkqzXwdRzl7SEEW2ATW"
+                "id": "R-FmcContains"
               },
               "changedAt": "2023-03-16T11:14:22.631Z"
             },
             {
               "id": "N-AZb2Puo1yiua5GW3iQcf6Ll4evL",
               "resource": {
-                "id": "R-1756321084"
+                "id": "R-SpecifSatisfies"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38870,7 +38817,7 @@
             {
               "id": "N-fXa8K2B7zc1zHFiKmjYoFP81oxH",
               "resource": {
-                "id": "R-1756321085"
+                "id": "R-SpecifImplements"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38892,7 +38839,7 @@
             {
               "id": "N-YShAhKHuxcyBV85xnVLD1iXE53o",
               "resource": {
-                "id": "R-852227586"
+                "id": "R-OslcrmSatisfies"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38900,7 +38847,7 @@
             {
               "id": "N-Bz5EAzJMVmCGQ5rdGyIQyTdpKPr",
               "resource": {
-                "id": "R-852227587"
+                "id": "R-OslcrmSatisfiedby"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38908,7 +38855,7 @@
             {
               "id": "N-3bVAkogM3vj6azeXHC7OkpwYvaa",
               "resource": {
-                "id": "R-852227594"
+                "id": "R-OslcrmElaborates"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38916,7 +38863,7 @@
             {
               "id": "N-Hk83njHHd3B5rW6hgHH6WB7BhMv",
               "resource": {
-                "id": "R-852227595"
+                "id": "R-OslcrmElaboratedby"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38924,7 +38871,7 @@
             {
               "id": "N-wHyRWxHgf0lrC6n8tqq85M9cIJ8",
               "resource": {
-                "id": "R-852227592"
+                "id": "R-OslcrmSpecifies"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38932,7 +38879,7 @@
             {
               "id": "N-nXLNrTd1ItxoojSsU27wxSb5wGC",
               "resource": {
-                "id": "R-852227593"
+                "id": "R-OslcrmSpecifiedby"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38940,7 +38887,7 @@
             {
               "id": "N-Oker0xNXoPR04q5WCwwGOuK3J4U",
               "resource": {
-                "id": "R-852227591"
+                "id": "R-OslcrmAffectedby"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38956,7 +38903,7 @@
             {
               "id": "N-s3nOxspSY7on9jRmzikNpIg8lEw",
               "resource": {
-                "id": "R-852227589"
+                "id": "R-OslcrmImplementedby"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38964,7 +38911,7 @@
             {
               "id": "N-8FsIPm71NQLE4UdArQFXIWR4RTN",
               "resource": {
-                "id": "R-BVr6wrRMtNWMXswofg8B1u6jj9M"
+                "id": "R-OslcrmImplements"
               },
               "changedAt": "2023-07-15T16:24:26.656Z"
             },
@@ -39010,7 +38957,7 @@
             {
               "id": "N-sHg1I5YqLe9AWhVgB6wwDvJRCR3",
               "resource": {
-                "id": "R-852227562"
+                "id": "R-OslcrmConstrainedby"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -39091,7 +39038,7 @@
             {
               "id": "N-wI6lY0JvHl9MIkW4nSi2qqb2pWm",
               "resource": {
-                "id": "R-4mbIWkda6HAw9UURbKcwjduPLFl"
+                "id": "R-ArchimateIsrealizedby"
               },
               "changedAt": "2023-07-16T13:30:10.527Z"
             },
@@ -39105,7 +39052,7 @@
             {
               "id": "N-qOI8VZuvXXefKrBhu5CET1QBVgd",
               "resource": {
-                "id": "R-wHJdaUoL1OblRkwOFfDvjeJuEI5"
+                "id": "R-FmcCommunicateswith"
               },
               "changedAt": "2021-11-07T18:59:46.202Z"
             },
@@ -39166,7 +39113,7 @@
             {
               "id": "N-eqTd4xwYmpHBzNsXfYJeoaQSG7H",
               "resource": {
-                "id": "R-traces"
+                "id": "R-SysmlTraces"
               },
               "changedAt": "2019-05-31T14:52:25+01:00",
               "revision": "114"
@@ -39174,7 +39121,7 @@
             {
               "id": "N-dpTd4xwYmpHBzNsXfYJeoaQSG6G",
               "resource": {
-                "id": "R-isDerivedFrom"
+                "id": "R-SysmlIsderivedfrom"
               },
               "changedAt": "2019-05-31T14:52:25+01:00",
               "revision": "114"
@@ -39236,7 +39183,7 @@
             {
               "id": "N-qEgSojoH8KY2IPsmY49TGtgVWka",
               "resource": {
-                "id": "R-1388621277"
+                "id": "R-UmlIscomposedof"
               },
               "changedAt": "2019-05-30T14:52:25+01:00",
               "revision": "114"
@@ -39244,35 +39191,35 @@
             {
               "id": "N-lDeGEGt39ivtjPxVKtHOS7kgTsN",
               "resource": {
-                "id": "R-QjkuXWU4PENz5YbdXsAbVbexXlm"
+                "id": "R-SysmlIscomposedof"
               },
               "changedAt": "2023-07-16T15:15:38.294Z"
             },
             {
               "id": "N-Hq6otySRmYPUeElXR0O3PN08Idk",
               "resource": {
-                "id": "R-uGhJflKYTw1ajCBpFGIksjcQLT1"
+                "id": "R-ArchimateIscomposedof"
               },
               "changedAt": "2023-07-15T16:40:35.661Z"
             },
             {
               "id": "N-9bTrtu1JWgEXt0mz1ix4wd2c7RF",
               "resource": {
-                "id": "R-7FyVxfhNhHrjpuLXubWfLAiDCTz"
+                "id": "R-ArchimateComposes"
               },
               "changedAt": "2023-07-15T16:44:39.041Z"
             },
             {
               "id": "N-xV2UHvbOSXfxcqBEATJKeRvDOfh",
               "resource": {
-                "id": "R-YgTiYTzOi3BDJhLi3iXMFu6OiUb"
+                "id": "R-UmlComposes"
               },
               "changedAt": "2023-03-16T14:50:14.330Z"
             },
             {
               "id": "N-qEgSojoH8KY2IPsmY49TGtgVWlb",
               "resource": {
-                "id": "R-isAggregatedBy"
+                "id": "R-UmlIsaggregatedby"
               },
               "changedAt": "2019-05-30T14:52:25+01:00",
               "revision": "114"
@@ -39280,21 +39227,21 @@
             {
               "id": "N-rI1c4EBLDOM8UM6wtWOj557hQiW",
               "resource": {
-                "id": "R-7XW7mYAVcLXuAsoHZH8MEJrViSd"
+                "id": "R-UmlAggregates"
               },
               "changedAt": "2023-03-16T14:49:40.585Z"
             },
             {
               "id": "N-d6gj4LLn1zk2xoqOjWi8qtSJRhf",
               "resource": {
-                "id": "R-pMtxnz4mXgf9RTnPjWcF3dSlCFV"
+                "id": "R-SysmlAggegates"
               },
               "changedAt": "2023-07-16T15:18:56.227Z"
             },
             {
               "id": "N-RMeTf1YIPfl6nAkW7XA3lficH1V",
               "resource": {
-                "id": "R-Yc7HI3d6yOMd6xnl37Vcht6lfzw"
+                "id": "R-ArchimateAggregates"
               },
               "changedAt": "2023-07-15T16:47:16.210Z"
             },
@@ -39340,14 +39287,14 @@
             {
               "id": "N-wJnegdKeVui7ymc6fXKRbrMNM1B",
               "resource": {
-                "id": "R-OZvSiGmgwEIwM8pxT3wwzWHtjRf"
+                "id": "R-UmlIsspecialisationof"
               },
               "changedAt": "2021-11-07T19:24:51.396Z"
             },
             {
               "id": "N-qEgSojoH8KY2IPsmY49TGtgVWmc",
               "resource": {
-                "id": "R-isGeneralizationOf"
+                "id": "R-UmlIsgeneralizationof"
               },
               "changedAt": "2019-05-30T14:52:25+01:00",
               "revision": "114"
@@ -39355,7 +39302,7 @@
             {
               "id": "N-R1qTM3581nwGOaNPJ8gcxB2xOzJ",
               "resource": {
-                "id": "R-3YVqYkzhtVVysNFh8YWH9yl99HL"
+                "id": "R-UmlIsgeneralisationof"
               },
               "changedAt": "2021-11-07T19:25:45.483Z"
             },
@@ -39369,28 +39316,28 @@
             {
               "id": "N-EwNBfFH5cH81fq51LKCBUXjXkwm",
               "resource": {
-                "id": "R-ueykXi2K5CIfgRsrsgTGBBRxNKX"
+                "id": "R-SysmlIsspecialisationof"
               },
               "changedAt": "2023-09-03T08:50:30.953Z"
             },
             {
               "id": "N-3miTcOJNvaSYSlgTy0mIRj4Wyqo",
               "resource": {
-                "id": "R-SXlt4EbTFdv3O2la3qGE6PtcB70"
+                "id": "R-SpecifIsgeneralizationof"
               },
               "changedAt": "2023-08-09T12:31:18.347Z"
             },
             {
               "id": "N-DTPhI8GE0xPZeU4WS6GPKVyvtSM",
               "resource": {
-                "id": "R-d9Y8KpLqOavXiKMm8UuzmkgemXt"
+                "id": "R-SysmlIsgeneralizationof"
               },
               "changedAt": "2023-09-03T08:51:33.793Z"
             },
             {
               "id": "N-BSQa9h5AoCUdhDRQ0QCodbesRwM",
               "resource": {
-                "id": "R-inheritsFrom"
+                "id": "R-SpecifInheritsFrom"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -39398,7 +39345,7 @@
             {
               "id": "N-RvEo9ukpRVDqkuDYUlyWub6v550",
               "resource": {
-                "id": "R-1LfStrmrwjEUbKCnOkVvQDEVY8t"
+                "id": "R-IrInheritsFrom"
               },
               "changedAt": "2023-08-09T21:42:35.339Z"
             },
@@ -39420,14 +39367,14 @@
             {
               "id": "N-gkoaItbvZkIDXGnDvZp9dBCiaN5",
               "resource": {
-                "id": "R-2J3aKb6Es6jZtYaTCtMEbox5gMD"
+                "id": "R-IrApproves"
               },
               "changedAt": "2023-08-09T21:40:04.757Z"
             },
             {
               "id": "N-fINyQTfIx28nRrhey8yjFyrC1x3",
               "resource": {
-                "id": "R-RHKxprYhYO6rmqjjckneFHcPZzD"
+                "id": "R-IrOpposes"
               },
               "changedAt": "2023-08-09T21:40:29.719Z"
             },
@@ -39457,7 +39404,7 @@
             {
               "id": "N-tCoNou4Vy0jg11GcgwFN4yIVEBI",
               "resource": {
-                "id": "R-g4yCxQAgNQtEUffXpPaZOgWrtkQ"
+                "id": "R-SpecifIssynonymof"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -39465,7 +39412,7 @@
             {
               "id": "N-619Vx52xDjbSf6UzxYWViNTglQb",
               "resource": {
-                "id": "R-AFRDjW5KgLsmjsqS7vSeHKFdAqD"
+                "id": "R-SpecifIsinverseof"
               },
               "changedAt": "2018-03-21T18:12:11+01:00",
               "revision": "193"
@@ -39473,14 +39420,14 @@
             {
               "id": "N-JJragnpCivB4FcqEB9JxF9qJrtO",
               "resource": {
-                "id": "R-fX8L25Labq7NOQMfmfudzpsntyb"
+                "id": "R-SpecifIsantnonymof"
               },
               "changedAt": "2020-11-09T12:22:29.178Z"
             },
             {
               "id": "N-7cvVrx4Lm3OkI84KnaN5SPA5vel",
               "resource": {
-                "id": "R-YTOSDlz3Xir8PPxpeTxUJiYqlJp"
+                "id": "R-SpecifIspluralof"
               },
               "changedAt": "2023-08-22T08:02:34.792Z"
             },
@@ -39495,7 +39442,7 @@
             {
               "id": "N-BwuY2TKdrS2V3yPdPtDzOqJgQvE",
               "resource": {
-                "id": "R-1388621251"
+                "id": "R-SpecifSameas"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -39503,21 +39450,21 @@
             {
               "id": "N-LVLykMnrsinq5wRxhZsX8XkEC5n",
               "resource": {
-                "id": "R-MLrNWkTjsAXAjhx37p6UkvxKzEQ"
+                "id": "R-SpecifIsnamespace"
               },
               "changedAt": "2023-08-09T23:15:21.033Z"
             },
             {
               "id": "N-cfqoqGdvaV70qIgDt5seXKzAWcY",
               "resource": {
-                "id": "R-MxwBcoVecPlYMGyCifQQvOCFECy"
+                "id": "R-SpecifHasproperty"
               },
               "changedAt": "2023-08-09T23:16:01.660Z"
             },
             {
               "id": "N-AEGUXfUrbWc21EPekbUEGhyvHCo",
               "resource": {
-                "id": "R-XFituq3uLki95FFEzETyCs0bcUs"
+                "id": "R-SpecifHasenumvalue"
               },
               "changedAt": "2023-08-09T23:16:55.531Z"
             },
@@ -39837,13 +39784,6 @@
                 "id": "R-PvIGJ6Vwj4tkS6D5IgBKOtN2DEB"
               },
               "changedAt": "2023-03-17T20:52:21.573Z"
-            },
-            {
-              "id": "N-n5JPZmHu9KWrtnUHyR1lU9138Fd",
-              "resource": {
-                "id": "R-Ayn8qoHEenYwKadS4akuD5hKHck"
-              },
-              "changedAt": "2023-08-08T20:40:29.117Z"
             },
             {
               "id": "N-Pz9eAIxhaKuhOiTpuAYJe4GZXWL",
