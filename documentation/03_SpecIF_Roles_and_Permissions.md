@@ -77,6 +77,8 @@ A permission has a vector of a binary attribute per basic access mode:
 
 Effect: All instances of that class including their properties cannot be accessed by the user.
 
+---
+
 | Target | C | R | U | D |
 |:--- |:---:|:---:|:---:|:---:|
 | a project | undefined | **true** | undefined | undefined |
@@ -84,6 +86,8 @@ Effect: All instances of that class including their properties cannot be accesse
 | a propertyClass | undefined | undefined | undefined | undefined |
 
 Effect: All instances of that class including their properties can just be seen by the user.
+
+---
 
 | Target | C | R | U | D |
 |:--- |:---:|:---:|:---:|:---:|
@@ -94,29 +98,71 @@ Effect: All instances of that class including their properties can just be seen 
 Effect: All instances of that class including their properties can be seen by the user. 
 The particular property can be created, read and updated, but not be deleted (to be discussed, whether this makes sense in practice ...).
 
+---
+
+| Target | C | R | U | D |
+|:--- |:---:|:---:|:---:|:---:|
+| a project | undefined | **true** | undefined | undefined |
+| a resourceClass | undefined | undefined | undefined | undefined |
+| a propertyClass | undefined | undefined | undefined | undefined |
+| a node at hierarchy root | undefined | undefined | undefined | undefined |
+| a node | undefined | undefined | undefined | undefined |
+
+Effect: The resources of that class and referenced in that hierarchy branch can be seen by the user. 
+
+---
+
+| Target | C | R | U | D |
+|:--- |:---:|:---:|:---:|:---:|
+| a project | undefined | undefined | undefined | undefined |
+| a resourceClass | undefined | undefined | undefined | undefined |
+| a propertyClass | undefined | undefined | undefined | undefined |
+| a node at hierarchy root | undefined | **true** | undefined | undefined |
+| a node | undefined | undefined | undefined | undefined |
+
+Effect: The resources of that class and referenced in that hierarchy branch cannot be accessed by the user. 
+
+---
+
+| Target | C | R | U | D |
+|:--- |:---:|:---:|:---:|:---:|
+| a project | undefined | **true** | undefined | undefined |
+| a resourceClass | undefined | **false** | undefined | undefined |
+| a propertyClass | undefined | undefined | undefined | undefined |
+| a node at hierarchy root | undefined | undefined | undefined | undefined |
+| a node | undefined | undefined | undefined | undefined |
+
+Effect: The resources of that class and referenced in that hierarchy branch cannot be accessed by the user. 
+
+---
+
 | Target | C | R | U | D |
 |:--- |:---:|:---:|:---:|:---:|
 | a project | undefined | **true** | undefined | undefined |
 | a resourceClass | undefined | undefined | undefined | undefined |
 | a propertyClass | **true** | **true** | **true** | **true** |
-| a hierarchy root | undefined | undefined | undefined | undefined |
+| a node at hierarchy root | undefined | undefined | undefined | undefined |
 | a node | undefined | undefined | undefined | undefined |
 
 Effect: The resource of that class and referenced by that node can be seen by the user including their properties. 
 The particular property can be created, read, updated and deleted.
+
+---
 
 | Target | C | R | U | D |
 |:--- |:---:|:---:|:---:|:---:|
 | a project | **true** | **true** | **true** | **true** |
 | a resourceClass | undefined | undefined | undefined | undefined |
 | a propertyClass | undefined | undefined | undefined | undefined |
-| a hierarchy root | **false** | undefined | **false** | **false** |
+| a node at hierarchy root | **false** | undefined | **false** | **false** |
 | a node | undefined | undefined | undefined | undefined |
 
 Effect: By class, all resource instances can be created, read, updated and deleted.
 However all resources referenced by nodes in that hierarchy can only be seen by the particular user. 
 
-### Some Cases
+---
+
+Some More Cases:
 - Permissions per resource instance are defined both by class and by hierarchy: Access is allowed, if it is 
 explicitly granted by class *and* not explicitly prohibited by hierarchy.
 - If a permission is granted to a resourceClass, it is extended to all of its properties, unless overridden.
