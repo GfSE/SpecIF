@@ -2850,7 +2850,7 @@
       ]
     },
     {
-      "id": "R-YRV2V6tSsoVCV9dDZofBhezVGGD",
+      "id": "R-SpecifInformation",
       "changedAt": "2023-08-09T10:45:58.457Z",
       "revision": "6",
       "class": {
@@ -4182,6 +4182,10 @@
               {
                 "text": "Ressource",
                 "language": "de"
+              },
+              {
+                "text": "Ressource",
+                "language": "fr"
               }
             ]
           ]
@@ -4199,6 +4203,10 @@
               {
                 "text": "Ressourcen",
                 "language": "de"
+              },
+              {
+                "text": "Ressources",
+                "language": "fr"
               }
             ]
           ]
@@ -4269,6 +4277,10 @@
               {
                 "text": "Aussage",
                 "language": "de"
+              },
+              {
+                "text": "Affirmation",
+                "language": "fr"
               }
             ]
           ]
@@ -4286,6 +4298,10 @@
               {
                 "text": "Aussagen",
                 "language": "de"
+              },
+              {
+                "text": "Affirmations",
+                "language": "fr"
               }
             ]
           ]
@@ -4356,6 +4372,10 @@
               {
                 "text": "Attribut",
                 "language": "de"
+              },
+              {
+                "text": "Attribut",
+                "language": "fr"
               }
             ]
           ]
@@ -4373,6 +4393,10 @@
               {
                 "text": "Attribute",
                 "language": "de"
+              },
+              {
+                "text": "Attributs",
+                "language": "fr"
               }
             ]
           ]
@@ -5465,8 +5489,12 @@
                 "language": "en"
               },
               {
-                "text": "Notiz",
+                "text": "Anmerkung",
                 "language": "de"
+              },
+              {
+                "text": "Remarque",
+                "language": "fr"
               }
             ]
           ]
@@ -5482,8 +5510,12 @@
                 "language": "en"
               },
               {
-                "text": "Notizen",
+                "text": "Anmerkungen",
                 "language": "de"
+              },
+              {
+                "text": "Remarques",
+                "language": "fr"
               }
             ]
           ]
@@ -5580,6 +5612,14 @@
               {
                 "text": "Vote",
                 "language": "en"
+              },
+              {
+                "text": "Wertung",
+                "language": "de"
+              },
+              {
+                "text": "Vote",
+                "language": "fr"
               }
             ]
           ]
@@ -5593,6 +5633,14 @@
               {
                 "text": "Votes",
                 "language": "en"
+              },
+              {
+                "text": "Wertungen",
+                "language": "de"
+              },
+              {
+                "text": "Votes",
+                "language": "fr"
               }
             ]
           ]
@@ -7400,6 +7448,27 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Risk",
+                "language": "en"
+              },
+              {
+                "text": "Risiko",
+                "language": "de"
+              },
+              {
+                "text": "Risque",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -8086,7 +8155,7 @@
       ]
     },
     {
-      "id": "R-orvawW5lq3b0HUvbP4Lu3Xyp6jW",
+      "id": "R-SpecifBusinessprocess",
       "changedAt": "2023-06-08T13:54:54.772Z",
       "revision": "43",
       "class": {
@@ -9819,6 +9888,25 @@
         },
         {
           "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "User Stories",
+                "language": "en"
+              }
+            ],
+            [
+              {
+                "text": "User-Stories",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-Icon"
           },
           "values": [
@@ -10688,7 +10776,7 @@
       ]
     },
     {
-      "id": "R-6FTOPvcMAO1yPYW4BfJNyTvnQcm",
+      "id": "R-SpecifInfluences",
       "changedAt": "2021-11-07T19:11:04.490Z",
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -11402,7 +11490,7 @@
       ]
     },
     {
-      "id": "R-oslcrmValidatedby",
+      "id": "R-OslcrmValidatedby",
       "changedAt": "2023-07-15T16:30:47.921Z",
       "revision": "68",
       "changedBy": "od",
@@ -11458,7 +11546,16 @@
           "values": [
             [
               {
-                "text": "wird validiert durch"
+                "text": "validated by",
+                "language": "en"
+              },
+              {
+                "text": "validiert durch",
+                "language": "de"
+              },
+              {
+                "text": "validée par",
+                "language": "fr"
               }
             ]
           ]
@@ -11474,7 +11571,7 @@
       ]
     },
     {
-      "id": "R-GPKxTMr3LxWEg8gTvygoY2vJRwL",
+      "id": "R-OslcrmValidates",
       "changedAt": "2023-07-15T16:30:06.229Z",
       "revision": "68",
       "changedBy": "od",
@@ -11522,7 +11619,16 @@
           "values": [
             [
               {
-                "text": "validiert"
+                "text": "validates",
+                "language": "en"
+              },
+              {
+                "text": "validiert",
+                "language": "de"
+              },
+              {
+                "text": "valides",
+                "language": "fr"
               }
             ]
           ]
@@ -11538,7 +11644,7 @@
       ]
     },
     {
-      "id": "R-852227563",
+      "id": "R-OslcrmDecomposes",
       "changedAt": "2023-07-15T16:33:26.188Z",
       "revision": "70",
       "changedBy": "od",
@@ -11600,6 +11706,10 @@
               {
                 "text": "ist Bestandteil von",
                 "language": "de"
+              },
+              {
+                "text": "se decompose",
+                "language": "fr"
               }
             ]
           ]
@@ -11615,7 +11725,7 @@
       ]
     },
     {
-      "id": "R-852227564",
+      "id": "R-OslcrmDecomposedby",
       "changedAt": "2023-07-15T16:33:00.856Z",
       "revision": "69",
       "changedBy": "od",
@@ -11669,6 +11779,10 @@
               {
                 "text": "besteht aus",
                 "language": "de"
+              },
+              {
+                "text": "décomposé par",
+                "language": "fr"
               }
             ]
           ]
@@ -11684,7 +11798,7 @@
       ]
     },
     {
-      "id": "R-852227561",
+      "id": "R-OslcrmConstrains",
       "changedAt": "2018-02-17T14:51:59+01:00",
       "revision": "72",
       "changedBy": "od",
@@ -11711,7 +11825,37 @@
           "values": [
             [
               {
-                "text": "The object is constrained by the subject. For example, a safety requirement constrains a functional requirement."
+                "text": "The object is constrained by the subject. For example, a safety requirement constrains a functional requirement.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "constrains",
+                "language": "en"
+              },
+              {
+                "text": "schränkt ein",
+                "language": "de"
+              },
+              {
+                "text": "contraint",
+                "language": "fr"
               }
             ]
           ]
@@ -11746,7 +11890,29 @@
           "values": [
             [
               {
-                "text": "The subject is constrained by the object."
+                "text": "The subject is constrained by the object.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "constrained by",
+                "language": "en"
+              },
+              {
+                "text": "eingeschränkt durch",
+                "language": "de"
+              },
+              {
+                "text": "contraint par",
+                "language": "fr"
               }
             ]
           ]
@@ -11754,7 +11920,7 @@
       ]
     },
     {
-      "id": "R-3KHuQVdvw7pEuacDmKP3XWo2YDB",
+      "id": "R-SpecifServes",
       "changedAt": "2023-07-16T14:54:25.495Z",
       "revision": "26",
       "class": {
@@ -11821,7 +11987,8 @@
           "values": [
             [
               {
-                "text": "bedient"
+                "text": "serves",
+                "language": "en"
               }
             ]
           ]
@@ -11845,7 +12012,7 @@
       ]
     },
     {
-      "id": "R-v72vQ0DU7ohdAIL4rmzkKUAL9Yf",
+      "id": "R-ArchimateServes",
       "changedAt": "2023-07-16T14:58:25.455Z",
       "revision": "26",
       "class": {
@@ -11912,7 +12079,16 @@
           "values": [
             [
               {
-                "text": "bedient"
+                "text": "serves",
+                "language": "en"
+              },
+              {
+                "text": "bedient",
+                "language": "de"
+              },
+              {
+                "text": "sert",
+                "language": "fr"
               }
             ]
           ]
@@ -11936,7 +12112,7 @@
       ]
     },
     {
-      "id": "R-1756321086",
+      "id": "R-SpecifReads",
       "changedAt": "2023-03-15T09:08:53.827Z",
       "revision": "26",
       "class": {
@@ -11974,7 +12150,8 @@
           "values": [
             [
               {
-                "text": "<p>A [[FMC:Actor]] 'reads' a [[FMC:State]].</p>"
+                "text": "A [[FMC:Actor]] 'reads' a [[FMC:State]].",
+                "language": "en"
               }
             ]
           ]
@@ -12035,7 +12212,7 @@
       ]
     },
     {
-      "id": "R-1756321087",
+      "id": "R-SpecifWrites",
       "changedAt": "2023-03-15T09:09:08.696Z",
       "revision": "27",
       "class": {
@@ -12073,7 +12250,8 @@
           "values": [
             [
               {
-                "text": "<p>A [[FMC:Actor]] 'writes' (changes) a [[FMC:State]].</p>"
+                "text": "A [[FMC:Actor]] 'writes' (changes) a [[FMC:State]].",
+                "language": "en"
               }
             ]
           ]
@@ -12134,7 +12312,7 @@
       ]
     },
     {
-      "id": "R-LfS1sqHpaj2SBAGEG1MX8yIJTwV",
+      "id": "R-SpecifStores",
       "changedAt": "2023-07-16T13:07:47.863Z",
       "revision": "28",
       "class": {
@@ -12201,7 +12379,8 @@
           "values": [
             [
               {
-                "text": "schreibt und liest"
+                "text": "stores",
+                "language": "en"
               }
             ]
           ]
@@ -12282,7 +12461,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-6"
+            "V-TermStatus-5"
           ]
         },
         {
@@ -12384,7 +12563,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-5"
+            "V-TermStatus-6"
           ]
         },
         {
@@ -12441,7 +12620,7 @@
       ]
     },
     {
-      "id": "R-C9MKRlJQuZj2xSbGxMCDxuaD546",
+      "id": "R-ArchimateRealizes",
       "changedAt": "2023-07-16T13:26:36.369Z",
       "revision": "28",
       "class": {
@@ -12502,6 +12681,10 @@
               {
                 "text": "realisiert",
                 "language": "de"
+              },
+              {
+                "text": "realise",
+                "language": "fr"
               }
             ]
           ]
@@ -12525,7 +12708,7 @@
       ]
     },
     {
-      "id": "R-pmhnenzzKxnS1WTY8vvaygmEOnd",
+      "id": "R-SpecifRealizes",
       "changedAt": "2023-08-09T21:48:09.529Z",
       "revision": "28",
       "class": {
@@ -12580,7 +12763,8 @@
           "values": [
             [
               {
-                "text": "realizes"
+                "text": "realizes",
+                "language": "en"
               }
             ]
           ]
@@ -12604,7 +12788,7 @@
       ]
     },
     {
-      "id": "R-ezOyCjoaJbqHKohD9tvvVI3S3AG",
+      "id": "R-ArchimateIsassignedto",
       "changedAt": "2023-07-16T15:05:49.284Z",
       "revision": "28",
       "class": {
@@ -12659,7 +12843,16 @@
           "values": [
             [
               {
-                "text": "ist zugeordnet zu"
+                "text": "assigned to",
+                "language": "en"
+              },
+              {
+                "text": "zugeordnet zu",
+                "language": "de"
+              },
+              {
+                "text": "assigné à",
+                "language": "fr"
               }
             ]
           ]
@@ -12762,7 +12955,7 @@
       ]
     },
     {
-      "id": "R-7OVcJnKlDm3zOHoIZUoprtHmeoJ",
+      "id": "R-FmcModifies",
       "changedAt": "2022-12-03T15:48:24.363Z",
       "revision": "28",
       "class": {
@@ -12788,7 +12981,8 @@
           "values": [
             [
               {
-                "text": "A [[FMC:Actor]] writes *and* reads a [[FMC:State]]."
+                "text": "A [[FMC:Actor]] writes *and* reads a [[FMC:State]].",
+                "language": "en"
               }
             ]
           ]
@@ -12931,7 +13125,7 @@
       ]
     },
     {
-      "id": "R-JqmEMlXGMp7bGuaLdQoJ6EcOhqc",
+      "id": "R-FmcSendsto",
       "changedAt": "2023-03-15T09:14:09.263Z",
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -12956,7 +13150,7 @@
           "values": [
             [
               {
-                "text": "SpecIF:sendsTo"
+                "text": "FMC:sendsTo"
               }
             ]
           ]
@@ -12968,7 +13162,8 @@
           "values": [
             [
               {
-                "text": "A [[FMC:Actor]] 'sends' a message to a [[FMC:Actor]]."
+                "text": "A [[FMC:Actor]] 'sends' a message to a [[FMC:Actor]].",
+                "language": "en"
               }
             ]
           ]
@@ -13029,7 +13224,7 @@
       ]
     },
     {
-      "id": "R-epP6KdUsc1J7HHuq4ChWGvd3TVk",
+      "id": "R-FmcReceivesfrom",
       "changedAt": "2023-03-15T09:14:22.685Z",
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -13054,7 +13249,7 @@
           "values": [
             [
               {
-                "text": "SpecIF:receivesFrom"
+                "text": "FMC:receivesFrom"
               }
             ]
           ]
@@ -13066,7 +13261,8 @@
           "values": [
             [
               {
-                "text": "A [[FMC:Actor]] 'receives' a message from a [[FMC:Actor]]."
+                "text": "A [[FMC:Actor]] 'receives' a message from a [[FMC:Actor]].",
+                "language": "en"
               }
             ]
           ]
@@ -13127,7 +13323,7 @@
       ]
     },
     {
-      "id": "R-07g3XWyx81s5KxMfyzzP2tM1brk",
+      "id": "R-SpecifFollows",
       "changedAt": "2023-07-16T13:09:55.680Z",
       "revision": "29",
       "class": {
@@ -13194,7 +13390,16 @@
           "values": [
             [
               {
-                "text": "folgt auf"
+                "text": "follows",
+                "language": "en"
+              },
+              {
+                "text": "folgt auf",
+                "language": "de"
+              },
+              {
+                "text": "succèdes à",
+                "language": "fr"
               }
             ]
           ]
@@ -13218,7 +13423,7 @@
       ]
     },
     {
-      "id": "R-ior1aP0HS9zfiBkoYok4rx9GiZw",
+      "id": "R-SpecifPrecedes",
       "changedAt": "2023-07-16T13:14:41.553Z",
       "revision": "190",
       "class": {
@@ -13285,7 +13490,16 @@
           "values": [
             [
               {
-                "text": "ist Vorgänger von"
+                "text": "precedes",
+                "language": "en"
+              },
+              {
+                "text": "ist Vorgänger von",
+                "language": "de"
+              },
+              {
+                "text": "précède",
+                "language": "fr"
               }
             ]
           ]
@@ -13309,7 +13523,7 @@
       ]
     },
     {
-      "id": "R-1756321088",
+      "id": "R-SpecifSignals",
       "changedAt": "2023-07-16T13:13:25.156Z",
       "revision": "30",
       "class": {
@@ -13364,7 +13578,16 @@
           "values": [
             [
               {
-                "text": "signalisiert"
+                "text": "signals",
+                "language": "en"
+              },
+              {
+                "text": "signalisiert",
+                "language": "de"
+              },
+              {
+                "text": "signale",
+                "language": "fr"
               }
             ]
           ]
@@ -13380,7 +13603,7 @@
       ]
     },
     {
-      "id": "R-1756321089",
+      "id": "R-SpecifTriggers",
       "changedAt": "2023-07-16T13:13:56.439Z",
       "revision": "31",
       "class": {
@@ -13435,7 +13658,16 @@
           "values": [
             [
               {
-                "text": "löst aus"
+                "text": "triggers",
+                "language": "en"
+              },
+              {
+                "text": "löst aus",
+                "language": "de"
+              },
+              {
+                "text": "déclenche",
+                "language": "fr"
               }
             ]
           ]
@@ -13451,7 +13683,7 @@
       ]
     },
     {
-      "id": "R-1756321090",
+      "id": "R-SpecifDependson",
       "changedAt": "2023-07-16T13:15:43.014Z",
       "revision": "32",
       "class": {
@@ -13520,7 +13752,16 @@
           "values": [
             [
               {
-                "text": "hängt ab von"
+                "text": "depends on",
+                "language": "en"
+              },
+              {
+                "text": "hängt ab von",
+                "language": "de"
+              },
+              {
+                "text": "depend de",
+                "language": "fr"
               }
             ]
           ]
@@ -13723,7 +13964,7 @@
       ]
     },
     {
-      "id": "R-refines",
+      "id": "R-IrebRefines",
       "changedAt": "2023-08-08T21:08:32.367Z",
       "revision": "33",
       "class": {
@@ -13796,6 +14037,10 @@
               {
                 "text": "verfeinert",
                 "language": "de"
+              },
+              {
+                "text": "affine",
+                "language": "fr"
               }
             ]
           ]
@@ -13819,7 +14064,7 @@
       ]
     },
     {
-      "id": "R-n8aTdqXh68VMx7IQTZOIvYnua9b",
+      "id": "R-IrebRefinedby",
       "changedAt": "2023-08-08T21:49:51.165Z",
       "revision": "33",
       "class": {
@@ -13886,7 +14131,16 @@
           "values": [
             [
               {
-                "text": "is refined by"
+                "text": "is refined by",
+                "language": "en"
+              },
+              {
+                "text": "wird verfeinert durch",
+                "language": "de"
+              },
+              {
+                "text": "est affiné de",
+                "language": "fr"
               }
             ]
           ]
@@ -13910,7 +14164,7 @@
       ]
     },
     {
-      "id": "R-duplicates",
+      "id": "R-SpecifDuplicates",
       "changedAt": "2023-07-16T15:01:40.623Z",
       "revision": "34",
       "class": {
@@ -13983,6 +14237,10 @@
               {
                 "text": "dupliziert",
                 "language": "de"
+              },
+              {
+                "text": "reprend",
+                "language": "fr"
               }
             ]
           ]
@@ -14006,7 +14264,7 @@
       ]
     },
     {
-      "id": "R-1388621256",
+      "id": "R-SpecifContradicts",
       "changedAt": "2023-07-16T15:02:23.500Z",
       "revision": "35",
       "class": {
@@ -14073,7 +14331,16 @@
           "values": [
             [
               {
-                "text": "widerspricht"
+                "text": "contradicts",
+                "language": "en"
+              },
+              {
+                "text": "widerspricht",
+                "language": "de"
+              },
+              {
+                "text": "contredit",
+                "language": "fr"
               }
             ]
           ]
@@ -14097,7 +14364,7 @@
       ]
     },
     {
-      "id": "R-isAllocatedTo",
+      "id": "R-SysmlIsallocatedto",
       "changedAt": "2023-07-16T15:03:25.597Z",
       "revision": "36",
       "class": {
@@ -14164,12 +14431,16 @@
           "values": [
             [
               {
-                "text": "is allocated to",
+                "text": "allocated to",
                 "language": "en"
               },
               {
-                "text": "ist zugeordnet zu",
+                "text": "zugeordnet zu",
                 "language": "de"
+              },
+              {
+                "text": "allouée à",
+                "language": "fr"
               }
             ]
           ]
@@ -14193,7 +14464,7 @@
       ]
     },
     {
-      "id": "R-isAssociatedWith",
+      "id": "R-UmlIsassociatedwith",
       "changedAt": "2023-07-16T15:12:15.874Z",
       "revision": "36",
       "class": {
@@ -14260,7 +14531,16 @@
           "values": [
             [
               {
-                "text": "ist assoziiert mit"
+                "text": "associated with",
+                "language": "en"
+              },
+              {
+                "text": "assoziiert mit",
+                "language": "de"
+              },
+              {
+                "text": "associé avec",
+                "language": "fr"
               }
             ]
           ]
@@ -14284,7 +14564,7 @@
       ]
     },
     {
-      "id": "R-GHg8JTMdiKKmEm3XohjVhCrpxAH",
+      "id": "R-SysmlIsassociatedwith",
       "changedAt": "2023-07-16T15:11:53.234Z",
       "revision": "36",
       "class": {
@@ -15190,7 +15470,7 @@
       ]
     },
     {
-      "id": "R-uses",
+      "id": "R-SysmlUses",
       "changedAt": "2023-07-16T15:33:08.040Z",
       "revision": "36",
       "class": {
@@ -15250,6 +15530,10 @@
               {
                 "text": "benutzt",
                 "language": "de"
+              },
+              {
+                "text": "utilise",
+                "language": "fr"
               }
             ]
           ]
@@ -15273,7 +15557,7 @@
       ]
     },
     {
-      "id": "R-G2Li8YxkuzhULfFFQex0re3VEkp",
+      "id": "R-SysmlIsusedby",
       "changedAt": "2023-07-16T15:34:20.616Z",
       "revision": "36",
       "class": {
@@ -15333,6 +15617,10 @@
               {
                 "text": "wird benutzt von",
                 "language": "de"
+              },
+              {
+                "text": "est utilisé par",
+                "language": "fr"
               }
             ]
           ]
@@ -15356,7 +15644,7 @@
       ]
     },
     {
-      "id": "R-extends",
+      "id": "R-UmlExtends",
       "changedAt": "2023-07-16T15:23:43.133Z",
       "revision": "36",
       "class": {
@@ -15382,7 +15670,7 @@
           "values": [
             [
               {
-                "text": "SysML:extends"
+                "text": "UML:extends"
               }
             ]
           ]
@@ -15423,7 +15711,16 @@
           "values": [
             [
               {
-                "text": "erweitert"
+                "text": "extends",
+                "language": "en"
+              },
+              {
+                "text": "erweitert",
+                "language": "de"
+              },
+              {
+                "text": "s'étend",
+                "language": "fr"
               }
             ]
           ]
@@ -15447,7 +15744,7 @@
       ]
     },
     {
-      "id": "R-includes",
+      "id": "R-SysmlIncludes",
       "changedAt": "2023-07-16T15:20:39.094Z",
       "revision": "36",
       "class": {
@@ -15514,7 +15811,16 @@
           "values": [
             [
               {
-                "text": "inkludiert"
+                "text": "includes",
+                "language": "en"
+              },
+              {
+                "text": "inkludiert",
+                "language": "de"
+              },
+              {
+                "text": "inclut",
+                "language": "fr"
               }
             ]
           ]
@@ -16809,7 +17115,7 @@
       ]
     },
     {
-      "id": "R-1388621252",
+      "id": "R-SpecifMentions",
       "changedAt": "2023-07-16T15:23:17.433Z",
       "revision": "38",
       "changedBy": "od",
@@ -16871,6 +17177,10 @@
               {
                 "text": "erwähnt",
                 "language": "de"
+              },
+              {
+                "text": "évoque",
+                "language": "fr"
               }
             ]
           ]
@@ -17216,7 +17526,7 @@
       ]
     },
     {
-      "id": "R-xcniBEOFjE4wE1UmSDGWaz1dyR2",
+      "id": "R-OwlSameas",
       "changedAt": "2023-07-16T15:45:34.533Z",
       "revision": "40",
       "class": {
@@ -17289,6 +17599,10 @@
               {
                 "text": "ist identisch mit",
                 "language": "de"
+              },
+              {
+                "text": "est identique à",
+                "language": "fr"
               }
             ]
           ]
@@ -18793,7 +19107,7 @@
       ]
     },
     {
-      "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO",
+      "id": "R-DctermsType",
       "changedAt": "2023-02-26T20:18:04.451Z",
       "revision": "152",
       "class": {
@@ -19198,7 +19512,7 @@
       ]
     },
     {
-      "id": "R-852227558",
+      "id": "R-SpecifNotation",
       "changedAt": "2023-02-26T21:06:48.930Z",
       "revision": "75",
       "class": {
@@ -19279,14 +19593,6 @@
               {
                 "text": "Notation",
                 "language": "en"
-              },
-              {
-                "text": "Notation",
-                "language": "de"
-              },
-              {
-                "text": "Notation",
-                "language": "fr"
               }
             ]
           ]
@@ -19410,7 +19716,8 @@
           "values": [
             [
               {
-                "text": "<p>A unique reference to the resource within a given context.</p>"
+                "text": "<p>A unique reference to the resource within a given context.</p>",
+                "language": "en"
               }
             ]
           ]
@@ -20326,7 +20633,7 @@
       ]
     },
     {
-      "id": "R-852227618",
+      "id": "R-OslcServiceprovider",
       "changedAt": "2023-07-15T13:47:31.425Z",
       "revision": "60",
       "changedBy": "od",
@@ -20388,6 +20695,10 @@
               {
                 "text": "Dienstleister",
                 "language": "de"
+              },
+              {
+                "text": "Prestataire de Services",
+                "language": "fr"
               }
             ]
           ]
@@ -20447,7 +20758,7 @@
       ]
     },
     {
-      "id": "R-mrvz0s0g60YP4yZshfKD5zkN6pM",
+      "id": "R-SpecifStereotype",
       "changedAt": "2018-03-03T23:28:44+01:00",
       "revision": "152",
       "changedBy": "od",
@@ -20491,7 +20802,7 @@
       ]
     },
     {
-      "id": "R-e4NXjdp7tIdRTAaUpGQJVcPMPJp",
+      "id": "R-UmlStereotype",
       "changedAt": "2020-11-18T18:31:42.299Z",
       "revision": "152",
       "changedBy": "od",
@@ -20526,6 +20837,23 @@
         },
         {
           "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Stereotype",
+                "language": "en"
+              },
+              {
+                "text": "Stereotyp",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -20535,7 +20863,7 @@
       ]
     },
     {
-      "id": "R-A8FDfIonVwNiywJ6pafbpIt3hqU",
+      "id": "R-IrebRequirementtype",
       "changedAt": "2023-08-08T20:52:31.633Z",
       "class": {
         "id": "RC-SpecifTermpropertyclassstring"
@@ -20588,7 +20916,7 @@
                 "language": "en"
               },
               {
-                "text": "Nach dem IREB werden Anforderungen üblicherweise in funktionale Anforderungen ([[IREB:FunctionalRequirement]]), Qualitätsanforderungen ([[IREB:QualityRequirement]]) und Einschränkungen ([[IREB:Constraint]]) unterteilt. Die beiden letzteren werden auch nicht-funktionale Anforderungen genannt.",
+                "text": "Nach dem IREB werden Anforderungen üblicherweise nach 'Art' in funktionale Anforderungen ([[IREB:FunctionalRequirement]]), Qualitätsanforderungen ([[IREB:QualityRequirement]]) und Randbedingungen ([[IREB:Constraint]]) unterteilt. Die beiden letzteren werden auch nicht-funktionale Anforderungen genannt.",
                 "language": "de"
               },
               {
@@ -20621,7 +20949,12 @@
           "values": [
             [
               {
-                "text": "Type"
+                "text": "Type",
+                "language": "en"
+              },
+              {
+                "text": "Art",
+                "language": "de"
               }
             ]
           ]
@@ -20661,7 +20994,7 @@
       ]
     },
     {
-      "id": "R-mrvz0s0g60YP4yZshfKD5zkO7mN",
+      "id": "R-SpecifSubclass",
       "changedAt": "2018-03-03T23:28:44+01:00",
       "revision": "152",
       "changedBy": "od",
@@ -20705,7 +21038,7 @@
       ]
     },
     {
-      "id": "R-852227557",
+      "id": "R-SpecifLifecyclestatus",
       "changedAt": "2023-08-15T07:44:45.541Z",
       "revision": "76",
       "class": {
@@ -20844,7 +21177,7 @@
       ]
     },
     {
-      "id": "R-b2vrilNkrUls1EXhU4rJMCve4lQ",
+      "id": "R-SpecifStatus",
       "changedAt": "2023-08-29T12:46:13.313Z",
       "revision": "76",
       "class": {
@@ -20870,12 +21203,12 @@
           "values": [
             [
               {
-                "text": "The 'Lifecycle Status' of the resource.",
+                "text": "The 'Status' of the resource.",
                 "language": "en"
               },
               {
-                "text": "The 'Lifecycle Status' of the resource.",
-                "language": "de-DE"
+                "text": "The 'Status' of the resource.",
+                "language": "de"
               }
             ]
           ]
@@ -22899,7 +23232,7 @@
       ]
     },
     {
-      "id": "R-852227556",
+      "id": "R-SpecifProbability",
       "changedAt": "2023-07-16T12:49:13.545Z",
       "revision": "77",
       "class": {
@@ -22939,6 +23272,10 @@
               {
                 "text": "Wahrscheinlichkeit",
                 "language": "de"
+              },
+              {
+                "text": "Probabilité",
+                "language": "fr"
               }
             ]
           ]
@@ -23069,7 +23406,7 @@
       ]
     },
     {
-      "id": "R-852227555",
+      "id": "R-SpecifPriority",
       "changedAt": "2023-03-06T08:27:49.256Z",
       "revision": "78",
       "class": {
@@ -23308,7 +23645,7 @@
       ]
     },
     {
-      "id": "R-DCbTuMs2fwm495yW2IMQIPjIEwt",
+      "id": "R-SpecifEffort",
       "changedAt": "2023-07-16T12:39:52.299Z",
       "revision": "78",
       "class": {
@@ -23358,6 +23695,10 @@
               {
                 "text": "Aufwand",
                 "language": "de"
+              },
+              {
+                "text": "Effort",
+                "language": "fr"
               }
             ]
           ]
@@ -23397,7 +23738,7 @@
       ]
     },
     {
-      "id": "R-C5PhtVHKHtWggJDO5YgbLAljF8U",
+      "id": "R-SpecifRationale",
       "changedAt": "2023-07-16T10:47:51.299Z",
       "revision": "78",
       "class": {
@@ -23441,8 +23782,16 @@
           "values": [
             [
               {
-                "text": "Motivation",
+                "text": "Rationale",
                 "language": "en"
+              },
+              {
+                "text": "Motivation",
+                "language": "de"
+              },
+              {
+                "text": "Motivation",
+                "language": "fr"
               }
             ]
           ]
@@ -24215,7 +24564,7 @@
       ]
     },
     {
-      "id": "R-852227529",
+      "id": "R-SpecifBenefit",
       "changedAt": "2023-07-16T12:47:38.723Z",
       "revision": "82",
       "changedBy": "od",
@@ -24256,6 +24605,10 @@
               {
                 "text": "Nutzen",
                 "language": "de"
+              },
+              {
+                "text": "Bénéfice",
+                "language": "fr"
               }
             ]
           ]
@@ -24287,7 +24640,7 @@
       ]
     },
     {
-      "id": "R-852227528",
+      "id": "R-SpecifDamage",
       "changedAt": "2023-07-16T12:47:57.105Z",
       "revision": "83",
       "changedBy": "od",
@@ -24328,6 +24681,10 @@
               {
                 "text": "Schaden",
                 "language": "de"
+              },
+              {
+                "text": "Dommage",
+                "language": "fr"
               }
             ]
           ]
@@ -29251,7 +29608,7 @@
       ]
     },
     {
-      "id": "R-bVp4rdjBqmM6cY3kCMcFUABMcHk",
+      "id": "R-IrebRequirementtypefunction",
       "changedAt": "2023-08-08T20:53:53.977Z",
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -29299,6 +29656,14 @@
               {
                 "text": "Function or User Story",
                 "language": "en"
+              },
+              {
+                "text": "Funktion or User Story",
+                "language": "de"
+              },
+              {
+                "text": "Function ou récit d'utilisateur",
+                "language": "fr"
               }
             ]
           ]
@@ -29306,7 +29671,7 @@
       ]
     },
     {
-      "id": "R-kpmT9sL9CTLaXyyc1Uy8UFv82Tx",
+      "id": "R-IrebRequirementtypequality",
       "changedAt": "2023-04-01T14:14:04.616Z",
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -29331,7 +29696,8 @@
           "values": [
             [
               {
-                "text": "A [[IREB:Requirement]] that pertains to a quality concern that is not covered by functional requirements."
+                "text": "A [[IREB:Requirement]] that pertains to a quality concern that is not covered by functional requirements.",
+                "language": "en"
               }
             ]
           ]
@@ -29353,6 +29719,14 @@
               {
                 "text": "Quality",
                 "language": "en"
+              },
+              {
+                "text": "Qualität",
+                "language": "de"
+              },
+              {
+                "text": "Qualité",
+                "language": "fr"
               }
             ]
           ]
@@ -29360,7 +29734,7 @@
       ]
     },
     {
-      "id": "R-cgOlaz2WHoymGVaXfhU5Qej5rUv",
+      "id": "R-IrebRequirementtypeconstraint",
       "changedAt": "2023-04-01T14:14:14.605Z",
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -29408,6 +29782,14 @@
               {
                 "text": "Constraint",
                 "language": "en"
+              },
+              {
+                "text": "Randbedingung",
+                "language": "de"
+              },
+              {
+                "text": "Contrainte",
+                "language": "fr"
               }
             ]
           ]
@@ -31263,10 +31645,10 @@
         "id": "SC-isSynonymOfProperty"
       },
       "subject": {
-        "id": "R-mrvz0s0g60YP4yZshfKD5zkO7mN"
+        "id": "R-SpecifSubclass"
       },
       "object": {
-        "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
+        "id": "R-DctermsType"
       }
     },
     {
@@ -31323,10 +31705,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-852227564"
+        "id": "R-OslcrmDecomposedby"
       },
       "object": {
-        "id": "R-852227563"
+        "id": "R-OslcrmDecomposes"
       }
     },
     {
@@ -31341,7 +31723,7 @@
         "id": "R-852227562"
       },
       "object": {
-        "id": "R-852227561"
+        "id": "R-OslcrmConstrains"
       }
     },
     {
@@ -31353,10 +31735,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-07g3XWyx81s5KxMfyzzP2tM1brk"
+        "id": "R-SpecifFollows"
       },
       "object": {
-        "id": "R-ior1aP0HS9zfiBkoYok4rx9GiZw"
+        "id": "R-SpecifPrecedes"
       }
     },
     {
@@ -31386,7 +31768,7 @@
         "id": "R-1388621251"
       },
       "object": {
-        "id": "R-xcniBEOFjE4wE1UmSDGWaz1dyR2"
+        "id": "R-OwlSameas"
       }
     },
     {
@@ -31501,7 +31883,7 @@
         "id": "SC-isSynonymOfValue"
       },
       "subject": {
-        "id": "R-bVp4rdjBqmM6cY3kCMcFUABMcHk"
+        "id": "R-IrebRequirementtypefunction"
       },
       "object": {
         "id": "R-bU28Pughaecj84a84sDtvmvB6EH"
@@ -31514,7 +31896,7 @@
         "id": "SC-isSynonymOfValue"
       },
       "subject": {
-        "id": "R-kpmT9sL9CTLaXyyc1Uy8UFv82Tx"
+        "id": "R-IrebRequirementtypequality"
       },
       "object": {
         "id": "R-1exvev9v7dtJAkoxixqHZGbZMfO"
@@ -31527,7 +31909,7 @@
         "id": "SC-isSynonymOfValue"
       },
       "subject": {
-        "id": "R-cgOlaz2WHoymGVaXfhU5Qej5rUv"
+        "id": "R-IrebRequirementtypeconstraint"
       },
       "object": {
         "id": "R-IrebConstraint"
@@ -31553,10 +31935,10 @@
         "id": "SC-isSynonymOfProperty"
       },
       "subject": {
-        "id": "R-mrvz0s0g60YP4yZshfKD5zkN6pM"
+        "id": "R-SpecifStereotype"
       },
       "object": {
-        "id": "R-e4NXjdp7tIdRTAaUpGQJVcPMPJp"
+        "id": "R-UmlStereotype"
       }
     },
     {
@@ -31566,10 +31948,10 @@
         "id": "SC-isSynonymOfProperty"
       },
       "subject": {
-        "id": "R-e4NXjdp7tIdRTAaUpGQJVcPMPJp"
+        "id": "R-UmlStereotype"
       },
       "object": {
-        "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
+        "id": "R-DctermsType"
       }
     },
     {
@@ -31579,10 +31961,10 @@
         "id": "SC-isSynonymOfProperty"
       },
       "subject": {
-        "id": "R-mrvz0s0g60YP4yZshfKD5zkO7mN"
+        "id": "R-SpecifSubclass"
       },
       "object": {
-        "id": "R-e4NXjdp7tIdRTAaUpGQJVcPMPJp"
+        "id": "R-UmlStereotype"
       }
     },
     {
@@ -31595,7 +31977,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-1756321086"
+        "id": "R-SpecifReads"
       }
     },
     {
@@ -31608,7 +31990,7 @@
         "id": "R-FmcState"
       },
       "object": {
-        "id": "R-1756321086"
+        "id": "R-SpecifReads"
       }
     },
     {
@@ -31621,7 +32003,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-1756321087"
+        "id": "R-SpecifWrites"
       }
     },
     {
@@ -31634,7 +32016,7 @@
         "id": "R-FmcState"
       },
       "object": {
-        "id": "R-1756321087"
+        "id": "R-SpecifWrites"
       }
     },
     {
@@ -31647,7 +32029,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-LfS1sqHpaj2SBAGEG1MX8yIJTwV"
+        "id": "R-SpecifStores"
       }
     },
     {
@@ -31660,7 +32042,7 @@
         "id": "R-FmcState"
       },
       "object": {
-        "id": "R-LfS1sqHpaj2SBAGEG1MX8yIJTwV"
+        "id": "R-SpecifStores"
       }
     },
     {
@@ -31670,10 +32052,10 @@
         "id": "SC-isSpecializationOfPredicate"
       },
       "subject": {
-        "id": "R-1756321088"
+        "id": "R-SpecifSignals"
       },
       "object": {
-        "id": "R-ior1aP0HS9zfiBkoYok4rx9GiZw"
+        "id": "R-SpecifPrecedes"
       }
     },
     {
@@ -31683,10 +32065,10 @@
         "id": "SC-isSpecializationOfPredicate"
       },
       "subject": {
-        "id": "R-1756321089"
+        "id": "R-SpecifTriggers"
       },
       "object": {
-        "id": "R-ior1aP0HS9zfiBkoYok4rx9GiZw"
+        "id": "R-SpecifPrecedes"
       }
     },
     {
@@ -31696,10 +32078,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-epP6KdUsc1J7HHuq4ChWGvd3TVk"
+        "id": "R-FmcReceivesfrom"
       },
       "object": {
-        "id": "R-JqmEMlXGMp7bGuaLdQoJ6EcOhqc"
+        "id": "R-FmcSendsto"
       }
     },
     {
@@ -31709,7 +32091,7 @@
         "id": "SC-isSpecializationOfPredicate"
       },
       "subject": {
-        "id": "R-JqmEMlXGMp7bGuaLdQoJ6EcOhqc"
+        "id": "R-FmcSendsto"
       },
       "object": {
         "id": "R-wHJdaUoL1OblRkwOFfDvjeJuEI5"
@@ -31722,7 +32104,7 @@
         "id": "SC-isSpecializationOfPredicate"
       },
       "subject": {
-        "id": "R-epP6KdUsc1J7HHuq4ChWGvd3TVk"
+        "id": "R-FmcReceivesfrom"
       },
       "object": {
         "id": "R-wHJdaUoL1OblRkwOFfDvjeJuEI5"
@@ -31738,7 +32120,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-3KHuQVdvw7pEuacDmKP3XWo2YDB"
+        "id": "R-SpecifServes"
       }
     },
     {
@@ -31751,7 +32133,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-3KHuQVdvw7pEuacDmKP3XWo2YDB"
+        "id": "R-SpecifServes"
       }
     },
     {
@@ -31875,7 +32257,7 @@
         }
       ],
       "subject": {
-        "id": "R-852227555"
+        "id": "R-SpecifPriority"
       },
       "object": {
         "id": "R-Cl12pC9IJQGkMfpUEBVjiXbqcEI"
@@ -31898,7 +32280,7 @@
         }
       ],
       "subject": {
-        "id": "R-852227555"
+        "id": "R-SpecifPriority"
       },
       "object": {
         "id": "R-SzqKGRPmyullYDig7vJzdLhObfN"
@@ -31921,7 +32303,7 @@
         }
       ],
       "subject": {
-        "id": "R-852227555"
+        "id": "R-SpecifPriority"
       },
       "object": {
         "id": "R-25vnnMCb6zU5E83PZNdJUeSXRf9"
@@ -31944,7 +32326,7 @@
         }
       ],
       "subject": {
-        "id": "R-852227555"
+        "id": "R-SpecifPriority"
       },
       "object": {
         "id": "R-FiIaMeNY7Nf2Xx4ERtysIzNCxLb"
@@ -31967,7 +32349,7 @@
         }
       ],
       "subject": {
-        "id": "R-852227555"
+        "id": "R-SpecifPriority"
       },
       "object": {
         "id": "R-pCRisTjFS8EOV0u5gak6URUtPtv"
@@ -31980,7 +32362,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       },
       "object": {
         "id": "R-n28XW0rtcgNmL4u1s1xnRBWKEeF"
@@ -31993,7 +32375,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       },
       "object": {
         "id": "R-5C2ATeXhGQg5YdnOlYaoSuzDeHW"
@@ -32006,7 +32388,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       },
       "object": {
         "id": "R-v4oOIUQNRqoc0kqZLSLDVD2T8rC"
@@ -32019,7 +32401,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       },
       "object": {
         "id": "R-HL9yT3xGFhRsvxEGtLP3QmzMoQ2"
@@ -32032,7 +32414,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       },
       "object": {
         "id": "R-8JP2IBLr4ycFkOb7WVP19qKcmRB"
@@ -32045,7 +32427,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       },
       "object": {
         "id": "R-6Tvl5lJS1LUBfyvdruaPzWcjWqG"
@@ -32058,7 +32440,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       },
       "object": {
         "id": "R-bbaVEqXG79QKpDxNPtsCd7lbH2i"
@@ -32071,7 +32453,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       },
       "object": {
         "id": "R-bLVl2PvCMy9bSu3IeC194RY2tiO"
@@ -32084,7 +32466,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       },
       "object": {
         "id": "R-fa9V84wJNXEQQJqCIBVlXMxRyxA"
@@ -32097,7 +32479,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       },
       "object": {
         "id": "R-A7JHwmw3atxcrgTFIZ7xuuGHr4k"
@@ -32110,7 +32492,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       },
       "object": {
         "id": "R-j2bRQ5SwnA9NXWdWOIo7K2hhStD"
@@ -32123,7 +32505,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       },
       "object": {
         "id": "R-vzI581EFCyFm4VCpsAJAY6gNrUv"
@@ -32139,7 +32521,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-refines"
+        "id": "R-IrebRefines"
       }
     },
     {
@@ -32152,7 +32534,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-refines"
+        "id": "R-IrebRefines"
       }
     },
     {
@@ -32282,7 +32664,7 @@
         "id": "R-SpecifHierarchy"
       },
       "object": {
-        "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
+        "id": "R-DctermsType"
       }
     },
     {
@@ -32308,7 +32690,7 @@
         "id": "R-SpecifParagraph"
       },
       "object": {
-        "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
+        "id": "R-DctermsType"
       }
     },
     {
@@ -32360,7 +32742,7 @@
         "id": "R-SpecifView"
       },
       "object": {
-        "id": "R-852227558"
+        "id": "R-SpecifNotation"
       }
     },
     {
@@ -32451,7 +32833,7 @@
         "id": "R-SpecifModelelement"
       },
       "object": {
-        "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
+        "id": "R-DctermsType"
       }
     },
     {
@@ -32620,7 +33002,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-852227555"
+        "id": "R-SpecifPriority"
       }
     },
     {
@@ -32646,7 +33028,7 @@
         "id": "R-SpecifFeature"
       },
       "object": {
-        "id": "R-852227555"
+        "id": "R-SpecifPriority"
       }
     },
     {
@@ -33010,7 +33392,7 @@
         "id": "R-852227594"
       },
       "object": {
-        "id": "R-refines"
+        "id": "R-IrebRefines"
       }
     },
     {
@@ -33023,7 +33405,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-A8FDfIonVwNiywJ6pafbpIt3hqU"
+        "id": "R-IrebRequirementtype"
       }
     },
     {
@@ -33036,7 +33418,7 @@
         "id": "R-ReqifwfRequirement"
       },
       "object": {
-        "id": "R-refines"
+        "id": "R-IrebRefines"
       }
     },
     {
@@ -33049,7 +33431,7 @@
         "id": "R-ReqifwfRequirement"
       },
       "object": {
-        "id": "R-refines"
+        "id": "R-IrebRefines"
       }
     },
     {
@@ -33062,7 +33444,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-duplicates"
+        "id": "R-SpecifDuplicates"
       }
     },
     {
@@ -33075,7 +33457,7 @@
         "id": "R-ReqifwfRequirement"
       },
       "object": {
-        "id": "R-duplicates"
+        "id": "R-SpecifDuplicates"
       }
     },
     {
@@ -33088,7 +33470,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-duplicates"
+        "id": "R-SpecifDuplicates"
       }
     },
     {
@@ -33101,7 +33483,7 @@
         "id": "R-ReqifwfRequirement"
       },
       "object": {
-        "id": "R-duplicates"
+        "id": "R-SpecifDuplicates"
       }
     },
     {
@@ -33114,7 +33496,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-1388621256"
+        "id": "R-SpecifContradicts"
       }
     },
     {
@@ -33127,7 +33509,7 @@
         "id": "R-ReqifwfRequirement"
       },
       "object": {
-        "id": "R-1388621256"
+        "id": "R-SpecifContradicts"
       }
     },
     {
@@ -33140,7 +33522,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-1388621256"
+        "id": "R-SpecifContradicts"
       }
     },
     {
@@ -33153,7 +33535,7 @@
         "id": "R-ReqifwfRequirement"
       },
       "object": {
-        "id": "R-1388621256"
+        "id": "R-SpecifContradicts"
       }
     },
     {
@@ -33254,7 +33636,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-A8FDfIonVwNiywJ6pafbpIt3hqU"
+        "id": "R-IrebRequirementtype"
       },
       "object": {
         "id": "R-SpecifFeature"
@@ -33267,7 +33649,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-A8FDfIonVwNiywJ6pafbpIt3hqU"
+        "id": "R-IrebRequirementtype"
       },
       "object": {
         "id": "R-SpecifUserstory"
@@ -33280,7 +33662,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-A8FDfIonVwNiywJ6pafbpIt3hqU"
+        "id": "R-IrebRequirementtype"
       },
       "object": {
         "id": "R-bU28Pughaecj84a84sDtvmvB6EH"
@@ -33293,7 +33675,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-A8FDfIonVwNiywJ6pafbpIt3hqU"
+        "id": "R-IrebRequirementtype"
       },
       "object": {
         "id": "R-1exvev9v7dtJAkoxixqHZGbZMfO"
@@ -33306,7 +33688,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-A8FDfIonVwNiywJ6pafbpIt3hqU"
+        "id": "R-IrebRequirementtype"
       },
       "object": {
         "id": "R-IrebConstraint"
@@ -33319,7 +33701,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-LfS1sqHpaj2SBAGEG1MX8yIJTwV"
+        "id": "R-SpecifStores"
       },
       "object": {
         "id": "R-SpecifAccesses"
@@ -33332,7 +33714,7 @@
         "id": "SC-isSpecializationOfPredicate"
       },
       "subject": {
-        "id": "R-1756321086"
+        "id": "R-SpecifReads"
       },
       "object": {
         "id": "R-SpecifAccesses"
@@ -33345,7 +33727,7 @@
         "id": "SC-isSpecializationOfPredicate"
       },
       "subject": {
-        "id": "R-1756321087"
+        "id": "R-SpecifWrites"
       },
       "object": {
         "id": "R-SpecifAccesses"
@@ -33358,7 +33740,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-7OVcJnKlDm3zOHoIZUoprtHmeoJ"
+        "id": "R-FmcModifies"
       },
       "object": {
         "id": "R-SpecifAccesses"
@@ -33374,7 +33756,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-07g3XWyx81s5KxMfyzzP2tM1brk"
+        "id": "R-SpecifFollows"
       }
     },
     {
@@ -33387,7 +33769,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-07g3XWyx81s5KxMfyzzP2tM1brk"
+        "id": "R-SpecifFollows"
       }
     },
     {
@@ -33400,7 +33782,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-ior1aP0HS9zfiBkoYok4rx9GiZw"
+        "id": "R-SpecifPrecedes"
       }
     },
     {
@@ -33413,7 +33795,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-ior1aP0HS9zfiBkoYok4rx9GiZw"
+        "id": "R-SpecifPrecedes"
       }
     },
     {
@@ -33452,7 +33834,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-JqmEMlXGMp7bGuaLdQoJ6EcOhqc"
+        "id": "R-FmcSendsto"
       }
     },
     {
@@ -33465,7 +33847,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-JqmEMlXGMp7bGuaLdQoJ6EcOhqc"
+        "id": "R-FmcSendsto"
       }
     },
     {
@@ -33478,7 +33860,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-epP6KdUsc1J7HHuq4ChWGvd3TVk"
+        "id": "R-FmcReceivesfrom"
       }
     },
     {
@@ -33491,7 +33873,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-epP6KdUsc1J7HHuq4ChWGvd3TVk"
+        "id": "R-FmcReceivesfrom"
       }
     },
     {
@@ -33530,7 +33912,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-1756321090"
+        "id": "R-SpecifDependson"
       }
     },
     {
@@ -33543,7 +33925,7 @@
         "id": "R-ReqifwfRequirement"
       },
       "object": {
-        "id": "R-1756321090"
+        "id": "R-SpecifDependson"
       }
     },
     {
@@ -33556,7 +33938,7 @@
         "id": "R-IrebRequirement"
       },
       "object": {
-        "id": "R-1756321090"
+        "id": "R-SpecifDependson"
       }
     },
     {
@@ -33569,7 +33951,7 @@
         "id": "R-ReqifwfRequirement"
       },
       "object": {
-        "id": "R-1756321090"
+        "id": "R-SpecifDependson"
       }
     },
     {
@@ -33738,7 +34120,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-extends"
+        "id": "R-UmlExtends"
       }
     },
     {
@@ -33751,7 +34133,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-extends"
+        "id": "R-UmlExtends"
       }
     },
     {
@@ -33764,7 +34146,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-includes"
+        "id": "R-SysmlIncludes"
       }
     },
     {
@@ -33777,7 +34159,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-includes"
+        "id": "R-SysmlIncludes"
       }
     },
     {
@@ -33790,7 +34172,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-isAllocatedTo"
+        "id": "R-SysmlIsallocatedto"
       }
     },
     {
@@ -33803,7 +34185,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-isAllocatedTo"
+        "id": "R-SysmlIsallocatedto"
       }
     },
     {
@@ -33816,7 +34198,7 @@
         "id": "R-FmcState"
       },
       "object": {
-        "id": "R-isAssociatedWith"
+        "id": "R-UmlIsassociatedwith"
       }
     },
     {
@@ -33829,7 +34211,7 @@
         "id": "R-FmcState"
       },
       "object": {
-        "id": "R-isAssociatedWith"
+        "id": "R-UmlIsassociatedwith"
       }
     },
     {
@@ -34073,7 +34455,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-852227563"
+        "id": "R-OslcrmDecomposes"
       },
       "object": {
         "id": "R-1388621277"
@@ -34086,7 +34468,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-852227564"
+        "id": "R-OslcrmDecomposedby"
       },
       "object": {
         "id": "R-YgTiYTzOi3BDJhLi3iXMFu6OiUb"
@@ -34102,7 +34484,7 @@
         "id": "R-SpecifContains"
       },
       "object": {
-        "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
+        "id": "R-DctermsType"
       }
     },
     {
@@ -34193,7 +34575,7 @@
         "id": "R-PvIGJ6Vwj4tkS6D5IgBKOtN2DEB"
       },
       "object": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       }
     },
     {
@@ -34206,7 +34588,7 @@
         "id": "R-4H2oVxaVvTDtiYmWb5ywp9MKR50"
       },
       "object": {
-        "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
+        "id": "R-DctermsType"
       }
     },
     {
@@ -34232,7 +34614,7 @@
         "id": "R-SpecifRevision"
       },
       "object": {
-        "id": "R-852227558"
+        "id": "R-SpecifNotation"
       }
     },
     {
@@ -34284,7 +34666,7 @@
         "id": "R-FmcPlan"
       },
       "object": {
-        "id": "R-852227558"
+        "id": "R-SpecifNotation"
       }
     },
     {
@@ -34297,7 +34679,7 @@
         "id": "R-SpecifOutline"
       },
       "object": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       }
     },
     {
@@ -34310,7 +34692,7 @@
         "id": "R-SpecifHierarchy"
       },
       "object": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       }
     },
     {
@@ -34346,7 +34728,7 @@
         "id": "SC-isSpecializationOfResource"
       },
       "subject": {
-        "id": "R-orvawW5lq3b0HUvbP4Lu3Xyp6jW"
+        "id": "R-SpecifBusinessprocess"
       },
       "object": {
         "id": "R-SpecifView"
@@ -34674,7 +35056,7 @@
         "id": "R-RmZDcwhH5iTqRxkjTW1YiYAe9Nf"
       },
       "object": {
-        "id": "R-7OVcJnKlDm3zOHoIZUoprtHmeoJ"
+        "id": "R-FmcModifies"
       }
     },
     {
@@ -34752,7 +35134,7 @@
         "id": "R-NmS1wOWAGTpqlRhTi85i0C7iXkL"
       },
       "object": {
-        "id": "R-A8FDfIonVwNiywJ6pafbpIt3hqU"
+        "id": "R-IrebRequirementtype"
       }
     },
     {
@@ -34765,7 +35147,7 @@
         "id": "R-NmS1wOWAGTpqlRhTi85i0C7iXkL"
       },
       "object": {
-        "id": "R-cgOlaz2WHoymGVaXfhU5Qej5rUv"
+        "id": "R-IrebRequirementtypeconstraint"
       }
     },
     {
@@ -34778,7 +35160,7 @@
         "id": "R-NmS1wOWAGTpqlRhTi85i0C7iXkL"
       },
       "object": {
-        "id": "R-bVp4rdjBqmM6cY3kCMcFUABMcHk"
+        "id": "R-IrebRequirementtypefunction"
       }
     },
     {
@@ -34791,7 +35173,7 @@
         "id": "R-NmS1wOWAGTpqlRhTi85i0C7iXkL"
       },
       "object": {
-        "id": "R-kpmT9sL9CTLaXyyc1Uy8UFv82Tx"
+        "id": "R-IrebRequirementtypequality"
       }
     },
     {
@@ -34804,7 +35186,7 @@
         "id": "R-NmS1wOWAGTpqlRhTi85i0C7iXkL"
       },
       "object": {
-        "id": "R-refines"
+        "id": "R-IrebRefines"
       }
     },
     {
@@ -34973,7 +35355,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-852227528"
+        "id": "R-SpecifDamage"
       }
     },
     {
@@ -34986,7 +35368,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-852227529"
+        "id": "R-SpecifBenefit"
       }
     },
     {
@@ -35012,7 +35394,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-orvawW5lq3b0HUvbP4Lu3Xyp6jW"
+        "id": "R-SpecifBusinessprocess"
       }
     },
     {
@@ -35077,7 +35459,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       }
     },
     {
@@ -35090,7 +35472,7 @@
         "id": "R-SpecifCategory"
       },
       "object": {
-        "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
+        "id": "R-DctermsType"
       }
     },
     {
@@ -35207,7 +35589,7 @@
         "id": "R-NsUkW3BuNrBf6MgUn7czN9ER311"
       },
       "object": {
-        "id": "R-xcniBEOFjE4wE1UmSDGWaz1dyR2"
+        "id": "R-OwlSameas"
       }
     },
     {
@@ -35246,7 +35628,7 @@
         "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
       },
       "object": {
-        "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
+        "id": "R-DctermsType"
       }
     },
     {
@@ -35545,7 +35927,7 @@
         "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
       },
       "object": {
-        "id": "R-852227618"
+        "id": "R-OslcServiceprovider"
       }
     },
     {
@@ -35607,10 +35989,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-oslcrmValidatedby"
+        "id": "R-OslcrmValidatedby"
       },
       "object": {
-        "id": "R-GPKxTMr3LxWEg8gTvygoY2vJRwL"
+        "id": "R-OslcrmValidates"
       }
     },
     {
@@ -35623,7 +36005,7 @@
         "id": "R-w19PoaxZiKLSP1lAV4u9SGx9IPs"
       },
       "object": {
-        "id": "R-oslcrmValidatedby"
+        "id": "R-OslcrmValidatedby"
       }
     },
     {
@@ -35636,7 +36018,7 @@
         "id": "R-w19PoaxZiKLSP1lAV4u9SGx9IPs"
       },
       "object": {
-        "id": "R-GPKxTMr3LxWEg8gTvygoY2vJRwL"
+        "id": "R-OslcrmValidates"
       }
     },
     {
@@ -35649,7 +36031,7 @@
         "id": "R-w19PoaxZiKLSP1lAV4u9SGx9IPs"
       },
       "object": {
-        "id": "R-852227563"
+        "id": "R-OslcrmDecomposes"
       }
     },
     {
@@ -35662,7 +36044,7 @@
         "id": "R-w19PoaxZiKLSP1lAV4u9SGx9IPs"
       },
       "object": {
-        "id": "R-852227564"
+        "id": "R-OslcrmDecomposedby"
       }
     },
     {
@@ -35688,7 +36070,7 @@
         "id": "R-uGhJflKYTw1ajCBpFGIksjcQLT1"
       },
       "object": {
-        "id": "R-852227564"
+        "id": "R-OslcrmDecomposedby"
       }
     },
     {
@@ -35922,7 +36304,7 @@
         "id": "R-IrebRisk"
       },
       "object": {
-        "id": "R-852227556"
+        "id": "R-SpecifProbability"
       }
     },
     {
@@ -36143,7 +36525,7 @@
         "id": "R-mVJnjob2n6ezD1lEwgr1p2hx1gD"
       },
       "object": {
-        "id": "R-C9MKRlJQuZj2xSbGxMCDxuaD546"
+        "id": "R-ArchimateRealizes"
       }
     },
     {
@@ -36156,7 +36538,7 @@
         "id": "R-4mbIWkda6HAw9UURbKcwjduPLFl"
       },
       "object": {
-        "id": "R-C9MKRlJQuZj2xSbGxMCDxuaD546"
+        "id": "R-ArchimateRealizes"
       }
     },
     {
@@ -36166,7 +36548,7 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-isAllocatedTo"
+        "id": "R-SysmlIsallocatedto"
       },
       "object": {
         "id": "R-4mbIWkda6HAw9UURbKcwjduPLFl"
@@ -36179,7 +36561,7 @@
         "id": "SC-isSpecializationOfPredicate"
       },
       "subject": {
-        "id": "R-C9MKRlJQuZj2xSbGxMCDxuaD546"
+        "id": "R-ArchimateRealizes"
       },
       "object": {
         "id": "R-avfLHb1MY1BCYBAI4bCCin5iSuU"
@@ -36195,7 +36577,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-v72vQ0DU7ohdAIL4rmzkKUAL9Yf"
+        "id": "R-ArchimateServes"
       }
     },
     {
@@ -36208,7 +36590,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-v72vQ0DU7ohdAIL4rmzkKUAL9Yf"
+        "id": "R-ArchimateServes"
       }
     },
     {
@@ -36218,10 +36600,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-3KHuQVdvw7pEuacDmKP3XWo2YDB"
+        "id": "R-SpecifServes"
       },
       "object": {
-        "id": "R-v72vQ0DU7ohdAIL4rmzkKUAL9Yf"
+        "id": "R-ArchimateServes"
       }
     },
     {
@@ -36234,7 +36616,7 @@
         "id": "R-mVJnjob2n6ezD1lEwgr1p2hx1gD"
       },
       "object": {
-        "id": "R-v72vQ0DU7ohdAIL4rmzkKUAL9Yf"
+        "id": "R-ArchimateServes"
       }
     },
     {
@@ -36247,7 +36629,7 @@
         "id": "R-mVJnjob2n6ezD1lEwgr1p2hx1gD"
       },
       "object": {
-        "id": "R-ezOyCjoaJbqHKohD9tvvVI3S3AG"
+        "id": "R-ArchimateIsassignedto"
       }
     },
     {
@@ -36257,7 +36639,7 @@
         "id": "SC-isSpecializationOfPredicate"
       },
       "subject": {
-        "id": "R-ezOyCjoaJbqHKohD9tvvVI3S3AG"
+        "id": "R-ArchimateIsassignedto"
       },
       "object": {
         "id": "R-avfLHb1MY1BCYBAI4bCCin5iSuU"
@@ -36270,10 +36652,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-isAllocatedTo"
+        "id": "R-SysmlIsallocatedto"
       },
       "object": {
-        "id": "R-ezOyCjoaJbqHKohD9tvvVI3S3AG"
+        "id": "R-ArchimateIsassignedto"
       }
     },
     {
@@ -36286,7 +36668,7 @@
         "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks"
       },
       "object": {
-        "id": "R-isAssociatedWith"
+        "id": "R-UmlIsassociatedwith"
       }
     },
     {
@@ -36377,7 +36759,7 @@
         "id": "R-AdyDfiNvv4ouaepgtffkr4r0BDN"
       },
       "object": {
-        "id": "R-G2Li8YxkuzhULfFFQex0re3VEkp"
+        "id": "R-SysmlIsusedby"
       }
     },
     {
@@ -36387,10 +36769,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-G2Li8YxkuzhULfFFQex0re3VEkp"
+        "id": "R-SysmlIsusedby"
       },
       "object": {
-        "id": "R-uses"
+        "id": "R-SysmlUses"
       }
     },
     {
@@ -36624,7 +37006,7 @@
         "id": "R-NmS1wOWAGTpqlRhTi85i0C7iXkL"
       },
       "object": {
-        "id": "R-n8aTdqXh68VMx7IQTZOIvYnua9b"
+        "id": "R-IrebRefinedby"
       }
     },
     {
@@ -36634,10 +37016,10 @@
         "id": "SC-isAntonymOfPredicate"
       },
       "subject": {
-        "id": "R-n8aTdqXh68VMx7IQTZOIvYnua9b"
+        "id": "R-IrebRefinedby"
       },
       "object": {
-        "id": "R-refines"
+        "id": "R-IrebRefines"
       }
     },
     {
@@ -36650,7 +37032,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-YRV2V6tSsoVCV9dDZofBhezVGGD"
+        "id": "R-SpecifInformation"
       }
     },
     {
@@ -36660,7 +37042,7 @@
         "id": "SC-isSynonymOfResource"
       },
       "subject": {
-        "id": "R-YRV2V6tSsoVCV9dDZofBhezVGGD"
+        "id": "R-SpecifInformation"
       },
       "object": {
         "id": "R-SpecifParagraph"
@@ -36845,7 +37227,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-pmhnenzzKxnS1WTY8vvaygmEOnd"
+        "id": "R-SpecifRealizes"
       }
     },
     {
@@ -36855,10 +37237,10 @@
         "id": "SC-isSynonymOfPredicate"
       },
       "subject": {
-        "id": "R-C9MKRlJQuZj2xSbGxMCDxuaD546"
+        "id": "R-ArchimateRealizes"
       },
       "object": {
-        "id": "R-pmhnenzzKxnS1WTY8vvaygmEOnd"
+        "id": "R-SpecifRealizes"
       }
     },
     {
@@ -36936,7 +37318,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-mrvz0s0g60YP4yZshfKD5zkN6pM"
+        "id": "R-SpecifStereotype"
       }
     },
     {
@@ -36949,7 +37331,7 @@
         "id": "R-852227560"
       },
       "object": {
-        "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
+        "id": "R-DctermsType"
       }
     },
     {
@@ -37388,7 +37770,7 @@
         "id": "SC-hasEnumValue"
       },
       "subject": {
-        "id": "R-A8FDfIonVwNiywJ6pafbpIt3hqU"
+        "id": "R-IrebRequirementtype"
       },
       "object": {
         "id": "R-SpecifPainpoint"
@@ -37479,7 +37861,7 @@
         "id": "SC-isSpecializationOfPredicate"
       },
       "subject": {
-        "id": "R-1756321087"
+        "id": "R-SpecifWrites"
       },
       "object": {
         "id": "R-SpecifRelates"
@@ -37492,7 +37874,7 @@
         "id": "SC-isSpecializationOfPredicate"
       },
       "subject": {
-        "id": "R-1756321086"
+        "id": "R-SpecifReads"
       },
       "object": {
         "id": "R-SpecifRelates"
@@ -37583,10 +37965,10 @@
         "id": "SC-isSynonymOfProperty"
       },
       "subject": {
-        "id": "R-b2vrilNkrUls1EXhU4rJMCve4lQ"
+        "id": "R-SpecifStatus"
       },
       "object": {
-        "id": "R-852227557"
+        "id": "R-SpecifLifecyclestatus"
       }
     },
     {
@@ -37942,7 +38324,7 @@
             {
               "id": "N-vDEoBbEU7xAvbOgffySiXqmO2LJ",
               "resource": {
-                "id": "R-YRV2V6tSsoVCV9dDZofBhezVGGD"
+                "id": "R-SpecifInformation"
               },
               "changedAt": "2023-08-09T10:45:43.729Z"
             },
@@ -38275,7 +38657,7 @@
             {
               "id": "N-6wPQRuWDdWvRAf66Y94VzJNLOKB",
               "resource": {
-                "id": "R-orvawW5lq3b0HUvbP4Lu3Xyp6jW"
+                "id": "R-SpecifBusinessprocess"
               },
               "changedAt": "2023-06-08T13:52:11.766Z"
             },
@@ -38496,7 +38878,7 @@
             {
               "id": "N-kYtQXpijizbrwaHc3gPkukE7mMt",
               "resource": {
-                "id": "R-6FTOPvcMAO1yPYW4BfJNyTvnQcm"
+                "id": "R-SpecifInfluences"
               },
               "changedAt": "2021-11-07T19:11:04.489Z"
             },
@@ -38589,7 +38971,7 @@
             {
               "id": "N-CQvy6KRvxlf6RyEthyIVQjWfDAy",
               "resource": {
-                "id": "R-oslcrmValidatedby"
+                "id": "R-OslcrmValidatedby"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38597,14 +38979,14 @@
             {
               "id": "N-aLtjTSoPq12ef6N9HLRAPFXnHbg",
               "resource": {
-                "id": "R-GPKxTMr3LxWEg8gTvygoY2vJRwL"
+                "id": "R-OslcrmValidates"
               },
               "changedAt": "2023-07-15T16:30:06.229Z"
             },
             {
               "id": "N-Lh6gzAhq42cjjrUUp3uAUsGTp2k",
               "resource": {
-                "id": "R-852227563"
+                "id": "R-OslcrmDecomposes"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38612,7 +38994,7 @@
             {
               "id": "N-EKotuJgI6AO3hijDTXVq7pslGGS",
               "resource": {
-                "id": "R-852227564"
+                "id": "R-OslcrmDecomposedby"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38620,7 +39002,7 @@
             {
               "id": "N-GLlxKnzbVa6WnmxcVbTRx1hXc3l",
               "resource": {
-                "id": "R-852227561"
+                "id": "R-OslcrmConstrains"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -38636,21 +39018,21 @@
             {
               "id": "N-OC96dfiXX3jNLiecgYdDZHLTDEO",
               "resource": {
-                "id": "R-3KHuQVdvw7pEuacDmKP3XWo2YDB"
+                "id": "R-SpecifServes"
               },
               "changedAt": "2021-03-25T08:17:03.742Z"
             },
             {
               "id": "N-gMGHPXvMbWLuf7aS5vRyU5PiY1N",
               "resource": {
-                "id": "R-v72vQ0DU7ohdAIL4rmzkKUAL9Yf"
+                "id": "R-ArchimateServes"
               },
               "changedAt": "2023-07-16T14:53:06.988Z"
             },
             {
               "id": "N-OzBNLw3q0pSW1ttm4VXctpWESTK",
               "resource": {
-                "id": "R-1756321086"
+                "id": "R-SpecifReads"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38658,7 +39040,7 @@
             {
               "id": "N-xcO79WgBHxRRy44CI6eaBTPBULY",
               "resource": {
-                "id": "R-1756321087"
+                "id": "R-SpecifWrites"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38666,7 +39048,7 @@
             {
               "id": "N-XRpLD8yvmIeaIWumIlEcyQFgIgH",
               "resource": {
-                "id": "R-LfS1sqHpaj2SBAGEG1MX8yIJTwV"
+                "id": "R-SpecifStores"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38688,21 +39070,21 @@
             {
               "id": "N-5ma3lDgWKJhqYK9BoJLPMCP4y3b",
               "resource": {
-                "id": "R-C9MKRlJQuZj2xSbGxMCDxuaD546"
+                "id": "R-ArchimateRealizes"
               },
               "changedAt": "2023-07-16T13:26:00.595Z"
             },
             {
               "id": "N-QijKzik1pHh7b3hDLKKfrpV3WlW",
               "resource": {
-                "id": "R-pmhnenzzKxnS1WTY8vvaygmEOnd"
+                "id": "R-SpecifRealizes"
               },
               "changedAt": "2023-08-09T21:48:09.529Z"
             },
             {
               "id": "N-pu6Y6WNvi0zck15VQK94esvnkIK",
               "resource": {
-                "id": "R-ezOyCjoaJbqHKohD9tvvVI3S3AG"
+                "id": "R-ArchimateIsassignedto"
               },
               "changedAt": "2023-07-16T15:05:49.284Z"
             },
@@ -38716,7 +39098,7 @@
             {
               "id": "N-bB4PvSjji51ygZAO8CyWCx5GbOO",
               "resource": {
-                "id": "R-7OVcJnKlDm3zOHoIZUoprtHmeoJ"
+                "id": "R-FmcModifies"
               },
               "changedAt": "2020-11-09T13:56:22.423Z"
             },
@@ -38730,21 +39112,21 @@
             {
               "id": "N-ZIErPdIsyyEer2Udv827IChErke",
               "resource": {
-                "id": "R-JqmEMlXGMp7bGuaLdQoJ6EcOhqc"
+                "id": "R-FmcSendsto"
               },
               "changedAt": "2021-11-07T18:55:50.651Z"
             },
             {
               "id": "N-umc733Ng2PptgJHjruZcJkcV8Tb",
               "resource": {
-                "id": "R-epP6KdUsc1J7HHuq4ChWGvd3TVk"
+                "id": "R-FmcReceivesfrom"
               },
               "changedAt": "2021-11-07T18:57:50.529Z"
             },
             {
               "id": "N-sAslV9Rfa6y0QRhdd5lkXtQM8KP",
               "resource": {
-                "id": "R-07g3XWyx81s5KxMfyzzP2tM1brk"
+                "id": "R-SpecifFollows"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38752,7 +39134,7 @@
             {
               "id": "N-C7hvRbiupy86yN5bkukxpYRV86Y",
               "resource": {
-                "id": "R-ior1aP0HS9zfiBkoYok4rx9GiZw"
+                "id": "R-SpecifPrecedes"
               },
               "changedAt": "2018-03-21T18:03:26+01:00",
               "revision": "190"
@@ -38760,7 +39142,7 @@
             {
               "id": "N-XkbLoVWs5EytTT1tVPQZSLUGRAh",
               "resource": {
-                "id": "R-1756321088"
+                "id": "R-SpecifSignals"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38768,7 +39150,7 @@
             {
               "id": "N-YtJk55oYR0oCfHAEQVcsFWnfHDy",
               "resource": {
-                "id": "R-1756321089"
+                "id": "R-SpecifTriggers"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38776,7 +39158,7 @@
             {
               "id": "N-mUckm6RNYvmHvENPaGE8GLdQqYd",
               "resource": {
-                "id": "R-1756321090"
+                "id": "R-SpecifDependson"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38800,7 +39182,7 @@
             {
               "id": "N-coTd4xwYmpHBzNsXfYJeoaQSG5F",
               "resource": {
-                "id": "R-refines"
+                "id": "R-IrebRefines"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38808,14 +39190,14 @@
             {
               "id": "N-9Rjmmwo9Oy3r3Viuo5KLQMpRcmY",
               "resource": {
-                "id": "R-n8aTdqXh68VMx7IQTZOIvYnua9b"
+                "id": "R-IrebRefinedby"
               },
               "changedAt": "2023-08-08T21:49:51.165Z"
             },
             {
               "id": "N-7kNm9mqPVLTBwLRAfjpMPdYAlM7",
               "resource": {
-                "id": "R-duplicates"
+                "id": "R-SpecifDuplicates"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38823,7 +39205,7 @@
             {
               "id": "N-IbH3wgrzdJdItoKNmBBclMNfGX9",
               "resource": {
-                "id": "R-1388621256"
+                "id": "R-SpecifContradicts"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38831,7 +39213,7 @@
             {
               "id": "N-qEgSojoH8KY2IPsmY49TGtgVWjz",
               "resource": {
-                "id": "R-isAllocatedTo"
+                "id": "R-SysmlIsallocatedto"
               },
               "changedAt": "2019-05-30T14:52:25+01:00",
               "revision": "114"
@@ -38839,7 +39221,7 @@
             {
               "id": "N-qEgSojoH8KY2IPsmY49TGtgVWiy",
               "resource": {
-                "id": "R-isAssociatedWith"
+                "id": "R-UmlIsassociatedwith"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -38847,7 +39229,7 @@
             {
               "id": "N-kQxdxEvlazRzj4pnyKjQdc5ybWv",
               "resource": {
-                "id": "R-GHg8JTMdiKKmEm3XohjVhCrpxAH"
+                "id": "R-SysmlIsassociatedwith"
               },
               "changedAt": "2023-07-16T15:11:53.234Z"
             },
@@ -38919,7 +39301,7 @@
             {
               "id": "N-sGgSojoH8KY2IPsmY49TGtgVWme",
               "resource": {
-                "id": "R-uses"
+                "id": "R-SysmlUses"
               },
               "changedAt": "2019-05-30T14:52:25+01:00",
               "revision": "114"
@@ -38927,14 +39309,14 @@
             {
               "id": "N-M5CbMEeuR8QvMo8gJuCcjJR7a1V",
               "resource": {
-                "id": "R-G2Li8YxkuzhULfFFQex0re3VEkp"
+                "id": "R-SysmlIsusedby"
               },
               "changedAt": "2023-07-16T15:34:20.616Z"
             },
             {
               "id": "N-sGgSojoH8KY2IPsmY49TGtgVWoe",
               "resource": {
-                "id": "R-extends"
+                "id": "R-UmlExtends"
               },
               "changedAt": "2019-05-30T14:52:25+01:00",
               "revision": "114"
@@ -38942,7 +39324,7 @@
             {
               "id": "N-tHgSojoH8KY2IPsmY49TGtgVWpf",
               "resource": {
-                "id": "R-includes"
+                "id": "R-SysmlIncludes"
               },
               "changedAt": "2019-05-30T14:52:25+01:00",
               "revision": "114"
@@ -39067,7 +39449,7 @@
             {
               "id": "N-xGrckoxdiKqIeSY7YedvmC7kalH",
               "resource": {
-                "id": "R-1388621252"
+                "id": "R-SpecifMentions"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -39105,7 +39487,7 @@
             {
               "id": "N-qdmsJfeShpKnhQiJ92lGxjPV7M2",
               "resource": {
-                "id": "R-xcniBEOFjE4wE1UmSDGWaz1dyR2"
+                "id": "R-OwlSameas"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -39231,7 +39613,7 @@
             {
               "id": "N-mrvz0s0g60YP4yZshfKD5zkO8nO",
               "resource": {
-                "id": "R-mrvz0s0g60YP4yZshfKD5zkO8nO"
+                "id": "R-DctermsType"
               },
               "changedAt": "2023-02-26T20:15:14.250Z"
             },
@@ -39259,7 +39641,7 @@
             {
               "id": "N-N37bwjT6B6xoS5skBUnACQfY1dv",
               "resource": {
-                "id": "R-852227558"
+                "id": "R-SpecifNotation"
               },
               "changedAt": "2023-02-15T22:46:15.365Z"
             },
@@ -39384,7 +39766,7 @@
             {
               "id": "N-4A7xmKKeXKNISqd6Tgj8tzyGFC1",
               "resource": {
-                "id": "R-852227618"
+                "id": "R-OslcServiceprovider"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -39400,7 +39782,7 @@
             {
               "id": "N-mrvz0s0g60YP4yZshfKD5zkN6pM",
               "resource": {
-                "id": "R-mrvz0s0g60YP4yZshfKD5zkN6pM"
+                "id": "R-SpecifStereotype"
               },
               "changedAt": "2018-03-03T23:11:42+01:00",
               "revision": "150"
@@ -39408,21 +39790,21 @@
             {
               "id": "N-erwQ9W7a91170XDhzqkZ8zkrV0K",
               "resource": {
-                "id": "R-e4NXjdp7tIdRTAaUpGQJVcPMPJp"
+                "id": "R-UmlStereotype"
               },
               "changedAt": "2020-11-18T18:31:42.299Z"
             },
             {
               "id": "N-7ooN9j5mnamvgNS1yxrJ7PAPFxX",
               "resource": {
-                "id": "R-A8FDfIonVwNiywJ6pafbpIt3hqU"
+                "id": "R-IrebRequirementtype"
               },
               "changedAt": "2020-12-10T09:43:44.148Z"
             },
             {
               "id": "N-mrvz0s0g60YP4yZshfKD5zkO7mN",
               "resource": {
-                "id": "R-mrvz0s0g60YP4yZshfKD5zkO7mN"
+                "id": "R-SpecifSubclass"
               },
               "changedAt": "2018-03-03T23:11:42+01:00",
               "revision": "150"
@@ -39430,7 +39812,7 @@
             {
               "id": "N-shreSSUp4ai11OKEcopqQDGLb9K",
               "resource": {
-                "id": "R-852227557"
+                "id": "R-SpecifLifecyclestatus"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -39438,7 +39820,7 @@
             {
               "id": "N-r6bCBpJZX1wKBhlgLCaIRhqbzK0",
               "resource": {
-                "id": "R-b2vrilNkrUls1EXhU4rJMCve4lQ"
+                "id": "R-SpecifStatus"
               },
               "changedAt": "2023-08-29T12:46:13.313Z"
             },
@@ -39578,7 +39960,7 @@
             {
               "id": "N-BocglJooTcOC1rBpeOyX8pgC1oy",
               "resource": {
-                "id": "R-852227556"
+                "id": "R-SpecifProbability"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -39593,7 +39975,7 @@
             {
               "id": "N-iygfcBrzE3U4F3ogNRj8NlybHPS",
               "resource": {
-                "id": "R-852227555"
+                "id": "R-SpecifPriority"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -39608,14 +39990,14 @@
             {
               "id": "N-NOaEQqPPnf4Uh6XGhcEiTitMRPz",
               "resource": {
-                "id": "R-DCbTuMs2fwm495yW2IMQIPjIEwt"
+                "id": "R-SpecifEffort"
               },
               "changedAt": "2023-07-16T12:39:52.299Z"
             },
             {
               "id": "N-zFrcU4FzfRFMSoIIBvsOlGd3cfv",
               "resource": {
-                "id": "R-C5PhtVHKHtWggJDO5YgbLAljF8U"
+                "id": "R-SpecifRationale"
               },
               "changedAt": "2023-07-16T10:47:51.299Z"
             },
@@ -39681,7 +40063,7 @@
             {
               "id": "N-U6YGbQKyvmCvkUerixQP7wi8eCE",
               "resource": {
-                "id": "R-852227529"
+                "id": "R-SpecifBenefit"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -39689,7 +40071,7 @@
             {
               "id": "N-wMiX2I4BmvAvPDcBAIAz7vos9IG",
               "resource": {
-                "id": "R-852227528"
+                "id": "R-SpecifDamage"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -40193,21 +40575,21 @@
             {
               "id": "N-odgLUMVf9aal26sMzWRD92zvhBN",
               "resource": {
-                "id": "R-bVp4rdjBqmM6cY3kCMcFUABMcHk"
+                "id": "R-IrebRequirementtypefunction"
               },
               "changedAt": "2023-07-16T10:33:34.755Z"
             },
             {
               "id": "N-G38AmVADXmWYN3Yyzq8oD95BuOd",
               "resource": {
-                "id": "R-kpmT9sL9CTLaXyyc1Uy8UFv82Tx"
+                "id": "R-IrebRequirementtypequality"
               },
               "changedAt": "2023-07-16T10:33:41.185Z"
             },
             {
               "id": "N-WXICwbmDFkk3TaydVSmpsAWsHyo",
               "resource": {
-                "id": "R-cgOlaz2WHoymGVaXfhU5Qej5rUv"
+                "id": "R-IrebRequirementtypeconstraint"
               },
               "changedAt": "2023-07-16T10:33:46.548Z"
             },
