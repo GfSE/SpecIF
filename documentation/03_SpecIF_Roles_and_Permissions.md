@@ -120,7 +120,8 @@ Effect: The resources of that class and referenced in that hierarchy branch can 
 | a node at hierarchy root | undefined | **true** | undefined | undefined |
 | a node | undefined | undefined | undefined | undefined |
 
-Effect: The resources of that class and referenced in that hierarchy branch cannot be accessed by the user. 
+Effect: The resources of that class and referenced in that hierarchy branch cannot be accessed by the user,
+because there is no permission by class.
 
 ---
 
@@ -132,7 +133,8 @@ Effect: The resources of that class and referenced in that hierarchy branch cann
 | a node at hierarchy root | undefined | undefined | undefined | undefined |
 | a node | undefined | undefined | undefined | undefined |
 
-Effect: The resources of that class and referenced in that hierarchy branch cannot be accessed by the user. 
+Effect: The resources of that class and referenced in that hierarchy branch cannot be accessed by the user,
+because there is again no permission by class.
 
 ---
 
