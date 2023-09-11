@@ -584,7 +584,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-ShortString"
-      }
+      },
+      "multiple": true
     },
     {
       "id": "PC-TermStatus",
@@ -2335,6 +2336,11 @@
             "id": "PC-Origin"
           },
           "values": [
+            [
+              {
+                "text": "https://www.ireb.org/de/cpre/glossary/"
+              }
+            ],
             [
               {
                 "text": "https://www.ireb.org/en/downloads/#cpre-glossary"
@@ -14503,6 +14509,78 @@
       ]
     },
     {
+      "id": "R-SpecifIsassociatedwith",
+      "changedAt": "2023-07-16T15:12:15.874Z",
+      "revision": "36",
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:isAssociatedWith"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>A [[FMC:State]] is associated with another [[FMC:State]] (e.g. a class is associated with another class, as shown in a UML Class Diagram).</p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "associated with",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-UmlIsassociatedwith",
       "changedAt": "2023-07-16T15:12:15.874Z",
       "revision": "36",
@@ -15967,15 +16045,15 @@
           "values": [
             [
               {
-                "text": "specialized of",
+                "text": "specializes",
                 "language": "en"
               },
               {
-                "text": "spezialisiert von",
+                "text": "spezialisiert",
                 "language": "de"
               },
               {
-                "text": "spécialisée de",
+                "text": "spécialise",
                 "language": "fr"
               }
             ]
@@ -16126,15 +16204,15 @@
           "values": [
             [
               {
-                "text": "generalized of",
+                "text": "generalizes",
                 "language": "en"
               },
               {
-                "text": "generalisiert von",
+                "text": "generalisiert",
                 "language": "de"
               },
               {
-                "text": "generalisé de",
+                "text": "generalise",
                 "language": "fr"
               }
             ]
@@ -38052,6 +38130,32 @@
       }
     },
     {
+      "id": "S-1tKcFA5tBPg1D50v2x9gmnBsZEN",
+      "changedAt": "2023-09-11T08:52:37.590Z",
+      "class": {
+        "id": "SC-isSynonymOfPredicate"
+      },
+      "subject": {
+        "id": "R-SysmlIsassociatedwith"
+      },
+      "object": {
+        "id": "R-UmlIsassociatedwith"
+      }
+    },
+    {
+      "id": "S-50v2x9gmnBsZEN1tKcFA5tBPg1D",
+      "changedAt": "2023-09-11T08:52:37.590Z",
+      "class": {
+        "id": "SC-isSynonymOfPredicate"
+      },
+      "subject": {
+        "id": "R-SpecifIsassociatedwith"
+      },
+      "object": {
+        "id": "R-UmlIsassociatedwith"
+      }
+    },
+    {
       "id": "S-C2HwaHLELAievbt4BFstAjbRYYz",
       "changedAt": "2023-09-06T21:13:03.053Z",
       "class": {
@@ -39221,11 +39325,19 @@
               "revision": "114"
             },
             {
-              "id": "N-qEgSojoH8KY2IPsmY49TGtgVWiy",
+              "id": "N-PsmY49TGtgVWiyqEgSojoH8KY2I",
               "resource": {
                 "id": "R-UmlIsassociatedwith"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
+              "revision": "114"
+            },
+            {
+              "id": "N-H8KY2yoKNmBqEgSojfGX9oBclMN",
+              "resource": {
+                "id": "R-SpecifIsassociatedwith"
+              },
+              "changedAt": "2023-09-11T14:52:25+01:00",
               "revision": "114"
             },
             {
