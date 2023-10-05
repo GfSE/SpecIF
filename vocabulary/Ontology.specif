@@ -25994,7 +25994,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-1"
+            "V-Domain-39"
           ]
         },
         {
@@ -26089,7 +26089,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-1"
+            "V-Domain-39"
           ]
         },
         {
@@ -26188,7 +26188,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-1"
+            "V-Domain-39"
           ]
         },
         {
@@ -26287,7 +26287,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-1"
+            "V-Domain-39"
           ]
         },
         {
@@ -26373,7 +26373,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-1"
+            "V-Domain-39"
           ]
         },
         {
@@ -26467,7 +26467,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-1"
+            "V-Domain-39"
           ]
         },
         {
@@ -26574,7 +26574,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-1"
+            "V-Domain-39"
           ]
         },
         {
@@ -26689,7 +26689,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-1"
+            "V-Domain-39"
           ]
         },
         {
@@ -26780,7 +26780,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-1"
+            "V-Domain-39"
           ]
         },
         {
@@ -26887,7 +26887,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-1"
+            "V-Domain-39"
           ]
         },
         {
@@ -26994,7 +26994,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-1"
+            "V-Domain-39"
           ]
         },
         {
@@ -27077,7 +27077,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-1"
+            "V-Domain-39"
           ]
         },
         {
@@ -27160,7 +27160,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-1"
+            "V-Domain-39"
           ]
         },
         {
@@ -27382,7 +27382,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-3"
+            "V-TermStatus-6"
           ]
         },
         {
@@ -31141,6 +31141,76 @@
       ]
     },
     {
+      "id": "R-G2pVPLgM1FRMwm3DUdRO2V0eVms",
+      "changedAt": "2023-03-06T07:55:16.547Z",
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:NotApplicable"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "not applicable",
+                "language": "en"
+              },
+              {
+                "text": "nicht anwendbar",
+                "language": "de"
+              },
+              {
+                "text": "sans objet",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "not-applicable",
+                "language": "en"
+              }
+            ],
+            [
+              {
+                "text": "n/a",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-DUdRO1FRMwm32V0eVmsG2pVPLgM",
       "changedAt": "2023-03-06T07:55:16.547Z",
       "class": {
@@ -31720,11 +31790,11 @@
                 "language": "en"
               },
               {
-                "text": "akzeptiert",
+                "text": "zugestimmt",
                 "language": "de"
               },
               {
-                "text": "accepté",
+                "text": "approuvé",
                 "language": "fr"
               }
             ]
@@ -31791,11 +31861,11 @@
                 "language": "en"
               },
               {
-                "text": "nicht akzeptiert",
+                "text": "nicht zugestimmt",
                 "language": "de"
               },
               {
-                "text": "non accepté",
+                "text": "non approuvé",
                 "language": "fr"
               }
             ],
@@ -31868,11 +31938,11 @@
                 "language": "en"
               },
               {
-                "text": "akzeptiert mit Kommentar",
+                "text": "zugestimmt mit Kommentar",
                 "language": "de"
               },
               {
-                "text": "accepté avec commentaire",
+                "text": "approuvé avec commentaire",
                 "language": "fr"
               }
             ],
@@ -41231,6 +41301,13 @@
                 "id": "R-F35SVwALlKfEF2txWOlc3Q4d7bH"
               },
               "changedAt": "2023-07-16T10:38:02.939Z"
+            },
+            {
+              "id": "N-a0Lx8c5wPXSwaNzJIVH7kAwLjng",
+              "resource": {
+                "id": "R-G2pVPLgM1FRMwm3DUdRO2V0eVms"
+              },
+              "changedAt": "2022-11-30T13:40:22.256Z"
             },
             {
               "id": "N-IVH7kAwLXSwaNzJjnga0Lx8c5wP",
