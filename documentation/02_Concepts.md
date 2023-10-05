@@ -125,7 +125,9 @@ For each SpecIF data element a defining class element must exist. The SpecIF ter
 
 SpecIF implements the concept of inheritance - well known from object-oriented software development. It is possible to define a new resource- or statement-class based on an already defined element. The new element (child element) inherits all properties from the element it is derived from (parent element). It is possible to define additional properties on the child element. SpecIF uses the term *extends* to store a reference to the parent element from the child element.
 
-The concept of inheritance in SpecIF is very helpful, when a specific application scenario requires special, additional domain-specific properties. The SpecIF user can define the new classes based on standardized types. A tool, that does not know the application-specific properties, but the standardized base-types, can handle the data as any other standard data with extensions.  
+The concept of inheritance in SpecIF is very helpful, when a specific application scenario requires special, additional domain-specific properties. 
+The SpecIF user can define the new classes based on standardized types. A tool, that does not know the application-specific properties, 
+but the standardized base-types, can handle the data as any other standard data with extensions.  
 
 ## Data formats
 
@@ -157,7 +159,9 @@ JSON Schema itself uses a special kind of JSON format to define any JSON format 
 SpecIF data can be persisted to a JSON file using one of the following methods:
 
 * The SpecIF file gets the file extension *.specif* and contains the JSON serialization of the SpecIF data.
-* SpecIF also supports the inclusion of any other files (e.g. images, PDF documents etc.) referenced by a SpecIF content. These attached files are stored together with the .specif file inside a ZIP-archive with the file extension *.specifz*. One or more \*.specif file are contained at root level of the zipped archive and the referenced files are often collected in a folder; sometimes named *files_and_images*.
+* SpecIF also supports the inclusion of any other files (e.g. original model files, images, PDF documents etc.) referenced by SpecIF content. 
+These attached files are stored together with the .specif file inside a ZIP-archive with the file extension *.specif.zip or *.specifz*. 
+One or more \*.specif file are contained at root level of the zipped archive and the referenced files are often collected in a folder; sometimes named *files_and_images*.
 
 The following table shows an overview about SpecIF file extensions:
 
@@ -189,8 +193,10 @@ The standard defines a wide range of possibilities to define vector-based graphi
 SVG files can be opened and viewed with all modern web browsers and SVG allows the inclusion of 
 meta-data extensions into the SVG file. 
 
-This is the main reason why SVG is selected as standard for SpecIF diagram exchange, because SpecIF uses SVG and extends the graphical data by meta information for semantic diagram exchange. 
-The resulting SpecIF-compliant SVG contains the graphical information, that can be used with all SVG viewers, but it also contains some semantic meta-information that allows traceability to SpecIF resources and statements, visualized in the SVG.
+This is the main reason why SVG is selected as standard for SpecIF diagram exchange, 
+because SpecIF uses SVG and extends the graphical data by meta information for semantic diagram exchange. 
+The resulting SpecIF-compliant SVG contains the graphical information, that can be used with all SVG viewers, 
+but it also contains some semantic meta-information that allows traceability to SpecIF resources and statements, visualized in the SVG.
 
 The concrete definition of the SpecIF-SVG-metadata is defined in a separate chapter of this specification.
 
@@ -293,7 +299,8 @@ model elements in system specifications, the following abstract model element ty
 - A ✶ *Feature* is an intentional distinguishing characteristic of a system, often a so-called ‘Unique Selling Proposition’.
 - A ↯ *Requirement* is a singular documented physical and functional need that a particular design, product or process must be able to perform. 
 - A ⬚ *Collection* is a logical (often conceptual) group of elements or other collections. Examples for collections are groups in BPMN or boundaries on use case diagrams in UML/SysML.
-- A 🖿 *Package* is used to organize elements hierarchically to achieve an easy navigation in big models or element collections. Examples for packages are the packages in UML/SysML models or folders in a file system etc.
+- A 🖿 *Package* is used to organize elements hierarchically to achieve an easy navigation in big models or element collections. 
+Examples for packages are the packages in UML/SysML models or folders in a file system etc.
 
 With these few fundamental elements, model integration can be done with SpecIF.
 Each individual element of a specific tool or specific modeling language is mapped to these fundamental element types.
@@ -306,7 +313,8 @@ A description how to apply the fundamental elements for model integration is giv
 
 ## Model Integration Guides
 
-Through the definition of data format (syntax), term definitions (semantics) and fundamental elements to represent engineering models (semantic integration) a big step forward is achieved in comparison with other PLM data formats. Using these definitions, a tool vendor also knows how to map more complex data structures to SpecIF.
+Through the definition of data format (syntax), term definitions (semantics) and fundamental elements to represent engineering models (semantic integration) 
+a big step forward is achieved in comparison with other PLM data formats. Using these definitions, a tool vendor also knows how to map more complex data structures to SpecIF.
 
 For example an UML- or SysML-model has several options of representation in the syntax and semantics of SpecIF. 
 To develop a common understanding and to achieve a data exchange between tools, the SpecIF standard shall define model integration guidelines describing the different scenarios 
