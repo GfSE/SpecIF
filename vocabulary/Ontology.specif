@@ -7,9 +7,9 @@
     }
   ],
   "$schema": "https://specif.de/v1.1/schema.json",
-  "generator": "SpecIF Model-Integrator and Editor",
-  "generatorVersion": "1.1.q.3",
-  "createdAt": "2023-09-12T08:24:52.417Z",
+  "generator": "SpecIF Modellintegrator und Editor",
+  "generatorVersion": "1.1.q.4",
+  "createdAt": "2023-10-05T10:11:43.876Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -3355,7 +3355,85 @@
         },
         {
           "class": {
-            "id": "PC-LocalTermPlural"
+            "id": "PC-Icon"
+          },
+          "values": [
+            [
+              {
+                "text": "▣"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-SpecifViews",
+      "changedAt": "2023-10-05T10:10:33.906Z",
+      "revision": "8",
+      "class": {
+        "id": "RC-SpecifTermresourceclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:Views"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
           },
           "values": [
             [
@@ -8191,7 +8269,7 @@
     },
     {
       "id": "R-SpecifBusinessprocess",
-      "changedAt": "2023-06-08T13:54:54.772Z",
+      "changedAt": "2023-10-05T10:06:39.990Z",
       "revision": "43",
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -8234,7 +8312,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-6"
+            "V-TermStatus-5"
           ]
         },
         {
@@ -8260,7 +8338,73 @@
         },
         {
           "class": {
-            "id": "PC-LocalTermPlural"
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-SpecifBusinessprocesses",
+      "changedAt": "2023-10-05T10:07:44.370Z",
+      "revision": "43",
+      "class": {
+        "id": "RC-SpecifTermresourceclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:BusinessProcesses"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
           },
           "values": [
             [
@@ -8722,11 +8866,15 @@
             [
               {
                 "text": "Business Process",
+                "language": "en"
+              },
+              {
+                "text": "Geschäftsprozess",
                 "language": "de"
               },
               {
-                "text": "Business Process",
-                "language": "en"
+                "text": "Processus d'entreprise",
+                "language": "fr"
               }
             ]
           ]
@@ -8739,11 +8887,15 @@
             [
               {
                 "text": "Business Processes",
+                "language": "en"
+              },
+              {
+                "text": "Geschäftsprozesse",
                 "language": "de"
               },
               {
-                "text": "Business Processes",
-                "language": "en"
+                "text": "Processus d'entreprise",
+                "language": "fr"
               }
             ]
           ]
@@ -38715,6 +38867,84 @@
       "object": {
         "id": "R-FmcActor"
       }
+    },
+    {
+      "id": "S-1rJ4hlBKDuiIsdVSBidV3x3dV1O",
+      "changedAt": "2023-10-05T10:07:02.917Z",
+      "class": {
+        "id": "SC-isSynonymOfResource"
+      },
+      "subject": {
+        "id": "R-SpecifBusinessprocess"
+      },
+      "object": {
+        "id": "R-BpmnProcess"
+      }
+    },
+    {
+      "id": "S-EwL2BVAme5MLGXhgn1Qqsy2rLbJ",
+      "changedAt": "2023-10-05T10:08:12.016Z",
+      "class": {
+        "id": "SC-isPluralOfResource"
+      },
+      "subject": {
+        "id": "R-SpecifBusinessprocesses"
+      },
+      "object": {
+        "id": "R-SpecifBusinessprocess"
+      }
+    },
+    {
+      "id": "S-JH54c3yTnCWZiWARE31PPnZfxGO",
+      "changedAt": "2023-10-05T10:08:34.997Z",
+      "class": {
+        "id": "SC-isPluralOfResource"
+      },
+      "subject": {
+        "id": "R-SpecifBusinessprocesses"
+      },
+      "object": {
+        "id": "R-BpmnProcess"
+      }
+    },
+    {
+      "id": "S-bQ8PJ2bEVrJNvXqtwvoBPeG84Ti",
+      "changedAt": "2023-10-05T10:10:50.745Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-SpecifViews"
+      }
+    },
+    {
+      "id": "S-VlxoiEjCSd9YUeyede8Lgkggg7b",
+      "changedAt": "2023-10-05T10:11:10.584Z",
+      "class": {
+        "id": "SC-isPluralOfResource"
+      },
+      "subject": {
+        "id": "R-SpecifViews"
+      },
+      "object": {
+        "id": "R-SpecifView"
+      }
+    },
+    {
+      "id": "S-3OXYoXKHtMi4xIAXT1oSVit6EYu",
+      "changedAt": "2023-10-05T10:11:33.337Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-SpecifBusinessprocesses"
+      }
     }
   ],
   "hierarchies": [
@@ -38938,6 +39168,13 @@
                 "id": "R-SpecifView"
               },
               "changedAt": "2023-02-26T20:21:41.620Z"
+            },
+            {
+              "id": "N-CKfg4iZWEoicdQ2qnGoTaX9stEx",
+              "resource": {
+                "id": "R-SpecifViews"
+              },
+              "changedAt": "2023-10-05T10:10:33.906Z"
             },
             {
               "id": "N-zqHHSAZiGKKcA8BtkbEBfpHQgkV",
@@ -39249,6 +39486,13 @@
                 "id": "R-SpecifBusinessprocess"
               },
               "changedAt": "2023-06-08T13:52:11.766Z"
+            },
+            {
+              "id": "N-RqXPmEMssYgfkuuaS3GD9rX02HR",
+              "resource": {
+                "id": "R-SpecifBusinessprocesses"
+              },
+              "changedAt": "2023-10-05T10:07:44.370Z"
             },
             {
               "id": "N-SpecifGlossary",
