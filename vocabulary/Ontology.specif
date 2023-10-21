@@ -9,7 +9,7 @@
   "$schema": "https://specif.de/v1.1/schema.json",
   "generator": "SpecIF Model-Integrator and Editor",
   "generatorVersion": "1.1.q.6",
-  "createdAt": "2023-10-21T10:46:34.213Z",
+  "createdAt": "2023-10-21T21:40:23.089Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -2687,6 +2687,52 @@
             [
               {
                 "text": "https://specif.de"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-17xm8vpXhaOx8KFrALORw0DAKbl",
+      "changedAt": "2023-10-21T20:19:34.381Z",
+      "class": {
+        "id": "RC-SpecifNamespace"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "DDP:"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Digital Data Package defined by prostep IVIP.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Origin"
+          },
+          "values": [
+            [
+              {
+                "text": "https://www.prostep.org/projekte/digital-data-package-ddp"
               }
             ]
           ]
@@ -6228,7 +6274,7 @@
     },
     {
       "id": "R-SpecifTermresourceclass",
-      "changedAt": "2023-03-06T09:01:46.037Z",
+      "changedAt": "2023-10-21T20:42:11.843Z",
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -6265,6 +6311,10 @@
             [
               {
                 "text": "A term for SpecIF resources, often used as title of a resourceClass to denote the class type."
+              },
+              {
+                "text": "A term for SpecIF resources, often used as title of a resourceClass to denote the class type.",
+                "language": "en"
               }
             ]
           ]
@@ -6292,7 +6342,7 @@
           "values": [
             [
               {
-                "text": "Noun",
+                "text": "Ressource",
                 "language": "en"
               },
               {
@@ -6313,7 +6363,7 @@
           "values": [
             [
               {
-                "text": "Nouns",
+                "text": "Ressources",
                 "language": "en"
               },
               {
@@ -6347,7 +6397,7 @@
     },
     {
       "id": "R-SpecifTermstatementclass",
-      "changedAt": "2023-03-06T09:01:36.293Z",
+      "changedAt": "2023-10-21T20:42:28.294Z",
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -6384,6 +6434,10 @@
             [
               {
                 "text": "A term for SpecIF statements, often used as title of a statementClass to denote the class type."
+              },
+              {
+                "text": "A term for SpecIF statements, often used as title of a statementClass to denote the class type.",
+                "language": "en"
               }
             ]
           ]
@@ -6411,7 +6465,7 @@
           "values": [
             [
               {
-                "text": "Predicate",
+                "text": "Statement",
                 "language": "en"
               },
               {
@@ -6432,7 +6486,7 @@
           "values": [
             [
               {
-                "text": "Predicates",
+                "text": "Statements",
                 "language": "en"
               },
               {
@@ -10595,6 +10649,125 @@
                 "language": "de"
               }
             ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-1BbMPYDrJJgBzpJPSzri1SMtOr4",
+      "changedAt": "2023-10-21T20:25:47.365Z",
+      "class": {
+        "id": "RC-SpecifTermresourceclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "DDP:Source"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A 'Source' is a file containing partial model information created by an authoring system.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-2",
+            "V-Domain-3",
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Source File",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTermPlural"
+          },
+          "values": [
+            [
+              {
+                "text": "Source Files",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Icon"
+          },
+          "values": [
+            [
+              {
+                "text": "🗎"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10",
+            "V-Instantiation-20"
           ]
         }
       ]
@@ -18874,6 +19047,77 @@
           },
           "values": [
             "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-RfLGKowq0u37q5uBX58HPW7Imbt",
+      "changedAt": "2023-10-21T20:43:48.918Z",
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "DDP:definedBy"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "defined by",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10",
+            "V-Instantiation-20"
           ]
         }
       ]
@@ -28159,6 +28403,115 @@
       ]
     },
     {
+      "id": "R-sEFFmqIBYEyoPSYfz7NkTppJfby",
+      "changedAt": "2023-10-21T20:24:43.178Z",
+      "class": {
+        "id": "RC-SpecifTermpropertyclassstring"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:ModelFile"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A file with partial model information.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-2",
+            "V-Domain-3",
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Model File",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-20"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "256"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-TermsPropertyValue",
       "changedAt": "2023-03-15T17:16:33.330Z",
       "revision": "199",
@@ -33502,19 +33855,6 @@
       },
       "object": {
         "id": "R-DctermsType"
-      }
-    },
-    {
-      "id": "S-vnnVZ9T0RKGSe1UWXWxUONJ5Q2B",
-      "changedAt": "2023-02-26T20:18:48.848Z",
-      "class": {
-        "id": "SC-hasProperty"
-      },
-      "subject": {
-        "id": "R-SpecifParagraph"
-      },
-      "object": {
-        "id": "R-lxDmfU8OuUNHNuO9gRqc0NcnQaQ"
       }
     },
     {
@@ -39223,6 +39563,110 @@
       "object": {
         "id": "R-UmlIsaggregatedby"
       }
+    },
+    {
+      "id": "S-N8WJucNIMlqCipnTc9kFSK4vazR",
+      "changedAt": "2023-10-21T20:19:49.553Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-17xm8vpXhaOx8KFrALORw0DAKbl"
+      },
+      "object": {
+        "id": "R-1BbMPYDrJJgBzpJPSzri1SMtOr4"
+      }
+    },
+    {
+      "id": "S-15AJgvevvkmUdEMROpCNAmKXnwA",
+      "changedAt": "2023-10-21T20:30:05.296Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-1BbMPYDrJJgBzpJPSzri1SMtOr4"
+      },
+      "object": {
+        "id": "R-SpecifParagraph"
+      }
+    },
+    {
+      "id": "S-VwPMDsx8qA5pPPcCOkMCP52gd9w",
+      "changedAt": "2023-10-21T20:31:48.434Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifView"
+      },
+      "object": {
+        "id": "R-lxDmfU8OuUNHNuO9gRqc0NcnQaQ"
+      }
+    },
+    {
+      "id": "S-IOqsPcVMoahCp92BCvKGDDOOQhQ",
+      "changedAt": "2023-10-21T20:33:17.301Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-1BbMPYDrJJgBzpJPSzri1SMtOr4"
+      },
+      "object": {
+        "id": "R-sEFFmqIBYEyoPSYfz7NkTppJfby"
+      }
+    },
+    {
+      "id": "S-nEvDKTy2dgQ5Vm180qI1aReNnvV",
+      "changedAt": "2023-10-21T20:34:45.996Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifRevision"
+      },
+      "object": {
+        "id": "R-lxDmfU8OuUNHNuO9gRqc0NcnQaQ"
+      }
+    },
+    {
+      "id": "S-495bWk5xnrOHG8QP66iamaFHvwx",
+      "changedAt": "2023-10-21T20:35:30.131Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-FmcPlan"
+      },
+      "object": {
+        "id": "R-lxDmfU8OuUNHNuO9gRqc0NcnQaQ"
+      }
+    },
+    {
+      "id": "S-58ObpB7DUdwpAaaE6HQDtNfDiCu",
+      "changedAt": "2023-10-21T20:44:03.827Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-17xm8vpXhaOx8KFrALORw0DAKbl"
+      },
+      "object": {
+        "id": "R-RfLGKowq0u37q5uBX58HPW7Imbt"
+      }
+    },
+    {
+      "id": "S-lBBRDeRzHsgR3suuW1FW32tEl1h",
+      "changedAt": "2023-10-21T20:44:28.623Z",
+      "class": {
+        "id": "SC-isEligibleAsObject"
+      },
+      "subject": {
+        "id": "R-1BbMPYDrJJgBzpJPSzri1SMtOr4"
+      },
+      "object": {
+        "id": "R-RfLGKowq0u37q5uBX58HPW7Imbt"
+      }
     }
   ],
   "hierarchies": [
@@ -39401,6 +39845,13 @@
                 "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
               },
               "changedAt": "2023-06-14T14:20:04.049Z"
+            },
+            {
+              "id": "N-Hpuo7Q9eBs6sK8thsBWX3w85MDr",
+              "resource": {
+                "id": "R-17xm8vpXhaOx8KFrALORw0DAKbl"
+              },
+              "changedAt": "2023-10-21T20:19:34.381Z"
             }
           ]
         },
@@ -39946,6 +40397,13 @@
                 "id": "R-ArchimateDataobject"
               },
               "changedAt": "2023-08-25T08:12:40.489Z"
+            },
+            {
+              "id": "N-ifP8tx6QYuD3cgAzePfQGexig1a",
+              "resource": {
+                "id": "R-1BbMPYDrJJgBzpJPSzri1SMtOr4"
+              },
+              "changedAt": "2023-10-21T20:17:34.417Z"
             }
           ]
         },
@@ -40688,6 +41146,13 @@
                 "id": "R-SpecifIseligibleasobject"
               },
               "changedAt": "2023-08-09T23:17:55.085Z"
+            },
+            {
+              "id": "N-nhQ2qYvXlN9hneT79krODx4ror9",
+              "resource": {
+                "id": "R-RfLGKowq0u37q5uBX58HPW7Imbt"
+              },
+              "changedAt": "2023-10-21T20:43:48.918Z"
             }
           ],
           "revision": "114"
@@ -41467,6 +41932,13 @@
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
+            },
+            {
+              "id": "N-CetN3CIazIElosaUDfa9cTnPMKd",
+              "resource": {
+                "id": "R-sEFFmqIBYEyoPSYfz7NkTppJfby"
+              },
+              "changedAt": "2023-10-21T20:24:43.178Z"
             }
           ],
           "revision": "114"
