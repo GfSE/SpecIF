@@ -7,9 +7,9 @@
     }
   ],
   "$schema": "https://specif.de/v1.1/schema.json",
-  "generator": "SpecIF Modellintegrator und Editor",
-  "generatorVersion": "1.1.q.4",
-  "createdAt": "2023-10-05T10:11:43.876Z",
+  "generator": "SpecIF Model-Integrator and Editor",
+  "generatorVersion": "1.1.q.6",
+  "createdAt": "2023-10-21T10:46:34.213Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
@@ -15686,7 +15686,7 @@
     },
     {
       "id": "R-UmlIsaggregatedby",
-      "changedAt": "2023-03-16T14:50:39.241Z",
+      "changedAt": "2023-10-21T10:39:02.383Z",
       "revision": "36",
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -15742,7 +15742,107 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-1"
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "aggregated by",
+                "language": "en"
+              },
+              {
+                "text": "besteht aus",
+                "language": "de"
+              },
+              {
+                "text": "aggregé de",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-SysmlIsaggregateby",
+      "changedAt": "2023-10-21T10:38:50.092Z",
+      "revision": "36",
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SysML:isAggregatedBy"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "An [[FMC:Actor]] is aggregated by another [[FMC:Actor]].",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-5"
           ]
         },
         {
@@ -16297,6 +16397,106 @@
           },
           "values": [
             "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "extends",
+                "language": "en"
+              },
+              {
+                "text": "erweitert",
+                "language": "de"
+              },
+              {
+                "text": "s'étend",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-NAEUhVZgpoB8nzempd6FIyOut4M",
+      "changedAt": "2023-10-21T10:10:31.315Z",
+      "revision": "36",
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SysML:extends"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>An [[FMC:Actor]] «UseCase» extends another [[FMC:Actor]] «UseCase».</p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-5"
           ]
         },
         {
@@ -38945,6 +39145,84 @@
       "object": {
         "id": "R-SpecifBusinessprocesses"
       }
+    },
+    {
+      "id": "S-19nrjDxKfHt0zKQrewkHEISj3LZ",
+      "changedAt": "2023-10-21T10:11:01.136Z",
+      "class": {
+        "id": "SC-isSynonymOfPredicate"
+      },
+      "subject": {
+        "id": "R-NAEUhVZgpoB8nzempd6FIyOut4M"
+      },
+      "object": {
+        "id": "R-UmlExtends"
+      }
+    },
+    {
+      "id": "S-EdBCLATCGXV7dkiUTvW4taP4K6W",
+      "changedAt": "2023-10-21T10:11:14.594Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-AdyDfiNvv4ouaepgtffkr4r0BDN"
+      },
+      "object": {
+        "id": "R-NAEUhVZgpoB8nzempd6FIyOut4M"
+      }
+    },
+    {
+      "id": "S-jtVOQtX8sRzrt0tEU5gaeRRY5KO",
+      "changedAt": "2023-10-21T10:11:32.849Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks"
+      },
+      "object": {
+        "id": "R-UmlExtends"
+      }
+    },
+    {
+      "id": "S-3XWJp9dWbI1lsDpagO5B7b2cMfA",
+      "changedAt": "2023-10-21T10:40:27.989Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks"
+      },
+      "object": {
+        "id": "R-UmlIsaggregatedby"
+      }
+    },
+    {
+      "id": "S-uVAFJ7yKimmjgIiIzbSf318HjJ0",
+      "changedAt": "2023-10-21T10:40:42.998Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-AdyDfiNvv4ouaepgtffkr4r0BDN"
+      },
+      "object": {
+        "id": "R-SysmlIsaggregateby"
+      }
+    },
+    {
+      "id": "S-wyNa4oLMR694BuLBkyPx97BXJEl",
+      "changedAt": "2023-10-21T10:40:59.635Z",
+      "class": {
+        "id": "SC-isSynonymOfPredicate"
+      },
+      "subject": {
+        "id": "R-SysmlIsaggregateby"
+      },
+      "object": {
+        "id": "R-UmlIsaggregatedby"
+      }
     }
   ],
   "hierarchies": [
@@ -40140,6 +40418,13 @@
               "revision": "114"
             },
             {
+              "id": "N-ImIa7tb3OG6c374rkRL0nVnGesH",
+              "resource": {
+                "id": "R-SysmlIsaggregateby"
+              },
+              "changedAt": "2023-10-21T10:38:50.092Z"
+            },
+            {
               "id": "N-rI1c4EBLDOM8UM6wtWOj557hQiW",
               "resource": {
                 "id": "R-UmlAggregates"
@@ -40182,6 +40467,13 @@
               },
               "changedAt": "2019-05-30T14:52:25+01:00",
               "revision": "114"
+            },
+            {
+              "id": "N-PUPCW0UgIoLsbL7Yu9eniXb1OEi",
+              "resource": {
+                "id": "R-NAEUhVZgpoB8nzempd6FIyOut4M"
+              },
+              "changedAt": "2023-10-21T10:10:31.315Z"
             },
             {
               "id": "N-tHgSojoH8KY2IPsmY49TGtgVWpf",
