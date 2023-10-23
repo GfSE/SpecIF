@@ -2719,7 +2719,7 @@
           "values": [
             [
               {
-                "text": "Digital Data Package defined by prostep IVIP.",
+                "text": "Digital Data Package defined by prostep IVIP e.V..",
                 "language": "en"
               }
             ]
@@ -10724,6 +10724,10 @@
               {
                 "text": "Source File",
                 "language": "en"
+              },
+              {
+                "text": "Quelldatei",
+                "language": "de"
               }
             ]
           ]
@@ -19099,6 +19103,10 @@
               {
                 "text": "defined by",
                 "language": "en"
+              },
+              {
+                "text": "definiert von",
+                "language": "de"
               }
             ]
           ]
@@ -29401,6 +29409,16 @@
               {
                 "text": "20_drafted",
                 "language": "en"
+              },
+              {
+                "text": "20_bearbeitet",
+                "language": "de"
+              }
+            ],
+            [
+              {
+                "text": "bearbeitet",
+                "language": "de"
               }
             ]
           ]
@@ -29457,6 +29475,16 @@
               {
                 "text": "30_submitted",
                 "language": "en"
+              },
+              {
+                "text": "30_vorgelegt",
+                "language": "de"
+              }
+            ],
+            [
+              {
+                "text": "30_entscheidungsreif",
+                "language": "de"
               }
             ]
           ]
@@ -29513,6 +29541,10 @@
               {
                 "text": "40_approved",
                 "language": "en"
+              },
+              {
+                "text": "40_genehmigt",
+                "language": "de"
               }
             ]
           ]
@@ -29568,6 +29600,10 @@
               {
                 "text": "ready",
                 "language": "en"
+              },
+              {
+                "text": "fertig (\"ready\")",
+                "language": "de"
               }
             ]
           ]
@@ -29623,6 +29659,10 @@
               {
                 "text": "done",
                 "language": "en"
+              },
+              {
+                "text": "erledigt (\"done\")",
+                "language": "de"
               }
             ],
             [
@@ -29747,6 +29787,10 @@
               {
                 "text": "80_released",
                 "language": "en"
+              },
+              {
+                "text": "80_freigegeben",
+                "language": "de"
               }
             ],
             [
@@ -29817,6 +29861,10 @@
               {
                 "text": "00_deprecated",
                 "language": "en"
+              },
+              {
+                "text": "00_veraltet",
+                "language": "de"
               }
             ]
           ]
@@ -29873,6 +29921,10 @@
               {
                 "text": "90_withdrawn",
                 "language": "en"
+              },
+              {
+                "text": "90_zurückgezogen",
+                "language": "de"
               }
             ]
           ]
@@ -29985,6 +30037,10 @@
               {
                 "text": "00_rejected",
                 "language": "en"
+              },
+              {
+                "text": "00_abgelehnt",
+                "language": "de"
               }
             ]
           ]
