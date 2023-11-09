@@ -6665,7 +6665,7 @@
           "values": [
             [
               {
-                "text": "Ressource",
+                "text": "Noun",
                 "language": "en"
               },
               {
@@ -6686,7 +6686,7 @@
           "values": [
             [
               {
-                "text": "Ressources",
+                "text": "Nouns",
                 "language": "en"
               },
               {
@@ -6788,15 +6788,15 @@
           "values": [
             [
               {
-                "text": "Statement",
+                "text": "Verb",
                 "language": "en"
               },
               {
-                "text": "Prädikat",
+                "text": "Verb",
                 "language": "de"
               },
               {
-                "text": "Prédicat",
+                "text": "Verbe",
                 "language": "fr"
               }
             ]
@@ -6809,15 +6809,15 @@
           "values": [
             [
               {
-                "text": "Statements",
+                "text": "Verbs",
                 "language": "en"
               },
               {
-                "text": "Prädikate",
+                "text": "Verben",
                 "language": "de"
               },
               {
-                "text": "Prédicats",
+                "text": "Verbes",
                 "language": "fr"
               }
             ]
@@ -19970,20 +19970,6 @@
           "values": [
             [
               {
-                "text": "Name",
-                "language": "en"
-              },
-              {
-                "text": "Name",
-                "language": "de"
-              },
-              {
-                "text": "Nom",
-                "language": "fr"
-              }
-            ],
-            [
-              {
                 "text": "Title",
                 "language": "en"
               },
@@ -20049,7 +20035,7 @@
       ]
     },
     {
-      "id": "R-wyKWU7poXxBpOmGR19rrZCOcuSw",
+      "id": "R-SchemaName",
       "changedAt": "2023-10-23T21:31:21.597Z",
       "revision": "44",
       "class": {
@@ -20106,7 +20092,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-5"
+            "V-TermStatus-6"
           ]
         },
         {
@@ -20116,7 +20102,7 @@
           "values": [
             [
               {
-                "text": "Name, Title",
+                "text": "Name",
                 "language": "en"
               },
               {
@@ -20125,20 +20111,6 @@
               },
               {
                 "text": "Nom",
-                "language": "fr"
-              }
-            ],
-            [
-              {
-                "text": "Title",
-                "language": "en"
-              },
-              {
-                "text": "Titel",
-                "language": "de"
-              },
-              {
-                "text": "Titre",
                 "language": "fr"
               }
             ]
@@ -29362,6 +29334,16 @@
                 "text": "haut",
                 "language": "fr"
               }
+            ],
+            [
+              {
+                "text": "1_high",
+                "language": "en"
+              },
+              {
+                "text": "1_hoch",
+                "language": "de"
+              }
             ]
           ]
         },
@@ -29508,6 +29490,16 @@
                 "text": "moyen",
                 "language": "fr"
               }
+            ],
+            [
+              {
+                "text": "2_medium",
+                "language": "en"
+              },
+              {
+                "text": "2_mittel",
+                "language": "de"
+              }
             ]
           ]
         },
@@ -29653,6 +29645,16 @@
               {
                 "text": "bas",
                 "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "3_low",
+                "language": "en"
+              },
+              {
+                "text": "3_niedrig",
+                "language": "de"
               }
             ]
           ]
@@ -30166,17 +30168,17 @@
             ],
             [
               {
-                "text": "20_drafted",
-                "language": "en"
-              },
-              {
-                "text": "20_bearbeitet",
+                "text": "bearbeitet",
                 "language": "de"
               }
             ],
             [
               {
-                "text": "bearbeitet",
+                "text": "20_drafted",
+                "language": "en"
+              },
+              {
+                "text": "20_bearbeitet",
                 "language": "de"
               }
             ]
@@ -30361,7 +30363,7 @@
                 "language": "en"
               },
               {
-                "text": "fertig (\"ready\")",
+                "text": "fertig ('ready')",
                 "language": "de"
               }
             ]
@@ -30420,7 +30422,7 @@
                 "language": "en"
               },
               {
-                "text": "erledigt (\"done\")",
+                "text": "erledigt ('done')",
                 "language": "de"
               }
             ],
@@ -30484,11 +30486,15 @@
               {
                 "text": "70_validated",
                 "language": "en"
+              },
+              {
+                "text": "70_validiert",
+                "language": "de"
               }
             ],
             [
               {
-                "text": "70_tested",
+                "text": "70_lab-tested",
                 "language": "en"
               }
             ]
@@ -30544,26 +30550,22 @@
             ],
             [
               {
-                "text": "80_released",
-                "language": "en"
-              },
-              {
-                "text": "80_freigegeben",
-                "language": "de"
-              }
-            ],
-            [
-              {
                 "text": "published",
                 "language": "en"
               },
               {
                 "text": "publiziert",
                 "language": "de"
+              }
+            ],
+            [
+              {
+                "text": "80_released",
+                "language": "en"
               },
               {
-                "text": "publié",
-                "language": "fr"
+                "text": "80_freigegeben",
+                "language": "de"
               }
             ]
           ]
@@ -31271,7 +31273,7 @@
       ]
     },
     {
-      "id": "R-vR9Pj5lYZkLiDunX49GVny7ecYr",
+      "id": "R-SpecifStakeholdergroupregulation",
       "changedAt": "2023-03-10T07:58:36.390Z",
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -31308,7 +31310,7 @@
           "values": [
             [
               {
-                "text": "A 'Stakeholder Group' addressed by a requirement."
+                "text": "The stakeholder group 'Regulation' addressed by a requirement."
               }
             ]
           ]
@@ -31347,7 +31349,7 @@
       ]
     },
     {
-      "id": "R-lMq64pJfCrK9rClxxibePbKDUK9",
+      "id": "R-SpecifStakeholdergroupbusiness",
       "changedAt": "2023-03-10T07:54:41.576Z",
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -31384,7 +31386,7 @@
           "values": [
             [
               {
-                "text": "A 'Stakeholder Group' addressed by a requirement."
+                "text": "The stakeholder group 'Business' addressed by a requirement."
               }
             ]
           ]
@@ -31423,7 +31425,7 @@
       ]
     },
     {
-      "id": "R-4TtVilJwc6tIHX9bAaVJKFqg5ie",
+      "id": "R-SpecifStakeholdergroupuser",
       "changedAt": "2023-03-10T07:55:11.892Z",
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -31460,7 +31462,7 @@
           "values": [
             [
               {
-                "text": "A 'Stakeholder Group' addressed by a requirement."
+                "text": "The stakeholder group 'User' addressed by a requirement."
               }
             ]
           ]
@@ -31499,7 +31501,83 @@
       ]
     },
     {
-      "id": "R-zdqNwkUNjuvN4A2hfAoX3lPr5Ub",
+      "id": "R-SpecifStakeholdergroupsystem",
+      "changedAt": "2023-03-10T07:58:36.390Z",
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:StakeholderGroupSystem"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "The stakeholder group 'System' addressed by a requirement."
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-2",
+            "V-Domain-3",
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "System",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-SpecifStakeholdergroupoperation",
       "changedAt": "2023-03-10T07:58:44.791Z",
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -31536,7 +31614,7 @@
           "values": [
             [
               {
-                "text": "A 'Stakeholder Group' addressed by a requirement."
+                "text": "The stakeholder group 'Operation' addressed by a requirement."
               }
             ]
           ]
@@ -32052,7 +32130,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-6"
+            "V-TermStatus-9"
           ]
         },
         {
@@ -32115,7 +32193,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-6"
+            "V-TermStatus-9"
           ]
         },
         {
@@ -32178,7 +32256,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-6"
+            "V-TermStatus-9"
           ]
         },
         {
@@ -32249,7 +32327,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-6"
+            "V-TermStatus-9"
           ]
         },
         {
@@ -32320,7 +32398,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-6"
+            "V-TermStatus-9"
           ]
         },
         {
@@ -35566,7 +35644,7 @@
         "id": "R-SpecifStakeholdergroup"
       },
       "object": {
-        "id": "R-vR9Pj5lYZkLiDunX49GVny7ecYr"
+        "id": "R-SpecifStakeholdergroupregulation"
       }
     },
     {
@@ -35579,7 +35657,7 @@
         "id": "R-SpecifStakeholdergroup"
       },
       "object": {
-        "id": "R-lMq64pJfCrK9rClxxibePbKDUK9"
+        "id": "R-SpecifStakeholdergroupbusiness"
       }
     },
     {
@@ -35592,7 +35670,20 @@
         "id": "R-SpecifStakeholdergroup"
       },
       "object": {
-        "id": "R-4TtVilJwc6tIHX9bAaVJKFqg5ie"
+        "id": "R-SpecifStakeholdergroupuser"
+      }
+    },
+    {
+      "id": "S-9FnefGGr1hJ6l8JvSvinLxlI9rf",
+      "changedAt": "2023-03-10T08:08:03.630Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifStakeholdergroup"
+      },
+      "object": {
+        "id": "R-SpecifStakeholdergroupsystem"
       }
     },
     {
@@ -35605,7 +35696,7 @@
         "id": "R-SpecifStakeholdergroup"
       },
       "object": {
-        "id": "R-zdqNwkUNjuvN4A2hfAoX3lPr5Ub"
+        "id": "R-SpecifStakeholdergroupoperation"
       }
     },
     {
@@ -38257,7 +38348,7 @@
         "id": "R-Bw7GKkSQtk6cTboeGMlNf5ymHgl"
       },
       "object": {
-        "id": "R-lMq64pJfCrK9rClxxibePbKDUK9"
+        "id": "R-SpecifStakeholdergroupbusiness"
       }
     },
     {
@@ -38270,7 +38361,7 @@
         "id": "R-rzxARP8YMKWuTfPpbNYEE8K2Olc"
       },
       "object": {
-        "id": "R-4TtVilJwc6tIHX9bAaVJKFqg5ie"
+        "id": "R-SpecifStakeholdergroupuser"
       }
     },
     {
@@ -38283,7 +38374,20 @@
         "id": "R-R5YTxPTHbKKEOgZ6Di0udzxkp68"
       },
       "object": {
-        "id": "R-zdqNwkUNjuvN4A2hfAoX3lPr5Ub"
+        "id": "R-SpecifStakeholdergroupoperation"
+      }
+    },
+    {
+      "id": "S-kmz8PUNlTBEd6uY3F2OeU6KYsT3",
+      "changedAt": "2023-07-16T12:37:55.810Z",
+      "class": {
+        "id": "SC-isSynonymOfValue"
+      },
+      "subject": {
+        "id": "R-1vbPKshYcsUWJd0IzM9WO9t2Dzf"
+      },
+      "object": {
+        "id": "R-SpecifStakeholdergroupsystem"
       }
     },
     {
@@ -40493,20 +40597,7 @@
         "id": "R-NTiyXXD7T6xOlOQ482krk1DEGGt"
       },
       "object": {
-        "id": "R-wyKWU7poXxBpOmGR19rrZCOcuSw"
-      }
-    },
-    {
-      "id": "S-E9kNKKcshFEXh7x2Lrx8op64DP6",
-      "changedAt": "2023-10-23T21:27:40.076Z",
-      "class": {
-        "id": "SC-isSynonymOfProperty"
-      },
-      "subject": {
-        "id": "R-wyKWU7poXxBpOmGR19rrZCOcuSw"
-      },
-      "object": {
-        "id": "R-DctermsIdentifier"
+        "id": "R-SchemaName"
       }
     },
     {
@@ -42156,7 +42247,7 @@
             {
               "id": "N-bTRRC4JLt4EXth6K4CGIKVqfmU9",
               "resource": {
-                "id": "R-wyKWU7poXxBpOmGR19rrZCOcuSw"
+                "id": "R-SchemaName"
               },
               "changedAt": "2023-10-23T21:27:11.283Z"
             },
@@ -43147,28 +43238,35 @@
             {
               "id": "N-61I3zPDAk0iVd7WNb7xDWONmFCY",
               "resource": {
-                "id": "R-vR9Pj5lYZkLiDunX49GVny7ecYr"
+                "id": "R-SpecifStakeholdergroupregulation"
               },
               "changedAt": "2023-03-10T07:56:46.892Z"
             },
             {
               "id": "N-UFkO7WXmDpgWsLHsouwJFuAj7eB",
               "resource": {
-                "id": "R-lMq64pJfCrK9rClxxibePbKDUK9"
+                "id": "R-SpecifStakeholdergroupbusiness"
               },
               "changedAt": "2023-03-10T07:53:44.960Z"
             },
             {
               "id": "N-pyWkvoCVte5HiYahSn4zhoPnWib",
               "resource": {
-                "id": "R-4TtVilJwc6tIHX9bAaVJKFqg5ie"
+                "id": "R-SpecifStakeholdergroupuser"
               },
               "changedAt": "2023-03-10T07:54:56.893Z"
             },
             {
+              "id": "N-SpecifStakeholdergroupsystem",
+              "resource": {
+                "id": "R-SpecifStakeholdergroupsystem"
+              },
+              "changedAt": "2023-03-10T07:56:59.847Z"
+            },
+            {
               "id": "N-cX2aUDVt8fAhamPgjxILQym8hbl",
               "resource": {
-                "id": "R-zdqNwkUNjuvN4A2hfAoX3lPr5Ub"
+                "id": "R-SpecifStakeholdergroupoperation"
               },
               "changedAt": "2023-03-10T07:56:59.847Z"
             },
