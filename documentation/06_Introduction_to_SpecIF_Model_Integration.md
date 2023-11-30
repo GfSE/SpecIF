@@ -14,6 +14,29 @@ The model element types of the _Fundamental Modeling Concepts (FMC)_ have been s
 namely _Actor_, _State_ and _Event_. 
 Model elements used by any method or notation can be mapped to these [[Dungern2016](https://specif.de/files/resources/enso-m/documents-en/TdSE-2016_Dungern_Semantic-Model-Integration-for-System-Specification_(Text).pdf)].
 
+## Ontology
+
+The basic reasoning behind model integration:
+- There must be a common language for the models to integrate; it is a set of "global terms".
+- "Global" terms are for example "UML:Actor" for a model element type or "dcterms:title" for a property type. 
+- It is practical, if they have a namespace, as we are dealing with overlapping names: A "FMC:Actor" is not the same as a "UML:Actor", in fact the latter is a specialization of the former.
+- A global term may have multiple "local" names for translations in national or domain languages. The reader chooses which local terms she/he would like to see. 
+- Multiple global names can be declared "synonyms" (by establishing an undirected "isSynonymOf" relation).
+- Among synonyms, one global term is declared "preferred" whereas the others are "equivalent".
+- The whole set of terms and relations is called an 'ontology'.
+
+Let us consider the following example:
+- A SysML model has a model-element "Pilot" of type "UML:Actor"; declared "preferred".
+- A BPMN model has a model-element "Pilot" of type "bpmn:lane"; declared "equivalent".
+- In the ontology, both terms are linked with an "isSynonymOf" relation.
+- When importing the SysML model, the model-element type remains unchanged, as it is the preferred term.
+- When importing the BPMN model, the model-element type is mapped to the preferred term (bpmn:lane --> UML:Actor).
+- Both model elements can be merged (we do it even automatically), as they have equal type and name.
+- The resulting semantic net combines the information from both models. It can be navigated, searched and audited.
+- Please note that all definitions are done in the ontology - no software-changes needed to add new terms.
+- We haven't done any automatic rule checking yet to discover model imperfections, but it is not difficult to imagine. In the electronics domain the checking of VHDL code has a long tradition.
+
+
 ## Model Integration Resources
 
 There are just a few SpecIF resource classes used for semantic model integration.
