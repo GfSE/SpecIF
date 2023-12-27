@@ -21,34 +21,6 @@
   },
   "dataTypes": [
     {
-      "id": "DT-String-LE32",
-      "changedAt": "2023-02-11T08:59:00+02:00",
-      "title": "String[32]",
-      "description": [
-        {
-          "text": "String with length <=32"
-        }
-      ],
-      "revision": "1.2",
-      "type": "xs:string",
-      "maxLength": 32
-    },
-    {
-      "id": "DT-ShortString",
-      "changedAt": "2016-05-26T08:59:00+02:00",
-      "title": "String[256]",
-      "description": [
-        {
-          "text": "String with length <=256",
-          "format": "plain",
-          "language": "en"
-        }
-      ],
-      "revision": "1.1",
-      "type": "xs:string",
-      "maxLength": 256
-    },
-    {
       "id": "DT-Text",
       "changedAt": "2021-02-23T08:59:00+02:00",
       "title": "Plain or formatted Text",
@@ -63,6 +35,34 @@
       "type": "xs:string"
     },
     {
+      "id": "DT-ShortString",
+      "changedAt": "2021-02-23T08:59:00+02:00",
+      "title": "String[256]",
+      "description": [
+        {
+          "text": "String with length <=256",
+          "format": "plain",
+          "language": "en"
+        }
+      ],
+      "revision": "1.1",
+      "type": "xs:string",
+      "maxLength": 256
+    },
+    {
+      "id": "DT-String-LE32",
+      "changedAt": "2023-02-11T08:59:00+02:00",
+      "title": "String[32]",
+      "description": [
+        {
+          "text": "String with length <=32"
+        }
+      ],
+      "revision": "1.2",
+      "type": "xs:string",
+      "maxLength": 32
+    },
+    {
       "id": "DT-Boolean",
       "changedAt": "2016-05-26T08:59:00+02:00",
       "title": "Boolean",
@@ -75,22 +75,6 @@
       ],
       "revision": "1.1",
       "type": "xs:boolean"
-    },
-    {
-      "id": "DT-Byte",
-      "changedAt": "2016-05-26T08:59:00+02:00",
-      "title": "Byte",
-      "description": [
-        {
-          "text": "A byte is an integer value between 0 and 255.",
-          "format": "plain",
-          "language": "en"
-        }
-      ],
-      "revision": "1.1",
-      "type": "xs:integer",
-      "minInclusive": 0,
-      "maxInclusive": 255
     },
     {
       "id": "DT-Integer",
@@ -123,6 +107,22 @@
       "type": "xs:integer",
       "minInclusive": 0,
       "maxInclusive": 2147483647
+    },
+    {
+      "id": "DT-Byte",
+      "changedAt": "2016-05-26T08:59:00+02:00",
+      "title": "Byte",
+      "description": [
+        {
+          "text": "A byte is an integer value between 0 and 255.",
+          "format": "plain",
+          "language": "en"
+        }
+      ],
+      "revision": "1.1",
+      "type": "xs:integer",
+      "minInclusive": 0,
+      "maxInclusive": 255
     },
     {
       "id": "DT-Real",
@@ -494,10 +494,11 @@
           "text": "<p>An account of the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/description\">DCMI</a></i>)</small></p><p>Descriptive text (reference: Dublin Core) about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML 'div' element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>"
         }
       ],
-      "revision": "1.1",
       "dataType": {
         "id": "DT-Text"
-      }
+      },
+	  "format": "xhtml",
+      "revision": "1.1"
     },
     {
       "id": "PC-Diagram",
@@ -512,6 +513,7 @@
       "dataType": {
         "id": "DT-Text"
       },
+	  "format": "xhtml",
       "multiple": true
     },
     {
@@ -574,7 +576,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Text"
-      }
+      },
+	  "format": "xhtml"
     },
     {
       "id": "PC-Unit",
@@ -662,12 +665,26 @@
       }
     },
     {
+      "id": "PC-isRequired",
+      "changedAt": "2023-11-10T15:30:52+02:00",
+      "title": "SpecIF:isRequired",
+      "description": [
+        {
+          "text": "Indicates whether an instance must be supplied with a resource or a statement; by default it is 'false'."
+        }
+      ],
+      "revision": "1.1",
+      "dataType": {
+        "id": "DT-Boolean"
+      }
+    },
+    {
       "id": "PC-isUndirected",
       "changedAt": "2023-02-14T10:30:52+02:00",
       "title": "SpecIF:isUndirected",
       "description": [
         {
-          "text": "Indicates whether a statement equally applies when subject and object are exchanged."
+          "text": "Indicates whether a statement equally applies when subject and object are exchanged; by default, it is 'false'."
         }
       ],
       "revision": "1.1",
@@ -681,7 +698,7 @@
       "title": "SpecIF:multiple",
       "description": [
         {
-          "text": "Indicates whether a Property can have multiple values."
+          "text": "Indicates whether an instance can have multiple values; by default, it is 'false'."
         }
       ],
       "revision": "1.1",
@@ -1069,6 +1086,9 @@
         "id": "RC-SpecifOntologyterm"
       },
       "propertyClasses": [
+        {
+          "id": "PC-isRequired"
+        },
         {
           "id": "PC-multiple"
         }
@@ -19745,6 +19765,14 @@
         },
         {
           "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -19795,11 +19823,19 @@
           "values": [
             "V-TextFormat-10"
           ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "256"
+          ]
         }
       ]
     },
     {
-      "id": "R-cPSsAeEC72vAzzqvEK6DM1HdhLU",
+      "id": "R-ReqifForeignid",
       "changedAt": "2023-03-17T20:43:14.428Z",
       "revision": "46",
       "class": {
@@ -26913,11 +26949,19 @@
               }
             ]
           ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "256"
+          ]
         }
       ]
     },
     {
-      "id": "R-P1rwoI2N0vrJtJRTsdbTiSI6TWC",
+      "id": "R-SpecifSubject",
       "changedAt": "2018-02-17T14:52:03+01:00",
       "revision": "89",
       "changedBy": "od",
@@ -26976,6 +27020,14 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "256"
           ]
         }
       ]
@@ -27038,11 +27090,19 @@
               }
             ]
           ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "256"
+          ]
         }
       ]
     },
     {
-      "id": "R-BUqnNuFYckxT4WBUDNGstLBqEFI",
+      "id": "R-SpecifObject",
       "changedAt": "2018-02-17T14:52:04+01:00",
       "revision": "91",
       "changedBy": "od",
@@ -27101,6 +27161,14 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "256"
           ]
         }
       ]
@@ -27166,6 +27234,14 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "256"
           ]
         }
       ]
@@ -27251,7 +27327,6 @@
             [
               {
                 "text": "<div><p>A string to determine the ordering of elements. Rules:</p><ul><li>For ordering, only alphanumeric characters are permissible. A letter case has no effect; for example, 'F' is equivalent to 'f'.</li><li>The ordering at character level is alphanumeric, i.e. '1' &lt; '7' &lt; 'D' &lt; 'X'.</li><li>Single character substrings &lt; two-character substrings &lt; substrings with more characters, thus '9' &lt; '12' &lt; '114'.</li><li>The ordinal mark may be separated by non-alphanumeric characters. All separators are equivalent; e.g. '-' is equivalent to ';' or '/'.</li><li>Each alphanumeric substring is used for ordering on its hierarchical level; the leftmost substring is most significant for the overall ordering.</li><li>For example '1' &lt; '1.2' &lt; '1.Y' &lt; '1.1a' &lt; '1-1b' &lt; '1-1C' &lt; '2'.</li></ul><p>A regular expression for extracting the substrings of an ordinal mark is &#47;([0-9a-z]+)[^0-9a-z]{0,1}&#47;gi.</p></div>",
-                "format": "xhtml",
                 "language": "en"
               }
             ]
@@ -27274,6 +27349,10 @@
               {
                 "text": "Ordinal Mark",
                 "language": "en"
+              },
+              {
+                "text": "Ordnungskennzeichen",
+                "language": "de"
               }
             ]
           ]
@@ -33941,7 +34020,7 @@
         "id": "R-SpecifSource"
       },
       "object": {
-        "id": "R-P1rwoI2N0vrJtJRTsdbTiSI6TWC"
+        "id": "R-SpecifSubject"
       }
     },
     {
@@ -33956,7 +34035,7 @@
         "id": "R-SpecifTarget"
       },
       "object": {
-        "id": "R-BUqnNuFYckxT4WBUDNGstLBqEFI"
+        "id": "R-SpecifObject"
       }
     },
     {
@@ -36642,7 +36721,7 @@
         "id": "SC-isSynonymOfProperty"
       },
       "subject": {
-        "id": "R-cPSsAeEC72vAzzqvEK6DM1HdhLU"
+        "id": "R-ReqifForeignid"
       },
       "object": {
         "id": "R-DctermsIdentifier"
@@ -37074,7 +37153,7 @@
         "id": "R-SDJ68yzYCQB0cJ74tjNypSIwxoS"
       },
       "object": {
-        "id": "R-cPSsAeEC72vAzzqvEK6DM1HdhLU"
+        "id": "R-ReqifForeignid"
       }
     },
     {
@@ -42232,7 +42311,7 @@
             {
               "id": "N-M1PER9WLo1IWQiWCM6rpNppzCld",
               "resource": {
-                "id": "R-cPSsAeEC72vAzzqvEK6DM1HdhLU"
+                "id": "R-ReqifForeignid"
               },
               "changedAt": "2023-03-17T20:42:57.265Z"
             },
@@ -42810,7 +42889,7 @@
             {
               "id": "N-XDPeQ3wF5aO2UeMzW8WVfAXDTko",
               "resource": {
-                "id": "R-P1rwoI2N0vrJtJRTsdbTiSI6TWC"
+                "id": "R-SpecifSubject"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
@@ -42826,7 +42905,7 @@
             {
               "id": "N-5Vex22LZPJlwhATXG00Xs7zkkrf",
               "resource": {
-                "id": "R-BUqnNuFYckxT4WBUDNGstLBqEFI"
+                "id": "R-SpecifObject"
               },
               "changedAt": "2018-02-17T14:52:18+01:00",
               "revision": "114"
