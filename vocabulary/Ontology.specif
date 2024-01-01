@@ -1,20 +1,20 @@
 {
   "@Context": "http://purl.org/dc/terms/",
   "id": "P-SpecIF-Ontology",
+  "$schema": "https://specif.de/v1.1/schema.json",
   "title": [
     {
       "text": "SpecIF Ontology"
     }
   ],
-  "$schema": "https://specif.de/v1.1/schema.json",
-  "generator": "SpecIF Model-Integrator and Editor",
-  "generatorVersion": "1.1.q.7",
-  "createdAt": "2023-10-23T22:05:00.819Z",
   "description": [
     {
       "text": "The SpecIF ontology collects terms used in the domain of systems engineering and requirements management. Agreed-upon terms help both collaborators to communicate more clearly and systems to match data fields automatically."
     }
   ],
+  "generator": "SpecIF Model-Integrator and Editor",
+  "generatorVersion": "1.1.r.5",
+  "createdAt": "2023-12-27T18:12:35.400Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -439,7 +439,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-ShortString"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-SpecifTerm",
@@ -453,7 +454,8 @@
       "revision": "1.2",
       "dataType": {
         "id": "DT-ShortString"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-LocalTerm",
@@ -468,7 +470,8 @@
       "dataType": {
         "id": "DT-ShortString"
       },
-      "multiple": true
+      "multiple": true,
+      "format": "plain"
     },
     {
       "id": "PC-LocalTermPlural",
@@ -483,7 +486,8 @@
       "dataType": {
         "id": "DT-ShortString"
       },
-      "multiple": true
+      "multiple": true,
+      "format": "plain"
     },
     {
       "id": "PC-Description",
@@ -494,11 +498,11 @@
           "text": "<p>An account of the resource. <small>(<i>source: <a href=\"http://purl.org/dc/elements/1.1/description\">DCMI</a></i>)</small></p><p>Descriptive text (reference: Dublin Core) about resource represented as rich text in XHTML content. SHOULD include only content that is valid and suitable inside an XHTML 'div' element. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p>"
         }
       ],
+      "revision": "1.1",
       "dataType": {
         "id": "DT-Text"
       },
-	  "format": "xhtml",
-      "revision": "1.1"
+      "format": "xhtml"
     },
     {
       "id": "PC-Diagram",
@@ -513,8 +517,8 @@
       "dataType": {
         "id": "DT-Text"
       },
-	  "format": "xhtml",
-      "multiple": true
+      "multiple": true,
+      "format": "xhtml"
     },
     {
       "id": "PC-Type",
@@ -528,7 +532,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-ShortString"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-VisibleId",
@@ -544,7 +549,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-ShortString"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-SpecifRevision",
@@ -560,7 +566,8 @@
       "revision": "1.2",
       "dataType": {
         "id": "DT-String-LE32"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-Icon",
@@ -577,7 +584,7 @@
       "dataType": {
         "id": "DT-Text"
       },
-	  "format": "xhtml"
+      "format": "xhtml"
     },
     {
       "id": "PC-Unit",
@@ -586,7 +593,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-String-LE32"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-Origin",
@@ -596,7 +604,8 @@
       "dataType": {
         "id": "DT-ShortString"
       },
-      "multiple": true
+      "multiple": true,
+      "format": "plain"
     },
     {
       "id": "PC-TermStatus",
@@ -605,7 +614,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-TermStatus"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-Domain",
@@ -615,7 +625,8 @@
       "dataType": {
         "id": "DT-Domain"
       },
-      "multiple": true
+      "multiple": true,
+      "format": "plain"
     },
     {
       "id": "PC-TextFormat",
@@ -624,7 +635,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-TextFormat"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-Instantiation",
@@ -639,7 +651,8 @@
       "dataType": {
         "id": "DT-Instantiation"
       },
-      "multiple": true
+      "multiple": true,
+      "format": "plain"
     },
     {
       "id": "PC-Index",
@@ -648,7 +661,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Integer-GE0-LE2147483647"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-isHeading",
@@ -662,7 +676,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Boolean"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-isRequired",
@@ -676,7 +691,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Boolean"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-isUndirected",
@@ -690,7 +706,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Boolean"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-multiple",
@@ -704,7 +721,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Boolean"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-multiLanguage",
@@ -718,7 +736,8 @@
       "revision": "1.2",
       "dataType": {
         "id": "DT-Boolean"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-StringMaxLength",
@@ -732,7 +751,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Integer-GE0-LE2147483647"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-IntegerMinInclusive",
@@ -746,7 +766,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Integer"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-IntegerMaxInclusive",
@@ -760,7 +781,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Integer"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-RealMinInclusive",
@@ -774,7 +796,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Real"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-RealMaxInclusive",
@@ -788,7 +811,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Real"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-RealFractionDigits",
@@ -802,7 +826,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Integer-GE0-LE2147483647"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-DefaultValueString",
@@ -816,7 +841,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-ShortString"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-DefaultValueBoolean",
@@ -830,7 +856,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Boolean"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-DefaultValueInteger",
@@ -844,7 +871,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Integer"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-DefaultValueReal",
@@ -858,7 +886,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Real"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-DefaultValueDateTime",
@@ -872,7 +901,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-DateTime"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-DefaultValueDuration",
@@ -886,7 +916,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-Duration"
-      }
+      },
+      "format": "plain"
     },
     {
       "id": "PC-DefaultValueAnyUri",
@@ -900,7 +931,8 @@
       "revision": "1.1",
       "dataType": {
         "id": "DT-AnyURI"
-      }
+      },
+      "format": "plain"
     }
   ],
   "resourceClasses": [
@@ -1820,7 +1852,6 @@
       ]
     }
   ],
-  "files": [],
   "resources": [
     {
       "id": "R-SpecifOntology",
@@ -21123,6 +21154,115 @@
       ]
     },
     {
+      "id": "R-sEFFmqIBYEyoPSYfz7NkTppJfby",
+      "changedAt": "2023-10-21T20:24:43.178Z",
+      "class": {
+        "id": "RC-SpecifTermpropertyclassstring"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:ModelFile"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A file with partial model information.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-2",
+            "V-Domain-3",
+            "V-Domain-4"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Model File",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-20"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "256"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-4H2oVxaVvTDtiYmWb5ywp9MKR50",
       "changedAt": "2023-03-17T20:54:35.878Z",
       "revision": "152",
@@ -27360,7 +27500,7 @@
       ]
     },
     {
-      "id": "R-kjoKfseo7PM8KoBIisHrkpPSGLX",
+      "id": "R-SpecifMultiple",
       "changedAt": "2023-07-17T09:01:37.224Z",
       "class": {
         "id": "RC-SpecifTermpropertyclassboolean"
@@ -27455,7 +27595,7 @@
       ]
     },
     {
-      "id": "R-hUwiIq98gsPYfYiJKkFIlrD2Adu",
+      "id": "R-SpecifMultilanguage",
       "changedAt": "2023-07-17T09:02:33.088Z",
       "class": {
         "id": "RC-SpecifTermpropertyclassboolean"
@@ -27653,7 +27793,7 @@
       ]
     },
     {
-      "id": "R-VtP7roQN93axNoMG6MIuKkEFKeA",
+      "id": "R-SpecifIsundirected",
       "changedAt": "2023-08-09T12:34:19.011Z",
       "class": {
         "id": "RC-SpecifTermpropertyclassboolean"
@@ -27752,7 +27892,7 @@
       ]
     },
     {
-      "id": "R-fcIVlPmp9FLvgpte85s2a3xUJTW",
+      "id": "R-SpecifDefaultvalue",
       "changedAt": "2023-08-08T12:00:09.863Z",
       "class": {
         "id": "RC-SpecifTermpropertyclassstring"
@@ -27940,7 +28080,7 @@
       ]
     },
     {
-      "id": "R-Drg6PdGi3JnAah7JpzaulSd2kRA",
+      "id": "R-SpecifTextformat",
       "changedAt": "2023-07-17T11:40:15.113Z",
       "class": {
         "id": "RC-SpecifTermpropertyclassstring"
@@ -29145,44 +29285,6 @@
       ]
     },
     {
-      "id": "R-852227376",
-      "changedAt": "2023-03-27T16:27:34.021Z",
-      "revision": "96",
-      "class": {
-        "id": "RC-SpecifTermpropertyclassstring"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "HIS:SupplierComment"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-3"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-5"
-          ]
-        }
-      ]
-    },
-    {
       "id": "R-852227375",
       "changedAt": "2023-03-27T16:23:52.010Z",
       "revision": "97",
@@ -29221,12 +29323,62 @@
       ]
     },
     {
-      "id": "R-sEFFmqIBYEyoPSYfz7NkTppJfby",
-      "changedAt": "2023-10-21T20:24:43.178Z",
+      "id": "R-852227376",
+      "changedAt": "2023-03-27T16:27:34.021Z",
+      "revision": "96",
       "class": {
         "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "HIS:SupplierComment"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-XsBoolean",
+      "changedAt": "2023-12-27T18:00:29.850Z",
+      "class": {
+        "id": "RC-SpecifTermpropertyclassboolean"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-Boolean"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifRevision"
@@ -29246,7 +29398,7 @@
           "values": [
             [
               {
-                "text": "SpecIF:ModelFile"
+                "text": "xs:boolean"
               }
             ]
           ]
@@ -29258,7 +29410,7 @@
           "values": [
             [
               {
-                "text": "A file with partial model information.",
+                "text": "The Boolean data type.",
                 "language": "en"
               }
             ]
@@ -29269,9 +29421,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-2",
-            "V-Domain-3",
-            "V-Domain-4"
+            "V-Domain-1"
           ]
         },
         {
@@ -29279,7 +29429,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-3"
+            "V-TermStatus-6"
           ]
         },
         {
@@ -29289,10 +29439,121 @@
           "values": [
             [
               {
-                "text": "Model File",
+                "text": "Boolean",
                 "language": "en"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-XsInteger",
+      "changedAt": "2023-12-27T18:01:21.676Z",
+      "class": {
+        "id": "RC-SpecifTermpropertyclassinteger"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-Integer"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "xs:integer"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A numerical integer value from -2147483648 to 2147483647 (32 bit).",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Integer",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -29305,7 +29566,110 @@
         },
         {
           "class": {
-            "id": "PC-multiLanguage"
+            "id": "PC-IntegerMinInclusive"
+          },
+          "values": [
+            "-2147483648"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-IntegerMaxInclusive"
+          },
+          "values": [
+            "2147483647"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-XsUnsignedbyte",
+      "changedAt": "2023-12-27T18:06:40.517Z",
+      "class": {
+        "id": "RC-SpecifTermpropertyclassinteger"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-Byte"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "xs:unsignedByte"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "An unsigned byte is an integer value between 0 and 255.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Integer",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
           },
           "values": [
             "false"
@@ -29313,18 +29677,440 @@
         },
         {
           "class": {
-            "id": "PC-TextFormat"
+            "id": "PC-multiple"
           },
           "values": [
-            "V-TextFormat-20"
+            "false"
           ]
         },
         {
           "class": {
-            "id": "PC-StringMaxLength"
+            "id": "PC-IntegerMinInclusive"
           },
           "values": [
-            "256"
+            "0"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-IntegerMaxInclusive"
+          },
+          "values": [
+            "255"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-XsDouble",
+      "changedAt": "2023-12-27T17:55:35.116Z",
+      "class": {
+        "id": "RC-SpecifTermpropertyclassreal"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-Real"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "xs:double"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A floating point number (double).",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Real",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-XsDatetime",
+      "changedAt": "2023-12-27T17:59:37.473Z",
+      "class": {
+        "id": "RC-SpecifTermpropertyclasstimestamp"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-DateTime"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "xs:dateTime"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Date or timestamp in ISO-8601 format.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Date or Timestamp",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-XsDuration",
+      "changedAt": "2023-12-27T18:10:47.337Z",
+      "revision": "rev-1407857877",
+      "class": {
+        "id": "RC-SpecifTermpropertyclassduration"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-Duration"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "xs:duration"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A duration as defined by the ISO 8601 ABNF for 'duration'.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Duration",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-XsAnyuri",
+      "changedAt": "2023-12-27T18:12:23.403Z",
+      "revision": "rev-198419065",
+      "class": {
+        "id": "RC-SpecifTermpropertyclassuri"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-AnyURI"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "xs:anyURI"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "A universal resource identifier (URI), according to RFC3986.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-1"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-LocalTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "Any URI",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
           ]
         }
       ]
@@ -40771,6 +41557,7 @@
       }
     }
   ],
+  "files": [],
   "hierarchies": [
     {
       "id": "N-SpecifOntology",
@@ -42395,6 +43182,13 @@
               "changedAt": "2023-06-08T09:29:20.081Z"
             },
             {
+              "id": "N-CetN3CIazIElosaUDfa9cTnPMKd",
+              "resource": {
+                "id": "R-sEFFmqIBYEyoPSYfz7NkTppJfby"
+              },
+              "changedAt": "2023-12-27T17:52:24.040Z"
+            },
+            {
               "id": "N-I4Ypq9LvxkhsScr843oAHwqg8Rt",
               "resource": {
                 "id": "R-4H2oVxaVvTDtiYmWb5ywp9MKR50"
@@ -42937,14 +43731,14 @@
             {
               "id": "N-jLUUBcBoyMPFWFNXA12mvKywyS0",
               "resource": {
-                "id": "R-kjoKfseo7PM8KoBIisHrkpPSGLX"
+                "id": "R-SpecifMultiple"
               },
               "changedAt": "2023-07-17T09:01:37.224Z"
             },
             {
               "id": "N-nAUe3yByQiItg47RcWKKd5yzIbo",
               "resource": {
-                "id": "R-hUwiIq98gsPYfYiJKkFIlrD2Adu"
+                "id": "R-SpecifMultilanguage"
               },
               "changedAt": "2023-07-17T09:02:33.088Z"
             },
@@ -42958,14 +43752,14 @@
             {
               "id": "N-u44S7TgNy5G9Pq1KWQ4lwnc4CQc",
               "resource": {
-                "id": "R-VtP7roQN93axNoMG6MIuKkEFKeA"
+                "id": "R-SpecifIsundirected"
               },
               "changedAt": "2023-08-09T11:52:11.779Z"
             },
             {
               "id": "N-IqbM5qUahQVuwuaDydXjwISkcu1",
               "resource": {
-                "id": "R-fcIVlPmp9FLvgpte85s2a3xUJTW"
+                "id": "R-SpecifDefaultvalue"
               },
               "changedAt": "2023-08-08T11:57:55.586Z"
             },
@@ -42979,7 +43773,7 @@
             {
               "id": "N-gNWPzq8S2Km20UKQoigSfyaGPtQ",
               "resource": {
-                "id": "R-Drg6PdGi3JnAah7JpzaulSd2kRA"
+                "id": "R-SpecifTextformat"
               },
               "changedAt": "2023-07-17T11:40:15.113Z"
             },
@@ -43051,7 +43845,7 @@
               "resource": {
                 "id": "R-u5Cm49QMK2jpejUwO2hLMt8Rvrr"
               },
-              "changedAt": "2023-03-06T07:41:30.353Z"
+              "changedAt": "2023-12-27T17:55:59.303Z"
             },
             {
               "id": "N-xowsp9qMG4tCuaeWLorAMmzrwnc",
@@ -43069,6 +43863,13 @@
               "changedAt": "2023-03-06T07:49:14.342Z"
             },
             {
+              "id": "N-J8OItqGIlXNEcdKXttuKugnccc2",
+              "resource": {
+                "id": "R-852227375"
+              },
+              "changedAt": "2023-12-27T17:56:13.389Z"
+            },
+            {
               "id": "N-I5wLfSIRpjyuc3cULm8hMnYJYlX",
               "resource": {
                 "id": "R-852227376"
@@ -43077,19 +43878,53 @@
               "revision": "114"
             },
             {
-              "id": "N-J8OItqGIlXNEcdKXttuKugnccc2",
+              "id": "N-aOhjJ6YLOviS77V2UGHKg9NeUrO",
               "resource": {
-                "id": "R-852227375"
+                "id": "R-XsBoolean"
               },
-              "changedAt": "2018-02-17T14:52:18+01:00",
-              "revision": "114"
+              "changedAt": "2023-12-27T17:53:12.066Z"
             },
             {
-              "id": "N-CetN3CIazIElosaUDfa9cTnPMKd",
+              "id": "N-KnQiRYZxFxCwonsexGffocUH20e",
               "resource": {
-                "id": "R-sEFFmqIBYEyoPSYfz7NkTppJfby"
+                "id": "R-XsInteger"
               },
-              "changedAt": "2023-10-21T20:24:43.178Z"
+              "changedAt": "2023-12-27T17:54:40.730Z"
+            },
+            {
+              "id": "N-d60Nkzvyxv6CgCx5kH5U5cjo7RQ",
+              "resource": {
+                "id": "R-XsUnsignedbyte"
+              },
+              "changedAt": "2023-12-27T18:03:38.064Z"
+            },
+            {
+              "id": "N-JVhrckfL5cl6wQMDN9BDs87t9c2",
+              "resource": {
+                "id": "R-XsDouble"
+              },
+              "changedAt": "2023-12-27T17:55:35.116Z"
+            },
+            {
+              "id": "N-9TOuhdQEckDBjnpmlBJRQVAWA8S",
+              "resource": {
+                "id": "R-XsDatetime"
+              },
+              "changedAt": "2023-12-27T17:59:28.378Z"
+            },
+            {
+              "id": "N-nDVaEKVJ22PUwwfG2xJHnPG9Yuk",
+              "resource": {
+                "id": "R-XsDuration"
+              },
+              "changedAt": "2023-12-27T18:10:47.337Z"
+            },
+            {
+              "id": "N-Omgha7fAR1eXEJVkrO92C7dnGWn",
+              "resource": {
+                "id": "R-XsAnyuri"
+              },
+              "changedAt": "2023-12-27T18:12:23.403Z"
             }
           ],
           "revision": "114"
