@@ -13,8 +13,8 @@
     }
   ],
   "generator": "SpecIF Model-Integrator and Editor",
-  "generatorVersion": "1.1.r.8",
-  "createdAt": "2024-02-12T22:11:44.082Z",
+  "generatorVersion": "1.1.r",
+  "createdAt": "2024-02-19T13:25:27.708Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -3483,7 +3483,7 @@
           "values": [
             [
               {
-                "text": "Model Diagram, Diagram, Plan",
+                "text": "Model Diagram",
                 "language": "en"
               },
               {
@@ -4024,7 +4024,9 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-2"
+            "V-Domain-2",
+            "V-Domain-3",
+            "V-Domain-4"
           ]
         },
         {
@@ -8209,14 +8211,6 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-2"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -8331,14 +8325,6 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-2"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -8449,14 +8435,6 @@
                 "language": "en"
               }
             ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-2"
           ]
         },
         {
@@ -8603,17 +8581,6 @@
                 "language": "en"
               }
             ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-1",
-            "V-Domain-2",
-            "V-Domain-3",
-            "V-Domain-4"
           ]
         },
         {
@@ -12387,8 +12354,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-2",
-            "V-Domain-3"
+            "V-Domain-4"
           ]
         },
         {
@@ -15438,14 +15404,6 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-2"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -15678,11 +15636,11 @@
                 "language": "en"
               },
               {
-                "text": "dupliziert",
+                "text": "ersetzt",
                 "language": "de"
               },
               {
-                "text": "reprend",
+                "text": "remplaces",
                 "language": "fr"
               }
             ]
@@ -31857,7 +31815,13 @@
                 "language": "en"
               },
               {
-                "text": "fertig ('ready')",
+                "text": "bereit ('ready')",
+                "language": "de"
+              }
+            ],
+            [
+              {
+                "text": "bereit",
                 "language": "de"
               }
             ]
@@ -31924,6 +31888,10 @@
               {
                 "text": "60_completed",
                 "language": "en"
+              },
+              {
+                "text": "erledigt",
+                "language": "de"
               }
             ]
           ]
@@ -33193,7 +33161,7 @@
           "values": [
             [
               {
-                "text": "Function or User Story",
+                "text": "Function",
                 "language": "en"
               }
             ]
@@ -33395,15 +33363,15 @@
           "values": [
             [
               {
-                "text": "Functional Requirement or 'User Story'",
+                "text": "Functional Requirement",
                 "language": "en"
               },
               {
-                "text": "Funktionsanforderung oder 'User Story'",
+                "text": "Funktionsanforderung",
                 "language": "de"
               },
               {
-                "text": "Exigence de function ou récit d'utilisateur",
+                "text": "Exigence de function",
                 "language": "fr"
               }
             ]
@@ -44011,6 +43979,136 @@
       },
       "object": {
         "id": "R-SpecifViews"
+      }
+    },
+    {
+      "id": "S-HXevKxFA2hogiOUDr07coAL25LQ",
+      "changedAt": "2024-02-19T12:59:48.145Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-SchemaPerson"
+      },
+      "object": {
+        "id": "R-SpecifParagraph"
+      }
+    },
+    {
+      "id": "S-xUm3Df7jQOtr2LSyCmD3GKLdBbO",
+      "changedAt": "2024-02-19T13:00:14.419Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-SchemaRole"
+      },
+      "object": {
+        "id": "R-SpecifParagraph"
+      }
+    },
+    {
+      "id": "S-qMdykyHdm4fWz3IcIc3mz9n9IGB",
+      "changedAt": "2024-02-19T13:00:28.822Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-SchemaOrganization"
+      },
+      "object": {
+        "id": "R-SpecifParagraph"
+      }
+    },
+    {
+      "id": "S-pUEvlIBov8aQmSEVpkpmMBOSaHa",
+      "changedAt": "2024-02-19T13:01:58.168Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-SpecifReader"
+      },
+      "object": {
+        "id": "R-SpecifParagraph"
+      }
+    },
+    {
+      "id": "S-cHctxGUuRP1uub9HN9HuujAUDfH",
+      "changedAt": "2024-02-19T13:02:10.593Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-SpecifEditor"
+      },
+      "object": {
+        "id": "R-SpecifParagraph"
+      }
+    },
+    {
+      "id": "S-uetmGvkNq3sAwiWf3p31hZ4yeg7",
+      "changedAt": "2024-02-19T13:02:45.571Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-SpecifUserrole"
+      },
+      "object": {
+        "id": "R-SchemaRole"
+      }
+    },
+    {
+      "id": "S-E8uAUQXu2SKgmdliR274lrsVYBE",
+      "changedAt": "2024-02-19T13:03:27.195Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-SpecifUserstory"
+      },
+      "object": {
+        "id": "R-SpecifParagraph"
+      }
+    },
+    {
+      "id": "S-6f3bapIwGU3mVTrsVg4aYXJqrVH",
+      "changedAt": "2024-02-19T13:04:32.110Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifUserstory"
+      },
+      "object": {
+        "id": "R-SpecifPriority"
+      }
+    },
+    {
+      "id": "S-vGOeGtwheyhLGr9Xq3NvvfogFQo",
+      "changedAt": "2024-02-19T13:05:01.475Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-SpecifPainpoint"
+      },
+      "object": {
+        "id": "R-SpecifParagraph"
+      }
+    },
+    {
+      "id": "S-nCKCWKcrNycpA5u4c3j43n1htE3",
+      "changedAt": "2024-02-19T13:05:17.563Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-ArchimateDataobject"
+      },
+      "object": {
+        "id": "R-SpecifParagraph"
       }
     }
   ],
