@@ -13,8 +13,8 @@
     }
   ],
   "generator": "SpecIF Model-Integrator and Editor",
-  "generatorVersion": "1.1.r",
-  "createdAt": "2024-02-19T13:25:27.708Z",
+  "generatorVersion": "1.1.r.11",
+  "createdAt": "2024-03-02T22:40:15.523Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -458,7 +458,7 @@
       "format": "plain"
     },
     {
-      "id": "PC-LocalTerm",
+      "id": "PC-SpecifLocalterm",
       "changedAt": "2023-02-26T14:32:21.640Z",
       "title": "SpecIF:LocalTerm",
       "description": [
@@ -968,7 +968,7 @@
     {
       "id": "RC-Folder",
       "changedAt": "2023-03-06T07:26:13.687Z",
-      "title": "dcterms:title",
+      "title": "SpecIF:Heading",
       "description": [
         {
           "text": "<p>A 'Heading' is a chapter title at any level.</p>"
@@ -1040,7 +1040,7 @@
           "id": "PC-TermStatus"
         },
         {
-          "id": "PC-LocalTerm"
+          "id": "PC-SpecifLocalterm"
         }
       ]
     },
@@ -2978,7 +2978,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -3092,7 +3092,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -3141,8 +3141,11 @@
     },
     {
       "id": "R-SpecifHeading",
-      "changedAt": "2023-07-16T09:27:26.048Z",
-      "revision": "5",
+      "changedAt": "2024-03-02T15:28:50.414Z",
+      "revision": "rev-12068484131",
+      "replaces": [
+        "5"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -3208,7 +3211,8 @@
             "V-Domain-1",
             "V-Domain-2",
             "V-Domain-3",
-            "V-Domain-4"
+            "V-Domain-4",
+            "V-Domain-39"
           ]
         },
         {
@@ -3221,12 +3225,12 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
               {
-                "text": "Heading",
+                "text": "Heading, Chapter Title",
                 "language": "en"
               },
               {
@@ -3292,8 +3296,11 @@
     },
     {
       "id": "R-SpecifFolder",
-      "changedAt": "2023-08-08T21:36:49.031Z",
-      "revision": "5",
+      "changedAt": "2024-03-02T15:36:28.461Z",
+      "revision": "rev-8758439133",
+      "replaces": [
+        "5"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -3329,14 +3336,6 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-1"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -3345,7 +3344,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -3478,7 +3477,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -3605,7 +3604,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -3716,7 +3715,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -3817,8 +3816,11 @@
     },
     {
       "id": "R-SpecifDiagram",
-      "changedAt": "2023-07-16T09:32:25.353Z",
-      "revision": "7",
+      "changedAt": "2024-03-02T15:37:38.793Z",
+      "revision": "rev-12133547965",
+      "replaces": [
+        "7"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -3854,14 +3856,6 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-4"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -3870,7 +3864,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -3979,7 +3973,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -4069,8 +4063,11 @@
     },
     {
       "id": "R-SpecifRequirement",
-      "changedAt": "2023-07-16T09:55:57.118Z",
-      "revision": "13",
+      "changedAt": "2024-03-02T15:38:03.420Z",
+      "revision": "rev-11815307807",
+      "replaces": [
+        "13"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -4118,14 +4115,6 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-2"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -4134,7 +4123,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -4259,7 +4248,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -4323,7 +4312,8 @@
     },
     {
       "id": "R-SpecifNamespace",
-      "changedAt": "2023-08-18T11:30:09.501Z",
+      "changedAt": "2024-03-02T15:31:58.538Z",
+      "revision": "rev-11868315024",
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -4347,8 +4337,20 @@
           "values": [
             [
               {
-                "text": "SpecIF:Namespace",
-                "language": "de"
+                "text": "SpecIF:Namespace"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>A 'Namespace' is a is a set of signs (names) that are used to identify and refer to objects of various kinds. A namespace ensures that all of a given set of objects have unique names so that they can be easily identified. <small>(<i>Source: <a href=\\\"https://en.wikipedia.org/wiki/Requirement\\\">Wikipedia</a></i>)</small></p>",
+                "language": "en"
               }
             ]
           ]
@@ -4371,7 +4373,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -4458,7 +4460,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -4553,7 +4555,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -4648,7 +4650,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -4750,7 +4752,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -4850,7 +4852,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -4983,7 +4985,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -5136,7 +5138,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -5289,7 +5291,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -5405,7 +5407,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -5574,7 +5576,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -5679,7 +5681,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -5784,7 +5786,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -5945,7 +5947,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -6082,7 +6084,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -6207,7 +6209,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -6316,7 +6318,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -6462,7 +6464,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -6574,7 +6576,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -6673,7 +6675,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -6753,9 +6755,6 @@
           "values": [
             [
               {
-                "text": "A term for SpecIF resources, often used as title of a resourceClass to denote the class type."
-              },
-              {
                 "text": "A term for SpecIF resources, often used as title of a resourceClass to denote the class type.",
                 "language": "en"
               }
@@ -6780,7 +6779,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -6876,9 +6875,6 @@
           "values": [
             [
               {
-                "text": "A term for SpecIF statements, often used as title of a statementClass to denote the class type."
-              },
-              {
                 "text": "A term for SpecIF statements, often used as title of a statementClass to denote the class type.",
                 "language": "en"
               }
@@ -6903,7 +6899,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -6963,7 +6959,8 @@
     },
     {
       "id": "R-SpecifTermpropertyclass",
-      "changedAt": "2023-08-18T11:23:41.602Z",
+      "changedAt": "2024-03-02T16:08:19.967Z",
+      "revision": "rev-9298395348",
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -6975,7 +6972,7 @@
           "values": [
             [
               {
-                "text": "1.2"
+                "text": "1.1"
               }
             ]
           ]
@@ -6999,7 +6996,8 @@
           "values": [
             [
               {
-                "text": "A term for SpecIF properties, often used as title of a propertyClass to denote the class type."
+                "text": "Abstract parent class for property class terms belonging to the SpecIF Ontology.",
+                "language": "en"
               }
             ]
           ]
@@ -7022,7 +7020,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -7110,7 +7108,8 @@
           "values": [
             [
               {
-                "text": "A term for SpecIF properties with data type 'xs:string', often used as title of a propertyClass to denote the class type."
+                "text": "A term for SpecIF properties with data type 'xs:string', often used as title of a propertyClass to denote the class type.",
+                "language": "en"
               }
             ]
           ]
@@ -7133,7 +7132,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -7229,7 +7228,8 @@
           "values": [
             [
               {
-                "text": "A term for SpecIF properties with data type 'xs:boolean', often used as title of a propertyClass to denote the class type."
+                "text": "A term for SpecIF properties with data type 'xs:boolean', often used as title of a propertyClass to denote the class type.",
+                "language": "en"
               }
             ]
           ]
@@ -7252,7 +7252,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -7348,7 +7348,8 @@
           "values": [
             [
               {
-                "text": "A term for SpecIF properties with data type 'xs:integer', often used as title of a propertyClass to denote the class type."
+                "text": "A term for SpecIF properties with data type 'xs:integer', often used as title of a propertyClass to denote the class type.",
+                "language": "en"
               }
             ]
           ]
@@ -7371,7 +7372,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -7467,7 +7468,8 @@
           "values": [
             [
               {
-                "text": "A term for SpecIF properties with data type 'xs:double', often used as title of a propertyClass to denote the class type."
+                "text": "A term for SpecIF properties with data type 'xs:double', often used as title of a propertyClass to denote the class type.",
+                "language": "en"
               }
             ]
           ]
@@ -7490,7 +7492,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -7586,7 +7588,8 @@
           "values": [
             [
               {
-                "text": "A term for SpecIF properties with data type 'xs:dateTime', often used as title of a propertyClass to denote the class type."
+                "text": "A term for SpecIF properties with data type 'xs:dateTime', often used as title of a propertyClass to denote the class type.",
+                "language": "en"
               }
             ]
           ]
@@ -7609,7 +7612,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -7705,7 +7708,8 @@
           "values": [
             [
               {
-                "text": "A term for SpecIF properties with data type 'xs:duration', often used as title of a propertyClass to denote the class type."
+                "text": "A term for SpecIF properties with data type 'xs:duration', often used as title of a propertyClass to denote the class type.",
+                "language": "en"
               }
             ]
           ]
@@ -7728,7 +7732,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -7824,7 +7828,8 @@
           "values": [
             [
               {
-                "text": "A term for SpecIF properties with data type 'xs:anyURI', often used as title of a propertyClass to denote the class type."
+                "text": "A term for SpecIF properties with data type 'xs:anyURI', often used as title of a propertyClass to denote the class type.",
+                "language": "en"
               }
             ]
           ]
@@ -7847,7 +7852,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -7943,7 +7948,8 @@
           "values": [
             [
               {
-                "text": "A term for SpecIF property values, often used in enumerated dataTypes."
+                "text": "A term for SpecIF property values, often used in enumerated dataTypes.",
+                "language": "en"
               }
             ]
           ]
@@ -7966,7 +7972,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -8051,14 +8057,15 @@
           "values": [
             [
               {
-                "text": "<p>An event that threatens the success of an endeavor, e.g., of developing or operating a system. A risk is typically assessed in terms of its probability and potential damage.</p>"
+                "text": "<p>An event that threatens the success of an endeavor, e.g., of developing or operating a system. A risk is typically assessed in terms of its probability and potential damage.</p>",
+                "language": "en"
               }
             ]
           ]
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -8219,7 +8226,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -8333,7 +8340,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -8447,7 +8454,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -8593,7 +8600,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -8779,7 +8786,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -8869,7 +8876,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -8942,7 +8949,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-39"
+            "V-Domain-4"
           ]
         },
         {
@@ -8955,7 +8962,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -9041,7 +9048,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -9112,7 +9119,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -9211,7 +9218,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -9325,7 +9332,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -9432,7 +9439,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -9531,7 +9538,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -9622,7 +9629,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -9717,7 +9724,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -9802,7 +9809,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -9858,7 +9865,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -9914,7 +9921,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -9970,7 +9977,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -10026,7 +10033,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -10082,7 +10089,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -10138,7 +10145,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -10200,7 +10207,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -10298,7 +10305,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -10426,7 +10433,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -10519,7 +10526,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -10601,7 +10608,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -10695,7 +10702,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -10830,7 +10837,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -10942,7 +10949,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -11026,7 +11033,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -11126,7 +11133,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -11285,7 +11292,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -11376,7 +11383,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -11492,7 +11499,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -11592,7 +11599,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -11692,7 +11699,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -11792,7 +11799,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -11891,7 +11898,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -11963,7 +11970,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -12036,7 +12043,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -12090,7 +12097,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -12160,7 +12167,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -12239,7 +12246,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -12330,7 +12337,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -12666,7 +12673,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -12747,7 +12754,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -12828,7 +12835,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -12901,7 +12908,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -12985,7 +12992,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -13058,7 +13065,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -13131,7 +13138,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -13188,7 +13195,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -13272,7 +13279,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -13364,7 +13371,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -13448,7 +13455,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -13548,7 +13555,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -13664,7 +13671,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -13756,7 +13763,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -13858,7 +13865,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -13960,7 +13967,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -14048,7 +14055,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -14128,7 +14135,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -14216,7 +14223,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -14279,7 +14286,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -14361,7 +14368,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -14460,7 +14467,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -14559,7 +14566,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -14675,7 +14682,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -14775,7 +14782,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -14863,7 +14870,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -14943,7 +14950,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -15037,7 +15044,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -15220,7 +15227,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -15320,7 +15327,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -15412,7 +15419,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -15512,7 +15519,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -15627,7 +15634,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -15727,7 +15734,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -15827,7 +15834,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -15927,7 +15934,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -16007,7 +16014,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -16166,7 +16173,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -16257,7 +16264,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -16352,7 +16359,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -16448,7 +16455,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -16548,7 +16555,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -16648,7 +16655,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -16748,7 +16755,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -16848,7 +16855,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -16936,7 +16943,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -17032,7 +17039,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -17115,7 +17122,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -17202,7 +17209,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -17302,7 +17309,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -17402,7 +17409,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -17502,7 +17509,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -17602,7 +17609,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -17677,7 +17684,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -17761,7 +17768,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -18115,7 +18122,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -18187,7 +18194,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -18291,7 +18298,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -18379,7 +18386,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -18465,7 +18472,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -18551,7 +18558,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -18651,7 +18658,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -18751,7 +18758,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -18840,7 +18847,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -18932,7 +18939,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -19083,7 +19090,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -19170,7 +19177,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -19270,7 +19277,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -19407,7 +19414,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -19481,7 +19488,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -19568,7 +19575,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -19659,7 +19666,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -19750,7 +19757,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -19820,7 +19827,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -19964,7 +19971,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -20064,7 +20071,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -20184,7 +20191,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -20316,7 +20323,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -20444,7 +20451,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -20531,7 +20538,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -20651,7 +20658,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -20754,7 +20761,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -20866,7 +20873,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -20990,7 +20997,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -21069,7 +21076,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -21197,7 +21204,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -21369,7 +21376,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -21448,7 +21455,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -21568,7 +21575,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -21727,7 +21734,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -21808,7 +21815,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -21917,7 +21924,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -21998,7 +22005,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -22095,7 +22102,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -22234,7 +22241,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -22307,7 +22314,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -22372,7 +22379,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -22445,7 +22452,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -22518,7 +22525,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -22583,7 +22590,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -22664,7 +22671,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -22725,7 +22732,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -22834,7 +22841,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -22987,7 +22994,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -23094,7 +23101,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -23273,7 +23280,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -23328,8 +23335,11 @@
     },
     {
       "id": "R-SpecifStatus",
-      "changedAt": "2023-08-29T12:46:13.313Z",
-      "revision": "76",
+      "changedAt": "2024-03-02T15:39:24.473Z",
+      "revision": "rev-11811494755",
+      "replaces": [
+        "76"
+      ],
       "class": {
         "id": "RC-SpecifTermpropertyclassstring"
       },
@@ -23365,17 +23375,6 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-1",
-            "V-Domain-2",
-            "V-Domain-3",
-            "V-Domain-4"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -23384,7 +23383,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -23401,6 +23400,14 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -23512,7 +23519,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -23599,7 +23606,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -23722,7 +23729,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -23817,7 +23824,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -23896,7 +23903,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -24015,7 +24022,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -24110,7 +24117,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -24205,7 +24212,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -24300,7 +24307,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -24416,7 +24423,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -24507,7 +24514,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -24594,7 +24601,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -24689,7 +24696,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -24784,7 +24791,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -24872,7 +24879,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -24983,7 +24990,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -25081,7 +25088,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -25211,7 +25218,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -25294,7 +25301,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -25385,7 +25392,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -25484,7 +25491,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -25624,7 +25631,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -25717,7 +25724,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -25810,7 +25817,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -25932,7 +25939,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -25979,8 +25986,11 @@
     },
     {
       "id": "R-SpecifDiscipline",
-      "changedAt": "2023-08-29T12:44:26.520Z",
-      "revision": "78",
+      "changedAt": "2024-03-02T15:40:10.462Z",
+      "revision": "rev-9700180956",
+      "replaces": [
+        "78"
+      ],
       "class": {
         "id": "RC-SpecifTermpropertyclassstring"
       },
@@ -26020,16 +26030,6 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-2",
-            "V-Domain-3",
-            "V-Domain-4"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -26038,7 +26038,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -26047,6 +26047,14 @@
                 "language": "en"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -26149,7 +26157,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -26188,8 +26196,11 @@
     },
     {
       "id": "R-SpecifPerspective",
-      "changedAt": "2023-07-16T12:33:46.378Z",
-      "revision": "78",
+      "changedAt": "2024-03-02T15:40:24.972Z",
+      "revision": "rev-10702351157",
+      "replaces": [
+        "78"
+      ],
       "class": {
         "id": "RC-SpecifTermpropertyclassstring"
       },
@@ -26245,16 +26256,6 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-2",
-            "V-Domain-3",
-            "V-Domain-4"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -26263,7 +26264,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -26280,6 +26281,14 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -26360,7 +26369,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -26425,7 +26434,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -26506,7 +26515,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -26571,7 +26580,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -26623,7 +26632,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -26699,7 +26708,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -26746,8 +26755,11 @@
     },
     {
       "id": "R-SpecifIcon",
-      "changedAt": "2023-08-08T16:16:39.158Z",
-      "revision": "84",
+      "changedAt": "2024-03-02T22:01:23.453Z",
+      "revision": "rev-8971519553",
+      "replaces": [
+        "rev-10807666655"
+      ],
       "changedBy": "od",
       "class": {
         "id": "RC-SpecifTermpropertyclassstring"
@@ -26755,12 +26767,24 @@
       "properties": [
         {
           "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-Icon"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-SpecifRevision"
           },
           "values": [
             [
               {
-                "text": "1.2"
+                "text": "1.1"
               }
             ]
           ]
@@ -26800,7 +26824,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -26817,6 +26841,14 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -26839,13 +26871,28 @@
     },
     {
       "id": "R-UoBycNy1uGsVSARqygBsxx7Hlsd",
-      "changedAt": "2023-08-08T16:13:39.420Z",
-      "revision": "84",
+      "changedAt": "2024-03-02T22:12:47.853Z",
+      "revision": "rev-8857194715",
+      "replaces": [
+        "84"
+      ],
       "changedBy": "od",
       "class": {
         "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-Unit"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifRevision"
@@ -26901,7 +26948,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -26918,6 +26965,14 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -26985,7 +27040,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -27040,13 +27095,40 @@
     },
     {
       "id": "R-SpecifInstantiation",
-      "changedAt": "2023-08-08T16:18:03.548Z",
-      "revision": "86",
+      "changedAt": "2024-03-02T22:01:52.908Z",
+      "revision": "rev-11605545750",
+      "replaces": [
+        "86"
+      ],
       "changedBy": "od",
       "class": {
         "id": "RC-SpecifTermpropertyclassstring"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-Instantiation"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.1"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifTerm"
@@ -27082,7 +27164,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -27099,6 +27181,14 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -27223,7 +27313,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -27295,7 +27385,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -27368,7 +27458,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -27436,7 +27526,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -27509,7 +27599,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -27569,7 +27659,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -27634,7 +27724,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -27653,11 +27743,24 @@
     },
     {
       "id": "R-SpecifMultiple",
-      "changedAt": "2023-07-17T09:01:37.224Z",
+      "changedAt": "2024-03-02T22:06:09.801Z",
+      "revision": "rev-11216030967",
       "class": {
         "id": "RC-SpecifTermpropertyclassboolean"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-multiple"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifRevision"
@@ -27665,7 +27768,7 @@
           "values": [
             [
               {
-                "text": "1.2"
+                "text": "1.1"
               }
             ]
           ]
@@ -27713,7 +27816,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -27726,6 +27829,14 @@
                 "language": "de"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -27808,7 +27919,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -27847,11 +27958,24 @@
     },
     {
       "id": "R-SpecifIsheading",
-      "changedAt": "2023-08-09T12:34:07.769Z",
+      "changedAt": "2024-03-02T22:01:00.714Z",
+      "revision": "rev-11405677594",
       "class": {
         "id": "RC-SpecifTermpropertyclassboolean"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-isHeading"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifRevision"
@@ -27859,7 +27983,7 @@
           "values": [
             [
               {
-                "text": "1.2"
+                "text": "1.1"
               }
             ]
           ]
@@ -27907,7 +28031,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -27924,6 +28048,14 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -27946,11 +28078,24 @@
     },
     {
       "id": "R-SpecifIsundirected",
-      "changedAt": "2023-08-09T12:34:19.011Z",
+      "changedAt": "2024-03-02T22:03:47.278Z",
+      "revision": "rev-11541044384",
       "class": {
         "id": "RC-SpecifTermpropertyclassboolean"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-isUndirected"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifRevision"
@@ -27958,7 +28103,7 @@
           "values": [
             [
               {
-                "text": "1.2"
+                "text": "1.1"
               }
             ]
           ]
@@ -28006,7 +28151,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -28023,6 +28168,14 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -28045,12 +28198,27 @@
     },
     {
       "id": "R-bvMkEY5qj3J3eaXKPAJYi6tRHAv",
-      "changedAt": "2024-02-07T23:21:52.527Z",
-      "revision": "rev-11286380992",
+      "changedAt": "2024-03-02T22:05:38.943Z",
+      "revision": "rev-11362433723",
+      "replaces": [
+        "rev-11286380992"
+      ],
       "class": {
         "id": "RC-SpecifTermpropertyclassboolean"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-isRequired"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifRevision"
@@ -28058,7 +28226,7 @@
           "values": [
             [
               {
-                "text": "1.2"
+                "text": "1.1"
               }
             ]
           ]
@@ -28106,12 +28274,12 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
               {
-                "text": "required",
+                "text": "required, mandatory",
                 "language": "en"
               },
               {
@@ -28206,7 +28374,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -28253,7 +28421,8 @@
     },
     {
       "id": "R-Yl3N8FsuL9aO8yncJfnxMAQXP1w",
-      "changedAt": "2023-08-08T11:59:51.149Z",
+      "changedAt": "2024-03-02T16:27:04.334Z",
+      "revision": "rev-9681991643",
       "class": {
         "id": "RC-SpecifTermpropertyclassstring"
       },
@@ -28300,7 +28469,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -28321,10 +28490,18 @@
         },
         {
           "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
             "id": "PC-multiple"
           },
           "values": [
-            "true"
+            "false"
           ]
         },
         {
@@ -28346,10 +28523,14 @@
       ]
     },
     {
-      "id": "R-SpecifTextformat",
-      "changedAt": "2023-07-17T11:40:15.113Z",
+      "id": "R-MrGXqQc66vyr6Efq9bayLhjj3eJ",
+      "changedAt": "2024-03-02T16:22:43.665Z",
+      "revision": "rev-9355839930",
+      "replaces": [
+        "rev-10189813917"
+      ],
       "class": {
-        "id": "RC-SpecifTermpropertyclassstring"
+        "id": "RC-SpecifTermpropertyclassboolean"
       },
       "properties": [
         {
@@ -28360,6 +28541,501 @@
             [
               {
                 "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DefaultValueBoolean"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Default Value",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-DefaultValueBoolean"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-mAygdfcvfwUx2GT2j7eJd79Xxth",
+      "changedAt": "2024-03-02T16:28:09.212Z",
+      "revision": "rev-8017651160",
+      "replaces": [
+        "rev-10716017151"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyclassinteger"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DefaultValueInteger"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Default Value",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-6ba4qqhBwRrn6PtMf1f2SYTlStt",
+      "changedAt": "2024-03-02T16:28:47.168Z",
+      "revision": "rev-11510382782",
+      "class": {
+        "id": "RC-SpecifTermpropertyclassreal"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DefaultValueReal"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Default Value",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-gJObnJIbOB8E7ziiYOyyWqaxxeV",
+      "changedAt": "2024-03-02T22:18:45.846Z",
+      "revision": "rev-10840110655",
+      "replaces": [
+        "rev-12072974944"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyclasstimestamp"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DefaultValueTimestamp"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Default Value",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-JnMmr92cochl695ih4d1b5FGkB8",
+      "changedAt": "2024-03-02T16:30:04.982Z",
+      "revision": "rev-9252940980",
+      "class": {
+        "id": "RC-SpecifTermpropertyclassduration"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DefaultValueDuration"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Default Value",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-PVeTHFPQAm1AGQfXSrp3N539DhW",
+      "changedAt": "2024-03-02T22:19:25.987Z",
+      "revision": "rev-11552649792",
+      "replaces": [
+        "rev-8626043465"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyclassuri"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DefaultValueURI"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Default Value",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-SpecifTextformat",
+      "changedAt": "2024-03-02T22:10:28.074Z",
+      "revision": "rev-10725489055",
+      "class": {
+        "id": "RC-SpecifTermpropertyclassstring"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-TextFormat"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.1"
               }
             ]
           ]
@@ -28385,6 +29061,10 @@
               {
                 "text": "The type of formatting, plain or XHTML.",
                 "language": "de"
+              },
+              {
+                "text": "The type of formatting, plain or XHTML.",
+                "language": "en"
               }
             ]
           ]
@@ -28407,7 +29087,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -28424,6 +29104,14 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -28462,11 +29150,24 @@
     },
     {
       "id": "R-GJMC6iwXgs1qFumNfvd4sYgrwcg",
-      "changedAt": "2023-07-17T11:46:11.828Z",
+      "changedAt": "2024-03-02T22:14:20.706Z",
+      "revision": "rev-11856774459",
       "class": {
         "id": "RC-SpecifTermpropertyclassinteger"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-StringMaxLength"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifRevision"
@@ -28522,7 +29223,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -28543,6 +29244,14 @@
         },
         {
           "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
             "id": "PC-multiple"
           },
           "values": [
@@ -28553,11 +29262,24 @@
     },
     {
       "id": "R-b5FIonaTgCQgxM5ZDiL1IucTQhR",
-      "changedAt": "2023-07-17T11:57:22.253Z",
+      "changedAt": "2024-03-02T22:14:50.363Z",
+      "revision": "rev-10224204715",
       "class": {
         "id": "RC-SpecifTermpropertyclassinteger"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-IntegerMinInclusive"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifRevision"
@@ -28613,7 +29335,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -28630,6 +29352,14 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -28660,11 +29390,24 @@
     },
     {
       "id": "R-nEScE4KsmMstunZgUP8TzJeislM",
-      "changedAt": "2023-07-17T11:49:31.533Z",
+      "changedAt": "2024-03-02T22:15:08.810Z",
+      "revision": "rev-8503376408",
       "class": {
         "id": "RC-SpecifTermpropertyclassinteger"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-IntegerMaxInclusive"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifRevision"
@@ -28720,7 +29463,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -28737,6 +29480,14 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -28767,11 +29518,24 @@
     },
     {
       "id": "R-bvpThxmSxIyRVe4m7y7bIWrI7Fw",
-      "changedAt": "2023-07-17T11:57:38.282Z",
+      "changedAt": "2024-03-02T22:15:25.706Z",
+      "revision": "rev-10192465751",
       "class": {
         "id": "RC-SpecifTermpropertyclassreal"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-RealMinInclusive"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifRevision"
@@ -28819,7 +29583,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -28840,6 +29604,14 @@
         },
         {
           "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
             "id": "PC-multiple"
           },
           "values": [
@@ -28850,11 +29622,24 @@
     },
     {
       "id": "R-cq8S6uAA7C9n5bUWxTruAmJmuA4",
-      "changedAt": "2023-07-17T11:57:04.627Z",
+      "changedAt": "2024-03-02T22:15:40.742Z",
+      "revision": "rev-11824331078",
       "class": {
         "id": "RC-SpecifTermpropertyclassreal"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-RealMaxInclusive"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifRevision"
@@ -28902,7 +29687,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -28923,6 +29708,14 @@
         },
         {
           "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
             "id": "PC-multiple"
           },
           "values": [
@@ -28933,11 +29726,24 @@
     },
     {
       "id": "R-KDJBBVs21UqTfSDCFpRfV4NQcr9",
-      "changedAt": "2023-08-09T11:04:58.228Z",
+      "changedAt": "2024-03-02T22:16:11.662Z",
+      "revision": "rev-11677934150",
       "class": {
         "id": "RC-SpecifTermpropertyclassinteger"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-RealFractionDigits"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifRevision"
@@ -28985,7 +29791,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -29002,6 +29808,14 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -29092,7 +29906,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -29207,7 +30021,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -29314,7 +30128,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -29429,7 +30243,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -29692,7 +30506,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -29779,7 +30593,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -29866,7 +30680,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -29969,7 +30783,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -30072,7 +30886,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -30159,7 +30973,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -30247,7 +31061,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -30335,7 +31149,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -30413,7 +31227,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -30531,7 +31345,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -30649,7 +31463,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -30770,7 +31584,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -30853,7 +31667,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -30926,7 +31740,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31009,7 +31823,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31082,7 +31896,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31174,7 +31988,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31253,7 +32067,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31332,7 +32146,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31411,7 +32225,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31489,7 +32303,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31553,7 +32367,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31601,7 +32415,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31667,7 +32481,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31733,7 +32547,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31806,7 +32620,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31871,7 +32685,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31927,7 +32741,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -31993,7 +32807,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -32063,7 +32877,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -32123,7 +32937,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -32183,7 +32997,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -32239,7 +33053,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -32307,7 +33121,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -32365,7 +33179,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -32437,7 +33251,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -32509,7 +33323,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -32581,7 +33395,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -32649,7 +33463,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -32721,7 +33535,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -32797,7 +33611,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -32873,7 +33687,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -32949,7 +33763,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33025,7 +33839,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33101,7 +33915,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33156,7 +33970,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33211,7 +34025,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33274,7 +34088,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33358,7 +34172,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33442,7 +34256,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33526,7 +34340,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33597,7 +34411,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33660,7 +34474,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33723,7 +34537,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33794,7 +34608,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33865,7 +34679,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33924,7 +34738,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -33975,7 +34789,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34026,7 +34840,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34077,7 +34891,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34136,7 +34950,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34187,7 +35001,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34237,7 +35051,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34320,7 +35134,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34397,7 +35211,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34474,7 +35288,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34545,7 +35359,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34622,7 +35436,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34699,7 +35513,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34770,7 +35584,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34841,7 +35655,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34912,7 +35726,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -34989,7 +35803,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -35066,7 +35880,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -35143,7 +35957,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -35231,7 +36045,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -35311,7 +36125,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -35388,7 +36202,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -35468,7 +36282,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -35550,7 +36364,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -35632,7 +36446,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -35714,7 +36528,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -35796,7 +36610,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -35878,7 +36692,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -35960,7 +36774,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -36041,7 +36855,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -36122,7 +36936,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -36203,7 +37017,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -36284,7 +37098,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -36365,7 +37179,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -36446,7 +37260,7 @@
         },
         {
           "class": {
-            "id": "PC-LocalTerm"
+            "id": "PC-SpecifLocalterm"
           },
           "values": [
             [
@@ -37502,19 +38316,6 @@
       },
       "subject": {
         "id": "R-SpecifHierarchy"
-      },
-      "object": {
-        "id": "R-DctermsType"
-      }
-    },
-    {
-      "id": "S-oQJVYH8KkQVG5GOupygl8lRauO4",
-      "changedAt": "2023-02-26T20:19:02.022Z",
-      "class": {
-        "id": "SC-hasProperty"
-      },
-      "subject": {
-        "id": "R-SpecifParagraph"
       },
       "object": {
         "id": "R-DctermsType"
@@ -43267,19 +44068,6 @@
       }
     },
     {
-      "id": "S-VwPMDsx8qA5pPPcCOkMCP52gd9w",
-      "changedAt": "2023-10-21T20:31:48.434Z",
-      "class": {
-        "id": "SC-hasProperty"
-      },
-      "subject": {
-        "id": "R-SpecifView"
-      },
-      "object": {
-        "id": "R-lxDmfU8OuUNHNuO9gRqc0NcnQaQ"
-      }
-    },
-    {
       "id": "S-IOqsPcVMoahCp92BCvKGDDOOQhQ",
       "changedAt": "2023-10-21T20:33:17.301Z",
       "class": {
@@ -44109,6 +44897,448 @@
       },
       "object": {
         "id": "R-SpecifParagraph"
+      }
+    },
+    {
+      "id": "S-VVwc9P8PBLxcvTnfXQAZfNonlgb",
+      "changedAt": "2024-03-02T15:33:39.315Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifNamespace"
+      },
+      "object": {
+        "id": "R-SpecifTerm"
+      }
+    },
+    {
+      "id": "S-s5mheTozJDmqS0HWtOKttvRV3kT",
+      "changedAt": "2024-03-02T15:34:03.153Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifNamespace"
+      },
+      "object": {
+        "id": "R-DctermsDescription"
+      }
+    },
+    {
+      "id": "S-KnaUL9BP8CtRjpvA63p6QVcshw8",
+      "changedAt": "2024-03-02T15:34:21.076Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifNamespace"
+      },
+      "object": {
+        "id": "R-SpecifOrigin"
+      }
+    },
+    {
+      "id": "S-3tpPrOqo29SGDWyobOlXh5QuLJs",
+      "changedAt": "2024-03-02T16:08:48.659Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifTermpropertyclass"
+      },
+      "object": {
+        "id": "R-bvMkEY5qj3J3eaXKPAJYi6tRHAv"
+      }
+    },
+    {
+      "id": "S-IOac5hpp6gYamcIIGuDeWG3Pg54",
+      "changedAt": "2024-03-02T16:08:59.154Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifTermpropertyclass"
+      },
+      "object": {
+        "id": "R-SpecifMultiple"
+      }
+    },
+    {
+      "id": "S-pZgijMW1hA3ftc9taO0OHuEi4wv",
+      "changedAt": "2024-03-02T16:13:05.693Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifTermresourceclass"
+      },
+      "object": {
+        "id": "R-S1SfAEubLjEYOj6v75Srfkj5E19"
+      }
+    },
+    {
+      "id": "S-WhuGp6kKVZNLx28uaudgfmAvm1f",
+      "changedAt": "2024-03-02T16:13:15.560Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifTermresourceclass"
+      },
+      "object": {
+        "id": "R-SpecifIcon"
+      }
+    },
+    {
+      "id": "S-fpfQ5g2toudi2CndI4sKPlIbv4r",
+      "changedAt": "2024-03-02T16:13:28.229Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifTermresourceclass"
+      },
+      "object": {
+        "id": "R-SpecifIsheading"
+      }
+    },
+    {
+      "id": "S-AocRWyKfLf1libUmTUlOro1Qz5q",
+      "changedAt": "2024-03-02T16:13:39.264Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifTermresourceclass"
+      },
+      "object": {
+        "id": "R-SpecifInstantiation"
+      }
+    },
+    {
+      "id": "S-527GlNGFxTtz2XqnbBNsg9pbal0",
+      "changedAt": "2024-03-02T16:14:50.582Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifTermstatementclass"
+      },
+      "object": {
+        "id": "R-SpecifIcon"
+      }
+    },
+    {
+      "id": "S-UWYHO38Xrfa5zXlnxUSbIFS5t3k",
+      "changedAt": "2024-03-02T16:15:00.907Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifTermstatementclass"
+      },
+      "object": {
+        "id": "R-SpecifIsundirected"
+      }
+    },
+    {
+      "id": "S-iWbG2takMQNQRC11CBnrMG7qarS",
+      "changedAt": "2024-03-02T16:15:09.062Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifTermstatementclass"
+      },
+      "object": {
+        "id": "R-SpecifInstantiation"
+      }
+    },
+    {
+      "id": "S-IIWzDX3KgHPxLvpHfsCIehOpp55",
+      "changedAt": "2024-03-02T16:17:05.138Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-fM1FB6zCrqNmKuQlN7ZUYpKrLlC"
+      },
+      "object": {
+        "id": "R-SpecifMultilanguage"
+      }
+    },
+    {
+      "id": "S-h9B6VvJ9qMmxIRV1vjsn7ILTozw",
+      "changedAt": "2024-03-02T16:17:13.370Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-fM1FB6zCrqNmKuQlN7ZUYpKrLlC"
+      },
+      "object": {
+        "id": "R-SpecifTextformat"
+      }
+    },
+    {
+      "id": "S-ckbl11OSI8dmTgACTCOU2Zp1GTi",
+      "changedAt": "2024-03-02T16:17:29.466Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-fM1FB6zCrqNmKuQlN7ZUYpKrLlC"
+      },
+      "object": {
+        "id": "R-Yl3N8FsuL9aO8yncJfnxMAQXP1w"
+      }
+    },
+    {
+      "id": "S-PAXN5oT2Oo2vZdx677Cqytcys1P",
+      "changedAt": "2024-03-02T16:17:41.563Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-fM1FB6zCrqNmKuQlN7ZUYpKrLlC"
+      },
+      "object": {
+        "id": "R-GJMC6iwXgs1qFumNfvd4sYgrwcg"
+      }
+    },
+    {
+      "id": "S-y5XBvvKL7mPVgriPGe6flNhtGbE",
+      "changedAt": "2024-03-02T16:19:41.286Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-Yl3N8FsuL9aO8yncJfnxMAQXP1w"
+      }
+    },
+    {
+      "id": "S-5gTFYONK4NEhNDiiUhC5bNnaJfk",
+      "changedAt": "2024-03-02T16:19:54.936Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-SpecifDefaultvalue"
+      }
+    },
+    {
+      "id": "S-wIloqK4k6P4FLyqBD9Cm6ZsMuuE",
+      "changedAt": "2024-03-02T16:40:30.467Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-Pb72Q7cOmnjpwUEQaCEcdjbzOA9"
+      },
+      "object": {
+        "id": "R-MrGXqQc66vyr6Efq9bayLhjj3eJ"
+      }
+    },
+    {
+      "id": "S-pi0PWrlrKYiRfsKehAcjD8vWWxX",
+      "changedAt": "2024-03-02T16:40:52.112Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-CXDNs39QN7YM8Mv2vco7metJ7Ol"
+      },
+      "object": {
+        "id": "R-mAygdfcvfwUx2GT2j7eJd79Xxth"
+      }
+    },
+    {
+      "id": "S-UQJcx8a3GVquuoh5YRzU5hByEl3",
+      "changedAt": "2024-03-02T16:41:01.366Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-CXDNs39QN7YM8Mv2vco7metJ7Ol"
+      },
+      "object": {
+        "id": "R-UoBycNy1uGsVSARqygBsxx7Hlsd"
+      }
+    },
+    {
+      "id": "S-HUKJhrHQ1RXwMfyFTO7QeYxgygP",
+      "changedAt": "2024-03-02T16:41:16.616Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-CXDNs39QN7YM8Mv2vco7metJ7Ol"
+      },
+      "object": {
+        "id": "R-b5FIonaTgCQgxM5ZDiL1IucTQhR"
+      }
+    },
+    {
+      "id": "S-6TmYqr2HSdfxLfqj1jSDbn0gUnl",
+      "changedAt": "2024-03-02T16:41:27.916Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-CXDNs39QN7YM8Mv2vco7metJ7Ol"
+      },
+      "object": {
+        "id": "R-nEScE4KsmMstunZgUP8TzJeislM"
+      }
+    },
+    {
+      "id": "S-xWvyQIqwc5FQ3KX9X5976kifsOK",
+      "changedAt": "2024-03-02T16:42:03.224Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-ZtbBpIxObvqnDuD8dfo8EN8WrMP"
+      },
+      "object": {
+        "id": "R-6ba4qqhBwRrn6PtMf1f2SYTlStt"
+      }
+    },
+    {
+      "id": "S-xNvvDwGtEoj2pRdgjUIbtCufYeA",
+      "changedAt": "2024-03-02T16:42:13.261Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-ZtbBpIxObvqnDuD8dfo8EN8WrMP"
+      },
+      "object": {
+        "id": "R-UoBycNy1uGsVSARqygBsxx7Hlsd"
+      }
+    },
+    {
+      "id": "S-jk14oTVshK4XKadtPb3W2LDAoKg",
+      "changedAt": "2024-03-02T16:42:30.510Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-ZtbBpIxObvqnDuD8dfo8EN8WrMP"
+      },
+      "object": {
+        "id": "R-bvpThxmSxIyRVe4m7y7bIWrI7Fw"
+      }
+    },
+    {
+      "id": "S-c81u8MrCANaxogcrBgnaQEfjt5S",
+      "changedAt": "2024-03-02T16:42:40.656Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-ZtbBpIxObvqnDuD8dfo8EN8WrMP"
+      },
+      "object": {
+        "id": "R-cq8S6uAA7C9n5bUWxTruAmJmuA4"
+      }
+    },
+    {
+      "id": "S-Xmm7JYJ6kCg0vvDXiygT5ADm21J",
+      "changedAt": "2024-03-02T16:42:56.023Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-ZtbBpIxObvqnDuD8dfo8EN8WrMP"
+      },
+      "object": {
+        "id": "R-KDJBBVs21UqTfSDCFpRfV4NQcr9"
+      }
+    },
+    {
+      "id": "S-Qyjzx5Img7hfBd174nevbcGaPG7",
+      "changedAt": "2024-03-02T16:43:25.190Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-eYBzcDOCiTBTHiPYjh9qaYuumec"
+      },
+      "object": {
+        "id": "R-gJObnJIbOB8E7ziiYOyyWqaxxeV"
+      }
+    },
+    {
+      "id": "S-HRNAl2D7C2uUr307fyycHqf5bME",
+      "changedAt": "2024-03-02T16:43:47.224Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-vMChALmmnhnd9biNu5iCqrYA8XN"
+      }
+    },
+    {
+      "id": "S-fPhpBejGCETNKh6RNERU3OnarnO",
+      "changedAt": "2024-03-02T16:44:16.383Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-vMChALmmnhnd9biNu5iCqrYA8XN"
+      },
+      "object": {
+        "id": "R-JnMmr92cochl695ih4d1b5FGkB8"
+      }
+    },
+    {
+      "id": "S-HJXELwDj5yyN2c35IbQZ4SHY2oA",
+      "changedAt": "2024-03-02T16:45:05.637Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-iIjwsbO5i3IQgOlijFJ3SXVlJHt"
+      },
+      "object": {
+        "id": "R-PVeTHFPQAm1AGQfXSrp3N539DhW"
+      }
+    },
+    {
+      "id": "S-qiwnRH8e803ziUemRAEK7grvwOi",
+      "changedAt": "2024-03-02T20:55:07.462Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifParagraph"
+      },
+      "object": {
+        "id": "R-lxDmfU8OuUNHNuO9gRqc0NcnQaQ"
+      }
+    },
+    {
+      "id": "S-PELfGMinmEojOnu5SrzmmhkvmX8",
+      "changedAt": "2024-03-02T20:55:23.295Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifParagraph"
+      },
+      "object": {
+        "id": "R-DctermsType"
       }
     }
   ],
@@ -46345,6 +47575,48 @@
                 "id": "R-Yl3N8FsuL9aO8yncJfnxMAQXP1w"
               },
               "changedAt": "2023-08-08T11:59:51.149Z"
+            },
+            {
+              "id": "N-kPdyUjVTOYkUBPlPGoTZKryXhbK",
+              "resource": {
+                "id": "R-MrGXqQc66vyr6Efq9bayLhjj3eJ"
+              },
+              "changedAt": "2024-03-02T16:21:30.366Z"
+            },
+            {
+              "id": "N-bprtQOWJchJ2C29j5jArBS91OFY",
+              "resource": {
+                "id": "R-mAygdfcvfwUx2GT2j7eJd79Xxth"
+              },
+              "changedAt": "2024-03-02T16:26:43.873Z"
+            },
+            {
+              "id": "N-2m3fOFKRSv4IWMQjNhtA30WYtef",
+              "resource": {
+                "id": "R-6ba4qqhBwRrn6PtMf1f2SYTlStt"
+              },
+              "changedAt": "2024-03-02T16:28:47.168Z"
+            },
+            {
+              "id": "N-vpJhAigPRlsroYAjb5FZR2U0Q2Y",
+              "resource": {
+                "id": "R-gJObnJIbOB8E7ziiYOyyWqaxxeV"
+              },
+              "changedAt": "2024-03-02T16:29:31.135Z"
+            },
+            {
+              "id": "N-HnCB0aTmwJd2px8sbGpfscUJ3wW",
+              "resource": {
+                "id": "R-JnMmr92cochl695ih4d1b5FGkB8"
+              },
+              "changedAt": "2024-03-02T16:30:04.982Z"
+            },
+            {
+              "id": "N-wTZ49wohGKPL2eVzkIWKeLU4aHl",
+              "resource": {
+                "id": "R-PVeTHFPQAm1AGQfXSrp3N539DhW"
+              },
+              "changedAt": "2024-03-02T16:35:56.799Z"
             },
             {
               "id": "N-gNWPzq8S2Km20UKQoigSfyaGPtQ",
