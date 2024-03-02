@@ -14,7 +14,7 @@
   ],
   "generator": "SpecIF Model-Integrator and Editor",
   "generatorVersion": "1.1.r.11",
-  "createdAt": "2024-03-02T22:40:15.523Z",
+  "createdAt": "2024-03-02T23:24:32.266Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -8949,7 +8949,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-4"
+            "V-Domain-39"
           ]
         },
         {
@@ -21578,20 +21578,6 @@
             "id": "PC-SpecifLocalterm"
           },
           "values": [
-            [
-              {
-                "text": "Model Diagram",
-                "language": "en"
-              },
-              {
-                "text": "Modelldiagramm",
-                "language": "de"
-              },
-              {
-                "text": "Diagramme de Modèle",
-                "language": "fr"
-              }
-            ],
             [
               {
                 "text": "Diagram",
@@ -45336,6 +45322,84 @@
       },
       "subject": {
         "id": "R-SpecifParagraph"
+      },
+      "object": {
+        "id": "R-DctermsType"
+      }
+    },
+    {
+      "id": "S-1GL7Xst1cLZdrctuwti2uruQRu4",
+      "changedAt": "2024-03-02T23:21:50.233Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifGlossary"
+      },
+      "object": {
+        "id": "R-DctermsTitle"
+      }
+    },
+    {
+      "id": "S-NNz71T11btHh4jzXXk3c4lyDScS",
+      "changedAt": "2024-03-02T23:22:04.501Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifGlossary"
+      },
+      "object": {
+        "id": "R-DctermsDescription"
+      }
+    },
+    {
+      "id": "S-A9PeclHbfpEWc1Q9EabJ3eBNbbW",
+      "changedAt": "2024-03-02T23:22:51.125Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-W3cOntology"
+      },
+      "object": {
+        "id": "R-DctermsTitle"
+      }
+    },
+    {
+      "id": "S-h2knRT7jfABbjrodCqNNNWwkZv9",
+      "changedAt": "2024-03-02T23:23:05.370Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-W3cOntology"
+      },
+      "object": {
+        "id": "R-DctermsDescription"
+      }
+    },
+    {
+      "id": "S-d8ag1cTThXFF8z7sqoSMcTiohzG",
+      "changedAt": "2024-03-02T23:23:14.743Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-W3cOntology"
+      },
+      "object": {
+        "id": "R-DctermsType"
+      }
+    },
+    {
+      "id": "S-9bieoc9rJHNiKqXKX7SfshcXGT7",
+      "changedAt": "2024-03-02T23:23:40.120Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifGlossary"
       },
       "object": {
         "id": "R-DctermsType"
