@@ -14,7 +14,7 @@
   ],
   "generator": "SpecIF Model-Integrator and Editor",
   "generatorVersion": "1.1.r.11",
-  "createdAt": "2024-03-04T09:44:40.900Z",
+  "createdAt": "2024-03-06T07:33:24.364Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -109,22 +109,6 @@
       "maxInclusive": 2147483647
     },
     {
-      "id": "DT-Byte",
-      "changedAt": "2016-05-26T08:59:00+02:00",
-      "title": "Byte",
-      "description": [
-        {
-          "text": "A byte is an integer value between 0 and 255.",
-          "format": "plain",
-          "language": "en"
-        }
-      ],
-      "revision": "1.1",
-      "type": "xs:integer",
-      "minInclusive": 0,
-      "maxInclusive": 255
-    },
-    {
       "id": "DT-Real",
       "changedAt": "2021-02-14T08:59:00+02:00",
       "title": "Real",
@@ -137,21 +121,6 @@
       ],
       "revision": "1.1",
       "type": "xs:double"
-    },
-    {
-      "id": "DT-Decimal2",
-      "changedAt": "2021-02-14T08:59:00+02:00",
-      "title": "Real with 2 Decimals",
-      "description": [
-        {
-          "text": "A floating point number (double) with two fraction digits.",
-          "format": "plain",
-          "language": "en"
-        }
-      ],
-      "revision": "1.1",
-      "type": "xs:double",
-      "fractionDigits": 2
     },
     {
       "id": "DT-DateTime",
@@ -372,6 +341,7 @@
       ],
       "revision": "1.1",
       "type": "xs:string",
+      "maxLength": 32,
       "enumeration": [
         {
           "id": "V-TextFormat-10",
@@ -404,6 +374,7 @@
       ],
       "revision": "1.1",
       "type": "xs:string",
+      "maxLength": 32,
       "enumeration": [
         {
           "id": "V-Instantiation-10",
@@ -28372,6 +28343,14 @@
           "values": [
             "false"
           ]
+        },
+        {
+          "class": {
+            "id": "PC-StringMaxLength"
+          },
+          "values": [
+            "32"
+          ]
         }
       ]
     },
@@ -33506,11 +33485,39 @@
     },
     {
       "id": "R-n28XW0rtcgNmL4u1s1xnRBWKEeF",
-      "changedAt": "2022-11-30T16:29:37.316Z",
+      "changedAt": "2024-03-05T07:55:12.690Z",
+      "revision": "rev-9892907009",
+      "replaces": [
+        "rev-9062481086"
+      ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TermStatus-00"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifTerm"
@@ -33538,7 +33545,7 @@
           "values": [
             [
               {
-                "text": "initial",
+                "text": "initial, 10_initial, 10_initial, 10_initial",
                 "language": "en"
               }
             ],
@@ -33554,11 +33561,36 @@
     },
     {
       "id": "R-5C2ATeXhGQg5YdnOlYaoSuzDeHW",
-      "changedAt": "2022-11-30T16:26:08.687Z",
+      "changedAt": "2024-03-05T07:55:39.377Z",
+      "revision": "rev-11868227350",
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TermStatus-10"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifTerm"
@@ -33586,7 +33618,7 @@
           "values": [
             [
               {
-                "text": "drafted",
+                "text": "drafted, bearbeitet, 20_drafted",
                 "language": "en"
               },
               {
@@ -33620,11 +33652,39 @@
     },
     {
       "id": "R-v4oOIUQNRqoc0kqZLSLDVD2T8rC",
-      "changedAt": "2022-11-30T16:26:17.308Z",
+      "changedAt": "2024-03-05T07:56:21.612Z",
+      "revision": "rev-8944319450",
+      "replaces": [
+        "rev-8700803149"
+      ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TermStatus-12"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifTerm"
@@ -33652,7 +33712,7 @@
           "values": [
             [
               {
-                "text": "submitted",
+                "text": "submitted, 30_submitted, 30_entscheidungsreif, 30_submitted, 30_entscheidungsreif",
                 "language": "en"
               },
               {
@@ -33685,578 +33745,40 @@
       ]
     },
     {
-      "id": "R-HL9yT3xGFhRsvxEGtLP3QmzMoQ2",
-      "changedAt": "2022-11-30T16:26:26.515Z",
-      "class": {
-        "id": "RC-SpecifTermpropertyvalue"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:LifecycleStatusApproved"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-3"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifLocalterm"
-          },
-          "values": [
-            [
-              {
-                "text": "approved",
-                "language": "en"
-              },
-              {
-                "text": "genehmigt",
-                "language": "de"
-              },
-              {
-                "text": "approuvé",
-                "language": "fr"
-              }
-            ],
-            [
-              {
-                "text": "40_approved",
-                "language": "en"
-              },
-              {
-                "text": "40_genehmigt",
-                "language": "de"
-              }
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-8JP2IBLr4ycFkOb7WVP19qKcmRB",
-      "changedAt": "2022-11-30T16:26:39.756Z",
-      "class": {
-        "id": "RC-SpecifTermpropertyvalue"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:LifecycleStatusReady"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "Meets the requirements of the 'Definition of Ready' of the agile development method.",
-                "language": "en"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-3"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifLocalterm"
-          },
-          "values": [
-            [
-              {
-                "text": "ready",
-                "language": "en"
-              },
-              {
-                "text": "bereit ('ready')",
-                "language": "de"
-              }
-            ],
-            [
-              {
-                "text": "bereit",
-                "language": "de"
-              }
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-6Tvl5lJS1LUBfyvdruaPzWcjWqG",
-      "changedAt": "2022-11-30T16:26:52.444Z",
-      "class": {
-        "id": "RC-SpecifTermpropertyvalue"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:LifecycleStatusDone"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "Meets the requirements of the 'Definition of Done' of the agile development method.",
-                "language": "en"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-3"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifLocalterm"
-          },
-          "values": [
-            [
-              {
-                "text": "done",
-                "language": "en"
-              },
-              {
-                "text": "erledigt ('done')",
-                "language": "de"
-              }
-            ],
-            [
-              {
-                "text": "60_completed",
-                "language": "en"
-              },
-              {
-                "text": "erledigt",
-                "language": "de"
-              }
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-bbaVEqXG79QKpDxNPtsCd7lbH2i",
-      "changedAt": "2022-11-30T16:27:02.851Z",
-      "class": {
-        "id": "RC-SpecifTermpropertyvalue"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:LifecycleStatusValidated"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-3"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifLocalterm"
-          },
-          "values": [
-            [
-              {
-                "text": "validated",
-                "language": "en"
-              },
-              {
-                "text": "validiert",
-                "language": "de"
-              },
-              {
-                "text": "validé",
-                "language": "fr"
-              }
-            ],
-            [
-              {
-                "text": "70_validated",
-                "language": "en"
-              },
-              {
-                "text": "70_validiert",
-                "language": "de"
-              }
-            ],
-            [
-              {
-                "text": "70_lab-tested",
-                "language": "en"
-              }
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-bLVl2PvCMy9bSu3IeC194RY2tiO",
-      "changedAt": "2022-11-30T16:27:12.648Z",
-      "class": {
-        "id": "RC-SpecifTermpropertyvalue"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:LifecycleStatusReleased"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-3"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifLocalterm"
-          },
-          "values": [
-            [
-              {
-                "text": "released",
-                "language": "en"
-              },
-              {
-                "text": "freigegeben",
-                "language": "de"
-              },
-              {
-                "text": "publié",
-                "language": "fr"
-              }
-            ],
-            [
-              {
-                "text": "published",
-                "language": "en"
-              },
-              {
-                "text": "publiziert",
-                "language": "de"
-              }
-            ],
-            [
-              {
-                "text": "80_released",
-                "language": "en"
-              },
-              {
-                "text": "80_freigegeben",
-                "language": "de"
-              }
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-fa9V84wJNXEQQJqCIBVlXMxRyxA",
-      "changedAt": "2022-11-30T16:27:23.024Z",
-      "class": {
-        "id": "RC-SpecifTermpropertyvalue"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:LifecycleStatusDeprecated"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-3"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifLocalterm"
-          },
-          "values": [
-            [
-              {
-                "text": "deprecated",
-                "language": "en"
-              },
-              {
-                "text": "veraltet",
-                "language": "de"
-              },
-              {
-                "text": "dépassé",
-                "language": "fr"
-              }
-            ],
-            [
-              {
-                "text": "00_deprecated",
-                "language": "en"
-              },
-              {
-                "text": "00_veraltet",
-                "language": "de"
-              }
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-A7JHwmw3atxcrgTFIZ7xuuGHr4k",
-      "changedAt": "2022-11-30T16:27:32.036Z",
-      "class": {
-        "id": "RC-SpecifTermpropertyvalue"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:LifecycleStatusWithdrawn"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-3"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifLocalterm"
-          },
-          "values": [
-            [
-              {
-                "text": "withdrawn",
-                "language": "en"
-              },
-              {
-                "text": "zurückgezogen",
-                "language": "de"
-              },
-              {
-                "text": "retiré",
-                "language": "fr"
-              }
-            ],
-            [
-              {
-                "text": "90_withdrawn",
-                "language": "en"
-              },
-              {
-                "text": "90_zurückgezogen",
-                "language": "de"
-              }
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-j2bRQ5SwnA9NXWdWOIo7K2hhStD",
-      "changedAt": "2022-11-30T16:29:20.474Z",
-      "class": {
-        "id": "RC-SpecifTermpropertyvalue"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:LifecycleStatusPostponed"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-3"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifLocalterm"
-          },
-          "values": [
-            [
-              {
-                "text": "postponed",
-                "language": "en"
-              },
-              {
-                "text": "aufgeschoben",
-                "language": "de"
-              },
-              {
-                "text": "repoussé",
-                "language": "fr"
-              }
-            ],
-            [
-              {
-                "text": "00_postponed",
-                "language": "en"
-              }
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-vzI581EFCyFm4VCpsAJAY6gNrUv",
-      "changedAt": "2022-11-30T16:25:37.456Z",
-      "class": {
-        "id": "RC-SpecifTermpropertyvalue"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:LifecycleStatusRejected"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-3"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifLocalterm"
-          },
-          "values": [
-            [
-              {
-                "text": "rejected",
-                "language": "en"
-              },
-              {
-                "text": "abgelehnt",
-                "language": "de"
-              },
-              {
-                "text": "rejeté",
-                "language": "fr"
-              }
-            ],
-            [
-              {
-                "text": "00_rejected",
-                "language": "en"
-              },
-              {
-                "text": "00_abgelehnt",
-                "language": "de"
-              }
-            ]
-          ]
-        }
-      ]
-    },
-    {
       "id": "R-GJv07EUQm2ekP4aPyczD3YLitkO",
-      "changedAt": "2023-07-16T21:17:57.459Z",
+      "changedAt": "2024-03-05T07:58:16.253Z",
+      "revision": "rev-8879904605",
+      "replaces": [
+        "rev-10776498841"
+      ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TermStatus-16"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifTerm"
@@ -34309,12 +33831,834 @@
       ]
     },
     {
-      "id": "R-xdbjhesPSstgNdi9sraxVopuvL2",
-      "changedAt": "2023-07-16T21:03:48.080Z",
+      "id": "R-HL9yT3xGFhRsvxEGtLP3QmzMoQ2",
+      "changedAt": "2024-03-05T07:58:35.144Z",
+      "revision": "rev-10626252095",
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TermStatus-20"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:LifecycleStatusApproved"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "approved, 40_approved",
+                "language": "en"
+              },
+              {
+                "text": "genehmigt",
+                "language": "de"
+              },
+              {
+                "text": "approuvé",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "40_approved",
+                "language": "en"
+              },
+              {
+                "text": "40_genehmigt",
+                "language": "de"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-8JP2IBLr4ycFkOb7WVP19qKcmRB",
+      "changedAt": "2024-03-05T07:59:12.071Z",
+      "revision": "rev-11252843112",
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TermStatus-22"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:LifecycleStatusReady"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Meets the requirements of the 'Definition of Ready' of the agile development method.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "ready, bereit",
+                "language": "en"
+              },
+              {
+                "text": "bereit ('ready')",
+                "language": "de"
+              }
+            ],
+            [
+              {
+                "text": "bereit",
+                "language": "de"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-6Tvl5lJS1LUBfyvdruaPzWcjWqG",
+      "changedAt": "2024-03-05T07:59:50.015Z",
+      "revision": "rev-10450626596",
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TermStatus-30"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:LifecycleStatusDone"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Meets the requirements of the 'Definition of Done' of the agile development method.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "done, 60_completed",
+                "language": "en"
+              },
+              {
+                "text": "erledigt ('done')",
+                "language": "de"
+              }
+            ],
+            [
+              {
+                "text": "60_completed",
+                "language": "en"
+              },
+              {
+                "text": "erledigt",
+                "language": "de"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-bbaVEqXG79QKpDxNPtsCd7lbH2i",
+      "changedAt": "2024-03-05T08:00:43.105Z",
+      "revision": "rev-9847910425",
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TermStatus-40"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:LifecycleStatusValidated"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "validated, 70_validated, 70_lab-tested",
+                "language": "en"
+              },
+              {
+                "text": "validiert",
+                "language": "de"
+              },
+              {
+                "text": "validé",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "70_validated",
+                "language": "en"
+              },
+              {
+                "text": "70_validiert",
+                "language": "de"
+              }
+            ],
+            [
+              {
+                "text": "70_lab-tested",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-bLVl2PvCMy9bSu3IeC194RY2tiO",
+      "changedAt": "2024-03-05T08:00:59.822Z",
+      "revision": "rev-10907399378",
+      "replaces": [
+        "rev-8217487935"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TermStatus-50"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:LifecycleStatusReleased"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "released, published, 80_released, published, 80_released",
+                "language": "en"
+              },
+              {
+                "text": "freigegeben",
+                "language": "de"
+              },
+              {
+                "text": "publié",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "published",
+                "language": "en"
+              },
+              {
+                "text": "publiziert",
+                "language": "de"
+              }
+            ],
+            [
+              {
+                "text": "80_released",
+                "language": "en"
+              },
+              {
+                "text": "80_freigegeben",
+                "language": "de"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-fa9V84wJNXEQQJqCIBVlXMxRyxA",
+      "changedAt": "2024-03-05T08:01:50.941Z",
+      "revision": "rev-8842314238",
+      "replaces": [
+        "rev-11048778617"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TermStatus-90"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:LifecycleStatusDeprecated"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "deprecated, 00_deprecated, 00_deprecated",
+                "language": "en"
+              },
+              {
+                "text": "veraltet",
+                "language": "de"
+              },
+              {
+                "text": "dépassé",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "00_deprecated",
+                "language": "en"
+              },
+              {
+                "text": "00_veraltet",
+                "language": "de"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-A7JHwmw3atxcrgTFIZ7xuuGHr4k",
+      "changedAt": "2024-03-05T08:02:13.238Z",
+      "revision": "rev-7865490519",
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TermStatus-94"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:LifecycleStatusWithdrawn"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "withdrawn, 90_withdrawn",
+                "language": "en"
+              },
+              {
+                "text": "zurückgezogen",
+                "language": "de"
+              },
+              {
+                "text": "retiré",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "90_withdrawn",
+                "language": "en"
+              },
+              {
+                "text": "90_zurückgezogen",
+                "language": "de"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-j2bRQ5SwnA9NXWdWOIo7K2hhStD",
+      "changedAt": "2024-03-05T08:02:46.754Z",
+      "revision": "rev-10614039768",
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TermStatus-08"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:LifecycleStatusPostponed"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "postponed, 00_postponed",
+                "language": "en"
+              },
+              {
+                "text": "aufgeschoben",
+                "language": "de"
+              },
+              {
+                "text": "repoussé",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "00_postponed",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-vzI581EFCyFm4VCpsAJAY6gNrUv",
+      "changedAt": "2024-03-05T08:03:36.050Z",
+      "revision": "rev-7918872963",
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TermStatus-98"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:LifecycleStatusRejected"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-3"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "rejected, 00_rejected",
+                "language": "en"
+              },
+              {
+                "text": "abgelehnt",
+                "language": "de"
+              },
+              {
+                "text": "rejeté",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "00_rejected",
+                "language": "en"
+              },
+              {
+                "text": "00_abgelehnt",
+                "language": "de"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-xdbjhesPSstgNdi9sraxVopuvL2",
+      "changedAt": "2024-03-05T07:52:59.501Z",
+      "revision": "rev-10475716178",
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TermStatus-5"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.1"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifTerm"
@@ -35087,6 +35431,968 @@
             [
               {
                 "text": "Operation",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-VeHhSkLpx6xkjnSKUkKNtTSI193",
+      "changedAt": "2024-03-05T08:06:22.826Z",
+      "revision": "rev-10084659512",
+      "replaces": [
+        "rev-9457863709"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-DomainBase-00"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DomainBase"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Base",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-pb25kM9i67iMxkDDkLAmQluSUO3",
+      "changedAt": "2024-03-05T08:07:06.464Z",
+      "revision": "rev-10911566205",
+      "replaces": [
+        "rev-9457863709"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-DomainBase-10"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DomainRequirementsEngineering"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Requirements Engineering",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-dij9h2bO6Ngkv4v1Vz8qWhlyiCu",
+      "changedAt": "2024-03-05T17:17:41.519Z",
+      "revision": "rev-9404493788",
+      "replaces": [
+        "rev-8227947452"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-DomainBase-16"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DomainRequirementsEngineeringSRC"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Requirements Engineering with Automotive Stakeholder Request Clarification Process (SRC) as defined by Prostep iViP e.V..",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Requirements Engineering (SRC)",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-6jZNhXbNdKpPXo8h4N1WulM02Hn",
+      "changedAt": "2024-03-05T17:14:38.141Z",
+      "revision": "rev-9844673728",
+      "replaces": [
+        "rev-8359302297"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-DomainBase-20"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DomainSystemsEngineering"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Systems Engineering",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-3lsBzRnJ0zUFOEtiHPwpYfcwbiC",
+      "changedAt": "2024-03-05T17:17:56.253Z",
+      "revision": "rev-10435057509",
+      "replaces": [
+        "rev-10292717882"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-DomainBase-24"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DomainDDP"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Digital Data Package as defined by the Prostep iViP e.V..",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Digital Data Package",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-uLOA2cSZvtHbYqsdmjM6zs2TQfp",
+      "changedAt": "2024-03-05T17:15:38.402Z",
+      "revision": "rev-8037304825",
+      "replaces": [
+        "rev-8359302297"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-DomainBase-26"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DomainSystemModelIntegration"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "System Model Integration",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-EvVAqeTaFzV9HdUNu9o51Vru1tD",
+      "changedAt": "2024-03-05T17:19:21.616Z",
+      "revision": "rev-8309574494",
+      "replaces": [
+        "rev-8359302297"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-DomainBase-30"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DomainVariantManagement"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Variant Management",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-a7b2N2myCX67ZXPuRrqtbsirLGl",
+      "changedAt": "2024-03-05T17:20:14.883Z",
+      "revision": "rev-10693699256",
+      "replaces": [
+        "rev-8359302297"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-DomainBase-40"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DomainAgileSystemDevelopment"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Agile System Development",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-ia5tvdlGwR7KxYUGVI5Gw41Y9UG",
+      "changedAt": "2024-03-05T17:20:57.782Z",
+      "revision": "rev-10034604315",
+      "replaces": [
+        "rev-8359302297"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-DomainBase-42"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DomainIssueManagement"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Issue Management",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-qmDup5S8Jogiik76VikLiF2DAQF",
+      "changedAt": "2024-03-05T17:21:50.863Z",
+      "revision": "rev-8026773695",
+      "replaces": [
+        "rev-8359302297"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-DomainBase-46"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DomainProductLifecycleManagement"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Product Lifecycle Management",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-HcyAPJ6ShCt9pqEUEprK6JUuyPu",
+      "changedAt": "2024-03-05T17:22:51.421Z",
+      "revision": "rev-10542792609",
+      "replaces": [
+        "rev-8359302297"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-DomainBase-80"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DomainOntology"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Ontology",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-piFPEFSTIgSOi4kgrY6632aXq7E",
+      "changedAt": "2024-03-05T17:23:17.251Z",
+      "revision": "rev-9652008925",
+      "replaces": [
+        "rev-8359302297"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-DomainBase-99"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:DomainOther"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Other",
                 "language": "en"
               }
             ]
@@ -36243,6 +37549,351 @@
             [
               {
                 "text": "n/a",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-FsHIbVQXEnAdxsQM0cckgxrPBJy",
+      "changedAt": "2024-03-05T07:40:05.291Z",
+      "revision": "rev-9735022876",
+      "replaces": [
+        "rev-11731843259"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-Instantiation-10"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:InstantiationAuto"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "The element class is instantiated automatically.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "auto",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-qXHysDE5z8pXwQG5n0mVukxvhjG",
+      "changedAt": "2024-03-05T07:40:18.733Z",
+      "revision": "rev-10708557261",
+      "replaces": [
+        "rev-8385041980"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-Instantiation-20"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:InstantiationUser"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "The element class can be instantiated by a user.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-6"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "user",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-jRfL9T0uK442rIi7irTyYJ3LS0S",
+      "changedAt": "2024-03-05T07:45:35.317Z",
+      "revision": "rev-11950218485",
+      "replaces": [
+        "rev-12097218770"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TextFormat-10"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:TextFormatPlain"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "This property value is plain text without formatting. Formatting by [Markdown](https://www.markdownguide.org/cheat-sheet/) is permissible.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "plain",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-QvefxBNEou4m4RAV5TbbGqAa6Je",
+      "changedAt": "2024-03-05T07:45:17.628Z",
+      "revision": "rev-10232559790",
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "V-TextFormat-20"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:TextFormatXhtml"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "This property value is text with XHTML formatting.",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-39"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-5"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "plain",
                 "language": "en"
               }
             ]
@@ -44220,45 +45871,6 @@
       }
     },
     {
-      "id": "S-iJUtTZSzUWtrx6lxLq8HUhgs7Dd",
-      "changedAt": "2023-08-15T07:46:56.448Z",
-      "class": {
-        "id": "SC-hasEnumValue"
-      },
-      "subject": {
-        "id": "R-hhKaZoMtu3D75vvGXU8JshsHAs9"
-      },
-      "object": {
-        "id": "R-HL9yT3xGFhRsvxEGtLP3QmzMoQ2"
-      }
-    },
-    {
-      "id": "S-CyIBoex2vvfbhLD49EoqWVz921L",
-      "changedAt": "2023-08-15T07:47:07.578Z",
-      "class": {
-        "id": "SC-hasEnumValue"
-      },
-      "subject": {
-        "id": "R-hhKaZoMtu3D75vvGXU8JshsHAs9"
-      },
-      "object": {
-        "id": "R-xdbjhesPSstgNdi9sraxVopuvL2"
-      }
-    },
-    {
-      "id": "S-T6RBjrnwAfofjDgWAz6FyBny7Yt",
-      "changedAt": "2023-08-15T07:48:31.097Z",
-      "class": {
-        "id": "SC-hasEnumValue"
-      },
-      "subject": {
-        "id": "R-hhKaZoMtu3D75vvGXU8JshsHAs9"
-      },
-      "object": {
-        "id": "R-fa9V84wJNXEQQJqCIBVlXMxRyxA"
-      }
-    },
-    {
       "id": "S-DKYXw1YCuIxF0zktjdXGq2f3wje",
       "changedAt": "2023-08-15T07:52:42.776Z",
       "class": {
@@ -47871,6 +49483,266 @@
       "object": {
         "id": "R-SpecifIssuerefersto"
       }
+    },
+    {
+      "id": "S-9qyUGhV4M5mJ7wFUEMljGUhbmzV",
+      "changedAt": "2024-03-05T07:49:34.475Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-hhKaZoMtu3D75vvGXU8JshsHAs9"
+      },
+      "object": {
+        "id": "R-bLVl2PvCMy9bSu3IeC194RY2tiO"
+      }
+    },
+    {
+      "id": "S-GRT33W5S6fFifaVZ7t4xxVAGjkQ",
+      "changedAt": "2024-03-05T07:50:02.241Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-hhKaZoMtu3D75vvGXU8JshsHAs9"
+      },
+      "object": {
+        "id": "R-xdbjhesPSstgNdi9sraxVopuvL2"
+      }
+    },
+    {
+      "id": "S-4gAz3e6gShEM2CLoVVuh1d31CrW",
+      "changedAt": "2024-03-05T07:50:13.424Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-hhKaZoMtu3D75vvGXU8JshsHAs9"
+      },
+      "object": {
+        "id": "R-fa9V84wJNXEQQJqCIBVlXMxRyxA"
+      }
+    },
+    {
+      "id": "S-Xas1reNjfEgREXrhP2J62vfoX9g",
+      "changedAt": "2024-03-06T07:26:24.168Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifDomain"
+      },
+      "object": {
+        "id": "R-VeHhSkLpx6xkjnSKUkKNtTSI193"
+      }
+    },
+    {
+      "id": "S-B4unaFNXLNO2OFfQjdh2L3y1AKP",
+      "changedAt": "2024-03-06T07:26:36.436Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifDomain"
+      },
+      "object": {
+        "id": "R-pb25kM9i67iMxkDDkLAmQluSUO3"
+      }
+    },
+    {
+      "id": "S-uWiwlATAmzaikTu0V5Ntvw5qphb",
+      "changedAt": "2024-03-06T07:27:00.425Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifDomain"
+      },
+      "object": {
+        "id": "R-dij9h2bO6Ngkv4v1Vz8qWhlyiCu"
+      }
+    },
+    {
+      "id": "S-LcPaZo8KPwPHwxcKVqG9RjZNfLh",
+      "changedAt": "2024-03-06T07:27:19.091Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifDomain"
+      },
+      "object": {
+        "id": "R-6jZNhXbNdKpPXo8h4N1WulM02Hn"
+      }
+    },
+    {
+      "id": "S-uJLnj1lHCKPjdKJWjFOz7pinqa2",
+      "changedAt": "2024-03-06T07:27:30.572Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifDomain"
+      },
+      "object": {
+        "id": "R-3lsBzRnJ0zUFOEtiHPwpYfcwbiC"
+      }
+    },
+    {
+      "id": "S-AE5qQ3DeXlI70rdI8sHa9oKK4HO",
+      "changedAt": "2024-03-06T07:27:47.382Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifDomain"
+      },
+      "object": {
+        "id": "R-uLOA2cSZvtHbYqsdmjM6zs2TQfp"
+      }
+    },
+    {
+      "id": "S-NaqzeM85RL4EClbrf7iITshtWdl",
+      "changedAt": "2024-03-06T07:28:18.609Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifDomain"
+      },
+      "object": {
+        "id": "R-EvVAqeTaFzV9HdUNu9o51Vru1tD"
+      }
+    },
+    {
+      "id": "S-HGgPKssq4XOla38Tw9YAVQ9rqqx",
+      "changedAt": "2024-03-06T07:28:26.679Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifDomain"
+      },
+      "object": {
+        "id": "R-ia5tvdlGwR7KxYUGVI5Gw41Y9UG"
+      }
+    },
+    {
+      "id": "S-9zOsIa8tte3q3EVeNtDNe7qWVyI",
+      "changedAt": "2024-03-06T07:28:37.632Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifDomain"
+      },
+      "object": {
+        "id": "R-a7b2N2myCX67ZXPuRrqtbsirLGl"
+      }
+    },
+    {
+      "id": "S-30su4OzmyvXHFARkaxxbzWEXQR7",
+      "changedAt": "2024-03-06T07:28:50.599Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifDomain"
+      },
+      "object": {
+        "id": "R-qmDup5S8Jogiik76VikLiF2DAQF"
+      }
+    },
+    {
+      "id": "S-JKKRcxUA7TJuWKelrgCpJB4Vs2A",
+      "changedAt": "2024-03-06T07:29:02.418Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifDomain"
+      },
+      "object": {
+        "id": "R-HcyAPJ6ShCt9pqEUEprK6JUuyPu"
+      }
+    },
+    {
+      "id": "S-nEcEWtpZkHOtt09UfyxSPxvcnyU",
+      "changedAt": "2024-03-06T07:29:23.789Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifDomain"
+      },
+      "object": {
+        "id": "R-piFPEFSTIgSOi4kgrY6632aXq7E"
+      }
+    },
+    {
+      "id": "S-GPRg3iMEz9IqtE6764Sf62vmdMW",
+      "changedAt": "2024-03-06T07:30:09.970Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifInstantiation"
+      },
+      "object": {
+        "id": "R-FsHIbVQXEnAdxsQM0cckgxrPBJy"
+      }
+    },
+    {
+      "id": "S-4YtpS74piE62DrFUnWrvNDI3BC8",
+      "changedAt": "2024-03-06T07:30:19.064Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifInstantiation"
+      },
+      "object": {
+        "id": "R-qXHysDE5z8pXwQG5n0mVukxvhjG"
+      }
+    },
+    {
+      "id": "S-6ZCDOehhp81b51RCcbRQ67eGDFc",
+      "changedAt": "2024-03-06T07:32:50.198Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-SpecifTextformat"
+      }
+    },
+    {
+      "id": "S-49tndMeJ8gG8AuSLsbho4LVwBkj",
+      "changedAt": "2024-03-06T07:33:05.678Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifTextformat"
+      },
+      "object": {
+        "id": "R-jRfL9T0uK442rIi7irTyYJ3LS0S"
+      }
+    },
+    {
+      "id": "S-mCHog09MDPhfBZiyB9GQtyGB2Rj",
+      "changedAt": "2024-03-06T07:33:15.302Z",
+      "class": {
+        "id": "SC-hasEnumValue"
+      },
+      "subject": {
+        "id": "R-SpecifTextformat"
+      },
+      "object": {
+        "id": "R-QvefxBNEou4m4RAV5TbbGqAa6Je"
+      }
     }
   ],
   "files": [],
@@ -50522,6 +52394,13 @@
               "changedAt": "2020-11-08T15:54:48.518Z"
             },
             {
+              "id": "N-ly8oNuYrIhTEVQfCRKIVWefAUfY",
+              "resource": {
+                "id": "R-GJv07EUQm2ekP4aPyczD3YLitkO"
+              },
+              "changedAt": "2024-03-05T07:55:55.092Z"
+            },
+            {
               "id": "N-Yf5kjWBODNMQr1bw5m2FgzhxTPl",
               "resource": {
                 "id": "R-HL9yT3xGFhRsvxEGtLP3QmzMoQ2"
@@ -50583,13 +52462,6 @@
                 "id": "R-vzI581EFCyFm4VCpsAJAY6gNrUv"
               },
               "changedAt": "2023-07-16T21:02:38.673Z"
-            },
-            {
-              "id": "N-ly8oNuYrIhTEVQfCRKIVWefAUfY",
-              "resource": {
-                "id": "R-GJv07EUQm2ekP4aPyczD3YLitkO"
-              },
-              "changedAt": "2023-07-16T21:18:16.054Z"
             },
             {
               "id": "N-9Iy37QXEQftL64v5IsN7NdEFLG8",
@@ -50667,6 +52539,90 @@
                 "id": "R-SpecifStakeholdergroupoperation"
               },
               "changedAt": "2023-03-10T07:56:59.847Z"
+            },
+            {
+              "id": "N-iz4VzXGzBSAXlkthoyjD6RrWWqT",
+              "resource": {
+                "id": "R-VeHhSkLpx6xkjnSKUkKNtTSI193"
+              },
+              "changedAt": "2024-03-05T08:05:45.236Z"
+            },
+            {
+              "id": "N-8qysH19F35p3HnvA0PgQGWAA0in",
+              "resource": {
+                "id": "R-pb25kM9i67iMxkDDkLAmQluSUO3"
+              },
+              "changedAt": "2024-03-05T08:07:06.464Z"
+            },
+            {
+              "id": "N-7JzXJqiSVfwgHiM5Vkf4qxP1Vax",
+              "resource": {
+                "id": "R-dij9h2bO6Ngkv4v1Vz8qWhlyiCu"
+              },
+              "changedAt": "2024-03-05T08:08:46.902Z"
+            },
+            {
+              "id": "N-wfraLl43DUCfnGlfUF2rhhyoXeJ",
+              "resource": {
+                "id": "R-6jZNhXbNdKpPXo8h4N1WulM02Hn"
+              },
+              "changedAt": "2024-03-05T17:14:38.141Z"
+            },
+            {
+              "id": "N-79AJ4psLcu5lcSGeM6Kp2YIOpoC",
+              "resource": {
+                "id": "R-3lsBzRnJ0zUFOEtiHPwpYfcwbiC"
+              },
+              "changedAt": "2024-03-05T17:17:06.985Z"
+            },
+            {
+              "id": "N-MBD5dfRSJvgCRCWJROxviKRnyUs",
+              "resource": {
+                "id": "R-uLOA2cSZvtHbYqsdmjM6zs2TQfp"
+              },
+              "changedAt": "2024-03-05T17:15:38.402Z"
+            },
+            {
+              "id": "N-xPwjhWuHQx1Uu58BoQpKUc4Fw8O",
+              "resource": {
+                "id": "R-EvVAqeTaFzV9HdUNu9o51Vru1tD"
+              },
+              "changedAt": "2024-03-05T17:19:21.616Z"
+            },
+            {
+              "id": "N-4rHJyTRk71JJGtszYTxtXCxkKzP",
+              "resource": {
+                "id": "R-a7b2N2myCX67ZXPuRrqtbsirLGl"
+              },
+              "changedAt": "2024-03-05T17:20:14.883Z"
+            },
+            {
+              "id": "N-hIiHPuS4xAy96fS8hW6FVhcEq17",
+              "resource": {
+                "id": "R-ia5tvdlGwR7KxYUGVI5Gw41Y9UG"
+              },
+              "changedAt": "2024-03-05T17:20:57.782Z"
+            },
+            {
+              "id": "N-UXFFPridGg6UimGDavnASYpsCNi",
+              "resource": {
+                "id": "R-qmDup5S8Jogiik76VikLiF2DAQF"
+              },
+              "changedAt": "2024-03-05T17:21:50.863Z"
+            },
+            {
+              "id": "N-BhMqmqG8pghgtJfqV3Preznqyrq",
+              "resource": {
+                "id": "R-HcyAPJ6ShCt9pqEUEprK6JUuyPu"
+              },
+              "changedAt": "2024-03-05T17:22:51.421Z"
+            },
+            {
+              "id": "N-ryb6YRQFEKEcPfxDcJP53I4vVEB",
+              "resource": {
+                "id": "R-piFPEFSTIgSOi4kgrY6632aXq7E"
+              },
+              "changedAt": "2024-03-05T17:23:17.251Z"
             },
             {
               "id": "N-odgLUMVf9aal26sMzWRD92zvhBN",
@@ -50793,6 +52749,34 @@
                 "id": "R-G2pVPLgM1FRMwm3DUdRO2V0eVms"
               },
               "changedAt": "2022-11-30T13:40:22.256Z"
+            },
+            {
+              "id": "N-ntJ7I7ealmXN3iJHV2D4lf6xJA1",
+              "resource": {
+                "id": "R-FsHIbVQXEnAdxsQM0cckgxrPBJy"
+              },
+              "changedAt": "2024-03-05T07:37:54.337Z"
+            },
+            {
+              "id": "N-YAnxSDPwsDvSxhjyubP1zBp3jqO",
+              "resource": {
+                "id": "R-qXHysDE5z8pXwQG5n0mVukxvhjG"
+              },
+              "changedAt": "2024-03-05T07:38:51.958Z"
+            },
+            {
+              "id": "N-qeyNIdznr6Lpl2TfHxuAGwsHKQN",
+              "resource": {
+                "id": "R-jRfL9T0uK442rIi7irTyYJ3LS0S"
+              },
+              "changedAt": "2024-03-05T07:44:19.489Z"
+            },
+            {
+              "id": "N-4HAg3eV6g2tc4gTEQR6U1Gxxuca",
+              "resource": {
+                "id": "R-QvefxBNEou4m4RAV5TbbGqAa6Je"
+              },
+              "changedAt": "2024-03-05T07:45:17.628Z"
             },
             {
               "id": "N-IVH7kAwLXSwaNzJjnga0Lx8c5wP",
