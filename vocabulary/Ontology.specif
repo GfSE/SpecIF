@@ -13,8 +13,8 @@
     }
   ],
   "generator": "SpecIF Model-Integrator and Editor",
-  "generatorVersion": "1.1.r.11",
-  "createdAt": "2024-03-09T21:14:59.592Z",
+  "generatorVersion": "1.1.r.14",
+  "createdAt": "2024-03-11T08:31:46.940Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -3201,7 +3201,7 @@
           "values": [
             [
               {
-                "text": "Heading, Chapter Title",
+                "text": "Heading",
                 "language": "en"
               },
               {
@@ -16452,6 +16452,20 @@
                 "language": "en"
               },
               {
+                "text": "umfasst ein(e)",
+                "language": "de"
+              },
+              {
+                "text": "possède un(e)",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "composes",
+                "language": "en"
+              },
+              {
                 "text": "besteht zwingend aus",
                 "language": "de"
               },
@@ -16652,6 +16666,20 @@
             [
               {
                 "text": "has a",
+                "language": "en"
+              },
+              {
+                "text": "hat ein(e)",
+                "language": "de"
+              },
+              {
+                "text": "a un(e)",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "aggregates",
                 "language": "en"
               },
               {
@@ -17724,6 +17752,20 @@
             [
               {
                 "text": "is a",
+                "language": "en"
+              },
+              {
+                "text": "ist ein",
+                "language": "de"
+              },
+              {
+                "text": "est un",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "specializes",
                 "language": "en"
               },
               {
@@ -29756,7 +29798,7 @@
           "values": [
             [
               {
-                "text": "required, mandatory",
+                "text": "required",
                 "language": "en"
               },
               {
@@ -30500,15 +30542,27 @@
     },
     {
       "id": "R-PVeTHFPQAm1AGQfXSrp3N539DhW",
-      "changedAt": "2024-03-09T16:47:10.612Z",
-      "revision": "rev-12024967170",
+      "changedAt": "2024-03-09T22:08:47.379Z",
+      "revision": "rev-8761697258",
       "replaces": [
-        "rev-11552649792"
+        "rev-12024967170"
       ],
       "class": {
         "id": "RC-SpecifTermpropertyclassuri"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-VisibleId"
+          },
+          "values": [
+            [
+              {
+                "text": "PC-DefaultValueAnyURI"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifRevision"
@@ -30528,7 +30582,7 @@
           "values": [
             [
               {
-                "text": "SpecIF:DefaultValueURI"
+                "text": "SpecIF:DefaultValueAnyURI"
               }
             ]
           ]
@@ -30635,10 +30689,6 @@
           },
           "values": [
             [
-              {
-                "text": "The type of formatting, plain or XHTML.",
-                "language": "de"
-              },
               {
                 "text": "The type of formatting, plain or XHTML.",
                 "language": "en"
@@ -31303,8 +31353,11 @@
     },
     {
       "id": "R-KDJBBVs21UqTfSDCFpRfV4NQcr9",
-      "changedAt": "2024-03-02T22:16:11.662Z",
-      "revision": "rev-11677934150",
+      "changedAt": "2024-03-09T22:57:28.819Z",
+      "revision": "rev-12135316470",
+      "replaces": [
+        "rev-11677934150"
+      ],
       "class": {
         "id": "RC-SpecifTermpropertyclassinteger"
       },
@@ -31417,6 +31470,14 @@
           },
           "values": [
             "0"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-IntegerMaxInclusive"
+          },
+          "values": [
+            "2147483647"
           ]
         }
       ]
@@ -34050,7 +34111,7 @@
           "values": [
             [
               {
-                "text": "drafted, bearbeitet, 20_drafted",
+                "text": "drafted",
                 "language": "en"
               },
               {
@@ -34144,7 +34205,7 @@
           "values": [
             [
               {
-                "text": "submitted, 30_submitted, 30_entscheidungsreif, 30_submitted, 30_entscheidungsreif",
+                "text": "submitted",
                 "language": "en"
               },
               {
@@ -34321,7 +34382,7 @@
           "values": [
             [
               {
-                "text": "approved, 40_approved",
+                "text": "approved",
                 "language": "en"
               },
               {
@@ -34590,7 +34651,7 @@
           "values": [
             [
               {
-                "text": "validated, 70_validated, 70_lab-tested",
+                "text": "validated",
                 "language": "en"
               },
               {
@@ -34684,7 +34745,7 @@
           "values": [
             [
               {
-                "text": "released, published, 80_released, published, 80_released",
+                "text": "released",
                 "language": "en"
               },
               {
@@ -34782,7 +34843,7 @@
           "values": [
             [
               {
-                "text": "deprecated, 00_deprecated, 00_deprecated",
+                "text": "deprecated",
                 "language": "en"
               },
               {
@@ -34867,7 +34928,7 @@
           "values": [
             [
               {
-                "text": "withdrawn, 90_withdrawn",
+                "text": "withdrawn",
                 "language": "en"
               },
               {
@@ -34952,7 +35013,7 @@
           "values": [
             [
               {
-                "text": "postponed, 00_postponed",
+                "text": "postponed",
                 "language": "en"
               },
               {
@@ -35033,7 +35094,7 @@
           "values": [
             [
               {
-                "text": "rejected, 00_rejected",
+                "text": "rejected",
                 "language": "en"
               },
               {
@@ -35872,10 +35933,10 @@
     },
     {
       "id": "R-VeHhSkLpx6xkjnSKUkKNtTSI193",
-      "changedAt": "2024-03-05T08:06:22.826Z",
-      "revision": "rev-10084659512",
+      "changedAt": "2024-03-09T22:52:33.872Z",
+      "revision": "rev-9032050372",
       "replaces": [
-        "rev-9457863709"
+        "rev-10084659512"
       ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -35888,7 +35949,7 @@
           "values": [
             [
               {
-                "text": "V-DomainBase-00"
+                "text": "V-Domain-00"
               }
             ]
           ]
@@ -35950,10 +36011,10 @@
     },
     {
       "id": "R-pb25kM9i67iMxkDDkLAmQluSUO3",
-      "changedAt": "2024-03-05T08:07:06.464Z",
-      "revision": "rev-10911566205",
+      "changedAt": "2024-03-09T22:52:43.527Z",
+      "revision": "rev-9919460030",
       "replaces": [
-        "rev-9457863709"
+        "rev-10911566205"
       ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -35966,7 +36027,7 @@
           "values": [
             [
               {
-                "text": "V-DomainBase-10"
+                "text": "V-Domain-10"
               }
             ]
           ]
@@ -36028,10 +36089,10 @@
     },
     {
       "id": "R-dij9h2bO6Ngkv4v1Vz8qWhlyiCu",
-      "changedAt": "2024-03-05T17:17:41.519Z",
-      "revision": "rev-9404493788",
+      "changedAt": "2024-03-09T22:52:56.409Z",
+      "revision": "rev-10892819513",
       "replaces": [
-        "rev-8227947452"
+        "rev-9404493788"
       ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -36044,7 +36105,7 @@
           "values": [
             [
               {
-                "text": "V-DomainBase-16"
+                "text": "V-Domain-16"
               }
             ]
           ]
@@ -36119,10 +36180,10 @@
     },
     {
       "id": "R-6jZNhXbNdKpPXo8h4N1WulM02Hn",
-      "changedAt": "2024-03-05T17:14:38.141Z",
-      "revision": "rev-9844673728",
+      "changedAt": "2024-03-09T22:53:08.013Z",
+      "revision": "rev-8999953854",
       "replaces": [
-        "rev-8359302297"
+        "rev-9844673728"
       ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -36135,7 +36196,7 @@
           "values": [
             [
               {
-                "text": "V-DomainBase-20"
+                "text": "V-Domain-20"
               }
             ]
           ]
@@ -36197,10 +36258,10 @@
     },
     {
       "id": "R-3lsBzRnJ0zUFOEtiHPwpYfcwbiC",
-      "changedAt": "2024-03-05T17:17:56.253Z",
-      "revision": "rev-10435057509",
+      "changedAt": "2024-03-09T22:53:20.362Z",
+      "revision": "rev-10546022155",
       "replaces": [
-        "rev-10292717882"
+        "rev-10435057509"
       ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -36213,7 +36274,7 @@
           "values": [
             [
               {
-                "text": "V-DomainBase-24"
+                "text": "V-Domain-24"
               }
             ]
           ]
@@ -36288,10 +36349,10 @@
     },
     {
       "id": "R-uLOA2cSZvtHbYqsdmjM6zs2TQfp",
-      "changedAt": "2024-03-05T17:15:38.402Z",
-      "revision": "rev-8037304825",
+      "changedAt": "2024-03-09T22:53:29.665Z",
+      "revision": "rev-10803773980",
       "replaces": [
-        "rev-8359302297"
+        "rev-8037304825"
       ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -36304,7 +36365,7 @@
           "values": [
             [
               {
-                "text": "V-DomainBase-26"
+                "text": "V-Domain-26"
               }
             ]
           ]
@@ -36366,10 +36427,10 @@
     },
     {
       "id": "R-EvVAqeTaFzV9HdUNu9o51Vru1tD",
-      "changedAt": "2024-03-05T17:19:21.616Z",
-      "revision": "rev-8309574494",
+      "changedAt": "2024-03-09T22:53:41.581Z",
+      "revision": "rev-8054752845",
       "replaces": [
-        "rev-8359302297"
+        "rev-8309574494"
       ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -36382,7 +36443,7 @@
           "values": [
             [
               {
-                "text": "V-DomainBase-30"
+                "text": "V-Domain-30"
               }
             ]
           ]
@@ -36444,10 +36505,10 @@
     },
     {
       "id": "R-a7b2N2myCX67ZXPuRrqtbsirLGl",
-      "changedAt": "2024-03-05T17:20:14.883Z",
-      "revision": "rev-10693699256",
+      "changedAt": "2024-03-09T22:53:51.972Z",
+      "revision": "rev-8942374760",
       "replaces": [
-        "rev-8359302297"
+        "rev-10693699256"
       ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -36460,7 +36521,7 @@
           "values": [
             [
               {
-                "text": "V-DomainBase-40"
+                "text": "V-Domain-40"
               }
             ]
           ]
@@ -36522,10 +36583,10 @@
     },
     {
       "id": "R-ia5tvdlGwR7KxYUGVI5Gw41Y9UG",
-      "changedAt": "2024-03-05T17:20:57.782Z",
-      "revision": "rev-10034604315",
+      "changedAt": "2024-03-09T22:54:00.895Z",
+      "revision": "rev-11258679557",
       "replaces": [
-        "rev-8359302297"
+        "rev-10034604315"
       ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -36538,7 +36599,7 @@
           "values": [
             [
               {
-                "text": "V-DomainBase-42"
+                "text": "V-Domain-42"
               }
             ]
           ]
@@ -36600,10 +36661,10 @@
     },
     {
       "id": "R-qmDup5S8Jogiik76VikLiF2DAQF",
-      "changedAt": "2024-03-05T17:21:50.863Z",
-      "revision": "rev-8026773695",
+      "changedAt": "2024-03-09T22:54:10.866Z",
+      "revision": "rev-12146180386",
       "replaces": [
-        "rev-8359302297"
+        "rev-8026773695"
       ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -36616,7 +36677,7 @@
           "values": [
             [
               {
-                "text": "V-DomainBase-46"
+                "text": "V-Domain-46"
               }
             ]
           ]
@@ -36678,10 +36739,10 @@
     },
     {
       "id": "R-HcyAPJ6ShCt9pqEUEprK6JUuyPu",
-      "changedAt": "2024-03-05T17:22:51.421Z",
-      "revision": "rev-10542792609",
+      "changedAt": "2024-03-09T22:54:20.482Z",
+      "revision": "rev-8738599405",
       "replaces": [
-        "rev-8359302297"
+        "rev-10542792609"
       ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -36694,7 +36755,7 @@
           "values": [
             [
               {
-                "text": "V-DomainBase-80"
+                "text": "V-Domain-80"
               }
             ]
           ]
@@ -36756,10 +36817,10 @@
     },
     {
       "id": "R-piFPEFSTIgSOi4kgrY6632aXq7E",
-      "changedAt": "2024-03-05T17:23:17.251Z",
-      "revision": "rev-9652008925",
+      "changedAt": "2024-03-09T22:54:29.969Z",
+      "revision": "rev-8996409014",
       "replaces": [
-        "rev-8359302297"
+        "rev-9652008925"
       ],
       "class": {
         "id": "RC-SpecifTermpropertyvalue"
@@ -36772,7 +36833,7 @@
           "values": [
             [
               {
-                "text": "V-DomainBase-99"
+                "text": "V-Domain-99"
               }
             ]
           ]
