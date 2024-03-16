@@ -244,7 +244,7 @@
           "id": "V-Domain-2",
           "value": [
             {
-              "text": "Requirement Engineering"
+              "text": "Requirements Engineering"
             }
           ]
         },
@@ -252,7 +252,7 @@
           "id": "V-Domain-3",
           "value": [
             {
-              "text": "Automotive Stakeholder Request Clarification Process"
+              "text": "Requirements Engineering (SRC)"
             }
           ]
         },
@@ -34480,7 +34480,7 @@
           "values": [
             [
               {
-                "text": "ready, bereit",
+                "text": "ready",
                 "language": "en"
               },
               {
@@ -34570,7 +34570,7 @@
           "values": [
             [
               {
-                "text": "done, 60_completed",
+                "text": "done",
                 "language": "en"
               },
               {
