@@ -5656,7 +5656,7 @@
           "values": [
             [
               {
-                "text": "<p>A 'Collection' is a logic (often conceptual) group of resources linked with a [[SpecIF:contains]] statement. It corresponds to a <a href=\"https://camunda.com/bpmn/reference/\">'Group'</a> in BPMN Diagrams.</p><p>BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. <small>(<i>source: <a href=\"http://www.bpmn-tool.com/en/tutorial/\">BPMN Tutorial</a></i>)</small></p>",
+                "text": "<p>A 'Collection' is a logical (often conceptual) group of resources linked with a [[SpecIF:contains]] statement. It corresponds to a <a href=\"https://camunda.com/bpmn/reference/\">'Group'</a> in BPMN Diagrams.</p><p>BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. <small>(<i>source: <a href=\"http://www.bpmn-tool.com/en/tutorial/\">BPMN Tutorial</a></i>)</small></p>",
                 "language": "en"
               },
               {
@@ -21666,7 +21666,7 @@
                 "language": "en"
               },
               {
-                "text": "Identifikator",
+                "text": "Bezeichner",
                 "language": "de"
               },
               {
@@ -34471,7 +34471,7 @@
           "values": [
             [
               {
-                "text": "initial, 10_initial, 10_initial, 10_initial",
+                "text": "initial",
                 "language": "en"
               }
             ],
