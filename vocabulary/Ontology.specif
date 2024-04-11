@@ -28946,7 +28946,7 @@
           "values": [
             [
               {
-                "text": "'user': a user creates, updates and deletes a resource's instance manually.\n'auto': a resource's instance is created, updated or deleted by an algorithm.",
+                "text": "Indicates whether an instance of the class is created automatically, manually or both. Manual *and* automatic instantiation is allowed, if the property is omitted. The class is abstract and cannot be instantiated, if the property list is present, but empty.\n-'user': a user creates, updates and deletes a resource's instance manually.\n-'auto': a resource's instance is created, updated or deleted by an algorithm.",
                 "language": "en"
               }
             ]
@@ -29556,7 +29556,7 @@
           "values": [
             [
               {
-                "text": "<div><p>A string to determine the ordering of elements. Rules:</p><ul><li>For ordering, only alphanumeric characters are permissible. A letter case has no effect; for example, 'F' is equivalent to 'f'.</li><li>The ordering at character level is alphanumeric, i.e. '1' &lt; '7' &lt; 'D' &lt; 'X'.</li><li>Single character substrings &lt; two-character substrings &lt; substrings with more characters, thus '9' &lt; '12' &lt; '114'.</li><li>The ordinal mark may be separated by non-alphanumeric characters. All separators are equivalent; e.g. '-' is equivalent to ';' or '/'.</li><li>Each alphanumeric substring is used for ordering on its hierarchical level; the leftmost substring is most significant for the overall ordering.</li><li>For example '1' &lt; '1.2' &lt; '1.Y' &lt; '1.1a' &lt; '1-1b' &lt; '1-1C' &lt; '2'.</li></ul><p>A regular expression for extracting the substrings of an ordinal mark is &#47;([0-9a-z]+)[^0-9a-z]{0,1}&#47;gi.</p></div>",
+                "text": "<div><p>A string to determine the ordering of elements. Rules:</p><ul><li>For ordering, only alphanumeric characters are permissible. Uppercase or lowerCase has no effect; thus, 'F' is equivalent to 'f'.</li><li>The ordering at character level is alphanumeric, i.e. '1' &lt; '7' &lt; 'D' &lt; 'X'.</li><li>Single character substrings &lt; two-character substrings &lt; substrings with more characters, thus '9' &lt; '12' &lt; '114'.</li><li>The ordinal mark may be separated by non-alphanumeric characters. All separators are equivalent; e.g. '-' is equivalent to ';' or '/'.</li><li>Each alphanumeric substring is used for ordering on its hierarchical level; the leftmost substring is most significant for the overall ordering.</li><li>For example '1' &lt; '1.2' &lt; '1.Y' &lt; '1.1a' &lt; '1-1b' &lt; '1-1C' &lt; '2'.</li></ul><p>A regular expression for extracting the substrings of an ordinal mark is &#47;([0-9a-z]+)[^0-9a-z]{0,1}&#47;gi.</p></div>",
                 "language": "en"
               }
             ]
