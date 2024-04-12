@@ -9,16 +9,9 @@
       "language": "en"
     }
   ],
-  "description": [
-    {
-      "text": "A set of SpecIF Classes derived from a SpecIF Ontology for the domain Ontology.",
-      "format": "plain",
-      "language": "en"
-    }
-  ],
   "generator": "SpecIF Model-Integrator and Editor",
-  "generatorVersion": "1.1.r.18",
-  "createdAt": "2024-03-21T15:35:25.667Z",
+  "generatorVersion": "1.1.r.21",
+  "createdAt": "2024-04-11T20:42:12.260Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -2370,7 +2363,7 @@
           "values": [
             [
               {
-                "text": "Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.",
+                "text": "'Schema.org' is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.",
                 "language": "en"
               }
             ]
@@ -2607,12 +2600,14 @@
           "values": [
             [
               {
-                "text": "https://www.ireb.org/de/cpre/glossary/"
+                "text": "https://www.ireb.org/en/downloads/#cpre-glossary",
+                "language": "en"
               }
             ],
             [
               {
-                "text": "https://www.ireb.org/en/downloads/#cpre-glossary"
+                "text": "https://www.ireb.org/de/cpre/glossary/",
+                "language": "de"
               }
             ]
           ]
@@ -21947,6 +21942,97 @@
       ]
     },
     {
+      "id": "R-pKmNIMAt4uBz31Qre16K9b0rFDk",
+      "changedAt": "2024-04-11T20:39:49.652Z",
+      "revision": "rev-9775730560",
+      "replaces": [
+        "rev-11325583424"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyclassstring"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "rdfs:label"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<div><p><code>rdfs:label</code> is an instance of <code>rdf:Property</code> \nthat may be used to provide a human-readable version of a resource's name.</p>\n<p>A triple of the form:</p>\n<blockquote> <code>R rdfs:label L</code></blockquote>\n<p>states that L is a human readable label for R.</p>\n<p>The <code>rdfs:domain</code> of <code>rdfs:label</code> is <code>rdfs:Resource</code>. The <a href=\"#ch_range\"><code>rdfs:range</code></a> of rdfs:label is <code>rdfs:Literal</code>.</p>\n<p>Multilingual labels are supported using the <a href=\"https://www.w3.org/TR/rdf12-concepts/#section-Graph-Literal\" id=\"ref-for-index-term-literal-2\">language tagging</a> facility of RDF literals.</p></div>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-48"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Label",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "true"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-SchemaName",
       "changedAt": "2023-10-23T21:31:21.597Z",
       "revision": "44",
@@ -22592,6 +22678,105 @@
           },
           "values": [
             "V-TermStatus-50"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiple"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-multiLanguage"
+          },
+          "values": [
+            "true"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TextFormat"
+          },
+          "values": [
+            "V-TextFormat-20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-iiYeRGsfI1SNp1tILQ1Hw7LauIg",
+      "changedAt": "2024-04-11T20:36:50.298Z",
+      "revision": "rev-11532852841",
+      "replaces": [
+        "rev-8243719781"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyclassstring"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "rdfs:comment"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<div><p><code>rdfs:comment</code> is an instance of <code>rdf:Property</code> that may be used to provide a human-readable description of a resource.</p>\n<p>A triple of the form:</p>\n<blockquote> <code>R rdfs:comment L</code></blockquote>\n<p>states that L is a human readable description of R.</p>\n<p>The <code>rdfs:domain</code> of <code>rdfs:comment</code> is <code>rdfs:Resource</code>. The <code>rdfs:range</code> of rdfs:comment is <code>rdfs:Literal</code>.</p>\n<p>A textual comment helps clarify the meaning of RDF classes and properties. Such in-line documentation complements the use of both formal techniques (Ontology and rule languages) and informal (prose documentation, examples, test cases). A variety of documentation forms can be combined to indicate the intended meaning of the classes and properties described in an RDF vocabulary. Since RDF vocabularies are expressed as RDF graphs, vocabularies defined in other namespaces may be used to provide richer documentation.</p>\n<p>Multilingual documentation is supported through use of the <a href=\"https://www.w3.org/TR/rdf12-concepts/#section-Graph-Literal\" id=\"ref-for-index-term-literal-3\">language tagging</a> facility of RDF literals.</p></div>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-48"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Comment",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isRequired"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -50503,6 +50688,71 @@
       "object": {
         "id": "R-SpecifIssynonymof"
       }
+    },
+    {
+      "id": "S-BfhfAHszJCc8GxZAWqx32Rkw8ny",
+      "changedAt": "2024-04-11T20:37:19.477Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-U0uzkt2R9IZHw6hH7uvLOFrtAoB"
+      },
+      "object": {
+        "id": "R-iiYeRGsfI1SNp1tILQ1Hw7LauIg"
+      }
+    },
+    {
+      "id": "S-z7BmY4UMw1GqABJl39XKVKxdq4T",
+      "changedAt": "2024-04-11T20:37:39.015Z",
+      "class": {
+        "id": "SC-isSynonymOfProperty"
+      },
+      "subject": {
+        "id": "R-iiYeRGsfI1SNp1tILQ1Hw7LauIg"
+      },
+      "object": {
+        "id": "R-DctermsDescription"
+      }
+    },
+    {
+      "id": "S-TUkhx8oxLfPewQyhskgH9jQYOcc",
+      "changedAt": "2024-04-11T20:40:04.786Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-U0uzkt2R9IZHw6hH7uvLOFrtAoB"
+      },
+      "object": {
+        "id": "R-pKmNIMAt4uBz31Qre16K9b0rFDk"
+      }
+    },
+    {
+      "id": "S-f4Sr5kCughZnPPtFvJEjDeGBTty",
+      "changedAt": "2024-04-11T20:40:13.975Z",
+      "class": {
+        "id": "SC-isSynonymOfProperty"
+      },
+      "subject": {
+        "id": "R-pKmNIMAt4uBz31Qre16K9b0rFDk"
+      },
+      "object": {
+        "id": "R-DctermsTitle"
+      }
+    },
+    {
+      "id": "S-PmrBlqKzBouwmQPNeRG9FOIOXlN",
+      "changedAt": "2024-04-11T20:41:27.185Z",
+      "class": {
+        "id": "SC-isSynonymOfProperty"
+      },
+      "subject": {
+        "id": "R-pKmNIMAt4uBz31Qre16K9b0rFDk"
+      },
+      "object": {
+        "id": "R-SpecifTerm"
+      }
     }
   ],
   "files": [],
@@ -52148,6 +52398,13 @@
               "revision": "114"
             },
             {
+              "id": "N-iaG73v9Lt4PFHOrE52KI5CujmIK",
+              "resource": {
+                "id": "R-pKmNIMAt4uBz31Qre16K9b0rFDk"
+              },
+              "changedAt": "2024-04-11T20:38:40.869Z"
+            },
+            {
               "id": "N-bTRRC4JLt4EXth6K4CGIKVqfmU9",
               "resource": {
                 "id": "R-SchemaName"
@@ -52189,6 +52446,13 @@
               },
               "changedAt": "2018-02-17T14:52:17+01:00",
               "revision": "114"
+            },
+            {
+              "id": "N-3n1rfNE9UVtopIzXwABX3jCxc0T",
+              "resource": {
+                "id": "R-iiYeRGsfI1SNp1tILQ1Hw7LauIg"
+              },
+              "changedAt": "2024-04-11T20:35:43.253Z"
             },
             {
               "id": "N-EuARruQNeo66n6UCH8UMEemAzGe",
@@ -53744,6 +54008,13 @@
         }
       ],
       "revision": "114"
+    }
+  ],
+  "description": [
+    {
+      "text": "A set of SpecIF Classes derived from a SpecIF Ontology for the domain Ontology.",
+      "format": "plain",
+      "language": "en"
     }
   ]
 }
