@@ -11,7 +11,7 @@
   ],
   "generator": "SpecIF Model-Integrator and Editor",
   "generatorVersion": "1.1.r.21",
-  "createdAt": "2024-04-11T20:42:12.260Z",
+  "createdAt": "2024-04-12T10:35:36.734Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -6473,8 +6473,11 @@
     },
     {
       "id": "R-IrAnnotation",
-      "changedAt": "2023-07-16T10:50:34.318Z",
-      "revision": "16",
+      "changedAt": "2024-04-12T10:30:52.998Z",
+      "revision": "rev-11351099386",
+      "replaces": [
+        "16"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -6517,7 +6520,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-50"
+            "V-TermStatus-48"
           ]
         },
         {
@@ -6558,23 +6561,6 @@
               {
                 "text": "Annotations",
                 "language": "fr"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifLocaltermplural"
-          },
-          "values": [
-            [
-              {
-                "text": "Annotations",
-                "language": "en"
-              },
-              {
-                "text": "Annotationen",
-                "language": "de"
               }
             ]
           ]
@@ -50752,6 +50738,71 @@
       },
       "object": {
         "id": "R-SpecifTerm"
+      }
+    },
+    {
+      "id": "S-7bxnSr6HnaGqH4Q4bDelXKKg026",
+      "changedAt": "2024-04-12T10:30:16.349Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-IrAnnotation"
+      },
+      "object": {
+        "id": "R-DctermsDescription"
+      }
+    },
+    {
+      "id": "S-7w4KeIJsDCOzzbihwyotzxHpX8n",
+      "changedAt": "2024-04-12T10:30:34.094Z",
+      "class": {
+        "id": "SC-isSynonymOfResource"
+      },
+      "subject": {
+        "id": "R-IrAnnotation"
+      },
+      "object": {
+        "id": "R-SpecifComment"
+      }
+    },
+    {
+      "id": "S-Wox6nGQJK44iYplO1ifttCCT8Go",
+      "changedAt": "2024-04-12T10:32:07.465Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-SpecifPermissions"
+      }
+    },
+    {
+      "id": "S-hirGKCEnWPw7EiYJPysTCDxjQVw",
+      "changedAt": "2024-04-12T10:32:51.211Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifPermissions"
+      },
+      "object": {
+        "id": "R-DctermsTitle"
+      }
+    },
+    {
+      "id": "S-jmyVhCbBdpOReeF0c5ozQLT3TUs",
+      "changedAt": "2024-04-12T10:34:30.323Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifViews"
+      },
+      "object": {
+        "id": "R-SpecifLocalTerm"
       }
     }
   ],
