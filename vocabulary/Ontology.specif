@@ -3921,14 +3921,6 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -4099,14 +4091,6 @@
                 "language": "en"
               }
             ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
           ]
         },
         {
@@ -5885,14 +5869,6 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -5990,14 +5966,6 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -6091,14 +6059,6 @@
                 "language": "en"
               }
             ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
           ]
         },
         {
@@ -9174,14 +9134,6 @@
                 "text": "SpecIF:BusinessProcesses"
               }
             ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
           ]
         },
         {
