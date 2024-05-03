@@ -10,8 +10,8 @@
     }
   ],
   "generator": "SpecIF Model-Integrator and Editor",
-  "generatorVersion": "1.1.r.23",
-  "createdAt": "2024-04-13T16:37:29.870Z",
+  "generatorVersion": "1.1.r.24",
+  "createdAt": "2024-05-02T10:05:21.867Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -1655,7 +1655,7 @@
     {
       "id": "SC-UmlIsspecializationof",
       "changedAt": "2024-03-07T17:27:04.097Z",
-      "title": "UML:isSpecializationOf",
+      "title": "uml:isSpecializationOf",
       "description": [
         {
           "text": "<p>A [[FMC:Actor]] is a specialization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>",
@@ -1726,7 +1726,7 @@
     {
       "id": "SC-UmlIsgeneralizationof",
       "changedAt": "2023-08-09T12:27:41.538Z",
-      "title": "UML:isGeneralizationOf",
+      "title": "uml:isGeneralizationOf",
       "description": [
         {
           "text": "<p>A [[FMC:Actor]] is a generalization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>",
@@ -3045,7 +3045,7 @@
           "values": [
             [
               {
-                "text": "UML:"
+                "text": "uml:"
               }
             ]
           ]
@@ -9946,6 +9946,91 @@
       ]
     },
     {
+      "id": "R-jk7h2ezdbV0KfizFiG5pTQVRTSC",
+      "changedAt": "2024-05-02T09:36:43.791Z",
+      "revision": "rev-9205982173",
+      "class": {
+        "id": "RC-SpecifTermresourceclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "uml:Package"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Package",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocaltermplural"
+          },
+          "values": [
+            [
+              {
+                "text": "Packages",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "true"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-Fu6ofXNWfm9sHJNKqMmso7X3tXk",
       "changedAt": "2023-09-12T06:33:15.885Z",
       "class": {
@@ -9971,7 +10056,7 @@
           "values": [
             [
               {
-                "text": "UML:Actor"
+                "text": "uml:Actor"
               }
             ]
           ]
@@ -16183,7 +16268,7 @@
           "values": [
             [
               {
-                "text": "UML:isAssociatedWith"
+                "text": "uml:isAssociatedWith"
               }
             ]
           ]
@@ -16707,7 +16792,7 @@
           "values": [
             [
               {
-                "text": "UML:composes"
+                "text": "uml:composes"
               }
             ]
           ]
@@ -16821,7 +16906,7 @@
           "values": [
             [
               {
-                "text": "UML:isComposedOf"
+                "text": "uml:isComposedOf"
               }
             ]
           ]
@@ -16938,7 +17023,7 @@
           "values": [
             [
               {
-                "text": "UML:aggregates"
+                "text": "uml:aggregates"
               }
             ]
           ]
@@ -17058,7 +17143,7 @@
           "values": [
             [
               {
-                "text": "UML:isAggregatedBy"
+                "text": "uml:isAggregatedBy"
               }
             ]
           ]
@@ -17596,7 +17681,7 @@
           "values": [
             [
               {
-                "text": "UML:extends"
+                "text": "uml:extends"
               }
             ]
           ]
@@ -17899,7 +17984,7 @@
           "values": [
             [
               {
-                "text": "UML:isSpecializationOf"
+                "text": "uml:isSpecializationOf"
               }
             ]
           ]
@@ -18231,7 +18316,7 @@
           "values": [
             [
               {
-                "text": "UML:isSpecialisationOf"
+                "text": "uml:isSpecialisationOf"
               }
             ]
           ]
@@ -18302,7 +18387,7 @@
           "values": [
             [
               {
-                "text": "UML:isGeneralizationOf"
+                "text": "uml:isGeneralizationOf"
               }
             ]
           ]
@@ -18620,7 +18705,7 @@
           "values": [
             [
               {
-                "text": "UML:isGeneralisationOf"
+                "text": "uml:isGeneralisationOf"
               }
             ]
           ]
@@ -24992,7 +25077,7 @@
           "values": [
             [
               {
-                "text": "UML:Stereotype"
+                "text": "uml:Stereotype"
               }
             ]
           ]
@@ -25004,7 +25089,7 @@
           "values": [
             [
               {
-                "text": "<p>Describes the role or sub-type of a model-element. For example, a [[FMC:Actor]] may represent a <i>System Function</i>, a <i>System Component</i> or a <i>User Role</i>. Similarly, in the context of process modelling, a FMC:Actor may represent a <i>Process Step</i> or again a <i>User Role</i>. So, all of these are meaningful values for a FMC:Actor's property named UML:Stereotype.</p>",
+                "text": "<p>Describes the role or sub-type of a model-element. For example, a [[FMC:Actor]] may represent a <i>System Function</i>, a <i>System Component</i> or a <i>User Role</i>. Similarly, in the context of process modelling, a FMC:Actor may represent a <i>Process Step</i> or again a <i>User Role</i>. So, all of these are meaningful values for a FMC:Actor's property named uml:Stereotype.</p>",
                 "language": "en"
               }
             ]
@@ -44035,19 +44120,6 @@
       }
     },
     {
-      "id": "S-5Q8IMUBj1h5potOYHxVdjVSEANg",
-      "changedAt": "2023-03-17T13:23:33.907Z",
-      "class": {
-        "id": "SC-isEligibleAsSubject"
-      },
-      "subject": {
-        "id": "R-FmcPlan"
-      },
-      "object": {
-        "id": "R-SpecifShows"
-      }
-    },
-    {
       "id": "S-5weztQabvXUvefXNZEBWIeEIRli",
       "changedAt": "2023-03-17T20:40:39.141Z",
       "class": {
@@ -44136,19 +44208,6 @@
       },
       "object": {
         "id": "R-SpecifNotation"
-      }
-    },
-    {
-      "id": "S-4EbL5jYK9hmVHVcIRITzGu7qGqK",
-      "changedAt": "2023-03-18T08:35:23.354Z",
-      "class": {
-        "id": "SC-isEligibleAsSubject"
-      },
-      "subject": {
-        "id": "R-ArchimateViewpoint"
-      },
-      "object": {
-        "id": "R-SpecifShows"
       }
     },
     {
@@ -50884,6 +50943,162 @@
       "object": {
         "id": "R-SpecifLocalTerm"
       }
+    },
+    {
+      "id": "S-aOiKtoR6Dl7lWRgglwQow1QEJkl",
+      "changedAt": "2024-05-02T06:27:42.619Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-SpecifIssue"
+      }
+    },
+    {
+      "id": "S-uyq4MYDaA3w3tuYBfYDm4CYtsoq",
+      "changedAt": "2024-05-02T06:27:55.233Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifIssue"
+      },
+      "object": {
+        "id": "R-DctermsTitle"
+      }
+    },
+    {
+      "id": "S-GqaQzboulfzBJ4WGXIopZyPTatA",
+      "changedAt": "2024-05-02T06:28:14.460Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifIssue"
+      },
+      "object": {
+        "id": "R-DctermsDescription"
+      }
+    },
+    {
+      "id": "S-BgmSpJUUcxYAaOx2ShkE9YESiWP",
+      "changedAt": "2024-05-02T06:28:42.419Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifIssue"
+      },
+      "object": {
+        "id": "R-cMVYQbKkdszQ7FAUujKnW2OpFhl"
+      }
+    },
+    {
+      "id": "S-xo93E6LTWihJTyxi5i5h4adPszk",
+      "changedAt": "2024-05-02T06:29:11.508Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifIssue"
+      },
+      "object": {
+        "id": "R-1cEU8ZQrZLckjAzEOqAz1rwuQmV"
+      }
+    },
+    {
+      "id": "S-7IGWQhUx7xu5Krmt7Dutz3HWXzU",
+      "changedAt": "2024-05-02T07:53:10.273Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-SpecifUnreferencedresources"
+      }
+    },
+    {
+      "id": "S-17r068opybuNbAqVRE1z3qZCC7o",
+      "changedAt": "2024-05-02T07:55:16.807Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifUnreferencedresources"
+      },
+      "object": {
+        "id": "R-DctermsTitle"
+      }
+    },
+    {
+      "id": "S-khHOghzSI0eokRdcEpZQxMnboTa",
+      "changedAt": "2024-05-02T07:55:29.826Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifUnreferencedresources"
+      },
+      "object": {
+        "id": "R-DctermsDescription"
+      }
+    },
+    {
+      "id": "S-TroeB7A368rZ1cUVyq9Gj6m5O3d",
+      "changedAt": "2024-05-02T09:37:11.438Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks"
+      },
+      "object": {
+        "id": "R-jk7h2ezdbV0KfizFiG5pTQVRTSC"
+      }
+    },
+    {
+      "id": "S-VqkP5CWWariywwAjOae2khyc6Db",
+      "changedAt": "2024-05-02T09:37:21.707Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-jk7h2ezdbV0KfizFiG5pTQVRTSC"
+      },
+      "object": {
+        "id": "R-DctermsTitle"
+      }
+    },
+    {
+      "id": "S-3ktZftELlFYNiTRSWVzi8fitaVf",
+      "changedAt": "2024-05-02T09:37:41.047Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-jk7h2ezdbV0KfizFiG5pTQVRTSC"
+      },
+      "object": {
+        "id": "R-DctermsDescription"
+      }
+    },
+    {
+      "id": "S-97Q6TixaSseimmoC9WGHW11VmAw",
+      "changedAt": "2024-05-02T10:05:06.418Z",
+      "class": {
+        "id": "SC-isEligibleAsObject"
+      },
+      "subject": {
+        "id": "R-jk7h2ezdbV0KfizFiG5pTQVRTSC"
+      },
+      "object": {
+        "id": "R-SpecifShows"
+      }
     }
   ],
   "files": [],
@@ -51538,6 +51753,13 @@
                 "id": "R-VRivtHuc6WpTShCY1ZLymWuk3Ya"
               },
               "changedAt": "2023-09-11T22:45:09.351Z"
+            },
+            {
+              "id": "N-c5tpot3F4s0OxxxpuYvgDU34KSI",
+              "resource": {
+                "id": "R-jk7h2ezdbV0KfizFiG5pTQVRTSC"
+              },
+              "changedAt": "2024-05-02T09:36:48.921Z"
             },
             {
               "id": "N-qbEsjYDolVFGeRjiDORRgsMORIX",
