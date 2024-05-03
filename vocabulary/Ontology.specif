@@ -11,7 +11,7 @@
   ],
   "generator": "SpecIF Model-Integrator and Editor",
   "generatorVersion": "1.1.r.24",
-  "createdAt": "2024-05-02T10:05:21.867Z",
+  "createdAt": "2024-05-03T07:46:55.098Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -11682,8 +11682,11 @@
     },
     {
       "id": "R-SpecifShows",
-      "changedAt": "2023-02-26T21:30:23.975Z",
-      "revision": "21",
+      "changedAt": "2024-05-03T07:46:27.422Z",
+      "revision": "rev-8598268212",
+      "replaces": [
+        "21"
+      ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
       },
@@ -11732,8 +11735,28 @@
             [
               {
                 "text": "<p>A [[SpecIF:Diagram]] 'shows' a model element, e.g, a [[FMC:Actor]], [[FMC:State]], [[FMC:Event]] or [[SpecIF:Collection]].</p>"
+              },
+              {
+                "text": "<p>A [[SpecIF:Diagram]] 'shows' a model element, e.g, a [[FMC:Actor]], [[FMC:State]], [[FMC:Event]] or [[SpecIF:Collection]].</p>\n<p>No eligible object classes are specified, so all resources or statements can be specified. It would be a rather long list to include the classes of all eligible resources and statements which can be shown on a diagram - and it would have to be updated every time a new one is included in the ontology. Certainly, some semantic precision is given up, but in an acceptable way.</p>",
+                "language": "en"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
           ]
         },
         {
@@ -11755,22 +11778,6 @@
                 "language": "fr"
               }
             ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-50"
           ]
         },
         {
@@ -42521,58 +42528,6 @@
       }
     },
     {
-      "id": "S-ebnZ4r97tIi2aistOA9lBzaKg8T",
-      "changedAt": "2023-02-26T21:27:58.031Z",
-      "class": {
-        "id": "SC-isEligibleAsObject"
-      },
-      "subject": {
-        "id": "R-FmcActor"
-      },
-      "object": {
-        "id": "R-SpecifShows"
-      }
-    },
-    {
-      "id": "S-uPJVPh8k8jk4X5dtED54hotohLV",
-      "changedAt": "2023-02-26T21:28:19.330Z",
-      "class": {
-        "id": "SC-isEligibleAsObject"
-      },
-      "subject": {
-        "id": "R-FmcState"
-      },
-      "object": {
-        "id": "R-SpecifShows"
-      }
-    },
-    {
-      "id": "S-KNH81dafT0IMh97XcRkfpLBTH9x",
-      "changedAt": "2023-02-26T21:28:31.573Z",
-      "class": {
-        "id": "SC-isEligibleAsObject"
-      },
-      "subject": {
-        "id": "R-FmcEvent"
-      },
-      "object": {
-        "id": "R-SpecifShows"
-      }
-    },
-    {
-      "id": "S-1zn6OeVGn9GIlMHeS6EJHVblD9c",
-      "changedAt": "2023-02-26T21:28:49.576Z",
-      "class": {
-        "id": "SC-isEligibleAsObject"
-      },
-      "subject": {
-        "id": "R-SpecifCollection"
-      },
-      "object": {
-        "id": "R-SpecifShows"
-      }
-    },
-    {
       "id": "S-WNlAYdm8PLYCplxQZCMUW5t7Xbd",
       "changedAt": "2023-02-26T23:46:17.085Z",
       "class": {
@@ -51085,19 +51040,6 @@
       },
       "object": {
         "id": "R-DctermsDescription"
-      }
-    },
-    {
-      "id": "S-97Q6TixaSseimmoC9WGHW11VmAw",
-      "changedAt": "2024-05-02T10:05:06.418Z",
-      "class": {
-        "id": "SC-isEligibleAsObject"
-      },
-      "subject": {
-        "id": "R-jk7h2ezdbV0KfizFiG5pTQVRTSC"
-      },
-      "object": {
-        "id": "R-SpecifShows"
       }
     }
   ],
