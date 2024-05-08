@@ -11,7 +11,7 @@
   ],
   "generator": "SpecIF Model-Integrator and Editor",
   "generatorVersion": "1.1.r.24",
-  "createdAt": "2024-05-03T07:46:55.098Z",
+  "createdAt": "2024-05-05T13:16:05.750Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -16771,10 +16771,10 @@
     },
     {
       "id": "R-UmlComposes",
-      "changedAt": "2024-03-07T17:24:07.848Z",
-      "revision": "rev-9972332401",
+      "changedAt": "2024-05-05T13:14:19.338Z",
+      "revision": "rev-9882846069",
       "replaces": [
-        "36"
+        "rev-9972332401"
       ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -16830,7 +16830,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-50"
+            "V-TermStatus-16"
           ]
         },
         {
@@ -16840,7 +16840,7 @@
           "values": [
             [
               {
-                "text": "owned by",
+                "text": "owned by, composed in",
                 "language": "en"
               },
               {
@@ -49678,19 +49678,6 @@
       }
     },
     {
-      "id": "S-g2AuQHSVaj8lzaoHldT25gBDhrG",
-      "changedAt": "2024-03-03T13:57:19.279Z",
-      "class": {
-        "id": "SC-isSpecializationOfStatement"
-      },
-      "subject": {
-        "id": "R-bTM6eyTwS9KmZSNEBaiemrRPLbm"
-      },
-      "object": {
-        "id": "R-UmlIsspecializationof"
-      }
-    },
-    {
       "id": "S-UI4fbkQkZRedmkibeb3FCIlleOX",
       "changedAt": "2024-03-03T13:58:07.730Z",
       "class": {
@@ -49779,19 +49766,6 @@
       },
       "object": {
         "id": "R-bTM6eyTwS9KmZSNEBaiemrRPLbm"
-      }
-    },
-    {
-      "id": "S-CiqbtO0XVLg1ChRFAzvarhoFUDM",
-      "changedAt": "2024-03-03T22:32:42.394Z",
-      "class": {
-        "id": "SC-isSpecializationOfStatement"
-      },
-      "subject": {
-        "id": "R-bSWGK498AMJpZGzt8UntOamrxAv"
-      },
-      "object": {
-        "id": "R-UmlIsspecializationof"
       }
     },
     {
@@ -51040,6 +51014,110 @@
       },
       "object": {
         "id": "R-DctermsDescription"
+      }
+    },
+    {
+      "id": "S-BYFa8t1LbqaWDQRpAbeWY2Y9Lm3",
+      "changedAt": "2024-05-05T13:04:22.272Z",
+      "class": {
+        "id": "SC-isSpecializationOfStatement"
+      },
+      "subject": {
+        "id": "R-bTM6eyTwS9KmZSNEBaiemrRPLbm"
+      },
+      "object": {
+        "id": "R-SpecifIsspecializationof"
+      }
+    },
+    {
+      "id": "S-zy1Avf5EI6RVVnnmHoC50s4JT4C",
+      "changedAt": "2024-05-05T13:04:41.093Z",
+      "class": {
+        "id": "SC-isSpecializationOfStatement"
+      },
+      "subject": {
+        "id": "R-bSWGK498AMJpZGzt8UntOamrxAv"
+      },
+      "object": {
+        "id": "R-SpecifIsspecializationof"
+      }
+    },
+    {
+      "id": "S-RiquIGhNNfoJKwlOhA9BPS87z34",
+      "changedAt": "2024-05-05T13:11:34.092Z",
+      "class": {
+        "id": "SC-isEligibleAsObject"
+      },
+      "subject": {
+        "id": "R-FmcState"
+      },
+      "object": {
+        "id": "R-UmlAggregates"
+      }
+    },
+    {
+      "id": "S-JK1oDLpVPRNrTdyfRkXNGhn3PBb",
+      "changedAt": "2024-05-05T13:11:45.561Z",
+      "class": {
+        "id": "SC-isEligibleAsSubject"
+      },
+      "subject": {
+        "id": "R-FmcState"
+      },
+      "object": {
+        "id": "R-UmlAggregates"
+      }
+    },
+    {
+      "id": "S-A5o8jhQSaRTWYF8m3uvoVQVkTyU",
+      "changedAt": "2024-05-05T13:12:10.477Z",
+      "class": {
+        "id": "SC-isEligibleAsSubject"
+      },
+      "subject": {
+        "id": "R-FmcState"
+      },
+      "object": {
+        "id": "R-UmlIscomposedof"
+      }
+    },
+    {
+      "id": "S-Oe69kpIsmfjcmUFKYIlTv9Hkpzg",
+      "changedAt": "2024-05-05T13:12:21.950Z",
+      "class": {
+        "id": "SC-isEligibleAsObject"
+      },
+      "subject": {
+        "id": "R-FmcState"
+      },
+      "object": {
+        "id": "R-UmlIscomposedof"
+      }
+    },
+    {
+      "id": "S-SrqrgbnelphaQ4NPJX2bDZqkcu0",
+      "changedAt": "2024-05-05T13:12:53.449Z",
+      "class": {
+        "id": "SC-isEligibleAsSubject"
+      },
+      "subject": {
+        "id": "R-FmcActor"
+      },
+      "object": {
+        "id": "R-UmlIsassociatedwith"
+      }
+    },
+    {
+      "id": "S-kb8lOQ78e8ADamIWiPqjrLHPFQT",
+      "changedAt": "2024-05-05T13:13:03.094Z",
+      "class": {
+        "id": "SC-isEligibleAsObject"
+      },
+      "subject": {
+        "id": "R-FmcActor"
+      },
+      "object": {
+        "id": "R-UmlIsassociatedwith"
       }
     }
   ],
