@@ -11,7 +11,7 @@
   ],
   "generator": "SpecIF Model-Integrator and Editor",
   "generatorVersion": "1.1.r.24",
-  "createdAt": "2024-05-05T13:16:05.750Z",
+  "createdAt": "2024-05-09T14:00:37.446Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -1724,77 +1724,6 @@
       ]
     },
     {
-      "id": "SC-UmlIsgeneralizationof",
-      "changedAt": "2023-08-09T12:27:41.538Z",
-      "title": "uml:isGeneralizationOf",
-      "description": [
-        {
-          "text": "<p>A [[FMC:Actor]] is a generalization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>",
-          "language": "en"
-        }
-      ],
-      "revision": "1.2",
-      "instantiation": [
-        "auto"
-      ]
-    },
-    {
-      "id": "SC-isGeneralizationOfResource",
-      "changedAt": "2024-03-03T18:09:49.456Z",
-      "title": "SpecIF:isGeneralizationOfResource",
-      "description": [
-        {
-          "text": "A resource-class term is a generalization of another, such as 'Vehicle' and 'Passenger Car'.",
-          "language": "en"
-        }
-      ],
-      "revision": "1.2",
-      "instantiation": [
-        "user"
-      ],
-      "extends": {
-        "id": "SC-UmlIsgeneralizationof"
-      },
-      "subjectClasses": [
-        {
-          "id": "RC-SpecifTermresourceclass"
-        }
-      ],
-      "objectClasses": [
-        {
-          "id": "RC-SpecifTermresourceclass"
-        }
-      ]
-    },
-    {
-      "id": "SC-isGeneralizationOfStatement",
-      "changedAt": "2024-03-03T18:09:35.983Z",
-      "title": "SpecIF:isGeneralizationOfStatement",
-      "description": [
-        {
-          "text": "A statement-class term is a generalization of another, such as 'contains' and 'is aggregated by'.",
-          "language": "en"
-        }
-      ],
-      "revision": "1.2",
-      "instantiation": [
-        "user"
-      ],
-      "extends": {
-        "id": "SC-UmlIsgeneralizationof"
-      },
-      "subjectClasses": [
-        {
-          "id": "RC-SpecifTermstatementclass"
-        }
-      ],
-      "objectClasses": [
-        {
-          "id": "RC-SpecifTermstatementclass"
-        }
-      ]
-    },
-    {
       "id": "SC-isEligibleAsSubject",
       "changedAt": "2024-03-09T21:05:22.579Z",
       "title": "SpecIF:isEligibleAsSubject",
@@ -2377,7 +2306,7 @@
       ]
     },
     {
-      "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X",
+      "id": "R-Namespace_dcterms",
       "changedAt": "2023-06-15T14:48:06.040Z",
       "class": {
         "id": "RC-SpecifNamespace"
@@ -3876,14 +3805,6 @@
           "values": [
             "false"
           ]
-        },
-        {
-          "class": {
-            "id": "PC-Instantiation"
-          },
-          "values": [
-            "V-Instantiation-10"
-          ]
         }
       ]
     },
@@ -5353,14 +5274,6 @@
           "values": [
             "false"
           ]
-        },
-        {
-          "class": {
-            "id": "PC-Instantiation"
-          },
-          "values": [
-            "V-Instantiation-10"
-          ]
         }
       ]
     },
@@ -5505,14 +5418,6 @@
           },
           "values": [
             "false"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Instantiation"
-          },
-          "values": [
-            "V-Instantiation-10"
           ]
         }
       ]
@@ -5659,14 +5564,6 @@
           "values": [
             "false"
           ]
-        },
-        {
-          "class": {
-            "id": "PC-Instantiation"
-          },
-          "values": [
-            "V-Instantiation-10"
-          ]
         }
       ]
     },
@@ -5811,14 +5708,6 @@
           },
           "values": [
             "false"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Instantiation"
-          },
-          "values": [
-            "V-Instantiation-10"
           ]
         }
       ]
@@ -11800,10 +11689,10 @@
     },
     {
       "id": "R-SpecifContains",
-      "changedAt": "2024-03-09T17:19:22.794Z",
-      "revision": "rev-10073481002",
+      "changedAt": "2024-05-08T12:43:48.282Z",
+      "revision": "rev-9538254853",
       "replaces": [
-        "163"
+        "rev-11142081118"
       ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -11871,7 +11760,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-50"
+            "V-TermStatus-48"
           ]
         },
         {
@@ -11914,9 +11803,12 @@
       ]
     },
     {
-      "id": "R-RF3uW8bSgBvvxiWdqJAWi65vz4v",
-      "changedAt": "2023-10-23T21:39:25.410Z",
-      "revision": "163",
+      "id": "R-dcterms_hasPart",
+      "changedAt": "2024-05-08T12:43:07.285Z",
+      "revision": "rev-10254578367",
+      "replaces": [
+        "163"
+      ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
       },
@@ -11971,7 +11863,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-48"
+            "V-TermStatus-50"
           ]
         },
         {
@@ -16488,188 +16380,6 @@
       ]
     },
     {
-      "id": "R-SysmlIscomposedof",
-      "changedAt": "2024-02-12T18:55:34.870Z",
-      "revision": "rev-11819760090",
-      "replaces": [
-        "36"
-      ],
-      "class": {
-        "id": "RC-SpecifTermstatementclass"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "SysML:isComposedOf"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "<p>An [[FMC:Actor]] is composed of another [[FMC:Actor]].</p>",
-                "language": "en"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-48"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifLocalterm"
-          },
-          "values": [
-            [
-              {
-                "text": "composed of",
-                "language": "en"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-isUndirected"
-          },
-          "values": [
-            "false"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Instantiation"
-          },
-          "values": [
-            "V-Instantiation-10"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-ArchimateIscomposedof",
-      "changedAt": "2024-02-12T18:55:48.939Z",
-      "revision": "rev-8526839305",
-      "replaces": [
-        "36"
-      ],
-      "class": {
-        "id": "RC-SpecifTermstatementclass"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifRevision"
-          },
-          "values": [
-            [
-              {
-                "text": "1.2"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "ArchiMate:isComposedOf"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "<p>An [[FMC:Actor]] is composed of another [[FMC:Actor]].</p>",
-                "language": "en"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-48"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifLocalterm"
-          },
-          "values": [
-            [
-              {
-                "text": "is composed of",
-                "language": "en"
-              },
-              {
-                "text": "besteht zwingend aus",
-                "language": "de"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-isUndirected"
-          },
-          "values": [
-            "false"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Instantiation"
-          },
-          "values": [
-            "V-Instantiation-10"
-          ]
-        }
-      ]
-    },
-    {
       "id": "R-ArchimateComposes",
       "changedAt": "2023-07-16T09:07:59.795Z",
       "revision": "36",
@@ -16888,8 +16598,11 @@
     },
     {
       "id": "R-UmlIscomposedof",
-      "changedAt": "2023-08-09T21:55:55.119Z",
-      "revision": "36",
+      "changedAt": "2024-05-08T14:26:42.448Z",
+      "revision": "rev-8890332226",
+      "replaces": [
+        "rev-10074317478"
+      ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
       },
@@ -16962,7 +16675,7 @@
                 "language": "de"
               },
               {
-                "text": "possède un(e)",
+                "text": "possède un",
                 "language": "fr"
               }
             ],
@@ -17001,9 +16714,92 @@
       ]
     },
     {
-      "id": "R-UmlAggregates",
-      "changedAt": "2024-03-07T17:23:49.914Z",
-      "revision": "rev-11092119378",
+      "id": "R-SysmlIscomposedof",
+      "changedAt": "2024-02-12T18:55:34.870Z",
+      "revision": "rev-11819760090",
+      "replaces": [
+        "36"
+      ],
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SysML:isComposedOf"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>An [[FMC:Actor]] is composed of another [[FMC:Actor]].</p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-48"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "composed of",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-ArchimateIscomposedof",
+      "changedAt": "2024-02-12T18:55:48.939Z",
+      "revision": "rev-8526839305",
       "replaces": [
         "36"
       ],
@@ -17030,7 +16826,7 @@
           "values": [
             [
               {
-                "text": "uml:aggregates"
+                "text": "ArchiMate:isComposedOf"
               }
             ]
           ]
@@ -17042,7 +16838,7 @@
           "values": [
             [
               {
-                "text": "<p>An [[FMC:Actor]] aggregates another [[FMC:Actor]].</p><p>If amounts or things are aggregated, they are added together and considered as a single amount or thing.<i><small>Source: <a href=\"https://www.collinsdictionary.com/dictionary/english/aggregate\">Collins Dictionary</a></small></i></p>",
+                "text": "<p>An [[FMC:Actor]] is composed of another [[FMC:Actor]].</p>",
                 "language": "en"
               }
             ]
@@ -17061,7 +16857,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-50"
+            "V-TermStatus-48"
           ]
         },
         {
@@ -17071,35 +16867,11 @@
           "values": [
             [
               {
-                "text": "has a",
+                "text": "is composed of",
                 "language": "en"
               },
               {
-                "text": "hat ein(e)",
-                "language": "de"
-              },
-              {
-                "text": "a un(e)",
-                "language": "fr"
-              }
-            ],
-            [
-              {
-                "text": "aggregates",
-                "language": "en"
-              },
-              {
-                "text": "aggregiert",
-                "language": "de"
-              },
-              {
-                "text": "agrégat",
-                "language": "fr"
-              }
-            ],
-            [
-              {
-                "text": "besteht aus",
+                "text": "besteht zwingend aus",
                 "language": "de"
               }
             ]
@@ -17224,86 +16996,6 @@
       ]
     },
     {
-      "id": "R-SysmlAggegates",
-      "changedAt": "2023-07-16T15:18:56.227Z",
-      "revision": "36",
-      "class": {
-        "id": "RC-SpecifTermstatementclass"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "SysML:aggregates"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "<p>An [[FMC:Actor]] aggregates another [[FMC:Actor]].</p><p>If amounts or things are aggregated, they are added together and considered as a single amount or thing.<i><small>Source: <a href=\"https://www.collinsdictionary.com/dictionary/english/aggregate\">Collins Dictionary</a></small></i></p>",
-                "language": "en"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-48"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifLocalterm"
-          },
-          "values": [
-            [
-              {
-                "text": "aggregates",
-                "language": "en"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-isUndirected"
-          },
-          "values": [
-            "false"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Instantiation"
-          },
-          "values": [
-            "V-Instantiation-10"
-          ]
-        }
-      ]
-    },
-    {
       "id": "R-SysmlIsaggregateby",
       "changedAt": "2023-10-21T10:38:50.092Z",
       "revision": "36",
@@ -17372,6 +17064,209 @@
             [
               {
                 "text": "aggregated in",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-UmlAggregates",
+      "changedAt": "2024-03-07T17:23:49.914Z",
+      "revision": "rev-11092119378",
+      "replaces": [
+        "36"
+      ],
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "uml:aggregates"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>An [[FMC:Actor]] aggregates another [[FMC:Actor]].</p><p>If amounts or things are aggregated, they are added together and considered as a single amount or thing.<i><small>Source: <a href=\"https://www.collinsdictionary.com/dictionary/english/aggregate\">Collins Dictionary</a></small></i></p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "has a",
+                "language": "en"
+              },
+              {
+                "text": "hat ein",
+                "language": "de"
+              },
+              {
+                "text": "a un",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "aggregates",
+                "language": "en"
+              },
+              {
+                "text": "aggregiert",
+                "language": "de"
+              },
+              {
+                "text": "agrégat",
+                "language": "fr"
+              }
+            ],
+            [
+              {
+                "text": "besteht aus",
+                "language": "de"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-SysmlAggegates",
+      "changedAt": "2023-07-16T15:18:56.227Z",
+      "revision": "36",
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SysML:aggregates"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>An [[FMC:Actor]] aggregates another [[FMC:Actor]].</p><p>If amounts or things are aggregated, they are added together and considered as a single amount or thing.<i><small>Source: <a href=\"https://www.collinsdictionary.com/dictionary/english/aggregate\">Collins Dictionary</a></small></i></p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-48"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "aggregates",
                 "language": "en"
               }
             ]
@@ -18032,7 +17927,7 @@
           "values": [
             [
               {
-                "text": "is a",
+                "text": "specializes",
                 "language": "en"
               },
               {
@@ -18052,6 +17947,183 @@
           },
           "values": [
             "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-UmlIsspecialisationof",
+      "changedAt": "2023-08-09T12:27:30.006Z",
+      "revision": "36",
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "uml:isSpecialisationOf"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-90"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "specializes",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-SysmlIsspecialisationof",
+      "changedAt": "2023-09-03T08:50:30.953Z",
+      "revision": "36",
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SysML:isSpecializationOf"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>A FMC:Actor is a specialization of another FMC:Actor; similarly for FMC:State and FMC:Event.</p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-48"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-SpecifIsspecializationof",
+      "changedAt": "2023-08-09T12:29:17.946Z",
+      "revision": "36",
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:isSpecializationOf"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>A FMC:Actor is a specialization of another FMC:Actor; similarly for FMC:State and FMC:Event.</p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-48"
           ]
         },
         {
@@ -18145,20 +18217,6 @@
             "id": "PC-SpecifLocalterm"
           },
           "values": [
-            [
-              {
-                "text": "is a",
-                "language": "en"
-              },
-              {
-                "text": "ist ein",
-                "language": "de"
-              },
-              {
-                "text": "est un",
-                "language": "fr"
-              }
-            ],
             [
               {
                 "text": "specializes",
@@ -18276,7 +18334,7 @@
           "values": [
             [
               {
-                "text": "is a",
+                "text": "specializes",
                 "language": "en"
               },
               {
@@ -18309,68 +18367,12 @@
       ]
     },
     {
-      "id": "R-UmlIsspecialisationof",
-      "changedAt": "2023-08-09T12:27:30.006Z",
-      "revision": "36",
-      "class": {
-        "id": "RC-SpecifTermstatementclass"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "uml:isSpecialisationOf"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-90"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-SpecifLocalterm"
-          },
-          "values": [
-            [
-              {
-                "text": "specializes",
-                "language": "en"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-isUndirected"
-          },
-          "values": [
-            "false"
-          ]
-        }
-      ]
-    },
-    {
       "id": "R-UmlIsgeneralizationof",
-      "changedAt": "2023-08-09T12:27:41.538Z",
-      "revision": "36",
+      "changedAt": "2024-05-08T13:23:47.335Z",
+      "revision": "rev-10031760510",
+      "replaces": [
+        "36"
+      ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
       },
@@ -18410,14 +18412,6 @@
                 "language": "en"
               }
             ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
           ]
         },
         {
@@ -18468,11 +18462,52 @@
       ]
     },
     {
-      "id": "R-bjWm8VC61uOyCzHkolwSmiY9mMl",
-      "changedAt": "2024-03-03T18:09:49.456Z",
-      "revision": "rev-11919019228",
+      "id": "R-UmlIsgeneralisationof",
+      "changedAt": "2024-05-08T13:23:58.374Z",
+      "revision": "rev-10947897155",
       "replaces": [
-        "rev-11754792585"
+        "36"
+      ],
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "uml:isGeneralisationOf"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-90"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-bjWm8VC61uOyCzHkolwSmiY9mMl",
+      "changedAt": "2024-05-08T13:24:07.298Z",
+      "revision": "rev-8969234687",
+      "replaces": [
+        "rev-11919019228"
       ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -18529,14 +18564,6 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-80"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -18584,10 +18611,10 @@
     },
     {
       "id": "R-nKufiWMObXf3scZCs5SnrIMPHqL",
-      "changedAt": "2024-03-03T18:09:35.983Z",
-      "revision": "rev-10917150688",
+      "changedAt": "2024-05-08T13:24:20.854Z",
+      "revision": "rev-10544012770",
       "replaces": [
-        "rev-10233181089"
+        "rev-10917150688"
       ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -18644,14 +18671,6 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-80"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -18698,165 +18717,12 @@
       ]
     },
     {
-      "id": "R-UmlIsgeneralisationof",
-      "changedAt": "2023-08-09T12:28:14.575Z",
-      "revision": "36",
-      "class": {
-        "id": "RC-SpecifTermstatementclass"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "uml:isGeneralisationOf"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-90"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-SpecifIsspecializationof",
-      "changedAt": "2023-08-09T12:29:17.946Z",
-      "revision": "36",
-      "class": {
-        "id": "RC-SpecifTermstatementclass"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "SpecIF:isSpecializationOf"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "<p>A FMC:Actor is a specialization of another FMC:Actor; similarly for FMC:State and FMC:Event.</p>",
-                "language": "en"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-48"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Instantiation"
-          },
-          "values": [
-            "V-Instantiation-10"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "R-SysmlIsspecialisationof",
-      "changedAt": "2023-09-03T08:50:30.953Z",
-      "revision": "36",
-      "class": {
-        "id": "RC-SpecifTermstatementclass"
-      },
-      "properties": [
-        {
-          "class": {
-            "id": "PC-SpecifTerm"
-          },
-          "values": [
-            [
-              {
-                "text": "SysML:isSpecializationOf"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "<p>A FMC:Actor is a specialization of another FMC:Actor; similarly for FMC:State and FMC:Event.</p>",
-                "language": "en"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-48"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-isUndirected"
-          },
-          "values": [
-            "false"
-          ]
-        }
-      ]
-    },
-    {
       "id": "R-SpecifIsgeneralizationof",
-      "changedAt": "2023-08-09T12:30:28.654Z",
-      "revision": "36",
+      "changedAt": "2024-05-08T13:24:37.999Z",
+      "revision": "rev-11631954298",
+      "replaces": [
+        "36"
+      ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
       },
@@ -18888,18 +18754,18 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
             "V-TermStatus-48"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -18914,8 +18780,11 @@
     },
     {
       "id": "R-SysmlIsgeneralizationof",
-      "changedAt": "2023-09-03T08:51:33.793Z",
-      "revision": "36",
+      "changedAt": "2024-05-08T13:24:47.116Z",
+      "revision": "rev-8224244574",
+      "replaces": [
+        "36"
+      ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
       },
@@ -18943,14 +18812,6 @@
                 "language": "en"
               }
             ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
           ]
         },
         {
@@ -33965,6 +33826,380 @@
       ]
     },
     {
+      "id": "R-2K86y9ppjVccODGiLD5189a1hsi",
+      "changedAt": "2024-05-09T14:00:19.635Z",
+      "revision": "rev-10583654773",
+      "replaces": [
+        "rev-9912264696"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "FMC:Entity-Relationship_Diagram"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "One of tree diagram types defined by the Fundamental Modeling Concepts (FMC). See the [FMC Notation Reference](http://www.fmc-modeling.org/notation_reference).",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "FMC Entity Relation Diagram",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-sSV4JGge5dzIulz4thQIgMXSkQ9",
+      "changedAt": "2024-05-09T13:55:14.179Z",
+      "revision": "rev-8881376064",
+      "replaces": [
+        "rev-8465992198"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "FMC:Petri_Net"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "One of tree diagram types defined by the Fundamental Modeling Concepts (FMC). See the [FMC Notation Reference](http://www.fmc-modeling.org/notation_reference).",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "FMC Petri Net",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-m702dK0uAzllaIwkAw8wT8beRXm",
+      "changedAt": "2024-05-09T13:55:00.680Z",
+      "revision": "rev-7879505416",
+      "replaces": [
+        "rev-11185788513"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "FMC:Block_Diagram"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "One of tree diagram types defined by the Fundamental Modeling Concepts (FMC). See the [FMC Notation Reference](http://www.fmc-modeling.org/notation_reference).",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "FMC Block Diagram",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-Llnjwolu1K82gcZEUeITQ18Xsva",
+      "changedAt": "2024-05-09T13:55:49.909Z",
+      "revision": "rev-11687264463",
+      "replaces": [
+        "rev-11898506303"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "uml:Class_Diagram"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "UML Class Diagram",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-Me4FKTcsW8fHygKxxCHAayD9IxM",
+      "changedAt": "2024-05-09T13:56:17.131Z",
+      "revision": "rev-11454772258",
+      "replaces": [
+        "rev-11898506303"
+      ],
+      "class": {
+        "id": "RC-SpecifTermpropertyvalue"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "uml:Activity_Diagram"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "UML Activity Diagram",
+                "language": "en"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-Cl12pC9IJQGkMfpUEBVjiXbqcEI",
       "changedAt": "2023-03-06T07:34:20.818Z",
       "revision": "98",
@@ -43633,58 +43868,6 @@
       }
     },
     {
-      "id": "S-Vpij1DC2UXG4bJWDcvNqmj46lFE",
-      "changedAt": "2023-03-15T08:23:57.589Z",
-      "class": {
-        "id": "SC-isEligibleAsSubject"
-      },
-      "subject": {
-        "id": "R-FmcActor"
-      },
-      "object": {
-        "id": "R-UmlIscomposedof"
-      }
-    },
-    {
-      "id": "S-LXGXaIb222o9Ar235tEFQMxFAi2",
-      "changedAt": "2023-03-15T08:24:19.845Z",
-      "class": {
-        "id": "SC-isEligibleAsObject"
-      },
-      "subject": {
-        "id": "R-FmcActor"
-      },
-      "object": {
-        "id": "R-UmlIscomposedof"
-      }
-    },
-    {
-      "id": "S-eG7dah6a0XOhthd5Fjcmfs6ygBs",
-      "changedAt": "2023-03-15T08:24:52.037Z",
-      "class": {
-        "id": "SC-isEligibleAsSubject"
-      },
-      "subject": {
-        "id": "R-FmcActor"
-      },
-      "object": {
-        "id": "R-UmlIsaggregatedby"
-      }
-    },
-    {
-      "id": "S-npAF4t29ZHLKaP83aA8gRLshLDf",
-      "changedAt": "2023-03-15T08:25:02.573Z",
-      "class": {
-        "id": "SC-isEligibleAsObject"
-      },
-      "subject": {
-        "id": "R-FmcActor"
-      },
-      "object": {
-        "id": "R-UmlIsaggregatedby"
-      }
-    },
-    {
       "id": "S-l9lUUFRYYTVl3Eyfl8tLqnlNVU7",
       "changedAt": "2023-03-15T08:51:04.245Z",
       "class": {
@@ -43760,32 +43943,6 @@
       },
       "object": {
         "id": "R-SysmlIsallocatedto"
-      }
-    },
-    {
-      "id": "S-eMxnNsOxJ4WyaujIRr2uqGbPtJU",
-      "changedAt": "2023-03-15T08:53:12.765Z",
-      "class": {
-        "id": "SC-isEligibleAsSubject"
-      },
-      "subject": {
-        "id": "R-FmcState"
-      },
-      "object": {
-        "id": "R-UmlIsassociatedwith"
-      }
-    },
-    {
-      "id": "S-nYMRnXN3UWKSv9saVxZVbzq58go",
-      "changedAt": "2023-03-15T08:53:23.367Z",
-      "class": {
-        "id": "SC-isEligibleAsObject"
-      },
-      "subject": {
-        "id": "R-FmcState"
-      },
-      "object": {
-        "id": "R-UmlIsassociatedwith"
       }
     },
     {
@@ -43945,32 +44102,6 @@
       }
     },
     {
-      "id": "S-5zriV8XRiC3669xesv3Z42D1cx0",
-      "changedAt": "2023-03-16T14:51:07.987Z",
-      "class": {
-        "id": "SC-isEligibleAsSubject"
-      },
-      "subject": {
-        "id": "R-FmcActor"
-      },
-      "object": {
-        "id": "R-UmlComposes"
-      }
-    },
-    {
-      "id": "S-ExGGpNCFlIk91U1pdjzoaj41vzX",
-      "changedAt": "2023-03-16T14:51:16.210Z",
-      "class": {
-        "id": "SC-isEligibleAsObject"
-      },
-      "subject": {
-        "id": "R-FmcActor"
-      },
-      "object": {
-        "id": "R-UmlComposes"
-      }
-    },
-    {
       "id": "S-NiNYAgg6jpAeNzDaQfPOzKOiJqz",
       "changedAt": "2023-03-16T14:51:44.250Z",
       "class": {
@@ -43994,45 +44125,6 @@
       },
       "object": {
         "id": "R-UmlAggregates"
-      }
-    },
-    {
-      "id": "S-WKd8f4zkvyoiOfWs0irKZQtf3sl",
-      "changedAt": "2023-03-16T14:52:32.006Z",
-      "class": {
-        "id": "SC-isEligibleAsSubject"
-      },
-      "subject": {
-        "id": "R-FmcActor"
-      },
-      "object": {
-        "id": "R-UmlAggregates"
-      }
-    },
-    {
-      "id": "S-7NrwlI39X7okxNABM58QxfN8jYs",
-      "changedAt": "2023-03-16T14:52:41.001Z",
-      "class": {
-        "id": "SC-isEligibleAsObject"
-      },
-      "subject": {
-        "id": "R-FmcActor"
-      },
-      "object": {
-        "id": "R-UmlAggregates"
-      }
-    },
-    {
-      "id": "S-Wej51zQE227hpirlhCGqDIq2kzq",
-      "changedAt": "2023-03-16T14:54:08.276Z",
-      "class": {
-        "id": "SC-isSynonymOfStatement"
-      },
-      "subject": {
-        "id": "R-OslcrmDecomposes"
-      },
-      "object": {
-        "id": "R-UmlIscomposedof"
       }
     },
     {
@@ -45121,7 +45213,7 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
         "id": "R-DctermsTitle"
@@ -45134,7 +45226,7 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
         "id": "R-DctermsDescription"
@@ -45147,7 +45239,7 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
         "id": "R-DctermsType"
@@ -45160,7 +45252,7 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
         "id": "R-DctermsIdentifier"
@@ -45173,7 +45265,7 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
         "id": "R-DctermsCreator"
@@ -45186,7 +45278,7 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
         "id": "R-1357982114"
@@ -45199,7 +45291,7 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
         "id": "R-DctermsModifiedBy"
@@ -45212,7 +45304,7 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
         "id": "R-852227623"
@@ -45225,7 +45317,7 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
         "id": "R-852227622"
@@ -45238,7 +45330,7 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
         "id": "R-852227621"
@@ -45251,7 +45343,7 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
         "id": "R-DctermsSubject"
@@ -45446,7 +45538,7 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
         "id": "R-OslcServiceprovider"
@@ -45567,19 +45659,6 @@
       },
       "object": {
         "id": "R-OslcrmDecomposedby"
-      }
-    },
-    {
-      "id": "S-W9gGPFjwY9a51H3K2gzOOXSCo7N",
-      "changedAt": "2023-07-15T16:41:31.058Z",
-      "class": {
-        "id": "SC-isSynonymOfStatement"
-      },
-      "subject": {
-        "id": "R-ArchimateIscomposedof"
-      },
-      "object": {
-        "id": "R-UmlIscomposedof"
       }
     },
     {
@@ -45853,32 +45932,6 @@
       },
       "object": {
         "id": "R-rt4q9P1xsiRQjxagKsp9SkSEu8J"
-      }
-    },
-    {
-      "id": "S-xrU3CYosMrcKRhyMfBNaSKRo69F",
-      "changedAt": "2023-07-16T12:52:30.583Z",
-      "class": {
-        "id": "SC-isSynonymOfStatement"
-      },
-      "subject": {
-        "id": "R-FmcContains"
-      },
-      "object": {
-        "id": "R-SpecifContains"
-      }
-    },
-    {
-      "id": "S-UVnpuyk5Jm7CeWXtBtakImLkaBo",
-      "changedAt": "2023-07-16T12:53:03.924Z",
-      "class": {
-        "id": "SC-isSynonymOfStatement"
-      },
-      "subject": {
-        "id": "R-ArchimateUnites"
-      },
-      "object": {
-        "id": "R-SpecifContains"
       }
     },
     {
@@ -46214,19 +46267,6 @@
       },
       "subject": {
         "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks"
-      },
-      "object": {
-        "id": "R-UmlIscomposedof"
-      }
-    },
-    {
-      "id": "S-PVhCJIyk7sayy1DjwoqHULd9Bi8",
-      "changedAt": "2023-07-16T15:16:06.791Z",
-      "class": {
-        "id": "SC-isSynonymOfStatement"
-      },
-      "subject": {
-        "id": "R-SysmlIscomposedof"
       },
       "object": {
         "id": "R-UmlIscomposedof"
@@ -47325,32 +47365,6 @@
       }
     },
     {
-      "id": "S-LNI5Qmsq6hxczCbrAe2TDQ3VhRr",
-      "changedAt": "2023-08-23T18:23:05.726Z",
-      "class": {
-        "id": "SC-isSpecializationOfStatement"
-      },
-      "subject": {
-        "id": "R-SpecifWrites"
-      },
-      "object": {
-        "id": "R-SpecifRelates"
-      }
-    },
-    {
-      "id": "S-v2SgzLhuia36B1RNSyJNQtB2jn3",
-      "changedAt": "2023-08-23T18:23:55.366Z",
-      "class": {
-        "id": "SC-isSpecializationOfStatement"
-      },
-      "subject": {
-        "id": "R-SpecifReads"
-      },
-      "object": {
-        "id": "R-SpecifRelates"
-      }
-    },
-    {
       "id": "S-txqeSaqavHP6sl7JaehnqPkASrO",
       "changedAt": "2023-08-25T07:43:31.115Z",
       "class": {
@@ -48020,23 +48034,10 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
-        "id": "R-RF3uW8bSgBvvxiWdqJAWi65vz4v"
-      }
-    },
-    {
-      "id": "S-pQhAOOikiTbGU6S6sxLGX93jW5Y",
-      "changedAt": "2023-10-23T21:41:02.140Z",
-      "class": {
-        "id": "SC-isSynonymOfStatement"
-      },
-      "subject": {
-        "id": "R-RF3uW8bSgBvvxiWdqJAWi65vz4v"
-      },
-      "object": {
-        "id": "R-SpecifContains"
+        "id": "R-dcterms_hasPart"
       }
     },
     {
@@ -48046,7 +48047,7 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
         "id": "R-TDW5xlLGoPqx3N1aisMuXVHcfng"
@@ -48062,20 +48063,7 @@
         "id": "R-TDW5xlLGoPqx3N1aisMuXVHcfng"
       },
       "object": {
-        "id": "R-RF3uW8bSgBvvxiWdqJAWi65vz4v"
-      }
-    },
-    {
-      "id": "S-9ABAkelHcFupgLCEdJBZvnxYQgk",
-      "changedAt": "2023-10-23T21:42:00.494Z",
-      "class": {
-        "id": "SC-isAntonymOfStatement"
-      },
-      "subject": {
-        "id": "R-TDW5xlLGoPqx3N1aisMuXVHcfng"
-      },
-      "object": {
-        "id": "R-SpecifContains"
+        "id": "R-dcterms_hasPart"
       }
     },
     {
@@ -48566,7 +48554,7 @@
         "id": "SC-isNamespace"
       },
       "subject": {
-        "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+        "id": "R-Namespace_dcterms"
       },
       "object": {
         "id": "R-F8qeSplm7T6s3GlDcSF6KNcRVMB"
@@ -51043,60 +51031,60 @@
       }
     },
     {
-      "id": "S-RiquIGhNNfoJKwlOhA9BPS87z34",
-      "changedAt": "2024-05-05T13:11:34.092Z",
+      "id": "S-eoCdQOG42N1U44VRsyG0PFJD1MX",
+      "changedAt": "2024-05-08T12:37:12.825Z",
       "class": {
-        "id": "SC-isEligibleAsObject"
+        "id": "SC-isSynonymOfStatement"
       },
       "subject": {
-        "id": "R-FmcState"
+        "id": "R-FmcContains"
       },
       "object": {
-        "id": "R-UmlAggregates"
+        "id": "R-dcterms_hasPart"
       }
     },
     {
-      "id": "S-JK1oDLpVPRNrTdyfRkXNGhn3PBb",
-      "changedAt": "2024-05-05T13:11:45.561Z",
+      "id": "S-uufVaUpSLp3ytAEkKiU8yHGcGBV",
+      "changedAt": "2024-05-08T12:37:24.842Z",
       "class": {
-        "id": "SC-isEligibleAsSubject"
+        "id": "SC-isSynonymOfStatement"
       },
       "subject": {
-        "id": "R-FmcState"
+        "id": "R-SpecifContains"
       },
       "object": {
-        "id": "R-UmlAggregates"
+        "id": "R-dcterms_hasPart"
       }
     },
     {
-      "id": "S-A5o8jhQSaRTWYF8m3uvoVQVkTyU",
-      "changedAt": "2024-05-05T13:12:10.477Z",
+      "id": "S-Ci6EmLvvFf7aHYLXLzscIS7rW8W",
+      "changedAt": "2024-05-08T12:37:38.661Z",
       "class": {
-        "id": "SC-isEligibleAsSubject"
+        "id": "SC-isSynonymOfStatement"
       },
       "subject": {
-        "id": "R-FmcState"
+        "id": "R-ArchimateUnites"
       },
       "object": {
-        "id": "R-UmlIscomposedof"
+        "id": "R-dcterms_hasPart"
       }
     },
     {
-      "id": "S-Oe69kpIsmfjcmUFKYIlTv9Hkpzg",
-      "changedAt": "2024-05-05T13:12:21.950Z",
+      "id": "S-zcre1F45u13HSdPgPc7rOhcpcQW",
+      "changedAt": "2024-05-08T12:39:58.253Z",
       "class": {
-        "id": "SC-isEligibleAsObject"
+        "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-FmcState"
+        "id": "R-dcterms_hasPart"
       },
       "object": {
-        "id": "R-UmlIscomposedof"
+        "id": "R-DctermsType"
       }
     },
     {
-      "id": "S-SrqrgbnelphaQ4NPJX2bDZqkcu0",
-      "changedAt": "2024-05-05T13:12:53.449Z",
+      "id": "S-1azqj3wMSSPDHoQE8XtXXOU7OBF",
+      "changedAt": "2024-05-08T12:40:35.845Z",
       "class": {
         "id": "SC-isEligibleAsSubject"
       },
@@ -51104,12 +51092,38 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-UmlIsassociatedwith"
+        "id": "R-dcterms_hasPart"
       }
     },
     {
-      "id": "S-kb8lOQ78e8ADamIWiPqjrLHPFQT",
-      "changedAt": "2024-05-05T13:13:03.094Z",
+      "id": "S-tqQCx1bB9FIIWHpDCayduJzR9Bo",
+      "changedAt": "2024-05-08T12:40:45.546Z",
+      "class": {
+        "id": "SC-isEligibleAsSubject"
+      },
+      "subject": {
+        "id": "R-FmcState"
+      },
+      "object": {
+        "id": "R-dcterms_hasPart"
+      }
+    },
+    {
+      "id": "S-RNEfr6etMoR5v2kk2gHz4w0NUJo",
+      "changedAt": "2024-05-08T12:40:57.012Z",
+      "class": {
+        "id": "SC-isEligibleAsSubject"
+      },
+      "subject": {
+        "id": "R-SpecifCollection"
+      },
+      "object": {
+        "id": "R-dcterms_hasPart"
+      }
+    },
+    {
+      "id": "S-tFRVDEzJpinwqK5y7gECVbNINFe",
+      "changedAt": "2024-05-08T12:41:23.627Z",
       "class": {
         "id": "SC-isEligibleAsObject"
       },
@@ -51117,7 +51131,189 @@
         "id": "R-FmcActor"
       },
       "object": {
+        "id": "R-dcterms_hasPart"
+      }
+    },
+    {
+      "id": "S-9duxsxlQ7sWZgRkvFAYmWtedmGp",
+      "changedAt": "2024-05-08T12:41:33.323Z",
+      "class": {
+        "id": "SC-isEligibleAsObject"
+      },
+      "subject": {
+        "id": "R-FmcState"
+      },
+      "object": {
+        "id": "R-dcterms_hasPart"
+      }
+    },
+    {
+      "id": "S-6mY49XtfUeMvBJ8rl8HIuWgHGmT",
+      "changedAt": "2024-05-08T12:41:41.686Z",
+      "class": {
+        "id": "SC-isEligibleAsObject"
+      },
+      "subject": {
+        "id": "R-FmcEvent"
+      },
+      "object": {
+        "id": "R-dcterms_hasPart"
+      }
+    },
+    {
+      "id": "S-VpHLyIXLHma9WerdjNu7hLQgNpY",
+      "changedAt": "2024-05-08T12:41:51.777Z",
+      "class": {
+        "id": "SC-isEligibleAsObject"
+      },
+      "subject": {
+        "id": "R-SpecifCollection"
+      },
+      "object": {
+        "id": "R-dcterms_hasPart"
+      }
+    },
+    {
+      "id": "S-JpinVK5y7tFRNINFeDEzgECVbwq",
+      "changedAt": "2024-05-08T12:41:23.627Z",
+      "class": {
+        "id": "SC-isEligibleAsObject"
+      },
+      "subject": {
+        "id": "R-SpecifModelelement"
+      },
+      "object": {
+        "id": "R-dcterms_hasPart"
+      }
+    },
+    {
+      "id": "S-XLLy9VpHhLQgNpYIWerdjNu7Hma",
+      "changedAt": "2024-05-08T12:41:51.777Z",
+      "class": {
+        "id": "SC-isEligibleAsObject"
+      },
+      "subject": {
+        "id": "R-IrebRequirement"
+      },
+      "object": {
+        "id": "R-dcterms_hasPart"
+      }
+    },
+    {
+      "id": "S-gJoDmEhDOYRMn2VxgIngpGJb8SG",
+      "changedAt": "2024-05-08T12:45:24.918Z",
+      "class": {
+        "id": "SC-isEligibleAsObject"
+      },
+      "subject": {
+        "id": "R-SpecifView"
+      },
+      "object": {
+        "id": "R-dcterms_hasPart"
+      }
+    },
+    {
+      "id": "S-DCdJdldtCMl2E5XD6ku96nmDhIU",
+      "changedAt": "2024-05-08T13:04:00.702Z",
+      "class": {
+        "id": "SC-isSynonymOfStatement"
+      },
+      "subject": {
+        "id": "R-UmlIscomposedof"
+      },
+      "object": {
+        "id": "R-TDW5xlLGoPqx3N1aisMuXVHcfng"
+      }
+    },
+    {
+      "id": "S-ltuukbOhQQdEOViE4vdezJsO86i",
+      "changedAt": "2024-05-08T13:06:15.166Z",
+      "class": {
+        "id": "SC-isSynonymOfStatement"
+      },
+      "subject": {
+        "id": "R-ArchimateIscomposedof"
+      },
+      "object": {
+        "id": "R-TDW5xlLGoPqx3N1aisMuXVHcfng"
+      }
+    },
+    {
+      "id": "S-yxG6DIcYzKAWsIPjgiLiLLesKDD",
+      "changedAt": "2024-05-08T13:06:25.568Z",
+      "class": {
+        "id": "SC-isSynonymOfStatement"
+      },
+      "subject": {
+        "id": "R-SysmlIscomposedof"
+      },
+      "object": {
+        "id": "R-TDW5xlLGoPqx3N1aisMuXVHcfng"
+      }
+    },
+    {
+      "id": "S-yN2CxtiRZGzoqT8nC86PsxSQqKc",
+      "changedAt": "2024-05-08T13:06:38.550Z",
+      "class": {
+        "id": "SC-isSynonymOfStatement"
+      },
+      "subject": {
+        "id": "R-OslcrmDecomposes"
+      },
+      "object": {
+        "id": "R-TDW5xlLGoPqx3N1aisMuXVHcfng"
+      }
+    },
+    {
+      "id": "S-JhXSISlmQEjA26txsAvO3iREnCs",
+      "changedAt": "2024-05-08T13:22:16.434Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-jk7h2ezdbV0KfizFiG5pTQVRTSC"
+      },
+      "object": {
+        "id": "R-SpecifCollection"
+      }
+    },
+    {
+      "id": "S-JXYMe3AEyW2HqNob9FW7JjQlCOl",
+      "changedAt": "2024-05-08T14:25:41.777Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-UmlIscomposedof"
+      },
+      "object": {
+        "id": "R-DctermsType"
+      }
+    },
+    {
+      "id": "S-VHMsF1VZPaBugChXqvsbGBLGzW9",
+      "changedAt": "2024-05-08T14:26:02.995Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
         "id": "R-UmlIsassociatedwith"
+      },
+      "object": {
+        "id": "R-DctermsType"
+      }
+    },
+    {
+      "id": "S-8Ttza9LcCT3xfokAwNqVp0c6Vit",
+      "changedAt": "2024-05-08T14:26:22.852Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-UmlAggregates"
+      },
+      "object": {
+        "id": "R-DctermsType"
       }
     }
   ],
@@ -51190,7 +51386,7 @@
             {
               "id": "N-xGFQi348B2lVpfYsD13ktVG6kF7",
               "resource": {
-                "id": "R-2ixB97hGITyJyxB29iOwVFy1s1X"
+                "id": "R-Namespace_dcterms"
               },
               "changedAt": "2023-06-15T14:48:10.630Z"
             },
@@ -51940,7 +52136,7 @@
             {
               "id": "N-5AP5qdMeBeBnURVia2BWtTlTL3r",
               "resource": {
-                "id": "R-RF3uW8bSgBvvxiWdqJAWi65vz4v"
+                "id": "R-dcterms_hasPart"
               },
               "changedAt": "2023-10-23T21:39:25.410Z"
             },
@@ -52355,20 +52551,6 @@
               "changedAt": "2023-07-16T15:11:53.234Z"
             },
             {
-              "id": "N-lDeGEGt39ivtjPxVKtHOS7kgTsN",
-              "resource": {
-                "id": "R-SysmlIscomposedof"
-              },
-              "changedAt": "2023-07-16T15:15:38.294Z"
-            },
-            {
-              "id": "N-Hq6otySRmYPUeElXR0O3PN08Idk",
-              "resource": {
-                "id": "R-ArchimateIscomposedof"
-              },
-              "changedAt": "2023-07-15T16:40:35.661Z"
-            },
-            {
               "id": "N-9bTrtu1JWgEXt0mz1ix4wd2c7RF",
               "resource": {
                 "id": "R-ArchimateComposes"
@@ -52390,11 +52572,18 @@
               "changedAt": "2024-03-07T17:24:42.449Z"
             },
             {
-              "id": "N-rI1c4EBLDOM8UM6wtWOj557hQiW",
+              "id": "N-lDeGEGt39ivtjPxVKtHOS7kgTsN",
               "resource": {
-                "id": "R-UmlAggregates"
+                "id": "R-SysmlIscomposedof"
               },
-              "changedAt": "2023-03-16T14:49:40.585Z"
+              "changedAt": "2024-05-08T13:01:50.867Z"
+            },
+            {
+              "id": "N-Hq6otySRmYPUeElXR0O3PN08Idk",
+              "resource": {
+                "id": "R-ArchimateIscomposedof"
+              },
+              "changedAt": "2024-05-08T13:01:56.917Z"
             },
             {
               "id": "N-qEgSojoH8KY2IPsmY49TGtgVWlb",
@@ -52404,18 +52593,25 @@
               "changedAt": "2024-03-07T17:25:03.299Z"
             },
             {
+              "id": "N-ImIa7tb3OG6c374rkRL0nVnGesH",
+              "resource": {
+                "id": "R-SysmlIsaggregateby"
+              },
+              "changedAt": "2024-05-08T13:00:27.305Z"
+            },
+            {
+              "id": "N-rI1c4EBLDOM8UM6wtWOj557hQiW",
+              "resource": {
+                "id": "R-UmlAggregates"
+              },
+              "changedAt": "2024-05-08T13:00:19.717Z"
+            },
+            {
               "id": "N-d6gj4LLn1zk2xoqOjWi8qtSJRhf",
               "resource": {
                 "id": "R-SysmlAggegates"
               },
               "changedAt": "2023-07-16T15:18:56.227Z"
-            },
-            {
-              "id": "N-ImIa7tb3OG6c374rkRL0nVnGesH",
-              "resource": {
-                "id": "R-SysmlIsaggregateby"
-              },
-              "changedAt": "2024-03-07T17:25:22.015Z"
             },
             {
               "id": "N-RMeTf1YIPfl6nAkW7XA3lficH1V",
@@ -52471,6 +52667,27 @@
               "revision": "114"
             },
             {
+              "id": "N-wJnegdKeVui7ymc6fXKRbrMNM1B",
+              "resource": {
+                "id": "R-UmlIsspecialisationof"
+              },
+              "changedAt": "2024-05-08T12:59:14.412Z"
+            },
+            {
+              "id": "N-EwNBfFH5cH81fq51LKCBUXjXkwm",
+              "resource": {
+                "id": "R-SysmlIsspecialisationof"
+              },
+              "changedAt": "2024-05-08T12:57:36.941Z"
+            },
+            {
+              "id": "N-8pUc6Vjp86KYxpBFwvbnduOoHKp",
+              "resource": {
+                "id": "R-SpecifIsspecializationof"
+              },
+              "changedAt": "2024-05-08T12:57:29.017Z"
+            },
+            {
               "id": "N-0eDOebtrKCoVTzwwo3gQRHGuVqY",
               "resource": {
                 "id": "R-bTM6eyTwS9KmZSNEBaiemrRPLbm"
@@ -52485,19 +52702,19 @@
               "changedAt": "2024-03-03T13:56:36.613Z"
             },
             {
-              "id": "N-wJnegdKeVui7ymc6fXKRbrMNM1B",
-              "resource": {
-                "id": "R-UmlIsspecialisationof"
-              },
-              "changedAt": "2021-11-07T19:24:51.396Z"
-            },
-            {
               "id": "N-qEgSojoH8KY2IPsmY49TGtgVWmc",
               "resource": {
                 "id": "R-UmlIsgeneralizationof"
               },
               "changedAt": "2019-05-30T14:52:25+01:00",
               "revision": "114"
+            },
+            {
+              "id": "N-R1qTM3581nwGOaNPJ8gcxB2xOzJ",
+              "resource": {
+                "id": "R-UmlIsgeneralisationof"
+              },
+              "changedAt": "2024-05-08T12:59:09.710Z"
             },
             {
               "id": "N-wGsBwbd5RX3S776Vi2ArPWtLQPB",
@@ -52512,27 +52729,6 @@
                 "id": "R-nKufiWMObXf3scZCs5SnrIMPHqL"
               },
               "changedAt": "2024-03-03T18:08:39.627Z"
-            },
-            {
-              "id": "N-R1qTM3581nwGOaNPJ8gcxB2xOzJ",
-              "resource": {
-                "id": "R-UmlIsgeneralisationof"
-              },
-              "changedAt": "2021-11-07T19:25:45.483Z"
-            },
-            {
-              "id": "N-8pUc6Vjp86KYxpBFwvbnduOoHKp",
-              "resource": {
-                "id": "R-SpecifIsspecializationof"
-              },
-              "changedAt": "2023-08-09T12:31:26.366Z"
-            },
-            {
-              "id": "N-EwNBfFH5cH81fq51LKCBUXjXkwm",
-              "resource": {
-                "id": "R-SysmlIsspecialisationof"
-              },
-              "changedAt": "2023-09-03T08:50:30.953Z"
             },
             {
               "id": "N-3miTcOJNvaSYSlgTy0mIRj4Wyqo",
@@ -53708,6 +53904,41 @@
           },
           "changedAt": "2018-02-17T14:52:16+01:00",
           "nodes": [
+            {
+              "id": "N-ATliByS93ECE2SSUntSQtXgPnkk",
+              "resource": {
+                "id": "R-2K86y9ppjVccODGiLD5189a1hsi"
+              },
+              "changedAt": "2024-05-09T13:50:53.449Z"
+            },
+            {
+              "id": "N-fzlzwePaIoniLS3bQ2HSEScoszr",
+              "resource": {
+                "id": "R-sSV4JGge5dzIulz4thQIgMXSkQ9"
+              },
+              "changedAt": "2024-05-09T13:51:26.080Z"
+            },
+            {
+              "id": "N-J1uTsWR2K6aE9KYtygkdTvGp6kE",
+              "resource": {
+                "id": "R-m702dK0uAzllaIwkAw8wT8beRXm"
+              },
+              "changedAt": "2024-05-09T13:51:58.152Z"
+            },
+            {
+              "id": "N-QuVNYZeDLVs3UIyoKFVUVwtnhhL",
+              "resource": {
+                "id": "R-Llnjwolu1K82gcZEUeITQ18Xsva"
+              },
+              "changedAt": "2024-05-09T13:52:38.890Z"
+            },
+            {
+              "id": "N-tpVF0418NUTGhcAvg8OYFPsKb6v",
+              "resource": {
+                "id": "R-Me4FKTcsW8fHygKxxCHAayD9IxM"
+              },
+              "changedAt": "2024-05-09T13:56:17.131Z"
+            },
             {
               "id": "N-OyEnQ8RpOVVEjP0ZNn6hax16JPf",
               "resource": {
