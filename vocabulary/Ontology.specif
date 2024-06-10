@@ -11,7 +11,7 @@
   ],
   "generator": "SpecIF Model-Integrator and Editor",
   "generatorVersion": "1.1.r.24",
-  "createdAt": "2024-05-09T14:00:37.446Z",
+  "createdAt": "2024-06-09T22:15:15.140Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -3667,10 +3667,10 @@
     },
     {
       "id": "R-SpecifView",
-      "changedAt": "2024-02-12T16:43:44.375Z",
-      "revision": "rev-11965404668",
+      "changedAt": "2024-06-09T18:26:36.189Z",
+      "revision": "rev-9144069983",
       "replaces": [
-        "8"
+        "rev-11965404668"
       ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -3804,6 +3804,14 @@
           },
           "values": [
             "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
           ]
         }
       ]
@@ -5026,7 +5034,8 @@
     },
     {
       "id": "R-SpecifModelelement",
-      "changedAt": "2023-08-23T18:20:12.157Z",
+      "changedAt": "2024-06-09T18:23:40.090Z",
+      "revision": "rev-10987165742",
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -5129,13 +5138,24 @@
           "values": [
             "false"
           ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
         }
       ]
     },
     {
       "id": "R-FmcActor",
-      "changedAt": "2023-02-26T21:19:26.072Z",
-      "revision": "158",
+      "changedAt": "2024-06-09T18:27:03.603Z",
+      "revision": "rev-8883325401",
+      "replaces": [
+        "158"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -5274,13 +5294,24 @@
           "values": [
             "false"
           ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
         }
       ]
     },
     {
       "id": "R-FmcState",
-      "changedAt": "2023-08-23T18:14:20.647Z",
-      "revision": "11",
+      "changedAt": "2024-06-09T18:27:15.915Z",
+      "revision": "rev-9828177780",
+      "replaces": [
+        "11"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -5419,13 +5450,24 @@
           "values": [
             "false"
           ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
         }
       ]
     },
     {
       "id": "R-FmcEvent",
-      "changedAt": "2023-08-23T18:16:40.830Z",
-      "revision": "12",
+      "changedAt": "2024-06-09T18:27:28.951Z",
+      "revision": "rev-10801572634",
+      "replaces": [
+        "12"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -5564,13 +5606,24 @@
           "values": [
             "false"
           ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
         }
       ]
     },
     {
       "id": "R-SpecifCollection",
-      "changedAt": "2023-02-26T21:25:04.042Z",
-      "revision": "143",
+      "changedAt": "2024-06-09T18:27:41.176Z",
+      "revision": "rev-8080972392",
+      "replaces": [
+        "143"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -5609,6 +5662,43 @@
                 "text": "SpecIF:Collection"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>A 'Collection' is a logical (often conceptual) group of resources linked with a [[SpecIF:contains]] statement. It corresponds to a <a href=\"https://camunda.com/bpmn/reference/\">'Group'</a> in BPMN Diagrams.</p><p>BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. <small>(<i>source: <a href=\"http://www.bpmn-tool.com/en/tutorial/\">BPMN Tutorial</a></i>)</small></p>",
+                "language": "en"
+              },
+              {
+                "text": "<p>Eine 'Kollektion' ist eine logische Gruppierung bestimmter Modellelemente, die per [[SpecIF:contains]] Relation zusammen gefasst sind. Sie entspricht einer <a href=\"https://camunda.com/bpmn/reference/\">'Gruppe'</a> in BPMN Diagrammen. <small>(<i>source: <a href=\"http://www.bpmn-tool.com/en/tutorial/\">BPMN Tutorial</a></i>)</small></p>",
+                "language": "de"
+              },
+              {
+                "text": "<p>Une 'collection' est un groupe logique (souvent conceptuel) de ressources liées par une déclaration [[SpecIF:contains]]. Elle correspond à un <a href=\"https://camunda.com/bpmn/reference/\">'groupe'</a> dans les diagrammes BPMN. <small>(<i>source: <a href=\"http://www.bpmn-tool.com/en/tutorial/\">BPMN Tutoriel</a></i>)</small></p>",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
           ]
         },
         {
@@ -5655,43 +5745,6 @@
         },
         {
           "class": {
-            "id": "PC-Description"
-          },
-          "values": [
-            [
-              {
-                "text": "<p>A 'Collection' is a logical (often conceptual) group of resources linked with a [[SpecIF:contains]] statement. It corresponds to a <a href=\"https://camunda.com/bpmn/reference/\">'Group'</a> in BPMN Diagrams.</p><p>BPMN: An arbitrary set of objects can be defined as a Group to show that they logically belong together. <small>(<i>source: <a href=\"http://www.bpmn-tool.com/en/tutorial/\">BPMN Tutorial</a></i>)</small></p>",
-                "language": "en"
-              },
-              {
-                "text": "<p>Eine 'Kollektion' ist eine logische Gruppierung bestimmter Modellelemente, die per [[SpecIF:contains]] Relation zusammen gefasst sind. Sie entspricht einer <a href=\"https://camunda.com/bpmn/reference/\">'Gruppe'</a> in BPMN Diagrammen. <small>(<i>source: <a href=\"http://www.bpmn-tool.com/en/tutorial/\">BPMN Tutorial</a></i>)</small></p>",
-                "language": "de"
-              },
-              {
-                "text": "<p>Une 'collection' est un groupe logique (souvent conceptuel) de ressources liées par une déclaration [[SpecIF:contains]]. Elle correspond à un <a href=\"https://camunda.com/bpmn/reference/\">'groupe'</a> dans les diagrammes BPMN. <small>(<i>source: <a href=\"http://www.bpmn-tool.com/en/tutorial/\">BPMN Tutoriel</a></i>)</small></p>",
-                "language": "fr"
-              }
-            ]
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-Domain"
-          },
-          "values": [
-            "V-Domain-26"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-50"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-Icon"
           },
           "values": [
@@ -5708,6 +5761,14 @@
           },
           "values": [
             "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
           ]
         }
       ]
@@ -6574,8 +6635,11 @@
     },
     {
       "id": "R-SpecifIssue",
-      "changedAt": "2023-07-16T12:28:24.084Z",
-      "revision": "17",
+      "changedAt": "2024-06-09T18:30:06.925Z",
+      "revision": "rev-8540070059",
+      "replaces": [
+        "17"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -6677,6 +6741,14 @@
           },
           "values": [
             "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
           ]
         }
       ]
@@ -6795,7 +6867,8 @@
     },
     {
       "id": "R-SpecifOntologyterm",
-      "changedAt": "2023-03-06T08:58:09.415Z",
+      "changedAt": "2024-06-09T18:28:43.192Z",
+      "revision": "rev-10625745325",
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -7126,8 +7199,11 @@
     },
     {
       "id": "R-SpecifTermpropertyclass",
-      "changedAt": "2024-03-02T16:08:19.967Z",
-      "revision": "rev-9298395348",
+      "changedAt": "2024-06-09T18:29:27.203Z",
+      "revision": "rev-11452788573",
+      "replaces": [
+        "rev-9298395348"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -8199,8 +8275,11 @@
     },
     {
       "id": "R-IrebRisk",
-      "changedAt": "2023-04-01T14:10:25.549Z",
-      "revision": "18",
+      "changedAt": "2024-06-09T18:30:52.129Z",
+      "revision": "rev-8567866360",
+      "replaces": [
+        "18"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -8232,6 +8311,14 @@
         },
         {
           "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
+          ]
+        },
+        {
+          "class": {
             "id": "PC-SpecifLocalterm"
           },
           "values": [
@@ -8253,26 +8340,29 @@
         },
         {
           "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-50"
-          ]
-        },
-        {
-          "class": {
             "id": "PC-isHeading"
           },
           "values": [
             "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
           ]
         }
       ]
     },
     {
       "id": "R-FoafPerson",
-      "changedAt": "2023-07-10T12:06:23.412Z",
-      "revision": "20",
+      "changedAt": "2024-06-09T18:31:14.072Z",
+      "revision": "rev-11857564864",
+      "replaces": [
+        "20"
+      ],
       "changedBy": "od",
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -8333,6 +8423,14 @@
           },
           "values": [
             "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
           ]
         }
       ]
@@ -51314,6 +51412,123 @@
       },
       "object": {
         "id": "R-DctermsType"
+      }
+    },
+    {
+      "id": "S-OUiFJCI5jCnz9wHCU27msi4UqSQ",
+      "changedAt": "2024-06-09T12:35:33.150Z",
+      "class": {
+        "id": "SC-hasProperty"
+      },
+      "subject": {
+        "id": "R-SpecifRelates"
+      },
+      "object": {
+        "id": "R-DctermsType"
+      }
+    },
+    {
+      "id": "S-RJ39jgFM67JF9wXwvC3GqK6y4pP",
+      "changedAt": "2024-06-09T13:02:54.299Z",
+      "class": {
+        "id": "SC-isSpecializationOfStatement"
+      },
+      "subject": {
+        "id": "R-dcterms_hasPart"
+      },
+      "object": {
+        "id": "R-SpecifRelates"
+      }
+    },
+    {
+      "id": "S-RzuN4DvwrWqJXC2w2uzWBAf1mW7",
+      "changedAt": "2024-06-09T13:04:07.302Z",
+      "class": {
+        "id": "SC-isSpecializationOfStatement"
+      },
+      "subject": {
+        "id": "R-UmlAggregates"
+      },
+      "object": {
+        "id": "R-SpecifRelates"
+      }
+    },
+    {
+      "id": "S-UWikI6JlWEQFR0cggsv3xLaQQHj",
+      "changedAt": "2024-06-09T13:04:21.042Z",
+      "class": {
+        "id": "SC-isSpecializationOfStatement"
+      },
+      "subject": {
+        "id": "R-UmlComposes"
+      },
+      "object": {
+        "id": "R-SpecifRelates"
+      }
+    },
+    {
+      "id": "S-xDdlyskGmCzawrTjd1vYHohJ1ki",
+      "changedAt": "2024-06-09T13:04:41.391Z",
+      "class": {
+        "id": "SC-isSpecializationOfStatement"
+      },
+      "subject": {
+        "id": "R-UmlIsaggregatedby"
+      },
+      "object": {
+        "id": "R-SpecifRelates"
+      }
+    },
+    {
+      "id": "S-s7NF4GEY4x1pqFmfJcTR1CFhgtk",
+      "changedAt": "2024-06-09T13:04:57.476Z",
+      "class": {
+        "id": "SC-isSpecializationOfStatement"
+      },
+      "subject": {
+        "id": "R-UmlIsassociatedwith"
+      },
+      "object": {
+        "id": "R-SpecifRelates"
+      }
+    },
+    {
+      "id": "S-OuijSy6muML8jmBJ5VYuKqDOdLh",
+      "changedAt": "2024-06-09T13:05:13.624Z",
+      "class": {
+        "id": "SC-isSpecializationOfStatement"
+      },
+      "subject": {
+        "id": "R-UmlIscomposedof"
+      },
+      "object": {
+        "id": "R-SpecifRelates"
+      }
+    },
+    {
+      "id": "S-MrKljPl9IakbHwg1fTbGE8T9WU1",
+      "changedAt": "2024-06-09T13:05:23.083Z",
+      "class": {
+        "id": "SC-isSpecializationOfStatement"
+      },
+      "subject": {
+        "id": "R-UmlIsgeneralizationof"
+      },
+      "object": {
+        "id": "R-SpecifRelates"
+      }
+    },
+    {
+      "id": "S-fW9Boq1iX4WTltO4W9iEYo1lAda",
+      "changedAt": "2024-06-09T13:05:31.849Z",
+      "class": {
+        "id": "SC-isSpecializationOfStatement"
+      },
+      "subject": {
+        "id": "R-UmlIsspecializationof"
+      },
+      "object": {
+        "id": "R-SpecifRelates"
       }
     }
   ],
