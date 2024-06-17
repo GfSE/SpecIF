@@ -10,8 +10,8 @@
     }
   ],
   "generator": "SpecIF Model-Integrator and Editor",
-  "generatorVersion": "1.1.r.24",
-  "createdAt": "2024-06-09T22:15:15.140Z",
+  "generatorVersion": "1.1.s.7",
+  "createdAt": "2024-06-14T06:52:28.837Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -3008,7 +3008,7 @@
           "values": [
             [
               {
-                "text": "SysML:"
+                "text": "sysml:"
               }
             ]
           ]
@@ -3667,10 +3667,10 @@
     },
     {
       "id": "R-SpecifView",
-      "changedAt": "2024-06-09T18:26:36.189Z",
-      "revision": "rev-9144069983",
+      "changedAt": "2024-06-13T07:51:28.439Z",
+      "revision": "rev-11665083525",
       "replaces": [
-        "rev-11965404668"
+        "rev-9144069983"
       ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -3811,7 +3811,8 @@
             "id": "PC-Instantiation"
           },
           "values": [
-            "V-Instantiation-10"
+            "V-Instantiation-10",
+            "V-Instantiation-20"
           ]
         }
       ]
@@ -9934,8 +9935,11 @@
     },
     {
       "id": "R-jk7h2ezdbV0KfizFiG5pTQVRTSC",
-      "changedAt": "2024-05-02T09:36:43.791Z",
-      "revision": "rev-9205982173",
+      "changedAt": "2024-06-13T07:55:07.739Z",
+      "revision": "rev-11221653125",
+      "replaces": [
+        "rev-9205982173"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -10013,6 +10017,15 @@
           },
           "values": [
             "true"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10",
+            "V-Instantiation-20"
           ]
         }
       ]
@@ -10446,8 +10459,11 @@
     },
     {
       "id": "R-514389528",
-      "changedAt": "2023-04-01T14:14:33.057Z",
-      "revision": "168",
+      "changedAt": "2024-06-13T07:47:15.851Z",
+      "revision": "rev-8633534548",
+      "replaces": [
+        "168"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -10497,12 +10513,22 @@
               }
             ]
           ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10",
+            "V-Instantiation-20"
+          ]
         }
       ]
     },
     {
       "id": "R-Wmcjqx5iziQA2upMhUuTVclFCrJ",
-      "changedAt": "2023-08-09T22:33:33.242Z",
+      "changedAt": "2024-06-13T07:56:19.194Z",
+      "revision": "rev-10358787510",
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -10595,12 +10621,21 @@
               }
             ]
           ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
         }
       ]
     },
     {
       "id": "R-t6gVlG5v7Uy4b3FGKFCS2PzcrA8",
-      "changedAt": "2023-08-09T22:33:54.183Z",
+      "changedAt": "2024-06-13T07:56:31.002Z",
+      "revision": "rev-11904723162",
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -10721,12 +10756,21 @@
               }
             ]
           ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
         }
       ]
     },
     {
       "id": "R-SpecifReader",
-      "changedAt": "2023-09-03T08:48:17.871Z",
+      "changedAt": "2024-06-13T07:56:45.423Z",
+      "revision": "rev-8611897268",
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -10809,17 +10853,18 @@
         },
         {
           "class": {
-            "id": "PC-isHeading"
+            "id": "PC-Instantiation"
           },
           "values": [
-            "false"
+            "V-Instantiation-10"
           ]
         }
       ]
     },
     {
       "id": "R-SpecifEditor",
-      "changedAt": "2023-09-03T08:48:43.446Z",
+      "changedAt": "2024-06-13T07:56:57.045Z",
+      "revision": "rev-9556542071",
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -10898,18 +10943,21 @@
         },
         {
           "class": {
-            "id": "PC-isHeading"
+            "id": "PC-Instantiation"
           },
           "values": [
-            "false"
+            "V-Instantiation-10"
           ]
         }
       ]
     },
     {
       "id": "R-SpecifUserrole",
-      "changedAt": "2018-03-10T05:35:15+01:00",
-      "revision": "174",
+      "changedAt": "2024-06-13T07:52:09.157Z",
+      "revision": "rev-8111163338",
+      "replaces": [
+        "174"
+      ],
       "changedBy": "od",
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -10967,6 +11015,15 @@
                 "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10",
+            "V-Instantiation-20"
           ]
         }
       ]
@@ -11116,7 +11173,8 @@
     },
     {
       "id": "R-SpecifUserstory",
-      "changedAt": "2023-08-09T22:19:35.081Z",
+      "changedAt": "2024-06-13T07:53:56.470Z",
+      "revision": "rev-10655430905",
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -11187,12 +11245,6 @@
                 "text": "User Story",
                 "language": "en"
               }
-            ],
-            [
-              {
-                "text": "User-Story",
-                "language": "en"
-              }
             ]
           ]
         },
@@ -11204,12 +11256,6 @@
             [
               {
                 "text": "User Stories",
-                "language": "en"
-              }
-            ],
-            [
-              {
-                "text": "User-Stories",
                 "language": "en"
               }
             ]
@@ -11226,12 +11272,22 @@
               }
             ]
           ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10",
+            "V-Instantiation-20"
+          ]
         }
       ]
     },
     {
       "id": "R-SpecifPainpoint",
-      "changedAt": "2023-08-21T21:42:10.451Z",
+      "changedAt": "2024-06-13T07:54:07.654Z",
+      "revision": "rev-8734112268",
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -11303,12 +11359,6 @@
                 "text": "Schmerzpunkt",
                 "language": "de"
               }
-            ],
-            [
-              {
-                "text": "Pain-Point",
-                "language": "en"
-              }
             ]
           ]
         },
@@ -11323,12 +11373,22 @@
               }
             ]
           ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10",
+            "V-Instantiation-20"
+          ]
         }
       ]
     },
     {
       "id": "R-ArchimateDataobject",
-      "changedAt": "2023-08-09T22:24:02.850Z",
+      "changedAt": "2024-06-13T07:54:23.264Z",
+      "revision": "rev-10394484823",
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -11409,6 +11469,14 @@
                 "language": "de"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
           ]
         }
       ]
@@ -12503,7 +12571,8 @@
     },
     {
       "id": "R-RdfType",
-      "changedAt": "2023-02-21T08:51:40.300Z",
+      "changedAt": "2024-06-13T07:57:36.376Z",
+      "revision": "rev-10240510678",
       "class": {
         "id": "RC-SpecifTermstatementclass"
       },
@@ -12527,9 +12596,26 @@
           "values": [
             [
               {
-                "text": "<p>A triple of the form: <em>R rdf:type C</em> states that C is an instance of <a href=\"https://www.w3.org/TR/rdf-schema/#ch_class\">rdfs:Class</a> and R is an instance of C.</p><p>The <a href=\"https://www.w3.org/TR/rdf-schema/#ch_domain\">rdfs:domain</a> of rdf:type is <a href=\"https://www.w3.org/TR/rdf-schema/#ch_resource\">rdfs:Resource</a>. The <a href=\"https://www.w3.org/TR/rdf-schema/#ch_range\">rdfs:range</a> of rdf:type is <a href=\"https://www.w3.org/TR/rdf-schema/#ch_class\">rdfs:Class</a>.</p>"
+                "text": "<p>A triple of the form: <em>R rdf:type C</em> states that C is an instance of <a href=\"https://www.w3.org/TR/rdf-schema/#ch_class\">rdfs:Class</a> and R is an instance of C.</p><p>The <a href=\"https://www.w3.org/TR/rdf-schema/#ch_domain\">rdfs:domain</a> of rdf:type is <a href=\"https://www.w3.org/TR/rdf-schema/#ch_resource\">rdfs:Resource</a>. The <a href=\"https://www.w3.org/TR/rdf-schema/#ch_range\">rdfs:range</a> of rdf:type is <a href=\"https://www.w3.org/TR/rdf-schema/#ch_class\">rdfs:Class</a>.</p>",
+                "language": "en"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
           ]
         },
         {
@@ -12555,38 +12641,37 @@
         },
         {
           "class": {
-            "id": "PC-Domain"
+            "id": "PC-Instantiation"
           },
           "values": [
-            "V-Domain-26"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-TermStatus"
-          },
-          "values": [
-            "V-TermStatus-50"
-          ]
-        },
-        {
-          "class": {
-            "id": "PC-isUndirected"
-          },
-          "values": [
-            "false"
+            "V-Instantiation-10"
           ]
         }
       ]
     },
     {
       "id": "R-OslcrmSatisfies",
-      "changedAt": "2023-03-06T08:36:54.308Z",
-      "revision": "164",
+      "changedAt": "2024-06-14T06:49:51.419Z",
+      "revision": "rev-9832470072",
+      "replaces": [
+        "rev-8286562940"
+      ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
       },
       "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
         {
           "class": {
             "id": "PC-SpecifTerm"
@@ -12607,8 +12692,29 @@
             [
               {
                 "text": "<p>The object is satisfied by the subject. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p><p>SpecIF suggests that the subject is confined to a model element, e.g, a [[FMC:Actor]] or [[FMC:State]], and the object is confined to a [[IREB:Requirement]]. More concretely, an example for this type of statement is 'Component-X <em>satisfies</em> 'Requirement-4711'.</p>"
+              },
+              {
+                "text": "<p>The object is satisfied by the subject. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p><p>SpecIF suggests that the subject is confined to a model element, e.g, a [[FMC:Actor]] or [[FMC:State]], and the object is confined to a [[IREB:Requirement]]. More concretely, an example for this type of statement is 'Component-X <em>satisfies</em> 'Requirement-4711'.</p>",
+                "language": "en"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-10",
+            "V-Domain-16"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
           ]
         },
         {
@@ -12634,10 +12740,109 @@
         },
         {
           "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-DYou5SzbWBmAflKbw6D6cJpL6kh",
+      "changedAt": "2024-06-14T06:49:03.417Z",
+      "revision": "rev-9747177203",
+      "replaces": [
+        "rev-9213520628"
+      ],
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "sysml:Satisfy"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>The object is satisfied by the subject. <small>(<i>source: <a href=\"http://open-services.net/\">OSLC</a></i>)</small></p><p>SpecIF suggests that the subject is confined to a model element, e.g, a [[FMC:Actor]] or [[FMC:State]], and the object is confined to a [[IREB:Requirement]]. More concretely, an example for this type of statement is 'Component-X <em>satisfies</em> 'Requirement-4711'.</p>"
+              },
+              {
+                "text": "<p>The object, a requirement, is satisfied by the subject, a system function or component.</p>\n",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-50"
+            "V-TermStatus-48"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "satisfies",
+                "language": "en"
+              },
+              {
+                "text": "erfüllt",
+                "language": "de"
+              },
+              {
+                "text": "satisfait",
+                "language": "fr"
+              }
+            ]
           ]
         },
         {
@@ -12653,7 +12858,7 @@
             "id": "PC-Instantiation"
           },
           "values": [
-            "V-Instantiation-20"
+            "V-Instantiation-10"
           ]
         }
       ]
@@ -15450,8 +15655,11 @@
     },
     {
       "id": "R-SysmlTraces",
-      "changedAt": "2023-07-16T13:19:21.205Z",
-      "revision": "33",
+      "changedAt": "2024-06-14T06:42:42.166Z",
+      "revision": "rev-8740790234",
+      "replaces": [
+        "33"
+      ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
       },
@@ -15475,7 +15683,7 @@
           "values": [
             [
               {
-                "text": "SysML:traces"
+                "text": "sysml:traces"
               }
             ]
           ]
@@ -15498,8 +15706,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-10",
-            "V-Domain-16",
+            "V-Domain-20",
             "V-Domain-26"
           ]
         },
@@ -15531,8 +15738,11 @@
     },
     {
       "id": "R-SysmlIsderivedfrom",
-      "changedAt": "2023-07-16T15:25:39.149Z",
-      "revision": "33",
+      "changedAt": "2024-06-14T06:42:57.745Z",
+      "revision": "rev-9771616463",
+      "replaces": [
+        "33"
+      ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
       },
@@ -15556,7 +15766,7 @@
           "values": [
             [
               {
-                "text": "SysML:isDerivedFrom"
+                "text": "sysml:isDerivedFrom"
               }
             ]
           ]
@@ -15579,8 +15789,7 @@
             "id": "PC-Domain"
           },
           "values": [
-            "V-Domain-10",
-            "V-Domain-16",
+            "V-Domain-20",
             "V-Domain-26"
           ]
         },
@@ -15727,6 +15936,107 @@
           },
           "values": [
             "V-Instantiation-20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-pptosh3F8kHVbq6rlinul6RvMZU",
+      "changedAt": "2024-06-14T06:40:52.155Z",
+      "revision": "rev-8948234553",
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "sysml:Refine"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>A [[IREB:Requirement]] 'refines' another [[IREB:Requirement]].</p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-48"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "refines",
+                "language": "en"
+              },
+              {
+                "text": "verfeinert",
+                "language": "de"
+              },
+              {
+                "text": "affine",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
           ]
         }
       ]
@@ -16140,8 +16450,11 @@
     },
     {
       "id": "R-SysmlIsallocatedto",
-      "changedAt": "2023-07-16T15:03:25.597Z",
-      "revision": "36",
+      "changedAt": "2024-06-14T06:51:52.379Z",
+      "revision": "rev-11239295509",
+      "replaces": [
+        "36"
+      ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
       },
@@ -16165,7 +16478,7 @@
           "values": [
             [
               {
-                "text": "SysML:isAllocatedTo"
+                "text": "sysml:Allocate"
               }
             ]
           ]
@@ -16188,6 +16501,7 @@
             "id": "PC-Domain"
           },
           "values": [
+            "V-Domain-20",
             "V-Domain-26"
           ]
         },
@@ -16206,7 +16520,7 @@
           "values": [
             [
               {
-                "text": "allocated to",
+                "text": "is allocated to",
                 "language": "en"
               },
               {
@@ -16425,7 +16739,7 @@
           "values": [
             [
               {
-                "text": "SysML:isAssociatedWith"
+                "text": "sysml:isAssociatedWith"
               }
             ]
           ]
@@ -16829,7 +17143,7 @@
           "values": [
             [
               {
-                "text": "SysML:isComposedOf"
+                "text": "sysml:isComposedOf"
               }
             ]
           ]
@@ -17120,7 +17434,7 @@
           "values": [
             [
               {
-                "text": "SysML:isAggregatedBy"
+                "text": "sysml:isAggregatedBy"
               }
             ]
           ]
@@ -17323,7 +17637,7 @@
           "values": [
             [
               {
-                "text": "SysML:aggregates"
+                "text": "sysml:aggregates"
               }
             ]
           ]
@@ -17507,7 +17821,7 @@
           "values": [
             [
               {
-                "text": "SysML:uses"
+                "text": "sysml:uses"
               }
             ]
           ]
@@ -17594,7 +17908,7 @@
           "values": [
             [
               {
-                "text": "SysML:isUsedBy"
+                "text": "sysml:isUsedBy"
               }
             ]
           ]
@@ -17781,7 +18095,7 @@
           "values": [
             [
               {
-                "text": "SysML:extends"
+                "text": "sysml:extends"
               }
             ]
           ]
@@ -17881,7 +18195,7 @@
           "values": [
             [
               {
-                "text": "SysML:includes"
+                "text": "sysml:includes"
               }
             ]
           ]
@@ -18131,7 +18445,7 @@
           "values": [
             [
               {
-                "text": "SysML:isSpecializationOf"
+                "text": "sysml:isSpecializationOf"
               }
             ]
           ]
@@ -18894,7 +19208,7 @@
           "values": [
             [
               {
-                "text": "SysML:isGeneralizationOf"
+                "text": "sysml:isGeneralizationOf"
               }
             ]
           ]
@@ -19762,10 +20076,10 @@
     },
     {
       "id": "R-SpecifIssynonymof",
-      "changedAt": "2024-03-03T13:30:37.965Z",
-      "revision": "rev-8826674003",
+      "changedAt": "2024-06-13T07:59:04.780Z",
+      "revision": "rev-8200919642",
       "replaces": [
-        "39"
+        "rev-9349243824"
       ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -47554,19 +47868,6 @@
       }
     },
     {
-      "id": "S-i8fcNGOwMHr2Qk4sBZjkUyMovvb",
-      "changedAt": "2023-09-03T08:48:59.852Z",
-      "class": {
-        "id": "SC-isNamespace"
-      },
-      "subject": {
-        "id": "R-AdyDfiNvv4ouaepgtffkr4r0BDN"
-      },
-      "object": {
-        "id": "R-SpecifReader"
-      }
-    },
-    {
       "id": "S-Q7VoicuAiuA6HqjyqEFLz3OqXKV",
       "changedAt": "2023-09-03T08:49:10.654Z",
       "class": {
@@ -51530,6 +51831,136 @@
       "object": {
         "id": "R-SpecifRelates"
       }
+    },
+    {
+      "id": "S-b3YbPceDCpF9U2WwNcGpeD1OrNr",
+      "changedAt": "2024-06-13T07:52:54.467Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-SpecifReader"
+      },
+      "object": {
+        "id": "R-SpecifUserrole"
+      }
+    },
+    {
+      "id": "S-MsopOsXgGA7N7trgkUFlsFihIyz",
+      "changedAt": "2024-06-13T07:53:05.902Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-SpecifEditor"
+      },
+      "object": {
+        "id": "R-SpecifUserrole"
+      }
+    },
+    {
+      "id": "S-dS7no1tSF5g8iM9LFRtNxQL22W2",
+      "changedAt": "2024-06-13T07:53:20.040Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-Wmcjqx5iziQA2upMhUuTVclFCrJ"
+      },
+      "object": {
+        "id": "R-SpecifUserrole"
+      }
+    },
+    {
+      "id": "S-RixyyBEE6PKJ6xNvZr6clvoJf1i",
+      "changedAt": "2024-06-13T07:53:29.483Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-t6gVlG5v7Uy4b3FGKFCS2PzcrA8"
+      },
+      "object": {
+        "id": "R-SpecifUserrole"
+      }
+    },
+    {
+      "id": "S-JS1iF8nvQNhvzVdfoMfJtsqUKNM",
+      "changedAt": "2024-06-13T07:53:39.165Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-ReqifwfRequirement"
+      },
+      "object": {
+        "id": "R-SpecifUserrole"
+      }
+    },
+    {
+      "id": "S-lEXAj9TUEwxuMAdBk5ALp8GFEp9",
+      "changedAt": "2024-06-14T06:38:13.388Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-SpecifReader"
+      }
+    },
+    {
+      "id": "S-ELtJsmxIW2AYaCrPKgHRJkrEY3Y",
+      "changedAt": "2024-06-14T06:41:23.035Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-AdyDfiNvv4ouaepgtffkr4r0BDN"
+      },
+      "object": {
+        "id": "R-pptosh3F8kHVbq6rlinul6RvMZU"
+      }
+    },
+    {
+      "id": "S-Rv7PraAFHYID6ArzWyyccCXXjCe",
+      "changedAt": "2024-06-14T06:41:56.391Z",
+      "class": {
+        "id": "SC-isSynonymOfStatement"
+      },
+      "subject": {
+        "id": "R-pptosh3F8kHVbq6rlinul6RvMZU"
+      },
+      "object": {
+        "id": "R-IrebRefines"
+      }
+    },
+    {
+      "id": "S-KGIbSueU3KU862FPeC5PHVHBwOH",
+      "changedAt": "2024-06-14T06:50:12.894Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-AdyDfiNvv4ouaepgtffkr4r0BDN"
+      },
+      "object": {
+        "id": "R-DYou5SzbWBmAflKbw6D6cJpL6kh"
+      }
+    },
+    {
+      "id": "S-wtUXT7TEHlcehr2d16Wh2iRC8C8",
+      "changedAt": "2024-06-14T06:50:23.905Z",
+      "class": {
+        "id": "SC-isSynonymOfStatement"
+      },
+      "subject": {
+        "id": "R-DYou5SzbWBmAflKbw6D6cJpL6kh"
+      },
+      "object": {
+        "id": "R-OslcrmSatisfies"
+      }
     }
   ],
   "files": [],
@@ -52415,6 +52846,13 @@
               "revision": "114"
             },
             {
+              "id": "N-Iy875ssmNUFPVCygvJH9XWoVsm1",
+              "resource": {
+                "id": "R-DYou5SzbWBmAflKbw6D6cJpL6kh"
+              },
+              "changedAt": "2024-06-14T06:49:03.417Z"
+            },
+            {
               "id": "N-Bz5EAzJMVmCGQ5rdGyIQyTdpKPr",
               "resource": {
                 "id": "R-OslcrmSatisfiedby"
@@ -52703,6 +53141,13 @@
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
+            },
+            {
+              "id": "N-tjS5mLC8p4ABXUV8T4jMVEe2FXM",
+              "resource": {
+                "id": "R-pptosh3F8kHVbq6rlinul6RvMZU"
+              },
+              "changedAt": "2024-06-14T06:40:52.155Z"
             },
             {
               "id": "N-9Rjmmwo9Oy3r3Viuo5KLQMpRcmY",
