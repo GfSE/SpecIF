@@ -10,15 +10,15 @@
     }
   ],
   "generator": "SpecIF Model-Integrator and Editor",
-  "generatorVersion": "1.1.s.7",
-  "createdAt": "2024-06-19T23:55:10.478Z",
+  "generatorVersion": "1.1.s.10",
+  "createdAt": "2024-06-25T09:34:31.612Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   "dataTypes": [
     {
-      "id": "DT-Text",
+      "id": "DT-String",
       "changedAt": "2021-02-23T08:59:00+02:00",
       "title": "Plain or formatted Text",
       "description": [
@@ -32,13 +32,12 @@
       "type": "xs:string"
     },
     {
-      "id": "DT-ShortString",
+      "id": "DT-String-LE256",
       "changedAt": "2021-02-23T08:59:00+02:00",
       "title": "String[256]",
       "description": [
         {
           "text": "String with length <=256",
-          "format": "plain",
           "language": "en"
         }
       ],
@@ -52,7 +51,8 @@
       "title": "String[32]",
       "description": [
         {
-          "text": "String with length <=32"
+          "text": "String with length <=32",
+          "language": "en"
         }
       ],
       "revision": "1.2",
@@ -66,7 +66,6 @@
       "description": [
         {
           "text": "The Boolean data type.",
-          "format": "plain",
           "language": "en"
         }
       ],
@@ -80,7 +79,6 @@
       "description": [
         {
           "text": "A numerical integer value from -2147483648 to 2147483647 (32 bit).",
-          "format": "plain",
           "language": "en"
         }
       ],
@@ -96,7 +94,6 @@
       "description": [
         {
           "text": "A numerical integer value from 0 to 2147483647.",
-          "format": "plain",
           "language": "en"
         }
       ],
@@ -112,7 +109,6 @@
       "description": [
         {
           "text": "A floating point number (double).",
-          "format": "plain",
           "language": "en"
         }
       ],
@@ -126,7 +122,6 @@
       "description": [
         {
           "text": "Date or timestamp in ISO-8601 format.",
-          "format": "plain",
           "language": "en"
         }
       ],
@@ -140,7 +135,6 @@
       "description": [
         {
           "text": "A duration as defined by the ISO 8601 ABNF for 'duration'.",
-          "format": "plain",
           "language": "en"
         }
       ],
@@ -154,7 +148,6 @@
       "description": [
         {
           "text": "A universal resource identifier (URI), according to RFC3986.",
-          "format": "plain",
           "language": "en"
         }
       ],
@@ -167,7 +160,8 @@
       "title": "SpecIF:TermStatus",
       "description": [
         {
-          "text": "Text string with enumerated values for SpecIF:TermStatus"
+          "text": "Text string with enumerated values for SpecIF:TermStatus",
+          "language": "en"
         }
       ],
       "revision": "1.2",
@@ -222,7 +216,8 @@
       "title": "SpecIF:Domain",
       "description": [
         {
-          "text": "Text string with enumerated values for SpecIF:Domain"
+          "text": "Text string with enumerated values for SpecIF:Domain",
+          "language": "en"
         }
       ],
       "revision": "1.2",
@@ -333,7 +328,8 @@
       "title": "SpecIF:TextFormat",
       "description": [
         {
-          "text": "The format of a text element."
+          "text": "The format of a text element.",
+          "language": "en"
         }
       ],
       "revision": "1.1",
@@ -365,7 +361,6 @@
       "description": [
         {
           "text": "Indicates whether an instance of the class is created automatically, manually or both. All is allowed, if the property is omitted. The class is abstract and cannot be instantiated, if the property list is present, but empty.",
-          "format": "plain",
           "language": "en"
         }
       ],
@@ -406,7 +401,7 @@
       ],
       "revision": "1.1",
       "dataType": {
-        "id": "DT-ShortString"
+        "id": "DT-String-LE256"
       },
       "format": "plain"
     },
@@ -422,7 +417,7 @@
       ],
       "revision": "1.2",
       "dataType": {
-        "id": "DT-ShortString"
+        "id": "DT-String-LE256"
       },
       "format": "plain"
     },
@@ -432,12 +427,13 @@
       "title": "SpecIF:LocalTerm",
       "description": [
         {
-          "text": "<p>A name of the resource used in one or more national languages. Multiple values can be defined so that different local terms can be transformed ('globalized') to the ontology term.</p>"
+          "text": "<p>A name of the resource used in one or more national languages. Multiple values can be defined so that different local terms can be transformed ('globalized') to the ontology term.</p>",
+          "language": "en"
         }
       ],
       "revision": "1.2",
       "dataType": {
-        "id": "DT-ShortString"
+        "id": "DT-String-LE256"
       },
       "multiple": true,
       "format": "plain"
@@ -448,12 +444,13 @@
       "title": "SpecIF:LocalTermPlural",
       "description": [
         {
-          "text": "<p>A name of the resource in plural form used in one or more national languages. Multiple values can be defined so that different local terms can be transformed ('globalized') to the ontology term.</p>"
+          "text": "<p>A name of the resource in plural form used in one or more national languages. Multiple values can be defined so that different local terms can be transformed ('globalized') to the ontology term.</p>",
+          "language": "en"
         }
       ],
       "revision": "1.2",
       "dataType": {
-        "id": "DT-ShortString"
+        "id": "DT-String-LE256"
       },
       "multiple": true,
       "format": "plain"
@@ -470,7 +467,7 @@
       ],
       "revision": "1.1",
       "dataType": {
-        "id": "DT-Text"
+        "id": "DT-String"
       },
       "format": "xhtml"
     },
@@ -486,7 +483,7 @@
       ],
       "revision": "1.1",
       "dataType": {
-        "id": "DT-Text"
+        "id": "DT-String"
       },
       "multiple": true,
       "format": "xhtml"
@@ -520,7 +517,7 @@
       ],
       "revision": "1.1",
       "dataType": {
-        "id": "DT-ShortString"
+        "id": "DT-String-LE256"
       },
       "format": "plain"
     },
@@ -546,7 +543,7 @@
       ],
       "revision": "1.1",
       "dataType": {
-        "id": "DT-ShortString"
+        "id": "DT-String-LE256"
       },
       "format": "plain"
     },
@@ -578,7 +575,7 @@
       ],
       "revision": "v1.2",
       "dataType": {
-        "id": "DT-ShortString"
+        "id": "DT-String-LE256"
       },
       "multiple": true,
       "format": "xhtml"
@@ -832,7 +829,7 @@
       ],
       "revision": "1.1",
       "dataType": {
-        "id": "DT-Text"
+        "id": "DT-String"
       },
       "format": "xhtml"
     },
@@ -1363,7 +1360,8 @@
       "title": "W3C:Ontology",
       "description": [
         {
-          "text": "An ontology according to the SpecIF class definitions for the domain 'Ontology'.\n\nThere is no clear division between what is referred to as “vocabularies” and “ontologies”. The trend is to use the word “ontology” for more complex, and possibly quite formal collection of terms, whereas “vocabulary” is used when such strict formalism is not necessarily used or only in a very loose sense. Vocabularies are the basic building blocks for inference techniques on the Semantic Web."
+          "text": "An ontology according to the SpecIF class definitions for the domain 'Ontology'.\n\nThere is no clear division between what is referred to as “vocabularies” and “ontologies”. The trend is to use the word “ontology” for more complex, and possibly quite formal collection of terms, whereas “vocabulary” is used when such strict formalism is not necessarily used or only in a very loose sense. Vocabularies are the basic building blocks for inference techniques on the Semantic Web.",
+          "language": "en"
         }
       ],
       "revision": "1.2",
@@ -50468,19 +50466,6 @@
       }
     },
     {
-      "id": "S-6mY49XtfUeMvBJ8rl8HIuWgHGmT",
-      "changedAt": "2024-05-08T12:41:41.686Z",
-      "class": {
-        "id": "SC-isEligibleAsObject"
-      },
-      "subject": {
-        "id": "R-FmcEvent"
-      },
-      "object": {
-        "id": "R-dcterms_hasPart"
-      }
-    },
-    {
       "id": "S-VpHLyIXLHma9WerdjNu7hLQgNpY",
       "changedAt": "2024-05-08T12:41:51.777Z",
       "class": {
@@ -50501,32 +50486,6 @@
       },
       "subject": {
         "id": "R-SpecifModelelement"
-      },
-      "object": {
-        "id": "R-dcterms_hasPart"
-      }
-    },
-    {
-      "id": "S-XLLy9VpHhLQgNpYIWerdjNu7Hma",
-      "changedAt": "2024-05-08T12:41:51.777Z",
-      "class": {
-        "id": "SC-isEligibleAsObject"
-      },
-      "subject": {
-        "id": "R-IrebRequirement"
-      },
-      "object": {
-        "id": "R-dcterms_hasPart"
-      }
-    },
-    {
-      "id": "S-gJoDmEhDOYRMn2VxgIngpGJb8SG",
-      "changedAt": "2024-05-08T12:45:24.918Z",
-      "class": {
-        "id": "SC-isEligibleAsObject"
-      },
-      "subject": {
-        "id": "R-SpecifView"
       },
       "object": {
         "id": "R-dcterms_hasPart"
@@ -50920,6 +50879,19 @@
       },
       "object": {
         "id": "R-SpecifContains"
+      }
+    },
+    {
+      "id": "S-WOw2X3yTdxEBv732Lk4AXHtd73r",
+      "changedAt": "2024-06-25T09:32:59.624Z",
+      "class": {
+        "id": "SC-isEligibleAsSubject"
+      },
+      "subject": {
+        "id": "R-SpecifModelelement"
+      },
+      "object": {
+        "id": "R-dcterms_hasPart"
       }
     }
   ],
