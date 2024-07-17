@@ -17014,7 +17014,7 @@
       ]
     },
     {
-      "id": "R-UmlIsassociatedwith",
+      "id": "R-UmlAssociation",
       "changedAt": "2024-07-17T14:53:56.973Z",
       "revision": "rev-10713096376",
       "replaces": [
@@ -17155,6 +17155,15 @@
         },
         {
           "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
             "id": "PC-TermStatus"
           },
           "values": [
@@ -17170,6 +17179,14 @@
               {
                 "text": "associated with",
                 "language": "en"
+              },
+              {
+                "text": "assoziiert mit",
+                "language": "de"
+              },
+              {
+                "text": "associé avec",
+                "language": "fr"
               }
             ]
           ]
@@ -18311,7 +18328,7 @@
       ]
     },
     {
-      "id": "R-UmlIsspecializationof",
+      "id": "R-UmlSpecialization",
       "changedAt": "2024-07-17T15:17:49.643Z",
       "revision": "rev-7891674075",
       "replaces": [
@@ -18464,6 +18481,27 @@
           },
           "values": [
             "V-TermStatus-50"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "specializes",
+                "language": "en"
+              },
+              {
+                "text": "spezialisiert",
+                "language": "de"
+              },
+              {
+                "text": "spécialise",
+                "language": "fr"
+              }
+            ]
           ]
         },
         {
@@ -42178,7 +42216,7 @@
         "id": "R-UmlIsgeneralizationof"
       },
       "object": {
-        "id": "R-UmlIsspecializationof"
+        "id": "R-UmlSpecialization"
       }
     },
     {
@@ -46573,7 +46611,7 @@
         "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks"
       },
       "object": {
-        "id": "R-UmlIsassociatedwith"
+        "id": "R-UmlAssociation"
       }
     },
     {
@@ -46846,7 +46884,7 @@
         "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks"
       },
       "object": {
-        "id": "R-UmlIsspecializationof"
+        "id": "R-UmlSpecialization"
       }
     },
     {
@@ -51224,7 +51262,7 @@
         "id": "SC-hasProperty"
       },
       "subject": {
-        "id": "R-UmlIsassociatedwith"
+        "id": "R-UmlAssociation"
       },
       "object": {
         "id": "R-DctermsType"
@@ -51302,7 +51340,7 @@
         "id": "SC-isSpecializationOfStatement"
       },
       "subject": {
-        "id": "R-UmlIsassociatedwith"
+        "id": "R-UmlAssociation"
       },
       "object": {
         "id": "R-SpecifRelates"
@@ -51328,7 +51366,7 @@
         "id": "SC-isSpecializationOfStatement"
       },
       "subject": {
-        "id": "R-UmlIsspecializationof"
+        "id": "R-UmlSpecialization"
       },
       "object": {
         "id": "R-SpecifRelates"
@@ -52095,7 +52133,7 @@
         "id": "SC-isSynonymOfStatement"
       },
       "subject": {
-        "id": "R-UmlIsassociatedwith"
+        "id": "R-UmlAssociation"
       },
       "object": {
         "id": "R-SpecifIsassociatedwith"
@@ -52121,7 +52159,7 @@
         "id": "SC-isSynonymOfStatement"
       },
       "subject": {
-        "id": "R-UmlIsspecializationof"
+        "id": "R-UmlSpecialization"
       },
       "object": {
         "id": "R-SpecifIsspecializationof"
@@ -53416,7 +53454,7 @@
             {
               "id": "N-PsmY49TGtgVWiyqEgSojoH8KY2I",
               "resource": {
-                "id": "R-UmlIsassociatedwith"
+                "id": "R-UmlAssociation"
               },
               "changedAt": "2018-02-17T14:52:25+01:00",
               "revision": "114"
@@ -53512,7 +53550,7 @@
             {
               "id": "N-rFgSojoH8KY2IPsmY49TGtgVWnd",
               "resource": {
-                "id": "R-UmlIsspecializationof"
+                "id": "R-UmlSpecialization"
               },
               "changedAt": "2019-05-30T14:52:25+01:00",
               "revision": "114"
