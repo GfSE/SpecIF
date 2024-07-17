@@ -11,7 +11,7 @@
   ],
   "generator": "SpecIF Model-Integrator and Editor",
   "generatorVersion": "1.1.r.24",
-  "createdAt": "2024-07-15T08:35:51.257Z",
+  "createdAt": "2024-07-17T15:20:15.686Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -17015,10 +17015,10 @@
     },
     {
       "id": "R-UmlIsassociatedwith",
-      "changedAt": "2024-06-18T06:46:06.693Z",
-      "revision": "rev-8400800539",
+      "changedAt": "2024-07-17T14:53:56.973Z",
+      "revision": "rev-10713096376",
       "replaces": [
-        "36"
+        "rev-8400800539"
       ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -17075,7 +17075,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-50"
+            "V-TermStatus-48"
           ]
         },
         {
@@ -17119,8 +17119,11 @@
     },
     {
       "id": "R-SpecifIsassociatedwith",
-      "changedAt": "2023-07-16T15:12:15.874Z",
-      "revision": "36",
+      "changedAt": "2024-07-17T14:56:18.430Z",
+      "revision": "rev-10387758265",
+      "replaces": [
+        "36"
+      ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
       },
@@ -17155,7 +17158,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-48"
+            "V-TermStatus-50"
           ]
         },
         {
@@ -17291,10 +17294,10 @@
     },
     {
       "id": "R-UmlComposes",
-      "changedAt": "2024-06-17T22:29:23.107Z",
-      "revision": "rev-11039672482",
+      "changedAt": "2024-07-17T14:58:21.786Z",
+      "revision": "rev-11755010623",
       "replaces": [
-        "rev-9882846069"
+        "rev-11039672482"
       ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -17350,7 +17353,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-50"
+            "V-TermStatus-48"
           ]
         },
         {
@@ -17360,7 +17363,7 @@
           "values": [
             [
               {
-                "text": "owns",
+                "text": "owns, is composed of",
                 "language": "en"
               },
               {
@@ -17507,10 +17510,10 @@
     },
     {
       "id": "R-UmlAggregates",
-      "changedAt": "2024-06-17T22:27:04.546Z",
-      "revision": "rev-8613358878",
+      "changedAt": "2024-07-17T15:00:35.582Z",
+      "revision": "rev-11148387966",
       "replaces": [
-        "rev-11092119378"
+        "rev-8613358878"
       ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -17566,7 +17569,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-50"
+            "V-TermStatus-48"
           ]
         },
         {
@@ -17576,7 +17579,7 @@
           "values": [
             [
               {
-                "text": "has a, aggregates, besteht aus",
+                "text": "has a, aggregates, besteht aus, aggregates, besteht aus",
                 "language": "en"
               },
               {
@@ -17687,6 +17690,99 @@
           },
           "values": [
             "V-TermStatus-48"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "aggregates",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-LVHUjNQieDNi9YEc01c5ifzjcRE",
+      "changedAt": "2024-07-17T15:04:32.344Z",
+      "revision": "rev-8127586593",
+      "class": {
+        "id": "RC-SpecifTermstatementclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "SpecIF:aggregates"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>An [[FMC:Actor]] aggregates another [[FMC:Actor]].</p><p>If amounts or things are aggregated, they are added together and considered as a single amount or thing.<i><small>Source: <a href=\"https://www.collinsdictionary.com/dictionary/english/aggregate\">Collins Dictionary</a></small></i></p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
           ]
         },
         {
@@ -18216,10 +18312,10 @@
     },
     {
       "id": "R-UmlIsspecializationof",
-      "changedAt": "2024-06-17T10:04:55.027Z",
-      "revision": "rev-10340048964",
+      "changedAt": "2024-07-17T15:17:49.643Z",
+      "revision": "rev-7891674075",
       "replaces": [
-        "rev-8758815301"
+        "rev-9441319146"
       ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
@@ -18256,7 +18352,7 @@
           "values": [
             [
               {
-                "text": "<p>A [[FMC:Actor]] is a specialization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p>",
+                "text": "<p>A [[FMC:Actor]] is a specialization of another [[FMC:Actor]]; similarly for [[FMC:State]] and [[FMC:Event]].</p><p>Is deprecated, because this term actually does not exist - just [[uml:Generalization]] is used!",
                 "language": "en"
               }
             ]
@@ -18276,7 +18372,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-50"
+            "V-TermStatus-90"
           ]
         },
         {
@@ -18320,8 +18416,11 @@
     },
     {
       "id": "R-SpecifIsspecializationof",
-      "changedAt": "2023-08-09T12:29:17.946Z",
-      "revision": "36",
+      "changedAt": "2024-07-17T15:12:53.003Z",
+      "revision": "rev-9054557983",
+      "replaces": [
+        "36"
+      ],
       "class": {
         "id": "RC-SpecifTermstatementclass"
       },
@@ -18364,7 +18463,15 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-48"
+            "V-TermStatus-50"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isUndirected"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -46769,19 +46876,6 @@
       }
     },
     {
-      "id": "S-ws8LL4t18aqt5U2UeYcPyaCk4z7",
-      "changedAt": "2023-08-09T12:29:49.808Z",
-      "class": {
-        "id": "SC-isSynonymOfStatement"
-      },
-      "subject": {
-        "id": "R-SpecifIsspecializationof"
-      },
-      "object": {
-        "id": "R-UmlIsspecializationof"
-      }
-    },
-    {
       "id": "S-C3cbXvK7Jdakrj4uR6KaQfjVRnb",
       "changedAt": "2023-08-09T12:30:39.288Z",
       "class": {
@@ -46925,19 +47019,6 @@
       }
     },
     {
-      "id": "S-eDDsaKdQBQirYsoWuy5DsoTJWzQ",
-      "changedAt": "2023-08-09T22:00:26.392Z",
-      "class": {
-        "id": "SC-isSynonymOfStatement"
-      },
-      "subject": {
-        "id": "R-IrInheritsFrom"
-      },
-      "object": {
-        "id": "R-UmlIsspecializationof"
-      }
-    },
-    {
       "id": "S-Q4GRQKzSCYTjVsNtH5LEFjmt7qK",
       "changedAt": "2023-08-09T22:00:46.108Z",
       "class": {
@@ -46948,19 +47029,6 @@
       },
       "object": {
         "id": "R-SpecifInheritsFrom"
-      }
-    },
-    {
-      "id": "S-A0dRewKCdCagwLBg2uOVC04ZPTZ",
-      "changedAt": "2023-08-09T22:01:00.935Z",
-      "class": {
-        "id": "SC-isSynonymOfStatement"
-      },
-      "subject": {
-        "id": "R-SpecifInheritsFrom"
-      },
-      "object": {
-        "id": "R-UmlIsspecializationof"
       }
     },
     {
@@ -47598,19 +47666,6 @@
       },
       "object": {
         "id": "R-SpecifEditor"
-      }
-    },
-    {
-      "id": "S-50v2x9gmnBsZEN1tKcFA5tBPg1D",
-      "changedAt": "2023-09-11T08:52:37.590Z",
-      "class": {
-        "id": "SC-isSynonymOfStatement"
-      },
-      "subject": {
-        "id": "R-SpecifIsassociatedwith"
-      },
-      "object": {
-        "id": "R-UmlIsassociatedwith"
       }
     },
     {
@@ -51033,19 +51088,6 @@
       }
     },
     {
-      "id": "S-zcre1F45u13HSdPgPc7rOhcpcQW",
-      "changedAt": "2024-05-08T12:39:58.253Z",
-      "class": {
-        "id": "SC-hasProperty"
-      },
-      "subject": {
-        "id": "R-dcterms_hasPart"
-      },
-      "object": {
-        "id": "R-DctermsType"
-      }
-    },
-    {
       "id": "S-1azqj3wMSSPDHoQE8XtXXOU7OBF",
       "changedAt": "2024-05-08T12:40:35.845Z",
       "class": {
@@ -51966,6 +52008,149 @@
       },
       "object": {
         "id": "R-SpecifServes"
+      }
+    },
+    {
+      "id": "S-tKovuPqcJb2Uoih5NXeaI3xU1VZ",
+      "changedAt": "2024-07-17T14:54:23.352Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-SpecifIsassociatedwith"
+      }
+    },
+    {
+      "id": "S-CdeSxAb2OYYfBy3q3oW1Kmj11nx",
+      "changedAt": "2024-07-17T14:55:30.254Z",
+      "class": {
+        "id": "SC-isSpecializationOfStatement"
+      },
+      "subject": {
+        "id": "R-SpecifIsassociatedwith"
+      },
+      "object": {
+        "id": "R-SpecifRelates"
+      }
+    },
+    {
+      "id": "S-jNLwotXPWIcoRA2wsywLCNKUYKV",
+      "changedAt": "2024-07-17T14:58:02.472Z",
+      "class": {
+        "id": "SC-isSynonymOfStatement"
+      },
+      "subject": {
+        "id": "R-UmlComposes"
+      },
+      "object": {
+        "id": "R-dcterms_hasPart"
+      }
+    },
+    {
+      "id": "S-Ol7kFeGOkofyxCnOvm2TcwUW9Ad",
+      "changedAt": "2024-07-17T15:05:10.604Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
+      },
+      "object": {
+        "id": "R-LVHUjNQieDNi9YEc01c5ifzjcRE"
+      }
+    },
+    {
+      "id": "S-MTTl9s1v8aUecEz7CjSISooQgFe",
+      "changedAt": "2024-07-17T15:05:56.875Z",
+      "class": {
+        "id": "SC-isSynonymOfStatement"
+      },
+      "subject": {
+        "id": "R-UmlAggregates"
+      },
+      "object": {
+        "id": "R-LVHUjNQieDNi9YEc01c5ifzjcRE"
+      }
+    },
+    {
+      "id": "S-E8gR398svQOaV3KBEts8c5zdfuD",
+      "changedAt": "2024-07-17T15:07:00.978Z",
+      "class": {
+        "id": "SC-isSpecializationOfStatement"
+      },
+      "subject": {
+        "id": "R-LVHUjNQieDNi9YEc01c5ifzjcRE"
+      },
+      "object": {
+        "id": "R-SpecifRelates"
+      }
+    },
+    {
+      "id": "S-oQkShtFM16lUKFUyT6NbErPCuaz",
+      "changedAt": "2024-07-17T15:11:24.770Z",
+      "class": {
+        "id": "SC-isSynonymOfStatement"
+      },
+      "subject": {
+        "id": "R-UmlIsassociatedwith"
+      },
+      "object": {
+        "id": "R-SpecifIsassociatedwith"
+      }
+    },
+    {
+      "id": "S-p9GN6w2JlC1D3475C1jGCYKUQbl",
+      "changedAt": "2024-07-17T15:13:56.830Z",
+      "class": {
+        "id": "SC-isAntonymOfStatement"
+      },
+      "subject": {
+        "id": "R-UmlIsgeneralizationof"
+      },
+      "object": {
+        "id": "R-SpecifIsspecializationof"
+      }
+    },
+    {
+      "id": "S-VeXowSzstfD4dzXGzvqeCCo18kB",
+      "changedAt": "2024-07-17T15:19:35.860Z",
+      "class": {
+        "id": "SC-isSynonymOfStatement"
+      },
+      "subject": {
+        "id": "R-UmlIsspecializationof"
+      },
+      "object": {
+        "id": "R-SpecifIsspecializationof"
+      }
+    },
+    {
+      "id": "S-bVGXRKKDefyOmlsFmCLEWgVgDdM",
+      "changedAt": "2024-07-17T15:19:52.456Z",
+      "class": {
+        "id": "SC-isSynonymOfStatement"
+      },
+      "subject": {
+        "id": "R-SpecifInheritsFrom"
+      },
+      "object": {
+        "id": "R-SpecifIsspecializationof"
+      }
+    },
+    {
+      "id": "S-XICj0xwQFiWUJyidJwfnfIIzQbe",
+      "changedAt": "2024-07-17T15:20:03.207Z",
+      "class": {
+        "id": "SC-isSynonymOfStatement"
+      },
+      "subject": {
+        "id": "R-IrInheritsFrom"
+      },
+      "object": {
+        "id": "R-SpecifIsspecializationof"
       }
     }
   ],
@@ -53278,6 +53463,13 @@
                 "id": "R-ArchimateAggregates"
               },
               "changedAt": "2023-07-15T16:47:16.210Z"
+            },
+            {
+              "id": "N-hmCfLTnuYbWWsE4qqo8zb8CwaE2",
+              "resource": {
+                "id": "R-LVHUjNQieDNi9YEc01c5ifzjcRE"
+              },
+              "changedAt": "2024-07-17T15:04:32.344Z"
             },
             {
               "id": "N-sGgSojoH8KY2IPsmY49TGtgVWme",
