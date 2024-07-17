@@ -11806,11 +11806,11 @@
           "values": [
             [
               {
-                "text": "Model Relation",
+                "text": "associated with",
                 "language": "en"
               },
               {
-                "text": "Modellbeziehung",
+                "text": "assoziiert mit",
                 "language": "de"
               }
             ]
@@ -14116,7 +14116,7 @@
           "values": [
             [
               {
-                "text": "<p>The serving relationship represents that an element provides its functionality to another element. <i><small>(Quelle: <a href=\"https://pubs.opengroup.org/architecture/archimate31-doc/chap05.html\">ArchiMate 3.1. Relationships</a>)</small></i></p>",
+                "text": "<p>The serving relationship indicates that an element provides its functionality to another element. <i><small>(Quelle: <a href=\"https://pubs.opengroup.org/architecture/archimate31-doc/chap05.html\">ArchiMate 3.1. Relationships</a>)</small></i></p>",
                 "language": "en"
               }
             ]
@@ -14179,7 +14179,7 @@
       ]
     },
     {
-      "id": "R-7OC9XnSrqQPz8z5Ho1XxegFsj27",
+      "id": "R-SpecifHandles",
       "changedAt": "2024-07-14T12:58:29.336Z",
       "revision": "rev-11498066293",
       "class": {
@@ -14212,6 +14212,19 @@
         },
         {
           "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>The relationship indicates that an element (represented by a [[FMC:Actor]]) provides or consumes material, energy or information (represented by a [[FMC:State]]).</p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-Domain"
           },
           "values": [
@@ -14236,6 +14249,10 @@
               {
                 "text": "handles",
                 "language": "en"
+              },
+              {
+                "text": "befördert",
+                "language": "de"
               }
             ]
           ]
@@ -51792,7 +51809,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-7OC9XnSrqQPz8z5Ho1XxegFsj27"
+        "id": "R-SpecifHandles"
       }
     },
     {
@@ -51805,7 +51822,7 @@
         "id": "R-OR3LGgvIRjlLHepLhgyldYE1N1e"
       },
       "object": {
-        "id": "R-7OC9XnSrqQPz8z5Ho1XxegFsj27"
+        "id": "R-SpecifHandles"
       }
     },
     {
@@ -51818,7 +51835,7 @@
         "id": "R-KcBhsJFPMYFEE4GfcckAgdOUQSu"
       },
       "object": {
-        "id": "R-7OC9XnSrqQPz8z5Ho1XxegFsj27"
+        "id": "R-SpecifHandles"
       }
     },
     {
@@ -51831,7 +51848,7 @@
         "id": "R-FmcActor"
       },
       "object": {
-        "id": "R-7OC9XnSrqQPz8z5Ho1XxegFsj27"
+        "id": "R-SpecifHandles"
       }
     },
     {
@@ -51844,7 +51861,7 @@
         "id": "R-FmcState"
       },
       "object": {
-        "id": "R-7OC9XnSrqQPz8z5Ho1XxegFsj27"
+        "id": "R-SpecifHandles"
       }
     },
     {
@@ -51857,7 +51874,7 @@
         "id": "R-UmlPort"
       },
       "object": {
-        "id": "R-7OC9XnSrqQPz8z5Ho1XxegFsj27"
+        "id": "R-SpecifHandles"
       }
     },
     {
@@ -52990,7 +53007,7 @@
             {
               "id": "N-Mw25z6AfHTgLxD99JE8dKaHgJCr",
               "resource": {
-                "id": "R-7OC9XnSrqQPz8z5Ho1XxegFsj27"
+                "id": "R-SpecifHandles"
               },
               "changedAt": "2024-07-14T12:58:37.567Z"
             },
