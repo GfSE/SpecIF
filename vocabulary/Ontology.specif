@@ -17596,7 +17596,7 @@
           "values": [
             [
               {
-                "text": "has a, aggregates, besteht aus, aggregates, besteht aus",
+                "text": "has a",
                 "language": "en"
               },
               {
@@ -17741,7 +17741,7 @@
       ]
     },
     {
-      "id": "R-LVHUjNQieDNi9YEc01c5ifzjcRE",
+      "id": "R-SpecifAggregates",
       "changedAt": "2024-07-17T15:04:32.344Z",
       "revision": "rev-8127586593",
       "class": {
@@ -17811,6 +17811,14 @@
               {
                 "text": "aggregates",
                 "language": "en"
+              },
+              {
+                "text": "aggregiert",
+                "language": "de"
+              },
+              {
+                "text": "agrégat",
+                "language": "fr"
               }
             ]
           ]
@@ -18753,7 +18761,7 @@
       ]
     },
     {
-      "id": "R-UmlIsgeneralizationof",
+      "id": "R-UmlGeneralization",
       "changedAt": "2024-06-17T10:03:39.762Z",
       "revision": "rev-10487224895",
       "replaces": [
@@ -42213,7 +42221,7 @@
         "id": "SC-isAntonymOfStatement"
       },
       "subject": {
-        "id": "R-UmlIsgeneralizationof"
+        "id": "R-UmlGeneralization"
       },
       "object": {
         "id": "R-UmlSpecialization"
@@ -46897,7 +46905,7 @@
         "id": "R-SfcWtgiLtGsiXRkCUdHcA21E9ks"
       },
       "object": {
-        "id": "R-UmlIsgeneralizationof"
+        "id": "R-UmlGeneralization"
       }
     },
     {
@@ -46936,7 +46944,7 @@
         "id": "R-SpecifIsgeneralizationof"
       },
       "object": {
-        "id": "R-UmlIsgeneralizationof"
+        "id": "R-UmlGeneralization"
       }
     },
     {
@@ -49887,7 +49895,7 @@
         "id": "R-bjWm8VC61uOyCzHkolwSmiY9mMl"
       },
       "object": {
-        "id": "R-UmlIsgeneralizationof"
+        "id": "R-UmlGeneralization"
       }
     },
     {
@@ -49939,7 +49947,7 @@
         "id": "R-nKufiWMObXf3scZCs5SnrIMPHqL"
       },
       "object": {
-        "id": "R-UmlIsgeneralizationof"
+        "id": "R-UmlGeneralization"
       }
     },
     {
@@ -51353,7 +51361,7 @@
         "id": "SC-isSpecializationOfStatement"
       },
       "subject": {
-        "id": "R-UmlIsgeneralizationof"
+        "id": "R-UmlGeneralization"
       },
       "object": {
         "id": "R-SpecifRelates"
@@ -52097,7 +52105,7 @@
         "id": "R-GdPkj836giQH8dTzAoq2J8Gw6Zd"
       },
       "object": {
-        "id": "R-LVHUjNQieDNi9YEc01c5ifzjcRE"
+        "id": "R-SpecifAggregates"
       }
     },
     {
@@ -52110,7 +52118,7 @@
         "id": "R-UmlAggregates"
       },
       "object": {
-        "id": "R-LVHUjNQieDNi9YEc01c5ifzjcRE"
+        "id": "R-SpecifAggregates"
       }
     },
     {
@@ -52120,7 +52128,7 @@
         "id": "SC-isSpecializationOfStatement"
       },
       "subject": {
-        "id": "R-LVHUjNQieDNi9YEc01c5ifzjcRE"
+        "id": "R-SpecifAggregates"
       },
       "object": {
         "id": "R-SpecifRelates"
@@ -52146,7 +52154,7 @@
         "id": "SC-isAntonymOfStatement"
       },
       "subject": {
-        "id": "R-UmlIsgeneralizationof"
+        "id": "R-UmlGeneralization"
       },
       "object": {
         "id": "R-SpecifIsspecializationof"
@@ -53505,7 +53513,7 @@
             {
               "id": "N-hmCfLTnuYbWWsE4qqo8zb8CwaE2",
               "resource": {
-                "id": "R-LVHUjNQieDNi9YEc01c5ifzjcRE"
+                "id": "R-SpecifAggregates"
               },
               "changedAt": "2024-07-17T15:04:32.344Z"
             },
@@ -53579,7 +53587,7 @@
             {
               "id": "N-qEgSojoH8KY2IPsmY49TGtgVWmc",
               "resource": {
-                "id": "R-UmlIsgeneralizationof"
+                "id": "R-UmlGeneralization"
               },
               "changedAt": "2019-05-30T14:52:25+01:00",
               "revision": "114"
