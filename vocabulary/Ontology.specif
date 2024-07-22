@@ -11,7 +11,7 @@
   ],
   "generator": "SpecIF Model-Integrator and Editor",
   "generatorVersion": "1.1.r.24",
-  "createdAt": "2024-07-17T15:20:15.686Z",
+  "createdAt": "2024-07-21T14:15:51.537Z",
   "rights": {
     "title": "Creative Commons 4.0 CC BY-SA",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -3347,7 +3347,7 @@
             "id": "PC-TermStatus"
           },
           "values": [
-            "V-TermStatus-48"
+            "V-TermStatus-90"
           ]
         },
         {
@@ -5150,10 +5150,10 @@
     },
     {
       "id": "R-FmcActor",
-      "changedAt": "2024-06-09T18:27:03.603Z",
-      "revision": "rev-8883325401",
+      "changedAt": "2024-07-20T10:20:39.798Z",
+      "revision": "rev-12046029742",
       "replaces": [
-        "158"
+        "rev-11702167511"
       ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -5202,7 +5202,7 @@
           "values": [
             [
               {
-                "text": "<p>An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.</p><p>The particular use of FMC:Actor is specified with a [[dcterms:type]] property. The values of that property can be ontology-terms, such as [[bpmn:timer]].</p>",
+                "text": "<p>An 'Actor' is a fundamental model element type representing an active entity, be it an activity, a process step, a function, a system component or a role.</p><p>The particular use of FMC:Actor is specified with a [[dcterms:type]] property. A value of that property should be an ontology-term, such as [[bpmn:processStep]].</p>",
                 "language": "en"
               },
               {
@@ -5306,10 +5306,10 @@
     },
     {
       "id": "R-FmcState",
-      "changedAt": "2024-06-09T18:27:15.915Z",
-      "revision": "rev-9828177780",
+      "changedAt": "2024-07-20T10:20:24.844Z",
+      "revision": "rev-11015405168",
       "replaces": [
-        "11"
+        "rev-11530441151"
       ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -5358,7 +5358,7 @@
           "values": [
             [
               {
-                "text": "<p>A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape.</p>",
+                "text": "<p>A 'State' is a fundamental model element type representing a passive entity, be it a value, a condition, an information storage or even a physical shape.</p><p>The particular use of FMC:State is specified with a dcterms:type property. A value of that property should bean  ontology-term, such as [[bpmn:dataObject]].</p>",
                 "language": "en"
               },
               {
@@ -5462,10 +5462,10 @@
     },
     {
       "id": "R-FmcEvent",
-      "changedAt": "2024-06-09T18:27:28.951Z",
-      "revision": "rev-10801572634",
+      "changedAt": "2024-07-20T10:22:36.725Z",
+      "revision": "rev-8345226543",
       "replaces": [
-        "12"
+        "rev-10034762228"
       ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -5514,7 +5514,7 @@
           "values": [
             [
               {
-                "text": "<p>An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.</p>",
+                "text": "<p>An 'Event' is a fundamental model element type representing a time reference, a change in condition/value or more generally a synchronization primitive.</p><p>The particular use of FMC:Event is specified with a dcterms:type property. A value of that property should be an ontology-term, such as [[bpmn:startEvent]].</p>",
                 "language": "en"
               },
               {
@@ -10222,8 +10222,11 @@
     },
     {
       "id": "R-BpmnProcessstep",
-      "changedAt": "2018-03-10T09:39:08+01:00",
-      "revision": "175",
+      "changedAt": "2024-07-20T10:12:20.932Z",
+      "revision": "rev-11777489207",
+      "replaces": [
+        "175"
+      ],
       "changedBy": "od",
       "class": {
         "id": "RC-SpecifTermresourceclass"
@@ -10249,8 +10252,21 @@
             [
               {
                 "text": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Actor]] when used to represent a process step.</p>"
+              },
+              {
+                "text": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Actor]] when used to represent a process step.</p>",
+                "language": "en"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
           ]
         },
         {
@@ -10272,6 +10288,231 @@
                 "language": "en"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocaltermplural"
+          },
+          "values": [
+            [
+              {
+                "text": "Process Steps",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-afTIRuhjNR1Xz75dTki3Dpyrgpv",
+      "changedAt": "2024-07-20T10:15:48.920Z",
+      "revision": "rev-8359165365",
+      "changedBy": "od",
+      "class": {
+        "id": "RC-SpecifTermresourceclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "bpmn:dataObject"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Actor]] when used to represent a process step.</p>"
+              },
+              {
+                "text": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Actor]] when used to represent a data object.</p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-16"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Data Object",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocaltermplural"
+          },
+          "values": [
+            [
+              {
+                "text": "Data Objects",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-TLYW81vQqsp35ImMa3tKhdUPbIj",
+      "changedAt": "2024-07-20T10:12:00.592Z",
+      "revision": "rev-10002368447",
+      "changedBy": "od",
+      "class": {
+        "id": "RC-SpecifTermresourceclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "bpmn:dataStore"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Actor]] when used to represent a process step.</p>"
+              },
+              {
+                "text": "<p>A defined value for the [[dcterms:type]] property of [[FMC:Actor]] when used to represent a data store.</p>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-16"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Data Store",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocaltermplural"
+          },
+          "values": [
+            [
+              {
+                "text": "Data Stores",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
           ]
         }
       ]
@@ -11485,9 +11726,121 @@
       ]
     },
     {
+      "id": "R-bPikrxFJGA5N8wnZPLaXViDW9Qa",
+      "changedAt": "2024-07-20T08:42:08.854Z",
+      "revision": "rev-10968011490",
+      "replaces": [
+        "rev-10262209124"
+      ],
+      "class": {
+        "id": "RC-SpecifTermresourceclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "ArchiMate:ApplicationComponent"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Definition: An application component represents an encapsulation of application functionality aligned to implementation structure, which is modular and replaceable. It encapsulates its behavior and data, exposes services, and makes them available through interfaces.\n\nAn application component is a self-contained unit. As such, it is independently deployable, re-usable, and replaceable. An application component performs one or more application functions. It encapsulates its contents: its functionality is only accessible through a set of application interfaces. Cooperating application components are connected via application collaborations.\n\nAn application component may be assigned to one or more application functions. An application component has one or more application interfaces, which expose its functionality. Application interfaces of other application components may serve an application component. The name of an application component should preferably be a noun.\n\nThe application component element is used to model entire applications (i.e., deployed and operational IT systems, as defined by the <a href=\"https://www.opengroup.org/bookstore/catalog/g116.htm\">TOGAF framework</a>) and individual parts of such applications, at all relevant levels of detail.\n\n<small>Source: <a href=\"https://pubs.opengroup.org/architecture/archimate30-doc/chap09.html\">ArchiMate® 3.0 Specification</a></small>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Application Component",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocaltermplural"
+          },
+          "values": [
+            [
+              {
+                "text": "Application Components",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
       "id": "R-ArchimateDataobject",
-      "changedAt": "2024-06-13T07:54:23.264Z",
-      "revision": "rev-10394484823",
+      "changedAt": "2024-07-20T08:31:41.216Z",
+      "revision": "rev-12026440301",
+      "replaces": [
+        "rev-10262209124"
+      ],
       "class": {
         "id": "RC-SpecifTermresourceclass"
       },
@@ -11518,9 +11871,23 @@
         },
         {
           "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Definition: A data object represents data structured for automated processing.\n\nA data object should be a self-contained piece of information with a clear meaning to the business, not just to the application level. Typical examples of data objects are a customer record, a client database, or an insurance claim.\n\nThe ArchiMate language in general focuses on the modeling of types, not instances, since this is the most relevant at the Enterprise Architecture level of description. Hence a data object typically models an object type (cf. a UML class) of which multiple instances may exist in operational applications. An important exception is when a data object is used to model a data collection such as a database, of which only one instance exists.\n\nAn application function or process can operate on data objects. A data object may be communicated via interactions and used or produced by application services. A data object can be accessed by an application function, application interaction, or application service. A data object may realize a business object, and may be realized by an artifact. A data object may have association, specialization, aggregation, or composition relationships with other data objects. The name of a data object should preferably be a noun.\n\n<small>Source: <a href=\"https://pubs.opengroup.org/architecture/archimate30-doc/chap09.html\">ArchiMate® 3.0 Specification</a></small>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
             "id": "PC-Domain"
           },
           "values": [
+            "V-Domain-20",
             "V-Domain-26"
           ]
         },
@@ -11566,8 +11933,145 @@
               {
                 "text": "Datenobjekte",
                 "language": "de"
+              },
+              {
+                "text": "Objets de données",
+                "language": "fr"
               }
             ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Instantiation"
+          },
+          "values": [
+            "V-Instantiation-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-CgT7MCGzE4F37AlEys5zBAOlevD",
+      "changedAt": "2024-07-20T08:31:51.137Z",
+      "revision": "rev-8618948848",
+      "replaces": [
+        "rev-7957174904"
+      ],
+      "class": {
+        "id": "RC-SpecifTermresourceclass"
+      },
+      "properties": [
+        {
+          "class": {
+            "id": "PC-SpecifRevision"
+          },
+          "values": [
+            [
+              {
+                "text": "1.2"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifTerm"
+          },
+          "values": [
+            [
+              {
+                "text": "ArchiMate:BusinessObject"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Description"
+          },
+          "values": [
+            [
+              {
+                "text": "Definition: A business object represents a concept used within a particular business domain.\n\nThe ArchiMate language in general focuses on the modeling of types, not instances, since this is the most relevant at the Enterprise Architecture level of description. Hence a business object typically models an object type (cf. a UML class) of which multiple instances may exist in operations. Only occasionally, business objects represent actual instances of information produced and consumed by behavior elements such as business processes. This is in particular the case for singleton types; i.e., types that have only one instance.\n\nA wide variety of types of business objects can be defined. Business objects are passive in the sense that they do not trigger or perform processes. A business object could be used to represent information assets that are relevant from a business point of view and can be realized by data objects.\n\nBusiness objects may be accessed (e.g., in the case of information objects, they may be created, read, written) by a business process, function, business interaction, business event, or business service. A business object may have association, specialization, aggregation, or composition relationships with other business objects. A business object may be realized by a representation or by a data object (or both). The name of a business object should preferably be a noun.\n\n<small>Source: <a href=\"https://pubs.opengroup.org/architecture/archimate30-doc/chap08.html\">ArchiMate® 3.0 Specification</a></small>",
+                "language": "en"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-Domain"
+          },
+          "values": [
+            "V-Domain-20",
+            "V-Domain-26"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-TermStatus"
+          },
+          "values": [
+            "V-TermStatus-50"
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocalterm"
+          },
+          "values": [
+            [
+              {
+                "text": "Business Object",
+                "language": "en"
+              },
+              {
+                "text": "Geschäftsobjekt",
+                "language": "de"
+              },
+              {
+                "text": "Objet métier",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-SpecifLocaltermplural"
+          },
+          "values": [
+            [
+              {
+                "text": "Business Objects",
+                "language": "en"
+              },
+              {
+                "text": "Geschäftsobjekte",
+                "language": "de"
+              },
+              {
+                "text": "Objets métier",
+                "language": "fr"
+              }
+            ]
+          ]
+        },
+        {
+          "class": {
+            "id": "PC-isHeading"
+          },
+          "values": [
+            "false"
           ]
         },
         {
@@ -14488,6 +14992,7 @@
             "id": "PC-Domain"
           },
           "values": [
+            "V-Domain-20",
             "V-Domain-26"
           ]
         },
@@ -14885,6 +15390,7 @@
             "id": "PC-Domain"
           },
           "values": [
+            "V-Domain-20",
             "V-Domain-26"
           ]
         },
@@ -48807,19 +49313,6 @@
       }
     },
     {
-      "id": "S-nCKCWKcrNycpA5u4c3j43n1htE3",
-      "changedAt": "2024-02-19T13:05:17.563Z",
-      "class": {
-        "id": "SC-isSpecializationOfResource"
-      },
-      "subject": {
-        "id": "R-ArchimateDataobject"
-      },
-      "object": {
-        "id": "R-SpecifParagraph"
-      }
-    },
-    {
       "id": "S-VVwc9P8PBLxcvTnfXQAZfNonlgb",
       "changedAt": "2024-03-02T15:33:39.315Z",
       "class": {
@@ -52198,6 +52691,266 @@
       "object": {
         "id": "R-SpecifIsspecializationof"
       }
+    },
+    {
+      "id": "S-xRJqvPHGSe6uVvu1OMTTAApmpzy",
+      "changedAt": "2024-07-20T08:26:10.966Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-ArchimateDataobject"
+      },
+      "object": {
+        "id": "R-FmcState"
+      }
+    },
+    {
+      "id": "S-68LGkXMKOsN2tXqVX36BqhWVcpp",
+      "changedAt": "2024-07-20T08:29:22.315Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-mVJnjob2n6ezD1lEwgr1p2hx1gD"
+      },
+      "object": {
+        "id": "R-CgT7MCGzE4F37AlEys5zBAOlevD"
+      }
+    },
+    {
+      "id": "S-mrFmWdHQhHFwbnJuoTRknHtSi54",
+      "changedAt": "2024-07-20T08:29:33.226Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-CgT7MCGzE4F37AlEys5zBAOlevD"
+      },
+      "object": {
+        "id": "R-FmcState"
+      }
+    },
+    {
+      "id": "S-DmrDXrNxpSwrT6aqFY4sg9DfhvN",
+      "changedAt": "2024-07-20T08:29:45.239Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-mVJnjob2n6ezD1lEwgr1p2hx1gD"
+      },
+      "object": {
+        "id": "R-ArchimateDataobject"
+      }
+    },
+    {
+      "id": "S-4NCM9fgTO8QqwpP1DNLjd2Og7XP",
+      "changedAt": "2024-07-20T08:42:23.244Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-mVJnjob2n6ezD1lEwgr1p2hx1gD"
+      },
+      "object": {
+        "id": "R-bPikrxFJGA5N8wnZPLaXViDW9Qa"
+      }
+    },
+    {
+      "id": "S-lwzC6hzsupJIF1vEwoDXX3lcVgW",
+      "changedAt": "2024-07-20T08:42:58.149Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-bPikrxFJGA5N8wnZPLaXViDW9Qa"
+      },
+      "object": {
+        "id": "R-FmcActor"
+      }
+    },
+    {
+      "id": "S-TK4Yn3EJ2WYC4BzplDSrHkBEJQg",
+      "changedAt": "2024-07-20T10:13:14.839Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-BpmnProcessstep"
+      },
+      "object": {
+        "id": "R-FmcActor"
+      }
+    },
+    {
+      "id": "S-rbqAHy0yTqg6oMKQ4pNGJqoSs9s",
+      "changedAt": "2024-07-20T10:13:32.316Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-6FEseuENWxSryixYZkDotaveOLS"
+      },
+      "object": {
+        "id": "R-TLYW81vQqsp35ImMa3tKhdUPbIj"
+      }
+    },
+    {
+      "id": "S-wtb8VjeIhsR4Xz2IKmKyKKCtleA",
+      "changedAt": "2024-07-20T10:13:42.789Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-TLYW81vQqsp35ImMa3tKhdUPbIj"
+      },
+      "object": {
+        "id": "R-FmcState"
+      }
+    },
+    {
+      "id": "S-w497Kda8ygsPTTWSoiyVczfElaN",
+      "changedAt": "2024-07-20T10:14:00.816Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-jbF2IzbCVx4LqrAkqe6N8ayxNYS"
+      },
+      "object": {
+        "id": "R-FmcEvent"
+      }
+    },
+    {
+      "id": "S-mlaxNdkNvVMiQiSgYMPanMrGIyd",
+      "changedAt": "2024-07-20T10:14:15.468Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-JUck1fa8PVWlW3tSSFRyKaD5tK4"
+      },
+      "object": {
+        "id": "R-FmcEvent"
+      }
+    },
+    {
+      "id": "S-gheLfgJpmwzhCpSC4X9LOPb1rfD",
+      "changedAt": "2024-07-20T10:14:30.298Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-TLpywhxqtNxGGjd4L6KIPRR7EDd"
+      },
+      "object": {
+        "id": "R-FmcEvent"
+      }
+    },
+    {
+      "id": "S-8gdJFyndH2SzdKPxyoA1ynnOsyW",
+      "changedAt": "2024-07-20T10:16:05.230Z",
+      "class": {
+        "id": "SC-isNamespace"
+      },
+      "subject": {
+        "id": "R-6FEseuENWxSryixYZkDotaveOLS"
+      },
+      "object": {
+        "id": "R-afTIRuhjNR1Xz75dTki3Dpyrgpv"
+      }
+    },
+    {
+      "id": "S-wsHxByejM78jbrIXsekFYqVNefi",
+      "changedAt": "2024-07-20T10:16:15.474Z",
+      "class": {
+        "id": "SC-isSpecializationOfResource"
+      },
+      "subject": {
+        "id": "R-afTIRuhjNR1Xz75dTki3Dpyrgpv"
+      },
+      "object": {
+        "id": "R-FmcState"
+      }
+    },
+    {
+      "id": "S-DpKKBClXqLMPwf17FZQNNVIR4nM",
+      "changedAt": "2024-07-21T14:12:18.315Z",
+      "class": {
+        "id": "SC-isEligibleAsSubject"
+      },
+      "subject": {
+        "id": "R-SpecifModelelement"
+      },
+      "object": {
+        "id": "R-OR3LGgvIRjlLHepLhgyldYE1N1e"
+      }
+    },
+    {
+      "id": "S-Cu8fij4VGLORw1tCOylytwuTwyD",
+      "changedAt": "2024-07-21T14:12:32.705Z",
+      "class": {
+        "id": "SC-isEligibleAsObject"
+      },
+      "subject": {
+        "id": "R-SpecifModelelement"
+      },
+      "object": {
+        "id": "R-OR3LGgvIRjlLHepLhgyldYE1N1e"
+      }
+    },
+    {
+      "id": "S-LIQNRjsdVe6Lh2Nci59cSaZoMU3",
+      "changedAt": "2024-07-21T14:12:53.147Z",
+      "class": {
+        "id": "SC-isEligibleAsSubject"
+      },
+      "subject": {
+        "id": "R-SpecifModelelement"
+      },
+      "object": {
+        "id": "R-KcBhsJFPMYFEE4GfcckAgdOUQSu"
+      }
+    },
+    {
+      "id": "S-LyoW34iZXsM34X5VObykdA7uY9e",
+      "changedAt": "2024-07-21T14:13:05.287Z",
+      "class": {
+        "id": "SC-isEligibleAsObject"
+      },
+      "subject": {
+        "id": "R-SpecifModelelement"
+      },
+      "object": {
+        "id": "R-KcBhsJFPMYFEE4GfcckAgdOUQSu"
+      }
+    },
+    {
+      "id": "S-nao5lBQN5UB4ToZjX1IM4Xf2D5b",
+      "changedAt": "2024-07-21T14:15:14.946Z",
+      "class": {
+        "id": "SC-isEligibleAsSubject"
+      },
+      "subject": {
+        "id": "R-SpecifModelelement"
+      },
+      "object": {
+        "id": "R-SpecifHandles"
+      }
+    },
+    {
+      "id": "S-jU35ThJrA6zXbbTP2g74PrYTsAP",
+      "changedAt": "2024-07-21T14:15:26.547Z",
+      "class": {
+        "id": "SC-isEligibleAsObject"
+      },
+      "subject": {
+        "id": "R-SpecifModelelement"
+      },
+      "object": {
+        "id": "R-SpecifHandles"
+      }
     }
   ],
   "files": [],
@@ -52882,6 +53635,20 @@
               "changedAt": "2023-08-25T08:11:45.268Z"
             },
             {
+              "id": "N-ZXOm5IAqKp6YHLLFglMZdCyhLEZ",
+              "resource": {
+                "id": "R-afTIRuhjNR1Xz75dTki3Dpyrgpv"
+              },
+              "changedAt": "2024-07-20T10:15:53.771Z"
+            },
+            {
+              "id": "N-XyZLFdx6Ncyd7MiumdfUN8puUMm",
+              "resource": {
+                "id": "R-TLYW81vQqsp35ImMa3tKhdUPbIj"
+              },
+              "changedAt": "2024-07-20T10:12:00.592Z"
+            },
+            {
               "id": "N-hQ2D3igCUo7wRwIuBnKGJLBYk2s",
               "resource": {
                 "id": "R-jbF2IzbCVx4LqrAkqe6N8ayxNYS"
@@ -52980,11 +53747,25 @@
               "changedAt": "2023-08-25T08:11:00.395Z"
             },
             {
+              "id": "N-brqEmlWuqXwbzr3QTKJOCFI9iIi",
+              "resource": {
+                "id": "R-bPikrxFJGA5N8wnZPLaXViDW9Qa"
+              },
+              "changedAt": "2024-07-20T08:42:13.948Z"
+            },
+            {
               "id": "N-gxiMep1ajmr9aUCj5SMadcbBHXb",
               "resource": {
                 "id": "R-ArchimateDataobject"
               },
               "changedAt": "2023-08-25T08:12:40.489Z"
+            },
+            {
+              "id": "N-MyYKtEvP3O9NDfjJA2OHthAPxbE",
+              "resource": {
+                "id": "R-CgT7MCGzE4F37AlEys5zBAOlevD"
+              },
+              "changedAt": "2024-07-20T08:29:10.575Z"
             },
             {
               "id": "N-ifP8tx6QYuD3cgAzePfQGexig1a",
