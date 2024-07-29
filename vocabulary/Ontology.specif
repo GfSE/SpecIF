@@ -18,12 +18,12 @@
   },
   "dataTypes": [
     {
-      "id": "DT-String",
+      "id": "DT-Text",
       "changedAt": "2021-02-23T08:59:00+02:00",
       "title": "Plain or formatted Text",
       "description": [
         {
-          "text": "A text string, plain or formatted with XHTML or markdown.",
+          "text": "A text string, plain or formatted with XHTML or markdown. The dataType with this id is expected by SpecIF Viewer until v1.1.r.",
           "format": "plain",
           "language": "en"
         }
@@ -32,8 +32,36 @@
       "type": "xs:string"
     },
     {
-      "id": "DT-String-LE256",
+      "id": "DT-ShortString",
       "changedAt": "2021-02-23T08:59:00+02:00",
+      "title": "String[256]",
+      "description": [
+        {
+          "text": "String with length <=256. The dataType with this id is expected by SpecIF Viewer until v1.1.r.",
+          "language": "en"
+        }
+      ],
+      "revision": "1.1",
+      "type": "xs:string",
+      "maxLength": 256
+    },
+    {
+      "id": "DT-String",
+      "changedAt": "2024-02-23T08:59:00+02:00",
+      "title": "Plain or formatted Text",
+      "description": [
+        {
+          "text": "A text string, plain or formatted with XHTML or markdown.",
+          "format": "plain",
+          "language": "en"
+        }
+      ],
+      "revision": "1.2",
+      "type": "xs:string"
+    },
+    {
+      "id": "DT-String-LE256",
+      "changedAt": "2024-02-23T08:59:00+02:00",
       "title": "String[256]",
       "description": [
         {
@@ -41,7 +69,7 @@
           "language": "en"
         }
       ],
-      "revision": "1.1",
+      "revision": "1.2",
       "type": "xs:string",
       "maxLength": 256
     },
