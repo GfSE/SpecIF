@@ -51382,19 +51382,6 @@
       }
     },
     {
-      "id": "S-PmrBlqKzBouwmQPNeRG9FOIOXlN",
-      "changedAt": "2024-04-11T20:41:27.185Z",
-      "class": {
-        "id": "SC-isSynonymOfProperty"
-      },
-      "subject": {
-        "id": "R-pKmNIMAt4uBz31Qre16K9b0rFDk"
-      },
-      "object": {
-        "id": "R-SpecifTerm"
-      }
-    },
-    {
       "id": "S-7bxnSr6HnaGqH4Q4bDelXKKg026",
       "changedAt": "2024-04-12T10:30:16.349Z",
       "class": {
