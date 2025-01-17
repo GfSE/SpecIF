@@ -36,6 +36,6 @@ For examples have a look into the <a href="https://specif.de/Tutorials/" target=
 ## Acknowledgments
 
 This work has been sponsored and supported by 
-* [enso-managers gmbh](http://enso-managers.de) 
-* [mdd4all](http://mdd4all.de)
+* <a href="http://enso-managers.de/" target="_blank">enso-managers GmbH</a> 
+* <a href="http://mdd4all.de/" target="_blank">mdd4all</a>* [enso-managers gmbh](http://enso-managers.de) 
 * Members of the GfSE working group *Product Lifecycle Management for Systems Engineering* (PLM4MBSE)
