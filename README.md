@@ -23,7 +23,7 @@ That‘s where SpecIF kicks in. For further details see http://specif.de and [th
 
 SpecIF consists of multiple parts, that are covered by this repository and linked submodules:
 
-1. The **documentation of SpecIF** is available in the [documentation](https://github.com/GfSE/SpecIF/tree/master/documentation) folder of this repository.
+1. The **documentation of SpecIF** is available in the [documentation](https://github.com/GfSE/SpecIF/tree/master/documentation) folder of this repository, published at: <a href="https://specif.de/Documentation/" target="_blank">Documentation</a>. 
 2. The **SpecIF logo** is defined in the [logo](https://github.com/GfSE/SpecIF/tree/master/logo) section. 
 3. The **SpecIF JSON-schema and constraint checker** is defined in the sub-repository https://github.com/GfSE/SpecIF-Schema.
 4. The **SpecIF vocabulary and class definitions** to define a set of standardized terms and definitions with fixed and well-defined semantics is located in the sub-repository https://github.com/GfSE/SpecIF-Class-Definitions.
@@ -31,7 +31,7 @@ SpecIF consists of multiple parts, that are covered by this repository and linke
 
 ## Examples
 
-For examples have a look into the [tutorials](./tutorials/Readme.md).
+For examples have a look into the <a href="https://specif.de/Tutorials/" target="_blank">tutorials</a>.
 
 ## Acknowledgments
 
